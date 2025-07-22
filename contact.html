@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us - Test Your Knowledge</title>
+  <style>
+    :root {
+      --primary: #0074cc;
+      --primary-dark: #005fa3;
+      --bg-light: #f4f7fb;
+      --text-dark: #333;
+      --white: #fff;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    header, footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 650px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 25px; /* reduced from 40px */
+    }
+
+    .contact-card h2 {
+      margin: 0 0 6px;
+      font-size: 1.4rem;
+    }
+
+    .contact-card p {
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    form {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 6px rgba(0,116,204,0.2);
+      outline: none;
+    }
+
+    button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: var(--primary-dark);
+    }
+
+    .whatsapp-direct {
+      margin-top: 15px;
+      display: inline-block;
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .whatsapp-direct:hover {
+      text-decoration: underline;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 8px;
+    }
+
+    /* ✅ Responsive */
+    @media (max-width: 480px) {
+      .contact-card {
+        padding: 20px;
+      }
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+    <div id="header"></div>
+    <main>
+        <div class="contact-card">
+            <h2>We’d Love to Hear From You</h2>
+            <p>Have questions, feedback, or need help? Just fill out the form below and it will open WhatsApp with your message.</p>
+
+            <form id="whatsappForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+            <label for="number">Phone Number</label>
+            <input type="number" id="number" placeholder="Your mobile number" required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Your email address" required>
+            <label for="message">Your Query</label>
+            <textarea id="message" rows="2" placeholder="Write your question here..." required></textarea>
+            <button type="submit">📲 Send via WhatsApp</button>
+            </form>
+        </div>
+    </main>
+    <div id="footer"></div>
+    
+    <script src="load-header-footer.js"></script>
+
+    <script>
+        // ✅ Your WhatsApp number with country code (no +)
+        const whatsappNumber = "918392950977";
+        document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let name = document.getElementById("name").value.trim();
+            let number = document.getElementById("number").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+            if(!name || !number || !email || !message) {
+            alert("Please fill in all fields!");
+            return;
+            }
+            let whatsappMessage = 
+            `Hello Sir,%0A` +
+            `My Name: ${name}%0A` +
+            `Mobile Number: ${number}%0A` +
+            `E-mail: ${email}%0A` +
+            `My Query:%0A${message}`;
+            let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+            window.open(whatsappURL, "_blank");
+        });
+
+    </script>
+
+</body>
+</html>

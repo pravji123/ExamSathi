@@ -1,0 +1,90 @@
+<style>
+  /* ✅ Navbar + Header styles */
+  nav {
+    background-color: #0074cc;
+    color: white;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* stays on top */
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 15px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #ff9933;
+    text-decoration: underline;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      position: relative; /* Needed so dropdown aligns */
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #0074cc;
+      position: absolute;
+      align-items: center;
+      /* top: 60px; */
+      top: 100%; 
+      right: 0;
+      width: 200px;
+      padding: 10px 20px;
+    }
+
+    .nav-links.active {
+      display: flex;
+      /* margin-top: 10px; */
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+</style>
+
+<nav>
+  <div class="logo">🧠 Test Your Knowledge</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#buy">Practice Sets</a>
+    <a href="#test">Mock Tests</a>
+    <a href="#sample">Free Sample</a>
+    <a href="#join">Contact</a>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
