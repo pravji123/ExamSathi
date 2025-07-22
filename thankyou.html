@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You | Test Your Knowledge</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: #f4f9ff;
+    }
+
+    /* ✅ Navbar */
+    nav {
+      background: #0074cc;
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    /* ✅ Main Container */
+    .container {
+      flex: 1; /* pushes footer to bottom */
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* ✅ Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      margin-top: 15px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    .btn-download { background: #28a745; color: white; }
+    .btn-download:hover { background: #218838; }
+
+    .btn-home { background: #0074cc; color: white; }
+    .btn-home:hover { background: #005fa3; }
+
+    .btn-support { background: orange; color: white; }
+    .btn-support:hover { background: darkorange; }
+
+    .error { color: red; font-weight: bold; }
+
+    /* ✅ Footer always at bottom */
+    footer {
+      background: #002b55;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto; /* pushes footer down */
+    }
+    footer a {
+      color: #aad4ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar will be loaded here -->
+  <div id="header"></div>
+
+  <!-- ✅ Page Content -->
+  <div class="container">
+    <h2>✅ Payment Successful!</h2>
+    <p>Thank you for purchasing <strong id="ebook-name"></strong></p>
+    <div id="ebook-link">Loading your secure download...</div>
+    <div id="extra-buttons" style="margin-top:20px; display:none;">
+      <a class="btn btn-home" href="index.html">🏠 Back to Home</a>
+      <a class="btn btn-support" href="https://t.me/Bpsc_Tre4_Computer_Stet" target="_blank">📞 Contact Support</a>
+    </div>
+  </div>
+
+  <!-- ✅ Footer will be loaded here -->
+  <div id="footer"></div>
+
+  <script src="load-header-footer.js"></script>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const ebookName = params.get("ebook");
+  const token = params.get("token");
+
+  document.getElementById("ebook-name").textContent = ebookName;
+
+  function isValidToken(ebook, token) {
+    if (!token) return false;
+    return token.includes(btoa(ebook).substring(0, 4));
+  }
+
+  fetch('courses.json')
+    .then(res => res.json())
+    .then(courses => {
+      const course = courses.find(c => c.name === ebookName);
+
+      if (!course) {
+        document.getElementById("ebook-link").innerHTML =
+          `<p class="error">❌ Course not found. Please contact support.</p>`;
+        document.getElementById("extra-buttons").style.display = "block";
+        return;
+      }
+
+      if (isValidToken(ebookName, token)) {
+        document.getElementById("ebook-link").innerHTML =
+          `<a class="btn btn-download" href="${course.downloadLink}" download>⬇ Download Your E-book</a>`;
+      } else {
+        document.getElementById("ebook-link").innerHTML =
+          `<p class="error">❌ Invalid access token! Contact support if you already paid.</p>`;
+      }
+
+      // ✅ Always show Home + Support buttons
+      document.getElementById("extra-buttons").style.display = "block";
+    })
+    .catch(err => {
+      console.error("Error loading courses.json", err);
+      document.getElementById("ebook-link").innerHTML =
+        `<p class="error">❌ Could not verify purchase. Please refresh.</p>`;
+      document.getElementById("extra-buttons").style.display = "block";
+    });
+</script>
+
+</body>
+</html>

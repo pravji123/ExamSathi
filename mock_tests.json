@@ -1,0 +1,180 @@
+[
+  {
+    "title": "IBPS SO Prelims (IT/AFO/HR)",
+    "category": "Bank SO",
+    "rating": 4.8,
+    "tests": 3,
+    "time": "120 min",
+    "lang": "Hindi, English",
+    "img": "image/ibps-logo.png"
+  },
+  {
+    "title": "Bank Of Baroda Specialist Officer",
+    "category": "Bank SO",
+    "rating": 4.3,
+    "tests": 3,
+    "time": "120 min",
+    "lang": "Hindi, English",
+    "img": "image/bob-logo.png"
+  },
+  {
+    "title": "IBPS RRB SO Scale 2 IT Officer",
+    "category": "Bank SO",
+    "rating": 4.7,
+    "tests": 5,
+    "time": "120 min",
+    "lang": "Hindi, English",
+    "img": "image/ibps_rrb-logo.png"
+  },
+  {
+    "title": "CTET Paper I",
+    "category": "CTET",
+    "rating": 4.6,
+    "tests": 4,
+    "time": "150 min",
+    "lang": "Hindi, English",
+    "img": "image/ctet-logo.png"
+  },
+  {
+    "title": "CTET Paper II",
+    "category": "CTET",
+    "rating": 4.6,
+    "tests": 4,
+    "time": "150 min",
+    "lang": "Hindi, English",
+    "img": "image/ctet-logo.png"
+  },
+  {
+    "title": "Bihar Police Constable Test",
+    "folder": "Bihar_Police",
+    "category": "Defence and Police",
+    "rating": 4.4,
+    "tests": 5,
+    "time": "90 min",
+    "lang": "Hindi",
+    "img": "image/bihar_police-logo.png",
+    "pyqs": [
+      {
+        "year": "2023",
+        "title": "Bihar Police Constable Test 2023 Shift 1",
+        "questions": 100,
+        "time": "90 min"
+      },
+      {
+        "year": "2023",
+        "title": "Bihar Police Constable Test 2023",
+        "questions": 100,
+        "time": "90 min"
+      }
+    ]
+  },
+  {
+    "title": "RRB NTPC Tier 1",
+    "category": "Railways",
+    "rating": 4.5,
+    "tests": 6,
+    "time": "90 min",
+    "lang": "Hindi, English",
+    "img": "image/railway1-logo.png"
+  },
+  {
+    "title": "SSC CGL Tier 1",
+    "category": "SSC",
+    "rating": 4.7,
+    "tests": 4,
+    "time": "60 min",
+    "lang": "Hindi, English",
+    "img": "image/ssc-logo.png"
+  },
+  {
+    "title": "SBI PO Prelims",
+    "category": "Bank PO",
+    "rating": 4.6,
+    "tests": 3,
+    "time": "60 min",
+    "lang": "Hindi, English",
+    "img": "image/sbi-logo.png"
+  },
+  {
+    "title": "RBI Grade B Phase I",
+    "category": "RBI",
+    "rating": 4.9,
+    "tests": 3,
+    "time": "120 min",
+    "lang": "English",
+    "img": "image/railway1-logo.png"
+  },
+  {
+    "title": "BPSC Civil Services Prelims",
+    "category": "Others",
+    "rating": 4.8,
+    "tests": 2,
+    "time": "120 min",
+    "lang": "English",
+    "img": "image/bpsc-logo.png"
+  },
+  {
+    "title": "UPSC Civil Services Prelims",
+    "category": "Others",
+    "rating": 4.8,
+    "tests": 2,
+    "time": "120 min",
+    "lang": "English",
+    "img": "image/upsc-logo.png"
+  },
+  {
+    "title": "BPSC TRE PRT (Class 1–5)",
+    "category": "Teaching",
+    "rating": 4.6,
+    "tests": 3,
+    "time": "120 min",
+    "lang": "Hindi",
+    "img": "image/bpsc_tre-logo.png",
+    "pyqs": [
+      {
+        "year": "2023",
+        "title": "BPSC TRE - 1 PRT 2023 Shift 1",
+        "questions": 150,
+        "time": "150 min"
+      },
+      {
+        "year": "2023",
+        "title": "BPSC TRE - 2 PRT 2023 Full Paper",
+        "questions": 150,
+        "time": "150 min"
+      }
+    ]
+  },
+  {
+    "title": "BPSC TRE Science (Class 6-8 )",
+    "category": "Teaching",
+    "rating": 4.6,
+    "tests": 3,
+    "time": "120 min",
+    "lang": "Hindi",
+    "img": "image/bpsc_tre-logo.png",
+    "pyqs": [
+      {
+        "year": "2023",
+        "title": "BPSC TRE - 2 Science (Class 6-8 ) 2023",
+        "questions": 150,
+        "time": "150 min"
+      },
+      {
+        "year": "2023",
+        "title": "BPSC TRE - 1 Science (Class 6-8 ) 2023",
+        "questions": 150,
+        "time": "150 min"
+      }
+    ]
+  },
+  {
+    "title": "BSSC Inter Level",
+    "category": "BSSC",
+    "rating": 4.5,
+    "tests": 4,
+    "time": "90 min",
+    "lang": "Hindi",
+    "img": "image/bssc-logo.png"
+  }
+]

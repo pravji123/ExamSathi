@@ -1,0 +1,133 @@
+<!-- ✅ footer.html (self-contained with CSS) -->
+<style>
+  .footer {
+    background-color: #002b55;
+    color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 40px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+
+  /* Column base styles */
+  .footer-column {
+    box-sizing: border-box;
+    min-width: 250px;
+  }
+
+  /* Custom flex widths */
+  .col1 {
+    flex: 1.5;
+    text-align: justify;
+  }
+
+  .col2 {
+    flex: 2.5;
+    text-align: center;
+  }
+
+  .col3 {
+    flex: 1.0;
+    text-align: center;
+  }
+
+  .footer h3 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .footer a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #4fc3f7;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 20px;
+  }
+
+  .counter-box {
+    background: #333;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-column {
+      min-width: 100% !important;
+    }
+
+    .footer h3,
+    .footer a,
+    .footer p {
+      text-align: center;
+    }
+  }
+</style>
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Column 1: Platform Intro -->
+    <div class="footer-column col1">
+      <h3 style="text-align: center;">Test Your Knowledge</h3>
+      <p>
+        India’s trusted platform for practice sets, mock tests, and educational content. Prepare confidently for government exams with expert support and quality resources.
+      </p>
+    </div>
+
+    <!-- Column 2: About Us / Social / Credit -->
+    <div class="footer-column col2">
+      <h3>About Us</h3>
+      <p>
+        <span style="color: #ff9933; font-weight: bold;">Made</span>
+        <span style="color: #ffffff;">in</span>
+        <span style="color: #138808; font-weight: bold;">India</span>
+        <span style="color: #cccccc;">with ❤️</span><br>
+        Empowering learners through quality education & smart tools.
+      </p>
+      <p style="margin-top: 10px; font-size: 13px; color: #aaaaaa;">
+        &copy; 2025 Designed by <strong style="color: #ffffff;">DIGITAL HELP DESK & Team ✅</strong>
+      </p>
+      <p>Follow us on 
+        <a href="https://t.me/Bpsc_Tre4_Computer_Stet" target="_blank">Telegram</a>
+      </p> 
+    </div>
+
+    <!-- Column 3: Visitor Counter -->
+    <div class="footer-column col3">
+      <h3>Website Visitors:- </h3>
+      <div class="counter-box">
+        <img alt="Hits" src="https://hits.sh/pravji123.github.io/TYK.svg?style=for-the-badge&label= 👁️ Total-Visitor - &extraCount=100"/></a>
+      </div>
+    </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 <strong>Test Your Knowledge</strong> | Powered by <strong>DIGITAL HELP DESK</strong>
+  </div>
+</footer>

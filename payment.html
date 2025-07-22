@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Payment | Test Your Knowledge</title>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f9ff; margin:0; }
+    nav { background:#0074cc; color:white; padding:15px 25px; display:flex; justify-content:space-between; align-items:center; }
+    nav a { color:white; text-decoration:none; margin-left:15px; }
+    .container { max-width: 500px; margin: 50px auto; background: white; padding: 30px; text-align:center; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .price { font-size: 22px; color: #333; margin: 15px 0; }
+    .btn-pay { background: #28a745; color:white; padding: 12px 20px; border:none; border-radius:8px; font-size:18px; cursor:pointer; }
+    .btn-pay:hover { background: #218838; }
+    footer { background:#002b55; color:white; text-align:center; padding:20px; margin-top:50px; }
+    footer a { color:#aad4ff; text-decoration:none; }
+  </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+      <h2>Confirm Your Package</h2>
+      <p>Click below to proceed with secure payment.</p>
+      <p>You are buying <strong id="product-name"></strong></p>
+      <div class="price">Amount: ₹<span id="product-price"></span></div>
+      <button class="btn-pay" id="payNowBtn">Pay Now</button>
+      <h5>with 💳 Secure Payment</h5>
+    </div>
+
+    <div id="footer"></div>
+    
+    <script src="load-header-footer.js"></script>
+
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const productName = params.get("name");
+    const productPrice = params.get("price") || 99;
+
+    document.getElementById("product-name").textContent = productName;
+    document.getElementById("product-price").textContent = productPrice;
+
+    // ✅ Razorpay Key (Test Key)
+    const razorpayKey = "rzp_test_HuBxblCUQlnCzK"; // replace with your key
+
+    document.getElementById("payNowBtn").addEventListener("click", function() {
+        const options = {
+        "key": razorpayKey,
+        "amount": productPrice * 100,
+        "currency": "INR",
+        "name": "Test Your Knowledge",
+        "description": productName,
+        "handler": function (response) {
+            const token = btoa(productName + Date.now()); 
+            window.location.href = `thankyou.html?ebook=${encodeURIComponent(productName)}&token=${token}`;
+        },
+        "prefill": { name: "Test User", email: "test@example.com", contact: "9999999999" },
+        "theme": { color: "#0074cc" }
+        };
+        const rzp = new Razorpay(options);
+        rzp.open();
+    });
+    </script>
+
+</body>
+</html>

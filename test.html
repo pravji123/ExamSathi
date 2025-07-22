@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz with Navigator</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    /* same CSS as before */
+  </style>
+</head>
+<body>
+
+<header id="examHeader">Loading Test...</header>
+
+<div class="container">
+  <!-- Left Panel -->
+  <div class="left-panel">
+    <div style="display:flex;justify-content:space-between;padding:10px 15px;border-bottom:1px solid #ccc;">
+      <div>👤 <strong id="username-display"></strong></div>
+      <div>⏱ Time Left: <strong id="timer">00:00</strong> <small style="font-size:12px;">(Auto Submit)</small></div>
+    </div>
+    <div style="padding:10px 15px;border-bottom:1px solid #ccc;" id="section-tags"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 15px;border-bottom:1px solid #ccc;">
+      <div style="display:flex;gap:20px;align-items:center;">
+        <div><h3 id="question-number">Question: 1</h3></div>
+        <div>Question Type: <strong>MCQ</strong></div>
+        <div>Marks: <strong>1</strong></div>
+        <div>Negative: <strong>-0.25</strong></div>
+      </div>
+      <div>🌐 <label><strong>Language:</strong></label>
+        <select><option>English</option><option>Hindi</option></select>
+      </div>
+    </div>
+    <div style="padding:15px;">
+      <div class="question-box" id="question-box" style="font-size:16px;"></div>
+    </div>
+  </div>
+
+  <!-- Right Panel -->
+  <div class="right-panel">
+    <div class="status-box">
+      <h3>📝 Question Status</h3>
+      <div class="status-grid">
+        <div class="status-item">
+          <div id="answeredCount" class="count-box green">0</div>
+          <span>Answered</span>
+        </div>
+        <div class="status-item">
+          <div id="notAnsweredCount" class="count-box orange">0</div>
+          <span>Not Answered</span>
+        </div>
+        <div class="status-item">
+          <div id="notVisitedCount" class="count-box grey">0</div>
+          <span>Not Visited</span>
+        </div>
+        <div class="status-item">
+          <div id="markedCount" class="count-box purple">0</div>
+          <span>Marked for Review</span>
+        </div>
+      </div>
+      <div class="status-note">
+        <div class="status-item">
+          <div id="markedAndAnsweredCount" class="count-box gradient-green-purple">0</div>
+          <span>Answered & Marked for Review <small>(Considered)</small></span>
+        </div>
+      </div>
+    </div>
+    <div class="right-panel-bottom">
+      <h3>Choose a Question</h3>
+      <div class="question-navigator" id="navigator"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div style="flex:5;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding-right:20px;">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <button id="clearBtn" style="padding:8px 12px;background:#dc3545;color:white;border:none;border-radius:4px;">Clear Response</button>
+      <button id="backBtn" style="padding:8px 12px;background:#6c757d;color:white;border:none;border-radius:4px;">Back</button>
+      <button id="reviewBtn" style="padding:8px 12px;background:#007bff;color:white;border:none;border-radius:4px;">Mark for Review</button>
+    </div>
+    <button id="nextBtn" style="padding:10px 16px;background:#28a745;color:white;border:none;border-radius:4px;font-weight:bold;margin-right:40px;">Save & Next</button>
+  </div>
+  <div style="flex:1;display:flex;justify-content:center;align-items:center;">
+    <button id="submitBtn" style="padding:12px 24px;background:#17a2b8;color:white;border:none;border-radius:5px;font-size:16px;font-weight:bold;">Submit</button>
+  </div>
+</footer>
+
+<!-- Submit Modal -->
+<div id="submitModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;justify-content:center;align-items:center;">
+  <div style="background:white;padding:20px;border-radius:8px;max-width:400px;width:90%;text-align:center;">
+    <h3 style="margin-bottom:15px;">⚠️ Are you sure you want to submit?</h3>
+    <div style="display:flex;justify-content:space-around;margin-top:20px;">
+      <button onclick="confirmSubmit(true)" style="padding:8px 16px;background:#28a745;color:white;border:none;border-radius:4px;">Yes</button>
+      <button onclick="confirmSubmit(false)" style="padding:8px 16px;background:#dc3545;color:white;border:none;border-radius:4px;">No</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let questions = [], totalTime = 0, currentQuestion = 0;
+let answers = {}, reviewMarked = {}, visited = {}, remainingSeconds = 0;
+let timerInterval = null, perQuestionTime = {}, questionStartTime = null;
+
+async function loadQuestions() {
+  const params = new URLSearchParams(window.location.search);
+  const exam = params.get("exam");
+  const set  = params.get("set");
+
+  if (!exam || !set) {
+    Swal.fire("❌ Invalid Test", "Missing exam/set parameters!", "error");
+    return;
+  }
+
+  document.getElementById("examHeader").textContent = `${exam.replace(/_/g,' ')} - ${set.toUpperCase()}`;
+
+  // ✅ Correct JSON path (sets/EXAM/SET.json)
+  const jsonPath = `sets/${examFolder}/${setName}.json`;
+
+  try {
+    const res = await fetch(jsonPath);
+    if (!res.ok) throw new Error("Test JSON not found!");
+
+    const data = await res.json();
+
+    // ✅ Validate JSON
+    if (!data.questions || !Array.isArray(data.questions)) throw new Error("Invalid question format!");
+
+    totalTime = data.time || 30;  // default 30 min if missing
+    questions = data.questions;
+
+    // ✅ Show section tags if available
+    if (data.sections) {
+      document.getElementById("section-tags").innerHTML = data.sections
+        .map(s => `<span style="margin-left:10px;padding:3px 8px;background:#e0f7fa;border-radius:4px;">${s}</span>`)
+        .join("");
+    }
+
+    // ✅ Start timer & load first question
+    startTimer(totalTime);
+    renderNavigator();
+    loadQuestion(0);
+
+  } catch (err) {
+    Swal.fire("❌ Error", err.message, "error");
+  }
+}
+
+function startTimer(minutes) {
+  remainingSeconds = minutes * 60;
+  timerInterval = setInterval(() => {
+    const mins = String(Math.floor(remainingSeconds / 60)).padStart(2, '0');
+    const secs = String(remainingSeconds % 60).padStart(2, '0');
+    document.getElementById("timer").textContent = `${mins}:${secs}`;
+    if (remainingSeconds <= 0) {
+      clearInterval(timerInterval);
+      autoSubmitTest();
+    }
+    remainingSeconds--;
+  }, 1000);
+}
+
+function loadQuestion(index) {
+  // ✅ Save time spent on previous question
+  if (questionStartTime !== null) {
+    const spent = Math.floor((Date.now() - questionStartTime) / 1000);
+    perQuestionTime[currentQuestion] = (perQuestionTime[currentQuestion] || 0) + spent;
+  }
+  currentQuestion = index;
+  questionStartTime = Date.now();
+  visited[index] = true;
+
+  const q = questions[index];
+  document.getElementById("question-number").innerText = `Question: ${index + 1}`;
+
+  let html = `<p style="font-weight:bold;font-size:18px;margin-bottom:15px;">Q${index + 1}: ${q.question}</p>`;
+  const letters = ['(A)', '(B)', '(C)', '(D)'];
+  html += `<div style="display:flex;flex-direction:column;gap:10px;">`;
+  q.options.forEach((opt, i) => {
+    const checked = answers[index] === opt ? 'checked' : '';
+    html += `<div style="margin-bottom:10px;padding-left:15px;">
+      <label style="cursor:pointer;font-size:16px;">
+        <input type="radio" name="q${index}" value="${opt}" ${checked} onchange="saveAnswer(${index}, '${opt}')">
+        ${letters[i]} ${opt}
+      </label></div>`;
+  });
+  html += `</div>`;
+  document.getElementById("question-box").innerHTML = html;
+  renderNavigator();
+  updateStatusCounts();
+}
+
+function saveAnswer(index, text) {
+  answers[index] = text;
+  renderNavigator();
+  updateStatusCounts();
+}
+
+function updateStatusCounts() {
+  const total = questions.length;
+  let answered = 0, notVisited = 0, notAnswered = 0, marked = 0, markedAndAnswered = 0;
+  for (let i = 0; i < total; i++) {
+    const v = visited[i], a = answers[i] !== undefined, r = reviewMarked[i];
+    if (!v) notVisited++;
+    else if (r && a) markedAndAnswered++;
+    else if (r && !a) marked++;
+    else if (a) answered++;
+    else notAnswered++;
+  }
+  document.getElementById("answeredCount").innerText = answered;
+  document.getElementById("notAnsweredCount").innerText = notAnswered;
+  document.getElementById("notVisitedCount").innerText = notVisited;
+  document.getElementById("markedCount").innerText = marked;
+  document.getElementById("markedAndAnsweredCount").innerText = markedAndAnswered;
+}
+
+function renderNavigator() {
+  const nav = document.getElementById("navigator");
+  nav.innerHTML = "";
+  for (let i = 0; i < questions.length; i++) {
+    const btn = document.createElement("div");
+    btn.classList.add("navigator-btn");
+    btn.innerText = i + 1;
+    const v = visited[i], a = answers[i] !== undefined, r = reviewMarked[i];
+    if (!v) {} 
+    else if (r && a) btn.classList.add("review-answered");
+    else if (r && !a) btn.classList.add("review-not-answered");
+    else if (!r && a) btn.classList.add("answered");
+    else btn.classList.add("not-answered");
+    btn.onclick = () => loadQuestion(i);
+    nav.appendChild(btn);
+  }
+}
+
+function clearResponse() { delete answers[currentQuestion]; loadQuestion(currentQuestion); }
+function markForReview() { reviewMarked[currentQuestion] = true; renderNavigator(); updateStatusCounts(); }
+function goBack() { if (currentQuestion > 0) loadQuestion(currentQuestion - 1); }
+function saveAndNext() { if (currentQuestion < questions.length - 1) loadQuestion(currentQuestion + 1); else submitTest(); }
+function submitTest() { document.getElementById('submitModal').style.display = 'flex'; }
+function confirmSubmit(confirm) { document.getElementById('submitModal').style.display = 'none'; if (!confirm) return; autoSubmitTest(); }
+
+function autoSubmitTest() {
+  if (questionStartTime !== null) {
+    const spent = Math.floor((Date.now() - questionStartTime) / 1000);
+    perQuestionTime[currentQuestion] = (perQuestionTime[currentQuestion] || 0) + spent;
+  }
+  let correct = 0, wrong = 0;
+  questions.forEach((q, i) => {
+    if (answers[i] === q.answer) correct++;
+    else if (answers[i] !== undefined) wrong++;
+  });
+
+  const mins = Math.floor((totalTime * 60 - remainingSeconds) / 60);
+  const secs = (totalTime * 60 - remainingSeconds) % 60;
+
+  const result = {
+    name: localStorage.getItem("userName") || "User",
+    correct, wrong,
+    total: questions.length,
+    time: `${mins}:${secs}`,
+    answers, questions, perQuestionTime
+  };
+
+  localStorage.setItem("quizResult", JSON.stringify(result));
+  window.location.href = "result.html";
+}
+
+window.onload = () => {
+  document.getElementById("clearBtn").onclick = clearResponse;
+  document.getElementById("backBtn").onclick = goBack;
+  document.getElementById("reviewBtn").onclick = markForReview;
+  document.getElementById("nextBtn").onclick = saveAndNext;
+  document.getElementById("submitBtn").onclick = submitTest;
+  document.getElementById("username-display").innerText = localStorage.getItem("userName") || "User";
+  loadQuestions();
+};
+</script>
+</body>
+</html>

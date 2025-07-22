@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-book Packages</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #0074cc;
+      color: white;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #ff9933;
+      text-decoration: underline;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0074cc;
+        position: absolute;
+        align-items: center;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px 20px;
+      }
+      .nav-links.active {
+        display: flex;
+        margin-top: 10px;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* Layout container */
+    .page-content {
+      display: flex;
+      min-height: calc(100vh - 150px);
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      height: auto;
+      min-height: calc(100vh - 150px);
+      overflow-y: auto;
+      padding: 15px;
+    }
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+    .sidebar ul li:hover {
+      background: #f0f0f0;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+    .main h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    .search-bar {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    /* GRID LAYOUT */
+    .course-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    /* COURSE CARD */
+    .course-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+    .course-header-section {
+      background: #f1f1f1;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .course-header-section img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
+    .course-title {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+    .course-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px;
+      flex: 1;
+    }
+
+    /* Ribbon label */
+    .featured {
+      position: relative;
+      display: inline-block;
+      background: #fff3cd;
+      color: #000;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 8px 16px;
+      margin-bottom: 12px;
+    }
+    .featured::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -12px;
+      width: 0;
+      height: 0;
+      border-top: 16px solid #fff3cd;
+      border-bottom: 16px solid #fff3cd;
+      border-right: 12px solid transparent;
+    }
+
+    .features {
+      flex: 1;
+      margin-bottom: 15px;
+      padding: 0 10px 0 0;
+    }
+    .features li {
+      list-style: none;
+      padding: 6px 0;
+      font-size: 14px;
+    }
+    .features li::before {
+      content: "✔";
+      color: green;
+      margin-right: 8px;
+      font-weight: bold;
+    }
+
+    /* Price */
+    .course-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+    .discount {
+      background: green;
+      color: #fff;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+
+    .course-buttons {
+      margin-top: auto;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid;
+      transition: 0.3s;
+    }
+    .btn-preview {
+      border-color: #007bff;
+      background: #fff;
+      color: #007bff;
+    }
+    .btn-preview:hover {
+      background: #007bff;
+      color: #fff;
+    }
+    .btn-buy {
+      border-color: orange;
+      background: orange;
+      color: #fff;
+    }
+    .btn-buy:hover {
+      background: darkorange;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #002b55;
+      color: #ffffff;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #aad4ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .footer-right {
+      margin-top: 10px;
+    }
+    .counter-box {
+      display: inline-block;
+      background: #e6abab;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      border: 2px solid #f10404;
+    }
+
+    @media(max-width: 900px) {
+      .sidebar { display: none; }
+      .page-content { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">🧠 Test Your Knowledge</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Practice Sets</a>
+      <a href="mock.html">Mock Tests</a>
+      <a href="TYK_Sample.pdf" target="_blank">Free Sample</a>
+      <a href="https://t.me/Bpsc_Tre4_Computer_Stet" target="_blank">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE CONTENT: Sidebar + Main -->
+  <div class="page-content">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Explore Categories</h2>
+      <ul id="categoryList">
+        <li onclick="filterCategory('All')">All E-books</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <h1>All Available E-book Packages</h1>
+      <input type="text" id="searchBar" class="search-bar" placeholder="Search E-book Name..." onkeyup="searchCourses()">
+      <div class="course-container" id="courseContainer"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <h2>Test Your Knowledge</h2>
+    <p>
+      <span style="color: #ff9933; font-weight: bold;">Made</span>
+      <span style="color: #ffffff;">in</span>
+      <span style="color: #138808; font-weight: bold;">India</span>
+      <span> with ❤️ | Empowering learners daily</span>
+    </p>
+    <p>&copy; 2025 Designed by <strong>DIGITAL HELP DESK & Team ✅</strong></p>
+    <p>Follow us on <a href="https://t.me/Bpsc_Tre4_Computer_Stet" target="_blank">Telegram</a></p>
+    <div class="footer-right">👁️ Total Visitors: <span class="counter-box" id="visit-count">Loading...</span></div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    let courses = [];
+    let allCategories = new Set();
+
+    function renderCourses(data) {
+      const container = document.getElementById('courseContainer');
+      container.innerHTML = "";
+      if (data.length === 0) {
+        container.innerHTML = "<p>No E-books found!</p>";
+        return;
+      }
+      data.forEach(course => {
+        let featureList = course.features.map(f => `<li>${f}</li>`).join('');
+        container.innerHTML += `
+          <div class="course-card">
+            <div class="course-header-section">
+              <img src="${course.logo}" alt="Logo">
+              <div class="course-title">${course.name}</div>
+            </div>
+            <div class="course-body">
+              <div>
+                <span class="featured">FEATURED PACKAGE</span>
+                <ul class="features">${featureList}</ul>
+              </div>
+              <div>
+                <div class="course-price">
+                  ₹${course.price} 
+                  <span class="old-price">₹${course.oldPrice}</span>
+                  <span class="discount">${course.discount}</span>
+                </div>
+                <div class="course-buttons">
+                  <button class="btn btn-preview" onclick="window.open('${course.previewLink}', '_blank')">Check Demo</button>
+                  <button class="btn btn-buy" onclick="goToPayment('${course.name}', '${course.price}')">Buy Package Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function goToPayment(name, price, buyLink) {
+      // const url = `payment.html?name=${encodeURIComponent(name)}&price=${price}&link=${encodeURIComponent(buyLink)}`;
+      // window.location.href = url;
+      window.location.href = `payment.html?name=${encodeURIComponent(name)}&price=${price}`;
+    }
+
+
+    function searchCourses() {
+      const query = document.getElementById('searchBar').value.toLowerCase();
+      const filtered = courses.filter(c => c.name.toLowerCase().includes(query));
+      renderCourses(filtered);
+    }
+
+    function filterCategory(category) {
+      if(category === "All") {
+        renderCourses(courses);
+      } else {
+        const filtered = courses.filter(c => c.category === category);
+        renderCourses(filtered);
+      }
+    }
+
+    fetch('courses.json')
+      .then(response => response.json())
+      .then(data => {
+        courses = data;
+        // Collect categories dynamically
+        data.forEach(c => allCategories.add(c.category));
+
+        // Render category list dynamically
+        const categoryList = document.getElementById('categoryList');
+        allCategories.forEach(cat => {
+          let li = document.createElement('li');
+          li.innerText = cat;
+          li.onclick = () => filterCategory(cat);
+          categoryList.appendChild(li);
+        });
+
+        // Initial render
+        renderCourses(courses);
+      })
+      .catch(err => {
+        console.error("Error loading courses.json", err);
+        document.getElementById('courseContainer').innerHTML = "<p>Error loading E-books.</p>";
+      });
+
+    // Visitor counter same as index.html
+    fetch('https://api.countapi.xyz/update/setwala.github.io/visitcount/?amount=1')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('visit-count').innerText = data.value;
+      })
+      .catch(err => {
+        console.error('Counter error:', err);
+        document.getElementById('visit-count').innerText = 'N/A';
+      });
+  </script>
+
+</body>
+</html>

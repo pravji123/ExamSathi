@@ -1,0 +1,226 @@
+[
+  {
+    "name": "BPSC TRE GK Pack",
+    "category": "BPSC TRE",
+    "logo": "image/bpsc-logo.png",
+    "features": [
+      "100+ important GK questions",
+      "PDF + Online Test",
+      "Latest 2025 Pattern"
+    ],
+    "price": 99,
+    "oldPrice": 199,
+    "discount": "50% OFF",
+    "previewLink": "samples/bpsc_gk_sample.pdf",
+    "downloadLink": "ebooks/bpsc_tre_gk.pdf"
+  },
+  {
+    "name": "Bihar Police Constable GK Set",
+    "logo": "image/bihar_police-logo.png",
+    "features": [
+      "Current Affairs 2025",
+      "Static GK Notes",
+      "1000+ Questions"
+    ],
+    "price": 29,
+    "oldPrice": 99,
+    "discount": "70% OFF",
+    "previewLink": "sample_gk.pdf",
+    "buyLink": "https://razorpay.com/eb4c1gC",
+    "category": "Bihar Police"
+  },
+  {
+    "category": "Bihar Police",
+    "name": "Bihar Police Constable Complete E-book",
+    "logo": "image/bihar_police-logo.png",
+    "features": [
+      "500+ Objective Questions with detailed solutions",
+      "Covers GK, Reasoning, Current Affairs",
+      "Memory-based PYQs from 2018-2024",
+      "5 Full-length Practice Sets"
+    ],
+    "price": 149,
+    "oldPrice": 399,
+    "discount": "63% off",
+    "previewLink": "samples/bihar_police_sample.pdf",
+    "buyLink": "https://rzp.io/l/biharpoliceebook"
+  },
+  {
+    "category": "BPSC TRE",
+    "name": "BPSC TRE PRT (Class 1–5) E-book",
+    "logo": "image/bpsc_tre-logo.png",
+    "features": [
+      "400+ Topic-wise questions with answers",
+      "Child Pedagogy, EVS, English, Hindi covered",
+      "Previous year solved papers (2023-2024)",
+      "3 Model Practice Sets"
+    ],
+    "price": 179,
+    "oldPrice": 449,
+    "discount": "60% off",
+    "previewLink": "samples/bpsc_prt_sample.pdf",
+    "downloadLink": "ebooks/bpsc_tre_gk.pdf",
+    "buyLink": "https://rzp.io/l/bpscprt"
+  },
+  {
+    "category": "BPSC TRE",
+    "name": "BPSC TRE Math & Science (Class 6–8) E-book",
+    "logo": "image/bpsc_tre-logo.png",
+    "features": [
+      "300+ Science MCQs with explanations",
+      "Physics, Chemistry & Biology basics included",
+      "Latest syllabus-based content",
+      "Memory-based PYQs from 2023 exams"
+    ],
+    "price": 199,
+    "oldPrice": 499,
+    "discount": "60% off",
+    "previewLink": "samples/bpsc_science_sample.pdf",
+    "buyLink": "https://rzp.io/l/bpscscience"
+  },
+  {
+    "category": "BPSC TRE",
+    "name": "BPSC TRE Social Science (Class 6–8) E-book",
+    "logo": "image/bpsc_tre-logo.png",
+    "features": [
+      "350+ Social Science MCQs (History, Civics, Geography)",
+      "Important maps & charts included",
+      "PYQs with explanations",
+      "Quick revision notes"
+    ],
+    "price": 199,
+    "oldPrice": 499,
+    "discount": "60% off",
+    "previewLink": "samples/bpsc_social_science_sample.pdf",
+    "buyLink": "https://rzp.io/l/bpscsocialscience"
+  },
+  {
+    "category": "BPSC TRE",
+    "name": "BPSC TRE Math (Class 9–10) E-book",
+    "logo": "image/bpsc_tre-logo.png",
+    "features": [
+      "400+ Math questions with step-by-step solutions",
+      "Covers Algebra, Geometry, Trigonometry",
+      "Latest exam pattern & PYQs",
+      "3 Full-length Practice Sets"
+    ],
+    "price": 229,
+    "oldPrice": 549,
+    "discount": "58% off",
+    "previewLink": "samples/bpsc_math_sample.pdf",
+    "buyLink": "https://rzp.io/l/bpscmath"
+  },
+  {
+    "category": "CTET",
+    "name": "CTET Paper 1 (Class 1–5) E-book",
+    "logo": "image/ctet-logo.png",
+    "features": [
+      "300+ MCQs for Child Development, EVS, Maths",
+      "Hindi & English pedagogy included",
+      "Solved PYQs from July & Dec exams",
+      "Mock practice sets for revision"
+    ],
+    "price": 179,
+    "oldPrice": 449,
+    "discount": "60% off",
+    "previewLink": "samples/ctet_paper1_sample.pdf",
+    "buyLink": "https://rzp.io/l/ctetpaper1"
+  },
+  {
+    "category": "CTET",
+    "name": "CTET Paper 2 (Class 6–8) E-book",
+    "logo": "image/ctet-logo.png",
+    "features": [
+      "Science/Maths & Social Science pedagogy",
+      "400+ MCQs with detailed solutions",
+      "Latest PYQs from 2023–24",
+      "3 Practice sets for final revision"
+    ],
+    "price": 199,
+    "oldPrice": 499,
+    "discount": "60% off",
+    "previewLink": "samples/ctet_paper2_sample.pdf",
+    "buyLink": "https://rzp.io/l/ctetpaper2"
+  },
+  {
+    "category": "SSC",
+    "name": "SSC CGL Reasoning & GK Booster E-book",
+    "logo": "image/ssc-logo.png",
+    "features": [
+      "500+ Reasoning + GK questions",
+      "Updated with 2024 exams",
+      "Section-wise practice sets",
+      "Memory-based questions from recent shifts"
+    ],
+    "price": 189,
+    "oldPrice": 449,
+    "discount": "58% off",
+    "previewLink": "samples/ssc_cgl_sample.pdf",
+    "buyLink": "https://rzp.io/l/ssccgl"
+  },
+  {
+    "category": "Railway",
+    "name": "Railway NTPC & Group D E-book",
+    "logo": "image/railway-logo.png",
+    "features": [
+      "400+ MCQs covering GK, Maths & Reasoning",
+      "Latest syllabus + Current Affairs",
+      "Includes PYQs 2016-2024",
+      "Mock Tests for final practice"
+    ],
+    "price": 179,
+    "oldPrice": 399,
+    "discount": "55% off",
+    "previewLink": "samples/railway_ntpc_sample.pdf",
+    "buyLink": "https://rzp.io/l/railwayntpc"
+  },
+  {
+    "category": "UPSC",
+    "name": "UPSC Prelims GS E-book",
+    "logo": "image/upsc-logo.png",
+    "features": [
+      "300+ Topic-wise MCQs with solutions",
+      "Static + Current Affairs covered",
+      "Crisp revision notes",
+      "PYQs 2015-2024 included"
+    ],
+    "price": 299,
+    "oldPrice": 699,
+    "discount": "57% off",
+    "previewLink": "samples/upsc_prelims_sample.pdf",
+    "buyLink": "https://rzp.io/l/upscprelims"
+  },
+  {
+    "category": "BPSC",
+    "name": "BPSC Prelims GS E-book",
+    "logo": "image/bpsc-logo.png",
+    "features": [
+      "300+ Topic-wise MCQs with solutions",
+      "Static + Current Affairs covered",
+      "Crisp revision notes",
+      "PYQs 2015-2024 included"
+    ],
+    "price": 299,
+    "oldPrice": 699,
+    "discount": "57% off",
+    "previewLink": "samples/upsc_prelims_sample.pdf",
+    "buyLink": "https://rzp.io/l/upscprelims"
+  },
+  {
+    "name": "BPSC TRE 4.0 Computer Science Set",
+    "category": "BPSC TRE",
+    "logo": "image/bpsc_tre-logo.png",
+    "features": [
+      "50+ Practice Sets",
+      "Latest Exam Pattern",
+      "Detailed Solutions"
+    ],
+    "price": 49,
+    "oldPrice": 199,
+    "discount": "75% OFF",
+    "previewLink": "TYK_Sample.pdf",
+    "downloadLink": "ebooks/BPSC TRE 4.0 Computer Science Set.pdf",
+    "buyLink": "https://rzp.io/rzp/eb4c1gC"
+    
+  }
+]
