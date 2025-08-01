@@ -3,150 +3,284 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quiz with Navigator</title>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Mock Test</title>
   <style>
-    /* same CSS as before */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    header { background-color: #007BFF; color: white; padding: 1rem; text-align: center; font-size: 1.5rem; }
+    footer {
+      position: sticky; bottom: 0; display: flex; border-top: 1px solid #ccc; padding: 15px;
+      background-color: #f8f9fa; flex-wrap: wrap; max-height: 50px;
+    }
+    .container { display: flex; min-height: 82vh; }
+    .left-panel { flex: 4; background: #fff; border-right: 2px solid #ddd; }
+    .right-panel { flex: 1; background: #f8f9fa; }
+    .section-tabs {
+      display: flex;
+      gap: 12px;
+      padding: 10px 12px;
+      border-bottom: 1px solid #ccc
+    }
+
+    .section-tab {
+      padding: 8px 18px;
+      border: 2px solid #007bff;
+      border-radius: 25px;
+      background: transparent;
+      color: #007bff;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .section-tab:hover {
+      background: rgba(0, 123, 255, 0.1);
+    }
+
+    .section-tab.active {
+      background: #007bff;
+      color: #fff;
+    }
+    .meta-bar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 15px; border-bottom: 1px solid #ccc;
+    }
+    .meta-left { display: flex; gap: 20px; align-items: center; }
+    .status-box { background: #ead2d2; border: 2px solid #000; font-size: 14px; max-width: 500px; }
+    .status-box h3 { text-align: center; background: #eee; padding: 8px; margin-top: 0; }
+    .status-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 15px; padding: 15px;
+    }
+    .status-item { display: flex; align-items: center; gap: 10px; }
+    .count-box {
+      width: 26px; height: 26px; font-weight: bold; text-align: center;
+      line-height: 26px; border: 2px solid #000;
+    }
+    .green { background: #28a745; color: #fff; }
+    .orange { background: #fd7e14; color: #fff; }
+    .grey { background: #eeeeee; color: #000; }
+    .purple { background: #6f42c1; color: #fff; }
+    .gradient-green-purple {
+      background: radial-gradient(circle at center, #28a745 60%, #6f42c1 40%);
+      color: #ffffff;
+    }
+    .status-note {
+      padding: 0 15px 15px 15px;
+    }
+    .status-note .status-item {
+      margin-top: 10px;
+    }
+    .question-navigator {
+      padding: 10px; display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+      gap: 9px; overflow-y: auto; max-height: 362px; border: 1px solid #ccc; background: #fff;
+    }
+
+    .section-header {
+      border: 2px solid #0d6efd;
+      background-color: #e7f1ff;
+      padding: 12px 18px;
+      font-size: 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #0d6efd;
+      /* display: inline-block; */
+    }
+    
+    .navigator-btn {
+      width: 40px; height: 40px; text-align: center; line-height: 40px;
+      background: #eeeeee; border: 2px solid #ccc; cursor: pointer; font-weight: bold;
+    }
+    
+    .navigator-btn.current-question {
+      border-radius: 50%;
+    }
+    .answered { background: #28a745; color: white; }
+    .not-answered { background: #fd7e14; color: white; }
+    .review { background: #6f42c1; color: white; }
+    .review-answered { background: radial-gradient(circle at center, #28a745 50%, #6f42c1 50%); color: white; }
+    /* .review-not-answered { background: radial-gradient(circle at center, #fd7e14 50%, #6f42c1 50%); color: white; } */
+    .question-box { font-size: 16px; padding: 15px; }
+    footer button { cursor: pointer; }
+    /* Modal styling */
+    #submitModal {
+      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.5); justify-content:center; align-items:center;
+      z-index:9999;
+    }
+    .modal-content {
+      background:white; padding:20px; border-radius:8px; max-width:600px; width:95%;
+    }
+    @media (max-width: 768px) {
+      .container { flex-direction: column-reverse; }
+      .left-panel { border-right: none; border-top: 2px solid #ddd; }
+    }
   </style>
 </head>
 <body>
 
-<header id="examHeader">Loading Test...</header>
+<header id="examName">Loading...</header>
 
 <div class="container">
-  <!-- Left Panel -->
   <div class="left-panel">
-    <div style="display:flex;justify-content:space-between;padding:10px 15px;border-bottom:1px solid #ccc;">
+    <!-- Top bar: user + timer -->
+    <div class="meta-bar">
       <div>👤 <strong id="username-display"></strong></div>
-      <div>⏱ Time Left: <strong id="timer">00:00</strong> <small style="font-size:12px;">(Auto Submit)</small></div>
+      <div>⏱ Time Left: <strong id="timer">00:00</strong> <small>(Auto Submit)</small></div>
     </div>
-    <div style="padding:10px 15px;border-bottom:1px solid #ccc;" id="section-tags"></div>
-    <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 15px;border-bottom:1px solid #ccc;">
-      <div style="display:flex;gap:20px;align-items:center;">
-        <div><h3 id="question-number">Question: 1</h3></div>
-        <div>Question Type: <strong>MCQ</strong></div>
-        <div>Marks: <strong>1</strong></div>
-        <div>Negative: <strong>-0.25</strong></div>
+
+    <!-- Section tabs -->
+    <div class="section-tabs" id="sectionTabs"></div>
+
+    <!-- Meta bar: question number + type + marks -->
+    <div class="meta-bar">
+      <div class="meta-left">
+        <div id="question-number"><strong>Question:</strong> 1</div>
+        <div>Question Type: <strong id="questionType">MCQ</strong></div>
+        <div>Marks: <strong id="questionMarks">+1</strong></div>
+        <div>Negative: <strong id="questionNegative">-0.25</strong></div>
       </div>
-      <div>🌐 <label><strong>Language:</strong></label>
-        <select><option>English</option><option>Hindi</option></select>
-      </div>
     </div>
-    <div style="padding:15px;">
-      <div class="question-box" id="question-box" style="font-size:16px;"></div>
-    </div>
+
+    <!-- Question -->
+    <div id="question-box" class="question-box"></div>
   </div>
 
-  <!-- Right Panel -->
+  <!-- Right side panel -->
   <div class="right-panel">
     <div class="status-box">
       <h3>📝 Question Status</h3>
       <div class="status-grid">
-        <div class="status-item">
-          <div id="answeredCount" class="count-box green">0</div>
-          <span>Answered</span>
-        </div>
-        <div class="status-item">
-          <div id="notAnsweredCount" class="count-box orange">0</div>
-          <span>Not Answered</span>
-        </div>
-        <div class="status-item">
-          <div id="notVisitedCount" class="count-box grey">0</div>
-          <span>Not Visited</span>
-        </div>
-        <div class="status-item">
-          <div id="markedCount" class="count-box purple">0</div>
-          <span>Marked for Review</span>
-        </div>
+        <div class="status-item"><div id="answeredCount" class="count-box green">0</div> <span>Answered</span></div>
+        <div class="status-item"><div id="notAnsweredCount" class="count-box orange">0</div> <span>Not Answered</span></div>
+        <div class="status-item"><div id="notVisitedCount" class="count-box grey">0</div> <span>Not Visited</span></div>
+        <div class="status-item"><div id="markedCount" class="count-box purple">0</div> <span>Marked for Review</span></div>
       </div>
+      <!-- Full-width rows below -->
       <div class="status-note">
-        <div class="status-item">
-          <div id="markedAndAnsweredCount" class="count-box gradient-green-purple">0</div>
-          <span>Answered & Marked for Review <small>(Considered)</small></span>
-        </div>
+          <div class="status-item">
+              <div id="markedAndAnsweredCount" class="count-box gradient-green-purple">0</div><span>Answered & Marked for Review <small>(Considered)</small></span>
+          </div>
       </div>
     </div>
-    <div class="right-panel-bottom">
-      <h3>Choose a Question</h3>
+    <div>
+    <!-- Section Name Box -->
+      <div class="section-header" id="sectionName">📖 <strong>Section:</strong> GK</div>
+      <h3 style="padding: 8px; background: #8d8ae7;">Choose a Question</h3>
       <div class="question-navigator" id="navigator"></div>
     </div>
   </div>
 </div>
-
+<!-- Submit Modal -->
+<div id="submitModal"><div class="modal-content"></div></div>
 <footer>
-  <div style="flex:5;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding-right:20px;">
-    <div style="display:flex;gap:10px;flex-wrap:wrap;">
-      <button id="clearBtn" style="padding:8px 12px;background:#dc3545;color:white;border:none;border-radius:4px;">Clear Response</button>
-      <button id="backBtn" style="padding:8px 12px;background:#6c757d;color:white;border:none;border-radius:4px;">Back</button>
-      <button id="reviewBtn" style="padding:8px 12px;background:#007bff;color:white;border:none;border-radius:4px;">Mark for Review</button>
+  <div style="flex: 5; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <button id="clearBtn" style="padding:8px 12px; background:#dc3545; color:white; border:none; border-radius:4px;">Clear Response</button>
+      <button id="backBtn" style="padding:8px 12px; background:#6c757d; color:white; border:none; border-radius:4px;">Back</button>
+      <button id="reviewBtn" style="padding:8px 12px; background:#007bff; color:white; border:none; border-radius:4px;">Mark for Review</button>
     </div>
-    <button id="nextBtn" style="padding:10px 16px;background:#28a745;color:white;border:none;border-radius:4px;font-weight:bold;margin-right:40px;">Save & Next</button>
+    <button id="nextBtn" style="padding:10px 16px; background:#28a745; color:white; border:none; border-radius:4px; font-weight:bold;">Save & Next</button>
   </div>
-  <div style="flex:1;display:flex;justify-content:center;align-items:center;">
-    <button id="submitBtn" style="padding:12px 24px;background:#17a2b8;color:white;border:none;border-radius:5px;font-size:16px;font-weight:bold;">Submit</button>
+  <div style="flex:1; display:flex; justify-content:center; align-items:center;">
+    <button id="submitBtn" style="padding:12px 24px; background:#17a2b8; color:white; border:none; border-radius:5px; font-size:16px; font-weight:bold;">Submit</button>
   </div>
 </footer>
 
-<!-- Submit Modal -->
-<div id="submitModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;justify-content:center;align-items:center;">
-  <div style="background:white;padding:20px;border-radius:8px;max-width:400px;width:90%;text-align:center;">
-    <h3 style="margin-bottom:15px;">⚠️ Are you sure you want to submit?</h3>
-    <div style="display:flex;justify-content:space-around;margin-top:20px;">
-      <button onclick="confirmSubmit(true)" style="padding:8px 16px;background:#28a745;color:white;border:none;border-radius:4px;">Yes</button>
-      <button onclick="confirmSubmit(false)" style="padding:8px 16px;background:#dc3545;color:white;border:none;border-radius:4px;">No</button>
-    </div>
-  </div>
-</div>
-
 <script>
-let questions = [], totalTime = 0, currentQuestion = 0;
-let answers = {}, reviewMarked = {}, visited = {}, remainingSeconds = 0;
-let timerInterval = null, perQuestionTime = {}, questionStartTime = null;
+let questions = [];
+let currentIndex = 0;
+let answers = {};
+let visited = {};
+let reviewMarked = {};
+let remainingSeconds = 0;
+let timerInterval;
+let perQuestionTime = {};
+let questionStartTime = null;
+let activeSection = "All";
+let examName = "Mock Test";
+let testTitle = "Your Test"
+const params = new URLSearchParams(window.location.search);
+const exam = params.get('exam');   // example: "bpsc2025"
+const file = params.get('file');   // example: "mock1.json"
 
+// ✅ Load questions.json dynamically
 async function loadQuestions() {
-  const params = new URLSearchParams(window.location.search);
-  const exam = params.get("exam");
-  const set  = params.get("set");
-
-  if (!exam || !set) {
-    Swal.fire("❌ Invalid Test", "Missing exam/set parameters!", "error");
-    return;
-  }
-
-  document.getElementById("examHeader").textContent = `${exam.replace(/_/g,' ')} - ${set.toUpperCase()}`;
-
-  // ✅ Correct JSON path (sets/EXAM/SET.json)
-  const jsonPath = `sets/${examFolder}/${setName}.json`;
-
+    const path = `sets/${exam}/${file}`;
   try {
-    const res = await fetch(jsonPath);
-    if (!res.ok) throw new Error("Test JSON not found!");
+    const res = await fetch(path);
+      if (!res.ok) throw new Error('Test file not found!');
+      const data = await res.json();
+    // const res = await fetch("sets/bihar_police/question.json");
+    // const data = await res.json();
+    examName = data.examName || "Mock Test";
+    testTitle = data.testTitle;
+    
+    document.getElementById("examName").textContent = data.examName || "Mock Test";
+    document.getElementById("examName").textContent = examName;
+    document.getElementById("username-display").textContent = localStorage.getItem("userName") || "Guest";
 
-    const data = await res.json();
+    questions = data.questions.map((q, i) => ({
+      ...q,
+      globalIndex: i + 1,
+      marks: q.marks ?? data.marks ?? 1,
+      negative: q.negative ?? data.negative ?? -0.25,
+      type: q.questionType ?? data.questionType ?? "MCQ"
+    }));
 
-    // ✅ Validate JSON
-    if (!data.questions || !Array.isArray(data.questions)) throw new Error("Invalid question format!");
+    buildSectionTabs(data.sections || []);
 
-    totalTime = data.time || 30;  // default 30 min if missing
-    questions = data.questions;
-
-    // ✅ Show section tags if available
-    if (data.sections) {
-      document.getElementById("section-tags").innerHTML = data.sections
-        .map(s => `<span style="margin-left:10px;padding:3px 8px;background:#e0f7fa;border-radius:4px;">${s}</span>`)
-        .join("");
+    // ✅ Set default active section to first section
+    if (data.sections && data.sections.length > 0) {
+      activeSection = data.sections[0];
+    } else {
+      activeSection = "All";
     }
 
-    // ✅ Start timer & load first question
-    startTimer(totalTime);
-    renderNavigator();
-    loadQuestion(0);
+    // ✅ Highlight + filter immediately
+    filterSection(activeSection);
 
-  } catch (err) {
-    Swal.fire("❌ Error", err.message, "error");
+    // ✅ Load the *first question of that section*
+    const firstIndex = questions.findIndex(q => q.section === activeSection);
+    loadQuestion(firstIndex !== -1 ? firstIndex : 0);
+
+    // ✅ Start timer AFTER section selection
+    startTimer(data.time);
+  } catch (e) {
+    alert("❌ Error loading questions.json!");
   }
 }
 
+function buildSectionTabs(sections) {
+  const tabDiv = document.getElementById("sectionTabs");
+  tabDiv.innerHTML = sections
+    .map(sec => `<button class="section-tab" onclick="filterSection('${sec}')">${sec}</button>`)
+    .join("");
+
+  // Set initial highlight
+  highlightActiveSection();
+}
+
+function highlightActiveSection() {
+  document.querySelectorAll(".section-tab").forEach(tab => {
+    tab.classList.toggle("active", tab.textContent === activeSection);
+  });
+}
+
+function filterSection(sec) {
+  activeSection = sec;
+  document.querySelectorAll(".section-tab").forEach(tab => {
+    tab.classList.toggle("active", tab.textContent === sec);
+  });
+  const firstInSection = questions.findIndex(q => q.section === sec);
+  if (firstInSection !== -1) {
+    loadQuestion(firstInSection);
+  }
+  renderNavigator();
+}
+
+
+// ✅ Timer
 function startTimer(minutes) {
   remainingSeconds = minutes * 60;
   timerInterval = setInterval(() => {
@@ -155,35 +289,41 @@ function startTimer(minutes) {
     document.getElementById("timer").textContent = `${mins}:${secs}`;
     if (remainingSeconds <= 0) {
       clearInterval(timerInterval);
-      autoSubmitTest();
+      autoSubmitTest(); // auto submit
     }
     remainingSeconds--;
   }, 1000);
 }
 
+// ✅ Load Question
 function loadQuestion(index) {
-  // ✅ Save time spent on previous question
   if (questionStartTime !== null) {
-    const spent = Math.floor((Date.now() - questionStartTime) / 1000);
-    perQuestionTime[currentQuestion] = (perQuestionTime[currentQuestion] || 0) + spent;
+    const end = Date.now();
+    const timeSpent = Math.floor((end - questionStartTime) / 1000);
+    perQuestionTime[currentIndex] = (perQuestionTime[currentIndex] || 0) + timeSpent;
   }
-  currentQuestion = index;
+  currentIndex = index;
   questionStartTime = Date.now();
-  visited[index] = true;
+  visited[currentIndex] = true;
+  const q = questions[currentIndex];
+  document.getElementById("sectionName").innerHTML = `Exam Section: <strong>${questions[index].section}</strong>`;
+  document.getElementById("question-number").innerHTML = `Question No: <strong>5</strong>`;
+  document.getElementById("questionType").textContent = q.type;
+  document.getElementById("questionMarks").innerHTML = `<span style="color:green">+${q.marks}</span>`;
+  document.getElementById("questionNegative").innerHTML = '<span style="color:red">' + q.negative + '</span>';
 
-  const q = questions[index];
-  document.getElementById("question-number").innerText = `Question: ${index + 1}`;
 
-  let html = `<p style="font-weight:bold;font-size:18px;margin-bottom:15px;">Q${index + 1}: ${q.question}</p>`;
-  const letters = ['(A)', '(B)', '(C)', '(D)'];
+
+  let html = `<p style="font-weight:bold;font-size:18px;margin-bottom:15px;">Q${q.globalIndex}: ${q.question}</p>`;
+  const letters = ["(A)", "(B)", "(C)", "(D)"];
   html += `<div style="display:flex;flex-direction:column;gap:10px;">`;
   q.options.forEach((opt, i) => {
-    const checked = answers[index] === opt ? 'checked' : '';
-    html += `<div style="margin-bottom:10px;padding-left:15px;">
-      <label style="cursor:pointer;font-size:16px;">
-        <input type="radio" name="q${index}" value="${opt}" ${checked} onchange="saveAnswer(${index}, '${opt}')">
+    const checked = answers[currentIndex] === opt ? "checked" : "";
+    html += `<label style="cursor:pointer;font-size:16px;">
+        <input type="radio" name="q${currentIndex}" value="${opt}" ${checked}
+               onchange="saveAnswer(${currentIndex}, '${opt}')">
         ${letters[i]} ${opt}
-      </label></div>`;
+      </label>`;
   });
   html += `</div>`;
   document.getElementById("question-box").innerHTML = html;
@@ -196,14 +336,74 @@ function saveAnswer(index, text) {
   renderNavigator();
   updateStatusCounts();
 }
+function clearResponse() {
+  delete answers[currentIndex];
+  loadQuestion(currentIndex);
+}
+function markForReview() {
+  reviewMarked[currentIndex] = true;
+  renderNavigator();
+  updateStatusCounts();
+}
+function goBack() {
+  if (currentIndex > 0) {
+    const prevIndex = currentIndex - 1;
+    const prevSection = questions[prevIndex].section;
+    // ✅ Auto-switch section when going back
+    if (prevSection !== activeSection) {
+      filterSection(prevSection);
+    }
+    loadQuestion(prevIndex);
+  }
+}
+function saveAndNext() {
+   if (currentIndex < questions.length - 1) {
+    const nextIndex = currentIndex + 1;
+    const nextSection = questions[nextIndex].section;
+    if (nextSection !== activeSection) {
+      filterSection(nextSection);
+    }
+    loadQuestion(nextIndex);
+  } else if (confirm("This is Your Last Question! Do You Want to Submit Test?")) {
+    submitTest();
+  }
+}
+
+// ✅ Navigator
+function renderNavigator() {
+  const nav = document.getElementById("navigator");
+  nav.innerHTML = "";
+  questions.forEach((q, i) => {
+    if (activeSection !== "All" && q.section !== activeSection) return;
+
+    const btn = document.createElement("div");
+    btn.classList.add("navigator-btn");
+    btn.innerText = q.globalIndex;
+
+    // Status coloring (answered/review/etc.)
+    const v = visited[i], a = answers[i] !== undefined, r = reviewMarked[i];
+    if (!v) {} 
+    else if (r && a) btn.classList.add("review-answered");
+    else if (r && !a) btn.classList.add("review");
+    else if (!r && a) btn.classList.add("answered");
+    else btn.classList.add("not-answered");
+
+    // ✅ Highlight the CURRENT question you're on
+    if (i === currentIndex) btn.classList.add("current-question");
+
+    btn.onclick = () => loadQuestion(i);
+    nav.appendChild(btn);
+  });
+}
+
 
 function updateStatusCounts() {
   const total = questions.length;
-  let answered = 0, notVisited = 0, notAnswered = 0, marked = 0, markedAndAnswered = 0;
+  let answered = 0, notVisited = 0, notAnswered = 0, marked = 0, markedAndAnswered=0;
   for (let i = 0; i < total; i++) {
     const v = visited[i], a = answers[i] !== undefined, r = reviewMarked[i];
     if (!v) notVisited++;
-    else if (r && a) markedAndAnswered++;
+    else if (r && a){ markedAndAnswered++; }
     else if (r && !a) marked++;
     else if (a) answered++;
     else notAnswered++;
@@ -215,64 +415,124 @@ function updateStatusCounts() {
   document.getElementById("markedAndAnsweredCount").innerText = markedAndAnswered;
 }
 
-function renderNavigator() {
-  const nav = document.getElementById("navigator");
-  nav.innerHTML = "";
-  for (let i = 0; i < questions.length; i++) {
-    const btn = document.createElement("div");
-    btn.classList.add("navigator-btn");
-    btn.innerText = i + 1;
+// ✅ Summary Modal
+function showSummaryModal(isAuto = false) {
+  const total = questions.length;
+  let answered = 0, notAnswered = 0, marked = 0, notVisited = 0;
+
+  questions.forEach((q, i) => {
     const v = visited[i], a = answers[i] !== undefined, r = reviewMarked[i];
-    if (!v) {} 
-    else if (r && a) btn.classList.add("review-answered");
-    else if (r && !a) btn.classList.add("review-not-answered");
-    else if (!r && a) btn.classList.add("answered");
-    else btn.classList.add("not-answered");
-    btn.onclick = () => loadQuestion(i);
-    nav.appendChild(btn);
+    if (!v) notVisited++;
+    else if (r && !a) marked++;
+    else if (a) answered++;
+    else notAnswered++;
+  });
+
+  const autoNote = isAuto
+    ? `<h3 style="text-align:center;color:red;">⏰ Time is up! Submitting your test...</h3>`
+    : "";
+
+  const summaryHTML = `
+    ${autoNote}
+    <h3 style="margin-bottom:10px;text-align:center;">Submit your ${examName}</h3>
+    <table style="width:100%; border-collapse:collapse; text-align:center;">
+      <thead>
+        <tr style="background:#00bcd4; color:#fff;">
+          <th style="padding:8px;border:1px solid #ddd;">Section</th>
+          <th style="padding:8px;border:1px solid #ddd;">No. of questions</th>
+          <th style="padding:8px;border:1px solid #ddd;">Answered</th>
+          <th style="padding:8px;border:1px solid #ddd;">Not Answered</th>
+          <th style="padding:8px;border:1px solid #ddd;">Marked for Review</th>
+          <th style="padding:8px;border:1px solid #ddd;">Not Visited</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:8px;border:1px solid #ddd;">${testTitle}</td>
+          <td style="padding:8px;border:1px solid #ddd;">${total}</td>
+          <td style="padding:8px;border:1px solid #ddd;">${answered}</td>
+          <td style="padding:8px;border:1px solid #ddd;">${notAnswered}</td>
+          <td style="padding:8px;border:1px solid #ddd;">${marked}</td>
+          <td style="padding:8px;border:1px solid #ddd;">${notVisited}</td>
+        </tr>
+      </tbody>
+    </table>
+    ${!isAuto ? `
+    <div style="margin-top:20px;text-align:right;">
+      <button id="closeSummary" style="padding:8px 14px;background:#00bcd4;color:white;border:none;border-radius:4px;margin-right:10px;cursor: pointer;">Close</button>
+      <button id="confirmFinalSubmit" style="padding:8px 14px;background:#00bcd4;color:white;border:none;border-radius:4px;cursor: pointer;">Submit</button>
+    </div>
+    ` : ""}
+  `;
+
+  document.querySelector("#submitModal .modal-content").innerHTML = summaryHTML;
+  document.getElementById("submitModal").style.display = "flex";
+
+  if (!isAuto) {
+    document.getElementById("closeSummary").onclick = () => {
+      document.getElementById("submitModal").style.display = "none";
+    };
+    document.getElementById("confirmFinalSubmit").onclick = () => {
+      if (window.alreadySubmitted) return;
+      window.alreadySubmitted = true;
+      document.getElementById("submitModal").style.display = "none";
+      finalizeSubmit();
+    };
   }
 }
 
-function clearResponse() { delete answers[currentQuestion]; loadQuestion(currentQuestion); }
-function markForReview() { reviewMarked[currentQuestion] = true; renderNavigator(); updateStatusCounts(); }
-function goBack() { if (currentQuestion > 0) loadQuestion(currentQuestion - 1); }
-function saveAndNext() { if (currentQuestion < questions.length - 1) loadQuestion(currentQuestion + 1); else submitTest(); }
-function submitTest() { document.getElementById('submitModal').style.display = 'flex'; }
-function confirmSubmit(confirm) { document.getElementById('submitModal').style.display = 'none'; if (!confirm) return; autoSubmitTest(); }
 
+// ✅ Manual submit
+function submitTest() {
+  showSummaryModal();
+}
+// ✅ Auto submit
 function autoSubmitTest() {
+  if (window.alreadySubmitted) return;
+  window.alreadySubmitted = true;
+  // ⏰ Show summary modal for 2 seconds
+  showSummaryModal();
+  setTimeout(() => {
+    document.getElementById("submitModal").style.display = "none";
+    finalizeSubmit(); 
+  }, 2000);
+}
+
+// ✅ Final Submit → Save Result → Redirect
+function finalizeSubmit() {
   if (questionStartTime !== null) {
-    const spent = Math.floor((Date.now() - questionStartTime) / 1000);
-    perQuestionTime[currentQuestion] = (perQuestionTime[currentQuestion] || 0) + spent;
+    const end = Date.now();
+    const spent = Math.floor((end - questionStartTime) / 1000);
+    perQuestionTime[currentIndex] = (perQuestionTime[currentIndex] || 0) + spent;
   }
   let correct = 0, wrong = 0;
   questions.forEach((q, i) => {
     if (answers[i] === q.answer) correct++;
     else if (answers[i] !== undefined) wrong++;
   });
-
-  const mins = Math.floor((totalTime * 60 - remainingSeconds) / 60);
-  const secs = (totalTime * 60 - remainingSeconds) % 60;
-
+  const mins = String(Math.floor((remainingSeconds) / 60)).padStart(2, '0');
+  const secs = String((remainingSeconds) % 60).padStart(2, '0');
   const result = {
-    name: localStorage.getItem("userName") || "User",
-    correct, wrong,
+    name: localStorage.getItem("userName") || "Guest",
     total: questions.length,
+    correct,
+    wrong,
     time: `${mins}:${secs}`,
-    answers, questions, perQuestionTime
+    answers,
+    questions,
+    perQuestionTime
   };
-
   localStorage.setItem("quizResult", JSON.stringify(result));
   window.location.href = "result.html";
 }
 
+// ✅ Init
 window.onload = () => {
   document.getElementById("clearBtn").onclick = clearResponse;
   document.getElementById("backBtn").onclick = goBack;
   document.getElementById("reviewBtn").onclick = markForReview;
   document.getElementById("nextBtn").onclick = saveAndNext;
   document.getElementById("submitBtn").onclick = submitTest;
-  document.getElementById("username-display").innerText = localStorage.getItem("userName") || "User";
   loadQuestions();
 };
 </script>
