@@ -1,7 +1,7 @@
 {
   "examName": "BPSC Mock Test Series 2025",
   "testTitle": "Bihar GK Sample Test",
-  "time": 2,
+  "time": 40,
   "sections": ["GK", "Math", "Reasoning", "Hindi"],
   "languages": ["English", "Hindi"],
   "questionType": "MCQ",
