@@ -5,12 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mock Test Dashboard</title>
   <style>
-    /* ========= GLOBAL STYLE FROM HOME PAGE ========= */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* ========= GLOBAL STYLE ========= */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f9ff;
@@ -31,34 +27,13 @@
       z-index: 1000;
       flex-wrap: wrap;
     }
-
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 15px;
-    }
-
+    .logo { font-size: 22px; font-weight: bold; }
+    .nav-links { display: flex; gap: 15px; }
     .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 17px;
-      transition: color 0.3s;
+      color: white; text-decoration: none; font-size: 17px; transition: color 0.3s;
     }
-
-    .nav-links a:hover {
-      color: #ff9933;
-      text-decoration: underline;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
+    .nav-links a:hover { color: #ff9933; text-decoration: underline; }
+    .menu-toggle { display: none; font-size: 24px; cursor: pointer; }
 
     @media (max-width: 768px) {
       .nav-links {
@@ -72,23 +47,12 @@
         width: 200px;
         padding: 10px 20px;
       }
-
-      .nav-links.active {
-        display: flex;
-        margin-top: 10px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
+      .nav-links.active { display: flex; margin-top: 10px; }
+      .menu-toggle { display: block; }
     }
 
-    /* ========= MOCK TEST DASHBOARD ========= */
-    .container {
-      display: flex;
-      min-height: 80vh;
-    }
-
+    /* ========= LAYOUT ========= */
+    .container { display: flex; min-height: 80vh; }
     .sidebar {
       width: 250px;
       background: #fff;
@@ -96,251 +60,105 @@
       padding: 20px;
       overflow-y: auto;
       transition: transform 0.3s ease-in-out;
-      /* z-index: 1001; */
     }
-
     @media (max-width: 768px) {
-      .sidebar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        transform: translateX(-100%);
-      }
-      .sidebar.show {
-        transform: translateX(0);
-      }
+      .sidebar { position: absolute; top: 0; left: 0; height: 100vh; transform: translateX(-100%); }
+      .sidebar.show { transform: translateX(0); }
     }
-
     .sidebar h3 {
-      margin-bottom: 20px;
-      color: #333;
-      font-size: 18px;
-      position: relative;
+      margin-bottom: 20px; color: #333; font-size: 18px; position: relative;
     }
-
     .sidebar h3::after {
-      content: "";
-      width: 40px;
-      height: 3px;
-      background: orange;
-      position: absolute;
-      bottom: -6px;
-      left: 0;
+      content: ""; width: 40px; height: 3px; background: orange; position: absolute; bottom: -6px; left: 0;
     }
-
-    .category {
-      list-style: none;
-      padding: 0;
-    }
-
+    .category { list-style: none; padding: 0; }
     .category li {
-      padding: 10px 0;
-      cursor: pointer;
-      color: #222;
-      border-bottom: 1px solid #eee;
+      padding: 10px 0; cursor: pointer; color: #222; border-bottom: 1px solid #eee;
     }
+    .category li:hover { color: orange; }
 
-    .category li:hover {
-      color: orange;
-    }
-
-    .main {
-      flex: 1;
-      padding: 30px;
-      width: 100%;
-    }
-
-    .search-box {
-      margin-bottom: 20px;
-      position: relative;
-    }
-
+    .main { flex: 1; padding: 30px; width: 100%; }
+    .search-box { margin-bottom: 20px; position: relative; }
     .toggle-btn {
-      display: none;
-      position: absolute;
-      left: -40px;
-      top: 10px;
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 4px;
-      cursor: pointer;
+      display: none; position: absolute; left: -40px; top: 10px;
+      background: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;
     }
-
     .search-box input {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
+      width: 100%; padding: 10px; font-size: 16px; border-radius: 6px; border: 1px solid #ccc;
     }
+    @media (max-width: 768px) { .toggle-btn { display: block; } }
 
     .content {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
     }
-
     .card {
       background: #fff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.07);
       border-bottom: 5px solid #007bff;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      display: flex; flex-direction: column; justify-content: space-between;
       max-width: 400px;
-      min-height: auto;
     }
-
-    .card-header {
-        display: flex;
-        align-items: center;
-        gap: 10px;       /* space between image and title */
-        /* margin-bottom: 8px; */
-    }
-
-    .card-header img {
-        height: 45px;    /* smaller icon */
-        width: 45px;
-        object-fit: contain;
-    }
-
-    .card-header h4 {
-        font-size: 18px;
-        color: #222222;
-        margin: 0;
-    }
-
-    .info {
-      font-size: 14px;
-      margin: 10px 0;
-      color: #444;
-    }
-
-    .info span {
-      display: block;
-      margin: 5px 0;
-    }
-
+    .card-header { display: flex; align-items: center; gap: 10px; }
+    .card-header img { height: 45px; width: 45px; object-fit: contain; }
+    .card-header h4 { font-size: 18px; color: #222; margin: 0; }
+    .info { font-size: 14px; margin: 10px 0; color: #444; }
+    .info span { display: block; margin: 5px 0; }
     .signup-link {
-      font-size: 13px;
-      color: #007bff;
-      text-decoration: none;
-      margin-bottom: 10px;
-      display: inline-block;
+      font-size: 13px; color: #007bff; text-decoration: none; margin-bottom: 10px; display: inline-block;
     }
-
-    .signup-link:hover {
-      text-decoration: underline;
-    }
-
+    .signup-link:hover { text-decoration: underline; }
     .btn {
-      background: #003c91;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-align: center;
-      font-weight: bold;
-      margin-top: auto;
-      text-decoration: none;
+      background: #003c91; color: #fff; padding: 10px; border: none;
+      border-radius: 8px; cursor: pointer; text-align: center; font-weight: bold; margin-top: auto; text-decoration: none;
     }
-
-    .btn:hover {
-      background: #0050c1;
-    }
+    .btn:hover { background: #0050c1; }
 
     #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.1);
-      display: none;
-      z-index: 1000;
-    }
-
-    @media (max-width: 768px) {
-      .toggle-btn {
-        display: block;
-      }
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.1); display: none; z-index: 1000;
     }
 
     /* ========= FOOTER ========= */
     footer {
-      background-color: #002b55;
-      color: #ffffff;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 14px;
-      margin-top: 40px;
+      background-color: #002b55; color: #ffffff;
+      padding: 30px 20px; text-align: center; font-size: 14px; margin-top: 40px;
     }
-
-    footer a {
-      color: #aad4ff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-    .footer-right {
-      align-items: center;
-      margin-top: 10px;
-    }
+    footer a { color: #aad4ff; text-decoration: none; font-weight: 500; }
+    footer a:hover { text-decoration: underline; }
+    .footer-right { margin-top: 10px; }
     .counter-box {
-      display: inline-block;
-      background: #e6abab;
-      padding: 6px 12px;
-      border-radius: 5px;
-      font-weight: bold;
-      border: 2px solid #f10404;
+      display: inline-block; background: #e6abab; padding: 6px 12px; border-radius: 5px; font-weight: bold; border: 2px solid #f10404;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR SAME AS HOME PAGE -->
+  <!-- NAVBAR -->
   <nav>
     <div class="logo">🧠 Test Your Knowledge</div>
     <div class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</div>
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="index.html#buy">Practice Sets</a>
-      <a href="mock_dashboard.html">Mock Tests</a>
+      <a href="mock.html">Mock Tests</a>
       <a href="index.html#sample">Free Sample</a>
       <a href="index.html#join">Contact</a>
     </div>
   </nav>
 
-  <!-- MAIN MOCK TEST DASHBOARD -->
+  <!-- MAIN DASHBOARD -->
   <div class="container">
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
       <h3>Explore All Mock Test</h3>
-      <ul class="category" id="categoryList">
-        <li onclick="filterCards('All')">All</li>
-        <li onclick="filterCards('Teaching')">Teaching</li>
-        <li onclick="filterCards('Defence and Police')">Defence and Police</li>
-        <li onclick="filterCards('Railways')">Railways</li>
-        <li onclick="filterCards('SSC')">SSC</li>
-        <li onclick="filterCards('CTET')">CTET</li>
-        <li onclick="filterCards('Bank PO')">Bank PO</li>
-        <li onclick="filterCards('Bank SO')">Bank SO</li>
-        <li onclick="filterCards('Bank Clerk')">Bank Clerk</li>
-        <li onclick="filterCards('RBI')">RBI</li>
-        <li onclick="filterCards('Others')">Others</li>
-      </ul>
+      <ul class="category" id="categoryList"></ul>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main -->
     <div class="main">
       <div class="search-box">
         <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
@@ -353,7 +171,7 @@
 
   <div id="overlay" onclick="closeSidebar()"></div>
 
-  <!-- FOOTER SAME AS HOME PAGE -->
+  <!-- FOOTER -->
   <footer>
     <h2>Test Your Knowledge</h2>
     <p>
@@ -368,7 +186,7 @@
   </footer>
 
   <script>
-    // NAVBAR MOBILE TOGGLE
+    // NAVBAR MOBILE
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("active");
     }
@@ -376,9 +194,7 @@
     // VISITOR COUNTER
     fetch('https://api.countapi.xyz/update/setwala.github.io/mockvisitcount/?amount=1')
       .then(res => res.json())
-      .then(data => {
-        document.getElementById('visit-count').innerText = data.value;
-      })
+      .then(data => { document.getElementById('visit-count').innerText = data.value; })
       .catch(err => {
         console.error('Counter error:', err);
         document.getElementById('visit-count').innerText = 'N/A';
@@ -386,19 +202,52 @@
 
     // MOCK TEST JSON LOAD
     let tests = [];
+    let allCategories = new Set();
+
     async function loadData() {
       try {
         const response = await fetch("mock_tests.json");
         tests = await response.json();
+
+        // ✅ Collect unique categories
+        tests.forEach(t => allCategories.add(t.category));
+
+        // ✅ Render sidebar categories
+        renderCategories();
+
+        // ✅ Initial render
         loadCards(tests);
       } catch (error) {
         console.error("Error loading mock_tests.json:", error);
       }
     }
 
+    function renderCategories() {
+      const categoryList = document.getElementById('categoryList');
+      categoryList.innerHTML = "";
+
+      // Add "All"
+      const allItem = document.createElement('li');
+      allItem.innerText = "All";
+      allItem.onclick = () => filterCards("All");
+      categoryList.appendChild(allItem);
+
+      // Add categories dynamically
+      allCategories.forEach(cat => {
+        const li = document.createElement('li');
+        li.innerText = cat;
+        li.onclick = () => filterCards(cat);
+        categoryList.appendChild(li);
+      });
+    }
+
     function loadCards(data) {
       const container = document.getElementById("testCards");
       container.innerHTML = "";
+      if (data.length === 0) {
+        container.innerHTML = "<p>No mock tests found!</p>";
+        return;
+      }
       data.forEach(t => {
         container.innerHTML += `
           <div class="card">
@@ -410,7 +259,7 @@
               <span>⏱ Time ${t.time}</span>
             </div>
             <a class="signup-link" href="#">🔗 Sign Up to Start Mock Test</a>
-            <a class="btn" href="exam.html?exam=${t.title}">👁 ${t.title}</a>
+            <a class="btn" href="exam_details.html?exam=${encodeURIComponent(t.examKey)}">👁 ${t.title}</a>
           </div>
         `;
       });
@@ -445,6 +294,8 @@
     }
 
     window.onload = loadData;
+    // window.location.href = "exam.html?exam=Bihar_Police";
+
   </script>
 
 </body>
