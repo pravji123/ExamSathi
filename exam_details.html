@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exam Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{font-family:Arial,sans-serif;margin:0;background:#f9f9f9;}
+  header{background:#0077cc;color:white;padding:15px;text-align:center;}
+  header h1{margin:0;font-size:20px;}
+  header small{display:block;margin-top:5px;font-size:13px;}
+
+  .tabs,.sub-tabs,.filter-tabs{display:flex;gap:10px;padding:10px;overflow-x:auto;background:white;border-bottom:1px solid #ddd;}
+  .tabs button,.sub-tabs button,.filter-tabs button{
+    flex:none;padding:8px 14px;border:1px solid #0077cc;background:white;color:#0077cc;font-size:14px;border-radius:20px;cursor:pointer;
+  }
+  .tabs button.active,.sub-tabs button.active,.filter-tabs button.active{background:#0077cc;color:white;}
+
+  .breadcrumb{padding:8px 12px;font-size:14px;color:#333;background:#fff;border-bottom:1px solid #ddd;}
+
+  .search-bar{text-align:center;padding:10px;background:#fff;border-bottom:1px solid #ddd;}
+  .search-bar input{width:300px;padding:8px;border:1px solid #ccc;border-radius:6px;}
+
+  .test-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;padding:15px;}
+  .test-card{background:#fff;padding:15px;border:1px solid #ddd;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.05);}
+  .test-card strong{font-size:16px;color:#0077cc;display:block;margin-bottom:5px;}
+  .test-card small{color:#666;display:block;margin-top:4px;}
+  .start-btn{width:100%;padding:8px;margin-top:10px;border:none;border-radius:6px;font-weight:bold;cursor:pointer;}
+  .enabled{background:#28a745;color:#fff;}
+  .disabled{background:#ccc;color:#666;cursor:not-allowed;}
+  .buy-btn{background:#ff6600;color:#fff;}
+  .countdown{font-size:13px;color:#888;margin-top:5px;}
+
+  @media(max-width:600px){.test-list{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 id="examName">Loading...</h1>
+  <small id="examMeta"></small>
+</header>
+
+<div class="breadcrumb" id="breadcrumb">Currently Viewing: --</div>
+
+<div class="tabs" id="mainTabs"></div>
+<div class="sub-tabs" id="subTabs" style="display:none;"></div>
+<div class="filter-tabs" id="filterTabs" style="display:none;"></div>
+
+<div class="search-bar">
+  <input type="text" id="searchBox" placeholder="🔍 Search tests...">
+</div>
+
+<div class="test-list" id="testContainer"></div>
+
+<script>
+  let config={};
+  let allTests=[];
+  let currentFilteredList=[];
+  let activeMainTab='',activeSubTab='',activeFilter='';
+  let countdowns=[];
+
+  const params = new URLSearchParams(window.location.search);
+  const examKey = params.get('exam') || 'default';
+
+  // ✅ Paid unlock logic
+  const fullPaid = localStorage.getItem("userFullPaid") === "true";
+  const paidTestsUnlocked = JSON.parse(localStorage.getItem("userPaidTests") || "[]");
+
+  async function loadConfig(){
+    const params=new URLSearchParams(window.location.search);
+    const examKey=params.get('exam')||'default';
+    const configPath=`sets/${examKey}/config.json`;
+
+    try{
+      const res=await fetch(configPath);
+      if(!res.ok) throw new Error('Config not found');
+      config=await res.json();
+
+      document.getElementById('examName').textContent=config.examName;
+      document.getElementById('examMeta').textContent=`${config.totalTests} Tests | Updated: ${config.updatedDate} | Languages: ${config.languages.join(', ')} | ${config.users} Users`;
+
+      allTests=config.tests||[];
+      buildMainTabs();
+    }catch(e){
+      document.getElementById('examName').textContent='❌ Failed to load config';
+      console.error(e);
+    }
+  }
+
+  function buildMainTabs(){
+    const mainTabsDiv=document.getElementById('mainTabs');
+    mainTabsDiv.innerHTML='';
+    (config.tabs||[]).forEach(tab=>{
+      const btn=document.createElement('button');
+      btn.textContent=tab;
+      btn.onclick=()=>selectMainTab(tab);
+      mainTabsDiv.appendChild(btn);
+    });
+    if(config.tabs?.length) selectMainTab(config.tabs[0]);
+  }
+
+  function selectMainTab(tab){
+    activeMainTab=tab;activeSubTab='';activeFilter='';
+    document.querySelectorAll('#mainTabs button').forEach(b=>b.classList.remove('active'));
+    [...document.querySelectorAll('#mainTabs button')].find(b=>b.textContent===tab)?.classList.add('active');
+
+    if(tab==='Paid Tests'){
+      document.getElementById('subTabs').style.display='flex';
+      buildSubTabs();
+    } else {
+      document.getElementById('subTabs').style.display='none';
+      document.getElementById('filterTabs').style.display='none';
+      filterAndRenderTests();
+    }
+    updateBreadcrumb();
+  }
+
+  function buildSubTabs(){
+    const subTabsDiv=document.getElementById('subTabs');
+    subTabsDiv.innerHTML='';
+    const paidKeys=Object.keys(config.paidSubTabs||{});
+    paidKeys.forEach(sub=>{
+      const btn=document.createElement('button');
+      btn.textContent=sub;
+      btn.onclick=()=>selectSubTab(sub);
+      subTabsDiv.appendChild(btn);
+    });
+    if(paidKeys.length) selectSubTab(paidKeys[0]);
+  }
+
+  function selectSubTab(sub){
+    activeSubTab=sub;activeFilter='';
+    document.querySelectorAll('#subTabs button').forEach(b=>b.classList.remove('active'));
+    [...document.querySelectorAll('#subTabs button')].find(b=>b.textContent===sub)?.classList.add('active');
+
+    const filters=config.paidSubTabs[sub]||[];
+    const filterDiv=document.getElementById('filterTabs');
+    filterDiv.innerHTML='';
+
+    if(filters.length){
+      filterDiv.style.display='flex';
+      const allBtn=document.createElement('button');
+      allBtn.textContent='All';
+      allBtn.onclick=()=>selectFilter('All');
+      filterDiv.appendChild(allBtn);
+
+      filters.forEach(f=>{
+        const btn=document.createElement('button');
+        btn.textContent=f;
+        btn.onclick=()=>selectFilter(f);
+        filterDiv.appendChild(btn);
+      });
+
+      selectFilter('All');
+    } else {
+      filterDiv.style.display='none';
+      filterAndRenderTests(true);
+    }
+    updateBreadcrumb();
+  }
+
+  function selectFilter(f){
+    activeFilter=f;
+    document.querySelectorAll('#filterTabs button').forEach(b=>b.classList.remove('active'));
+    [...document.querySelectorAll('#filterTabs button')].find(b=>b.textContent===f)?.classList.add('active');
+
+    if(f==='All') filterAndRenderTests(true); else filterAndRenderTests(false);
+    updateBreadcrumb();
+  }
+
+  function updateBreadcrumb(){
+    let parts=[activeMainTab];
+    if(activeSubTab) parts.push(activeSubTab);
+    if(activeFilter && activeFilter!=='All') parts.push(activeFilter);
+    document.getElementById('breadcrumb').textContent='📌 Currently Viewing: '+(parts.join(' > ')||'--');
+  }
+
+  function filterAndRenderTests(showAllInSubTab=false){
+    let filtered=[];
+    if(activeMainTab==='Free Tests'){
+      filtered=allTests.filter(t=>t.category==='FREE');
+    } else if(activeMainTab==='PYQs'){
+      filtered=allTests.filter(t=>t.category==='PYQ');
+    } else if(activeMainTab==='Paid Tests'){
+      let subTabTests=allTests.filter(t=>t.category===activeSubTab.replace(/\s/g,''));
+      if(showAllInSubTab) filtered=subTabTests; else filtered=subTabTests.filter(t=>t.filter===activeFilter);
+    }
+    currentFilteredList=filtered;
+    renderTests(filtered);
+  }
+
+  function renderTests(list){
+    const container=document.getElementById('testContainer');
+    container.innerHTML='';
+    countdowns.forEach(c=>clearInterval(c));
+    countdowns=[];
+
+    if(!list.length){container.innerHTML='<p style="text-align:center;color:#666;">No tests found</p>';return;}
+
+    list.forEach((t,i)=>{
+      let btnHTML='';
+
+      // Free & PYQ logic
+      if(t.category==='FREE'||t.category==='PYQ'){
+        if(t.liveDate){
+          btnHTML=`<button class="start-btn disabled" id="btn_${i}">⏳ Live on ${formatDate(t.liveDate)}</button><div class="countdown" id="cd_${i}"></div>`;
+        } else {
+          btnHTML=`<button class="start-btn enabled" onclick="startTest('${t.file}')">Start Test</button>`;
+        }
+      } else { // ✅ Paid logic with lock
+        const unlocked = fullPaid || paidTestsUnlocked.includes(t.file);
+        if(unlocked){
+          btnHTML=`<button class="start-btn enabled" onclick="startTest('${t.file}')">Start Test ✅</button>`;
+        } else {
+          btnHTML=`<button class="start-btn buy-btn" onclick="unlockPaid('${t.file}')">🔒 Locked – Unlock Now</button>`;
+        }
+      }
+
+      const card=document.createElement('div');
+      card.className='test-card';
+      card.innerHTML=`<strong>${t.title}</strong>
+        📝 ${t.questions} Qs | ⭐ ${t.marks} Marks | ⏳ ${t.time} min
+        ${btnHTML}`;
+      container.appendChild(card);
+
+      if(t.liveDate) setupCountdown(i,t.liveDate,t.file);
+    });
+  }
+
+  function setupCountdown(i,dateStr,file){
+    const btn=document.getElementById(`btn_${i}`);
+    const cd=document.getElementById(`cd_${i}`);
+    function tick(){
+      const now=new Date();
+      const target=new Date(dateStr+'T00:00:00');
+      const diff=target-now;
+      if(diff<=0){
+        btn.textContent='Start Test';btn.classList.remove('disabled');btn.classList.add('enabled');
+        btn.onclick=()=>startTest(file);
+        cd.textContent='';return true;
+      } else {
+        const d=Math.floor(diff/86400000);
+        const h=Math.floor(diff/3600000)%24;
+        const m=Math.floor(diff/60000)%60;
+        cd.textContent=`Starts in ${d>0?d+'d ':''}${h}h ${m}m`;return false;
+      }
+    }
+    if(!tick()){
+      const intv=setInterval(()=>{if(tick())clearInterval(intv)},60000);
+      countdowns.push(intv);
+    }
+  }
+
+  document.getElementById('searchBox').addEventListener('input',()=>{
+    const term=document.getElementById('searchBox').value.toLowerCase();
+    if(!term) renderTests(currentFilteredList);
+    else renderTests(currentFilteredList.filter(t=>(t.title||'').toLowerCase().includes(term)));
+  });
+
+  function startTest(file){
+  // Redirect to test page with selected file
+    window.location.href = `test.html?exam=${encodeURIComponent(examKey)}&file=${encodeURIComponent(file)}`;
+  }
+
+
+  // ✅ Unlock redirects to pricing.html
+  function unlockPaid(file){
+    window.location.href = `pricing.html?test=${encodeURIComponent(file)}`;
+  }
+
+  function formatDate(str){const d=new Date(str);return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});}
+
+  loadConfig();
+</script>
+</body>
+</html>
