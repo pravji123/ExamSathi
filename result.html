@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Result Summary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #007bff;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    tr:hover {
+      background: #f1f1f1;
+    }
+    tfoot td {
+      font-weight: bold;
+      background: #e9ecef;
+    }
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Test Result Summary</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Section</th>
+        <th>Total</th>
+        <th>Answered</th>
+        <th>Not Answered</th>
+        <th>Correct</th>
+        <th>Wrong</th>
+        <th>Total Marks</th>
+        <th>Percentage</th>
+      </tr>
+    </thead>
+    <tbody id="resultBody">
+      <!-- Dynamic rows will be inserted here -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Total</td>
+        <td id="totalQ"></td>
+        <td id="totalAnswered"></td>
+        <td id="totalNotAnswered"></td>
+        <td id="totalCorrect"></td>
+        <td id="totalWrong"></td>
+        <td id="totalMarks"></td>
+        <td id="totalPercentage"></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="btn-container">
+    <a href="review.html" class="btn">Review Questions</a>
+    <a href="index.html" class="btn">Go to Home</a>
+  </div>
+
+  <script>
+    // Example data - Replace this with actual result data
+    const sections = [
+      { name: "GK", total: 10, answered: 8, correct: 6, wrong: 2 },
+      { name: "Math", total: 10, answered: 9, correct: 7, wrong: 2 },
+      { name: "Reasoning", total: 10, answered: 7, correct: 5, wrong: 2 }
+    ];
+    const markPerQuestion = 1; // Change if needed
+
+    const resultBody = document.getElementById('resultBody');
+
+    let sumTotal = 0, sumAnswered = 0, sumNotAnswered = 0, sumCorrect = 0, sumWrong = 0, sumMarks = 0;
+
+    sections.forEach(sec => {
+      const notAnswered = sec.total - sec.answered;
+      const marks = sec.correct * markPerQuestion;
+      const percentage = ((sec.correct / sec.total) * 100).toFixed(1);
+
+      resultBody.innerHTML += `
+        <tr>
+          <td>${sec.name}</td>
+          <td>${sec.total}</td>
+          <td>${sec.answered}</td>
+          <td>${notAnswered}</td>
+          <td>${sec.correct}</td>
+          <td>${sec.wrong}</td>
+          <td>${marks}</td>
+          <td>${percentage}%</td>
+        </tr>
+      `;
+
+      sumTotal += sec.total;
+      sumAnswered += sec.answered;
+      sumNotAnswered += notAnswered;
+      sumCorrect += sec.correct;
+      sumWrong += sec.wrong;
+      sumMarks += marks;
+    });
+
+    const totalPercentage = ((sumCorrect / sumTotal) * 100).toFixed(1);
+
+    document.getElementById('totalQ').textContent = sumTotal;
+    document.getElementById('totalAnswered').textContent = sumAnswered;
+    document.getElementById('totalNotAnswered').textContent = sumNotAnswered;
+    document.getElementById('totalCorrect').textContent = sumCorrect;
+    document.getElementById('totalWrong').textContent = sumWrong;
+    document.getElementById('totalMarks').textContent = sumMarks;
+    document.getElementById('totalPercentage').textContent = totalPercentage + "%";
+  </script>
+
+</body>
+</html>
