@@ -1,5 +1,45 @@
 [
   {
+    "title": "Bihar Police Constable Test",
+    "category": "Defence and Police",
+    "examKey": "Bihar_Police",
+    "rating": 4.4,
+    "tests": 5,
+    "time": "90 min",
+    "lang": "Hindi",
+    "img": "image/bihar_police-logo.png"
+  },
+  {
+    "title": "BPSC TRE PRT (Class 1–5)",
+    "category": "Teaching",
+    "examKey": "BPSC_TRE",
+    "rating": 4.6,
+    "tests": 3,
+    "time": "120 min",
+    "lang": "Hindi",
+    "img": "image/bpsc_tre-logo.png"
+  },
+  {
+    "title": "BPSC TRE Science (Class 6-8 )",
+    "category": "Teaching",
+    "examKey": "BPSC_TRE",
+    "rating": 4.6,
+    "tests": 3,
+    "time": "120 min",
+    "lang": "Hindi",
+    "img": "image/bpsc_tre-logo.png"
+  },
+  {
+    "title": "BSSC Inter Level",
+    "category": "BSSC",
+    "examKey": "sets/BSSC",
+    "rating": 4.5,
+    "tests": 4,
+    "time": "90 min",
+    "lang": "Hindi",
+    "img": "image/bssc-logo.png"
+  },
+  {
     "title": "CTET Paper I",
     "category": "CTET",
     "examKey": "data/ctet_1to5",
@@ -12,22 +52,12 @@
   {
     "title": "CTET Paper II",
     "category": "CTET",
-    "examKey": "BPSC_TRE",
+    "examKey": "CTET_6_8",
     "rating": 4.6,
     "tests": 4,
     "time": "150 min",
     "lang": "Hindi, English",
     "img": "image/ctet-logo.png"
-  },
-  {
-    "title": "Bihar Police Constable Test",
-    "category": "Defence and Police",
-    "examKey": "Bihar_Police",
-    "rating": 4.4,
-    "tests": 5,
-    "time": "90 min",
-    "lang": "Hindi",
-    "img": "image/bihar_police-logo.png"
   },
   {
     "title": "RRB NTPC Tier 1",
@@ -56,34 +86,6 @@
     "time": "120 min",
     "lang": "English",
     "img": "image/bpsc-logo.png"
-  },
-  {
-    "title": "BPSC TRE PRT (Class 1–5)",
-    "category": "Teaching",
-    "rating": 4.6,
-    "tests": 3,
-    "time": "120 min",
-    "lang": "Hindi",
-    "img": "image/bpsc_tre-logo.png"
-  },
-  {
-    "title": "BPSC TRE Science (Class 6-8 )",
-    "category": "Teaching",
-    "rating": 4.6,
-    "tests": 3,
-    "time": "120 min",
-    "lang": "Hindi",
-    "img": "image/bpsc_tre-logo.png"
-  },
-  {
-    "title": "BSSC Inter Level",
-    "category": "BSSC",
-    "examKey": "sets/BSSC",
-    "rating": 4.5,
-    "tests": 4,
-    "time": "90 min",
-    "lang": "Hindi",
-    "img": "image/bssc-logo.png"
   },
   {
     "title": "IBPS SO Prelims (IT/AFO/HR)",
