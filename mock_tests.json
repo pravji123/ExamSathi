@@ -1,32 +1,5 @@
 [
   {
-    "title": "IBPS SO Prelims (IT/AFO/HR)",
-    "category": "Bank SO",
-    "rating": 4.8,
-    "tests": 3,
-    "time": "120 min",
-    "lang": "Hindi, English",
-    "img": "image/ibps-logo.png"
-  },
-  {
-    "title": "Bank Of Baroda Specialist Officer",
-    "category": "Bank SO",
-    "rating": 4.3,
-    "tests": 3,
-    "time": "120 min",
-    "lang": "Hindi, English",
-    "img": "image/bob-logo.png"
-  },
-  {
-    "title": "IBPS RRB SO Scale 2 IT Officer",
-    "category": "Bank SO",
-    "rating": 4.7,
-    "tests": 5,
-    "time": "120 min",
-    "lang": "Hindi, English",
-    "img": "image/ibps_rrb-logo.png"
-  },
-  {
     "title": "CTET Paper I",
     "category": "CTET",
     "rating": 4.6,
@@ -67,42 +40,6 @@
         "time": "90 min"
       }
     ]
-  },
-  {
-    "title": "RRB NTPC Tier 1",
-    "category": "Railways",
-    "rating": 4.5,
-    "tests": 6,
-    "time": "90 min",
-    "lang": "Hindi, English",
-    "img": "image/railway1-logo.png"
-  },
-  {
-    "title": "SSC CGL Tier 1",
-    "category": "SSC",
-    "rating": 4.7,
-    "tests": 4,
-    "time": "60 min",
-    "lang": "Hindi, English",
-    "img": "image/ssc-logo.png"
-  },
-  {
-    "title": "SBI PO Prelims",
-    "category": "Bank PO",
-    "rating": 4.6,
-    "tests": 3,
-    "time": "60 min",
-    "lang": "Hindi, English",
-    "img": "image/sbi-logo.png"
-  },
-  {
-    "title": "RBI Grade B Phase I",
-    "category": "RBI",
-    "rating": 4.9,
-    "tests": 3,
-    "time": "120 min",
-    "lang": "English",
-    "img": "image/railway1-logo.png"
   },
   {
     "title": "BPSC Civil Services Prelims",
@@ -176,5 +113,32 @@
     "time": "90 min",
     "lang": "Hindi",
     "img": "image/bssc-logo.png"
-  }
+  },
+  {
+    "title": "RRB NTPC Tier 1",
+    "category": "Railways",
+    "rating": 4.5,
+    "tests": 6,
+    "time": "90 min",
+    "lang": "Hindi, English",
+    "img": "image/railway1-logo.png"
+  },
+  {
+    "title": "SSC CGL Tier 1",
+    "category": "SSC",
+    "rating": 4.7,
+    "tests": 4,
+    "time": "60 min",
+    "lang": "Hindi, English",
+    "img": "image/ssc-logo.png"
+  },
+  {
+    "title": "SBI PO Prelims",
+    "category": "Bank PO",
+    "rating": 4.6,
+    "tests": 3,
+    "time": "60 min",
+    "lang": "Hindi, English",
+    "img": "image/sbi-logo.png"
+  },
 ]
