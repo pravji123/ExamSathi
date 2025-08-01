@@ -17,23 +17,13 @@
 
   "tests": [
     {
-      "title": "BPSC TRE 2023 Memory Based Paper",
-      "category": "FREE",
-      "filter": "All",
-      "questions": 100,
-      "marks": 100,
-      "time": 90,
-      "file": "Bihar_Police_pyq1.json",
-      "liveDate": "2025-07-24"
-    },
-    {
       "title": "BPSC TRE Mock Test Set 1",
       "category": "FREE",
       "filter": "All",
       "questions": 50,
       "marks": 50,
       "time": 30,
-      "file": "set1.json",
+      "file": "bt_question.json",
       "liveDate": "2025-07-25"
     },
     {
