@@ -4,9 +4,7 @@
   "totalTests": 15,
   "languages": ["English", "Hindi"],
   "users": "1.6k",
-
   "tabs": ["Free Tests", "Paid Tests", "PYQs"],
-
   "paidSubTabs": {
     "Full Test":[],
     "CHAPTER": ["Static GK","Reasoning", "GA", "English", "Math", "History", "Geography", "Polity"],
