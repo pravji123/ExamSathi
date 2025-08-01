@@ -1,0 +1,578 @@
+{
+  "examName": "BPSC Mock Test Series 2025",
+  "testTitle": "Science & Math Test",
+  "time": 2,
+  "sections": ["Science", "Math"],
+  "languages": ["English", "Hindi"],
+  "questionType": "MCQ",
+  "marks": 1,
+  "negative": 0,
+  "questions": [
+    {
+      "section": "Math",
+      "question": "What is the LCM of 12 and 18? / 12 और 18 का लघुत्तम समापवर्त्य (LCM) क्या है?",
+      "options": ["36", "18", "12", "72"],
+      "answer": "36",
+      "explanation": "LCM of 12 and 18 is 36 as it's the smallest number divisible by both."
+    },
+    {
+      "section": "Math",
+      "question": "What is the square root of 144? / 144 का वर्गमूल क्या है?",
+      "options": ["10", "11", "12", "14"],
+      "answer": "12",
+      "explanation": "12 × 12 = 144, so the square root of 144 is 12."
+    },
+    {
+      "section": "Math",
+      "question": "What is 25% of 200? / 200 का 25% कितना है?",
+      "options": ["50", "25", "75", "100"],
+      "answer": "50",
+      "explanation": "25% of 200 is (25/100) × 200 = 50."
+    },
+    {
+      "section": "Math",
+      "question": "If x = 2, what is the value of x² + 3x + 1? / यदि x = 2 हो, तो x² + 3x + 1 का मान क्या होगा?",
+      "options": ["11", "12", "13", "14"],
+      "answer": "11",
+      "explanation": "x² + 3x + 1 = 4 + 6 + 1 = 11."
+    },
+    {
+      "section": "Math",
+      "question": "Simplify: (15 ÷ 3) + (12 ÷ 4) / सरल करें: (15 ÷ 3) + (12 ÷ 4)",
+      "options": ["5", "6", "7", "8"],
+      "answer": "7",
+      "explanation": "15 ÷ 3 = 5, 12 ÷ 4 = 2, so 5 + 2 = 7."
+    },
+    {
+      "section": "Math",
+      "question": "What is the perimeter of a square of side 5 cm? / 5 सेमी भुजा वाले वर्ग की परिमिति क्या होगी?",
+      "options": ["10 cm", "20 cm", "15 cm", "25 cm"],
+      "answer": "20 cm",
+      "explanation": "Perimeter = 4 × side = 4 × 5 = 20 cm."
+    },
+    {
+      "section": "Math",
+      "question": "What is the value of (2³ × 3²)? / (2³ × 3²) का मान क्या है?",
+      "options": ["36", "72", "18", "48"],
+      "answer": "72",
+      "explanation": "2³ = 8 and 3² = 9, so 8 × 9 = 72."
+    },
+    {
+      "section": "Math",
+      "question": "Solve: 3x = 12. What is x? / हल करें: 3x = 12. x का मान क्या है?",
+      "options": ["3", "4", "5", "6"],
+      "answer": "4",
+      "explanation": "x = 12 ÷ 3 = 4."
+    },
+    {
+      "section": "Math",
+      "question": "What is the area of a triangle with base 10 cm and height 6 cm? / 10 सेमी आधार और 6 सेमी ऊंचाई वाले त्रिभुज का क्षेत्रफल क्या है?",
+      "options": ["30 cm²", "60 cm²", "40 cm²", "36 cm²"],
+      "answer": "30 cm²",
+      "explanation": "Area = ½ × base × height = ½ × 10 × 6 = 30 cm²."
+    },
+    {
+      "section": "Math",
+      "question": "What is 0.5 × 0.2? / 0.5 × 0.2 का मान क्या है?",
+      "options": ["0.01", "0.10", "0.20", "0.15"],
+      "answer": "0.10",
+      "explanation": "0.5 × 0.2 = 0.10."
+    },
+        {
+      "section": "Math",
+      "question": "What is the cube of 3? / 3 का घन कितना है?",
+      "options": ["6", "9", "27", "18"],
+      "answer": "27",
+      "explanation": "3 × 3 × 3 = 27"
+    },
+    {
+      "section": "Math",
+      "question": "If 5 pencils cost ₹25, what is the cost of 1 pencil? / यदि 5 पेंसिल की कीमत ₹25 है, तो 1 पेंसिल की कीमत क्या होगी?",
+      "options": ["₹2", "₹3", "₹4", "₹5"],
+      "answer": "₹5",
+      "explanation": "₹25 ÷ 5 = ₹5"
+    },
+    {
+      "section": "Math",
+      "question": "What is 15% of 200? / 200 का 15% कितना है?",
+      "options": ["20", "25", "30", "35"],
+      "answer": "30",
+      "explanation": "15% of 200 = (15/100) × 200 = 30"
+    },
+    {
+      "section": "Math",
+      "question": "Simplify: 48 ÷ 4 + 6 / सरल करें: 48 ÷ 4 + 6",
+      "options": ["16", "18", "12", "24"],
+      "answer": "18",
+      "explanation": "48 ÷ 4 = 12; 12 + 6 = 18"
+    },
+    {
+      "section": "Math",
+      "question": "What is the area of a circle with radius 7 cm? / त्रिज्या 7 सेमी वाले वृत्त का क्षेत्रफल कितना है?",
+      "options": ["154 cm²", "144 cm²", "100 cm²", "98 cm²"],
+      "answer": "154 cm²",
+      "explanation": "πr² = 22/7 × 7 × 7 = 154 cm²"
+    },
+    {
+      "section": "Math",
+      "question": "How many degrees are in a right angle? / समकोण में कितने डिग्री होते हैं?",
+      "options": ["180°", "45°", "90°", "60°"],
+      "answer": "90°",
+      "explanation": "Right angle = 90°"
+    },
+    {
+      "section": "Math",
+      "question": "Find the next number: 2, 4, 8, 16, ? / अगली संख्या बताएं: 2, 4, 8, 16, ?",
+      "options": ["24", "30", "32", "36"],
+      "answer": "32",
+      "explanation": "Doubles each time: 16 × 2 = 32"
+    },
+    {
+      "section": "Math",
+      "question": "If A = 5, B = 10, then A + B² = ? / यदि A = 5, B = 10, तो A + B² = ?",
+      "options": ["15", "105", "100", "55"],
+      "answer": "105",
+      "explanation": "B² = 100; A + B² = 5 + 100 = 105"
+    },
+    {
+      "section": "Math",
+      "question": "The average of 10, 20, 30 is? / 10, 20, 30 का औसत कितना है?",
+      "options": ["15", "20", "25", "30"],
+      "answer": "20",
+      "explanation": "(10+20+30)/3 = 60/3 = 20"
+    },
+        {
+      "section": "Math",
+      "question": "A shopkeeper sells an item for ₹240 at 20% profit. What is the cost price? / दुकानदार ₹240 में वस्तु बेचता है और 20% लाभ कमाता है। क्रय मूल्य क्या है?",
+      "options": ["₹200", "₹220", "₹250", "₹280"],
+      "answer": "₹200",
+      "explanation": "CP = SP / (1 + Profit%) = 240 / 1.2 = ₹200"
+    },
+    {
+      "section": "Math",
+      "question": "What is the HCF of 36 and 60? / 36 और 60 का महत्तम समापवर्तक (HCF) क्या है?",
+      "options": ["6", "12", "18", "24"],
+      "answer": "12",
+      "explanation": "Common factors of 36 and 60, highest is 12"
+    },
+    {
+      "section": "Math",
+      "question": "What is the formula for area of rectangle? / आयत का क्षेत्रफल का सूत्र क्या है?",
+      "options": ["Length × Breadth", "2 × (L+B)", "πr²", "½ × base × height"],
+      "answer": "Length × Breadth",
+      "explanation": "Area = L × B"
+    },
+    {
+      "section": "Math",
+      "question": "Solve: 20% of 80 = ? / 80 का 20% कितना होगा?",
+      "options": ["12", "14", "16", "18"],
+      "answer": "16",
+      "explanation": "(20/100) × 80 = 16"
+    },
+    {
+      "section": "Math",
+      "question": "Convert 0.75 into a fraction. / 0.75 को भिन्न में बदलें।",
+      "options": ["3/4", "1/2", "2/3", "1/4"],
+      "answer": "3/4",
+      "explanation": "0.75 = 75/100 = 3/4"
+    },
+    {
+      "section": "Math",
+      "question": "If perimeter of a square is 24 cm, find its side. / यदि वर्ग की परिमिति 24 सेमी है, तो भुजा कितनी होगी?",
+      "options": ["4 cm", "5 cm", "6 cm", "7 cm"],
+      "answer": "6 cm",
+      "explanation": "Perimeter = 4 × side → side = 24 ÷ 4 = 6 cm"
+    },
+    {
+      "section": "Math",
+      "question": "What is the sum of first 5 natural numbers? / पहले 5 प्राकृतिक संख्याओं का योग क्या है?",
+      "options": ["10", "15", "20", "25"],
+      "answer": "15",
+      "explanation": "1 + 2 + 3 + 4 + 5 = 15"
+    },
+    {
+      "section": "Math",
+      "question": "If x = 3, what is 2x² - x + 1? / यदि x = 3, तो 2x² - x + 1 का मान क्या है?",
+      "options": ["16", "17", "18", "19"],
+      "answer": "16",
+      "explanation": "2×9 - 3 + 1 = 18 - 3 + 1 = 16"
+    },
+    {
+      "section": "Math",
+      "question": "What is 1 kg = ? grams / 1 किलोग्राम में कितने ग्राम होते हैं?",
+      "options": ["10", "100", "1000", "10000"],
+      "answer": "1000",
+      "explanation": "1 kg = 1000 grams"
+    },
+    {
+      "section": "Math",
+      "question": "A train travels 120 km in 2 hours. What is its speed? / एक ट्रेन 2 घंटे में 120 किमी चलती है। उसकी गति क्या है?",
+      "options": ["60 km/h", "50 km/h", "40 km/h", "70 km/h"],
+      "answer": "60 km/h",
+      "explanation": "Speed = Distance / Time = 120 / 2 = 60 km/h"
+    },
+    {
+      "section": "Math",
+      "question": "What is 1/2 + 1/4? / 1/2 + 1/4 कितना होता है?",
+      "options": ["2/4", "3/4", "1/4", "5/8"],
+      "answer": "3/4",
+      "explanation": "1/2 = 2/4; 2/4 + 1/4 = 3/4"
+    },
+        {
+      "section": "Math",
+      "question": "What is the value of 5! (5 factorial)? / 5! (5 फैक्टोरियल) का मान क्या है?",
+      "options": ["120", "60", "100", "80"],
+      "answer": "120",
+      "explanation": "5! = 5×4×3×2×1 = 120"
+    },
+    {
+      "section": "Math",
+      "question": "If a car covers 150 km in 3 hours, what is its average speed? / एक कार 3 घंटे में 150 किमी तय करती है, उसकी औसत गति क्या है?",
+      "options": ["30 km/h", "40 km/h", "50 km/h", "60 km/h"],
+      "answer": "50 km/h",
+      "explanation": "Speed = Distance / Time = 150 ÷ 3 = 50 km/h"
+    },
+    {
+      "section": "Math",
+      "question": "Simplify: (4 + 3) × 2 / सरल करें: (4 + 3) × 2",
+      "options": ["10", "12", "14", "16"],
+      "answer": "14",
+      "explanation": "4 + 3 = 7; 7 × 2 = 14"
+    },
+    {
+      "section": "Math",
+      "question": "What is the average of 5, 10, 15, 20, 25? / 5, 10, 15, 20, 25 का औसत क्या है?",
+      "options": ["12", "15", "20", "18"],
+      "answer": "15",
+      "explanation": "Sum = 75; Avg = 75 ÷ 5 = 15"
+    },
+    {
+      "section": "Math",
+      "question": "Convert 3/4 into percentage. / 3/4 को प्रतिशत में बदलें।",
+      "options": ["50%", "60%", "75%", "80%"],
+      "answer": "75%",
+      "explanation": "(3/4) × 100 = 75%"
+    },
+    {
+      "section": "Math",
+      "question": "If radius of circle is 14 cm, find diameter. / यदि वृत्त की त्रिज्या 14 सेमी है, तो व्यास कितना होगा?",
+      "options": ["28 cm", "21 cm", "14 cm", "7 cm"],
+      "answer": "28 cm",
+      "explanation": "Diameter = 2 × radius = 2 × 14 = 28 cm"
+    },
+    {
+      "section": "Math",
+      "question": "What is 12²? / 12 का वर्ग कितना है?",
+      "options": ["124", "132", "144", "154"],
+      "answer": "144",
+      "explanation": "12 × 12 = 144"
+    },
+    {
+      "section": "Math",
+      "question": "Find missing number: 2, 5, 10, 17, ? / रिक्त संख्या खोजें: 2, 5, 10, 17, ?",
+      "options": ["24", "26", "30", "34"],
+      "answer": "26",
+      "explanation": "Pattern: +3, +5, +7, +9 → 17+9=26"
+    },
+    {
+      "section": "Math",
+      "question": "What is the perimeter of a rectangle 8 cm by 6 cm? / 8 सेमी × 6 सेमी आयत की परिमिति क्या है?",
+      "options": ["24 cm", "28 cm", "30 cm", "32 cm"],
+      "answer": "28 cm",
+      "explanation": "2 × (8+6) = 2 × 14 = 28 cm"
+    },
+    {
+      "section": "Math",
+      "question": "If x = 4, evaluate: x² + 2x + 1 / यदि x = 4, तो x² + 2x + 1 का मान क्या है?",
+      "options": ["20", "21", "25", "30"],
+      "answer": "25",
+      "explanation": "x² + 2x + 1 = 16 + 8 + 1 = 25"
+    },
+
+    {
+      "section": "Science",
+      "question": "Which planet is farthest from the Sun? / सूर्य से सबसे दूर ग्रह कौन सा है?",
+      "options": ["Mars", "Earth", "Neptune", "Saturn"],
+      "answer": "Neptune",
+      "explanation": "Neptune is the 8th and farthest known planet from the Sun."
+    },
+    {
+      "section": "Science",
+      "question": "Which organ produces insulin? / इंसुलिन किस अंग द्वारा उत्पन्न होता है?",
+      "options": ["Liver", "Stomach", "Pancreas", "Kidney"],
+      "answer": "Pancreas",
+      "explanation": "Pancreas produces insulin to regulate blood sugar."
+    },
+    {
+      "section": "Science",
+      "question": "Which blood group is universal donor? / कौन सा रक्त समूह सार्वत्रिक दाता होता है?",
+      "options": ["A", "B", "AB", "O"],
+      "answer": "O",
+      "explanation": "O negative is universal donor."
+    },
+    {
+      "section": "Science",
+      "question": "What is the unit of electrical resistance? / विद्युत प्रतिरोध की इकाई क्या है?",
+      "options": ["Ohm", "Ampere", "Volt", "Watt"],
+      "answer": "Ohm",
+      "explanation": "Unit of resistance is Ohm (Ω)."
+    },
+    {
+      "section": "Science",
+      "question": "Which vitamin prevents night blindness? / रात को न दिखाई देने की बीमारी को कौन सा विटामिन रोकता है?",
+      "options": ["Vitamin B", "Vitamin C", "Vitamin A", "Vitamin D"],
+      "answer": "Vitamin A",
+      "explanation": "Vitamin A maintains good vision in low light."
+    },
+    {
+      "section": "Science",
+      "question": "Which blood cells help in clotting? / रक्त के थक्के बनाने में कौन सी कोशिकाएँ मदद करती हैं?",
+      "options": ["WBC", "RBC", "Platelets", "Plasma"],
+      "answer": "Platelets",
+      "explanation": "Platelets help in blood clotting."
+    },
+    {
+      "section": "Science",
+      "question": "What is the speed of light? / प्रकाश की गति कितनी है?",
+      "options": ["3×10⁶ m/s", "3×10⁸ m/s", "3×10⁷ m/s", "3×10⁵ m/s"],
+      "answer": "3×10⁸ m/s",
+      "explanation": "Speed of light in vacuum is 3×10⁸ m/s."
+    },
+    {
+      "section": "Science",
+      "question": "Which part of cell contains genetic material? / कोशिका का कौन सा भाग आनुवंशिक पदार्थ रखता है?",
+      "options": ["Cytoplasm", "Nucleus", "Mitochondria", "Ribosome"],
+      "answer": "Nucleus",
+      "explanation": "Nucleus contains DNA, the genetic material."
+    },
+    {
+      "section": "Science",
+      "question": "Which acid is found in lemon? / नींबू में कौन सा अम्ल पाया जाता है?",
+      "options": ["Acetic acid", "Lactic acid", "Citric acid", "Hydrochloric acid"],
+      "answer": "Citric acid",
+      "explanation": "Citric acid is present in citrus fruits like lemon."
+    },
+    {
+      "section": "Science",
+      "question": "Which disease is caused by mosquito bite? / मच्छर काटने से कौन सी बीमारी होती है?",
+      "options": ["Typhoid", "Malaria", "Cholera", "TB"],
+      "answer": "Malaria",
+      "explanation": "Malaria is spread by female Anopheles mosquito."
+    },
+    {
+      "section": "Science",
+      "question": "What is the function of white blood cells? / श्वेत रक्त कणों का कार्य क्या है?",
+      "options": ["Carry oxygen", "Clot blood", "Fight infection", "Digest food"],
+      "answer": "Fight infection",
+      "explanation": "WBCs are part of immune system."
+    },
+    {
+      "section": "Science",
+      "question": "Which part of eye controls the amount of light entering? / आँख का कौन सा भाग प्रकाश की मात्रा नियंत्रित करता है?",
+      "options": ["Cornea", "Pupil", "Retina", "Lens"],
+      "answer": "Pupil",
+      "explanation": "Pupil adjusts size to control light."
+    },
+    {
+      "section": "Science",
+      "question": "Which scientist discovered gravity? / गुरुत्वाकर्षण की खोज किसने की थी?",
+      "options": ["Einstein", "Newton", "Galileo", "Faraday"],
+      "answer": "Newton",
+      "explanation": "Newton discovered the law of gravity."
+    },
+    {
+      "section": "Science",
+      "question": "Which is the largest internal organ in human body? / मानव शरीर का सबसे बड़ा आंतरिक अंग कौन सा है?",
+      "options": ["Heart", "Liver", "Lungs", "Stomach"],
+      "answer": "Liver",
+      "explanation": "Liver is the largest internal organ."
+    },
+    {
+      "section": "Science",
+      "question": "Which gas turns lime water milky? / कौन सी गैस चूने के पानी को दूधिया बना देती है?",
+      "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+      "answer": "Carbon dioxide",
+      "explanation": "CO₂ reacts with lime water to form CaCO₃"
+    },
+    {
+      "section": "Science",
+      "question": "Which device converts electrical energy to mechanical energy? / कौन सा उपकरण विद्युत ऊर्जा को यांत्रिक ऊर्जा में बदलता है?",
+      "options": ["Generator", "Motor", "Bulb", "Transformer"],
+      "answer": "Motor",
+      "explanation": "Motor changes electrical energy to mechanical energy."
+    },
+    {
+      "section": "Science",
+      "question": "What is the main function of red blood cells? / लाल रक्त कणों का मुख्य कार्य क्या है?",
+      "options": ["Fight disease", "Digest food", "Carry oxygen", "Form clots"],
+      "answer": "Carry oxygen",
+      "explanation": "RBCs carry oxygen using hemoglobin."
+    },
+    {
+      "section": "Science",
+      "question": "Which planet has rings? / किस ग्रह के चारों ओर छल्ले हैं?",
+      "options": ["Earth", "Mars", "Saturn", "Venus"],
+      "answer": "Saturn",
+      "explanation": "Saturn has visible rings."
+    },
+    {
+      "section": "Science",
+      "question": "Which organ removes waste from blood? / रक्त से अपशिष्ट पदार्थों को निकालने वाला अंग कौन है?",
+      "options": ["Liver", "Kidney", "Heart", "Lungs"],
+      "answer": "Kidney",
+      "explanation": "Kidneys filter blood and remove urea."
+    },
+    {
+      "section": "Science",
+      "question": "Which gas is essential for photosynthesis? / प्रकाश संश्लेषण के लिए आवश्यक गैस कौन सी है?",
+      "options": ["Oxygen", "Hydrogen", "Nitrogen", "Carbon dioxide"],
+      "answer": "Carbon dioxide",
+      "explanation": "CO₂ is used by plants in photosynthesis."
+    },
+    {
+      "section": "Science",
+      "question": "What is the chemical symbol of Iron? / लोहे का रासायनिक संकेत क्या है?",
+      "options": ["Ir", "I", "Fe", "In"],
+      "answer": "Fe",
+      "explanation": "Iron's symbol is Fe from Latin 'Ferrum'"
+    },
+    {
+      "section": "Science",
+      "question": "Which part of the human body is affected by pneumonia? / निमोनिया मानव शरीर के किस भाग को प्रभावित करता है?",
+      "options": ["Heart", "Lungs", "Liver", "Kidneys"],
+      "answer": "Lungs",
+      "explanation": "Pneumonia affects the lungs."
+    },
+    {
+      "section": "Science",
+      "question": "Which vitamin is helpful for blood clotting? / रक्त के थक्के जमने में कौन सा विटामिन सहायक है?",
+      "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin K"],
+      "answer": "Vitamin K",
+      "explanation": "Vitamin K is responsible for clotting."
+    },
+    {
+      "section": "Science",
+      "question": "How many bones are there in the adult human body? / वयस्क मानव शरीर में कितनी हड्डियाँ होती हैं?",
+      "options": ["206", "210", "205", "208"],
+      "answer": "206",
+      "explanation": "An adult has 206 bones."
+    },
+    {
+      "section": "Science",
+      "question": "Which gas is used in fire extinguishers? / अग्निशामकों में कौन सी गैस उपयोग होती है?",
+      "options": ["Oxygen", "Hydrogen", "Carbon dioxide", "Nitrogen"],
+      "answer": "Carbon dioxide",
+      "explanation": "CO₂ is used to cut off oxygen from fire."
+    },
+    {
+      "section": "Science",
+      "question": "Which organ controls all body activities? / कौन सा अंग पूरे शरीर की क्रियाओं को नियंत्रित करता है?",
+      "options": ["Heart", "Liver", "Brain", "Kidneys"],
+      "answer": "Brain",
+      "explanation": "Brain is the control center of the body."
+    },
+    {
+      "section": "Science",
+      "question": "Which element is needed for respiration? / श्वसन के लिए कौन सा तत्व आवश्यक है?",
+      "options": ["Hydrogen", "Oxygen", "Nitrogen", "Carbon"],
+      "answer": "Oxygen",
+      "explanation": "Oxygen is essential for aerobic respiration."
+    },
+    {
+      "section": "Science",
+      "question": "Which organ helps in digestion of fats? / वसा के पाचन में कौन सा अंग सहायक है?",
+      "options": ["Stomach", "Liver", "Pancreas", "Lungs"],
+      "answer": "Liver",
+      "explanation": "Liver secretes bile which helps in fat digestion."
+    },
+    {
+      "section": "Science",
+      "question": "What is the main source of energy on Earth? / पृथ्वी पर ऊर्जा का मुख्य स्रोत क्या है?",
+      "options": ["Wind", "Coal", "Sun", "Water"],
+      "answer": "Sun",
+      "explanation": "The Sun is the ultimate energy source for Earth."
+    },
+    {
+      "section": "Science",
+      "question": "What is the full form of DNA? / DNA का पूरा नाम क्या है?",
+      "options": [
+        "Deoxyribonucleic Acid",
+        "Dioxynucleic Acid",
+        "Dioxyribonucleic Acid",
+        "Deoxyribonucleus Acid"
+      ],
+      "answer": "Deoxyribonucleic Acid",
+      "explanation": "DNA stands for Deoxyribonucleic Acid."
+    },
+    {
+      "section": "Science",
+      "question": "What is the boiling point of water? / जल का क्वथनांक क्या है?",
+      "options": ["90°C", "100°C", "110°C", "120°C"],
+      "answer": "100°C",
+      "explanation": "Water boils at 100°C under normal pressure."
+    },
+    {
+      "section": "Science",
+      "question": "Which vitamin is produced in the skin by sunlight? / सूर्य की रोशनी से त्वचा में कौन सा विटामिन बनता है?",
+      "options": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin B12"],
+      "answer": "Vitamin D",
+      "explanation": "Vitamin D is synthesized in skin when exposed to sunlight."
+    },
+    {
+      "section": "Science",
+      "question": "Which gas do plants absorb during photosynthesis? / प्रकाश संश्लेषण के दौरान पौधे कौन सी गैस अवशोषित करते हैं?",
+      "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+      "answer": "Carbon Dioxide",
+      "explanation": "Plants absorb carbon dioxide to produce food."
+    },
+    {
+      "section": "Science",
+      "question": "What is the SI unit of Force? / बल की SI इकाई क्या है?",
+      "options": ["Joule", "Watt", "Newton", "Pascal"],
+      "answer": "Newton",
+      "explanation": "SI unit of force is Newton (N)."
+    },
+    {
+      "section": "Science",
+      "question": "Which organ purifies blood in the human body? / मानव शरीर में कौन सा अंग रक्त को शुद्ध करता है?",
+      "options": ["Heart", "Kidney", "Lungs", "Liver"],
+      "answer": "Kidney",
+      "explanation": "Kidneys filter waste from blood."
+    },
+    {
+      "section": "Science",
+      "question": "Which planet is known as the Red Planet? / कौन सा ग्रह 'लाल ग्रह' के नाम से जाना जाता है?",
+      "options": ["Earth", "Venus", "Mars", "Jupiter"],
+      "answer": "Mars",
+      "explanation": "Mars appears red due to iron oxide on its surface."
+    },
+    {
+      "section": "Science",
+      "question": "Which part of the plant conducts photosynthesis? / पौधे का कौन सा भाग प्रकाश संश्लेषण करता है?",
+      "options": ["Stem", "Root", "Flower", "Leaf"],
+      "answer": "Leaf",
+      "explanation": "Leaves contain chlorophyll which helps in photosynthesis."
+    },
+    {
+      "section": "Science",
+      "question": "What is H₂O commonly known as? / H₂O को सामान्यतः क्या कहा जाता है?",
+      "options": ["Oxygen", "Hydrogen", "Water", "Steam"],
+      "answer": "Water",
+      "explanation": "H₂O is the chemical formula of water."
+    },
+    {
+      "section": "Science",
+      "question": "Which metal is liquid at room temperature? / सामान्य तापमान पर कौन सी धातु तरल होती है?",
+      "options": ["Iron", "Gold", "Mercury", "Aluminum"],
+      "answer": "Mercury",
+      "explanation": "Mercury is the only metal in liquid state at room temperature."
+    },
+    {
+      "section": "Science",
+      "question": "Which gas is used for respiration in humans? / मनुष्यों में श्वसन के लिए कौन सी गैस उपयोग होती है?",
+      "options": ["Nitrogen", "Oxygen", "Carbon dioxide", "Helium"],
+      "answer": "Oxygen",
+      "explanation": "Humans inhale oxygen for respiration."
+    }
+  ]
+}
