@@ -258,11 +258,15 @@
     else renderTests(currentFilteredList.filter(t=>(t.title||'').toLowerCase().includes(term)));
   });
 
-  function startTest(file){
-  // Redirect to test page with selected file
-    window.location.href = `test.html?exam=${encodeURIComponent(examKey)}&file=${encodeURIComponent(file)}`;
+  // function startTest(file){
+  // // Redirect to test page with selected file
+  //   window.location.href = `test.html?exam=${encodeURIComponent(examKey)}&file=${encodeURIComponent(file)}`;
+  // }
+  function startTest(file) {
+    const isSSC = examKey.toLowerCase().includes('ssc'); // ✅ or use config.examType === 'ssc'
+    const targetPage = isSSC ? 'ssc_test.html' : 'test.html';
+    window.location.href = `${targetPage}?exam=${encodeURIComponent(examKey)}&file=${encodeURIComponent(file)}`;
   }
-
 
   // ✅ Unlock redirects to pricing.html
   function unlockPaid(file){
