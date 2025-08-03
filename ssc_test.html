@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSC Online Mock Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; }
+    .header { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; border-bottom: 1px solid #ccc; }
+    .logo { width: 50px; height: 50px; }
+    .center-info { text-align: center; flex: 1; }
+    .center-info h2 { margin: 10px; }
+    .center-info div { font-size: 20px; margin-top: 5px; }
+    .right-info { display: flex; align-items: center; gap: 30px; }
+    .time-box { text-align: center; background-color: #ffffcc; padding: 4px 8px; font-size: 14px; font-weight: bold; color: red; border-radius: 4px; }
+    .user-img { width: 40px; height: 40px; }
+
+    .main-container { display: flex; height: calc(100vh - 60px); }
+    .left-panel { width: 250px; padding: 10px; border-right: 1px solid #ccc; 
+      display: flex; flex-direction: column; }
+    .right-panel { flex: 1; 
+      padding: 15px; 
+      position: relative; }
+
+    .section-header {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      font-weight: bold; 
+      color: #ff6600; 
+    }
+
+    .section-buttons {
+      display: flex; 
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 5px; 
+      margin: 10px 0;
+    }
+    .section-buttons::-webkit-scrollbar {
+      display: none;
+    }
+    .section-buttons {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .section-buttons button {
+      padding: 6px 12px; 
+      background: #0066ff; 
+      color: white; border: none; 
+      border-radius: 5px; cursor: pointer;
+    }
+    .section-buttons button.active { background-color: green; }
+
+    .question-navigator-title { font-weight: bold; text-align: center; margin-top: 10px; }
+    .question-numbers {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; margin-top: 10px;
+    }
+    .question-numbers button {
+      width: 40px; height: 40px; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; background: #0066ff; color: white;
+    }
+
+    .analysis-box {
+      margin-top: 30px; 
+      text-align: center; 
+      font-size: 16px;
+      background-color: #c2c2c2;
+      padding: 5px;
+    }
+
+    .question-controller { 
+      /* margin-bottom: 10px; */
+      text-align: center; }
+    .question-controller button {
+      background-color: #0066ff; color: white; padding: 8px 16px; margin: 5px; border: none; border-radius: 8px; cursor: pointer;
+    }
+
+    .lang-select { text-align: right; 
+      /* margin-top: 10px; */
+      padding: 10px;
+      border-bottom: 1px solid; 
+    }
+    .question-number-display { font-size: 18px; font-weight: bold; margin: 10px 0; }
+    .options label { display: block; margin: 10px 0; cursor: pointer; border-bottom: 1px solid #090909; padding: 10px 15px; }
+    .options label:hover { background: #e6f0ff; border-color: #0066ff; }
+
+    .qtime {
+      display: flex; justify-content: space-between; align-items: center; 
+      /* background-color: #f5f5f5; */
+      border-bottom: 1px solid;
+      font-size: 16px;
+    }
+    .right-header-side {
+      text-align: right;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .modal-header {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+  }
+  </style>
+  <script>
+  // Wait for the DOM to fully load
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("openSymbols").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("modalSymbols").style.display = "block";
+    });
+
+    document.getElementById("openInstructions").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("modalInstructions").style.display = "block";
+    });
+
+    window.closeModal = function (modalId) {
+      document.getElementById(modalId).style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      const modals = ["modalSymbols", "modalInstructions"];
+      modals.forEach(id => {
+        const modal = document.getElementById(id);
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+  });
+</script>
+
+</head>
+<body>
+  <div class="header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <div class="center-info">
+      <h2>SSC ONLINE MOCK TEST</h2>
+      <div>Roll No : 10011121851122 &nbsp; [Candidate Name]</div>
+    </div>
+    <div class="right-info">
+      <div class="time-box">
+        Time Left <br><span id="timer">00:00</span>
+      </div>
+      <img src="user.png" alt="User" class="user-img" />
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="left-panel">
+      <div class="section-header">
+        <a href="#" id="openSymbols" class="popup-link" style="color: #ff6600;">SYMBOLS</a>
+        <a href="#" id="openInstructions" class="popup-link" style="color: #ff6600;">INSTRUCTIONS</a>
+        <div id="modalSymbols" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              Symbols
+              <button class="close-btn" onclick="closeModal('modalSymbols')">&times;</button>
+            </div>
+            <iframe src="symbols.html"></iframe>
+          </div>
+        </div>
+        <!-- Instructions Modal -->
+        <div id="modalInstructions" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              Instructions
+              <button class="close-btn" onclick="closeModal('modalInstructions')">&times;</button>
+            </div>
+            <iframe src="instructions.html"></iframe>
+          </div>
+        </div>
+      </div>
+      <div style="overflow-x: auto;">
+        <div class="section-buttons" id="sectionButtons"></div>
+      </div>
+      <!-- <div class="section-buttons" id="sectionButtons"></div> -->
+      <div class="question-navigator-title" id="currentSectionTitle"></div>
+      <div class="question-numbers" id="questionButtons"></div>
+      <div class="analysis-box"><strong id="sectionNameOnly"></strong></div>
+      <div>
+        <div style="padding: 10px; display: flex; justify-content: space-between;">
+          <span>Answered</span>
+          <span id = "answeredCount"; style="background-color: yellow; color: red; padding: 2px 6px;">0</span>
+        </div>
+        <!-- Not Answered Section -->
+        <div style="padding: 0 10px 10px; display: flex; justify-content: space-between;">
+          <span>Not Answered</span>
+          <span id = "notAnsweredCount"; style="background-color: yellow; color: red; padding: 2px 6px;">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="right-panel">
+      <div class="question-controller" id="buttonContainer">
+        <button onclick="prevQuestion()">Previous</button>
+        <button onclick="markForReview()">Mark for Review</button>
+        <button id="nextBtn" onclick="saveAndNext()">Save & Next</button>
+      </div>
+      <div class="right-header-side">
+        <div>Total Questions answered: <span id="totalansweredCount" style="color: red;background-color: yellow;" >0</span></div>
+      </div>
+      <div class="qtime">
+        <div class="question-number-display" id="questionNumberDisplay"></div>
+        <div style="color: #ff001e;margin-right: 10px; font-size: 25px;"><strong>Last <span id="lastMin" style="color: blue;">0</span> Minutes</strong></div>
+      </div>
+      <div class="lang-select">
+        <label for="languageSelect"><strong>Language:</strong></label>
+        <select id="languageSelect">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+        </select>
+      </div>
+      <div id="questionBox" class="question-box"></div>
+    </div>
+  </div>
+
+  <!-- Summary Modal -->
+<div id="summaryModal" class="modal">
+  <div class="modal-content">
+    <h3 style="text-align:center;">Submit your test</h3>
+    <table border="1" style="width: 100%; border-collapse: collapse; text-align: center;">
+      <thead style="background-color: #00bcd4; color: white;">
+        <tr>
+          <th>Section</th>
+          <th>No. of questions</th>
+          <th>Answered</th>
+          <th>Not Answered</th>
+          <th>Marked for Review</th>
+          <th>Not Visited</th>
+        </tr>
+      </thead>
+      <tbody id="summaryTableBody"></tbody>
+    </table>
+    <div style="margin-top: 20px; text-align: right;">
+      <button onclick="cancelSubmit()" style="background-color: #00bcd4; color: white; border: none; padding: 8px 12px; margin-right: 10px; cursor: pointer;">Close</button>
+      <button onclick="finalSubmit()" style="background-color: #00bcd4; color: white; border: none; padding: 8px 12px; cursor: pointer;">Submit</button>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    let testData = null;
+    let currentSectionIndex = 0;
+    let currentQuestionIndex = 0;
+    let currentLang = 'en';
+    let questionStatus = {};
+    let answers = {};
+    let autoSubmitTimeout;
+    let currentQuestionId = null;
+    let currentSection = null;
+    let questionStartTime = null;
+    let sectionStartTime = null;
+    let perQuestionTime = {};
+    let sectionTime = {};
+
+    function loadJSON() {
+      fetch('sets/SSC_CGL/ssc_cgl_2025.json')
+        .then(res => res.json())
+        .then(data => {
+          testData = data;
+          startTimer(data.time * 60);
+          buildSectionButtons();
+          loadSection(0);
+        });
+    }
+
+    // function startTimer(duration) {
+    //   let timer = duration;
+    //   const display = document.getElementById('timer');
+    //   const show =  document.getElementById('lastMin');
+    //   const interval = setInterval(() => {
+    //     const minutes = String(Math.floor(timer / 60)).padStart(2, '0');
+    //     const seconds = String(timer % 60).padStart(2, '0');
+    //     display.textContent = `${minutes}:${seconds}`;
+    //     show.textContent = `${minutes}`;
+    //     if (--timer < 0) {
+    //       clearInterval(interval);
+    //       generateSummary();
+    //       document.getElementById('summaryModal').style.display = 'block';
+
+    //       // Auto submit after 5 seconds if user doesn't click
+    //       autoSubmitTimeout = setTimeout(() => {
+    //         finalSubmit();
+    //       }, 5000);
+    //     }
+    //   }, 1000);
+      
+    // }
+
+    function startTimer(duration) {
+  let timer = duration;
+  const display = document.getElementById('timer');
+  const show = document.getElementById('lastMin');
+
+  const interval = setInterval(() => {
+    const minutes = String(Math.floor(timer / 60)).padStart(2, '0');
+    const seconds = String(timer % 60).padStart(2, '0');
+    display.textContent = `${minutes}:${seconds}`;
+    show.textContent = `${minutes}`;
+
+    if (--timer < 0) {
+      clearInterval(interval);
+      generateSummary();
+      document.getElementById('summaryModal').style.display = 'block';
+      // Auto submit after 5s
+      autoSubmitTimeout = setTimeout(() => {
+        finalSubmit();
+      }, 5000);
+    }
+  }, 1000);
+}
+
+
+    function buildSectionButtons() {
+      const container = document.getElementById('sectionButtons');
+      container.innerHTML = '';
+      testData.sections.forEach((s, i) => {
+        const btn = document.createElement('button');
+        btn.textContent = s.name;
+        btn.classList.toggle('active', i === currentSectionIndex);
+        btn.onclick = () => loadSection(i);
+        container.appendChild(btn);
+      });
+    }
+
+    function loadSection(index) {
+      currentSectionIndex = index;
+      currentQuestionIndex = 0;
+      document.getElementById('currentSectionTitle').textContent = testData.sections[index].title;
+      document.getElementById('sectionNameOnly').textContent = testData.sections[index].name + ' Analysis';
+      buildSectionButtons();
+      buildQuestionButtons();
+      loadQuestion(0);
+    }
+
+    function buildQuestionButtons() {
+      const container = document.getElementById('questionButtons');
+      container.innerHTML = '';
+      const section = testData.sections[currentSectionIndex];
+      section.questions.forEach((q, i) => {
+        const btn = document.createElement('button');
+        btn.textContent = q.id;
+        btn.dataset.id = q.id;
+        btn.onclick = () => {
+          currentQuestionIndex = i;
+          loadQuestion(i);
+        };
+        container.appendChild(btn);
+      });
+      updateButtonColors();
+    }
+
+    function loadQuestion(index) {
+      const question = testData.sections[currentSectionIndex].questions[index];
+      const box = document.getElementById('questionBox');
+      const opts = question.options[currentLang];
+      let html = `<div class="options"><p><strong>${question.text[currentLang]}</strong></p>`;
+      opts.forEach(opt => {
+        html += `<label><input type="radio" name="q${question.id}" value="${opt}" ${answers[question.id] === opt ? 'checked' : ''} onchange="selectOption(${question.id}, '${opt}')"> ${opt}</label>`;
+      });
+      html += '</div>';
+      box.innerHTML = html;
+      document.getElementById('questionNumberDisplay').textContent = `Question : ${index + 1}`;
+
+      const isLast = index === testData.sections[currentSectionIndex].questions.length - 1 &&
+                    currentSectionIndex === testData.sections.length - 1;
+      document.getElementById('nextBtn').textContent = isLast ? 'Submit' : 'Save & Next';
+
+      const qId = question.id;
+      if (!questionStatus[qId] && !answers[qId]) {
+        questionStatus[qId] = 'visited';
+      }
+
+      updateButtonColors();
+    }
+
+    function selectOption(id, value) {
+      answers[id] = value;
+      questionStatus[id] = 'answered';
+      updateButtonColors();
+      updateTotalAnsweredCount();
+    }
+
+    function markForReview() {
+      const q = testData.sections[currentSectionIndex].questions[currentQuestionIndex];
+      questionStatus[q.id] = 'marked';
+      updateButtonColors();
+      saveAndNext();
+      updateTotalAnsweredCount();
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+      } else if (currentSectionIndex > 0) {
+        loadSection(currentSectionIndex - 1);
+        currentQuestionIndex = testData.sections[currentSectionIndex].questions.length - 1;
+        loadQuestion(currentQuestionIndex);
+      }
+    }
+
+    function saveAndNext() {
+      const section = testData.sections[currentSectionIndex];
+      if (currentQuestionIndex < section.questions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+      } else if (currentSectionIndex < testData.sections.length - 1) {
+        loadSection(currentSectionIndex + 1);
+      } else {
+        submitTest();
+      }
+    }
+
+    function updateButtonColors() {
+      const buttons = document.querySelectorAll('#questionButtons button');
+      let answered = 0;
+      let marked = 0;
+      let total = testData.sections[currentSectionIndex].questions.length;
+
+      buttons.forEach(btn => {
+        const id = btn.dataset.id;
+        const status = questionStatus[id];
+        btn.style.background = '#0066ff';
+        if (status === 'answered') {
+          btn.style.background = 'green';
+          answered++;
+        } else if (status === 'marked') {
+          btn.style.background = 'yellow';
+          marked++;
+        } else if (status === 'visited') {
+          btn.style.background = 'red';
+        }
+      });
+      document.getElementById('answeredCount').innerText = answered;
+      document.getElementById('notAnsweredCount').innerText = total - answered - marked;
+      updateTotalAnsweredCount();
+    }
+
+    function updateTotalAnsweredCount() {
+      let totalAnswered = 0;
+
+      testData.sections.forEach(section => {
+        section.questions.forEach(q => {
+          if (questionStatus[q.id] === 'answered') {
+            totalAnswered++;
+          }
+        });
+      });
+
+      document.getElementById('totalansweredCount').innerText = totalAnswered;
+    }
+
+    // function generateSummary() {
+    //   const tbody = document.getElementById('summaryTableBody');
+    //   tbody.innerHTML = '';
+
+    //   testData.sections.forEach(section => {
+    //     let answered = 0, marked = 0, visited = 0;
+    //     section.questions.forEach(q => {
+    //       const status = questionStatus[q.id];
+    //       if (status === 'answered') answered++;
+    //       else if (status === 'marked') marked++;
+    //       else if (status === 'visited') visited++;
+    //     });
+
+    //     const total = section.questions.length;
+    //     const notVisited = total - (answered + marked + visited);
+    //     const notAnswered = total - answered - marked;
+
+    //     const tr = document.createElement('tr');
+    //     tr.innerHTML = `
+    //       <td>${section.title}</td>
+    //       <td>${total}</td>
+    //       <td>${answered}</td>
+    //       <td>${notAnswered}</td>
+    //       <td>${marked}</td>
+    //       <td>${notVisited}</td>
+    //     `;
+    //     tbody.appendChild(tr);
+    //   });
+    // }
+
+    function generateSummary() {
+  const tbody = document.getElementById("summaryTableBody");
+  tbody.innerHTML = "";
+
+  testData.sections.forEach(section => {
+    const questions = section.questions;
+    const total = questions.length;
+
+    let answered = 0;
+    let notAnswered = 0;
+    let marked = 0;
+    let notVisited = 0;
+
+    questions.forEach(q => {
+      const qid = q.id.toString();
+      const status = questionStatus[qid] || "not-visited";
+
+      if (status === "answered") answered++;
+      else if (status === "not-answered") notAnswered++;
+      else if (status === "marked") marked++;
+      else notVisited++;
+    });
+
+    const row = `
+      <tr>
+        <td>${section.name}</td>
+        <td>${total}</td>
+        <td>${answered}</td>
+        <td>${notAnswered}</td>
+        <td>${marked}</td>
+        <td>${notVisited}</td>
+      </tr>
+    `;
+
+    tbody.innerHTML += row;
+  });
+}
+
+
+    function submitTest() {
+      generateSummary();
+      document.getElementById('summaryModal').style.display = 'block';
+
+      // Auto submit after 5 seconds if user doesn't click
+      autoSubmitTimeout = setTimeout(() => {
+        finalSubmit();
+      }, 5000);
+    }
+
+    function cancelSubmit() {
+      document.getElementById("summaryModal").style.display = "none";
+      clearTimeout(autoSubmitTimeout); // Cancel auto-submit if modal was triggered
+    }
+
+
+    // function finalSubmit() {
+    //   clearTimeout(autoSubmitTimeout);
+    //   document.getElementById('summaryModal').style.display = 'none';
+    //   alert("Test submitted successfully!");
+    //   console.log("Submitted Answers:", answers);
+    //   // TODO: Add logic to send data to server if needed
+    // }
+
+    function openSubmitModal() {
+      generateSummary();
+      document.getElementById('summaryModal').style.display = 'block';
+
+      autoSubmitTimeout = setTimeout(() => {
+        finalSubmit();
+      }, 5000);
+    }
+
+
+        function finalSubmit() {
+      if (currentQuestionId && questionStartTime) {
+        const spent = Math.floor((Date.now() - questionStartTime) / 1000);
+        perQuestionTime[currentQuestionId] = (perQuestionTime[currentQuestionId] || 0) + spent;
+      }
+
+      if (currentSection && sectionStartTime) {
+        const spent = Math.floor((Date.now() - sectionStartTime) / 1000);
+        sectionTime[currentSection] = (sectionTime[currentSection] || 0) + spent;
+      }
+
+      // Save to localStorage
+      localStorage.setItem("testData", JSON.stringify(testData));
+      localStorage.setItem("userAnswers", JSON.stringify(answers));
+      localStorage.setItem("timeSpent", JSON.stringify(perQuestionTime));
+      localStorage.setItem("sectionTime", JSON.stringify(sectionTime));
+
+      // Redirect
+      window.location.href = "sscresult.html";
+    }
+
+    document.getElementById('languageSelect').addEventListener('change', function () {
+      currentLang = this.value;
+      loadQuestion(currentQuestionIndex);
+    });
+
+    window.onload = loadJSON;
+  </script>
+</body>
+</html>

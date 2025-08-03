@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instructions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      user-select: none;
+      /* overflow-y:hidden; */
+      z-index: block;
+    }
+
+    .container {
+      /* padding: 20px; */
+      max-width: 1300px;
+      margin: auto;
+      padding-bottom: 100px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .symbols {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .symbol-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .symbol-box {
+      width: 25px;
+      height: 25px;
+      border: 2px solid #000;
+    }
+
+    .visited { background: white; }
+    .not-answered { background: brown; }
+    .answered { background: mediumseagreen; }
+    .review { background: purple; }
+    .review-answered {
+      background: rebeccapurple;
+      position: relative;
+    }
+
+    .review-answered::after {
+      content: "✔";
+      position: absolute;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      top: 0;
+      left: 6px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      position: fixed;
+      bottom: 0;
+      width: 96%;
+      background: #f1f1f1;
+      border-top: 1px solid #ccc;
+      
+    }
+
+    .footer button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #page2 {
+      display: none;
+    }
+
+    .note {
+      color: red;
+    }
+  </style>
+
+  <script>
+    // Disable right-click
+    document.addEventListener("contextmenu", function(e) {e.preventDefault();});
+    // Disable right-click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Disable text selection (additional safeguard)
+    document.addEventListener('selectstart', event => event.preventDefault());
+    function showPage2() {
+      document.getElementById("page1").style.display = "none";
+      document.getElementById("page2").style.display = "block";
+    }
+    function goBack() {
+      document.getElementById("page2").style.display = "none";
+      document.getElementById("page1").style.display = "block";
+    }
+    function startTest() {
+      window.location.href = "test.html"; // Change this to your real test page URL
+    }
+  </script>
+</head>
+<body>
+
+<div class="container" id="page1">
+  <h2 style="text-decoration: underline;">Instructions</h2>
+  <ol>
+    <li>The clock will be set at the server. The countdown timer at the top right corner of screen will display the remaining time available for you to complete the examination.</li>
+    <li>When the timer reaches zero, the examination will end by itself. You need not terminate the examination or submit your paper.</li>
+    <li>The Question Palette displayed on the right side of screen will show the status of each question using one of the following symbols:
+      <div class="symbols">
+        <div class="symbol-item"><div class="symbol-box visited"></div> You have not visited the question yet.</div>
+        <div class="symbol-item"><div class="symbol-box not-answered"></div> You have not answered the question.</div>
+        <div class="symbol-item"><div class="symbol-box answered"></div> You have answered the question.</div>
+        <div class="symbol-item"><div class="symbol-box review"></div> You have NOT answered the question, but have marked the question for review.</div>
+        <div class="symbol-item"><div class="symbol-box review-answered"></div> You have answered the question, but marked it for review.</div>
+      </div>
+    </li>
+    <li>The Mark For Review status for a question simply indicates that you would like to look at that question again. If a question is answered, but marked for review, then the answer will be considered for evaluation unless modified.</li>
+    <li>Navigating to a Question:
+      <ol>
+        <li>Click on the question number in the Question Palette to go to that question directly (does NOT save your current response).</li>
+        <li>Click <strong>Save & Next</strong> to save your answer and move to the next question.</li>
+        <li>Click <strong>Mark for Review & Next</strong> to save and mark the question for review.</li>
+      </ol>
+    </li>
+    <li>You can view all questions by clicking on the <strong>Question Paper</strong> button. <span class="note">This feature helps you glance through the paper quickly.</span></li>
+    <!-- <li>Answering a MCQ question:
+      <ol>
+        <li>Select one of the 4 options (A–D) below the question.</li>
+        <li>To deselect, click the same bubble again or use Clear Response.</li>
+        <li>To change, select a different option.</li>
+        <li>Click Save & Next to save your answer.</li>
+      </ol>
+    </li>
+    <li>Answering a Numerical question:
+      <ol>
+        <li>Use the virtual numeric keypad to enter your answer.</li>
+        <li>Enter up to 4 decimal places (e.g. -0.3, 12.5435, 0.003).</li>
+        <li>Use Clear Response to delete the answer.</li>
+        <li>Click Save & Next to save your response.</li>
+      </ol>
+    </li>
+    <li>Questions marked for review with an answer will be considered in evaluation unless changed.</li>
+    <li>To change an answer, reselect and follow the answer procedure.</li>
+    <li>Only saved or marked-for-review questions are evaluated.</li>
+    <li>Sections are displayed at the top bar. Click names to navigate. Current section is highlighted.</li>
+    <li>After the last question in a section, Save & Next will take you to the next section.</li>
+    <li>Hover over a section name to see answer status for that section.</li>
+  </ol> -->
+  <h3><strong>Answering a Question</strong></h3>
+
+  <ol>
+    <li><strong>Procedure for answering a Multiple Choice Question (MCQ):</strong>
+      <ul>
+        <li>Choose one answer from the 4 options (A, B, C, D) given below the question.</li>
+        <li><strong>Click on the bubble</strong> placed before the chosen option.</li>
+        <li>To <em>deselect</em> your answer, click the bubble again or click <strong>“Clear Response”</strong>.</li>
+        <li>To change your answer, click on another bubble.</li>
+        <li><strong>Click “Save & Next” to save</strong> your response.</li>
+      </ul>
+    </li>
+
+    <li><strong>Procedure for answering a Numerical Answer Type (NAT) question:</strong>
+      <ul>
+        <li>Use the <strong>virtual numerical keypad</strong> to enter your answer.</li>
+        <li>Decimals & negatives allowed (e.g. <code>-.3</code>, <code>12.5435</code>, etc.).</li>
+        <li>To <strong>clear</strong>, click “Clear Response”.</li>
+        <li><strong>To save</strong>, click “Save & Next”.</li>
+      </ul>
+    </li>
+
+    <li>Click <strong>“Mark for Review & Next”</strong> to mark a question for later review.  
+        <em>Answered + marked for review will be counted in evaluation.</em>
+    </li>
+
+    <li>To change a saved answer, go to the question again and re-answer.</li>
+
+    <li><strong>Only saved or marked-for-review questions</strong> will be evaluated.</li>
+
+    <li>Sections are listed at the top. Click to switch sections. <strong>The current section is highlighted.</strong></li>
+
+    <li>After answering the last question in a section, <em>you will automatically move</em> to the next section.</li>
+
+    <li>Hover on a section tab to <strong>view the answering summary</strong>.</li>
+  </ol>
+</div> 
+
+
+<div class="container" id="page2">
+  <h2>SSC CHSL Tier-1 2024: Official Paper</h2>
+  <p><strong>Held On:</strong> 01 Jul, 2024 Shift 1</p>
+  <p><strong>Maximum Marks:</strong> 200</p>
+  <p><strong>Duration:</strong> 60 Mins</p>
+  <h3>Read the following instructions carefully.</h3>
+  <ol>
+    <li>The test contains 4 sections having 100 total questions.</li>
+    <li>Each question has 4 options out of which only one is correct.</li>
+    <li>You have to finish the test in 60 minutes.</li>
+    <li>Try not to guess the answer as there is negative marking.</li>
+    <li>You will be awarded 2 marks for each correct answer and 0.5 marks will be deducted for each wrong answer.</li>
+    <li>There is no negative marking for the questions that you have not attempted.</li>
+    <li>You can write this test only once. Make sure that you complete the test before you submit or close the browser.</li>
+  </ol>
+</div>
+
+<div class="footer">
+  <button onclick="goBack()">Back</button>
+  <button onclick="showPage2()" id="nextBtn">Next</button>
+  <button onclick="startTest()" id="startBtn" style="display: none;">Start Test</button>
+</div>
+
+<script>
+  function showPage2() {
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "block";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("startBtn").style.display = "inline-block";
+  }
+
+  function goBack() {
+    document.getElementById("page2").style.display = "none";
+    document.getElementById("page1").style.display = "block";
+    document.getElementById("nextBtn").style.display = "inline-block";
+    document.getElementById("startBtn").style.display = "none";
+  }
+
+  function startTest() {
+    window.location.href = "test.html"; // Replace with actual test URL
+  }
+</script>
+
+</body>
+</html>

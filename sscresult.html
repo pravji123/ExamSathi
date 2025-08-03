@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SSC Result Summary</title>
+  <style>
+    body { font-family: Arial; margin: 20px; background: #f9f9f9; }
+    h2 { text-align: center; color: #00796b; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 10px; border: 1px solid #ccc; text-align: center; }
+    th { background-color: #0097a7; color: white; }
+    .summary { margin-top: 30px; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <h2>SSC Mock Test Result Summary</h2>
+
+  <table id="sectionSummaryTable">
+    <thead>
+      <tr>
+        <th>Section</th>
+        <th>Questions</th>
+        <th>Correct</th>
+        <th>Wrong</th>
+        <th>Unattempted</th>
+        <th>Score (%)</th>
+        <th>Time Spent (mm:ss)</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="summary" id="totalScoreSummary"></div>
+
+  <script>
+    // Load data from localStorage or server
+    const testData = JSON.parse(localStorage.getItem('testData'));
+    const userAnswers = JSON.parse(localStorage.getItem('userAnswers'));
+    const timeSpent = JSON.parse(localStorage.getItem('timeSpent'));
+
+    function formatTime(seconds) {
+      const mins = String(Math.floor(seconds / 60)).padStart(2, '0');
+      const secs = String(seconds % 60).padStart(2, '0');
+      return `${mins}:${secs}`;
+    }
+
+    function buildResultSummary() {
+      const tbody = document.querySelector('#sectionSummaryTable tbody');
+      let totalQuestions = 0, totalCorrect = 0, totalWrong = 0, totalUnattempted = 0, totalTime = 0;
+
+      testData.sections.forEach(section => {
+        const sectionQuestions = section.questions;
+        let correct = 0, wrong = 0, unattempted = 0, sectionTime = 0;
+
+        sectionQuestions.forEach(q => {
+          const qid = q.id;
+          const userAnswer = userAnswers[qid];
+          const correctAnswer = q.answer;
+          const spent = timeSpent[qid] || 0;
+          sectionTime += spent;
+
+          if (!userAnswer) {
+            unattempted++;
+          } else if (userAnswer === correctAnswer) {
+            correct++;
+          } else {
+            wrong++;
+          }
+        });
+
+        const sectionScore = ((correct / sectionQuestions.length) * 100).toFixed(2);
+
+        totalQuestions += sectionQuestions.length;
+        totalCorrect += correct;
+        totalWrong += wrong;
+        totalUnattempted += unattempted;
+        totalTime += sectionTime;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${section.title}</td>
+          <td>${sectionQuestions.length}</td>
+          <td>${correct}</td>
+          <td>${wrong}</td>
+          <td>${unattempted}</td>
+          <td>${sectionScore}%</td>
+          <td>${formatTime(sectionTime)}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      const totalScore = ((totalCorrect / totalQuestions) * 100).toFixed(2);
+      document.getElementById('totalScoreSummary').innerHTML = `
+        <strong>Total Score:</strong> ${totalScore}%<br>
+        <strong>Total Time Spent:</strong> ${formatTime(totalTime)}
+      `;
+    }
+
+    buildResultSummary();
+  </script>
+</body>
+</html>
