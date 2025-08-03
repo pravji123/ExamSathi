@@ -1,0 +1,8 @@
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Allow: /
+
+Sitemap: https://testara.in/sitemap.xml
