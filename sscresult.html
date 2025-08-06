@@ -2,101 +2,339 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SSC Result Summary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SSC Test Result</title>
   <style>
-    body { font-family: Arial; margin: 20px; background: #f9f9f9; }
-    h2 { text-align: center; color: #00796b; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { padding: 10px; border: 1px solid #ccc; text-align: center; }
-    th { background-color: #0097a7; color: white; }
-    .summary { margin-top: 30px; font-size: 18px; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+      color: #444;
+    }
+    tr:nth-child(even) {
+      background-color: #fdfdfd;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    .summaryblock {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .btn {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px auto;
+      text-align: center;
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background: white;
+      margin: 2% auto;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 900px;
+      max-height: 90%;
+      overflow-y: auto;
+    }
+    .close-btn {
+      float: right;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .review-controls {
+      text-align: center;
+      margin: 20px;
+    }
+    .question-block {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 5px solid #007bff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin: 15px 0;
+      border-radius: 6px;
+    }
+    .question-block.correct {
+      border-left-color: green;
+    }
+    .question-block.wrong {
+      border-left-color: red;
+    }
+    .question-block.unanswered {
+      border-left-color: gray;
+    }
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      .modal-content {
+        width: 95%;
+        margin: 10% auto;
+      }
+      table, th, td {
+        font-size: 14px;
+        padding: 8px;
+      }
+      .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body>
-  <h2>SSC Mock Test Result Summary</h2>
 
-  <table id="sectionSummaryTable">
-    <thead>
-      <tr>
-        <th>Section</th>
-        <th>Questions</th>
-        <th>Correct</th>
-        <th>Wrong</th>
-        <th>Unattempted</th>
-        <th>Score (%)</th>
-        <th>Time Spent (mm:ss)</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+  <h1>SSC Mock Test Result</h1>
 
-  <div class="summary" id="totalScoreSummary"></div>
+  <div id="overallSummary" class="summaryblock"></div>
+  <div id="sectionScoreTable"></div>
+  <tbody id="sectionSummaryBody">
+    <h2>Section-wise Score Summary</h2>
+  <!-- This is where the section rows go -->
+   <table>
+  <thead>
+    <tr>
+      <th>Section</th><th>Total</th><th>Attempted</th><th>Unanswered</th>
+      <th>Correct</th><th>Wrong</th><th>Accuracy</th><th>Time Spent</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody id="sectionSummaryBody"></tbody>
+</table>
+
+</tbody>
+
+
+  <div class="review-controls">
+    <button class="btn" onclick="openModal()">🔍 Show Review</button>
+    <a href="index.html" class="btn">🏠 Go Home</a>
+  </div>
+
+  <!-- Modal -->
+  <div id="reviewModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Question Review</h2>
+      <div style="margin-bottom:10px; text-align:center;">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('hi')">हिन्दी</button>
+      </div>
+      <div style="text-align:center; margin-bottom:15px;">
+        <label><input type="radio" name="reviewFilter" value="all" checked onchange="showReview()" /> All</label>
+        <label><input type="radio" name="reviewFilter" value="wrong" onchange="showReview()" style="margin-left:10px;" /> Wrong Only</label>
+        <label><input type="radio" name="reviewFilter" value="unanswered" onchange="showReview()" style="margin-left:10px;" /> Unanswered Only</label>
+      </div>
+      <div id="reviewContainer"></div>
+    </div>
+  </div>
 
   <script>
-    // Load data from localStorage or server
-    const testData = JSON.parse(localStorage.getItem('testData'));
-    const userAnswers = JSON.parse(localStorage.getItem('userAnswers'));
-    const timeSpent = JSON.parse(localStorage.getItem('timeSpent'));
+    let testData = JSON.parse(localStorage.getItem('testData'));
+    let userAnswers = JSON.parse(localStorage.getItem('userAnswers'));
+    let perQuestionTime = JSON.parse(localStorage.getItem('perQuestionTime'));
+
+    const userRoll = localStorage.getItem("userRoll") || "N/A";
+    const userName = localStorage.getItem("userName") || "N/A";
+    const sectionTime = JSON.parse(localStorage.getItem("sectionTime"));
+    console.log("perQuestionTime:", perQuestionTime);
+
+    const yourRank = 128;
+    const totalStudents = 5432;
 
     function formatTime(seconds) {
-      const mins = String(Math.floor(seconds / 60)).padStart(2, '0');
-      const secs = String(seconds % 60).padStart(2, '0');
-      return `${mins}:${secs}`;
+      const m = Math.floor(seconds / 60);
+      const s = seconds % 60;
+      return `${m}m ${s}s`;
     }
 
-    function buildResultSummary() {
-      const tbody = document.querySelector('#sectionSummaryTable tbody');
-      let totalQuestions = 0, totalCorrect = 0, totalWrong = 0, totalUnattempted = 0, totalTime = 0;
+    function generateOverallSummary(totalQ, totalCorrect, totalAttempted, totalScore, yourRank, totalStudents) {
+      const percentile = ((totalStudents - yourRank) / totalStudents) * 100;
+      const overallSummaryHTML = `
+        <h2>Overall Performance Summary</h2>
+        <table>
+          <tr><th style="text-align:left;">Total Score</th><td>${totalScore.toFixed(2)} / ${totalQ}</td></tr>
+          <tr><th style="text-align:left;">Overall Accuracy</th><td>${totalAttempted ? ((totalCorrect / totalAttempted) * 100).toFixed(2) : "0.00"}%</td></tr>
+          <tr><th style="text-align:left;">Your Rank</th><td>${yourRank}</td></tr>
+          <tr><th style="text-align:left;">Total Candidates</th><td>${totalStudents}</td></tr>
+          <tr><th style="text-align:left;">Percentile</th><td>${percentile.toFixed(2)}%</td></tr>
+        </table>`;
+      document.getElementById("overallSummary").innerHTML = overallSummaryHTML;
+    }
+
+    function generateSectionSummary() {
+      const sectionSummaryBody = document.getElementById("sectionSummaryBody");
+      sectionSummaryBody.innerHTML = '';
+
+      let totalQ = 0, totalCorrect = 0, totalWrong = 0, totalUnanswered = 0, totalAttempted = 0, totalTime = 0;
 
       testData.sections.forEach(section => {
-        const sectionQuestions = section.questions;
-        let correct = 0, wrong = 0, unattempted = 0, sectionTime = 0;
+        let correct = 0, wrong = 0, unanswered = 0, sectionTime = 0;
+        const total = section.questions.length;
 
-        sectionQuestions.forEach(q => {
-          const qid = q.id;
-          const userAnswer = userAnswers[qid];
-          const correctAnswer = q.answer;
-          const spent = timeSpent[qid] || 0;
-          sectionTime += spent;
+        section.questions.forEach(q => {
+          const key = `${section.name}_${q.id}`;
+          const userAns = userAnswers[key];
+          const correctAns = q.answer;
 
-          if (!userAnswer) {
-            unattempted++;
-          } else if (userAnswer === correctAnswer) {
+          if (!userAns) {
+            unanswered++;
+          } else if (userAns === correctAns) {
             correct++;
           } else {
             wrong++;
           }
+
+          sectionTime += perQuestionTime[key] || 0;
         });
 
-        const sectionScore = ((correct / sectionQuestions.length) * 100).toFixed(2);
+        const attempted = correct + wrong;
+        const accuracy = attempted === 0 ? 0 : Math.round((correct / attempted) * 100);
+        const score = correct;
+        const timeSpent = formatTime(sectionTime);
 
-        totalQuestions += sectionQuestions.length;
+        totalQ += total;
         totalCorrect += correct;
         totalWrong += wrong;
-        totalUnattempted += unattempted;
+        totalUnanswered += unanswered;
+        totalAttempted += attempted;
         totalTime += sectionTime;
 
-        const tr = document.createElement('tr');
+        const tr = document.createElement("tr");
         tr.innerHTML = `
           <td>${section.title}</td>
-          <td>${sectionQuestions.length}</td>
-          <td>${correct}</td>
-          <td>${wrong}</td>
-          <td>${unattempted}</td>
-          <td>${sectionScore}%</td>
-          <td>${formatTime(sectionTime)}</td>
+          <td>${total}</td><td>${attempted}</td><td>${unanswered}</td>
+          <td>${correct}</td><td>${wrong}</td><td>${accuracy}%</td><td>${timeSpent}</td>
+          <td>${score}</td>
         `;
-        tbody.appendChild(tr);
+        sectionSummaryBody.appendChild(tr);
       });
 
-      const totalScore = ((totalCorrect / totalQuestions) * 100).toFixed(2);
-      document.getElementById('totalScoreSummary').innerHTML = `
-        <strong>Total Score:</strong> ${totalScore}%<br>
-        <strong>Total Time Spent:</strong> ${formatTime(totalTime)}
+      // 🔽 Append the total row
+      const totalTr = document.createElement("tr");
+      totalTr.style.fontWeight = "bold";
+      totalTr.style.background = "#f0f0f0";
+      totalTr.innerHTML = `
+        <td>Total</td>
+        <td>${totalQ}</td><td>${totalAttempted}</td><td>${totalUnanswered}</td>
+        <td>${totalCorrect}</td><td>${totalWrong}</td>
+        <td>${totalAttempted ? ((totalCorrect / totalAttempted) * 100).toFixed(2) : "0.00"}%</td>
+        <td>${formatTime(totalTime)}</td>
+        <td>${totalCorrect.toFixed(2)} / ${(totalQ * 1).toFixed(2)}</td>
       `;
+      sectionSummaryBody.appendChild(totalTr);
+
+      // ✅ Call summary function here
+      generateOverallSummary(totalQ, totalCorrect, totalAttempted, totalCorrect, yourRank, totalStudents);
     }
 
-    buildResultSummary();
+    // Call it after loading data
+    generateSectionSummary();
+
+    // Modal handling
+    function openModal() {
+      document.getElementById("reviewModal").style.display = "block";
+      showReview();
+    }
+
+    function closeModal() {
+      document.getElementById("reviewModal").style.display = "none";
+    }
+
+    // Review rendering
+    let currentLang = 'en';
+    function setLanguage(lang) {
+      currentLang = lang;
+      showReview();
+    }
+
+    function showReview() {
+      const container = document.getElementById("reviewContainer");
+      container.innerHTML = '';
+      const filter = document.querySelector('input[name="reviewFilter"]:checked').value;
+      testData.sections.forEach(section => {
+        const sectionName = section.name;
+        section.questions.forEach(q => {
+          const userAns = userAnswers[`${section.name}_${q.id}`];
+          const correctAns = q.answer;
+          const status = !userAns ? 'unanswered' : (userAns === correctAns ? 'correct' : 'wrong');
+          if (filter !== 'all' && filter !== status) return;
+          const qBlock = document.createElement('div');
+          qBlock.className = `question-block ${status}`;
+          let correctText = '';
+          let userText = '';
+          let optionsHTML = '';
+          q.options[currentLang].forEach((opt, idx) => {
+            const optLetter = String.fromCharCode(65 + idx);
+            const isCorrect = opt === correctAns;
+            const isSelected = opt === userAns;
+            let style = 'color: #333;';
+            if (isCorrect) correctText = `${optLetter}. ${opt}`;
+            if (isSelected) userText = `${optLetter}. ${opt}`;
+            optionsHTML += `<li style="${style}">${optLetter}. ${opt}</li>`;
+          });
+          const timeSpent = formatTime(perQuestionTime[`${sectionName}_${q.id}`] || 0);
+          qBlock.innerHTML = `
+            <div><strong>(${section.title})</strong>
+              <div><strong>Question- ${q.id} </strong>: ${q.text[currentLang]}</div>
+              <ul style="text-align:left; padding-left:20px; list-style-type: none;">${optionsHTML}</ul>
+              <div style="margin-top: 5px;">
+                <span style="color: #dc3545;"><strong>Your Answer:</strong> ${userText || 'Not Answered'}</span>
+              </div>
+              <div style="margin-top: 5px; color: green;"><strong>Correct Answer:</strong> ${correctText}</div>
+              <div style="margin-top: 8px; color: #004085; background: #cce5ff; padding: 10px; border-radius: 5px;">
+                <strong>Explanation:</strong> ${q.explanation?.[currentLang] || 'No explanation provided.'}
+              </div>
+              <div style="text-align:right; font-size:0.9em; color:gray; margin-top: 5px;">
+                Time Spent: ${timeSpent}
+              </div>
+            </div>
+          `;
+          container.appendChild(qBlock);
+        });
+      });
+    }
+
+    // Close modal on outside click
+    window.onclick = function(e) {
+      const modal = document.getElementById("reviewModal");
+      if (e.target == modal) modal.style.display = "none";
+    };
+
   </script>
+
 </body>
 </html>
