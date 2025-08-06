@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing & Plans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
+    header { background: #0077cc; color: #fff; padding: 20px; text-align: center; }
+    h1 { margin: 0; }
+
+    .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+    .plan-card { background: #fff; border-radius: 10px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+    .plan-card h2 { color: #0077cc; margin-bottom: 10px; }
+    .plan-card .price { font-size: 28px; font-weight: bold; color: #28a745; margin: 10px 0; }
+    .plan-card ul { list-style: none; padding: 0; margin: 15px 0; text-align: left; }
+    .plan-card ul li { padding: 6px 0; border-bottom: 1px solid #eee; }
+
+    .buy-btn { background: #ff6600; color: #fff; border: none; padding: 12px 20px; border-radius: 6px; font-size: 16px; cursor: pointer; transition: 0.2s; width: 100%; margin-top: 15px; }
+    .buy-btn:hover { background: #e65c00; }
+
+    .note { text-align: center; font-size: 14px; margin-top: 20px; color: #555; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Choose Your Plan</h1>
+    <p>Get access to Paid Tests with flexible purchase options</p>
+  </header>
+
+  <div class="container">
+    <div class="pricing-grid">
+
+      <!-- Full Access Plan -->
+      <div class="plan-card">
+        <h2>Full Access</h2>
+        <div class="price">₹499</div>
+        <p>One-time payment for lifetime access</p>
+        <ul>
+          <li>Unlock ALL Paid Tests</li>
+          <li>Access Chapter, CA & Subject Tests</li>
+          <li>Lifetime validity</li>
+          <li>Priority support</li>
+        </ul>
+        <button class="buy-btn" onclick="purchaseFullAccess()">Buy Now Full Access</button>
+      </div>
+
+      <!-- Single Test Purchase -->
+      <div class="plan-card" id="singlePlan">
+        <h2>Single Test Access</h2>
+        <div class="price" id="singlePrice">₹49</div>
+        <p id="singleTestName">Selected Test</p>
+        <ul>
+          <li>Unlock only this test</li>
+          <li>One-time payment</li>
+          <li>Lifetime validity</li>
+        </ul>
+        <button class="buy-btn" onclick="purchaseSingleTest()">Buy Now Single Test</button>
+      </div>
+
+    </div>
+
+    <div class="note">
+      After purchase, you will be redirected back to the exam page with access unlocked.
+    </div>
+  </div>
+
+  <!-- Razorpay Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    // ✅ Razorpay Test Key (replace with your LIVE key later)
+    const razorpayKey = "rzp_test_HuBxblCUQlnCzK";
+
+    // ✅ Pricing (in paise)
+    const PRICES = {
+      fullAccess: 19900,  // ₹499
+      singleTest: 1900    // ₹49
+    };
+
+    // ✅ Get URL Params
+    const urlParams = new URLSearchParams(window.location.search);
+    const testFile = urlParams.get('test');
+    const planType = urlParams.get('plan');
+
+    // ✅ Show/hide plans based on URL params
+    if(planType === 'full') {
+      document.getElementById('singlePlan').style.display = 'none';
+    }
+    if(testFile) {
+      document.getElementById('singleTestName').textContent = `Test File: ${testFile}`;
+    }
+
+    // ✅ Purchase Full Access
+    function purchaseFullAccess(){
+      const options = {
+        key: razorpayKey,
+        amount: PRICES.fullAccess,
+        currency: "INR",
+        name: "Exam Full Access",
+        description: "Unlock ALL Paid Tests",
+        image: "https://yourlogo.png", 
+        handler: function (response){
+          console.log("✅ Payment success:", response.razorpay_payment_id);
+          localStorage.setItem('userFullPaid', 'true');
+          alert("✅ Full Access Unlocked!");
+          window.location.href = 'exam_details.html';
+        },
+        prefill: {
+          name: "Test User",
+          email: "user@example.com",
+          contact: "9999999999"
+        },
+        theme: { color: "#0077cc" }
+      };
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
+
+    // ✅ Purchase Single Test
+    function purchaseSingleTest(){
+      if(!testFile){
+        alert('No test selected!');
+        return;
+      }
+      const options = {
+        key: razorpayKey,
+        amount: PRICES.singleTest,
+        currency: "INR",
+        name: "Single Test Access",
+        description: `Unlock test: ${testFile}`,
+        image: "https://yourlogo.png",
+        handler: function (response){
+          console.log("✅ Payment success:", response.razorpay_payment_id);
+          let paidTests = JSON.parse(localStorage.getItem('userPaidTests') || '[]');
+          if(!paidTests.includes(testFile)){
+            paidTests.push(testFile);
+            localStorage.setItem('userPaidTests', JSON.stringify(paidTests));
+          }
+          alert(`✅ Test "${testFile}" Unlocked!`);
+          window.location.href = 'exam_details.html';
+        },
+        prefill: {
+          name: "Test User",
+          email: "user@example.com",
+          contact: "9999999999"
+        },
+        theme: { color: "#0077cc" }
+      };
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
+  </script>
+</body>
+</html>
