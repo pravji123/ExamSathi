@@ -115,9 +115,25 @@
       .container { flex-direction: column-reverse; }
       .left-panel { border-right: none; border-top: 2px solid #ddd; }
     }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
+  <!-- Loader with Spinner -->
+<div id="loader" style="
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(255,255,255,0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+"></div>
 
 <header id="examName">Loading...</header>
 
@@ -141,7 +157,6 @@
         <div>Negative: <strong id="questionNegative">-0.25</strong></div>
       </div>
     </div>
-
     <!-- Question -->
     <div id="question-box" class="question-box"></div>
   </div>
@@ -206,50 +221,125 @@ const file = params.get('file');   // example: "mock1.json"
 
 // ✅ Load questions.json dynamically
 async function loadQuestions() {
-    const path = `sets/${exam}/${file}`;
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.innerHTML = `
+      <div style="text-align: center;">
+        <div class="spinner" style="
+          width: 60px;
+          height: 60px;
+          border: 6px solid #ccc;
+          border-top: 6px solid #007bff;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+          margin: 0 auto 15px;
+        "></div>
+        <div style="font-size: 16px; color: #333;">Loading Test... Please Wait</div>
+      </div>
+    `;
+    loader.style.display = "flex";
+  }
+
+  let exam = getQueryParam("exam") || localStorage.getItem("lastExamKey");
+  let file = getQueryParam("file") || localStorage.getItem("lastFile");
+
+  if (!exam || !file) {
+    if (loader) {
+      loader.innerHTML = `<div style="text-align:center; color:red;">❌ Missing exam or file information!</div>`;
+      setTimeout(() => loader.style.display = "none", 3000);
+    }
+    return;
+  }
+
+  // Save for refresh support
+  localStorage.setItem("lastExamKey", exam);
+  localStorage.setItem("lastFile", file);
+
+  const path = `sets/${exam}/${file}`;
+
   try {
     const res = await fetch(path);
-      if (!res.ok) throw new Error('Test file not found!');
-      const data = await res.json();
-    // const res = await fetch("sets/bihar_police/question.json");
-    // const data = await res.json();
-    examName = data.examName || "Mock Test";
-    testTitle = data.testTitle;
-    
-    document.getElementById("examName").textContent = data.examName || "Mock Test";
-    document.getElementById("examName").textContent = examName;
-    document.getElementById("username-display").textContent = localStorage.getItem("userName") || "Guest";
+    if (!res.ok) throw new Error("Test file not found!");
 
+    const data = await res.json();
+
+    // Set globals
+    examName = data.examName || "Mock Test";
+    testTitle = data.testTitle || "";
+
+    // Update UI
+    document.getElementById("examName").textContent = examName;
+    document.getElementById("username-display").textContent =
+      localStorage.getItem("userName") || "Guest";
+    document.title = `${examName} | SSC Mock Test`;
+
+    // Process questions
     questions = data.questions.map((q, i) => ({
       ...q,
       globalIndex: i + 1,
       marks: q.marks ?? data.marks ?? 1,
       negative: q.negative ?? data.negative ?? -0.25,
-      type: q.questionType ?? data.questionType ?? "MCQ"
+      type: q.questionType ?? data.questionType ?? "MCQ",
     }));
 
+    // Build sections
     buildSectionTabs(data.sections || []);
 
-    // ✅ Set default active section to first section
-    if (data.sections && data.sections.length > 0) {
-      activeSection = data.sections[0];
-    } else {
-      activeSection = "All";
-    }
-
-    // ✅ Highlight + filter immediately
+    // Activate first section
+    activeSection = data.sections?.[0] || "All";
     filterSection(activeSection);
 
-    // ✅ Load the *first question of that section*
     const firstIndex = questions.findIndex(q => q.section === activeSection);
     loadQuestion(firstIndex !== -1 ? firstIndex : 0);
 
-    // ✅ Start timer AFTER section selection
-    startTimer(data.time);
+    // Start timer
+    startTimer(data.time || data.duration || 3600);
+
+    // Store config
+    localStorage.setItem("testFile", JSON.stringify(data));
+
+    // Auto fullscreen
+    if (document.fullscreenEnabled) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    }
+
   } catch (e) {
-    alert("❌ Error loading questions.json!");
+    console.error("❌ Failed to load test:", e.message);
+
+    if (loader) {
+      loader.innerHTML = `
+        <div style="text-align: center;">
+          <div style="font-size: 20px; color: red; margin-bottom: 10px;">❌ Error loading test</div>
+          <div style="color: #333; margin-bottom: 20px;">${e.message}</div>
+          <button onclick="location.reload()" style="
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          ">🔁 Retry</button>
+        </div>
+      `;
+      loader.style.display = "flex";
+    }
+
+  } finally {
+    // Only hide if still showing spinner
+    if (loader && loader.innerHTML.includes("spinner")) {
+      loader.style.display = "none";
+    }
   }
 }
+
+
+
+function getQueryParam(key) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(key);
+}
+
 
 function buildSectionTabs(sections) {
   const tabDiv = document.getElementById("sectionTabs");
@@ -342,7 +432,17 @@ function clearResponse() {
 }
 function markForReview() {
   reviewMarked[currentIndex] = true;
-  renderNavigator();
+  if (currentIndex < questions.length - 1) {
+    const nextIndex = currentIndex + 1;
+    const nextSection = questions[nextIndex].section;
+    if (nextSection !== activeSection) {
+      filterSection(nextSection);
+    }
+    loadQuestion(nextIndex);
+  } else if (confirm("This is Your Last Question! Do You Want to Submit Test?")) {
+    submitTest();
+  }
+  // renderNavigator();
   updateStatusCounts();
 }
 function goBack() {
@@ -499,32 +599,93 @@ function autoSubmitTest() {
 }
 
 // ✅ Final Submit → Save Result → Redirect
+// function finalizeSubmit() {
+//   if (questionStartTime !== null) {
+//     const end = Date.now();
+//     const spent = Math.floor((end - questionStartTime) / 1000);
+//     perQuestionTime[currentIndex] = (perQuestionTime[currentIndex] || 0) + spent;
+//   }
+//   let correct = 0, wrong = 0;
+//   questions.forEach((q, i) => {
+//     if (answers[i] === q.answer) correct++;
+//     else if (answers[i] !== undefined) wrong++;
+//   });
+//   const totalDuration = testData.time * 60; // in seconds
+//   const timeSpent = totalDuration - remainingSeconds;
+
+//   function formatTime(seconds) {
+//     const mins = Math.floor(seconds / 60);
+//     const secs = seconds % 60;
+//     return `${mins}m ${secs}s`;
+//   }
+//   const result = {
+//     name: localStorage.getItem("userName") || "Guest",
+//     total: questions.length,
+//     correct,
+//     wrong,
+//     time: formatTime(timeSpent),
+//     answers,
+//     questions,
+//     perQuestionTime,
+//     testTitle
+//   };
+//   localStorage.setItem("quizResult", JSON.stringify(result));
+//   window.location.href = "result.html";
+// }
+
 function finalizeSubmit() {
+  // ⏱️ Save time spent on current question
   if (questionStartTime !== null) {
     const end = Date.now();
     const spent = Math.floor((end - questionStartTime) / 1000);
     perQuestionTime[currentIndex] = (perQuestionTime[currentIndex] || 0) + spent;
   }
+
+  // 🧠 Count correct & wrong answers
   let correct = 0, wrong = 0;
   questions.forEach((q, i) => {
     if (answers[i] === q.answer) correct++;
     else if (answers[i] !== undefined) wrong++;
   });
-  const mins = String(Math.floor((remainingSeconds) / 60)).padStart(2, '0');
-  const secs = String((remainingSeconds) % 60).padStart(2, '0');
+
+  // 🧾 Get test details safely from localStorage
+  const testData = JSON.parse(localStorage.getItem("testFile") || "{}");
+
+  // ✅ Safe total time calculation (in seconds)
+  const totalDuration = (testData.time && !isNaN(Number(testData.time)))
+    ? Number(testData.time) * 60
+    : remainingSeconds + 1;
+
+  // ⏱️ Time spent = total - remaining (ensure it's not negative)
+  const timeSpent = Math.max(totalDuration - remainingSeconds);
+
+  // ⏳ Time formatting function
+  function formatTime(seconds) {
+    const mins = String(Math.floor(seconds / 60)).padStart(2, '0');
+    const secs = String(seconds % 60).padStart(2, '0');
+    return `${mins}m ${secs}s`;
+  }
+
+  // ✅ Prepare result object
   const result = {
     name: localStorage.getItem("userName") || "Guest",
     total: questions.length,
     correct,
     wrong,
-    time: `${mins}:${secs}`,
+    time: formatTime(timeSpent),
     answers,
     questions,
-    perQuestionTime
+    perQuestionTime,
+    testTitle
   };
+
+  // 💾 Save result to localStorage
   localStorage.setItem("quizResult", JSON.stringify(result));
+
+  // 🔁 Redirect to result page
   window.location.href = "result.html";
 }
+
 
 // ✅ Init
 window.onload = () => {
