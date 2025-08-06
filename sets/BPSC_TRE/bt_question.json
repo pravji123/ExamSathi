@@ -2,7 +2,7 @@
   "examName": "BPSC Mock Test Series 2025",
   "testTitle": "Science & Math Test",
   "time": 75,
-  "sections": ["Science", "Math"],
+  "sections": ["Math","Science"],
   "languages": ["English", "Hindi"],
   "questionType": "MCQ",
   "marks": 1,
