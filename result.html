@@ -2,150 +2,150 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Test Result Summary</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Result</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      padding: 20px;
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-      color: #222;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-top: 20px;
-    }
-    th, td {
-      padding: 12px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-    th {
-      background: #007bff;
-      color: #fff;
-      text-transform: uppercase;
-    }
-    tr:hover {
-      background: #f1f1f1;
-    }
-    tfoot td {
-      font-weight: bold;
-      background: #e9ecef;
-    }
-    .btn-container {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px;
-      background: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #0056b3;
-    }
+    body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 0; }
+    header { background: #007bff; color: white; padding: 15px; text-align: center; font-size: 1.4rem; }
+    .container { max-width: 900px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); }
+    h2 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }
+    th { background: #007bff; color: white; }
+    .summary-box { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; }
+    .card { background: #f8f9fa; padding: 15px; border-radius: 6px; text-align: center; flex: 1; min-width: 120px; }
+    .btn { padding: 10px 16px; margin: 10px 5px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    .btn-primary { background: #007bff; color: white; }
+    .btn-secondary { background: #6c757d; color: white; }
+    .btn-success { background: #28a745; color: white; }
+    .hidden { display: none; }
+    .review-question { background: #fff; margin-bottom: 15px; padding: 15px; border-radius: 6px; border: 1px solid #ddd; }
+    .correct { color: green; font-weight: bold; }
+    .wrong { color: red; font-weight: bold; }
+    .explanation { background: #f1f1f1; padding: 8px; margin-top: 8px; border-left: 4px solid #007bff; }
   </style>
 </head>
 <body>
 
-  <h1>Test Result Summary</h1>
+<header>🎉 Test Result</header>
+
+<div class="container">
+  <h2>Summary</h2>
+
+  <div class="summary-box">
+    <div class="card"><strong id="userName"></strong><br>👤 Candidate</div>
+    <div class="card"><strong id="totalQuestions"></strong><br>Total Questions</div>
+    <div class="card"><strong id="attempted"></strong><br>Attempted</div>
+    <div class="card"><strong id="correct"></strong><br>✅ Correct</div>
+    <div class="card"><strong id="wrong"></strong><br>❌ Wrong</div>
+    <div class="card"><strong id="percentage"></strong>%<br>Score</div>
+    <div class="card"><strong id="timeTaken"></strong><br>⏱ Total Time</div>
+  </div>
 
   <table>
     <thead>
       <tr>
-        <th>Section</th>
+        <th>Test Name</th>
         <th>Total</th>
-        <th>Answered</th>
-        <th>Not Answered</th>
+        <th>Attempted</th>
         <th>Correct</th>
         <th>Wrong</th>
-        <th>Total Marks</th>
+        <th>Score</th>
         <th>Percentage</th>
+        <th>Time Taken</th>
       </tr>
     </thead>
-    <tbody id="resultBody">
-      <!-- Dynamic rows will be inserted here -->
-    </tbody>
-    <tfoot>
+    <tbody>
       <tr>
-        <td>Total</td>
-        <td id="totalQ"></td>
-        <td id="totalAnswered"></td>
-        <td id="totalNotAnswered"></td>
-        <td id="totalCorrect"></td>
-        <td id="totalWrong"></td>
-        <td id="totalMarks"></td>
-        <td id="totalPercentage"></td>
+        <td id="t_testName"></td>
+        <td id="t_total"></td>
+        <td id="t_attempted"></td>
+        <td id="t_correct"></td>
+        <td id="t_wrong"></td>
+        <td id="t_score"></td>
+        <td id="t_percent"></td>
+        <td id="t_time"></td>
       </tr>
-    </tfoot>
+    </tbody>
   </table>
 
-  <div class="btn-container">
-    <a href="review.html" class="btn">Review Questions</a>
-    <a href="index.html" class="btn">Go to Home</a>
+  <div style="text-align:center;">
+    <button class="btn btn-primary" onclick="toggleReview()">📖 Review Questions</button>
+    <button class="btn btn-secondary" onclick="window.location.href='index.html'">🏠 Go Home</button>
   </div>
 
-  <script>
-    // Example data - Replace this with actual result data
-    const sections = [
-      { name: "GK", total: 10, answered: 8, correct: 6, wrong: 2 },
-      { name: "Math", total: 10, answered: 9, correct: 7, wrong: 2 },
-      { name: "Reasoning", total: 10, answered: 7, correct: 5, wrong: 2 }
-    ];
-    const markPerQuestion = 1; // Change if needed
+  <div id="reviewSection" class="hidden">
+    <h2>Review Questions</h2>
+    <div id="reviewList"></div>
+  </div>
+</div>
 
-    const resultBody = document.getElementById('resultBody');
+<script>
+function loadResult(){
+  const data = JSON.parse(localStorage.getItem("quizResult") || "{}");
+  if(!data.questions){
+    document.body.innerHTML = "<h2 style='text-align:center;color:red;'>No result found!</h2>";
+    return;
+  }
 
-    let sumTotal = 0, sumAnswered = 0, sumNotAnswered = 0, sumCorrect = 0, sumWrong = 0, sumMarks = 0;
+  const { name, total, correct, wrong, time, answers, questions, perQuestionTime, testTitle } = data;
+  const attempted = correct + wrong;
+  const percentage = ((correct / total) * 100).toFixed(2);
+  const score = correct - (wrong * 0.25); // Assuming -0.25 per wrong
 
-    sections.forEach(sec => {
-      const notAnswered = sec.total - sec.answered;
-      const marks = sec.correct * markPerQuestion;
-      const percentage = ((sec.correct / sec.total) * 100).toFixed(1);
+  // ✅ Fill summary cards
+  document.getElementById("userName").innerText = name;
+  document.getElementById("totalQuestions").innerText = total;
+  document.getElementById("attempted").innerText = attempted;
+  document.getElementById("correct").innerText = correct;
+  document.getElementById("wrong").innerText = wrong;
+  document.getElementById("percentage").innerText = percentage;
+  document.getElementById("timeTaken").innerText = time;
 
-      resultBody.innerHTML += `
-        <tr>
-          <td>${sec.name}</td>
-          <td>${sec.total}</td>
-          <td>${sec.answered}</td>
-          <td>${notAnswered}</td>
-          <td>${sec.correct}</td>
-          <td>${sec.wrong}</td>
-          <td>${marks}</td>
-          <td>${percentage}%</td>
-        </tr>
-      `;
+  // ✅ Fill table row
+  document.getElementById("t_testName").innerText= testTitle;
+  document.getElementById("t_total").innerText = total;
+  document.getElementById("t_attempted").innerText = attempted;
+  document.getElementById("t_correct").innerText = correct;
+  document.getElementById("t_wrong").innerText = wrong;
+  document.getElementById("t_score").innerText = score.toFixed(2);
+  document.getElementById("t_percent").innerText = percentage+"%";
+  document.getElementById("t_time").innerText = time;
 
-      sumTotal += sec.total;
-      sumAnswered += sec.answered;
-      sumNotAnswered += notAnswered;
-      sumCorrect += sec.correct;
-      sumWrong += sec.wrong;
-      sumMarks += marks;
+  // ✅ Build Review List
+  const reviewDiv = document.getElementById("reviewList");
+  reviewDiv.innerHTML = "";
+
+  questions.forEach((q, i) => {
+    const userAns = answers[i] || "Not Answered";
+    const isCorrect = userAns === q.answer;
+    const timeSpent = perQuestionTime[i] ? perQuestionTime[i] + "s" : "0s";
+
+    let html = `<div class="review-question">
+      <p><strong>Q${q.globalIndex}:</strong> ${q.question}</p>
+      <ul>`;
+    q.options.forEach(opt => {
+      let style = "";
+      if(opt === q.answer) style = "✅ Correct Answer";
+      if(opt === userAns && !isCorrect) style = "❌ Your Choice";
+      html += `<li>${opt} ${style ? "<span class='"+(opt===q.answer?"correct":"wrong")+"'>("+style+")</span>" : ""}</li>`;
     });
+    html += `</ul>
+      <p><strong>Your Answer:</strong> ${userAns === q.answer ? "<span class='correct'>"+userAns+"</span>" : userAns === "Not Answered" ? "<span style='color:gray'>Not Answered</span>" : "<span class='wrong'>"+userAns+"</span>"}</p>
+      <p><strong>Correct Answer:</strong> <span class="correct">${q.answer}</span></p>
+      <p><strong>Time Spent:</strong> ${timeSpent}</p>
+      <div class="explanation"><strong>Explanation:</strong> ${q.explanation || "No explanation provided."}</div>
+    </div>`;
 
-    const totalPercentage = ((sumCorrect / sumTotal) * 100).toFixed(1);
+    reviewDiv.innerHTML += html;
+  });
+}
 
-    document.getElementById('totalQ').textContent = sumTotal;
-    document.getElementById('totalAnswered').textContent = sumAnswered;
-    document.getElementById('totalNotAnswered').textContent = sumNotAnswered;
-    document.getElementById('totalCorrect').textContent = sumCorrect;
-    document.getElementById('totalWrong').textContent = sumWrong;
-    document.getElementById('totalMarks').textContent = sumMarks;
-    document.getElementById('totalPercentage').textContent = totalPercentage + "%";
-  </script>
+function toggleReview(){
+  document.getElementById("reviewSection").classList.toggle("hidden");
+}
 
+window.onload = loadResult;
+</script>
 </body>
 </html>
