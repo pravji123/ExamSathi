@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Testara</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3KJB0Y4C6"></script>
 <script>
@@ -19,45 +19,55 @@
       padding: 0;
       background-color: #f4f7fc;
       color: #333;
-/*       min-height: 100vh; */
-      justify-content: center;
-      align-items: center;
     }
 
-    .contact-container {
-      max-width: 700px;
-      /* max-height: auto; */
-      width: 90%;
-      margin: 50px auto;
-      background: white;
+    .contactus {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+      flex: 1 1 350px;
+      background-color: #fff;
       padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
-    .contact-container h2 {
+    .contact-info h2,
+    .contact-form h2 {
+      color: #002b55;
+      margin-bottom: 20px;
       text-align: center;
-      color: #1e3a8a;
-      margin-bottom: 10px;
     }
 
-    .contact-container p {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #555;
+    .contact-info p,
+    .contact-form p {
+      font-size: 16px;
+      line-height: 1.6;
     }
 
-    form {
+    .contact-info strong {
+      color: #002b55;
+    }
+
+    .contact-form form {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
     }
 
-    input, textarea {
-      padding: 15px;
+    input,
+    textarea {
+      padding: 12px;
       font-size: 16px;
       border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 6px;
+      width: 100%;
     }
 
     textarea {
@@ -66,101 +76,156 @@
 
     .button-group {
       display: flex;
-      gap: 15px;
+      gap: 10px;
       flex-wrap: wrap;
+      margin-top: 10px;
     }
 
     .button-group button {
       flex: 1;
-      padding: 15px;
+      padding: 12px;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
-      color: white;
+      color: #fff;
+      transition: background-color 0.3s ease;
     }
 
     .email-btn {
       background-color: #1e3a8a;
     }
 
-    .whatsapp-btn {
-      background-color: #25D366;
-    }
-
     .email-btn:hover {
       background-color: #324bb4;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
     }
 
     .whatsapp-btn:hover {
       background-color: #20c35a;
     }
 
-    @media (max-width: 600px) {
-      .button-group {
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .contactus {
         flex-direction: column;
+        padding: 30px 15px;
       }
     }
   </style>
 </head>
 <body>
+
   <div id="header"></div>
 
-  <div class="contact-container">
-    <h2>Contact Us</h2>
-    <h2>We’d Love to Hear From You</h2>
-    <p>Have questions or feedback? Send us a message using your preferred method below.</p>
+  <section class="contactus">
 
-    <form>
-      <input type="text" id="name" placeholder="Your Full Name" required>
-      <input type="number" id="number" placeholder="Your Mobile Number" required>
-      <input type="email" id="email" placeholder="Your Email Address" required>
-      <input type="text" id="subject" placeholder="Subject">
-      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Company Info</h2>
+      <p><strong>Merchant Legal Entity Name:</strong><br>Testara - India's Smart Testing Platform</p>
+      <p><strong>Telephone:</strong><br><a href="tel:+918392950977">+91 83929 50977</a></p>
+      <p><strong>Email:</strong><br><a href="mailto:support@testara.in">support@testara.in</a></p>
 
-      <div class="button-group">
-        <button type="button" class="email-btn" onclick="sendEmail()">📧 Send via Email</button>
-        <button type="button" class="whatsapp-btn" onclick="sendWhatsApp()">🟢 Send via WhatsApp</button>
+      <h3 style="margin-top: 30px;">Contact</h3>
+      <p style="color: #999;">Prefer to reach out directly?</p>
+      <p>📞 Phone: <a href="tel:+918392950977" style="color: #1e90ff;">+91 83929 50977</a></p>
+      <p>📧 Email: <a href="mailto:support@testara.in" style="color: #1e90ff;">support@testara.in</a></p>
+
+      <div class="social-icons">
+        <a href="https://wa.me/918392950977" title="WhatsApp" target="_blank">
+          <img src="image/wap.png" alt="WhatsApp">
+        </a>
+        <a href="mailto:support@testara.in" title="Email">
+          <img src="image/gmail.png" alt="Email">
+        </a>
+        <a href="https://t.me/Digital_Help_Desk" title="Telegram" target="_blank">
+          <img src="image/telegram.png" alt="Telegram">
+        </a>
       </div>
-    </form>
-  </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>We’d Love to Hear From You</h2>
+      <p style="text-align: center;">Have questions or feedback? Send us a message using your preferred method below.</p>
+
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="number" name="number" placeholder="Your Mobile Number" required>
+        <input type="email" name="email" placeholder="Your Email Address" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
+        <div class="button-group">
+          <button type="submit" name="submitType" value="email" class="email-btn">📧 Email Us</button>
+          <button type="submit" name="submitType" value="whatsapp" class="whatsapp-btn">🟢 WhatsApp</button>
+        </div>
+      </form>
+    </div>
+
+  </section>
+
   <div id="footer"></div><script src="load-header-footer.js"></script>
 
   <script>
-    function getFormData() {
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const subject = document.getElementById("subject").value.trim();
-      const message = document.getElementById("message").value.trim();
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      return { name, email, subject, message };
+    const form = e.target;
+    const formData = new FormData(form);
+    const submitType = e.submitter.value; // ✅ Detect which button was clicked
+
+    const name = formData.get("name").trim();
+    const number = formData.get("number").trim();
+    const email = formData.get("email").trim();
+    const subject = formData.get("subject").trim();
+    const message = formData.get("message").trim();
+
+    // Basic email format check
+    const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
     }
 
-    function sendEmail() {
-      const { name, number, email, subject, message } = getFormData();
-      const mailTo = "support@testara.in"; // Your email here
-
-      const body = `Hi,\n\nYou have received a new message from ${name} (${number})(${email}):\n\nSubject: ${subject}\n\nMessage:\n${message}`;
-      const mailtoLink = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
+    if (submitType === "email") {
+      const body = `Hi Sir/Ma'am,%0D%0A%0D%0AMy name is ${name},%0D%0AMobile Number:- ${number},%0D%0AE-mail:- ${email},
+      %0D%0ASubject: ${subject},%0D%0A%0D%0AMy Query is:-%0D%0A${message}.%0D%0A%0D%0AThank You%0D%0A${name}`;
+      const mailtoLink = `mailto:support@testara.in?subject=${encodeURIComponent(subject || "Contact Form Query")}&body=${body}`;
       window.location.href = mailtoLink;
+    } else if (submitType === "whatsapp") {
+      const waText = `Hello Sir,%0A` +
+                    `My Name: ${name}%0A` +
+                    `Mobile Number: ${number}%0A` +
+                    `Email: ${email}%0A` +
+                    `Subject: ${subject}%0A` +
+                    `Query:%0A${message}`;
+      const whatsappURL = `https://wa.me/918392950977?text=${waText}`;
+      window.open(whatsappURL, "_blank");
     }
-
-    function sendWhatsApp() {
-      const { name, number, email, subject, message } = getFormData();
-      const fullMessage = `Hello Sir,%0A` +
-            `My Name is: ${name}%0A` +
-            `Mobile Number: ${number}%0A` +
-            `E-mail: ${email}%0A` +
-            `Subject: ${subject}` +
-            `My Query:%0A${message}`;
-      const phoneNumber = "918392950977"; // Replace with your WhatsApp number (without +)
-
-      const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
-      window.open(whatsappLink, "_blank");
-    }
-  </script>
+  });
+</script>
 
 </body>
 </html>
-
