@@ -1,10 +1,12 @@
-<!-- ✅ footer.html (self-contained with CSS) -->
+<!-- ✅ Footer + WhatsApp Floating Button (Right Side Above Footer) -->
 <style>
   .footer {
     background-color: #002b55;
     color: #ffffff;
     padding: 30px 20px;
     margin-top: 40px;
+    position: relative;
+    z-index: 1;
   }
 
   .footer-container {
@@ -17,25 +19,10 @@
     gap: 30px;
   }
 
-  /* Column base styles */
   .footer-column {
     box-sizing: border-box;
     min-width: 250px;
-  }
-
-  /* Custom flex widths */
-  .col1 {
-    flex: 1.5;
-    text-align: justify;
-  }
-
-  .col2 {
-    flex: 2.5;
-    text-align: center;
-  }
-
-  .col3 {
-    flex: 1.0;
+    flex: 1;
     text-align: center;
   }
 
@@ -58,9 +45,27 @@
     border-top: 1px solid #444;
     padding-top: 15px;
     text-align: center;
-    font-size: 14px;
-    color: #aaa;
+    font-size: 16px;
+    color: #cccccc;
     margin-top: 20px;
+  }
+
+  /* ✅ Floating WhatsApp Button (Right side above footer) */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 999;
+  }
+
+  .whatsapp-float img {
+    border-radius: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float img:hover {
+    transform: scale(1.1);
   }
 
   @media (max-width: 768px) {
@@ -78,21 +83,38 @@
     .footer p {
       text-align: center;
     }
+
+    .whatsapp-float img {
+      width: 45px;
+      height: 45px;
+    }
   }
 </style>
 
+<!-- ✅ Floating WhatsApp Button -->
+<a href="https://wa.me/918392950977?text=Hi%20Team%20Testara%2C%20I%20need%20assistance%20regarding%20mock%20tests" 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="Chat with us on WhatsApp">
+  <img src="wp.gif" alt="WhatsApp">
+</a>
+
+<!-- ✅ Footer Start -->
 <footer class="footer">
   <div class="footer-container">
-    <!-- Column 1: Platform Intro -->
-    <div class="footer-column col1">
-      <h3 style="text-align: center;">Test Your Knowledge</h3>
+
+    <!-- Column 1 -->
+    <div class="footer-column">
+      <h3>Testara <br> <em>India's Smart Testing Platform</em></h3>
       <p>
-        India’s trusted platform for practice sets, mock tests, and educational content. Prepare confidently for government exams with expert support and quality resources.
+        Testara is your trusted exam preparation partner for SSC, Railway, Police, and other government jobs.
+        We offer high-quality mock tests, PYQs, and practice sets curated by experts—empowering students to
+        learn smartly and succeed confidently.
       </p>
     </div>
 
-    <!-- Column 2: About Us / Social / Credit -->
-    <div class="footer-column col2">
+    <!-- Column 2 -->
+    <div class="footer-column">
       <h3>About Us</h3>
       <p>
         <span style="color: #ff9933; font-weight: bold;">Made</span>
@@ -104,24 +126,65 @@
       <p style="margin-top: 10px; font-size: 13px; color: #aaaaaa;">
         &copy; 2025 Designed by <strong style="color: #ffffff;">DIGITAL HELP DESK & Team ✅</strong>
       </p>
-      <p>Follow us on 
-        <a href="https://t.me/Bpsc_Tre4_Computer_Stet" target="_blank">Telegram</a>
-      </p> 
+      <p>
+        Follow us on 
+        <a href="https://t.me/Digital_Help_Desk" target="_blank">Telegram</a>
+      </p>
     </div>
 
-    <!-- Column 3: Visitor Counter -->
-    <div class="footer-column col3">
-      <h3>Important Links:- </h3>
+    <!-- Column 3 -->
+    <div class="footer-column">
+      <h3>Important Links:-</h3>
       <a href="contact.html">Contact Us</a><br>
       <a href="terms.html">Terms & Conditions</a><br>
-      <a href="privacy.html">Privacy Policy</a><br> 
+      <a href="privacy.html">Privacy Policy</a><br>
       <a href="refund-policy.html">Refund Policy</a><br>
-      <h3>Website Visitors:- </h3>
-      <img alt="Hits" src="https://hits.sh/pravji123.github.io/TYK.svg?style=for-the-badge&label= 👁️ Total-Visitor - &extraCount=100"/></a>
+      <h3>Website Visitors:-</h3>
+      <img 
+        alt="Hits" 
+        src="https://hits.sh/pravji123.github.io/TYK.svg?style=for-the-badge&label= 👁️ Total-Visitor - &extraCount=100" />
     </div>
+
+    <!-- Column 4 -->
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p style="font-size: 16px; color: #ccc;">Prefer to reach out directly?</p>
+      <p style="font-size: 18px; margin: 8px 0;">
+        📞 Phone:- <a href="tel:+918392950977" style="color: #4fc3f7;">+91 83929 50977</a>
+      </p>
+      <p style="font-size: 18px; margin: 8px 0;">
+        📧 E-mail:- <a href="mailto:support@testara.in" style="color: #4fc3f7;">support@testara.in</a>
+      </p>
+      <div style="margin-top: 20px;">
+        <a href="https://wa.me/918392950977" target="_blank" title="WhatsApp" style="margin: 0 10px;">
+          <img src="image/wap.png" alt="WhatsApp" width="30" height="30" style="vertical-align: middle;">
+        </a>
+        <a href="mailto:support@testara.in" title="Email" style="margin: 0 10px;">
+          <img src="image/gmail.png" alt="Email" width="30" height="30" style="vertical-align: middle;">
+        </a>
+        <a href="https://t.me/Digital_Help_Desk" target="_blank" title="Telegram" style="margin: 0 10px;">
+          <img src="image/telegram.png" alt="Telegram" width="30" height="30" style="vertical-align: middle;">
+        </a>
+        <!-- <a href="https://www.youtube.com/yourchannel" target="_blank" title="YouTube" style="margin: 0 10px;">
+          <img src="image/youtube.png" alt="YouTube" width="30" height="30" style="vertical-align: middle;">
+        </a>
+        <a href="https://www.instagram.com/yourusername" target="_blank" title="Instagram" style="margin: 0 10px;">
+          <img src="image/insta.png" alt="Instagram" width="30" height="30" style="vertical-align: middle;">
+        </a>
+        <a href="https://www.facebook.com/yourpage" target="_blank" title="Facebook" style="margin: 0 10px;">
+          <img src="image/fb.png" alt="Facebook" width="30" height="30" style="vertical-align: middle;">
+        </a> -->
+      </div>
+    </div>
+
   </div>
 
-  <div class="footer-bottom">
-    &copy; 2025 <strong>Test Your Knowledge</strong> | Powered by <strong>DIGITAL HELP DESK</strong>
+  <div class="footer-bottom">&copy; <span id="copyright-year"></span> 
+    <strong> Testara</strong> | Powered by <strong>DIGITAL HELP DESK</strong>
   </div>
+  <script>
+    const startYear = 2025;
+    const currentYear = new Date().getFullYear() + 1 ;
+    document.getElementById("copyright-year").textContent = `${startYear} - ${currentYear}`;
+  </script>
 </footer>
