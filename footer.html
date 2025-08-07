@@ -96,7 +96,7 @@
    class="whatsapp-float" 
    target="_blank" 
    title="Chat with us on WhatsApp">
-  <img src="image/wp.gif" alt="WhatsApp">
+  <img src="wp.gif" alt="WhatsApp">
 </a>
 
 <!-- ✅ Footer Start -->
@@ -126,34 +126,8 @@
       <p style="margin-top: 10px; font-size: 13px; color: #aaaaaa;">
         &copy; 2025 Designed by <strong style="color: #ffffff;">DIGITAL HELP DESK & Team ✅</strong>
       </p>
-      <p>
-        Follow us on 
-        <a href="https://t.me/Digital_Help_Desk" target="_blank">Telegram</a>
-      </p>
-    </div>
-
-    <!-- Column 3 -->
-    <div class="footer-column">
-      <h3>Important Links:-</h3>
-      <a href="contact.html">Contact Us</a><br>
-      <a href="terms.html">Terms & Conditions</a><br>
-      <a href="privacy.html">Privacy Policy</a><br>
-      <a href="refund-policy.html">Refund Policy</a><br>
-      <h3>Website Visitors:-</h3>
-      <img 
-        alt="Hits" 
-        src="https://hits.sh/pravji123.github.io/TYK.svg?style=for-the-badge&label= 👁️ Total-Visitor - &extraCount=100" />
-    </div>
-
-    <!-- Column 4 -->
-    <div class="footer-column">
-      <h3>Contact</h3>
-      <p style="font-size: 16px; color: #ccc;">Prefer to reach out directly?</p>
-      <p style="font-size: 18px; margin: 8px 0;">
-        📞 Phone:- <a href="tel:+918392950977" style="color: #4fc3f7;">+91 83929 50977</a>
-      </p>
-      <p style="font-size: 18px; margin: 8px 0;">
-        📧 E-mail:- <a href="mailto:support@testara.in" style="color: #4fc3f7;">support@testara.in</a>
+      <p>Follow us on :-
+        <!-- <a href="https://t.me/Digital_Help_Desk" target="_blank">Telegram</a> -->
       </p>
       <div style="margin-top: 20px;">
         <a href="https://wa.me/918392950977" target="_blank" title="WhatsApp" style="margin: 0 10px;">
@@ -177,16 +151,34 @@
       </div>
     </div>
 
+    <!-- Column 3 -->
+    <div class="footer-column">
+      <h3>Important Links:-</h3>
+      <a href="contact.html">Contact Us</a><br>
+      <a href="terms.html">Terms & Conditions</a><br>
+      <a href="privacy.html">Privacy Policy</a><br>
+      <a href="refund-policy.html">Refund Policy</a><br>
+      <h3>Website Visitors:-</h3>
+      <img 
+        alt="Hits" 
+        src="https://hits.sh/pravji123.github.io/TYK.svg?style=for-the-badge&label= 👁️ Total-Visitor - &extraCount=100" />
+    </div>
+
+    <!-- Column 4 -->
   </div>
 
   <div class="footer-bottom">&copy; <span id="copyright-year"></span> 
     <strong> Testara</strong> | Powered by <strong>DIGITAL HELP DESK</strong>
   </div>
   <script>
+    // const startYear = 2025;
+    // const currentYear = new Date().getFullYear() + 1 ;
+    // document.getElementById("copyright-year").textContent = `${startYear} - ${currentYear}`;
     const startYear = 2025;
-    const currentYear = new Date().getFullYear() + 1 ;
-    document.getElementById("copyright-year").textContent = `${startYear} - ${currentYear}`;
+    const currentYear = new Date().getFullYear();
+    const copyright =
+      currentYear > startYear ? `${startYear} - ${currentYear}` : `${startYear}`;
+    document.getElementById("copyright-year").textContent = copyright;
+
   </script>
 </footer>
-
-
