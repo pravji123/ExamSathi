@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shipping & Delivery Policy — Testara</title>
+  <style>
+    :root{--bg:#f7f9fb;--card:#ffffff;--accent:#0b6df0;--text:#07304a}
+    body {font-family: Arial, sans-serif; line-height: 1.6; margin: 0; background: #f8f8f8; color: #333;}
+    .container{max-width:900px;margin:32px auto;padding:28px;background:var(--card);border-radius:12px;box-shadow:0 6px 24px rgba(10,30,60,0.06)}
+    h1{font-size:20px;margin:0 0 8px}
+    p.lead{color:#334a5e;margin:0 0 18px}
+    hr{border:none;border-top:1px solid #eef4fb;margin:20px 0}
+    h2{font-size:16px;margin:20px 0 8px;color:var(--accent)}
+    ul{margin:8px 0 16px 20px}
+    li{margin:8px 0;line-height:1.5}
+    .contact{background:#f1f8ff;padding:16px;border-radius:8px;margin-top:16px}
+    .muted{color:#6b7a86;font-size:13px}
+    .note{font-size:13px;color:#6b7a86;margin-top:8px}
+    a.button{display:inline-block;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;margin-top:12px}
+    @media (max-width:520px){.container{padding:18px}}
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+  <main class="container" role="main">
+    <h1>Shipping &amp; Delivery Policy</h1>
+    <p class="lead">This policy applies to all purchases made through <strong>Testara</strong> for digital content, including online mock tests, study materials, and other electronic resources.</p>
+
+    <hr>
+
+    <h2>Digital Products</h2>
+    <p class="muted">Delivery method</p>
+    <ul>
+      <li>For <strong>digital content</strong>, delivery is made <strong>electronically</strong> via your registered Testara account or the email address provided at checkout.</li>
+      <li>Access is typically granted <strong>instantly</strong> after successful payment, or within <strong>1–2 business days</strong> if manual processing is required.</li>
+      <li>You will receive a confirmation email containing access details once your order is processed.</li>
+    </ul>
+
+    <h2>Physical Products (if applicable)</h2>
+    <p class="muted">Shipping carriers &amp; timelines</p>
+    <ul>
+      <li>If your order includes any physical items (for example, printed materials), shipping will be arranged as follows:</li>
+      <li><strong>International Buyers:</strong> Shipments are sent via registered international courier companies and/or International Speed Post.</li>
+      <li><strong>Domestic Buyers:</strong> Shipments are sent via registered domestic courier companies and/or Speed Post.</li>
+      <li>Orders are dispatched within <strong>1–2 days</strong> or according to the delivery date agreed at the time of order confirmation. Delivery is subject to the courier/postal service norms.</li>
+      <li>Testara is not responsible for delays caused by courier or postal authorities; our responsibility is to hand over the consignment to the chosen carrier within the committed dispatch timeframe.</li>
+    </ul>
+
+    <h2>General Terms</h2>
+    <ul>
+      <li>Delivery of all orders will be made to the <strong>email address</strong> (for digital products) or <strong>shipping address</strong> (for physical products) provided by the buyer at checkout.</li>
+      <li>For digital products, please ensure your email address is correct to avoid delivery issues.</li>
+      <li>If you face any issues in accessing your purchased content, please contact our helpdesk (details below).</li>
+    </ul>
+
+    <div class="contact">
+      <strong>Helpdesk</strong>
+      <p class="note">For assistance with deliveries or accessing digital content:</p>
+      <p style="margin:6px 0"><strong>Phone:</strong> 8392950977<br><strong>Email:</strong> <a href="mailto:contact@testara.in">contact@testara.in</a></p>
+      <!-- <a class="button" href="mailto:contact@testara.in">Contact Support</a> -->
+    </div>
+
+    <p class="note">Last updated: <span id="lastUpdated"></span></p> 
+    
+    <script>
+      // Display dynamic last-updated date in Indian format (e.g. 9 August 2025)
+      const el = document.getElementById('lastUpdated');
+      if(el) {
+        const opts = { day: 'numeric', month: 'long', year: 'numeric' };
+        el.textContent = new Date().toLocaleDateString('en-IN', opts);
+      }
+    </script>
+  </main>
+  <div id="footer"></div><script src="load-header-footer.js"></script>
+</body>
+</html>
