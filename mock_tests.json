@@ -22,7 +22,7 @@
   {
     "title": "Bihar Police Constable Test",
     "category": "Defence and Police",
-    "examKey": "Bihar_Police",
+    "examKey": "BIHAR_POLICE",
     "rating": 4.4,
     "tests": 5,
     "time": "90 min",
@@ -120,3 +120,4 @@
     "img": "image/upsc-logo.png"
   }
 ]
+
