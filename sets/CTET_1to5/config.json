@@ -1,1 +1,149 @@
+{
+  "examName": "CTET 1_5 Mock Test Series 2025",
+  "updatedDate": "15 Aug 2025",
+  "totalTests": 15,
+  "languages": ["English", "Hindi"],
+  "users": "1.6k",
 
+  "tabs": ["Free Tests", "Paid Tests", "PYQs"],
+
+  "paidSubTabs": {
+    "Full Test": [],
+    "CHAPTER": ["Child Development", "Environmental Studies", "Mathematics", "Hindi", "English", "Pedagogy"],
+    "CA": ["Current Affairs", "Yearly CA", "Monthly CA", "District Wise", "State Wise", "Country Wise"],
+    "SUBJECT": ["Child Development", "EVS", "Hindi", "English", "Mathematics", "Pedagogy"],
+    "Sectional Test": ["Child Development & Pedagogy", "Language I & II", "Mathematics & EVS"]
+  },
+
+  "tests": [
+    {
+      "title": "CTET 2023 Paper 1 Memory Based",
+      "category": "FREE",
+      "filter": "All",
+      "questions": 150,
+      "marks": 150,
+      "time": 150,
+      "file": "CTET_2023_P1_Memory.json",
+      "liveDate": "2025-07-24"
+    },
+    {
+      "title": "CTET Mock Test Set 1",
+      "category": "FREE",
+      "filter": "All",
+      "questions": 150,
+      "marks": 150,
+      "time": 150,
+      "file": "set1.json",
+      "liveDate": "2025-07-25"
+    },
+    {
+      "title": "CTET Mock Test Set 2",
+      "category": "FREE",
+      "filter": "All",
+      "questions": 150,
+      "marks": 150,
+      "time": 150,
+      "file": "set2.json",
+      "liveDate": "2025-07-27"
+    },
+    {
+      "title": "Child Development Basics",
+      "category": "CHAPTER",
+      "filter": "Child Development",
+      "questions": 20,
+      "marks": 20,
+      "time": 15,
+      "file": "Child_Development.json"
+    },
+    {
+      "title": "Logical Reasoning Basics",
+      "category": "CHAPTER",
+      "filter": "Reasoning",
+      "questions": 15,
+      "marks": 15,
+      "time": 10,
+      "file": "Reasoning_Basics.json"
+    },
+    {
+      "title": "CA Jan 2025",
+      "category": "CA",
+      "filter": "Monthly CA",
+      "questions": 30,
+      "marks": 30,
+      "time": 20,
+      "file": "CA_Jan_2025.json"
+    },
+    {
+      "title": "English Grammar Test",
+      "category": "SUBJECT",
+      "filter": "English",
+      "questions": 20,
+      "marks": 20,
+      "time": 15,
+      "file": "English_Grammar.json"
+    },
+    {
+      "title": "Math Basic Test 1",
+      "category": "SUBJECT",
+      "filter": "Mathematics",
+      "questions": 20,
+      "marks": 20,
+      "time": 20,
+      "file": "Math.json"
+    },
+    {
+      "title": "Math Advance Test",
+      "category": "SUBJECT",
+      "filter": "Mathematics",
+      "questions": 25,
+      "marks": 25,
+      "time": 25,
+      "file": "Math_Adv.json"
+    },
+    {
+      "title": "Environmental Studies Set 1",
+      "category": "SUBJECT",
+      "filter": "EVS",
+      "questions": 20,
+      "marks": 20,
+      "time": 20,
+      "file": "EVS.json"
+    },
+    {
+      "title": "Hindi Language Test",
+      "category": "SUBJECT",
+      "filter": "Hindi",
+      "questions": 20,
+      "marks": 20,
+      "time": 20,
+      "file": "Hindi.json"
+    },
+    {
+      "title": "CTET 2023 Paper 1 (Shift 1)",
+      "category": "PYQ",
+      "filter": "All",
+      "questions": 150,
+      "marks": 150,
+      "time": 150,
+      "file": "CTET_2023_P1_Shift1.json"
+    },
+    {
+      "title": "CTET 2023 Paper 1 (Shift 2)",
+      "category": "PYQ",
+      "filter": "All",
+      "questions": 150,
+      "marks": 150,
+      "time": 150,
+      "file": "CTET_2023_P1_Shift2.json"
+    },
+    {
+      "title": "CTET 2022 Paper 1",
+      "category": "PYQ",
+      "filter": "All",
+      "questions": 150,
+      "marks": 150,
+      "time": 150,
+      "file": "CTET_2022_P1.json"
+    }
+  ]
+}
