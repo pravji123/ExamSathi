@@ -2,7 +2,7 @@
   {
     "title": "CTET Paper I",
     "category": "CTET",
-    "examKey": "ctet_1to5",
+    "examKey": "CTET_1to5",
     "rating": 4.6,
     "tests": 4,
     "time": "150 min",
@@ -12,7 +12,7 @@
   {
     "title": "CTET Paper II",
     "category": "CTET",
-    "examKey": "BPSC_TRE",
+    "examKey": "CTET_6_8",
     "rating": 4.6,
     "tests": 4,
     "time": "150 min",
@@ -120,4 +120,5 @@
     "img": "image/upsc-logo.png"
   }
 ]
+
 
