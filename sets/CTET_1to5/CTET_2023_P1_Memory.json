@@ -1,0 +1,1070 @@
+{
+    "examName": "CTET 1-5 Mock Test Series 2025",
+    "testTitle": "Full Syllabus Test",
+    "time": 150,
+    "sections": [
+      "Child Development and Pedagogy",
+      "Language I (English)",
+      "Language II (Hindi)",
+      "Mathematics",
+      "Environmental Studies"
+    ],
+    "languages": ["English", "Hindi"],
+    "questionType": "MCQ",
+    "marks": 1,
+    "negative": 0,
+    "questions": [
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which stage of Piaget’s theory is characterized by egocentrism? / पियाजे के सिद्धांत का कौन सा चरण आत्मकेन्द्रितता से चिह्नित होता है?",
+        "options": ["Sensorimotor", "Preoperational", "Concrete Operational", "Formal Operational"],
+        "answer": "Preoperational",
+        "explanation": "In the preoperational stage (ages 2–7), children are egocentric and struggle to see perspectives of others."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "According to Vygotsky, learning occurs in which zone? / वायगोत्स्की के अनुसार, सीखना किस क्षेत्र में होता है?",
+        "options": ["Zone of Actual Development", "Zone of Proximal Development", "Comfort Zone", "Danger Zone"],
+        "answer": "Zone of Proximal Development",
+        "explanation": "Vygotsky’s ZPD is the range where a child can perform a task with guidance but not alone."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Who is known as the father of modern child psychology? / आधुनिक बाल मनोविज्ञान के जनक किसे कहा जाता है?",
+        "options": ["Jean Piaget", "B.F. Skinner", "Erik Erikson", "Lev Vygotsky"],
+        "answer": "Jean Piaget",
+        "explanation": "Jean Piaget is considered the father of modern child psychology for his work on cognitive development."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Erikson’s stage of 'Industry vs. Inferiority' occurs during which age range? / एरिक्सन का 'उद्योग बनाम हीनभावना' चरण किस आयु सीमा में आता है?",
+        "options": ["0–2 years", "3–5 years", "6–12 years", "13–18 years"],
+        "answer": "6–12 years",
+        "explanation": "Industry vs. Inferiority occurs during school years (6–12), where children develop a sense of competence."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which psychologist proposed the 'Hierarchy of Needs'? / 'आवश्यकताओं का पदानुक्रम' किस मनोवैज्ञानिक ने प्रस्तावित किया?",
+        "options": ["Maslow", "Freud", "Bandura", "Bruner"],
+        "answer": "Maslow",
+        "explanation": "Abraham Maslow created the hierarchy of needs model describing stages of human motivation."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which type of development includes changes in body size, proportions, and appearance? / किस प्रकार के विकास में शरीर के आकार, अनुपात और रूप में परिवर्तन शामिल होते हैं?",
+        "options": ["Cognitive Development", "Physical Development", "Social Development", "Emotional Development"],
+        "answer": "Physical Development",
+        "explanation": "Physical development refers to changes in the body, motor skills, and physical appearance."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "What does 'Scaffolding' mean in education? / शिक्षा में 'स्कैफ़ोल्डिंग' का क्या अर्थ है?",
+        "options": ["Punishment for mistakes", "Providing structured support", "Assigning homework", "Memorizing facts"],
+        "answer": "Providing structured support",
+        "explanation": "Scaffolding means giving support and guidance to learners which is gradually removed as they become independent."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which method is best for developing problem-solving skills in children? / बच्चों में समस्या-समाधान कौशल विकसित करने के लिए कौन सी विधि सबसे अच्छी है?",
+        "options": ["Lecture method", "Discovery learning", "Rote learning", "Dictation"],
+        "answer": "Discovery learning",
+        "explanation": "Discovery learning encourages students to explore, experiment, and solve problems themselves."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "In Kohlberg’s theory, which stage focuses on obeying rules to avoid punishment? / कोलबर्ग के सिद्धांत में, कौन सा चरण दंड से बचने के लिए नियमों का पालन करने पर केंद्रित होता है?",
+        "options": ["Pre-conventional", "Conventional", "Post-conventional", "Moral relativism"],
+        "answer": "Pre-conventional",
+        "explanation": "In the pre-conventional stage, moral reasoning is based on avoiding punishment and gaining rewards."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which is a characteristic of inclusive education? / समावेशी शिक्षा की कौन सी विशेषता है?",
+        "options": ["Only for gifted children", "Segregation of students", "Equal learning opportunities", "Only for disabled students"],
+        "answer": "Equal learning opportunities",
+        "explanation": "Inclusive education ensures all students, regardless of ability, get equal opportunities to learn together."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "According to Gardner’s theory, which intelligence relates to understanding oneself? / गार्डनर के सिद्धांत के अनुसार, कौन सी बुद्धिमत्ता स्वयं को समझने से संबंधित है?",
+        "options": ["Interpersonal", "Intrapersonal", "Logical-mathematical", "Linguistic"],
+        "answer": "Intrapersonal",
+        "explanation": "Intrapersonal intelligence is the ability to understand one’s own emotions, motivations, and goals."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "What is the main focus of formative assessment? / प्रारूपिक मूल्यांकन का मुख्य उद्देश्य क्या है?",
+        "options": ["Final grading", "Monitoring learning progress", "Certifying competence", "Ranking students"],
+        "answer": "Monitoring learning progress",
+        "explanation": "Formative assessment is conducted during learning to track progress and improve teaching strategies."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which term refers to the ability to control emotions and impulses? / किस शब्द का अर्थ भावनाओं और आवेगों को नियंत्रित करने की क्षमता है?",
+        "options": ["Self-regulation", "Self-esteem", "Self-awareness", "Self-concept"],
+        "answer": "Self-regulation",
+        "explanation": "Self-regulation is the ability to manage emotions, behaviors, and thoughts in pursuit of long-term goals."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "In Bloom’s taxonomy, 'Analysis' belongs to which domain? / ब्लूम की वर्गीकरण प्रणाली में, 'विश्लेषण' किस क्षेत्र से संबंधित है?",
+        "options": ["Cognitive", "Affective", "Psychomotor", "Physical"],
+        "answer": "Cognitive",
+        "explanation": "Analysis is part of the cognitive domain which deals with mental skills and knowledge."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "What does 'Differentiated Instruction' mean? / 'भेदभावपूर्ण शिक्षण' का क्या अर्थ है?",
+        "options": ["Teaching all students the same way", "Adapting teaching to students’ needs", "Using only one teaching method", "Giving homework daily"],
+        "answer": "Adapting teaching to students’ needs",
+        "explanation": "Differentiated instruction involves tailoring teaching methods to meet the diverse needs of learners."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which factor has the most influence on a child’s personality development? / बच्चे के व्यक्तित्व विकास पर सबसे अधिक प्रभाव किस कारक का होता है?",
+        "options": ["Only heredity", "Only environment", "Interaction of heredity and environment", "School education only"],
+        "answer": "Interaction of heredity and environment",
+        "explanation": "Personality is shaped by both genetic factors and environmental influences."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which of the following is an example of fine motor skills? / निम्नलिखित में से कौन सा सूक्ष्म मोटर कौशल का उदाहरण है?",
+        "options": ["Running", "Climbing", "Writing", "Jumping"],
+        "answer": "Writing",
+        "explanation": "Fine motor skills involve small muscle movements, such as those used in writing."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Who proposed the 'Hierarchy of Needs' theory? / 'आवश्यकताओं का पदानुक्रम' सिद्धांत किसने प्रस्तावित किया?",
+        "options": ["Piaget", "Maslow", "Vygotsky", "Kohlberg"],
+        "answer": "Maslow",
+        "explanation": "Abraham Maslow proposed a hierarchy of human needs ranging from basic needs to self-actualization."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which stage in Piaget’s theory is characterized by egocentrism? / पियाजे के सिद्धांत में कौन सा चरण अहंकेन्द्रितता से चिह्नित है?",
+        "options": ["Sensorimotor", "Preoperational", "Concrete operational", "Formal operational"],
+        "answer": "Preoperational",
+        "explanation": "Children in the preoperational stage often have difficulty seeing things from others’ perspectives."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "What is the main purpose of diagnostic testing? / नैदानिक परीक्षण का मुख्य उद्देश्य क्या है?",
+        "options": ["Certifying learning", "Identifying learning difficulties", "Ranking students", "Promoting students"],
+        "answer": "Identifying learning difficulties",
+        "explanation": "Diagnostic tests help teachers find specific learning problems in students."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which is an example of intrinsic motivation? / आंतरिक प्रेरणा का उदाहरण कौन सा है?",
+        "options": ["Studying to get good grades", "Reading for pleasure", "Working for salary", "Doing homework for praise"],
+        "answer": "Reading for pleasure",
+        "explanation": "Intrinsic motivation comes from internal desires such as enjoyment or personal satisfaction."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "What does the term 'Readiness' mean in learning? / सीखने में 'तैयारी' शब्द का क्या अर्थ है?",
+        "options": ["Ability to memorize facts", "State of physical, mental, and emotional preparedness", "Completion of syllabus", "Finishing homework on time"],
+        "answer": "State of physical, mental, and emotional preparedness",
+        "explanation": "Readiness means the learner is physically, mentally, and emotionally prepared to learn."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which one is NOT a principle of child development? / इनमें से कौन सा बाल विकास का सिद्धांत नहीं है?",
+        "options": ["Development is sequential", "All children develop at the same rate", "Development is continuous", "Development is influenced by heredity and environment"],
+        "answer": "All children develop at the same rate",
+        "explanation": "Children develop at different rates, though the sequence of development is similar."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which type of assessment is done at the end of a term? / सत्र के अंत में किस प्रकार का मूल्यांकन किया जाता है?",
+        "options": ["Formative assessment", "Summative assessment", "Diagnostic assessment", "Continuous assessment"],
+        "answer": "Summative assessment",
+        "explanation": "Summative assessment evaluates student learning at the end of an instructional period."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "What is the main focus of constructivist teaching? / रचनावादी शिक्षण का मुख्य उद्देश्य क्या है?",
+        "options": ["Teacher-centered learning", "Passive memorization", "Student-centered active learning", "Strict discipline"],
+        "answer": "Student-centered active learning",
+        "explanation": "Constructivist teaching emphasizes active participation and knowledge construction by learners."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "In which stage of Erikson’s theory does the conflict 'Initiative vs. Guilt' occur? / एरिक्सन के सिद्धांत में 'पहल बनाम अपराधबोध' का संघर्ष किस चरण में होता है?",
+        "options": ["Infancy", "Early childhood", "Adolescence", "Young adulthood"],
+        "answer": "Early childhood",
+        "explanation": "This stage occurs around ages 3–6 when children assert control and power over their environment."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which of the following is an affective domain objective? / निम्नलिखित में से कौन सा भावात्मक क्षेत्र का उद्देश्य है?",
+        "options": ["To solve a math problem", "To appreciate a poem", "To draw a diagram", "To identify parts of a plant"],
+        "answer": "To appreciate a poem",
+        "explanation": "Affective domain objectives deal with feelings, attitudes, and values."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which law of learning states that learning is strengthened when followed by satisfaction? / सीखने का कौन सा नियम कहता है कि संतोष के बाद सीखने को मजबूती मिलती है?",
+        "options": ["Law of Exercise", "Law of Effect", "Law of Readiness", "Law of Association"],
+        "answer": "Law of Effect",
+        "explanation": "Thorndike’s Law of Effect states that behaviors followed by satisfaction are more likely to be repeated."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which is the best approach to handle slow learners? / धीमे सीखने वाले बच्चों को संभालने का सबसे अच्छा तरीका क्या है?",
+        "options": ["Ignore them", "Punish them", "Provide individual attention", "Give extra homework"],
+        "answer": "Provide individual attention",
+        "explanation": "Slow learners benefit from personalized guidance and encouragement."
+      },
+      {
+        "section": "Child Development and Pedagogy",
+        "question": "Which of the following best describes 'Metacognition'? / 'मेटाकॉग्निशन' का सबसे अच्छा वर्णन कौन सा है?",
+        "options": ["Learning by doing", "Thinking about thinking", "Memorizing without understanding", "Following instructions"],
+        "answer": "Thinking about thinking",
+        "explanation": "Metacognition involves awareness and regulation of one’s own thinking processes."
+      },
+    {
+        "section": "Language I (English)",
+        "question": "Which of the following is a synonym for 'Happy'? / निम्नलिखित में से 'Happy' का पर्यायवाची कौन सा है?",
+        "options": ["Sad", "Joyful", "Angry", "Tired"],
+        "answer": "Joyful",
+        "explanation": "'Joyful' means feeling or expressing great happiness."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Identify the correct spelling. / सही वर्तनी पहचानें।",
+        "options": ["Recieve", "Receive", "Receeve", "Recive"],
+        "answer": "Receive",
+        "explanation": "The correct spelling is 'Receive' (i before e except after c rule)."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Choose the correct article: He bought ___ apple. / सही आर्टिकल चुनें: He bought ___ apple.",
+        "options": ["a", "an", "the", "no article"],
+        "answer": "an",
+        "explanation": "'An' is used before vowel sounds like 'apple'."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Which tense is used in: 'She is reading a book'? / 'She is reading a book' में कौन सा काल प्रयोग हुआ है?",
+        "options": ["Simple Present", "Present Continuous", "Past Continuous", "Future Continuous"],
+        "answer": "Present Continuous",
+        "explanation": "Present Continuous is used for actions happening now."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Fill in the blank: The sun ___ in the east. / रिक्त स्थान भरें: The sun ___ in the east.",
+        "options": ["rise", "rises", "rose", "rising"],
+        "answer": "rises",
+        "explanation": "The simple present 'rises' is used for universal truths."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Choose the antonym of 'Brave'. / 'Brave' का विलोम शब्द चुनें।",
+        "options": ["Courageous", "Cowardly", "Fearless", "Bold"],
+        "answer": "Cowardly",
+        "explanation": "'Cowardly' means lacking courage, opposite of 'Brave'."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Identify the type of sentence: 'Please close the door.' / वाक्य का प्रकार पहचानें: 'Please close the door.'",
+        "options": ["Declarative", "Interrogative", "Imperative", "Exclamatory"],
+        "answer": "Imperative",
+        "explanation": "Imperative sentences give commands, requests, or instructions."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Choose the correct preposition: He is fond ___ music. / सही पूर्वसर्ग चुनें: He is fond ___ music.",
+        "options": ["at", "on", "of", "in"],
+        "answer": "of",
+        "explanation": "The phrase is 'fond of' meaning having a liking for."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Which word is an adjective in: 'The tall building is beautiful.' / 'The tall building is beautiful.' में कौन सा शब्द विशेषण है?",
+        "options": ["building", "tall", "is", "beautiful"],
+        "answer": "tall",
+        "explanation": "'Tall' describes the noun 'building', hence it is an adjective."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Fill in the blank: She _____ to school every day. / रिक्त स्थान भरें: वह हर दिन स्कूल _____ जाती है।",
+        "options": ["go", "goes", "going", "gone"],
+        "answer": "goes",
+        "explanation": "In present simple tense with 'she', use base verb + 's'."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Identify the correct spelling: / सही वर्तनी पहचानें:",
+        "options": ["Enviroment", "Environment", "Envirnment", "Enviromentt"],
+        "answer": "Environment",
+        "explanation": "'Environment' is the correct spelling."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Choose the synonym of 'Happy': / 'Happy' का समानार्थी चुनें:",
+        "options": ["Sad", "Joyful", "Angry", "Tired"],
+        "answer": "Joyful",
+        "explanation": "'Joyful' means feeling or showing happiness."
+    },      
+    {
+        "section": "Language I (English)",
+        "question": "Find the correct passive form: 'They wrote a letter.' / सही निष्क्रिय रूप पहचानें: 'They wrote a letter.'",
+        "options": ["A letter was written by them.", "A letter is written by them.", "A letter wrote by them.", "A letter was wrote by them."],
+        "answer": "A letter was written by them.",
+        "explanation": "Past tense passive form uses 'was/were' + past participle."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Select the correct option: He has been working here ___ 2010. / सही विकल्प चुनें: He has been working here ___ 2010.",
+        "options": ["since", "for", "from", "by"],
+        "answer": "since",
+        "explanation": "'Since' is used with a specific starting point in time."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Choose the correctly punctuated sentence. / सही विराम चिह्न वाला वाक्य चुनें।",
+        "options": ["Where are you, going?", "Where are you going?", "Where, are you going?", "Where are, you going?"],
+        "answer": "Where are you going?",
+        "explanation": "No comma is needed; it's a simple question."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Which of the following is a pronoun? / निम्नलिखित में से कौन सा सर्वनाम है?",
+        "options": ["He", "Run", "Blue", "Table"],
+        "answer": "He",
+        "explanation": "'He' is a pronoun used in place of a noun."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Fill in the blank: There aren’t ___ oranges left. / रिक्त स्थान भरें: There aren’t ___ oranges left.",
+        "options": ["some", "any", "much", "many"],
+        "answer": "any",
+        "explanation": "'Any' is used in negative sentences for countable nouns."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Identify the correct comparative form: 'good'. / 'good' का सही तुलनात्मक रूप पहचानें।",
+        "options": ["gooder", "better", "best", "more good"],
+        "answer": "better",
+        "explanation": "The irregular comparative form of 'good' is 'better'."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Choose the correct reported speech: She said, 'I am happy.' / सही अप्रत्यक्ष वाक्य चुनें: She said, 'I am happy.'",
+        "options": ["She said that she is happy.", "She said that she was happy.", "She said she happy.", "She said that she were happy."],
+        "answer": "She said that she was happy.",
+        "explanation": "Present tense in direct speech changes to past tense in reported speech."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Which sentence is in the future perfect tense? / कौन सा वाक्य भविष्य पूर्ण काल में है?",
+        "options": ["I will eat lunch.", "I will have finished my work by 5 PM.", "I am eating lunch.", "I have eaten lunch."],
+        "answer": "I will have finished my work by 5 PM.",
+        "explanation": "Future perfect uses 'will have' + past participle."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Choose the synonym of 'Begin'. / 'Begin' का पर्यायवाची चुनें।",
+        "options": ["Start", "End", "Stop", "Close"],
+        "answer": "Start",
+        "explanation": "'Start' has the same meaning as 'Begin'."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Which is the correct question tag: You are a teacher, ___? / सही प्रश्न टैग चुनें: You are a teacher, ___?",
+        "options": ["aren’t you", "are you", "isn’t you", "weren’t you"],
+        "answer": "aren’t you",
+        "explanation": "Positive statement takes a negative question tag."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Identify the correct idiom meaning 'to start something': / 'किसी चीज़ की शुरुआत करना' के लिए सही मुहावरा पहचानें:",
+        "options": ["Break the ice", "Burn the midnight oil", "Hit the sack", "Bite the bullet"],
+        "answer": "Break the ice",
+        "explanation": "'Break the ice' means to start a conversation or activity."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Choose the correct plural form of 'Child'. / 'Child' का सही बहुवचन चुनें।",
+        "options": ["Childs", "Childes", "Children", "Childrens"],
+        "answer": "Children",
+        "explanation": "The irregular plural of 'Child' is 'Children'."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "What is the opposite of 'Hot'? / 'Hot' का विलोम क्या है?",
+        "options": ["Cold", "Warm", "Heat", "Boil"],
+        "answer": "Cold",
+        "explanation": "'Cold' is the opposite of 'Hot'."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Choose the correct homophone: The knight rode a ___ horse. / सही समोच्च शब्द चुनें: The knight rode a ___ horse.",
+        "options": ["bare", "bear", "bair", "beer"],
+        "answer": "bare",
+        "explanation": "'Bare' means uncovered; 'Knight' is a medieval soldier."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Which sentence is in past continuous tense? / कौन सा वाक्य भूत कालीन अपूर्ण काल में है?",
+        "options": ["I was reading a book.", "I read a book.", "I will read a book.", "I have read a book."],
+        "answer": "I was reading a book.",
+        "explanation": "Past continuous uses 'was/were' + verb-ing."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Fill in the blank: She ___ to school every day. / रिक्त स्थान भरें: She ___ to school every day.",
+        "options": ["go", "goes", "went", "gone"],
+        "answer": "goes",
+        "explanation": "Third person singular in present tense takes 'goes'."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Which of these is a conjunction? / इनमें से कौन सा संयोजक है?",
+        "options": ["And", "Run", "Blue", "Book"],
+        "answer": "And",
+        "explanation": "'And' connects words or clauses."
+    },
+    {
+        "section": "Language I (English)",
+        "question": "Choose the correct sentence: / सही वाक्य चुनें:",
+        "options": ["He don’t like coffee.", "He doesn’t like coffee.", "He don’t likes coffee.", "He doesn’t likes coffee."],
+        "answer": "He doesn’t like coffee.",
+        "explanation": "In present simple negative, use 'doesn't' + base verb."
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘अकथ कहानी प्रेम की’ के रचयिता कौन हैं?",
+        "options": ["जयशंकर प्रसाद", "सूरदास", "कबीरदास", "रहीम"],
+        "answer": "जयशंकर प्रसाद",
+        "explanation": "‘अकथ कहानी प्रेम की’ प्रसिद्ध कवि जयशंकर प्रसाद की रचना है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘रश्मिरथी’ महाकाव्य के कवि कौन हैं?",
+        "options": ["रामधारी सिंह दिनकर", "जयशंकर प्रसाद", "महादेवी वर्मा", "सूरदास"],
+        "answer": "रामधारी सिंह दिनकर",
+        "explanation": "‘रश्मिरथी’ रामधारी सिंह दिनकर का प्रसिद्ध महाकाव्य है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘साकेत’ काव्य के रचयिता कौन हैं?",
+        "options": ["सूर्यकांत त्रिपाठी ‘निराला’", "जयशंकर प्रसाद", "सुमित्रानंदन पंत", "महादेवी वर्मा"],
+        "answer": "मैथिलीशरण गुप्त",
+        "explanation": "‘साकेत’ मैथिलीशरण गुप्त का प्रसिद्ध काव्य है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘अधूरा सच’ किसकी रचना है?",
+        "options": ["महादेवी वर्मा", "यशपाल", "प्रेमचंद", "गुरुदत्त"],
+        "answer": "यशपाल",
+        "explanation": "‘अधूरा सच’ प्रसिद्ध लेखक यशपाल का उपन्यास है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘निराला’ किस साहित्य विधा से जुड़े हैं?",
+        "options": ["कहानी", "उपन्यास", "कविता", "नाटक"],
+        "answer": "कविता",
+        "explanation": "सूर्यकांत त्रिपाठी ‘निराला’ हिन्दी कविता के प्रमुख स्तंभ हैं।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘पंच परमेश्वर’ किसकी कहानी है?",
+        "options": ["प्रेमचंद", "रामधारी सिंह दिनकर", "महादेवी वर्मा", "गुरुदत्त"],
+        "answer": "प्रेमचंद",
+        "explanation": "‘पंच परमेश्वर’ प्रेमचंद की प्रसिद्ध कहानी है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘सप्तपदी’ के लेखक कौन हैं?",
+        "options": ["धर्मवीर भारती", "महादेवी वर्मा", "हरिवंश राय बच्चन", "राही मासूम रज़ा"],
+        "answer": "धर्मवीर भारती",
+        "explanation": "‘सप्तपदी’ धर्मवीर भारती का प्रसिद्ध उपन्यास है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘गोदान’ उपन्यास में मुख्य पात्र कौन है?",
+        "options": ["होरी", "गोविंद", "रामनाथ", "अजय"],
+        "answer": "होरी",
+        "explanation": "‘गोदान’ का नायक होरी एक किसान है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘सुरसती का देवता’ किसकी रचना है?",
+        "options": ["प्रेमचंद", "मुंशी प्रेमचंद", "राहुल सांकृत्यायन", "महादेवी वर्मा"],
+        "answer": "मुंशी प्रेमचंद",
+        "explanation": "‘सुरसती का देवता’ मुंशी प्रेमचंद का उपन्यास है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘विषवृक्ष’ किसकी रचना है?",
+        "options": ["बंकिमचंद्र चट्टोपाध्याय", "प्रेमचंद", "महादेवी वर्मा", "जयशंकर प्रसाद"],
+        "answer": "बंकिमचंद्र चट्टोपाध्याय",
+        "explanation": "‘विषवृक्ष’ बंकिमचंद्र चट्टोपाध्याय का उपन्यास है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘पाथेर पांचाली’ किसकी रचना है?",
+        "options": ["बिभूतिभूषण बंद्योपाध्याय", "रवीन्द्रनाथ ठाकुर", "शरतचंद्र चट्टोपाध्याय", "बंकिमचंद्र चट्टोपाध्याय"],
+        "answer": "बिभूतिभूषण बंद्योपाध्याय",
+        "explanation": "‘पाथेर पांचाली’ बिभूतिभूषण बंद्योपाध्याय का प्रसिद्ध उपन्यास है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘गुनाहों का देवता’ के लेखक कौन हैं?",
+        "options": ["धर्मवीर भारती", "यशपाल", "राही मासूम रज़ा", "हरिवंश राय बच्चन"],
+        "answer": "धर्मवीर भारती",
+        "explanation": "‘गुनाहों का देवता’ धर्मवीर भारती का लोकप्रिय उपन्यास है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘चंद्रकांता’ किसकी रचना है?",
+        "options": ["देवकी नंदन खत्री", "यशपाल", "जयशंकर प्रसाद", "सूर्यकांत त्रिपाठी ‘निराला’"],
+        "answer": "देवकी नंदन खत्री",
+        "explanation": "‘चंद्रकांता’ हिन्दी के लोकप्रिय उपन्यासों में से एक है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘मेघदूत’ के रचयिता कौन हैं?",
+        "options": ["कालिदास", "भवभूति", "भास", "शूद्रक"],
+        "answer": "कालिदास",
+        "explanation": "‘मेघदूत’ संस्कृत के महान कवि कालिदास की रचना है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘गीतांजलि’ का हिन्दी अनुवाद किसने किया?",
+        "options": ["महादेवी वर्मा", "जयशंकर प्रसाद", "रवीन्द्रनाथ ठाकुर", "हरिवंश राय बच्चन"],
+        "answer": "महादेवी वर्मा",
+        "explanation": "‘गीतांजलि’ का हिन्दी अनुवाद महादेवी वर्मा ने किया।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘संध्या गीत’ किसकी रचना है?",
+        "options": ["महादेवी वर्मा", "सुमित्रानंदन पंत", "जयशंकर प्रसाद", "रामधारी सिंह दिनकर"],
+        "answer": "महादेवी वर्मा",
+        "explanation": "‘संध्या गीत’ महादेवी वर्मा की काव्य रचना है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘अनामिका’ कविता संग्रह के कवि कौन हैं?",
+        "options": ["सुमित्रानंदन पंत", "सूर्यकांत त्रिपाठी ‘निराला’", "हरिवंश राय बच्चन", "महादेवी वर्मा"],
+        "answer": "सूर्यकांत त्रिपाठी ‘निराला’",
+        "explanation": "‘अनामिका’ सूर्यकांत त्रिपाठी ‘निराला’ की रचना है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘भारत भारती’ के कवि कौन हैं?",
+        "options": ["मैथिलीशरण गुप्त", "रामधारी सिंह दिनकर", "जयशंकर प्रसाद", "सुमित्रानंदन पंत"],
+        "answer": "मैथिलीशरण गुप्त",
+        "explanation": "‘भारत भारती’ मैथिलीशरण गुप्त की देशभक्ति कविता है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘मधुशाला’ किस वर्ष प्रकाशित हुई?",
+        "options": ["1933", "1935", "1932", "1934"],
+        "answer": "1935",
+        "explanation": "‘मधुशाला’ हरिवंश राय बच्चन की काव्य कृति 1935 में प्रकाशित हुई।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘गीत गोविंद’ के रचयिता कौन हैं?",
+        "options": ["जयदेव", "कालिदास", "सूरदास", "कबीर"],
+        "answer": "जयदेव",
+        "explanation": "‘गीत गोविंद’ संस्कृत के महान कवि जयदेव की रचना है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘राम की शक्तिपूजा’ किसकी रचना है?",
+        "options": ["सूर्यकांत त्रिपाठी ‘निराला’", "जयशंकर प्रसाद", "महादेवी वर्मा", "सुमित्रानंदन पंत"],
+        "answer": "सूर्यकांत त्रिपाठी ‘निराला’",
+        "explanation": "‘राम की शक्तिपूजा’ सूर्यकांत त्रिपाठी ‘निराला’ की प्रसिद्ध कविता है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘कामायनी’ के रचयिता कौन हैं?",
+        "options": ["जयशंकर प्रसाद", "सुमित्रानंदन पंत", "रामधारी सिंह दिनकर", "सूर्यकांत त्रिपाठी ‘निराला’"],
+        "answer": "जयशंकर प्रसाद",
+        "explanation": "‘कामायनी’ जयशंकर प्रसाद की प्रसिद्ध रचना है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘पुष्प की अभिलाषा’ कविता किसकी है?",
+        "options": ["रामधारी सिंह दिनकर", "मैथिलीशरण गुप्त", "जयशंकर प्रसाद", "सूर्यकांत त्रिपाठी ‘निराला’"],
+        "answer": "मैथिलीशरण गुप्त",
+        "explanation": "‘पुष्प की अभिलाषा’ मैथिलीशरण गुप्त की प्रेरणादायक कविता है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘तारसप्तक’ किस विधा से सम्बंधित है?",
+        "options": ["कहानी", "कविता", "उपन्यास", "नाटक"],
+        "answer": "कविता",
+        "explanation": "‘तारसप्तक’ कविता संग्रह है जिसमें अनेक कवियों की रचनाएँ हैं।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘निर्गुण भक्ति’ के प्रमुख कवि कौन हैं?",
+        "options": ["कबीर", "तुलसीदास", "मीरा", "सूरदास"],
+        "answer": "कबीर",
+        "explanation": "कबीर निर्गुण भक्ति के प्रमुख कवि हैं।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘रामचरितमानस’ किसकी रचना है?",
+        "options": ["तुलसीदास", "कबीर", "सूरदास", "रहीम"],
+        "answer": "तुलसीदास",
+        "explanation": "‘रामचरितमानस’ तुलसीदास द्वारा रचित महाकाव्य है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘भूख’ कविता के कवि कौन हैं?",
+        "options": ["हरिवंश राय बच्चन", "सुमित्रानंदन पंत", "रामधारी सिंह दिनकर", "जयशंकर प्रसाद"],
+        "answer": "सुमित्रानंदन पंत",
+        "explanation": "‘भूख’ सुमित्रानंदन पंत की कविता है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘अभिज्ञान शाकुंतल’ के रचयिता कौन हैं?",
+        "options": ["कालिदास", "भास", "तुलसीदास", "भवभूति"],
+        "answer": "कालिदास",
+        "explanation": "‘अभिज्ञान शाकुंतल’ संस्कृत नाटक कालिदास की रचना है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘कृष्ण की चेतावनी’ कविता किसकी है?",
+        "options": ["जयशंकर प्रसाद", "रामधारी सिंह दिनकर", "महादेवी वर्मा", "सुमित्रानंदन पंत"],
+        "answer": "रामधारी सिंह दिनकर",
+        "explanation": "‘कृष्ण की चेतावनी’ रामधारी सिंह दिनकर की कविता है।"
+    },
+    {
+        "section": "Language II (Hindi)",
+        "question": "‘पद्मावत’ के रचयिता कौन हैं?",
+        "options": ["अमीर खुसरो", "मलिक मोहम्मद जायसी", "कबीर", "सूरदास"],
+        "answer": "मलिक मोहम्मद जायसी",
+        "explanation": "‘पद्मावत’ मलिक मोहम्मद जायसी की प्रसिद्ध रचना है।"
+    },
+    {
+      "section": "Mathematics",
+      "question": "What is the perimeter of a square with side 5 cm? / 5 सेमी भुजा वाले वर्ग की परिमाप क्या है?",
+      "options": ["20 cm", "25 cm", "15 cm", "30 cm"],
+      "answer": "20 cm",
+      "explanation": "Perimeter = 4 × side = 4 × 5 = 20 cm."
+    },
+    {
+      "section": "Mathematics",
+      "question": "What is the LCM of 12 and 18? / 12 और 18 का लघुत्तम समापवर्त्य (LCM) क्या है?",
+      "options": ["36", "18", "12", "72"],
+      "answer": "36",
+       "explanation": "LCM of 12 and 18 is 36 as it's the smallest number divisible by both."
+    },
+    {
+      "section": "Mathematics",
+      "question": "What is the square root of 144? / 144 का वर्गमूल क्या है?",
+      "options": ["10", "11", "12", "13"],
+      "answer": "12",
+      "explanation": "Square root of 144 is 12."
+    },
+    {
+      "section": "Mathematics",
+      "question": "Simplify: 25 × 4 ÷ 5 / सरल करें: 25 × 4 ÷ 5",
+      "options": ["5", "10", "15", "20"],
+        "answer": "20",
+        "explanation": "25 × 4 = 100; 100 ÷ 5 = 20."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is 15% of 200? / 200 का 15% कितना है?",
+        "options": ["20", "25", "30", "35"],
+        "answer": "30",
+        "explanation": "15% of 200 = (15/100) × 200 = 30."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is the perimeter of a square with side 5 cm? / 5 सेमी भुजा वाले वर्ग की परिमाप क्या है?",
+        "options": ["20 cm", "25 cm", "15 cm", "30 cm"],
+        "answer": "20 cm",
+        "explanation": "Perimeter = 4 × side = 4 × 5 = 20 cm."
+      },
+      {
+        "section": "Mathematics",
+        "question": "Find the value of 7² + 5² / 7² + 5² का मान ज्ञात करें",
+        "options": ["72", "49", "74", "54"],
+        "answer": "74",
+        "explanation": "7² = 49 and 5² = 25; sum = 74."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is the cube of 3? / 3 का घन क्या है?",
+        "options": ["6", "9", "27", "81"],
+        "answer": "27",
+        "explanation": "Cube of 3 = 3 × 3 × 3 = 27."
+      },
+      {
+        "section": "Mathematics",
+        "question": "Convert 0.75 to a fraction / 0.75 को भिन्न में बदलें",
+        "options": ["3/4", "2/3", "4/5", "1/2"],
+        "answer": "3/4",
+        "explanation": "0.75 = 75/100 = 3/4."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is the area of a triangle with base 10 cm and height 8 cm? / 10 सेमी आधार और 8 सेमी ऊँचाई वाले त्रिभुज का क्षेत्रफल क्या है?",
+        "options": ["40 cm²", "80 cm²", "20 cm²", "60 cm²"],
+        "answer": "40 cm²",
+        "explanation": "Area = ½ × base × height = ½ × 10 × 8 = 40 cm²."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is the average of 10, 20, 30? / 10, 20, 30 का औसत क्या है?",
+        "options": ["15", "20", "25", "30"],
+        "answer": "20",
+        "explanation": "Average = (10+20+30)/3 = 60/3 = 20."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is ¾ of 200? / 200 का ¾ कितना है?",
+        "options": ["100", "150", "175", "180"],
+        "answer": "150",
+        "explanation": "¾ × 200 = 150."
+      },
+      {
+        "section": "Mathematics",
+        "question": "Simplify: 2³ × 2² / सरल करें: 2³ × 2²",
+        "options": ["4", "6", "32", "8"],
+        "answer": "32",
+        "explanation": "Add powers: 2³ × 2² = 2⁵ = 32."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is the HCF of 16 and 24? / 16 और 24 का महत्तम समापवर्तक (HCF) क्या है?",
+        "options": ["2", "4", "8", "16"],
+        "answer": "8",
+        "explanation": "The largest number dividing both 16 and 24 is 8."
+      },
+      {
+        "section": "Mathematics",
+        "question": "If a = 5, find a² – 3a / यदि a = 5, तो a² – 3a ज्ञात करें",
+        "options": ["10", "15", "20", "25"],
+        "answer": "10",
+        "explanation": "a² – 3a = 25 – 15 = 10."
+      },
+      {
+        "section": "Mathematics",
+        "question": "Find the missing term: 2, 4, 8, 16, ? / रिक्त स्थान भरें: 2, 4, 8, 16, ?",
+        "options": ["18", "24", "32", "20"],
+        "answer": "32",
+        "explanation": "Each term is multiplied by 2; next = 16 × 2 = 32."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is the value of π (approx.)? / π का मान (लगभग) क्या है?",
+        "options": ["3.12", "3.14", "3.16", "3.18"],
+        "answer": "3.14",
+        "explanation": "Approximate value of π is 3.14."
+      },
+      {
+        "section": "Mathematics",
+        "question": "If perimeter of a rectangle is 40 cm and length is 12 cm, find its breadth. / यदि एक आयत की परिमाप 40 सेमी और लंबाई 12 सेमी है, तो चौड़ाई ज्ञात करें।",
+        "options": ["8 cm", "10 cm", "6 cm", "12 cm"],
+        "answer": "8 cm",
+        "explanation": "Perimeter = 2(l+b); 40 = 2(12+b); 20 = 12+b; b = 8 cm."
+      },
+      {
+        "section": "Mathematics",
+        "question": "Simplify: (50% of 80) + 20 / सरल करें: (80 का 50%) + 20",
+        "options": ["50", "60", "70", "80"],
+        "answer": "60",
+        "explanation": "50% of 80 = 40; 40+20 = 60."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is the smallest prime number? / सबसे छोटा अभाज्य संख्या कौन सी है?",
+        "options": ["1", "2", "3", "5"],
+        "answer": "2",
+        "explanation": "2 is the smallest and the only even prime number."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is the place value of 7 in 572? / 572 में 7 का स्थानमान क्या है?",
+        "options": ["7", "70", "700", "0.7"],
+        "answer": "70",
+        "explanation": "In 572, 7 is in tens place; place value = 70."
+      },
+      {
+        "section": "Mathematics",
+        "question": "Convert 3/5 to decimal / 3/5 को दशमलव में बदलें",
+        "options": ["0.5", "0.6", "0.7", "0.8"],
+        "answer": "0.6",
+        "explanation": "3 ÷ 5 = 0.6."
+      },
+      {
+        "section": "Mathematics",
+        "question": "How many sides does a hexagon have? / षट्भुज के कितने भुजाएँ होती हैं?",
+        "options": ["5", "6", "7", "8"],
+        "answer": "6",
+        "explanation": "Hexagon has 6 sides."
+      },
+      {
+        "section": "Mathematics",
+        "question": "Find the median of 5, 7, 9 / 5, 7, 9 का माध्यिका ज्ञात करें",
+        "options": ["5", "7", "9", "6"],
+        "answer": "7",
+        "explanation": "The middle value is 7."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is 2/3 of 90? / 90 का 2/3 कितना है?",
+        "options": ["50", "55", "60", "65"],
+        "answer": "60",
+        "explanation": "2/3 × 90 = 60."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is the sum of angles in a triangle? / त्रिभुज के कोणों का योगफल कितना होता है?",
+        "options": ["90°", "180°", "270°", "360°"],
+        "answer": "180°",
+        "explanation": "Sum of interior angles in a triangle = 180°."
+      },
+      {
+        "section": "Mathematics",
+        "question": "If 1 kg of rice costs ₹50, what will 3.5 kg cost? / यदि 1 किलोग्राम चावल की कीमत ₹50 है, तो 3.5 किग्रा की कीमत क्या होगी?",
+        "options": ["₹150", "₹170", "₹175", "₹180"],
+        "answer": "₹175",
+        "explanation": "Cost = 50 × 3.5 = ₹175."
+      },
+      {
+        "section": "Mathematics",
+        "question": "Which is greater: 3/4 or 4/5? / कौन बड़ा है: 3/4 या 4/5?",
+        "options": ["3/4", "4/5", "Equal", "Cannot be compared"],
+        "answer": "4/5",
+        "explanation": "3/4 = 0.75; 4/5 = 0.8; hence 4/5 is greater."
+      },
+      {
+        "section": "Mathematics",
+        "question": "Find the next term: 5, 10, 20, 40, ? / अगला पद ज्ञात करें: 5, 10, 20, 40, ?",
+        "options": ["50", "60", "80", "100"],
+        "answer": "80",
+        "explanation": "Each term is multiplied by 2; next = 40 × 2 = 80."
+      },
+      {
+        "section": "Mathematics",
+        "question": "What is the value of 5! (factorial)? / 5! (फैक्टोरियल) का मान क्या है?",
+        "options": ["60", "100", "120", "150"],
+        "answer": "120",
+        "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120."
+    },
+    {
+      "section": "Environmental Studies",
+      "question": "Which is the largest planet in our solar system? / हमारे सौरमंडल का सबसे बड़ा ग्रह कौन सा है?",
+      "options": ["Earth", "Jupiter", "Saturn", "Mars"],
+      "answer": "Jupiter",
+      "explanation": "Jupiter is the largest planet in our solar system."
+    },
+      {
+        "section": "Environmental Studies",
+        "question": "What is the national animal of India? / भारत का राष्ट्रीय पशु कौन सा है?",
+        "options": ["Elephant", "Tiger", "Lion", "Leopard"],
+        "answer": "Tiger",
+        "explanation": "The Bengal Tiger is the national animal of India."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "How many states are there in India? / भारत में कुल कितने राज्य हैं?",
+        "options": ["28", "29", "27", "26"],
+        "answer": "28",
+        "explanation": "As of 2025, India has 28 states."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which gas do plants release during photosynthesis? / प्रकाश संश्लेषण के दौरान पौधे कौन सी गैस छोड़ते हैं?",
+        "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+        "answer": "Oxygen",
+        "explanation": "Plants release oxygen during photosynthesis."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which part of the plant is responsible for photosynthesis? / पौधे का कौन सा भाग प्रकाश संश्लेषण के लिए जिम्मेदार है?",
+        "options": ["Leaf", "Root", "Stem", "Flower"],
+        "answer": "Leaf",
+        "explanation": "Leaves contain chlorophyll which is used in photosynthesis."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which is the longest river in India? / भारत की सबसे लंबी नदी कौन सी है?",
+        "options": ["Yamuna", "Ganga", "Brahmaputra", "Godavari"],
+        "answer": "Ganga",
+        "explanation": "The Ganga is the longest river in India."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "What is the boiling point of water? / पानी का उबलने का बिंदु क्या है?",
+        "options": ["90°C", "100°C", "110°C", "80°C"],
+        "answer": "100°C",
+        "explanation": "Water boils at 100°C at sea level."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which animal is known as the 'Ship of the Desert'? / किस जानवर को 'रेगिस्तान का जहाज' कहा जाता है?",
+        "options": ["Camel", "Horse", "Donkey", "Goat"],
+        "answer": "Camel",
+        "explanation": "Camel is adapted to desert conditions, hence called the ship of the desert."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which vitamin is produced in the human body when exposed to sunlight? / सूर्य के प्रकाश में आने पर मानव शरीर में कौन सा विटामिन बनता है?",
+        "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+        "answer": "Vitamin D",
+        "explanation": "Vitamin D is synthesized in the skin when exposed to sunlight."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which festival is known as the Festival of Lights? / किस त्योहार को 'रोशनी का त्योहार' कहा जाता है?",
+        "options": ["Holi", "Diwali", "Eid", "Baisakhi"],
+        "answer": "Diwali",
+        "explanation": "Diwali is celebrated as the Festival of Lights in India."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which is the smallest continent? / सबसे छोटा महाद्वीप कौन सा है?",
+        "options": ["Europe", "Australia", "Antarctica", "South America"],
+        "answer": "Australia",
+        "explanation": "Australia is the smallest continent by land area."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "What is the main source of energy for Earth? / पृथ्वी के लिए ऊर्जा का मुख्य स्रोत क्या है?",
+        "options": ["Moon", "Sun", "Wind", "Water"],
+        "answer": "Sun",
+        "explanation": "The Sun is the primary source of energy for all life on Earth."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which organ in humans purifies blood? / मनुष्यों में कौन सा अंग रक्त को शुद्ध करता है?",
+        "options": ["Heart", "Kidney", "Lungs", "Liver"],
+        "answer": "Kidney",
+        "explanation": "Kidneys filter waste from the blood and produce urine."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which layer of the atmosphere contains the ozone layer? / वायुमंडल की किस परत में ओजोन परत होती है?",
+        "options": ["Troposphere", "Stratosphere", "Mesosphere", "Exosphere"],
+        "answer": "Stratosphere",
+        "explanation": "The ozone layer is found in the stratosphere."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which is the largest ocean in the world? / दुनिया का सबसे बड़ा महासागर कौन सा है?",
+        "options": ["Atlantic", "Indian", "Pacific", "Arctic"],
+        "answer": "Pacific",
+        "explanation": "The Pacific Ocean is the largest and deepest ocean."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "What is the national bird of India? / भारत का राष्ट्रीय पक्षी कौन सा है?",
+        "options": ["Peacock", "Parrot", "Sparrow", "Eagle"],
+        "answer": "Peacock",
+        "explanation": "The peacock is India's national bird."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which is the fastest land animal? / सबसे तेज़ भूमि जानवर कौन सा है?",
+        "options": ["Cheetah", "Horse", "Lion", "Tiger"],
+        "answer": "Cheetah",
+        "explanation": "Cheetah can run up to 100-120 km/h."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "What is the largest source of freshwater on Earth? / पृथ्वी पर मीठे पानी का सबसे बड़ा स्रोत क्या है?",
+        "options": ["Rivers", "Lakes", "Glaciers", "Groundwater"],
+        "answer": "Glaciers",
+        "explanation": "Most of the Earth's freshwater is stored in glaciers."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which device is used to measure temperature? / तापमान मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+        "options": ["Barometer", "Thermometer", "Hygrometer", "Anemometer"],
+        "answer": "Thermometer",
+        "explanation": "A thermometer measures temperature."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which natural disaster is measured using the Richter scale? / किस प्राकृतिक आपदा को रिक्टर पैमाने से मापा जाता है?",
+        "options": ["Cyclone", "Earthquake", "Flood", "Tsunami"],
+        "answer": "Earthquake",
+        "explanation": "The Richter scale measures earthquake magnitude."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which is the largest desert in the world? / दुनिया का सबसे बड़ा रेगिस्तान कौन सा है?",
+        "options": ["Sahara", "Gobi", "Thar", "Kalahari"],
+        "answer": "Sahara",
+        "explanation": "The Sahara Desert in Africa is the largest hot desert."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "What is the main gas found in the air we breathe? / हम जो हवा सांस लेते हैं उसमें मुख्य गैस कौन सी है?",
+        "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+        "answer": "Nitrogen",
+        "explanation": "Nitrogen makes up about 78% of Earth's atmosphere."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which is the national flower of India? / भारत का राष्ट्रीय फूल कौन सा है?",
+        "options": ["Rose", "Lotus", "Sunflower", "Lily"],
+        "answer": "Lotus",
+        "explanation": "The lotus is the national flower of India."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which process converts water into vapor? / कौन सी प्रक्रिया पानी को वाष्प में बदलती है?",
+        "options": ["Condensation", "Evaporation", "Precipitation", "Sublimation"],
+        "answer": "Evaporation",
+        "explanation": "Evaporation changes liquid water into vapor."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which energy source is renewable? / कौन सा ऊर्जा स्रोत नवीकरणीय है?",
+        "options": ["Coal", "Petrol", "Solar", "Natural Gas"],
+        "answer": "Solar",
+        "explanation": "Solar energy is renewable and sustainable."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which planet is known as the Red Planet? / किस ग्रह को लाल ग्रह कहा जाता है?",
+        "options": ["Mars", "Venus", "Mercury", "Jupiter"],
+        "answer": "Mars",
+        "explanation": "Mars appears red due to iron oxide on its surface."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "What is the study of weather called? / मौसम के अध्ययन को क्या कहा जाता है?",
+        "options": ["Geology", "Meteorology", "Astronomy", "Ecology"],
+        "answer": "Meteorology",
+        "explanation": "Meteorology is the study of weather and atmosphere."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which animal lays eggs? / कौन सा जानवर अंडे देता है?",
+        "options": ["Dog", "Cat", "Hen", "Cow"],
+        "answer": "Hen",
+        "explanation": "Hens are birds and they lay eggs."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which festival marks the harvest season in Punjab? / पंजाब में फसल कटाई का त्योहार कौन सा है?",
+        "options": ["Baisakhi", "Holi", "Diwali", "Lohri"],
+        "answer": "Baisakhi",
+        "explanation": "Baisakhi marks the harvest season in Punjab."
+      },
+      {
+        "section": "Environmental Studies",
+        "question": "Which is the coldest place on Earth? / पृथ्वी का सबसे ठंडा स्थान कौन सा है?",
+        "options": ["Arctic", "Siberia", "Antarctica", "Greenland"],
+        "answer": "Antarctica",
+        "explanation": "Antarctica records the lowest natural temperatures on Earth."
+      }
+  
+    ]
+  }
+  
