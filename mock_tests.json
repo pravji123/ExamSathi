@@ -1,5 +1,15 @@
 [
   {
+    "title": "BPSC TRE Computer Science",
+    "category": "Teaching",
+    "examKey": "BPSC_CST",
+    "rating": 4.6,
+    "tests": 3,
+    "time": "120 min",
+    "lang": "Hindi",
+    "img": "image/bpsc_tre-logo.png"
+  },
+  {
     "title": "CTET Paper I",
     "category": "CTET",
     "examKey": "CTET_1to5",
@@ -120,6 +130,7 @@
     "img": "image/upsc-logo.png"
   }
 ]
+
 
 
 
