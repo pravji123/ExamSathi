@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mock Test</title>
+  <title>Mock Test Testara - India's Smart Testing Platform</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
     header { background-color: #007BFF; color: white; padding: 1rem; text-align: center; font-size: 1.5rem; }
@@ -13,7 +13,12 @@
     }
     .container { display: flex; min-height: 82vh; }
     .left-panel { flex: 4; background: #fff; border-right: 2px solid #ddd; }
-    .right-panel { flex: 1; background: #f8f9fa; }
+    .right-panel { flex: 1; 
+      background: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
     .section-tabs {
       display: flex;
       gap: 12px;
@@ -71,9 +76,15 @@
       margin-top: 10px;
     }
     .question-navigator {
-      padding: 10px; display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-      gap: 9px; overflow-y: auto; max-height: 362px; border: 1px solid #ccc; background: #fff;
+      padding: 10px; 
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 9px; 
+      overflow-y: auto; 
+      max-height: 300px; 
+      border: 1px solid #ccc; 
+      background: #fff;
+
     }
 
     .section-header {
