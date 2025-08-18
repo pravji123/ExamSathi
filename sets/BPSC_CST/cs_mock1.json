@@ -1,0 +1,83 @@
+{
+  "examName": "BPSC Mock Test Series 2025",
+  "testTitle": "CS Teacher Mock Test Set 1",
+  "time": 45,
+  "sections": ["Computer Science", "Math", "Reasoning", "General Awareness"],
+  "languages": ["English", "Hindi"],
+  "questionType": "MCQ",
+  "marks": 1,
+  "negative": 0,
+
+  "questions": [
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is a non-primitive data type in C? / निम्नलिखित में से कौन सा C में गैर-प्राथमिक (non-primitive) डेटा टाइप है?",
+      "options": ["int", "char", "float", "array"],
+      "answer": "array",
+      "explanation": "Arrays are derived (non-primitive) data types, while int, char, and float are primitive."
+    },
+    {
+      "section": "Computer Science",
+      "question": "In DBMS, which normal form removes partial dependency? / DBMS में कौन सा सामान्य रूप (Normal Form) आंशिक निर्भरता (Partial Dependency) को हटाता है?",
+      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "answer": "2NF",
+      "explanation": "Second Normal Form (2NF) removes partial dependency."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which scheduling algorithm may cause starvation? / कौन सा शेड्यूलिंग एल्गोरिथ्म starvation (भूखमरी) का कारण बन सकता है?",
+      "options": ["FCFS", "SJF", "Round Robin", "Priority"],
+      "answer": "Priority",
+      "explanation": "In Priority Scheduling, low-priority processes may wait indefinitely, leading to starvation."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which protocol is used for secure communication over the internet? / इंटरनेट पर सुरक्षित संचार के लिए कौन सा प्रोटोकॉल उपयोग किया जाता है?",
+      "options": ["HTTP", "FTP", "SSH", "Telnet"],
+      "answer": "SSH",
+      "explanation": "SSH (Secure Shell) provides secure encrypted communication."
+    },
+    {
+      "section": "Reasoning",
+      "question": "If A is the father of B, and B is the father of C, what is the relation of A to C? / यदि A, B का पिता है और B, C का पिता है, तो A का C से क्या संबंध है?",
+      "options": ["Father", "Grandfather", "Uncle", "Brother"],
+      "answer": "Grandfather",
+      "explanation": "A is the father of B, and B is the father of C → A is the grandfather of C."
+    },
+    {
+      "section": "Reasoning",
+      "question": "Find the next term in the series: 2, 4, 8, 16, ? / श्रृंखला का अगला पद ज्ञात कीजिए: 2, 4, 8, 16, ?",
+      "options": ["20", "24", "30", "32"],
+      "answer": "32",
+      "explanation": "Each term is multiplied by 2. So, 16 × 2 = 32."
+    },
+    {
+      "section": "Math",
+      "question": "What is the value of (12 × 12) – (10 × 10)? / (12 × 12) – (10 × 10) का मान क्या है?",
+      "options": ["24", "40", "44", "20"],
+      "answer": "44",
+      "explanation": "144 – 100 = 44."
+    },
+    {
+      "section": "Math",
+      "question": "The average of first 10 natural numbers is: / पहले 10 प्राकृतिक संख्याओं का औसत क्या है?",
+      "options": ["4.5", "5", "5.5", "6"],
+      "answer": "5.5",
+      "explanation": "(1+10)/2 = 5.5."
+    },
+    {
+      "section": "General Awareness",
+      "question": "Who is known as the father of Computer Science? / कंप्यूटर विज्ञान के जनक के रूप में किसे जाना जाता है?",
+      "options": ["Charles Babbage", "Alan Turing", "Dennis Ritchie", "John von Neumann"],
+      "answer": "Alan Turing",
+      "explanation": "Alan Turing is regarded as the father of Computer Science. Charles Babbage is called the father of Computers."
+    },
+    {
+      "section": "General Awareness",
+      "question": "The 'Nalanda University' was a famous centre of learning in which state? / 'नालंदा विश्वविद्यालय' किस राज्य में एक प्रसिद्ध शिक्षा केंद्र था?",
+      "options": ["Uttar Pradesh", "Bihar", "Odisha", "Madhya Pradesh"],
+      "answer": "Bihar",
+      "explanation": "Nalanda University, one of the oldest universities, is located in Bihar."
+    }
+  ]
+}
