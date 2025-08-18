@@ -78,7 +78,9 @@
     .question-navigator {
       padding: 10px; 
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+/*       grid-template-columns: repeat(5, 1fr); */
+      grid-template-columns: repeat(auto-fill, 40px);
+      justify-content: center;
       gap: 9px; 
       overflow-y: auto; 
       max-height: 300px; 
@@ -710,3 +712,4 @@ window.onload = () => {
 </script>
 </body>
 </html>
+
