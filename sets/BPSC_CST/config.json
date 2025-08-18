@@ -1,1 +1,147 @@
+{
+  "examName": "BPSC Computer Science Teacher Mock Test Series 2025",
+  "updatedDate": "Aug 18, 2025",
+  "totalTests": 20,
+  "languages": ["English", "Hindi"],
+  "users": "1k",
+  
+  "tabs": ["Free Tests", "Paid Tests", "PYQs"],
+  "paidSubTabs": {
+    "Full Test": [],
+    "CHAPTER": ["Data Structures", "DBMS", "Operating System", "Computer Networks", "Software Engineering", "Theory of Computation", "Compiler Design"],
+    "CA": ["Current Affairs", "Yearly CA", "Monthly CA", "District Wise", "State Wise", "Country Wise"],
+    "SUBJECT": ["Computer Science", "Math", "Reasoning", "General Awareness", "English", "Hindi"],
+    "Sectional Test": ["CS Fundamentals", "Math & Reasoning", "General Studies", "Science"]
+  },
 
+  "tests": [
+    {
+      "title": "BPSC CS Teacher Mock Test Set 1",
+      "category": "FREE",
+      "filter": "All",
+      "questions": 50,
+      "marks": 50,
+      "time": 45,
+      "file": "cs_mock1.json",
+      "liveDate": "2025-08-20"
+    },
+    {
+      "title": "BPSC CS Teacher Mock Test Set 2",
+      "category": "FREE",
+      "filter": "All",
+      "questions": 60,
+      "marks": 60,
+      "time": 60,
+      "file": "cs_mock2.json",
+      "liveDate": "2025-08-25"
+    },
+    {
+      "title": "Programming in C – Basics",
+      "category": "CHAPTER",
+      "filter": "Programming in C",
+      "questions": 20,
+      "marks": 40,
+      "time": 20,
+      "file": "C_Basics.json"
+    },
+    {
+      "title": "Data Structures – Stack & Queue",
+      "category": "CHAPTER",
+      "filter": "Data Structures",
+      "questions": 15,
+      "marks": 30,
+      "time": 15,
+      "file": "DS_StackQueue.json"
+    },
+    {
+      "title": "DBMS – SQL Queries",
+      "category": "CHAPTER",
+      "filter": "DBMS",
+      "questions": 20,
+      "marks": 40,
+      "time": 20,
+      "file": "DBMS_SQL.json"
+    },
+    {
+      "title": "Operating System – Process Management",
+      "category": "CHAPTER",
+      "filter": "Operating System",
+      "questions": 20,
+      "marks": 40,
+      "time": 20,
+      "file": "OS_Process.json"
+    },
+    {
+      "title": "Computer Networks – Basics",
+      "category": "SUBJECT",
+      "filter": "Computer Science",
+      "questions": 25,
+      "marks": 50,
+      "time": 25,
+      "file": "CN_Basics.json"
+    },
+    {
+      "title": "Theory of Computation Test",
+      "category": "SUBJECT",
+      "filter": "Computer Science",
+      "questions": 20,
+      "marks": 40,
+      "time": 20,
+      "file": "TOC.json"
+    },
+    {
+      "title": "Math for CS – Discrete Mathematics",
+      "category": "SUBJECT",
+      "filter": "Math",
+      "questions": 20,
+      "marks": 40,
+      "time": 20,
+      "file": "Discrete_Math.json"
+    },
+    {
+      "title": "Reasoning Ability Test 1",
+      "category": "SUBJECT",
+      "filter": "Reasoning",
+      "questions": 20,
+      "marks": 20,
+      "time": 15,
+      "file": "Reasoning1.json"
+    },
+    {
+      "title": "CA July 2025",
+      "category": "CA",
+      "filter": "Monthly CA",
+      "questions": 30,
+      "marks": 60,
+      "time": 25,
+      "file": "CA_July_2025.json"
+    },
+    {
+      "title": "BPSC CS PYQ 2023 (Shift 1)",
+      "category": "PYQ",
+      "filter": "All",
+      "questions": 100,
+      "marks": 100,
+      "time": 120,
+      "file": "BPSC_CS_PYQ_2023_S1.json"
+    },
+    {
+      "title": "BPSC CS PYQ 2023 (Shift 2)",
+      "category": "PYQ",
+      "filter": "All",
+      "questions": 100,
+      "marks": 100,
+      "time": 120,
+      "file": "BPSC_CS_PYQ_2023_S2.json"
+    },
+    {
+      "title": "BPSC CS PYQ 2022",
+      "category": "PYQ",
+      "filter": "All",
+      "questions": 100,
+      "marks": 100,
+      "time": 120,
+      "file": "BPSC_CS_PYQ_2022.json"
+    }
+  ]
+}
