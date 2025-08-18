@@ -1,83 +1,1072 @@
 {
   "examName": "BPSC Mock Test Series 2025",
   "testTitle": "CS Teacher Mock Test Set 1",
-  "time": 45,
-  "sections": ["Computer Science", "Math", "Reasoning", "General Awareness"],
+  "time": 150,
+  "sections": [
+    "Part-I(English Language)",
+    "Part-I(Hindi Language)",
+    "Part-II(GENERAL STUDIES)",
+    "Part-III(Computer Science)"
+  ],
   "languages": ["English", "Hindi"],
   "questionType": "MCQ",
   "marks": 1,
   "negative": 0,
-
   "questions": [
     {
-      "section": "Computer Science",
+      "section": "Part-I(English Language)",
+      "question": "Choose the correct synonym of 'Rapid'",
+      "options": ["Fast", "Slow", "Calm", "Weak"],
+      "answer": "Fast",
+      "explanation": "'Rapid' means 'fast'."
+    },
+    {
+      "section": "Part-I(English Language)",
+      "question": "Identify the correctly spelt word:",
+      "options": ["Definately", "Definitely", "Definatly", "Definitley"],
+      "answer": "Definitely",
+      "explanation": "Correct spelling is 'Definitely'."
+    },
+    {
+      "section": "Part-I(English Language)",
+      "question": "Fill in the blank: He _____ to the market yesterday.",
+      "options": ["go", "goes", "went", "gone"],
+      "answer": "went",
+      "explanation": "Past tense of 'go' is 'went'."
+    },
+    {
+      "section": "Part-I(English Language)",
+      "question": "Choose the antonym of 'Victory'",
+      "options": ["Success", "Win", "Defeat", "Glory"],
+      "answer": "Defeat",
+      "explanation": "'Victory' opposite is 'Defeat'."
+    },
+    {
+      "section": "Part-I(English Language)",
+      "question": "Select the correct passive voice: 'She is writing a letter.'",
+      "options": [
+        "A letter is written by her.",
+        "A letter is being written by her.",
+        "A letter was written by her.",
+        "A letter has been written by her."
+      ],
+      "answer": "A letter is being written by her.",
+      "explanation": "Present Continuous passive is 'is being + past participle'."
+    },
+    {
+      "section": "Part-I(English Language)",
+      "question": "Choose the correct article: He is ___ honest man.",
+      "options": ["a", "an", "the", "no article"],
+      "answer": "an",
+      "explanation": "We use 'an' before vowel sounds. 'honest' starts with vowel sound."
+    },
+    {
+      "section": "Part-I(English Language)",
+      "question": "Choose the correct tense: By next year, I _____ my degree.",
+      "options": ["complete", "completed", "will complete", "will have completed"],
+      "answer": "will have completed",
+      "explanation": "Future Perfect tense is used with 'by next year'."
+    },
+    {
+      "section": "Part-I(English Language)",
+      "question": "Identify the part of speech: 'Quickly'",
+      "options": ["Noun", "Verb", "Adverb", "Adjective"],
+      "answer": "Adverb",
+      "explanation": "'Quickly' describes the manner of action, so it is an adverb."
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘सुंदर’ का विलोम है—",
+      "options": ["श्याम", "कुरूप", "भव्य", "सुगंध"],
+      "answer": "कुरूप",
+      "explanation": "सुंदर का विपरीत 'कुरूप' होता है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘विद्या’ का पर्यायवाची है—",
+      "options": ["ज्ञान", "धन", "अज्ञान", "लाभ"],
+      "answer": "ज्ञान",
+      "explanation": "विद्या का पर्याय 'ज्ञान' है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘आशा’ शब्द का विलोम है—",
+      "options": ["आकांक्षा", "विश्वास", "निराशा", "प्रत्याशा"],
+      "answer": "निराशा",
+      "explanation": "‘आशा’ का विलोम ‘निराशा’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘जल्दी’ का समानार्थी शब्द है—",
+      "options": ["धीरे", "शीघ्र", "विलंब", "धीमा"],
+      "answer": "शीघ्र",
+      "explanation": "‘जल्दी’ का पर्याय ‘शीघ्र’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘सूर्य’ का पर्यायवाची है—",
+      "options": ["रवि", "चंद्र", "अग्नि", "ज्योति"],
+      "answer": "रवि",
+      "explanation": "‘सूर्य’ का पर्याय ‘रवि’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘अंधकार’ का विलोम है—",
+      "options": ["अज्ञान", "प्रकाश", "तम", "निशा"],
+      "answer": "प्रकाश",
+      "explanation": "‘अंधकार’ का विलोम ‘प्रकाश’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘सस्ता’ का विलोम है—",
+      "options": ["महँगा", "सुलभ", "सहज", "सस्ता"],
+      "answer": "महँगा",
+      "explanation": "‘सस्ता’ का विलोम ‘महँगा’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘कर्मठ’ का पर्यायवाची है—",
+      "options": ["मेहनती", "आलसी", "सुस्त", "कमजोर"],
+      "answer": "मेहनती",
+      "explanation": "‘कर्मठ’ का अर्थ मेहनती व्यक्ति होता है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘बालक’ का स्त्रीलिंग है—",
+      "options": ["बाला", "लड़का", "बालिका", "लड़की"],
+      "answer": "बालिका",
+      "explanation": "‘बालक’ का स्त्रीलिंग ‘बालिका’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘विद्या’ शब्द में कितने मात्राएँ हैं?",
+      "options": ["2", "3", "4", "5"],
+      "answer": "3",
+      "explanation": "‘वि-द्या’ शब्द में 3 मात्राएँ हैं।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘राम’ शब्द कौन-सा संज्ञा है?",
+      "options": ["व्यक्तिवाचक", "जातिवाचक", "भाववाचक", "समूहवाचक"],
+      "answer": "व्यक्तिवाचक",
+      "explanation": "‘राम’ व्यक्तिवाचक संज्ञा है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘मधुर’ शब्द का विलोम है—",
+      "options": ["कटु", "मीठा", "सुप्रसन्न", "सुखद"],
+      "answer": "कटु",
+      "explanation": "‘मधुर’ का विलोम ‘कटु’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘हर्ष’ का विलोम है—",
+      "options": ["खुशी", "शोक", "आनंद", "सुख"],
+      "answer": "शोक",
+      "explanation": "‘हर्ष’ का विलोम ‘शोक’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘पढ़ाई’ का समानार्थी है—",
+      "options": ["शिक्षा", "धन", "भाषा", "ज्ञान"],
+      "answer": "शिक्षा",
+      "explanation": "‘पढ़ाई’ का पर्याय ‘शिक्षा’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘रात’ का विलोम है—",
+      "options": ["सांझ", "दोपहर", "दिन", "भोर"],
+      "answer": "दिन",
+      "explanation": "‘रात’ का विलोम ‘दिन’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘घर’ का पर्यायवाची है—",
+      "options": ["गृह", "आवास", "निवास", "सभी"],
+      "answer": "सभी",
+      "explanation": "‘घर’ के अनेक पर्यायवाची हैं।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘सिंह’ का पर्यायवाची है—",
+      "options": ["व्याघ्र", "शेर", "पशु", "गज"],
+      "answer": "शेर",
+      "explanation": "‘सिंह’ का पर्याय ‘शेर’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘आलसी’ का विलोम है—",
+      "options": ["सुस्त", "परिश्रमी", "निष्क्रिय", "कमजोर"],
+      "answer": "परिश्रमी",
+      "explanation": "‘आलसी’ का विलोम ‘परिश्रमी’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘नदी’ का लिंग है—",
+      "options": ["पुल्लिंग", "स्त्रीलिंग", "नपुंसकलिंग", "कोई नहीं"],
+      "answer": "स्त्रीलिंग",
+      "explanation": "‘नदी’ स्त्रीलिंग संज्ञा है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘खुशबू’ का पर्यायवाची है—",
+      "options": ["सुगंध", "बदबू", "महक", "सभी"],
+      "answer": "सभी",
+      "explanation": "‘खुशबू’ के पर्याय ‘सुगंध’ और ‘महक’ हैं।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘दुख’ का विलोम है—",
+      "options": ["आनंद", "सुख", "शोक", "खुशी"],
+      "answer": "सुख",
+      "explanation": "‘दुख’ का विलोम ‘सुख’ है।"
+    },
+    {
+      "section": "Part-I(Hindi Language)",
+      "question": "‘पुस्तक’ का समानार्थी है—",
+      "options": ["ग्रंथ", "किताब", "पाठ्य", "सभी"],
+      "answer": "सभी",
+      "explanation": "‘पुस्तक’ के अनेक पर्याय हैं जैसे ‘ग्रंथ’ और ‘किताब’।"
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The LCM of 24 and 36 is: / 24 और 36 का लघुत्तम समापवर्त्य क्या है?",
+      "options": ["72", "144", "48", "36"],
+      "answer": "72",
+      "explanation": "LCM of 24 and 36 = 72."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The value of √225 is: / √225 का मान क्या है?",
+      "options": ["14", "15", "16", "13"],
+      "answer": "15",
+      "explanation": "√225 = 15."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "If a sum of Rs. 1000 is borrowed at 10% simple interest, the interest after 2 years will be: / यदि 1000 रुपये 10% साधारण ब्याज पर उधार लिए जाते हैं, तो 2 वर्षों बाद ब्याज होगा?",
+      "options": ["Rs. 100", "Rs. 150", "Rs. 200", "Rs. 250"],
+      "answer": "Rs. 200",
+      "explanation": "SI = PRT/100 = 1000×10×2/100 = Rs. 200."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The perimeter of a square of side 9 cm is: / 9 सेमी भुजा वाले वर्ग की परिमाप है?",
+      "options": ["18 cm", "27 cm", "36 cm", "45 cm"],
+      "answer": "36 cm",
+      "explanation": "Perimeter = 4 × side = 36 cm."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The mean of first 5 odd numbers is: / पहले 5 विषम संख्याओं का औसत है?",
+      "options": ["3", "5", "7", "9"],
+      "answer": "5",
+      "explanation": "Mean = (1+3+5+7+9)/5 = 25/5 = 5."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "What is 25% of 240? / 240 का 25% कितना है?",
+      "options": ["40", "50", "60", "70"],
+      "answer": "60",
+      "explanation": "25% of 240 = 240 × 25/100 = 60."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The probability of getting a head when a coin is tossed once is: / एक सिक्का एक बार उछालने पर हेड आने की प्रायिकता है?",
+      "options": ["1/4", "1/2", "1/3", "1"],
+      "answer": "1/2",
+      "explanation": "Only 2 outcomes possible: Head or Tail."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The sum of angles in a triangle is: / त्रिभुज के कोणों का योग है?",
+      "options": ["90°", "120°", "180°", "360°"],
+      "answer": "180°",
+      "explanation": "Sum of interior angles of a triangle = 180°."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which gas is essential for respiration? / श्वसन के लिए कौन सी गैस आवश्यक है?",
+      "options": ["Nitrogen", "Carbon dioxide", "Oxygen", "Hydrogen"],
+      "answer": "Oxygen",
+      "explanation": "Oxygen is required for respiration."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The chemical formula of water is: / जल का रासायनिक सूत्र है?",
+      "options": ["H2O", "CO2", "NaCl", "O2"],
+      "answer": "H2O",
+      "explanation": "Water is H2O."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The SI unit of force is: / बल की SI इकाई है?",
+      "options": ["Newton", "Joule", "Pascal", "Watt"],
+      "answer": "Newton",
+      "explanation": "Force is measured in Newton."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which part of the cell contains the genetic material? / कोशिका का कौन सा भाग आनुवंशिक पदार्थ रखता है?",
+      "options": ["Cytoplasm", "Nucleus", "Cell wall", "Mitochondria"],
+      "answer": "Nucleus",
+      "explanation": "Nucleus stores DNA."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The instrument used to measure blood pressure is: / रक्तचाप मापने का यंत्र है?",
+      "options": ["Thermometer", "Barometer", "Sphygmomanometer", "Hygrometer"],
+      "answer": "Sphygmomanometer",
+      "explanation": "BP is measured by sphygmomanometer."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "What is the boiling point of water? / पानी का क्वथनांक है?",
+      "options": ["0°C", "50°C", "100°C", "212°C"],
+      "answer": "100°C",
+      "explanation": "Water boils at 100°C at normal pressure."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The process of conversion of solid directly into gas is: / ठोस का सीधे गैस में बदलने की प्रक्रिया कहलाती है?",
+      "options": ["Condensation", "Evaporation", "Sublimation", "Fusion"],
+      "answer": "Sublimation",
+      "explanation": "Solid → Gas = Sublimation."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which vitamin is produced in the body by sunlight? / धूप से शरीर में कौन सा विटामिन बनता है?",
+      "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+      "answer": "Vitamin D",
+      "explanation": "Sunlight helps synthesize Vitamin D."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Who is the current President of India (2025)? / भारत के वर्तमान राष्ट्रपति (2025) कौन हैं?",
+      "options": ["Ram Nath Kovind", "Droupadi Murmu", "Narendra Modi", "Pratibha Patil"],
+      "answer": "Droupadi Murmu",
+      "explanation": "Droupadi Murmu became the 15th President of India in 2022."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "India hosted the G20 Summit in which year? / भारत ने किस वर्ष G20 शिखर सम्मेलन की मेजबानी की?",
+      "options": ["2021", "2022", "2023", "2024"],
+      "answer": "2023",
+      "explanation": "India hosted the G20 Summit in September 2023."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which city was declared the cleanest city of India in Swachh Survekshan 2024? / स्वच्छ सर्वेक्षण 2024 में भारत का सबसे स्वच्छ शहर कौन सा घोषित हुआ?",
+      "options": ["Bhopal", "Surat", "Indore", "Mysuru"],
+      "answer": "Indore",
+      "explanation": "Indore has consistently ranked as India’s cleanest city."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Who is the current Chief Justice of India (2025)? / भारत के वर्तमान मुख्य न्यायाधीश (2025) कौन हैं?",
+      "options": ["N.V. Ramana", "U.U. Lalit", "D.Y. Chandrachud", "Ranjan Gogoi"],
+      "answer": "D.Y. Chandrachud",
+      "explanation": "Justice D.Y. Chandrachud is the 50th Chief Justice of India."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which country won the ICC Men’s Cricket World Cup 2023? / ICC पुरुष क्रिकेट विश्व कप 2023 किस देश ने जीता?",
+      "options": ["India", "Australia", "England", "New Zealand"],
+      "answer": "Australia",
+      "explanation": "Australia defeated India in the 2023 World Cup final."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which mission of ISRO successfully landed on the Moon’s south pole? / ISRO का कौन सा मिशन चंद्रमा के दक्षिणी ध्रुव पर सफलतापूर्वक उतरा?",
+      "options": ["Mangalyaan", "Chandrayaan-2", "Chandrayaan-3", "Aditya-L1"],
+      "answer": "Chandrayaan-3",
+      "explanation": "Chandrayaan-3 landed on Moon’s south pole in 2023."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "India’s first bullet train project is being built between which two cities? / भारत की पहली बुलेट ट्रेन परियोजना किन दो शहरों के बीच बन रही है?",
+      "options": ["Delhi – Mumbai", "Mumbai – Ahmedabad", "Delhi – Lucknow", "Chennai – Bengaluru"],
+      "answer": "Mumbai – Ahmedabad",
+      "explanation": "The Mumbai–Ahmedabad high-speed rail project is India’s first bullet train project."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which state launched the ‘Ladli Behna Yojana’ in 2023? / 2023 में ‘लाड़ली बहना योजना’ किस राज्य ने शुरू की?",
+      "options": ["Uttar Pradesh", "Bihar", "Madhya Pradesh", "Rajasthan"],
+      "answer": "Madhya Pradesh",
+      "explanation": "Madhya Pradesh launched the scheme for women empowerment."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Who was the founder of the Maurya Empire? / मौर्य साम्राज्य का संस्थापक कौन था?",
+      "options": ["Ashoka", "Chandragupta Maurya", "Bindusara", "Bimbisara"],
+      "answer": "Chandragupta Maurya",
+      "explanation": "Chandragupta Maurya founded the Maurya Empire in 321 BCE."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Who was the first Governor-General of independent India? / स्वतंत्र भारत का पहला गवर्नर-जनरल कौन था?",
+      "options": ["Lord Mountbatten", "C. Rajagopalachari", "Rajendra Prasad", "Jawaharlal Nehru"],
+      "answer": "Lord Mountbatten",
+      "explanation": "Lord Mountbatten was the first Governor-General of independent India."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which river is called the ‘Sorrow of Bihar’? / किस नदी को बिहार का ‘शोक’ कहा जाता है?",
+      "options": ["Ganga", "Kosi", "Son", "Gandak"],
+      "answer": "Kosi",
+      "explanation": "The Kosi river frequently floods, causing devastation in Bihar."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "In which year was the Indian Constitution adopted? / भारतीय संविधान किस वर्ष अपनाया गया?",
+      "options": ["1947", "1948", "1949", "1950"],
+      "answer": "1949",
+      "explanation": "The Constitution was adopted on 26 November 1949."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Who is regarded as the Father of the Indian Constitution? / भारतीय संविधान के जनक किसे कहा जाता है?",
+      "options": ["Jawaharlal Nehru", "B.R. Ambedkar", "M.K. Gandhi", "Rajendra Prasad"],
+      "answer": "B.R. Ambedkar",
+      "explanation": "Dr. B.R. Ambedkar was the Chairman of the Drafting Committee."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which is the largest state of India by area? / क्षेत्रफल के आधार पर भारत का सबसे बड़ा राज्य कौन सा है?",
+      "options": ["Maharashtra", "Madhya Pradesh", "Rajasthan", "Uttar Pradesh"],
+      "answer": "Rajasthan",
+      "explanation": "Rajasthan is India’s largest state by area."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "What is the capital of Jharkhand? / झारखंड की राजधानी क्या है?",
+      "options": ["Patna", "Ranchi", "Jamshedpur", "Dhanbad"],
+      "answer": "Ranchi",
+      "explanation": "Ranchi is the capital of Jharkhand."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which Article of the Indian Constitution deals with Fundamental Duties? / भारतीय संविधान का कौन सा अनुच्छेद मौलिक कर्तव्यों से संबंधित है?",
+      "options": ["Article 51A", "Article 21", "Article 32", "Article 370"],
+      "answer": "Article 51A",
+      "explanation": "Fundamental Duties are in Article 51A."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which Indian freedom fighter gave the slogan ‘Do or Die’? / किस भारतीय स्वतंत्रता सेनानी ने ‘करो या मरो’ का नारा दिया?",
+      "options": ["Subhas Chandra Bose", "Mahatma Gandhi", "Bhagat Singh", "Lala Lajpat Rai"],
+      "answer": "Mahatma Gandhi",
+      "explanation": "Mahatma Gandhi gave the slogan during Quit India Movement in 1942."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which is the highest mountain peak in India? / भारत की सबसे ऊँची पर्वत चोटी कौन सी है?",
+      "options": ["Kanchenjunga", "Everest", "Nanda Devi", "K2"],
+      "answer": "Kanchenjunga",
+      "explanation": "Kanchenjunga (8,586 m) is the highest peak in India."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Planning Commission of India was replaced by which institution? / भारत के योजना आयोग को किस संस्था ने प्रतिस्थापित किया?",
+      "options": ["Finance Commission", "NITI Aayog", "Economic Advisory Council", "CAG"],
+      "answer": "NITI Aayog",
+      "explanation": "In 2015, NITI Aayog replaced Planning Commission."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which movement is associated with ‘Salt March’? / कौन सा आंदोलन ‘नमक सत्याग्रह’ से जुड़ा है?",
+      "options": ["Civil Disobedience Movement", "Non-Cooperation Movement", "Quit India Movement", "Swadeshi Movement"],
+      "answer": "Civil Disobedience Movement",
+      "explanation": "Salt March (1930) was part of the Civil Disobedience Movement."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which dam is built on the Sutlej River? / सतलुज नदी पर कौन सा बांध बनाया गया है?",
+      "options": ["Bhakra Nangal", "Hirakud", "Tehri", "Sardar Sarovar"],
+      "answer": "Bhakra Nangal",
+      "explanation": "Bhakra Nangal Dam is built on the Sutlej River."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Which Article of the Indian Constitution provides for the abolition of untouchability? / भारतीय संविधान का कौन सा अनुच्छेद अस्पृश्यता के उन्मूलन से संबंधित है?",
+      "options": ["Article 14", "Article 17", "Article 19", "Article 21"],
+      "answer": "Article 17",
+      "explanation": "Article 17 abolishes untouchability."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "The currency of Bangladesh is: / बांग्लादेश की मुद्रा है?",
+      "options": ["Rupee", "Rial", "Taka", "Kyat"],
+      "answer": "Taka",
+      "explanation": "The currency of Bangladesh is Taka."
+    },
+    {
+      "section": "Part-II(GENERAL STUDIES)",
+      "question": "Who was the first Prime Minister of India? / भारत के पहले प्रधानमंत्री कौन थे?",
+      "options": ["Sardar Patel", "Mahatma Gandhi", "Jawaharlal Nehru", "Rajendra Prasad"],
+      "answer": "Jawaharlal Nehru",
+      "explanation": "Jawaharlal Nehru was the first Prime Minister of India."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "In operating systems, thrashing is related to / ऑपरेटिंग सिस्टम में थ्रैशिंग किससे संबंधित है?",
+      "options": ["Deadlock", "Paging", "Scheduling", "Interrupt"],
+      "answer": "Paging",
+      "explanation": "Thrashing happens due to excessive paging."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which protocol is used to send emails? / ईमेल भेजने के लिए कौन सा प्रोटोकॉल प्रयोग होता है?",
+      "options": ["SMTP", "POP3", "IMAP", "FTP"],
+      "answer": "SMTP",
+      "explanation": "SMTP is used for sending emails."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which normal form eliminates transitive dependency? / कौन सा नॉर्मल फॉर्म ट्रांजिटिव डिपेंडेंसी हटाता है?",
+      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "answer": "3NF",
+      "explanation": "3NF removes transitive dependencies."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which AI technique involves learning from examples? / कौन सी AI तकनीक उदाहरणों से सीखने में शामिल है?",
+      "options": ["Expert Systems", "Machine Learning", "Heuristics", "Genetic Algorithms"],
+      "answer": "Machine Learning",
+      "explanation": "Machine learning algorithms learn from examples."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of the following is NOT a type of firewall? / इनमें से कौन सा फ़ायरवॉल का प्रकार नहीं है?",
+      "options": ["Packet filtering", "Proxy", "Stateful inspection", "Assembler firewall"],
+      "answer": "Assembler firewall",
+      "explanation": "Assembler firewall does not exist."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which data structure is used in BFS traversal of graph? / ग्राफ के BFS ट्रैवर्सल में कौन सा डेटा स्ट्रक्चर प्रयोग होता है?",
+      "options": ["Stack", "Queue", "Linked List", "Tree"],
+      "answer": "Queue",
+      "explanation": "BFS uses a queue for level-order traversal."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which sorting algorithm has the best average case performance? / किस सॉर्टिंग एल्गोरिद्म का औसत केस परफॉर्मेंस सबसे अच्छा है?",
+      "options": ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+      "answer": "Merge Sort",
+      "explanation": "Merge Sort has O(n log n) average case performance."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which device operates at Data Link Layer of OSI model? / OSI मॉडल की डाटा लिंक लेयर पर कौन सा डिवाइस काम करता है?",
+      "options": ["Hub", "Switch", "Router", "Gateway"],
+      "answer": "Switch",
+      "explanation": "Switch operates at Data Link layer."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which is the strongest encryption algorithm among these? / इनमें से सबसे मजबूत एन्क्रिप्शन एल्गोरिद्म कौन सा है?",
+      "options": ["DES", "AES", "RSA", "Caesar Cipher"],
+      "answer": "AES",
+      "explanation": "AES is stronger and widely used than DES or Caesar cipher."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which SQL function is used to count rows? / SQL में पंक्तियों को गिनने के लिए कौन सा फंक्शन प्रयोग होता है?",
+      "options": ["SUM()", "COUNT()", "TOTAL()", "ROWNUM()"],
+      "answer": "COUNT()",
+      "explanation": "COUNT() returns the number of rows."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which OS concept allows multiple users to use system resources simultaneously? / कौन सा OS कॉन्सेप्ट कई यूजर्स को एक साथ सिस्टम संसाधनों का उपयोग करने देता है?",
+      "options": ["Multithreading", "Multiprogramming", "Time-sharing", "Batch processing"],
+      "answer": "Time-sharing",
+      "explanation": "Time-sharing allows multiple users to access system simultaneously."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which type of testing checks individual modules? / कौन सा टेस्टिंग व्यक्तिगत मॉड्यूल की जाँच करता है?",
+      "options": ["System testing", "Integration testing", "Unit testing", "Acceptance testing"],
+      "answer": "Unit testing",
+      "explanation": "Unit testing checks individual modules."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "In networking, CSMA/CD is used in / नेटवर्किंग में CSMA/CD कहाँ प्रयोग होता है?",
+      "options": ["WiFi", "Ethernet", "Bluetooth", "Fiber optics"],
+      "answer": "Ethernet",
+      "explanation": "Ethernet uses CSMA/CD for collision detection."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which DBMS architecture has three levels: external, conceptual, internal? / किस DBMS आर्किटेक्चर में तीन लेवल होते हैं: एक्सटर्नल, कॉन्सेप्चुअल, इंटरनल?",
+      "options": ["Two-tier", "Three-tier", "ANSI-SPARC", "Centralized"],
+      "answer": "ANSI-SPARC",
+      "explanation": "ANSI-SPARC defines 3-level DBMS architecture."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which memory management technique allows a process to be non-contiguous? / कौन सी मेमोरी मैनेजमेंट तकनीक किसी प्रोसेस को नॉन-कॉन्टिग्यूस होने देती है?",
+      "options": ["Paging", "Segmentation", "Contiguous allocation", "Swapping"],
+      "answer": "Paging",
+      "explanation": "Paging allows non-contiguous memory allocation."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which type of machine learning uses labeled data? / कौन सा मशीन लर्निंग लेबल्ड डेटा का प्रयोग करता है?",
+      "options": ["Supervised", "Unsupervised", "Reinforcement", "Evolutionary"],
+      "answer": "Supervised",
+      "explanation": "Supervised learning trains on labeled datasets."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of the following is NOT a software development model? / इनमें से कौन सा सॉफ्टवेयर डेवलपमेंट मॉडल नहीं है?",
+      "options": ["Waterfall", "Agile", "Spiral", "Compiler"],
+      "answer": "Compiler",
+      "explanation": "Compiler is not a software development model."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which data structure is used in recursive function calls? / रिकर्सिव फंक्शन कॉल्स में कौन सा डेटा स्ट्रक्चर प्रयोग होता है?",
+      "options": ["Queue", "Stack", "Array", "Graph"],
+      "answer": "Stack",
+      "explanation": "Recursive calls are managed using stack (call stack)."
+    },
+    {
+      "section": "Part-III(Computer Science)",
       "question": "Which of the following is a non-primitive data type in C? / निम्नलिखित में से कौन सा C में गैर-प्राथमिक (non-primitive) डेटा टाइप है?",
       "options": ["int", "char", "float", "array"],
       "answer": "array",
       "explanation": "Arrays are derived (non-primitive) data types, while int, char, and float are primitive."
     },
     {
-      "section": "Computer Science",
+      "section": "Part-III(Computer Science)",
       "question": "In DBMS, which normal form removes partial dependency? / DBMS में कौन सा सामान्य रूप (Normal Form) आंशिक निर्भरता (Partial Dependency) को हटाता है?",
       "options": ["1NF", "2NF", "3NF", "BCNF"],
       "answer": "2NF",
       "explanation": "Second Normal Form (2NF) removes partial dependency."
     },
     {
-      "section": "Computer Science",
+      "section": "Part-III(Computer Science)",
       "question": "Which scheduling algorithm may cause starvation? / कौन सा शेड्यूलिंग एल्गोरिथ्म starvation (भूखमरी) का कारण बन सकता है?",
       "options": ["FCFS", "SJF", "Round Robin", "Priority"],
       "answer": "Priority",
       "explanation": "In Priority Scheduling, low-priority processes may wait indefinitely, leading to starvation."
     },
     {
-      "section": "Computer Science",
-      "question": "Which protocol is used for secure communication over the internet? / इंटरनेट पर सुरक्षित संचार के लिए कौन सा प्रोटोकॉल उपयोग किया जाता है?",
-      "options": ["HTTP", "FTP", "SSH", "Telnet"],
-      "answer": "SSH",
-      "explanation": "SSH (Secure Shell) provides secure encrypted communication."
+      "section": "Part-III(Computer Science)",
+      "question": "What does HTTP stand for? / HTTP का पूर्ण रूप क्या है?",
+      "options": ["Hyper Text Transfer Protocol", "High Text Transfer Protocol", "Hyper Transfer Text Process", "Hyper Text Translate Protocol"],
+      "answer": "Hyper Text Transfer Protocol",
+      "explanation": "HTTP is the standard protocol for communication on the web."
     },
     {
-      "section": "Reasoning",
-      "question": "If A is the father of B, and B is the father of C, what is the relation of A to C? / यदि A, B का पिता है और B, C का पिता है, तो A का C से क्या संबंध है?",
-      "options": ["Father", "Grandfather", "Uncle", "Brother"],
-      "answer": "Grandfather",
-      "explanation": "A is the father of B, and B is the father of C → A is the grandfather of C."
+      "section": "Part-III(Computer Science)",
+      "question": "Which gate is known as a universal gate? / कौन सा गेट यूनिवर्सल गेट कहलाता है?",
+      "options": ["AND", "OR", "NAND", "XOR"],
+      "answer": "NAND",
+      "explanation": "NAND and NOR gates are universal gates, capable of implementing any logic circuit."
     },
     {
-      "section": "Reasoning",
-      "question": "Find the next term in the series: 2, 4, 8, 16, ? / श्रृंखला का अगला पद ज्ञात कीजिए: 2, 4, 8, 16, ?",
-      "options": ["20", "24", "30", "32"],
-      "answer": "32",
-      "explanation": "Each term is multiplied by 2. So, 16 × 2 = 32."
+      "section": "Part-III(Computer Science)",
+      "question": "Which of the following is not an operating system? / निम्नलिखित में से कौन सा ऑपरेटिंग सिस्टम नहीं है?",
+      "options": ["Linux", "Windows", "Oracle", "macOS"],
+      "answer": "Oracle",
+      "explanation": "Oracle is a database system, not an operating system."
     },
     {
-      "section": "Math",
-      "question": "What is the value of (12 × 12) – (10 × 10)? / (12 × 12) – (10 × 10) का मान क्या है?",
-      "options": ["24", "40", "44", "20"],
-      "answer": "44",
-      "explanation": "144 – 100 = 44."
+      "section": "Part-III(Computer Science)",
+      "question": "Which SQL command is used to remove a table permanently? / SQL में किसी टेबल को स्थायी रूप से हटाने के लिए कौन सा कमांड प्रयोग होता है?",
+      "options": ["DELETE", "DROP", "TRUNCATE", "REMOVE"],
+      "answer": "DROP",
+      "explanation": "DROP removes table structure and data permanently."
     },
     {
-      "section": "Math",
-      "question": "The average of first 10 natural numbers is: / पहले 10 प्राकृतिक संख्याओं का औसत क्या है?",
-      "options": ["4.5", "5", "5.5", "6"],
-      "answer": "5.5",
-      "explanation": "(1+10)/2 = 5.5."
+      "section": "Part-III(Computer Science)",
+      "question": "What does IP in IP address stand for? / IP address में IP का मतलब क्या है?",
+      "options": ["Internet Process", "Internet Protocol", "Internal Program", "Integrated Protocol"],
+      "answer": "Internet Protocol",
+      "explanation": "IP stands for Internet Protocol, which provides unique addressing on networks."
     },
     {
-      "section": "General Awareness",
-      "question": "Who is known as the father of Computer Science? / कंप्यूटर विज्ञान के जनक के रूप में किसे जाना जाता है?",
-      "options": ["Charles Babbage", "Alan Turing", "Dennis Ritchie", "John von Neumann"],
-      "answer": "Alan Turing",
-      "explanation": "Alan Turing is regarded as the father of Computer Science. Charles Babbage is called the father of Computers."
+      "section": "Part-III(Computer Science)",
+      "question": "Which data structure works on FIFO principle? / कौन सा डेटा स्ट्रक्चर FIFO सिद्धांत पर कार्य करता है?",
+      "options": ["Stack", "Queue", "Tree", "Graph"],
+      "answer": "Queue",
+      "explanation": "Queue follows First In, First Out principle."
     },
     {
-      "section": "General Awareness",
-      "question": "The 'Nalanda University' was a famous centre of learning in which state? / 'नालंदा विश्वविद्यालय' किस राज्य में एक प्रसिद्ध शिक्षा केंद्र था?",
-      "options": ["Uttar Pradesh", "Bihar", "Odisha", "Madhya Pradesh"],
-      "answer": "Bihar",
-      "explanation": "Nalanda University, one of the oldest universities, is located in Bihar."
+      "section": "Part-III(Computer Science)",
+      "question": "Which layer of the OSI model is responsible for routing? / OSI मॉडल की कौन सी लेयर रूटिंग के लिए जिम्मेदार है?",
+      "options": ["Application", "Network", "Transport", "Session"],
+      "answer": "Network",
+      "explanation": "Network layer handles routing and addressing of packets."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of these is not a programming language? / इनमें से कौन सी प्रोग्रामिंग भाषा नहीं है?",
+      "options": ["Python", "C++", "HTML", "Java"],
+      "answer": "HTML",
+      "explanation": "HTML is a markup language, not a programming language."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which sorting algorithm is based on divide and conquer? / कौन सा सॉर्टिंग एल्गोरिथ्म divide and conquer पद्धति पर आधारित है?",
+      "options": ["Bubble Sort", "Selection Sort", "Quick Sort", "Insertion Sort"],
+      "answer": "Quick Sort",
+      "explanation": "Quick Sort uses divide and conquer strategy."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "In binary, what is 1010 in decimal? / बाइनरी में 1010 का दशमलव में मान क्या है?",
+      "options": ["12", "10", "8", "15"],
+      "answer": "10",
+      "explanation": "Binary 1010 = 8 + 2 = 10."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which device is used to connect different networks? / अलग-अलग नेटवर्क को जोड़ने के लिए कौन सा उपकरण प्रयोग होता है?",
+      "options": ["Switch", "Hub", "Router", "Repeater"],
+      "answer": "Router",
+      "explanation": "Routers connect different networks together."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of these is an example of cloud computing platform? / इनमें से कौन सा क्लाउड कंप्यूटिंग प्लेटफॉर्म का उदाहरण है?",
+      "options": ["AWS", "Linux", "Oracle 11g", "Windows 10"],
+      "answer": "AWS",
+      "explanation": "Amazon Web Services (AWS) is a leading cloud computing platform."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which part of the CPU performs arithmetic operations? / CPU का कौन सा भाग अंकगणितीय कार्य करता है?",
+      "options": ["Control Unit", "Registers", "ALU", "Cache"],
+      "answer": "ALU",
+      "explanation": "Arithmetic Logic Unit performs arithmetic and logical operations."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "What does GUI stand for? / GUI का पूर्ण रूप क्या है?",
+      "options": ["Graphical User Interface", "Global User Interface", "General Utility Interface", "Graphical Utility Integration"],
+      "answer": "Graphical User Interface",
+      "explanation": "GUI stands for Graphical User Interface."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of the following is not an example of system software? / निम्नलिखित में से कौन सा सिस्टम सॉफ़्टवेयर का उदाहरण नहीं है?",
+      "options": ["Compiler", "Operating System", "Word Processor", "Device Driver"],
+      "answer": "Word Processor",
+      "explanation": "Word Processor is application software, not system software."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of the following is a volatile memory? / इनमें से कौन सी अस्थिर (volatile) मेमोरी है?",
+      "options": ["ROM", "Hard Disk", "RAM", "CD-ROM"],
+      "answer": "RAM",
+      "explanation": "RAM is volatile memory; data is lost when power is turned off."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which number system is base-16? / कौन सा संख्या पद्धति base-16 है?",
+      "options": ["Binary", "Octal", "Decimal", "Hexadecimal"],
+      "answer": "Hexadecimal",
+      "explanation": "Hexadecimal number system uses base 16."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of the following is not an example of DBMS? / इनमें से कौन DBMS का उदाहरण नहीं है?",
+      "options": ["MySQL", "Oracle", "MS Access", "Linux"],
+      "answer": "Linux",
+      "explanation": "Linux is an operating system, not a database management system."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "What is the default port number of HTTP? / HTTP का डिफ़ॉल्ट पोर्ट नंबर क्या है?",
+      "options": ["21", "25", "80", "110"],
+      "answer": "80",
+      "explanation": "HTTP typically uses port 80."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which search algorithm is used in Binary Search Tree? / बाइनरी सर्च ट्री में कौन सा खोज एल्गोरिथ्म उपयोग होता है?",
+      "options": ["Linear Search", "Binary Search", "Hashing", "DFS"],
+      "answer": "Binary Search",
+      "explanation": "Binary Search Tree is based on binary search logic."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which OS is an example of open-source? / कौन सा OS ओपन-सोर्स का उदाहरण है?",
+      "options": ["Windows", "Linux", "MacOS", "Solaris (Proprietary)"],
+      "answer": "Linux",
+      "explanation": "Linux is open-source and free to modify."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which tag in HTML is used to insert an image? / HTML में छवि जोड़ने के लिए कौन सा टैग उपयोग होता है?",
+      "options": ["<image>", "<img>", "<picture>", "<src>"],
+      "answer": "<img>",
+      "explanation": "The <img> tag is used for inserting images in HTML."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which command is used to view the contents of a directory in Linux? / Linux में किसी डायरेक्टरी की सामग्री देखने के लिए कौन सा कमांड उपयोग होता है?",
+      "options": ["ls", "cd", "pwd", "rm"],
+      "answer": "ls",
+      "explanation": "The ls command lists the contents of a directory."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which generation of computers used ICs (Integrated Circuits)? / किस पीढ़ी के कंप्यूटर में ICs (इंटीग्रेटेड सर्किट) का उपयोग हुआ?",
+      "options": ["First", "Second", "Third", "Fourth"],
+      "answer": "Third",
+      "explanation": "Third generation computers used Integrated Circuits."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which key uniquely identifies a record in a table? / कौन सी कुंजी किसी तालिका में रिकॉर्ड को विशिष्ट रूप से पहचानती है?",
+      "options": ["Foreign Key", "Primary Key", "Candidate Key", "Composite Key"],
+      "answer": "Primary Key",
+      "explanation": "Primary Key uniquely identifies each record in a table."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "What is the time complexity of binary search? / बाइनरी सर्च की समय जटिलता क्या है?",
+      "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+      "answer": "O(log n)",
+      "explanation": "Binary search divides the list in half at each step, hence O(log n)."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which network topology is most reliable? / कौन सी नेटवर्क टोपोलॉजी सबसे विश्वसनीय है?",
+      "options": ["Bus", "Ring", "Star", "Mesh"],
+      "answer": "Mesh",
+      "explanation": "Mesh topology provides multiple paths, making it most reliable."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which programming paradigm is followed by Java? / जावा किस प्रोग्रामिंग पैराडाइम का अनुसरण करता है?",
+      "options": ["Procedural", "Object-Oriented", "Functional", "Scripting"],
+      "answer": "Object-Oriented",
+      "explanation": "Java is based on the Object-Oriented Programming paradigm."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which is the smallest unit of data in computer? / कंप्यूटर में डेटा की सबसे छोटी इकाई कौन सी है?",
+      "options": ["Bit", "Byte", "Nibble", "Word"],
+      "answer": "Bit",
+      "explanation": "Bit (Binary Digit) is the smallest unit of data."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of the following is not an example of cloud service? / इनमें से कौन क्लाउड सेवा का उदाहरण नहीं है?",
+      "options": ["AWS", "Google Drive", "Dropbox", "BIOS"],
+      "answer": "BIOS",
+      "explanation": "BIOS is system firmware, not a cloud service."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which operator is used in SQL for pattern matching? / SQL में पैटर्न मिलान के लिए कौन सा ऑपरेटर उपयोग होता है?",
+      "options": ["LIKE", "IN", "BETWEEN", "EXISTS"],
+      "answer": "LIKE",
+      "explanation": "LIKE operator is used for pattern matching in SQL."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "In C, which loop is executed at least once? / C में कौन सा लूप कम से कम एक बार चलता है?",
+      "options": ["for", "while", "do-while", "nested for"],
+      "answer": "do-while",
+      "explanation": "do-while loop executes at least once before condition checking."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which software translates high-level language into machine code? / कौन सा सॉफ्टवेयर उच्च स्तरीय भाषा को मशीन कोड में अनुवाद करता है?",
+      "options": ["Compiler", "Interpreter", "Assembler", "Loader"],
+      "answer": "Compiler",
+      "explanation": "Compiler converts entire high-level program into machine code."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which computer language is known as the mother of all languages? / कौन सी कंप्यूटर भाषा को सभी भाषाओं की जननी कहा जाता है?",
+      "options": ["C", "FORTRAN", "Assembly", "Pascal"],
+      "answer": "C",
+      "explanation": "C is considered the base for many modern programming languages."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of the following is NOT an operating system? / इनमें से कौन सा ऑपरेटिंग सिस्टम नहीं है?",
+      "options": ["Windows", "Linux", "Oracle", "Unix"],
+      "answer": "Oracle",
+      "explanation": "Oracle is a database, not an operating system."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which logic gate gives output 1 when both inputs are 1? / कौन सा लॉजिक गेट तभी आउटपुट 1 देता है जब दोनों इनपुट 1 हों?",
+      "options": ["AND", "OR", "XOR", "NAND"],
+      "answer": "AND",
+      "explanation": "AND gate outputs 1 only if both inputs are 1."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which type of malware replicates itself without user intervention? / कौन सा मैलवेयर बिना उपयोगकर्ता की अनुमति के खुद को दोहराता है?",
+      "options": ["Virus", "Worm", "Trojan", "Spyware"],
+      "answer": "Worm",
+      "explanation": "Worms replicate automatically across systems."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which data structure uses LIFO principle? / कौन सा डेटा संरचना LIFO सिद्धांत का पालन करता है?",
+      "options": ["Queue", "Stack", "Array", "Linked List"],
+      "answer": "Stack",
+      "explanation": "Stack works on Last In First Out principle."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which function is used to find length of string in C? / C में स्ट्रिंग की लंबाई निकालने के लिए कौन सा फ़ंक्शन उपयोग होता है?",
+      "options": ["strlen()", "length()", "strlength()", "count()"],
+      "answer": "strlen()",
+      "explanation": "strlen() returns length of a string in C."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which tag in HTML is used to create a hyperlink? / HTML में हाइपरलिंक बनाने के लिए कौन सा टैग उपयोग होता है?",
+      "options": ["<link>", "<a>", "<href>", "<url>"],
+      "answer": "<a>",
+      "explanation": "The <a> tag is used for hyperlinks in HTML."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which layer of OSI model is responsible for encryption? / OSI मॉडल की कौन सी परत एन्क्रिप्शन के लिए जिम्मेदार है?",
+      "options": ["Network", "Data Link", "Presentation", "Transport"],
+      "answer": "Presentation",
+      "explanation": "Presentation layer handles encryption and decryption."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "What does IP stand for in networking? / नेटवर्किंग में IP का पूर्ण रूप क्या है?",
+      "options": ["Internal Protocol", "Internet Protocol", "Intranet Process", "Information Program"],
+      "answer": "Internet Protocol",
+      "explanation": "IP stands for Internet Protocol."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which generation of computer used microprocessors? / किस पीढ़ी के कंप्यूटर में माइक्रोप्रोसेसर का उपयोग हुआ?",
+      "options": ["Second", "Third", "Fourth", "Fifth"],
+      "answer": "Fourth",
+      "explanation": "Fourth generation computers used microprocessors."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which operator is used in C for modulus? / C में modulus के लिए कौन सा ऑपरेटर उपयोग होता है?",
+      "options": ["%", "//", "/", "**"],
+      "answer": "%",
+      "explanation": "The % operator gives remainder in C."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which type of memory is permanent? / कौन सी मेमोरी स्थायी होती है?",
+      "options": ["RAM", "ROM", "Cache", "Register"],
+      "answer": "ROM",
+      "explanation": "ROM stores data permanently."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which programming language is used for Android app development? / Android ऐप विकास के लिए कौन सी प्रोग्रामिंग भाषा उपयोग होती है?",
+      "options": ["Java", "Python", "PHP", "C"],
+      "answer": "Java",
+      "explanation": "Java is widely used for Android app development."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "What does BIOS stand for? / BIOS का पूर्ण रूप क्या है?",
+      "options": ["Basic Integrated Operating System", "Basic Input Output System", "Binary Input Output Setup", "Basic Instruction Operating System"],
+      "answer": "Basic Input Output System",
+      "explanation": "BIOS means Basic Input Output System."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which protocol is used for secure web browsing? / सुरक्षित वेब ब्राउज़िंग के लिए कौन सा प्रोटोकॉल उपयोग होता है?",
+      "options": ["HTTP", "FTP", "HTTPS", "SMTP"],
+      "answer": "HTTPS",
+      "explanation": "HTTPS ensures secure communication over the web."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which device connects multiple networks together? / कौन सा उपकरण कई नेटवर्क को जोड़ता है?",
+      "options": ["Switch", "Router", "Hub", "Repeater"],
+      "answer": "Router",
+      "explanation": "Router connects different networks."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which file extension is used for Python files? / Python फ़ाइलों के लिए कौन सा एक्सटेंशन उपयोग होता है?",
+      "options": [".java", ".py", ".c", ".php"],
+      "answer": ".py",
+      "explanation": "Python files use .py extension."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which part of the computer performs calculations? / कंप्यूटर का कौन सा भाग गणना करता है?",
+      "options": ["RAM", "ALU", "CU", "ROM"],
+      "answer": "ALU",
+      "explanation": "ALU performs all arithmetic and logical calculations."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of these is an example of cloud storage? / इनमें से कौन क्लाउड स्टोरेज का उदाहरण है?",
+      "options": ["Dropbox", "Pendrive", "Hard Disk", "DVD"],
+      "answer": "Dropbox",
+      "explanation": "Dropbox is a cloud storage service."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which memory is used to store booting instructions? / बूटिंग निर्देशों को संग्रहित करने के लिए कौन सी मेमोरी उपयोग होती है?",
+      "options": ["RAM", "ROM", "Cache", "Virtual Memory"],
+      "answer": "ROM",
+      "explanation": "Booting instructions are stored in ROM."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of these is a spreadsheet software? / इनमें से कौन स्प्रेडशीट सॉफ्टवेयर है?",
+      "options": ["MS Word", "MS Excel", "MS PowerPoint", "MS Access"],
+      "answer": "MS Excel",
+      "explanation": "MS Excel is used for spreadsheets."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which virus spreads through email attachments? / कौन सा वायरस ईमेल अटैचमेंट के माध्यम से फैलता है?",
+      "options": ["Worm", "Trojan", "Macro Virus", "Spyware"],
+      "answer": "Macro Virus",
+      "explanation": "Macro viruses often spread via email attachments."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which shortcut is used to undo an action? / किसी कार्य को Undo करने के लिए कौन सा शॉर्टकट है?",
+      "options": ["Ctrl + U", "Ctrl + Y", "Ctrl + Z", "Ctrl + R"],
+      "answer": "Ctrl + Z",
+      "explanation": "Ctrl + Z is the Undo shortcut."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which device is used to project output on a large screen? / बड़े स्क्रीन पर आउटपुट दिखाने के लिए कौन सा उपकरण उपयोग होता है?",
+      "options": ["Printer", "Monitor", "Projector", "Scanner"],
+      "answer": "Projector",
+      "explanation": "Projector displays output on large screens."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which of the following is an example of system software? / इनमें से कौन सिस्टम सॉफ्टवेयर का उदाहरण है?",
+      "options": ["MS Word", "MS Excel", "Windows", "Photoshop"],
+      "answer": "Windows",
+      "explanation": "Windows is an operating system, hence system software."
+    },
+    {
+      "section": "Part-III(Computer Science)",
+      "question": "Which type of network covers a small area like office or home? / कौन सा नेटवर्क छोटे क्षेत्र जैसे ऑफिस या घर को कवर करता है?",
+      "options": ["WAN", "MAN", "LAN", "PAN"],
+      "answer": "LAN",
+      "explanation": "LAN (Local Area Network) covers a small area."
     }
   ]
 }
