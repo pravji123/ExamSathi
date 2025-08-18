@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Test Result</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Result - Testara</title>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3KJB0Y4C6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J3KJB0Y4C6');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3KJB0Y4C6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J3KJB0Y4C6');
+  </script>
   <style>
     body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 0; }
     header { background: #007bff; color: white; padding: 15px; text-align: center; font-size: 1.4rem; }
@@ -35,126 +34,193 @@
   </style>
 </head>
 <body>
+  <header>🎉 Test Result</header>
+  <div class="container">
+    <h2>Summary</h2>
+    <div class="summary-box">
+      <div class="card"><strong id="userName"></strong><br>👤 Candidate</div>
+      <div class="card"><strong id="totalQuestions"></strong><br>Total Questions</div>
+      <div class="card"><strong id="attempted"></strong><br>Attempted</div>
+      <div class="card"><strong id="correct"></strong><br>✅ Correct</div>
+      <div class="card"><strong id="wrong"></strong><br>❌ Wrong</div>
+      <div class="card"><strong id="percentage"></strong>%<br>Percentage_Score</div>
+      <div class="card"><strong id="timeTaken"></strong><br>⏱ Total Time</div>
+    </div>
 
-<header>🎉 Test Result</header>
+    <h2>Section-wise Summary</h2>
+    <div id="sectionSummary"></div>
 
-<div class="container">
-  <h2>Summary</h2>
+    <div style="text-align:center;">
+      <button class="btn btn-primary" onclick="toggleReview()">📖 Review Questions</button>
+      <button class="btn btn-secondary" onclick="window.location.href='index.html'">🏠 Go Home</button>
+    </div>
 
-  <div class="summary-box">
-    <div class="card"><strong id="userName"></strong><br>👤 Candidate</div>
-    <div class="card"><strong id="totalQuestions"></strong><br>Total Questions</div>
-    <div class="card"><strong id="attempted"></strong><br>Attempted</div>
-    <div class="card"><strong id="correct"></strong><br>✅ Correct</div>
-    <div class="card"><strong id="wrong"></strong><br>❌ Wrong</div>
-    <div class="card"><strong id="percentage"></strong>%<br>Score</div>
-    <div class="card"><strong id="timeTaken"></strong><br>⏱ Total Time</div>
+    <div id="reviewSection" class="hidden">
+      <h2>Review Questions</h2>
+      <div id="reviewList"></div>
+    </div>
   </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Test Name</th>
-        <th>Total</th>
-        <th>Attempted</th>
-        <th>Correct</th>
-        <th>Wrong</th>
-        <th>Score</th>
-        <th>Percentage</th>
-        <th>Time Taken</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td id="t_testName"></td>
-        <td id="t_total"></td>
-        <td id="t_attempted"></td>
-        <td id="t_correct"></td>
-        <td id="t_wrong"></td>
-        <td id="t_score"></td>
-        <td id="t_percent"></td>
-        <td id="t_time"></td>
-      </tr>
-    </tbody>
-  </table>
+  <script>
+    function loadResult(){
+      const data = JSON.parse(localStorage.getItem("quizResult") || "{}");
+      if(!data.questions){
+        document.body.innerHTML = "<h2 style='text-align:center;color:red;'>No result found!</h2>";
+        return;
+      }
 
-  <div style="text-align:center;">
-    <button class="btn btn-primary" onclick="toggleReview()">📖 Review Questions</button>
-    <button class="btn btn-secondary" onclick="window.location.href='index.html'">🏠 Go Home</button>
-  </div>
+      const { name, total, correct, wrong, time, answers, questions, perQuestionTime, testTitle } = data;
+      const attempted = correct + wrong;
+      const percentage = ((correct / total) * 100).toFixed(2);
+      // const score = correct - (wrong * 0);
+      let score = 0;
+      questions.forEach((q, i) => {
+        const userAns = answers[i];
+        if (userAns === q.answer) {
+          score += 1; // or q.marks if present
+        } else if (userAns && userAns !== "Not Answered") {
+          score -= q.negative ?? 0; // ✅ safe, only deduct if defined
+        }
+      });
 
-  <div id="reviewSection" class="hidden">
-    <h2>Review Questions</h2>
-    <div id="reviewList"></div>
-  </div>
-</div>
+      // ✅ Fill summary cards
+      document.getElementById("userName").innerText = name;
+      document.getElementById("totalQuestions").innerText = total;
+      document.getElementById("attempted").innerText = attempted;
+      document.getElementById("correct").innerText = correct;
+      document.getElementById("wrong").innerText = wrong;
+      document.getElementById("percentage").innerText = percentage;
+      document.getElementById("timeTaken").innerText = time;
 
-<script>
-function loadResult(){
-  const data = JSON.parse(localStorage.getItem("quizResult") || "{}");
-  if(!data.questions){
-    document.body.innerHTML = "<h2 style='text-align:center;color:red;'>No result found!</h2>";
-    return;
-  }
+      // ✅ Section-wise Summary
+      const sectionStats = {};  
+      let grandTotal = { total: 0, attempted: 0, correct: 0, wrong: 0, score: 0, time: 0 };
 
-  const { name, total, correct, wrong, time, answers, questions, perQuestionTime, testTitle } = data;
-  const attempted = correct + wrong;
-  const percentage = ((correct / total) * 100).toFixed(2);
-  const score = correct - (wrong * 0.25); // Assuming -0.25 per wrong
+      // Load section time from localStorage
+      const sectionTime = JSON.parse(localStorage.getItem("sectionTime") || "{}");
 
-  // ✅ Fill summary cards
-  document.getElementById("userName").innerText = name;
-  document.getElementById("totalQuestions").innerText = total;
-  document.getElementById("attempted").innerText = attempted;
-  document.getElementById("correct").innerText = correct;
-  document.getElementById("wrong").innerText = wrong;
-  document.getElementById("percentage").innerText = percentage;
-  document.getElementById("timeTaken").innerText = time;
+      questions.forEach((q, i) => {
+        const sec = q.section || "General";
+        if(!sectionStats[sec]){
+          sectionStats[sec] = { total: 0, correct: 0, wrong: 0, attempted: 0, score: 0, time: 0 };
+        }
+        sectionStats[sec].total++;
+        grandTotal.total++;
 
-  // ✅ Fill table row
-  document.getElementById("t_testName").innerText= testTitle;
-  document.getElementById("t_total").innerText = total;
-  document.getElementById("t_attempted").innerText = attempted;
-  document.getElementById("t_correct").innerText = correct;
-  document.getElementById("t_wrong").innerText = wrong;
-  document.getElementById("t_score").innerText = score.toFixed(2);
-  document.getElementById("t_percent").innerText = percentage+"%";
-  document.getElementById("t_time").innerText = time;
+        const userAns = answers[i];
+        if(userAns){
+          sectionStats[sec].attempted++;
+          grandTotal.attempted++;
 
-  // ✅ Build Review List
-  const reviewDiv = document.getElementById("reviewList");
-  reviewDiv.innerHTML = "";
+          if(userAns === q.answer){
+            sectionStats[sec].correct++;
+            grandTotal.correct++;
+            const marks = q.marks ?? testData.marks ?? 1;
+            sectionStats[sec].score += marks;
+            grandTotal.score += marks;
+          } else {
+            sectionStats[sec].wrong++;
+            grandTotal.wrong++;
+            const neg = q.negative ?? testData.negative ?? 0;
+            sectionStats[sec].score -= neg;
+            grandTotal.score -= neg;
+          }
+        }
+      });
 
-  questions.forEach((q, i) => {
-    const userAns = answers[i] || "Not Answered";
-    const isCorrect = userAns === q.answer;
-    const timeSpent = perQuestionTime[i] ? perQuestionTime[i] + "s" : "0s";
+      // ✅ Add section times (convert sec → mm:ss)
+      for (const sec in sectionStats) {
+        if (sectionTime[sec] !== undefined) {
+          sectionStats[sec].time = sectionTime[sec];
+          grandTotal.time += sectionTime[sec];
+        }
+      }
 
-    let html = `<div class="review-question">
-      <p><strong>Q${q.globalIndex}:</strong> ${q.question}</p>
-      <ul>`;
-    q.options.forEach(opt => {
-      let style = "";
-      if(opt === q.answer) style = "✅ Correct Answer";
-      if(opt === userAns && !isCorrect) style = "❌ Your Choice";
-      html += `<li>${opt} ${style ? "<span class='"+(opt===q.answer?"correct":"wrong")+"'>("+style+")</span>" : ""}</li>`;
-    });
-    html += `</ul>
-      <p><strong>Your Answer:</strong> ${userAns === q.answer ? "<span class='correct'>"+userAns+"</span>" : userAns === "Not Answered" ? "<span style='color:gray'>Not Answered</span>" : "<span class='wrong'>"+userAns+"</span>"}</p>
-      <p><strong>Correct Answer:</strong> <span class="correct">${q.answer}</span></p>
-      <p><strong>Time Spent:</strong> ${timeSpent}</p>
-      <div class="explanation"><strong>Explanation:</strong> ${q.explanation || "No explanation provided."}</div>
-    </div>`;
+      function formatTime(seconds){
+        const m = Math.floor(seconds / 60);
+        const s = seconds % 60;
+        return `${m}m ${s}s`;
+      }
 
-    reviewDiv.innerHTML += html;
-  });
-}
 
-function toggleReview(){
-  document.getElementById("reviewSection").classList.toggle("hidden");
-}
+      let html = `<table>
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Total</th>
+            <th>Attempted</th>
+            <th>Correct</th>
+            <th>Wrong</th>
+            <th>Score</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>`;
 
-window.onload = loadResult;
-</script>
+      for(const sec in sectionStats){
+        const s = sectionStats[sec];
+        const percent = ((s.correct / s.total) * 100).toFixed(2);
+        html += `<tr>
+          <td>${sec}</td>
+          <td>${s.total}</td>
+          <td>${s.attempted}</td>
+          <td>${s.correct}</td>
+          <td>${s.wrong}</td>
+          <td>${s.score.toFixed(2)}</td>
+          <td>${percent}%</td>
+        </tr>`;
+      }
+
+      // ✅ Add grand total row
+      const grandPercent = ((grandTotal.correct / grandTotal.total) * 100).toFixed(2);
+      html += `<tr style="font-weight:bold; background:#f0f0f0">
+        <td>Total</td>
+        <td>${grandTotal.total}</td>
+        <td>${grandTotal.attempted}</td>
+        <td>${grandTotal.correct}</td>
+        <td>${grandTotal.wrong}</td>
+        <td>${grandTotal.score.toFixed(2)}</td>
+        <td>${grandPercent}%</td>
+      </tr>`;
+
+      html += `</tbody></table>`;
+      document.getElementById("sectionSummary").innerHTML = html;
+
+
+      // ✅ Build Review List
+      const reviewDiv = document.getElementById("reviewList");
+      reviewDiv.innerHTML = "";
+
+      questions.forEach((q, i) => {
+        const userAns = answers[i] || "Not Answered";
+        const isCorrect = userAns === q.answer;
+        const timeSpent = perQuestionTime[i] ? perQuestionTime[i] + "s" : "0s";
+
+        let html = `<div class="review-question">
+          <p><strong>Q${q.globalIndex}:</strong> ${q.question}</p>
+          <ul>`;
+        q.options.forEach(opt => {
+          let style = "";
+          if(opt === q.answer) style = "✅ Correct Answer";
+          if(opt === userAns && !isCorrect) style = "❌ Your Choice";
+          html += `<li>${opt} ${style ? "<span class='"+(opt===q.answer?"correct":"wrong")+"'>("+style+")</span>" : ""}</li>`;
+        });
+        html += `</ul>
+          <p><strong>Your Answer:</strong> ${userAns === q.answer ? "<span class='correct'>"+userAns+"</span>" : userAns === "Not Answered" ? "<span style='color:gray'>Not Answered</span>" : "<span class='wrong'>"+userAns+"</span>"}</p>
+          <p><strong>Correct Answer:</strong> <span class="correct">${q.answer}</span></p>
+          <p><strong>Time Spent:</strong> ${timeSpent}</p>
+          <div class="explanation"><strong>Explanation:</strong> ${q.explanation || "No explanation provided."}</div>
+        </div>`;
+
+        reviewDiv.innerHTML += html;
+      });
+    }
+
+    function toggleReview(){
+      document.getElementById("reviewSection").classList.toggle("hidden");
+    }
+
+    window.onload = loadResult;
+  </script>
 </body>
 </html>
