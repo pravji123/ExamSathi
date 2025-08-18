@@ -16,11 +16,10 @@
     body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 0; }
     header { background: #007bff; color: white; padding: 15px; text-align: center; font-size: 1.4rem; }
     .container { max-width: 900px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); }
-    h2 { margin-top: 0; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
     th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }
     th { background: #007bff; color: white; }
-    .summary-box { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; }
+    .summary-box { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
     .card { background: #f8f9fa; padding: 15px; border-radius: 6px; text-align: center; flex: 1; min-width: 120px; }
     .btn { padding: 10px 16px; margin: 10px 5px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
     .btn-primary { background: #007bff; color: white; }
@@ -31,13 +30,16 @@
     .correct { color: green; font-weight: bold; }
     .wrong { color: red; font-weight: bold; }
     .explanation { background: #f1f1f1; padding: 8px; margin-top: 8px; border-left: 4px solid #007bff; }
+    table tr:nth-child(even) {
+      background: #f0f0f0;
+    }
+
   </style>
 </head>
 <body>
   <div id="header"></div>
-  <header>🎉 Test Result</header>
   <div class="container">
-    <h2>Summary</h2>
+    <header>🎉 Test Result - Summary</header>
     <div class="summary-box">
       <div class="card"><strong id="userName"></strong><br>👤 Candidate</div>
       <div class="card"><strong id="totalQuestions"></strong><br>Total Questions</div>
@@ -48,7 +50,7 @@
       <div class="card"><strong id="timeTaken"></strong><br>⏱ Total Time</div>
     </div>
 
-    <h2>Section-wise Summary</h2>
+    <h2 style="text-align: center;">Section-Wise Summary</h2>
     <div id="sectionSummary"></div>
 
     <div style="text-align:center;">
@@ -73,8 +75,6 @@
 
       const { name, total, correct, wrong, time, answers, questions, perQuestionTime, testTitle } = data;
       const attempted = correct + wrong;
-      const percentage = ((correct / total) * 100).toFixed(2);
-      // const score = correct - (wrong * 0);
       let score = 0;
       questions.forEach((q, i) => {
         const userAns = answers[i];
@@ -84,6 +84,7 @@
           score -= q.negative ?? 0; // ✅ safe, only deduct if defined
         }
       });
+      const percentage = ((score / total) * 100).toFixed(2);
 
       // ✅ Fill summary cards
       document.getElementById("userName").innerText = name;
@@ -154,14 +155,14 @@
             <th>Correct</th>
             <th>Wrong</th>
             <th>Score</th>
-            <th>Percentage</th>
+            <th>Accuracy</th>
           </tr>
         </thead>
         <tbody>`;
 
       for(const sec in sectionStats){
         const s = sectionStats[sec];
-        const percent = ((s.correct / s.total) * 100).toFixed(2);
+        const accuracy = ((s.correct / s.total) * 100).toFixed(2);
         html += `<tr>
           <td>${sec}</td>
           <td>${s.total}</td>
@@ -169,20 +170,20 @@
           <td>${s.correct}</td>
           <td>${s.wrong}</td>
           <td>${s.score.toFixed(2)}</td>
-          <td>${percent}%</td>
+          <td>${accuracy}%</td>
         </tr>`;
       }
 
       // ✅ Add grand total row
-      const grandPercent = ((grandTotal.correct / grandTotal.total) * 100).toFixed(2);
-      html += `<tr style="font-weight:bold; background:#f0f0f0">
+      const grandAccuracy = ((grandTotal.correct / grandTotal.total) * 100).toFixed(2);
+      html += `<tr style="font-weight:bold; background:#e0e0e0">
         <td>Total</td>
         <td>${grandTotal.total}</td>
         <td>${grandTotal.attempted}</td>
         <td>${grandTotal.correct}</td>
         <td>${grandTotal.wrong}</td>
         <td>${grandTotal.score.toFixed(2)}</td>
-        <td>${grandPercent}%</td>
+        <td>${grandAccuracy}%</td>
       </tr>`;
 
       html += `</tbody></table>`;
