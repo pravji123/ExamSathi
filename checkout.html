@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Secure Payment | Testara</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root{
+      --brand:#0074cc;
+      --brand-d:#005fa3;
+      --bg:#f5f7fa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --ok:#0ea760;
+      --danger:#ef4444;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:var(--bg);color:#111}
+    .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+    .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.06);padding:18px}
+    h1{margin:0 0 8px;color:var(--brand)}
+    .sale-banner{
+      display:none;align-items:center;gap:10px;
+      background:linear-gradient(135deg,#ff3b30,#ff6b6b);color:#fff;
+      padding:10px 14px;border-radius:10px;font-weight:700;margin:0 0 14px
+    }
+    .sale-banner small{font-weight:500;opacity:.95}
+    #countdown{font-weight:700}
+
+    /* Order summary */
+    .prod{display:flex;gap:14px}
+    .prod img{width:96px;height:120px;object-fit:cover;border-radius:10px;border:1px solid #eee;background:#fafafa}
+    .prod h3{margin:0 0 4px;font-size:18px}
+    .muted{color:var(--muted);font-size:14px}
+    .price-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:8px}
+    .price-row del{color:#888}
+    .price-row .final{color:#e60000;font-weight:800}
+    .badge{background:#ffe8e8;color:#c21d1d;padding:4px 8px;border-radius:8px;font-size:12px;font-weight:700}
+    .qty{margin-top:12px;display:flex;align-items:center;gap:10px}
+    .qty input{width:72px;padding:8px;border:1px solid #ddd;border-radius:8px}
+
+    .totals{margin-top:14px;border-top:1px dashed #e5e7eb;padding-top:12px}
+    .totals .row{display:flex;justify-content:space-between;margin:6px 0}
+    .totals .row.bold{font-weight:800}
+    .save{color:var(--ok);font-weight:700}
+
+    /* Form + Payments */
+    form .field{margin-bottom:12px}
+    label{display:block;font-size:14px;margin-bottom:6px}
+    input[type="text"],input[type="email"],input[type="tel"]{
+      width:100%;padding:10px;border:1px solid #d1d5db;border-radius:10px
+    }
+    .pmethods{display:flex;gap:8px;margin:8px 0 14px}
+    .tab{padding:10px 12px;border:1px solid #dbe2ea;border-radius:10px;background:#f8fafc;cursor:pointer;font-weight:700}
+    .tab.active{background:#eaf3ff;border-color:#cfe3ff;color:#0b57d0}
+    .help{font-size:13px;color:var(--muted)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 16px;border:none;border-radius:10px;background:var(--brand);color:#fff;
+      font-weight:800;cursor:pointer
+    }
+    .btn:hover{background:var(--brand-d)}
+    .btn.outline{background:#fff;color:var(--brand);border:1px solid var(--brand)}
+    .disclaimer{font-size:12px;color:var(--muted);margin-top:10px}
+    .row-flex{display:flex;gap:10px;flex-wrap:wrap}
+
+    .pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#f1f5f9;color:#0f172a;font-size:12px;font-weight:700}
+    .warn{color:var(--danger);font-weight:700}
+    .hr{height:1px;background:#eef2f7;margin:12px 0}
+
+    /* Sticky resume on mobile */
+    @media (max-width:900px){
+      .sticky-total{position:sticky;bottom:0;left:0;right:0;background:#fff;padding:10px;border-top:1px solid #eee;box-shadow:0 -6px 18px rgba(0,0,0,.06);z-index:5;border-bottom-left-radius:12px;border-bottom-right-radius:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="sale-banner" id="saleBanner">
+      <span>🔥 Global Offer</span>
+      <span id="offerText" class="pill"></span>
+      <small id="countdown">Ends in —</small>
+    </div>
+
+    <h1>Checkout</h1>
+    <p class="muted">Complete your purchase securely. Digital delivery via email / WhatsApp right after confirmation.</p>
+
+    <div class="grid">
+      <!-- Left: Order summary -->
+      <section class="card" id="orderCard">
+        <div class="prod">
+          <img id="pimg" src="" alt="ebook">
+          <div>
+            <h3 id="ptitle">Loading…</h3>
+            <div class="muted" id="pcat"></div>
+            <div class="price-row">
+              <del id="porig"></del>
+              <span class="final" id="pfinal"></span>
+              <span class="badge" id="pbadge" style="display:none"></span>
+            </div>
+            <div class="qty">
+              <label for="qty">Qty</label>
+              <input id="qty" type="number" min="1" value="1">
+              <span class="muted">Instant digital delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="totals">
+          <div class="row"><span>Subtotal</span><span id="subtotal">₹0</span></div>
+          <div class="row"><span>Discount</span><span id="discount">– ₹0</span></div>
+          <div class="row"><span>Shipping</span><span>₹0</span></div>
+          <div class="row bold"><span>Total</span><span id="grand">₹0</span></div>
+          <div class="row"><span class="save" id="saveText"></span><span id="discountPercentText" class="pill"></span></div>
+        </div>
+
+        <div class="sticky-total">
+          <div class="row-flex">
+            <span class="pill">Secure • 256-bit</span>
+            <span class="pill">Instant PDF access</span>
+            <span class="pill">Support: 8392950977</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Buyer + Payment -->
+      <section class="card">
+        <h3>Buyer Details</h3>
+        <form id="buyerForm">
+          <div class="field"><label>Name</label><input type="text" id="name" required placeholder="Your full name"></div>
+          <div class="field"><label>Email</label><input type="email" id="email" required placeholder="you@example.com"></div>
+          <div class="field"><label>WhatsApp / Phone</label><input type="tel" id="phone" required placeholder="10-digit number"></div>
+        </form>
+
+        <div class="hr"></div>
+
+        <h3>Payment Method</h3>
+        <div class="pmethods">
+          <button class="tab active" data-method="upi" type="button">UPI</button>
+          <button class="tab" data-method="card" type="button" title="Coming soon" aria-disabled="true">Card (soon)</button>
+        </div>
+
+        <!-- UPI Pay -->
+        <div id="UPIBox">
+          <p class="help">Pay using any UPI app (GPay/PhonePe/Paytm/BHIM). Copy the UPI ID or tap “Pay via UPI”.</p>
+          <div class="row-flex">
+            <input type="text" id="upiID" value="testara@upi" readonly style="flex:1;padding:10px;border:1px solid #d1d5db;border-radius:10px">
+            <button class="btn outline" id="copyUPI" type="button">Copy UPI ID</button>
+          </div>
+          <div class="hr"></div>
+          <button class="btn" id="payUPI" type="button">Pay via UPI app</button>
+          <p class="disclaimer">After you complete the payment, click “I’ve paid” to notify us with your details. You’ll receive the PDF on your email/WhatsApp.</p>
+          <button class="btn outline" id="confirmPaid" type="button">I’ve paid – Send confirmation</button>
+        </div>
+
+        <!-- Card placeholder -->
+        <div id="CardBox" style="display:none">
+          <p class="help warn">Card payments will be available soon. Please use UPI for now.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Optional shared header/footer loader -->
+  <!-- <script src="load-header-footer.js"></script> -->
+
+  <script>
+    // ====== CONFIG ======
+    const UPI_ID = "7492950977@upi";                  // TODO: set your UPI ID
+    const SUPPORT_WHATSAPP = "8392950977";         // WhatsApp for confirmation
+    const CURRENCY = "INR";
+
+    // ====== UTILS ======
+    const fmt = n => "₹" + Number(n).toLocaleString("en-IN");
+    const qs = s => document.querySelector(s);
+    const qsa = s => Array.from(document.querySelectorAll(s));
+
+    // ====== STATE ======
+    const params = new URLSearchParams(window.location.search);
+    const bookId = params.get("id");
+
+    let book = null;
+    let globalOffer = 0;
+    let validTill = null;
+    let offerValid = false;
+    let originalPrice = 0;
+    let finalUnitPrice = 0; // per unit after applying discount
+    let discountPercent = 0;
+
+    // ====== LOAD DATA ======
+    Promise.all([
+      fetch("global_offer.json").then(r => r.json()).catch(() => ({ globalOffer: 0, validTill: null })),
+      fetch("ebooks.json").then(r => r.json())
+    ]).then(([offerData, ebooksData]) => {
+      // normalize ebooks shape: array or {ebooks: []}
+      const ebooks = Array.isArray(ebooksData) ? ebooksData : (ebooksData.ebooks || []);
+      book = ebooks.find(b => b.id === bookId) || ebooks[0];
+
+      if (!book) {
+        alert("Book not found.");
+        return;
+      }
+
+      // fill product card
+      qs("#pimg").src = book.image;
+      qs("#ptitle").innerText = book.title;
+      qs("#pcat").innerText = (book.category || "").toUpperCase();
+
+      originalPrice = parseFloat(book.originalPrice);
+
+      // global offer
+      globalOffer = Number(offerData.globalOffer || offerData.global || 0);
+      validTill = offerData.validTill ? new Date(offerData.validTill) : null;
+      offerValid = globalOffer > 0 && validTill && new Date() <= validTill;
+
+      // compute price
+      applyPricing();
+      // render banner + countdown if applicable
+      renderGlobalBanner();
+
+      // events
+      qs("#qty").addEventListener("input", recalcTotals);
+      qsa(".tab").forEach(btn => btn.addEventListener("click", onTab));
+      qs("#copyUPI").addEventListener("click", onCopyUPI);
+      qs("#payUPI").addEventListener("click", onPayUPI);
+      qs("#confirmPaid").addEventListener("click", onConfirmPaid);
+    });
+
+    function applyPricing() {
+      if (offerValid) {
+        finalUnitPrice = Math.round(originalPrice * (1 - globalOffer / 100));
+        discountPercent = globalOffer;
+        qs("#pbadge").style.display = "inline-block";
+        qs("#pbadge").innerText = `-${discountPercent}% Global`;
+      } else {
+        finalUnitPrice = parseFloat(book.discountPrice);
+        discountPercent = Math.round(((originalPrice - finalUnitPrice) / originalPrice) * 100);
+        qs("#pbadge").style.display = discountPercent > 0 ? "inline-block" : "none";
+        qs("#pbadge").innerText = discountPercent > 0 ? `-${discountPercent}%` : "";
+      }
+
+      qs("#porig").innerText = fmt(originalPrice);
+      qs("#pfinal").innerText = fmt(finalUnitPrice);
+      qs("#discountPercentText").innerText = discountPercent ? `(${discountPercent}% OFF)` : "";
+      recalcTotals();
+    }
+
+    function recalcTotals() {
+      const qty = Math.max(1, Number(qs("#qty").value || 1));
+      const subtotal = originalPrice * qty;
+      const total = finalUnitPrice * qty;
+      const save = subtotal - total;
+
+      qs("#subtotal").innerText = fmt(subtotal);
+      qs("#discount").innerText = "– " + fmt(save);
+      qs("#grand").innerText = fmt(total);
+      qs("#saveText").innerText = save > 0 ? `You save ${fmt(save)}` : "";
+    }
+
+    // ====== GLOBAL BANNER + COUNTDOWN ======
+    let timerId = null;
+    function renderGlobalBanner() {
+      if (!offerValid) {
+        qs("#saleBanner").style.display = "none";
+        return;
+      }
+      qs("#saleBanner").style.display = "flex";
+      qs("#offerText").innerText = `${globalOffer}% OFF (Global)`;
+
+      const tick = () => {
+        const now = Date.now();
+        const dist = validTill.getTime() - now;
+        if (dist <= 0) {
+          clearInterval(timerId);
+          // expire global offer -> switch to local discount
+          offerValid = false;
+          qs("#saleBanner").style.display = "none";
+          applyPricing();
+          return;
+        }
+        const d = Math.floor(dist / (1000*60*60*24));
+        const h = Math.floor((dist % (1000*60*60*24))/(1000*60*60));
+        const m = Math.floor((dist % (1000*60*60))/(1000*60));
+        const s = Math.floor((dist % (1000*60))/1000);
+        qs("#countdown").innerText = `Ends in ${d}d ${h}h ${m}m ${s}s`;
+      };
+      tick();
+      timerId = setInterval(tick, 1000);
+    }
+
+    // ====== TABS ======
+    function onTab(e){
+      qsa(".tab").forEach(t => t.classList.remove("active"));
+      e.currentTarget.classList.add("active");
+      const method = e.currentTarget.dataset.method;
+      qs("#UPIBox").style.display = method === "upi" ? "block" : "none";
+      qs("#CardBox").style.display = method === "card" ? "block" : "none";
+    }
+
+    // ====== UPI HELPERS ======
+    function onCopyUPI(){
+      const upi = qs("#upiID");
+      upi.value = UPI_ID;
+      upi.select();
+      upi.setSelectionRange(0, UPI_ID.length);
+      const ok = document.execCommand("copy");
+      upi.blur();
+      alert(ok ? "UPI ID copied!" : "Copy failed, please copy manually.");
+    }
+
+    function onPayUPI(){
+      // Build UPI intent
+      const name = (qs("#name").value || "Testara").trim();
+      const qty = Math.max(1, Number(qs("#qty").value || 1));
+      const amount = finalUnitPrice * qty;
+
+      const txnNote = encodeURIComponent(`${book.title} x${qty}`);
+      const payee = encodeURIComponent(UPI_ID);
+      const payeeName = encodeURIComponent(name);
+      const amt = encodeURIComponent(amount.toFixed(2));
+      const url = `upi://pay?pa=${payee}&pn=${payeeName}&am=${amt}&cu=${CURRENCY}&tn=${txnNote}`;
+
+      // Open UPI app
+      window.location.href = url;
+    }
+
+    function onConfirmPaid(){
+      // Simple form validation
+      const name = qs("#name").value.trim();
+      const email = qs("#email").value.trim();
+      const phone = qs("#phone").value.trim();
+      if (!name || !email || !/^\S+@\S+\.\S+$/.test(email) || !/^\d{10}$/.test(phone)) {
+        alert("Please enter valid name, email and 10-digit phone.");
+        return;
+      }
+      const qty = Math.max(1, Number(qs("#qty").value || 1));
+      const amount = finalUnitPrice * qty;
+
+      // WhatsApp prefill
+      const msg =
+`Hello Testara 👋
+I have completed the payment for:
+• Book: ${book.title}
+• Qty: ${qty}
+• Amount: ${fmt(amount)}
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Please share the download link. Thank you!`;
+
+      const wa = `https://wa.me/91${SUPPORT_WHATSAPP}?text=${encodeURIComponent(msg)}`;
+      window.open(wa, "_blank");
+    }
+
+    // set UPI ID into field
+    document.addEventListener("DOMContentLoaded", () => {
+      qs("#upiID").value = UPI_ID;
+    });
+  </script>
+</body>
+</html>
