@@ -1,0 +1,246 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ebook Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      background:#f4f9ff;
+      margin:0;
+      padding:0;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+      max-width: 95%;
+      margin: 20px auto;
+      background:#fff;
+      border-radius:12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      height: 500px; /* Fixed height */
+    }
+    .image-box {
+      flex: 0 0 350px; /* fixed width */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fafafa;
+      border-right: 1px solid #eee;
+      position: relative;
+    }
+    .image-box img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto; /* scrollable */
+    }
+    .price del { color: #888; margin-right: 8px; }
+    .price span { color:#e60000; font-size:20px; font-weight:bold; }
+    .save { color:green; margin-top:8px; }
+    .btn {
+      display:inline-block;
+      padding:12px 20px;
+      background:#007bff;
+      color:#fff;
+      text-decoration:none;
+      border-radius:6px;
+      margin-top:20px;
+      transition:0.3s;
+    }
+    .btn:hover { background:#0056b3; }
+    h1 { margin-top:0; }
+    #saleBadge {
+      display:none;
+      background:#ff4444; 
+      color:#fff; 
+      padding:8px 14px; 
+      border-radius:6px; 
+      font-weight:bold; 
+      display:inline-block; 
+      margin-bottom:12px;
+    }
+    #countdown {
+      font-weight: normal;
+      font-size: 14px;
+      margin-left: 10px;
+      color: #ffe9b3;
+    }
+    /* Badge over image */
+    .sale {
+      display:none;
+      position:absolute;
+      top: 10px;
+      left:10px;
+      background:#ff4444; 
+      color:#fff; 
+      padding:8px 14px; 
+      border-radius:6px; 
+      font-weight:bold; 
+      font-size:14px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- Fixed Image Section -->
+        <div class="image-box">
+            <img id="image" src="" alt="Book">
+            <div class="sale" id="saleBadge">🔥 Sale - Limited Time! <span id="discountPercent"></span></div>
+        </div>
+
+        <!-- Scrollable Content -->
+        <div class="content">
+            <div id="saleBadge">🔥 Sale - Limited Time! <span id="countdown"></span></div>
+            <h1 id="title"></h1>
+            <h2 id="destitle" style="color:#00aa66;"></h2>
+            <p id="description"></p>
+            <div id="price" class="price"></div>
+            <div id="save" class="save"></div>
+            <a id="buyBtn" href="#" class="btn">Buy Now</a>
+        </div>
+    </div>
+    
+    <div id="footer"></div><script src="load-header-footer.js"></script>
+    
+    <script>
+        // function formatDescription(descArray) {
+        //     return descArray.map(line => {
+        //         // ✅ Bold important keywords
+        //         line = line.replace(/(Latest Edition|पिछले वर्ष|हिन्दी|Exam-Oriented Notes|PDF Format|Instant Access|डिजिटल डिलीवरी)/g, "<b>$1</b>");
+
+        //         if(line.trim().startsWith("📘")){
+        //             return `<b>${line}</b>`;
+        //         }
+        //         // ✅ If starts with ✔️ → make it a bullet
+        //         if (line.trim().startsWith("✔️")) {
+        //             return `<li>${line}</li>`;
+        //         }
+        //         // ✅ If starts with 🔍 or 📌 → heading style
+        //         if (line.trim().startsWith("🔍") || line.trim().startsWith("📌")) {
+        //             return `<h4>${line}</h4>`;
+        //         }
+        //         // ✅ If starts with 📞 or 📥 → highlight line
+        //         if (line.trim().startsWith("📞") || line.trim().startsWith("📥")) {
+        //             return `<p style="font-weight:bold;color:#007BFF">${line}</p>`;
+        //         }
+        //         // ✅ Otherwise → simple paragraph
+        //         return `<p>${line}</p>`;
+        //     }).join("");
+        // }
+
+        function formatDescription(descArray, bookTitle) {
+    // ✅ Extract exam name (first 2 words from title before '–')
+    let examName = bookTitle.split("–")[0].trim(); // e.g. "SSC MTS (Multi Tasking Staff) 2025"
+
+    return descArray.map(line => {
+        // ✅ Bold numbers (2025, 100%, etc.)
+        line = line.replace(/(\d+)/g, "<b>$1</b>");
+
+        // ✅ Bold the exam name (SSC MTS, Railway Group D, etc.)
+        if (examName) {
+            let examRegex = new RegExp("(" + examName.split(" ")[0] + "\\s*" + examName.split(" ")[1] + "?)", "gi");
+            line = line.replace(examRegex, "<b>$1</b>");
+        }
+
+        // ✅ Bold important keywords
+        line = line.replace(/(Latest Edition|पिछले वर्ष|हिन्दी|Exam-Oriented Notes|PDF Format|Instant Access|डिजिटल डिलीवरी)/g, "<b>$1</b>");
+
+        // ✅ If starts with ✔️ → bullet list
+        if (line.trim().startsWith("✔️")) {
+            return `<li>${line}</li>`;
+        }
+        // ✅ If starts with 🔍 or 📌 → heading style
+        if (line.trim().startsWith("🔍") || line.trim().startsWith("📌")) {
+            return `<h4>${line}</h4>`;
+        }
+        // ✅ If starts with 📞 or 📥 → highlight line
+        if (line.trim().startsWith("📞") || line.trim().startsWith("📥")) {
+            return `<p style="font-weight:bold;color:#007BFF">${line}</p>`;
+        }
+        // ✅ Otherwise → simple paragraph
+        return `<p>${line}</p>`;
+    }).join("");
+}
+
+        const params = new URLSearchParams(window.location.search);
+        const bookId = params.get("id");
+        // Fetch global offer first
+        Promise.all([
+            fetch("global_offer.json").then(r => r.json()).catch(()=>({globalOffer:0,validTill:null})),
+            fetch("ebooks.json").then(r => r.json())
+        ])
+        .then(([offerData, ebooks]) => {
+            const book = ebooks.find(b => b.id === bookId);
+            if (!book) return;
+
+            // Fill details
+            document.getElementById("title").innerText = book.title;
+            document.getElementById("destitle").innerText = book.destitle || "";
+            document.getElementById("image").src = book.image;
+
+            if (Array.isArray(book.description)) {
+                document.getElementById("description").innerHTML = formatDescription(book.description, book.title);
+            } else {
+                document.getElementById("description").innerText = book.description || "";
+            }
+
+            let globalOffer = offerData.globalOffer || 0;
+            let validTill = offerData.validTill ? new Date(offerData.validTill) : null;
+            let now = new Date();
+            let offerValid = globalOffer > 0 && validTill && now <= validTill;
+
+            // Price logic
+            let originalPrice = parseFloat(book.originalPrice);
+            let finalPrice, discountPercent, youSave;
+
+            if (offerValid) {
+                finalPrice = Math.round(originalPrice * (1 - globalOffer / 100));
+                discountPercent = globalOffer;
+                document.getElementById("saleBadge").style.display = "inline-block";
+                
+
+                // Start countdown
+                function updateCountdown() {
+                let now = new Date().getTime();
+                let distance = validTill.getTime() - now;
+                if (distance <= 0) {
+                    document.getElementById("saleBadge").style.display = "none";
+                    return;
+                }
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerText = 
+                    `Ends in ${days}d ${hours}h ${minutes}m ${seconds}s`;
+                }
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
+
+            } else {
+                finalPrice = parseFloat(book.discountPrice);
+                discountPercent = Math.round(((originalPrice - finalPrice) / originalPrice) * 100);
+            }
+            youSave = originalPrice - finalPrice;
+
+            document.getElementById("price").innerHTML = 
+                `<del>₹${originalPrice}</del> <span>₹${finalPrice}</span> <small>(${discountPercent}% OFF)</small>`;
+            document.getElementById("save").innerText = `You save ₹${youSave}`;
+            document.getElementById("buyBtn").href = `checkout.html?id=${book.id}`;
+            document.getElementById("discountPercent").innerText = `(${discountPercent}% OFF)`;
+        });
+    </script>
+</body>
+</html>
