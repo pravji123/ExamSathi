@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>E-Books | Testara</title>
+  <title>Exam Notes | Testara</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3KJB0Y4C6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J3KJB0Y4C6');
+  </script>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fa; }
     .page-container { display: flex; min-height: 100vh; flex-direction: column; }
@@ -48,6 +56,7 @@
   </style>
 </head>
 <body>
+  <div id="header"></div>
 
 <div class="page-container">
   <div class="sale-banner" id="saleBanner"></div>
@@ -69,7 +78,7 @@
     </div>
   </div>
 </div>
-
+<div id="footer"></div><script src="load-header-footer.js"></script>
 <script>
   const ebookGrid = document.getElementById('ebookGrid');
   const searchInput = document.getElementById('searchInput');
@@ -179,3 +188,4 @@
 
 </body>
 </html>
+
