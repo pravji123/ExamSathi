@@ -1,15 +1,15 @@
 {
-  "name": "Testara - India's Smart Testing Platform",
-  "short_name": "Testara",
+  "name": "Testara Exam App",
+  "short_name": "TESTARA",
   "icons": [
     {
-      "src": "/image/web-app-manifest-192x192.png",
+      "src": "/image/testara-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/image/web-app-manifest-512x512.png",
+      "src": "/image/testara-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
