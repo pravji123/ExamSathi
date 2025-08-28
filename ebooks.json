@@ -1,5 +1,18 @@
 [
   {
+    "id": "6-8-computer",
+    "title": "6-8 Computer Book 2025 – E-Book Notes PDF",
+    "category": "Computer",
+    "image": "image/6-8-computer.png",
+    "originalPrice": "299.00",
+    "discountPrice": "149.00",
+    "link": "payment.html?name=${encodeURIComponent(name)}&price=${price}",
+    "description1": "Comprehensive SSC CGL preparation guide with solved papers, mock tests, and detailed analysis.",
+    "destitle": "BPSC TRE 4.0 | Computer Science | 8 Chapter | PDF Book",
+    "description": "📖 Syllabus / Features:\n⭐ NCERT + SCERT Based\n⭐ Total 8 Chapters\n⭐ Language: Hindi & English\n"
+  
+  },
+  {
     "id": "Railway Group D Bharti 2025",
     "title": "Railway Group D Bharti 2025 – E-Book Notes PDF",
     "category": "Railway",
@@ -78,4 +91,5 @@
     "link": "checkout.html"
   }
 ]
+
 
