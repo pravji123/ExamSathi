@@ -3,7 +3,7 @@
     "id": "6-8-computer",
     "title": "6-8 Computer Book 2025 – E-Book Notes PDF",
     "category": "Computer",
-    "image": "image/6-8-computer.png",
+    "image": "image/6-8-computer.jpg",
     "originalPrice": "299.00",
     "discountPrice": "149.00",
     "link": "payment.html?name=${encodeURIComponent(name)}&price=${price}",
@@ -91,5 +91,6 @@
     "link": "checkout.html"
   }
 ]
+
 
 
