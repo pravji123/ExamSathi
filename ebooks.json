@@ -5,7 +5,7 @@
     "category": "Computer",
     "image": "image/6-8-computer.jpg",
     "originalPrice": "299.00",
-    "discountPrice": "149.00",
+    "discountPrice": "99.00",
     "link": "payment.html?name=${encodeURIComponent(name)}&price=${price}",
     "description1": "Comprehensive SSC CGL preparation guide with solved papers, mock tests, and detailed analysis.",
     "destitle": "BPSC TRE 4.0 | Computer Science | 8 Chapter | PDF Book",
@@ -91,6 +91,7 @@
     "link": "checkout.html"
   }
 ]
+
 
 
 
