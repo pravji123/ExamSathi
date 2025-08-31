@@ -4,7 +4,7 @@
     "title": "6-8 Computer Book 2025 – E-Book Notes PDF",
     "category": "Computer",
     "image": "image/6-8-computer.jpg",
-    "originalPrice": "149.00",
+    "originalPrice": "99.00",
     "discountPrice": "29.00",
     "link": "payment.html?name=${encodeURIComponent(name)}&price=${price}",
     "description1": "Comprehensive SSC CGL preparation guide with solved papers, mock tests, and detailed analysis.",
@@ -91,6 +91,7 @@
     "link": "checkout.html"
   }
 ]
+
 
 
 
