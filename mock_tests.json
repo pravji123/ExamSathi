@@ -1,12 +1,22 @@
 [
   {
+    "title": "BSEB STET Computer Science",
+    "category": "Teaching",
+    "examKey": "BSEB_CS",
+    "rating": 3.9,
+    "tests": 1,
+    "time": "150 min",
+    "lang": "Hindi & English",
+    "img": "image/bseb-logo.jpg"
+  },
+  {
     "title": "BPSC TRE Computer Science",
     "category": "Teaching",
     "examKey": "BPSC_CST",
     "rating": 4.6,
     "tests": 3,
     "time": "120 min",
-    "lang": "Hindi",
+    "lang": "Hindi & English",
     "img": "image/bpsc-logo.png"
   },
   {
@@ -130,6 +140,7 @@
     "img": "image/upsc-logo.png"
   }
 ]
+
 
 
 
