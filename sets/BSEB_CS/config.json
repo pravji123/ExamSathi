@@ -1,0 +1,129 @@
+{
+    "examName": "BSEB Computer Science STET Mock Test Series 2025",
+    "updatedDate": "Sep 02, 2025",
+    "totalTests": 20,
+    "languages": ["English", "Hindi"],
+    "users": "100",
+    
+    "tabs": ["Free Tests", "Paid Tests", "PYQs"],
+    "paidSubTabs": {
+      "Full Test": [],
+      "CHAPTER": ["Data Structures", "DBMS", "Operating System", "Computer Networks", "Software Engineering", "Theory of Computation", "Compiler Design"],
+      "CA": ["Current Affairs", "Yearly CA", "Monthly CA", "District Wise", "State Wise", "Country Wise"],
+      "SUBJECT": ["Computer Science", "Math","GK/GS", "Art of Teaching"],
+      "Sectional Test": ["CS Fundamentals", "Math & Reasoning", "General Studies", "Science"]
+    },
+  
+    "tests": [
+      {
+        "title": "BSEB CS STET Mock Test Set 1",
+        "category": "FREE",
+        "filter": "All",
+        "questions": 50,
+        "marks": 45,
+        "time": 45,
+        "file": "cs_mock1.json",
+        "liveDate": "2025-09-02"
+      },
+      {
+        "title": "BSEB CS STET Mock Test Set 2",
+        "category": "FREE",
+        "filter": "All",
+        "questions": 60,
+        "marks": 60,
+        "time": 60,
+        "file": "cs_mock2.json",
+        "liveDate": "2025-09-05"
+      },
+      {
+        "title": "Programming in C – Basics",
+        "category": "CHAPTER",
+        "filter": "Programming in C",
+        "questions": 20,
+        "marks": 20,
+        "time": 20,
+        "file": "C_Basics.json"
+      },
+      {
+        "title": "Data Structures – Stack & Queue",
+        "category": "CHAPTER",
+        "filter": "Data Structures",
+        "questions": 15,
+        "marks": 15,
+        "time": 15,
+        "file": "DS_StackQueue.json"
+      },
+      {
+        "title": "DBMS – SQL Queries",
+        "category": "CHAPTER",
+        "filter": "DBMS",
+        "questions": 20,
+        "marks": 20,
+        "time": 20,
+        "file": "DBMS_SQL.json"
+      },
+      {
+        "title": "Operating System – Process Management",
+        "category": "CHAPTER",
+        "filter": "Operating System",
+        "questions": 20,
+        "marks": 20,
+        "time": 20,
+        "file": "OS_Process.json"
+      },
+      {
+        "title": "Computer Networks – Basics",
+        "category": "SUBJECT",
+        "filter": "Computer Science",
+        "questions": 25,
+        "marks": 25,
+        "time": 25,
+        "file": "CN_Basics.json"
+      },
+      {
+        "title": "Theory of Computation Test",
+        "category": "SUBJECT",
+        "filter": "Computer Science",
+        "questions": 20,
+        "marks": 20,
+        "time": 20,
+        "file": "TOC.json"
+      },
+      {
+        "title": "Math & Reasoning",
+        "category": "SUBJECT",
+        "filter": "Math",
+        "questions": 10,
+        "marks": 10,
+        "time": 20,
+        "file": "Basic_Math.json"
+      },
+      {
+        "title": "BSEB CS PYQ 2023 (Shift 1)",
+        "category": "PYQ",
+        "filter": "All",
+        "questions": 150,
+        "marks": 150,
+        "time": 150,
+        "file": "BSEB_CS_PYQ_2023_S1.json"
+      },
+      {
+        "title": "BSEB CS PYQ 2023 (Shift 2)",
+        "category": "PYQ",
+        "filter": "All",
+        "questions": 150,
+        "marks": 150,
+        "time": 150,
+        "file": "BSEB_CS_PYQ_2023_S2.json"
+      },
+      {
+        "title": "BSEB CS PYQ 2022",
+        "category": "PYQ",
+        "filter": "All",
+        "questions": 150,
+        "marks": 150,
+        "time": 150,
+        "file": "BSEB_CS_PYQ_2022.json"
+      }
+    ]
+  }
