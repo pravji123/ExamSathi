@@ -1,189 +1,250 @@
-<!-- ✅ Footer + WhatsApp Floating Button (Right Side Above Footer) -->
 <style>
-  .footer {
-    background-color: #002b55;
-    color: #ffffff;
-    padding: 30px 20px;
-    margin-top: 40px;
-    position: relative;
-    z-index: 1;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    /* Footer Base */
+    .footer {
+        /* background: linear-gradient(135deg, #002b55, #001f3f); */
+        background-color: #002b55;
+        color: #ffffff;
+        padding: 40px 20px 20px;
+        font-family: Arial, sans-serif;
+    }
 
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
-  }
-
-  .footer-column {
-    box-sizing: border-box;
-    min-width: 250px;
-    flex: 1;
-    text-align: center;
-  }
-
-  .footer h3 {
-    color: #fff;
-    margin-bottom: 10px;
-  }
-
-  .footer a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #4fc3f7;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-  }
-
-  .footer-bottom {
-    border-top: 1px solid #444;
-    padding-top: 15px;
-    text-align: center;
-    font-size: 16px;
-    color: #cccccc;
-    margin-top: 20px;
-  }
-
-  /* ✅ Floating WhatsApp Button (Right side above footer) */
-  .whatsapp-float {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    z-index: 999;
-  }
-
-  .whatsapp-float img {
-    border-radius: 60%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-  }
-
-  .whatsapp-float img:hover {
-    transform: scale(1.1);
-  }
-
-  @media (max-width: 768px) {
     .footer-container {
-      flex-direction: column;
-      gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 30px;
     }
 
     .footer-column {
-      min-width: 100% !important;
+        box-sizing: border-box;
+        min-width: 250px;
     }
 
-    .footer h3,
-    .footer a,
+    .col1 { flex: 1.5; text-align: justify; }
+    .col2, .col4 { flex: 1; text-align: center; }
+    .col3 { flex: 1; text-align: center; }
+
+    .footer h3 {
+        color: #ffcc00;
+        margin-bottom: 12px;
+        font-size: 18px;
+        border-bottom: 2px solid #ffcc00;
+        display: inline-block;
+        padding-bottom: 4px;
+    }
+    
     .footer p {
-      text-align: center;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #cccccc;
     }
 
-    .whatsapp-float img {
-      width: 45px;
-      height: 45px;
+    .footer a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #4fc3f7;
+        font-size: 14px;
+        display: inline-block;
+        margin: 4px 0;
+        transition: color 0.3s;
     }
-  }
+
+    .footer a:hover {
+        color: #ffcc00;
+        text-decoration: underline;
+    }
+
+    .social-icons a img {
+        width: 26px;
+        height: 26px;
+        margin: 0 8px;
+        vertical-align: middle;
+        transition: transform 0.3s;
+    }
+
+    .social-icons a img:hover {
+        transform: scale(1.15);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #444;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 14px;
+        color: #aaa;
+        margin-top: 20px;
+    }
+
+    /* Newsletter Form */
+    .footer-column form {
+        display: flex;           
+        gap: 8px;                
+        justify-content: center; 
+        flex-wrap: nowrap;       
+    }
+
+    .footer-column input {
+        padding: 8px;
+        border-radius: 4px;
+        border: none;
+        font-size: 14px;
+        flex: 1;                 
+        min-width: 150px;        
+        max-width: 250px;  
+    }
+
+    .footer-column button {
+        background-color: #ffcc00;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #002b55;
+        transition: background 0.3s;
+        white-space: nowrap;      /* prevent button text wrap */
+    }
+
+    .footer-column button:hover {
+        background-color: #ffaa00;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+        position: fixed;
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 28px;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        z-index: 1000;
+        transition: transform 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float img { width: 30px; height: 30px; margin-top: 12px; }
+
+    /* Back-to-Top Button */
+    .back-to-top {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        background-color: #ffcc00;
+        color: #002b55;
+        font-size: 24px;
+        padding: 10px;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 1000;
+        display: none;
+        text-decoration: none;
+    }
+    .back-to-top:hover { background-color: #ffaa00; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .footer-container { flex-direction: column; gap: 20px; text-align: center; }
+        .footer-column { min-width: 100% !important; }
+        .footer-column form { align-items: center; }
+    }
 </style>
-
-<!-- ✅ Floating WhatsApp Button -->
-<a href="https://wa.me/918392950977?text=Hi%20Team%20Testara%2C%20I%20need%20assistance%20regarding%20mock%20tests" 
-   class="whatsapp-float" 
-   target="_blank" 
-   title="Chat with us on WhatsApp">
-  <img src="image/wp.gif" alt="WhatsApp">
-</a>
-
-<!-- ✅ Footer Start -->
 <footer class="footer">
   <div class="footer-container">
-
-    <!-- Column 1 -->
-    <div class="footer-column">
-      <h3>Testara <br> <em>India's Smart Testing Platform</em></h3>
+    <!-- Column 1: About / Branding -->
+    <div class="footer-column col1">
+      <h3>Testara <br><em>India's Smart Testing Platform</em></h3>
       <p>
         Testara is your trusted exam preparation partner for SSC, Railway, Police, and other government jobs.
-        We offer high-quality mock tests, PYQs, and practice sets curated by experts—empowering students to
+        We offer high-quality mock tests, PYQs, and practice sets curated by experts empowering students to
         learn smartly and succeed confidently.
       </p>
     </div>
 
-    <!-- Column 2 -->
-    <div class="footer-column">
+    <!-- Column 2: About Us / Social -->
+    <div class="footer-column col2">
       <h3>About Us</h3>
       <p>
         <span style="color: #ff9933; font-weight: bold;">Made</span>
         <span style="color: #ffffff;">in</span>
         <span style="color: #138808; font-weight: bold;">India</span>
-        <span style="color: #cccccc;">with ❤️</span><br>
+        <span style="color: #cccccc;"> with ❤️</span><br>
         Empowering learners through quality education & smart tools.
       </p>
-      <p style="margin-top: 10px; font-size: 13px; color: #aaaaaa;">
-        &copy; 2025 Designed by <strong style="color: #ffffff;">DIGITAL HELP DESK & Team ✅</strong>
-      </p>
-      <p>Follow us on :-
-        <!-- <a href="https://t.me/Digital_Help_Desk" target="_blank">Telegram</a> -->
-      </p>
-      <div style="margin-top: 20px;">
-        <a href="https://wa.me/918392950977" target="_blank" title="WhatsApp" style="margin: 0 10px;">
-          <img src="image/wap.png" alt="WhatsApp" width="30" height="30" style="vertical-align: middle;">
+      <div class="social-icons">
+        <a href="https://wa.me/918392950977" target="_blank" aria-label="WhatsApp Chat">
+          <img src="image/wap.png" alt="WhatsApp Chat">
         </a>
-        <a href="mailto:contact@testara.in" title="Email" style="margin: 0 10px;">
-          <img src="image/gmail.png" alt="Email" width="30" height="30" style="vertical-align: middle;">
+        <a href="mailto:support@testara.in" aria-label="Send Email">
+          <img src="image/gmail.png" alt="Email">
         </a>
-        <a href="https://t.me/Digital_Help_Desk" target="_blank" title="Telegram" style="margin: 0 10px;">
-          <img src="image/telegram.png" alt="Telegram" width="30" height="30" style="vertical-align: middle;">
+        <a href="https://t.me/Digital_Help_Desk" target="_blank" aria-label="Telegram Chat">
+          <img src="image/telegram.png" alt="Telegram">
         </a>
-        <!-- <a href="https://www.youtube.com/yourchannel" target="_blank" title="YouTube" style="margin: 0 10px;">
-          <img src="image/youtube.png" alt="YouTube" width="30" height="30" style="vertical-align: middle;">
-        </a>
-        <a href="https://www.instagram.com/yourusername" target="_blank" title="Instagram" style="margin: 0 10px;">
-          <img src="image/insta.png" alt="Instagram" width="30" height="30" style="vertical-align: middle;">
-        </a>
-        <a href="https://www.facebook.com/yourpage" target="_blank" title="Facebook" style="margin: 0 10px;">
-          <img src="image/fb.png" alt="Facebook" width="30" height="30" style="vertical-align: middle;">
-        </a> -->
       </div>
     </div>
 
-    <!-- Column 3 -->
-    <div class="footer-column">
-      <h3>Important Links:-</h3>
+    <!-- Column 3: Quick Links -->
+    <div class="footer-column col3">
+      <h3>Important Links</h3><br>
       <a href="about.html">About Us</a><br>
       <a href="contact.html">Contact Us</a><br>
       <a href="terms.html">Terms & Conditions</a><br>
       <a href="privacy.html">Privacy Policy</a><br>
       <a href="refund-policy.html">Refund Policy</a><br>
       <a href="shipping-policy.html">Shipping Policy</a><br>
-      <h3>Website Visitors:-</h3>
-      <img 
-        alt="Hits" 
-        src="https://hits.sh/pravji123.github.io/TYK.svg?style=for-the-badge&label= 👁️ Total-Visitor - &extraCount=100" />
+      <br>
     </div>
 
-    <!-- Column 4 -->
+    <!-- Column 4: Newsletter Subscription -->
+    <div class="footer-column col4">
+      <h3>Subscribe</h3>
+      <p>Get the latest updates and free practice sets:</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required><button type="submit">Subscribe</button>
+      </form><br>
+      <h3>Website Visitors</h3><br>
+      <img alt="Visitor Count" src="https://hits.sh/pravji123.github.io/ExamSathi.svg?style=for-the-badge&label=👁️ Visitors&extraCount=100"/>
+    </div>
   </div>
 
-  <div class="footer-bottom">&copy; <span id="copyright-year"></span> 
-    <strong> Testara</strong> | Powered by <strong>DIGITAL HELP DESK</strong>
+  <div class="footer-bottom">
+    &copy; <span id="year"></span> <strong>Testara</strong> | Powered by <strong>DIGITAL HELP DESK</strong>
   </div>
-  <script>
-    // const startYear = 2025;
-    // const currentYear = new Date().getFullYear() + 1 ;
-    // document.getElementById("copyright-year").textContent = `${startYear} - ${currentYear}`;
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+
+  <!-- Floating WhatsApp -->
+   <a href="https://wa.me/918392950977?text=Hi%20Team%20Testara%2C%20I%20need%20assistance%20regarding%20mock%20tests" 
+    class="whatsapp-float" target="_blank" 
+    title="Chat with us on WhatsApp" aria-label="WhatsApp Chat">
+    <img src="image/wap.png" alt="WhatsApp">
+   </a>
+</footer>
+
+<script>
+    // Dynamic Year
     const startYear = 2025;
     const currentYear = new Date().getFullYear();
     const copyright =
-      currentYear > startYear ? `${startYear} - ${currentYear}` : `${startYear}`;
-    document.getElementById("copyright-year").textContent = copyright;
+    currentYear > startYear ? `${startYear} - ${currentYear}` : `${startYear}`;
+    document.getElementById("year").textContent = copyright;
 
-  </script>
-</footer>
-
-
-
+    // Back-to-top button logic
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+        backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+</script>
