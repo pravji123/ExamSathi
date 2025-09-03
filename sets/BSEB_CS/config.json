@@ -8,7 +8,7 @@
     "tabs": ["Free Tests", "Paid Tests", "PYQs"],
     "paidSubTabs": {
       "Full Test": [],
-      "SUBJECT": ["Computer Science", "Math","GK/GS", "Art of Teaching"]
+      "SUBJECT": ["Computer Science", "Math", "GK/GS", "Art of Teaching"]
     },
   
     "tests": [
@@ -53,7 +53,7 @@
       {
         "title": "DBMS – SQL Queries",
         "category": "SUBJECT",
-        "filter": "DBMS",
+        "filter": "Computer Science",
         "questions": 20,
         "marks": 20,
         "time": 20,
@@ -62,7 +62,7 @@
       {
         "title": "Operating System – Process Management",
         "category": "SUBJECT",
-        "filter": "Operating System",
+        "filter": "Computer Science",
         "questions": 20,
         "marks": 20,
         "time": 20,
