@@ -1,78 +1,132 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3KJB0Y4C6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J3KJB0Y4C6');
-</script>
-
 <style>
-  /* ✅ Navbar + Header styles */
+  /* ✅ Global Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  /* ✅ Navbar Container */
   nav {
     background-color: #0074cc;
-    color: white;
-    padding: 18px 25px;
+    color: #ffffff;
+    padding: 12px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky; /* stays on top */
+    position: sticky;
     top: 0;
     z-index: 1000;
-    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 
-  .logo {
-    font-size: 22px;
-    font-weight: bold;
+  /* ✅ Logo + Brand block */
+  .brand-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
+  .logo-container {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+  }
+
+  .logo-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .brand-text .title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .brand-text .subtitle {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+
+  /* ✅ Navigation Links */
   .nav-links {
     display: flex;
-    gap: 15px;
-    transition: all 0.3s ease;
+    gap: 22px;
+    transition: max-height 0.4s ease-in-out;
   }
 
   .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 17px;
-    transition: color 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.2s;
+    padding: 4px 0;
   }
 
   .nav-links a:hover {
-    color: #ff9933;
-    text-decoration: underline;
+    color: #ffcc00;
+    transform: translateY(-2px);
   }
 
+  .nav-links a.active {
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+  }
+
+  /* ✅ Mobile Menu Button */
   .menu-toggle {
     display: none;
-    font-size: 26px;
+    font-size: 28px;
     cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
   }
 
+  /* ✅ Mobile Responsive */
   @media (max-width: 768px) {
     nav {
-      position: relative; /* Needed so dropdown aligns */
+      flex-wrap: wrap;
     }
 
     .nav-links {
-      display: none;
       flex-direction: column;
+      align-items: center;
       background-color: #0074cc;
       position: absolute;
-      align-items: center;
-      /* top: 60px; */
-      top: 100%; 
+      top: 73px;
       right: 0;
       width: 200px;
-      padding: 10px 20px;
+      max-height: 0;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     .nav-links.active {
-      display: flex;
-      /* margin-top: 10px; */
+      max-height: 350px;
+      padding: 12px 0;
+    }
+
+    .nav-links a {
+      width: 100%;
+      text-align: center;
     }
 
     .menu-toggle {
@@ -80,23 +134,36 @@
     }
   }
 </style>
+</head>
+<body>
 
+<!-- ✅ Navbar Start -->
 <nav>
-  <div class="logo">🧠 Test Your Knowledge</div>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <!-- Left Section: Logo + Brand -->
+  <div class="brand-section">
+    <div class="logo-container">
+      <img src="image/testara.jpg" alt="Testara Logo">
+    </div>
+    <div class="brand-text">
+      <span class="title">Testara</span>
+      <span class="subtitle">India's Smart Testing Platform</span>
+    </div>
+  </div>
+
+  <!-- Right Section: Menu -->
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
   <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="courses.html">Practice Sets</a>
     <a href="mock.html">Mock Tests</a>
     <a href="#sample">Free Sample</a>
     <a href="contact.html">Contact</a>
   </div>
 </nav>
+<!-- ✅ Navbar End -->
 
 <script>
   function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
   }
 </script>
-
-
