@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SSC Test Result</title>
+  <title>SSC Mock Test Result | Testara</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -117,27 +117,25 @@
   </style>
 </head>
 <body>
+  <div id="header"></div>
 
   <h1>SSC Mock Test Result</h1>
-
   <div id="overallSummary" class="summaryblock"></div>
   <div id="sectionScoreTable"></div>
   <tbody id="sectionSummaryBody">
     <h2>Section-wise Score Summary</h2>
-  <!-- This is where the section rows go -->
-   <table>
-  <thead>
-    <tr>
-      <th>Section</th><th>Total</th><th>Attempted</th><th>Unanswered</th>
-      <th>Correct</th><th>Wrong</th><th>Accuracy</th><th>Time Spent</th>
-      <th>Score</th>
-    </tr>
-  </thead>
-  <tbody id="sectionSummaryBody"></tbody>
-</table>
-
-</tbody>
-
+    <!-- This is where the section rows go -->
+    <table>
+      <thead>
+        <tr>
+          <th>Section</th><th>Total</th><th>Attempted</th><th>Unanswered</th>
+          <th>Correct</th><th>Wrong</th><th>Accuracy</th><th>Time Spent</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="sectionSummaryBody"></tbody>
+    </table>
+  </tbody>
 
   <div class="review-controls">
     <button class="btn" onclick="openModal()">🔍 Show Review</button>
@@ -161,6 +159,7 @@
       <div id="reviewContainer"></div>
     </div>
   </div>
+  <div id="footer"></div><script src="load-header-footer.js"></script>
 
   <script>
     let testData = JSON.parse(localStorage.getItem('testData'));
