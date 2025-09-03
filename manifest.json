@@ -1,15 +1,29 @@
 {
   "name": "Testara Exam App",
   "short_name": "Testara",
+  "description": "Testara – India’s Smart Testing Platform Exam App. Practice sets, mock tests, and free samples for government exams.",
   "start_url": "/index.html",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#b2b3e8",
   "background_color": "#fff9f9",
   "orientation": "portrait",
   "icons": [
     {
+      "src": "/image/testara-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
       "src": "/image/testara-192.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/image/testara-256.png",
+      "sizes": "256x256",
       "type": "image/png",
       "purpose": "maskable"
     },
