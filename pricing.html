@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
-    header { background: #0077cc; color: #fff; padding: 20px; text-align: center; }
+    header { background: #05adea; color: #fff; 
+      padding: 20px; text-align: center; margin-top: 5px;
+    }
     h1 { margin: 0; }
 
     .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
@@ -25,6 +27,7 @@
   </style>
 </head>
 <body>
+  <div id="header"></div>
   <header>
     <h1>Choose Your Plan</h1>
     <p>Get access to Paid Tests with flexible purchase options</p>
@@ -32,9 +35,11 @@
 
   <div class="container">
     <div class="pricing-grid">
-      <div class="plan-card" id="fullPlan">
+
+      <!-- Full Access Plan -->
+      <div class="plan-card">
         <h2>Full Access</h2>
-        <div class="price" id="fullPrice">₹499</div>
+        <div class="price">₹499</div>
         <p>One-time payment for lifetime access</p>
         <ul>
           <li>Unlock ALL Paid Tests</li>
@@ -42,104 +47,111 @@
           <li>Lifetime validity</li>
           <li>Priority support</li>
         </ul>
-        <button class="buy-btn" onclick="purchase('full')">Buy Now Full Access</button>
+        <button class="buy-btn" onclick="purchaseFullAccess()">Buy Now Full Access</button>
       </div>
 
+      <!-- Single Test Purchase -->
       <div class="plan-card" id="singlePlan">
         <h2>Single Test Access</h2>
-        <div class="price" id="singlePrice">₹0</div>
+        <div class="price" id="singlePrice">₹49</div>
         <p id="singleTestName">Selected Test</p>
         <ul>
           <li>Unlock only this test</li>
           <li>One-time payment</li>
           <li>Lifetime validity</li>
         </ul>
-        <button class="buy-btn" onclick="purchase('single')">Buy Now Single Test</button>
+        <button class="buy-btn" onclick="purchaseSingleTest()">Buy Now Single Test</button>
       </div>
+
     </div>
 
     <div class="note">
       After purchase, you will be redirected back to the exam page with access unlocked.
     </div>
   </div>
+  <div id="footer"></div><script src="load-header-footer.js"></script>
 
   <!-- Razorpay Checkout -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script>
-    const razorpayKey = "rzp_live_YOUR_LIVE_KEY_HERE"; // Replace with your Live key
-    const fullAccessPrice = 49900; // ₹499 in paise
+    // ✅ Razorpay Test Key (replace with your LIVE key later)
+    const razorpayKey = "rzp_test_HuBxblCUQlnCzK";
 
-    const params = new URLSearchParams(window.location.search);
-    const testFile = params.get('test');
-    const plan = params.get('plan');
+    // ✅ Pricing (in paise)
+    const PRICES = {
+      fullAccess: 19900,  // ₹499
+      singleTest: 1900    // ₹49
+    };
 
-    // Hide plans dynamically
-    if(plan === 'full') document.getElementById('singlePlan').style.display = 'none';
-    else if(plan === 'single') document.getElementById('fullPlan').style.display = 'none';
+    // ✅ Get URL Params
+    const urlParams = new URLSearchParams(window.location.search);
+    const testFile = urlParams.get('test');
+    const planType = urlParams.get('plan');
 
-    // Load test prices dynamically
-    async function loadTestPrice(testName){
-      try {
-        const response = await fetch('tests.json'); // JSON file with test prices
-        const tests = await response.json();
-        const test = tests.find(t => t.name === testName);
-        if(test){
-          const pricePaise = test.price * 100;
-          document.getElementById('singlePrice').textContent = `₹${test.price}`;
-          return pricePaise;
-        } else {
-          document.getElementById('singlePrice').textContent = "₹0";
-          return 0;
-        }
-      } catch(err){
-        console.error(err);
-        document.getElementById('singlePrice').textContent = "₹0";
-        return 0;
-      }
+    // ✅ Show/hide plans based on URL params
+    if(planType === 'full') {
+      document.getElementById('singlePlan').style.display = 'none';
+    }
+    if(testFile) {
+      document.getElementById('singleTestName').textContent = `Test File: ${testFile}`;
     }
 
-    let singleTestAmount = 0;
-
-    if(plan === 'single' && testFile){
-      document.getElementById('singleTestName').textContent = `Test: ${testFile}`;
-      loadTestPrice(testFile).then(amount => { singleTestAmount = amount; });
-    }
-
-    function purchase(selectedPlan){
-      let amount = selectedPlan === 'full' ? fullAccessPrice : singleTestAmount;
-      let name = selectedPlan === 'full' ? "Full Access" : "Single Test Access";
-      let description = selectedPlan === 'full' ? "Unlock ALL Paid Tests" : `Unlock test: ${testFile || 'Unknown'}`;
-
-      if(selectedPlan === 'single' && (!testFile || amount === 0)){
-        alert("❌ Test not selected or price unavailable!");
-        return;
-      }
-
+    // ✅ Purchase Full Access
+    function purchaseFullAccess(){
       const options = {
         key: razorpayKey,
-        amount: amount,
+        amount: PRICES.fullAccess,
         currency: "INR",
-        name: name,
-        description: description,
-        image: "logo.png",
+        name: "Exam Full Access",
+        description: "Unlock ALL Paid Tests",
+        image: "logo.png", 
         handler: function (response){
-          if(selectedPlan === 'full'){
-            localStorage.setItem('userFullPaid', 'true');
-            alert("✅ Full Access Unlocked!");
-          } else {
-            let paidTests = JSON.parse(localStorage.getItem('userPaidTests') || '[]');
-            if(!paidTests.includes(testFile)){
-              paidTests.push(testFile);
-              localStorage.setItem('userPaidTests', JSON.stringify(paidTests));
-            }
-            alert(`✅ Test "${testFile}" Unlocked!`);
-          }
+          console.log("✅ Payment success:", response.razorpay_payment_id);
+          localStorage.setItem('userFullPaid', 'true');
+          alert("✅ Full Access Unlocked!");
           window.location.href = 'exam_details.html';
         },
-        prefill: { name: "Test User", email: "user@example.com", contact: "9999999999" },
+        prefill: {
+          name: "Test User",
+          email: "user@example.com",
+          contact: "9999999999"
+        },
         theme: { color: "#0077cc" }
       };
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
 
+    // ✅ Purchase Single Test
+    function purchaseSingleTest(){
+      if(!testFile){
+        alert('No test selected!');
+        return;
+      }
+      const options = {
+        key: razorpayKey,
+        amount: PRICES.singleTest,
+        currency: "INR",
+        name: "Single Test Access",
+        description: `Unlock test: ${testFile}`,
+        image: "logo.png",
+        handler: function (response){
+          console.log("✅ Payment success:", response.razorpay_payment_id);
+          let paidTests = JSON.parse(localStorage.getItem('userPaidTests') || '[]');
+          if(!paidTests.includes(testFile)){
+            paidTests.push(testFile);
+            localStorage.setItem('userPaidTests', JSON.stringify(paidTests));
+          }
+          alert(`✅ Test "${testFile}" Unlocked!`);
+          window.location.href = 'exam_details.html';
+        },
+        prefill: {
+          name: "Test User",
+          email: "user@example.com",
+          contact: "9999999999"
+        },
+        theme: { color: "#0077cc" }
+      };
       const rzp = new Razorpay(options);
       rzp.open();
     }
