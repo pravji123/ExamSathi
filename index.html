@@ -181,87 +181,74 @@
     gtag('config', 'G-J3KJB0Y4C6');
   </script>
   <!-- Website Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Testara",
-    "url": "https://testara.in",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://testara.in/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <!-- Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Testara",
-    "url": "https://testara.in",
-    "logo": "https://testara.in/logo.png",
-    "sameAs": [
-      "https://www.facebook.com/TestaraIndia",
-      "https://www.instagram.com/TestaraIndia",
-      "https://www.linkedin.com/company/TestaraIndia",
-      "https://twitter.com/TestaraIndia"
-    ],
-    "description": "Testara is India's Smart Testing Platform providing practice sets, mock tests, and educational content for government and competitive exams.",
-    "foundingDate": "2025",
-    "founders": [
-      {
-        "@type": "Person",
-        "name": "Digital Help Desk"
+  <!-- ✅ JSON-LD Structured Data + Service Worker -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Testara",
+      "url": "https://testara.in",
+      "description": "Testara – India's Smart Testing Platform providing practice sets, mock tests, and free educational content for government exams.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://testara.in/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Patna",
-      "addressLocality": "Patna",
-      "addressRegion": "Bihar",
-      "postalCode": "800001",
-      "addressCountry": "IN"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-XXXXXXXXXX",
-      "contactType": "customer support",
-      "areaServed": "IN",
-      "availableLanguage": ["English", "Hindi"]
-    }
-  }
-  </script>
-
-  <!-- Breadcrumb Schema (example for a course page) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://testara.in/"
+    {
+      "@type": "Organization",
+      "name": "Testara",
+      "url": "https://testara.in",
+      "logo": "https://testara.in/logo.png",
+      "sameAs": [
+        "https://t.me/Testara_Exam_Notes",
+        "https://t.me/Digital_Help_Desk"
+      ],
+      "description": "Testara is India's Smart Testing Platform providing practice sets, mock tests, and educational content for government and competitive exams.",
+      "foundingDate": "2025",
+      "founders": [{"@type":"Person","name":"Digital Help Desk"}],
+      "address": {
+        "@type":"PostalAddress",
+        "streetAddress":"Patna",
+        "addressLocality":"Patna",
+        "addressRegion":"Bihar",
+        "postalCode":"800001",
+        "addressCountry":"IN"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Courses",
-        "item": "https://testara.in/courses"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "SSC Mock Tests",
-        "item": "https://testara.in/ssc-mock-tests"
+      "contactPoint": {
+        "@type":"ContactPoint",
+        "telephone":"+91-8392950977",
+        "contactType":"customer support",
+        "areaServed":"IN",
+        "availableLanguage":["English","Hindi"]
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://testara.in/"},
+        {"@type":"ListItem","position":2,"name":"Courses","item":"https://testara.in/courses"},
+        {"@type":"ListItem","position":3,"name":"SSC Mock Tests","item":"https://testara.in/ssc-mock-tests"}
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- ✅ Service Worker Registration -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(reg => console.log('Service Worker registered:', reg))
+      .catch(err => console.log('Service Worker registration failed:', err));
+  });
+}
+</script>
+
   
   <script>
     if ("serviceWorker" in navigator) {
@@ -360,4 +347,5 @@
     
 </body>
 </html>
+
 
