@@ -8,10 +8,7 @@
     "tabs": ["Free Tests", "Paid Tests", "PYQs"],
     "paidSubTabs": {
       "Full Test": [],
-      "CHAPTER": ["Data Structures", "DBMS", "Operating System", "Computer Networks", "Software Engineering", "Theory of Computation", "Compiler Design"],
-      "CA": ["Current Affairs", "Yearly CA", "Monthly CA", "District Wise", "State Wise", "Country Wise"],
-      "SUBJECT": ["Computer Science", "Math","GK/GS", "Art of Teaching"],
-      "Sectional Test": ["CS Fundamentals", "Math & Reasoning", "General Studies", "Science"]
+      "SUBJECT": ["Computer Science", "Math","GK/GS", "Art of Teaching"]
     },
   
     "tests": [
@@ -19,9 +16,9 @@
         "title": "BSEB CS STET Mock Test Set 1",
         "category": "FREE",
         "filter": "All",
-        "questions": 50,
-        "marks": 45,
-        "time": 45,
+        "questions": 150,
+        "marks": 150,
+        "time": 150,
         "file": "cs_mock1.json",
         "liveDate": "2025-09-02"
       },
@@ -29,24 +26,24 @@
         "title": "BSEB CS STET Mock Test Set 2",
         "category": "FREE",
         "filter": "All",
-        "questions": 60,
-        "marks": 60,
-        "time": 60,
+        "questions": 150,
+        "marks": 150,
+        "time": 150,
         "file": "cs_mock2.json",
         "liveDate": "2025-09-05"
       },
       {
-        "title": "Programming in C – Basics",
-        "category": "CHAPTER",
-        "filter": "Programming in C",
-        "questions": 20,
-        "marks": 20,
-        "time": 20,
-        "file": "C_Basics.json"
+        "title": "Art of Teaching Basics",
+        "category": "SUBJECT",
+        "filter": "Art of Teaching",
+        "questions": 30,
+        "marks": 30,
+        "time": 30,
+        "file": "Aot_Basics.json"
       },
       {
         "title": "Data Structures – Stack & Queue",
-        "category": "CHAPTER",
+        "category": "SUBJECT",
         "filter": "Data Structures",
         "questions": 15,
         "marks": 15,
@@ -55,7 +52,7 @@
       },
       {
         "title": "DBMS – SQL Queries",
-        "category": "CHAPTER",
+        "category": "SUBJECT",
         "filter": "DBMS",
         "questions": 20,
         "marks": 20,
@@ -64,7 +61,7 @@
       },
       {
         "title": "Operating System – Process Management",
-        "category": "CHAPTER",
+        "category": "SUBJECT",
         "filter": "Operating System",
         "questions": 20,
         "marks": 20,
