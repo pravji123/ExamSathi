@@ -1,4 +1,4 @@
-const CACHE_NAME = "testara-cache-v1";
+const CACHE_NAME = "testara-cache-v2";
 const urlsToCache = [
   "/",                       // root
   "/index.html",
@@ -128,3 +128,4 @@ self.addEventListener("activate", event => {
     ).then(() => self.clients.claim())
   );
 });
+
