@@ -1,3 +1,4 @@
+
 <style>
   /* ✅ Global Reset */
   * {
@@ -155,9 +156,9 @@
   <div class="nav-links" id="navLinks">
     <a href="index.html" class="active">Home</a>
     <a href="courses.html">Practice Sets</a>
-    <a href="mock.html">Mock Tests</a>
+    <a href="/mock.html">Mock Tests</a>
     <a href="#sample">Free Sample</a>
-    <a href="contact.html">Contact</a>
+    <a href="/contact.html">Contact</a>
   </div>
 </nav>
 <!-- ✅ Navbar End -->
@@ -166,4 +167,15 @@
   function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
   }
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (href.includes(currentPage)) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
 </script>
+
