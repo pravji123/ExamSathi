@@ -13,7 +13,7 @@
   
     "tests": [
       {
-        "title": "BSEB CS STET Mock Test Set 1",
+        "title": "BSEB CS STET Full Mock Test Set 1",
         "category": "FREE",
         "filter": "All",
         "questions": 150,
@@ -23,7 +23,7 @@
         "liveDate": "2025-09-02"
       },
       {
-        "title": "BSEB CS STET Mock Test Set 2",
+        "title": "BSEB CS STET Full Mock Test Set 2",
         "category": "FREE",
         "filter": "All",
         "questions": 150,
