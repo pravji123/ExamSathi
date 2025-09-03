@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-book Packages Testara- India's Smart Testing Platform</title>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3KJB0Y4C6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-J3KJB0Y4C6');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3KJB0Y4C6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J3KJB0Y4C6');
+  </script>
   <style>
     * {
       margin: 0;
@@ -25,67 +25,10 @@
       color: #333;
     }
 
-    /* NAVBAR */
-    nav {
-      background-color: #0074cc;
-      color: white;
-      padding: 18px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      flex-wrap: wrap;
-    }
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
-    .nav-links {
-      display: flex;
-      gap: 15px;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 17px;
-      transition: color 0.3s;
-    }
-    .nav-links a:hover {
-      color: #ff9933;
-      text-decoration: underline;
-    }
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #0074cc;
-        position: absolute;
-        align-items: center;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 10px 20px;
-      }
-      .nav-links.active {
-        display: flex;
-        margin-top: 10px;
-      }
-      .menu-toggle {
-        display: block;
-      }
-    }
-
     /* Layout container */
     .page-content {
       display: flex;
-      min-height: calc(100vh - 150px);
+      min-height: 100vh;
     }
 
     /* SIDEBAR */
@@ -93,10 +36,10 @@
       width: 250px;
       background: #fff;
       border-right: 1px solid #ddd;
-      height: auto;
-      min-height: calc(100vh - 150px);
+      min-height: 100vh;
       overflow-y: auto;
       padding: 15px;
+      transition: transform 0.3s ease-in-out;
     }
     .sidebar h2 {
       font-size: 18px;
@@ -121,8 +64,7 @@
       padding: 20px;
     }
     .main h1 {
-      font-size: 24px;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
     }
     .search-bar {
       width: 100%;
@@ -136,8 +78,35 @@
     /* GRID LAYOUT */
     .course-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr); /* ✅ Default: 3 per row */
       gap: 20px;
+    }
+
+    /* Tablet (max-width 1024px) → 2 per row */
+    @media (max-width: 1024px) {
+      .course-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile (max-width 600px) → 1 per row */
+    @media (max-width: 600px) {
+      .course-container {
+        grid-template-columns: 1fr;
+      }
+      .course-buttons {
+        flex-direction: column;
+      }
+    }
+
+    .empty-state {
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background: #fff8e1;
+      color: #555;
+      font-size: 16px;
     }
 
     /* COURSE CARD */
@@ -148,7 +117,6 @@
       display: flex;
       flex-direction: column;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 400px;
     }
     .course-header-section {
       background: #f1f1f1;
@@ -239,6 +207,11 @@
 
     .course-buttons {
       margin-top: auto;
+      display: flex;
+      gap: 10px;
+    }
+    .course-buttons .btn {
+      flex: 1;
     }
     .btn {
       width: 100%;
@@ -261,67 +234,57 @@
     }
     .btn-buy {
       border-color: orange;
-      background: orange;
+      background: #007bff;
       color: #fff;
     }
     .btn-buy:hover {
       background: darkorange;
     }
 
-    /* FOOTER */
-    footer {
-      background-color: #002b55;
-      color: #ffffff;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #aad4ff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    .footer-right {
-      margin-top: 10px;
-    }
-    .counter-box {
-      display: inline-block;
-      background: #e6abab;
-      padding: 6px 12px;
-      border-radius: 5px;
-      font-weight: bold;
-      border: 2px solid #f10404;
+    /* Mobile Sidebar Toggle */
+    .sidebar-toggle {
+      display: none;
+      background: #007bff;
+      color: #fff;
+      padding: 12px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      position: fixed;
+      top: 132px;
+      right: 0;
+      z-index: 2000; /* higher than sidebar */
     }
 
     @media(max-width: 900px) {
-      .sidebar { display: none; }
       .page-content { flex-direction: column; }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        height: 100vh;
+        z-index: 1500;
+      }
+      .sidebar.active {
+        transform: translateX(0);
+      }
+      .sidebar-toggle {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
+  <div id="header"></div>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">🧠 Test Your Knowledge</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="courses.html">Practice Sets</a>
-      <a href="mock.html">Mock Tests</a>
-      <a href="TYK_Sample.pdf" target="_blank">Free Sample</a>
-      <a href="https://t.me/Bpsc_Tre4_Computer_Stet" target="_blank">Contact</a>
-    </div>
-  </nav>
+  <!-- Toggle button for mobile -->
+  <button class="sidebar-toggle" onclick="toggleSidebar()">☰ Categories</button>
 
   <!-- PAGE CONTENT: Sidebar + Main -->
   <div class="page-content">
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <h2>Explore Categories</h2>
       <ul id="categoryList">
         <li onclick="filterCategory('All')">All E-books</li>
@@ -336,23 +299,21 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <h2>Test Your Knowledge</h2>
-    <p>
-      <span style="color: #ff9933; font-weight: bold;">Made</span>
-      <span style="color: #ffffff;">in</span>
-      <span style="color: #138808; font-weight: bold;">India</span>
-      <span> with ❤️ | Empowering learners daily</span>
-    </p>
-    <p>&copy; 2025 Designed by <strong>DIGITAL HELP DESK & Team ✅</strong></p>
-    <p>Follow us on <a href="https://t.me/Bpsc_Tre4_Computer_Stet" target="_blank">Telegram</a></p>
-    <div class="footer-right">👁️ Total Visitors: <span class="counter-box" id="visit-count">Loading...</span></div>
-  </footer>
+  <div id="footer"></div><script src="load-header-footer.js"></script>
 
   <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const toggleBtn = document.querySelector(".sidebar-toggle");
+
+      sidebar.classList.toggle("active");
+
+      // Change button text when sidebar is open
+      if (sidebar.classList.contains("active")) {
+        toggleBtn.textContent = "✖ Close";
+      } else {
+        toggleBtn.textContent = "☰ Categories";
+      }
     }
 
     let courses = [];
@@ -362,7 +323,7 @@
       const container = document.getElementById('courseContainer');
       container.innerHTML = "";
       if (data.length === 0) {
-        container.innerHTML = "<p>No E-books found!</p>";
+        container.innerHTML = `<div class="empty-state">😔 No E-books found!</div>`;
         return;
       }
       data.forEach(course => {
@@ -395,12 +356,9 @@
       });
     }
 
-    function goToPayment(name, price, buyLink) {
-      // const url = `payment.html?name=${encodeURIComponent(name)}&price=${price}&link=${encodeURIComponent(buyLink)}`;
-      // window.location.href = url;
-      window.location.href = `payment.html?name=${encodeURIComponent(name)}&price=${price}`;
+    function goToPayment(name, price) {
+      window.location.href = `cpayment.html?name=${encodeURIComponent(name)}&price=${price}`;
     }
-
 
     function searchCourses() {
       const query = document.getElementById('searchBar').value.toLowerCase();
@@ -421,10 +379,8 @@
       .then(response => response.json())
       .then(data => {
         courses = data;
-        // Collect categories dynamically
         data.forEach(c => allCategories.add(c.category));
 
-        // Render category list dynamically
         const categoryList = document.getElementById('categoryList');
         allCategories.forEach(cat => {
           let li = document.createElement('li');
@@ -433,26 +389,13 @@
           categoryList.appendChild(li);
         });
 
-        // Initial render
         renderCourses(courses);
       })
       .catch(err => {
         console.error("Error loading courses.json", err);
         document.getElementById('courseContainer').innerHTML = "<p>Error loading E-books.</p>";
       });
-
-    // Visitor counter same as index.html
-    fetch('https://api.countapi.xyz/update/setwala.github.io/visitcount/?amount=1')
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('visit-count').innerText = data.value;
-      })
-      .catch(err => {
-        console.error('Counter error:', err);
-        document.getElementById('visit-count').innerText = 'N/A';
-      });
   </script>
 
 </body>
 </html>
-
