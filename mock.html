@@ -16,47 +16,10 @@
     /* ========= GLOBAL STYLE ========= */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #f4f9ff;
       color: #333;
       line-height: 1.6;
-    }
-
-    /* ========= NAVBAR ========= */
-    nav {
-      background-color: #0074cc;
-      color: white;
-      padding: 18px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      flex-wrap: wrap;
-    }
-    .logo { font-size: 22px; font-weight: bold; }
-    .nav-links { display: flex; gap: 15px; }
-    .nav-links a {
-      color: white; text-decoration: none; font-size: 17px; transition: color 0.3s;
-    }
-    .nav-links a:hover { color: #ff9933; text-decoration: underline; }
-    .menu-toggle { display: none; font-size: 24px; cursor: pointer; }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #0074cc;
-        position: absolute;
-        align-items: center;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 10px 20px;
-      }
-      .nav-links.active { display: flex; margin-top: 10px; }
-      .menu-toggle { display: block; }
     }
 
     /* ========= LAYOUT ========= */
@@ -70,7 +33,9 @@
       transition: transform 0.3s ease-in-out;
     }
     @media (max-width: 768px) {
-      .sidebar { position: absolute; top: 0; left: 0; height: 100vh; transform: translateX(-100%); }
+      .sidebar { 
+        position: fixed; top: 0; left: 0; height: 100vh; transform: translateX(-100%); z-index: 1001;
+      }
       .sidebar.show { transform: translateX(0); }
     }
     .sidebar h3 {
@@ -80,7 +45,7 @@
       content: ""; width: 40px; height: 3px; background: orange; position: absolute; bottom: -6px; left: 0;
     }
     .category { list-style: none; padding: 0; }
-    .category li {
+    .category li { 
       padding: 10px 0; cursor: pointer; color: #222; border-bottom: 1px solid #eee;
     }
     .category li:hover { color: orange; }
@@ -88,7 +53,7 @@
     .main { flex: 1; padding: 30px; width: 100%; }
     .search-box { margin-bottom: 20px; position: relative; }
     .toggle-btn {
-      display: none; position: absolute; left: -40px; top: 10px;
+      display: none; position: absolute; left: -45px; top: 0;
       background: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;
     }
     .search-box input {
@@ -130,33 +95,11 @@
       background: rgba(0,0,0,0.1); display: none; z-index: 1000;
     }
 
-    /* ========= FOOTER ========= */
-    footer {
-      background-color: #002b55; color: #ffffff;
-      padding: 30px 20px; text-align: center; font-size: 14px; margin-top: 40px;
-    }
-    footer a { color: #aad4ff; text-decoration: none; font-weight: 500; }
-    footer a:hover { text-decoration: underline; }
-    .footer-right { margin-top: 10px; }
-    .counter-box {
-      display: inline-block; background: #e6abab; padding: 6px 12px; border-radius: 5px; font-weight: bold; border: 2px solid #f10404;
-    }
   </style>
 </head>
 <body>
-
   <!-- NAVBAR -->
-  <nav>
-    <div class="logo">🧠 Test Your Knowledge</div>
-    <div class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</div>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="index.html#buy">Practice Sets</a>
-      <a href="mock.html">Mock Tests</a>
-      <a href="index.html#sample">Free Sample</a>
-      <a href="index.html#join">Contact</a>
-    </div>
-  </nav>
+  <div id="header"></div>
 
   <!-- MAIN DASHBOARD -->
   <div class="container">
@@ -180,34 +123,9 @@
   <div id="overlay" onclick="closeSidebar()"></div>
 
   <!-- FOOTER -->
-  <footer>
-    <h2>Test Your Knowledge</h2>
-    <p>
-      <span style="color: #ff9933; font-weight: bold;">Made</span>
-      <span style="color: #ffffff;">in</span>
-      <span style="color: #138808; font-weight: bold;">India</span>
-      <span> with ❤️ | Empowering learners daily</span>
-    </p>  
-    <p>&copy; 2025 Designed by <strong>DIGITAL HELP DESK & Team ✅</strong></p>
-    <p>Follow us on <a href="https://t.me/Bpsc_Tre4_Computer_Stet" target="_blank">Telegram</a></p>
-    <div class="footer-right">👁️ Total Visitors: <span class="counter-box" id="visit-count">Loading...</span></div>
-  </footer>
+  <div id="footer"></div><script src="load-header-footer.js"></script>
 
   <script>
-    // NAVBAR MOBILE
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-
-    // VISITOR COUNTER
-    fetch('https://api.countapi.xyz/update/setwala.github.io/mockvisitcount/?amount=1')
-      .then(res => res.json())
-      .then(data => { document.getElementById('visit-count').innerText = data.value; })
-      .catch(err => {
-        console.error('Counter error:', err);
-        document.getElementById('visit-count').innerText = 'N/A';
-      });
-
     // MOCK TEST JSON LOAD
     let tests = [];
     let allCategories = new Set();
@@ -217,13 +135,13 @@
         const response = await fetch("mock_tests.json");
         tests = await response.json();
 
-        // ✅ Collect unique categories
+        // Collect unique categories
         tests.forEach(t => allCategories.add(t.category));
 
-        // ✅ Render sidebar categories
+        // Render sidebar categories
         renderCategories();
 
-        // ✅ Initial render
+        // Initial render
         loadCards(tests);
       } catch (error) {
         console.error("Error loading mock_tests.json:", error);
@@ -236,7 +154,7 @@
 
       // Add "All"
       const allItem = document.createElement('li');
-      allItem.innerText = "All";
+      allItem.innerText = "All Mock Test";
       allItem.onclick = () => filterCards("All");
       categoryList.appendChild(allItem);
 
@@ -302,10 +220,6 @@
     }
 
     window.onload = loadData;
-    // window.location.href = "exam.html?exam=Bihar_Police";
-
   </script>
-
 </body>
 </html>
-
