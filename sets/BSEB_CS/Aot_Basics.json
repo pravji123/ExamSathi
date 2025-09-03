@@ -1,0 +1,374 @@
+{
+  "examName": "BSEB STET Mock Test Series 2025",
+  "testTitle": "STET Art of Teaching Mock Test Set 1",
+  "time": 25,
+  "sections": ["Part-II (Art of Teaching)"],
+  "languages": ["English", "Hindi"],
+  "questionType": "MCQ",
+  "marks": 1,
+  "negative": 0,
+  "questions": [
+    {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which teaching method emphasizes 'child-centered education'? / कौन-सी शिक्षण विधि 'बाल-केंद्रित शिक्षा' पर जोर देती है?",
+    "options": [
+      "Montessori Method / मोंटेसरी विधि",
+      "Lecture Method / व्याख्यान विधि",
+      "Grammar Translation Method / व्याकरण अनुवाद विधि",
+      "Direct Instruction / प्रत्यक्ष निर्देश"
+    ],
+    "answer": "Montessori Method / मोंटेसरी विधि",
+    "explanation": "The Montessori Method emphasizes self-learning and child-centered education."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which approach promotes 'learning by doing'? / कौन-सा दृष्टिकोण 'करके सीखने' को प्रोत्साहित करता है?",
+    "options": [
+      "Constructivist Approach / रचनावादी दृष्टिकोण",
+      "Traditional Approach / पारंपरिक दृष्टिकोण",
+      "Behaviorist Approach / व्यवहारवादी दृष्टिकोण",
+      "Authoritarian Approach / अधिनायकवादी दृष्टिकोण"
+    ],
+    "answer": "Constructivist Approach / रचनावादी दृष्टिकोण",
+    "explanation": "Constructivism emphasizes active participation and hands-on learning."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "In pedagogy, 'scaffolding' means: / शिक्षण शास्त्र में 'सहारा (Scaffolding)' का अर्थ है:",
+    "options": [
+      "Providing temporary support to learners / शिक्षार्थियों को अस्थायी सहारा देना",
+      "Building classroom walls / कक्षा की दीवारें बनाना",
+      "Assigning homework only / केवल गृहकार्य देना",
+      "Punishing for mistakes / गलतियों के लिए दंड देना"
+    ],
+    "answer": "Providing temporary support to learners / शिक्षार्थियों को अस्थायी सहारा देना",
+    "explanation": "Scaffolding helps learners gradually achieve independence in learning."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which teaching aid is dynamic and best for real-time interaction? / कौन-सा शिक्षण सहायक गतिशील है और वास्तविक समय की बातचीत के लिए सर्वोत्तम है?",
+    "options": [
+      "Smart Board / स्मार्ट बोर्ड",
+      "Textbook / पाठ्यपुस्तक",
+      "Blackboard / श्यामपट्ट",
+      "Poster / पोस्टर"
+    ],
+    "answer": "Smart Board / स्मार्ट बोर्ड",
+    "explanation": "Smart boards provide interactive and dynamic teaching experiences."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "The main objective of Bloom’s Taxonomy is to: / ब्लूम की वर्गीकरण (Taxonomy) का मुख्य उद्देश्य क्या है?",
+    "options": [
+      "Classify learning objectives / अधिगम उद्देश्यों का वर्गीकरण करना",
+      "Prepare lesson plans / पाठ योजना तैयार करना",
+      "Control classroom discipline / कक्षा अनुशासन नियंत्रित करना",
+      "Design teaching aids / शिक्षण सहायक बनाना"
+    ],
+    "answer": "Classify learning objectives / अधिगम उद्देश्यों का वर्गीकरण करना",
+    "explanation": "Bloom’s Taxonomy helps teachers classify objectives into cognitive, affective, and psychomotor domains."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Micro-teaching is mainly used for: / सूक्ष्म शिक्षण का मुख्य उपयोग किसके लिए होता है?",
+    "options": [
+      "Improving teaching skills / शिक्षण कौशल सुधारने के लिए",
+      "Checking homework / गृहकार्य जाँचने के लिए",
+      "Increasing syllabus / पाठ्यक्रम बढ़ाने के लिए",
+      "Taking examinations / परीक्षाएँ लेने के लिए"
+    ],
+    "answer": "Improving teaching skills / शिक्षण कौशल सुधारने के लिए",
+    "explanation": "Micro-teaching provides teachers an opportunity to practice and refine teaching skills."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which learning style involves learning through physical activities? / कौन-सी अधिगम शैली शारीरिक गतिविधियों के माध्यम से सीखने से संबंधित है?",
+    "options": [
+      "Kinesthetic Learning / काइनेस्थेटिक अधिगम",
+      "Auditory Learning / श्रव्य अधिगम",
+      "Visual Learning / दृश्य अधिगम",
+      "Verbal Learning / मौखिक अधिगम"
+    ],
+    "answer": "Kinesthetic Learning / काइनेस्थेटिक अधिगम",
+    "explanation": "Kinesthetic learners understand concepts best through physical activities."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which is the first step of the teaching process? / शिक्षण प्रक्रिया का पहला चरण कौन-सा है?",
+    "options": [
+      "Planning / योजना बनाना",
+      "Evaluation / मूल्यांकन",
+      "Teaching / शिक्षण",
+      "Feedback / प्रतिपुष्टि"
+    ],
+    "answer": "Planning / योजना बनाना",
+    "explanation": "Effective teaching always begins with proper planning."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Diagnostic evaluation helps in: / निदानात्मक मूल्यांकन किसमें सहायक होता है?",
+    "options": [
+      "Identifying learning difficulties / अधिगम कठिनाइयों की पहचान करना",
+      "Assigning grades / ग्रेड देना",
+      "Completing syllabus / पाठ्यक्रम पूरा करना",
+      "Arranging timetable / समय सारिणी बनाना"
+    ],
+    "answer": "Identifying learning difficulties / अधिगम कठिनाइयों की पहचान करना",
+    "explanation": "Diagnostic evaluation detects the learner’s strengths and weaknesses."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which principle of teaching emphasizes moving from simple to complex? / कौन-सा शिक्षण सिद्धांत सरल से जटिल की ओर बढ़ने पर जोर देता है?",
+    "options": [
+      "Psychological Principle / मनोवैज्ञानिक सिद्धांत",
+      "Principle of Activity / गतिविधि का सिद्धांत",
+      "Principle of Motivation / प्रोत्साहन का सिद्धांत",
+      "Principle of Play-way / खेल-आधारित सिद्धांत"
+    ],
+    "answer": "Psychological Principle / मनोवैज्ञानिक सिद्धांत",
+    "explanation": "Psychological teaching starts from simple concepts and gradually moves to complex ones."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Formative evaluation is done to: / निर्माणात्मक मूल्यांकन किस उद्देश्य से किया जाता है?",
+    "options": [
+      "Monitor progress during learning / अधिगम के दौरान प्रगति पर नज़र रखना",
+      "Rank students at the end / अंत में छात्रों को रैंक देना",
+      "Fail weak students / कमजोर छात्रों को असफल करना",
+      "Check memory power only / केवल स्मृति शक्ति की जाँच करना"
+    ],
+    "answer": "Monitor progress during learning / अधिगम के दौरान प्रगति पर नज़र रखना",
+    "explanation": "Formative evaluation helps teachers improve teaching while learning is ongoing."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "The teacher should use teaching aids because they: / शिक्षक को शिक्षण सहायक का उपयोग करना चाहिए क्योंकि वे:",
+    "options": [
+      "Make learning easier and interesting / अधिगम को आसान और रोचक बनाते हैं",
+      "Save teacher’s effort only / केवल शिक्षक का प्रयास बचाते हैं",
+      "Increase homework load / गृहकार्य का बोझ बढ़ाते हैं",
+      "Reduce syllabus content / पाठ्यक्रम सामग्री कम करते हैं"
+    ],
+    "answer": "Make learning easier and interesting / अधिगम को आसान और रोचक बनाते हैं",
+    "explanation": "Teaching aids create better understanding and retention of concepts."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Who is considered the 'Father of Modern Education'? / 'आधुनिक शिक्षा के जनक' किसे माना जाता है?",
+    "options": [
+      "John Dewey / जॉन ड्यूई",
+      "Jean Piaget / जीन पियाजे",
+      "Maria Montessori / मारिया मोंटेसरी",
+      "Pestalozzi / पेस्टालोज़ी"
+    ],
+    "answer": "John Dewey / जॉन ड्यूई",
+    "explanation": "John Dewey emphasized experiential and democratic education."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which teaching principle emphasizes using previous knowledge? / कौन-सा शिक्षण सिद्धांत पूर्व ज्ञान के उपयोग पर जोर देता है?",
+    "options": [
+      "Principle of Correlation / सहसंबंध का सिद्धांत",
+      "Principle of Motivation / प्रेरणा का सिद्धांत",
+      "Principle of Activity / गतिविधि का सिद्धांत",
+      "Principle of Interest / रुचि का सिद्धांत"
+    ],
+    "answer": "Principle of Correlation / सहसंबंध का सिद्धांत",
+    "explanation": "Correlation links new knowledge with what learners already know."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "What is the primary role of a teacher in constructivist learning? / रचनावादी अधिगम में शिक्षक की मुख्य भूमिका क्या है?",
+    "options": [
+      "Facilitator / सहायक",
+      "Information Provider / सूचना प्रदाता",
+      "Examiner / परीक्षक",
+      "Disciplinarian / अनुशासनकर्ता"
+    ],
+    "answer": "Facilitator / सहायक",
+    "explanation": "In constructivism, teachers guide students rather than dictate."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which type of questions encourage higher-order thinking? / कौन-से प्रश्न उच्च-स्तरीय सोच को प्रोत्साहित करते हैं?",
+    "options": [
+      "Open-ended Questions / खुले प्रश्न",
+      "Yes/No Questions / हाँ-ना प्रश्न",
+      "Fill in the blanks / रिक्त स्थान भरें",
+      "Matching Questions / मिलान प्रश्न"
+    ],
+    "answer": "Open-ended Questions / खुले प्रश्न",
+    "explanation": "Open-ended questions require analysis, creativity, and reasoning."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Who gave the theory of 'Multiple Intelligences'? / 'बहु-बुद्धि सिद्धांत' किसने दिया?",
+    "options": [
+      "Howard Gardner / हावर्ड गार्डनर",
+      "Jean Piaget / जीन पियाजे",
+      "B.F. Skinner / बी. एफ. स्किनर",
+      "Lev Vygotsky / लेव वायगोत्स्की"
+    ],
+    "answer": "Howard Gardner / हावर्ड गार्डनर",
+    "explanation": "Gardner proposed that intelligence is not single but multiple (linguistic, logical, musical, etc.)."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Remedial teaching focuses on: / उपचारात्मक शिक्षण किस पर केंद्रित होता है?",
+    "options": [
+      "Overcoming learning difficulties / अधिगम कठिनाइयों को दूर करना",
+      "Speeding syllabus completion / पाठ्यक्रम शीघ्र पूरा करना",
+      "Giving extra homework / अतिरिक्त गृहकार्य देना",
+      "Strict discipline / कड़ा अनुशासन"
+    ],
+    "answer": "Overcoming learning difficulties / अधिगम कठिनाइयों को दूर करना",
+    "explanation": "Remedial teaching is designed for slow learners or students facing difficulties."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "The best way to motivate students is: / छात्रों को प्रेरित करने का सबसे अच्छा तरीका है:",
+    "options": [
+      "Relating learning with real life / अधिगम को वास्तविक जीवन से जोड़ना",
+      "Giving frequent punishments / बार-बार दंड देना",
+      "Finishing syllabus fast / जल्दी से पाठ्यक्रम पूरा करना",
+      "Ignoring weak students / कमजोर छात्रों को नज़रअंदाज करना"
+    ],
+    "answer": "Relating learning with real life / अधिगम को वास्तविक जीवन से जोड़ना",
+    "explanation": "Connecting learning with life makes it meaningful and motivating."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which skill is MOST essential for classroom communication? / कक्षा संचार के लिए सबसे आवश्यक कौशल कौन-सा है?",
+    "options": [
+      "Clarity of Speech / वाणी की स्पष्टता",
+      "Writing Speed / लेखन गति",
+      "Physical Strength / शारीरिक शक्ति",
+      "Memory Power / स्मरण शक्ति"
+    ],
+    "answer": "Clarity of Speech / वाणी की स्पष्टता",
+    "explanation": "Clear communication ensures understanding by all students."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "According to Piaget, the 'Concrete Operational Stage' occurs between: / पियाजे के अनुसार 'ठोस संक्रियात्मक अवस्था' किस आयु के बीच होती है?",
+    "options": [
+      "7–11 years / 7–11 वर्ष",
+      "2–7 years / 2–7 वर्ष",
+      "12–18 years / 12–18 वर्ष",
+      "0–2 years / 0–2 वर्ष"
+    ],
+    "answer": "7–11 years / 7–11 वर्ष",
+    "explanation": "At this stage, children develop logical thinking about concrete objects."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Peer teaching means: / सहपाठी शिक्षण का अर्थ है:",
+    "options": [
+      "Students teaching each other / छात्र एक-दूसरे को पढ़ाते हैं",
+      "Parents teaching at home / माता-पिता घर पर पढ़ाते हैं",
+      "Teacher teaching alone / शिक्षक अकेले पढ़ाते हैं",
+      "Online lectures only / केवल ऑनलाइन व्याख्यान"
+    ],
+    "answer": "Students teaching each other / छात्र एक-दूसरे को पढ़ाते हैं",
+    "explanation": "Peer teaching improves collaboration and confidence among learners."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "The most effective method for teaching moral values is: / नैतिक मूल्यों को सिखाने की सबसे प्रभावी विधि कौन-सी है?",
+    "options": [
+      "Role Play / भूमिका निर्वाह",
+      "Memorization / रटना",
+      "Punishment / दंड",
+      "Silent Reading / मौन पठन"
+    ],
+    "answer": "Role Play / भूमिका निर्वाह",
+    "explanation": "Role play engages learners emotionally and practically in value education."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which factor affects classroom discipline most? / कक्षा अनुशासन को सबसे अधिक कौन-सा कारक प्रभावित करता है?",
+    "options": [
+      "Teacher’s behavior / शिक्षक का व्यवहार",
+      "Seating arrangement / बैठने की व्यवस्था",
+      "Number of subjects / विषयों की संख्या",
+      "Length of homework / गृहकार्य की लंबाई"
+    ],
+    "answer": "Teacher’s behavior / शिक्षक का व्यवहार",
+    "explanation": "Teacher’s fairness, attitude, and approach directly impact discipline."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which evaluation is done at the end of a course? / पाठ्यक्रम के अंत में कौन-सा मूल्यांकन किया जाता है?",
+    "options": [
+      "Summative Evaluation / संक्षेपणात्मक मूल्यांकन",
+      "Formative Evaluation / निर्माणात्मक मूल्यांकन",
+      "Diagnostic Evaluation / निदानात्मक मूल्यांकन",
+      "Remedial Evaluation / उपचारात्मक मूल्यांकन"
+    ],
+    "answer": "Summative Evaluation / संक्षेपणात्मक मूल्यांकन",
+    "explanation": "Summative evaluation measures total achievement after course completion."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "The best method to teach slow learners is: / धीमे सीखने वाले छात्रों को पढ़ाने की सबसे अच्छी विधि है:",
+    "options": [
+      "Individualized Instruction / व्यक्तिगत निर्देश",
+      "Lecture Method / व्याख्यान विधि",
+      "Rapid Teaching / तेज़ गति से पढ़ाना",
+      "Ignoring them / उन्हें नज़रअंदाज करना"
+    ],
+    "answer": "Individualized Instruction / व्यक्तिगत निर्देश",
+    "explanation": "Individualized instruction provides personal attention and adapts to learner pace."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "In teaching-learning, 'feedback' is important because: / शिक्षण-अधिगम में 'प्रतिपुष्टि' महत्वपूर्ण है क्योंकि:",
+    "options": [
+      "It improves performance / यह प्रदर्शन सुधारता है",
+      "It increases homework / यह गृहकार्य बढ़ाता है",
+      "It reduces syllabus / यह पाठ्यक्रम घटाता है",
+      "It saves time only / यह केवल समय बचाता है"
+    ],
+    "answer": "It improves performance / यह प्रदर्शन सुधारता है",
+    "explanation": "Feedback guides learners on how to improve their work."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which is NOT a characteristic of a good test? / एक अच्छे परीक्षण की विशेषता कौन-सी नहीं है?",
+    "options": [
+      "Ambiguity / अस्पष्टता",
+      "Validity / वैधता",
+      "Reliability / विश्वसनीयता",
+      "Objectivity / वस्तुनिष्ठता"
+    ],
+    "answer": "Ambiguity / अस्पष्टता",
+    "explanation": "A good test must be valid, reliable, and objective—not ambiguous."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "What should be the ideal teacher-student ratio at the primary level in India? / भारत में प्राथमिक स्तर पर आदर्श शिक्षक-छात्र अनुपात क्या होना चाहिए?",
+    "options": [
+      "1:30",
+      "1:50",
+      "1:60",
+      "1:100"
+    ],
+    "answer": "1:30",
+    "explanation": "As per RTE Act, the ideal teacher-student ratio in primary classes is 1:30."
+  },
+  {
+    "section": "Part-II (Art of Teaching)",
+    "question": "Which teaching method is best for skill development? / कौशल विकास के लिए कौन-सी शिक्षण विधि सबसे उपयुक्त है?",
+    "options": [
+      "Demonstration Method / प्रदर्शन विधि",
+      "Lecture Method / व्याख्यान विधि",
+      "Story-telling Method / कहानी विधि",
+      "Dictation Method / श्रुतलेख विधि"
+    ],
+    "answer": "Demonstration Method / प्रदर्शन विधि",
+    "explanation": "Demonstration allows learners to observe and practice skills effectively."
+  }
+
+
+  ]
+}
