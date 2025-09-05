@@ -96,31 +96,32 @@
         "file": "Basic_Math.json"
       },
       {
-        "title": "BSEB CS PYQ 2023 (Shift 1)",
+        "title": "BSEB STET Computer Science PYQ 2023 (Shift 1)",
         "category": "PYQ",
         "filter": "All",
         "questions": 150,
         "marks": 150,
         "time": 150,
-        "file": "BSEB_CS_PYQ_2023_S1.json"
+        "file": "https://t.me/Testara_Exam_Notes/103"
       },
       {
-        "title": "BSEB CS PYQ 2023 (Shift 2)",
+        "title": "BSEB STET Computer Science PYQ 2023 (Shift 2)",
         "category": "PYQ",
         "filter": "All",
         "questions": 150,
         "marks": 150,
         "time": 150,
-        "file": "BSEB_CS_PYQ_2023_S2.json"
+        "file": "https://t.me/Testara_Exam_Notes/103?single"
       },
       {
-        "title": "BSEB CS PYQ 2022",
+        "title": "BSEB STET Computer Science PYQ 2024",
         "category": "PYQ",
         "filter": "All",
         "questions": 150,
         "marks": 150,
         "time": 150,
-        "file": "BSEB_CS_PYQ_2022.json"
+        "file": "https://t.me/Testara_Exam_Notes/103"
       }
     ]
   }
+3
