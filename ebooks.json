@@ -1,32 +1,32 @@
 [
   {
-    "id": "6-8-computer",
+    "ebookId": "6-8-computer",
     "title": "6-8 Computer Book 2025 – E-Book Notes PDF",
     "category": "Computer",
     "image": "image/6-8-computer.jpg",
     "originalPrice": "99.00",
     "discountPrice": "29.00",
     "link": "payment.html?name=${encodeURIComponent(name)}&price=${price}",
-    "description1": "Comprehensive SSC CGL preparation guide with solved papers, mock tests, and detailed analysis.",
+    "description1": "Comprehensive SSC CGL preparation guebookIde with solved papers, mock tests, and detailed analysis.",
     "destitle": "BPSC TRE 4.0 | Computer Science | 8 Chapter | PDF Book",
     "description": "📖 Syllabus / Features:\n⭐ NCERT + SCERT Based\n⭐ Total 8 Chapters\n⭐ Language: Hindi & English\n"
   
   },
   {
-    "id": "Railway Group D Bharti 2025",
+    "ebookId": "Railway Group D Bharti 2025",
     "title": "Railway Group D Bharti 2025 – E-Book Notes PDF",
     "category": "Railway",
     "image": "image/cs_cover.jpeg",
     "originalPrice": "299.00",
     "discountPrice": "179.00",
     "link": "payment.html?name=${encodeURIComponent(name)}&price=${price}",
-    "description1": "Comprehensive SSC CGL preparation guide with solved papers, mock tests, and detailed analysis.",
+    "description1": "Comprehensive SSC CGL preparation guebookIde with solved papers, mock tests, and detailed analysis.",
     "destitle": "BPSC TRE 3.0 | Science | 17 Sets | Test Series with solutions",
     "description": "📖 Syllabus / Features:\n⭐ NCERT + SCERT Based\n⭐ Total 17 Sets\n⭐ Language: 30 Qs\n⭐ GS: 40 Qs\n⭐ Science: 80 Qs\n⭐ Duration: 2.5 hrs | Total: 150 Marks"
   
   },
   {
-    "id": "Bihar Police Driver Bharti 2025",
+    "ebookId": "Bihar Police Driver Bharti 2025",
     "title": "Bihar Police Driver Bharti 2025 – E-Book Notes PDF",
     "category": "Bihar-Police",
     "image": "image/cs_cover.jpeg",
@@ -35,7 +35,7 @@
     "link": "checkout.html"
   },
   {
-    "id": "ssc-mts-2025",
+    "ebookId": "ssc-mts-2025",
     "title": "SSC MTS Exam 2025 – E-Book Notes PDF",
     "category": "SSC",
     "image": "image/cs_cover.jpeg",
@@ -44,7 +44,7 @@
     "link": "checkout.html"
   },
   {
-    "id": "ssc-mts-2025",
+    "ebookId": "ssc-mts-2025",
     "title": "SSC MTS 2025 E-Book PDF Notes",
     "category": "SSC",
     "image": "image/cs_cover.jpeg",
@@ -73,7 +73,7 @@
 
   },
   {
-    "id": "Bihar D.EL.ED Exam",
+    "ebookId": "Bihar D.EL.ED Exam",
     "title": "Bihar D.EL.ED Exam – E-Book Notes PDF",
     "category": "BSEB",
     "image": "image/cs_cover.jpeg",
@@ -82,7 +82,7 @@
     "link": "checkout.html"
   },
   {
-    "id": "Bihar TRE Exam",
+    "ebookId": "Bihar TRE Exam",
     "title": "Bihar TRE Exam – E-Book Notes PDF",
     "category": "BPSC",
     "image": "image/cs_cover.jpeg",
@@ -91,6 +91,7 @@
     "link": "checkout.html"
   }
 ]
+
 
 
 
