@@ -111,7 +111,7 @@
         "questions": 150,
         "marks": 150,
         "time": 150,
-        "file": "https://t.me/Testara_Exam_Notes/103?single"
+        "file": "pyq1.json"
       },
       {
         "title": "BSEB STET Computer Science PYQ 2024",
@@ -120,7 +120,7 @@
         "questions": 150,
         "marks": 150,
         "time": 150,
-        "file": "https://t.me/Testara_Exam_Notes/103"
+        "file": "pyq.json"
       }
     ]
   }
