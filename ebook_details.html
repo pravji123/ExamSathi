@@ -28,10 +28,10 @@
       border-radius:12px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      height: 500px; /* Fixed height */
+      height: 500px; /* Fixed height for desktop */
     }
     .image-box {
-      flex: 0 0 350px; /* fixed width */
+      flex: 0 0 350px; /* fixed width desktop */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -95,6 +95,50 @@
       font-size:14px;
       box-shadow:0 2px 5px rgba(0,0,0,0.2);
     }
+
+    /* ✅ Responsive CSS */
+    @media (max-width: 1024px) {
+      .container {
+        height: auto; /* remove fixed height */
+      }
+      .image-box {
+        flex: 0 0 280px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+      .image-box {
+        flex: none;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 15px;
+      }
+      .image-box img {
+        max-width: 100%;
+        max-height: 250px;
+      }
+      .content {
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      .price span {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -122,64 +166,40 @@
     <div id="footer"></div><script src="load-header-footer.js"></script>
     
     <script>
-        // function formatDescription(descArray) {
-        //     return descArray.map(line => {
-        //         // ✅ Bold important keywords
-        //         line = line.replace(/(Latest Edition|पिछले वर्ष|हिन्दी|Exam-Oriented Notes|PDF Format|Instant Access|डिजिटल डिलीवरी)/g, "<b>$1</b>");
-
-        //         if(line.trim().startsWith("📘")){
-        //             return `<b>${line}</b>`;
-        //         }
-        //         // ✅ If starts with ✔️ → make it a bullet
-        //         if (line.trim().startsWith("✔️")) {
-        //             return `<li>${line}</li>`;
-        //         }
-        //         // ✅ If starts with 🔍 or 📌 → heading style
-        //         if (line.trim().startsWith("🔍") || line.trim().startsWith("📌")) {
-        //             return `<h4>${line}</h4>`;
-        //         }
-        //         // ✅ If starts with 📞 or 📥 → highlight line
-        //         if (line.trim().startsWith("📞") || line.trim().startsWith("📥")) {
-        //             return `<p style="font-weight:bold;color:#007BFF">${line}</p>`;
-        //         }
-        //         // ✅ Otherwise → simple paragraph
-        //         return `<p>${line}</p>`;
-        //     }).join("");
-        // }
 
         function formatDescription(descArray, bookTitle) {
-    // ✅ Extract exam name (first 2 words from title before '–')
-    let examName = bookTitle.split("–")[0].trim(); // e.g. "SSC MTS (Multi Tasking Staff) 2025"
+            // ✅ Extract exam name (first 2 words from title before '–')
+            let examName = bookTitle.split("–")[0].trim(); // e.g. "SSC MTS (Multi Tasking Staff) 2025"
 
-    return descArray.map(line => {
-        // ✅ Bold numbers (2025, 100%, etc.)
-        line = line.replace(/(\d+)/g, "<b>$1</b>");
+            return descArray.map(line => {
+                // ✅ Bold numbers (2025, 100%, etc.)
+                line = line.replace(/(\d+)/g, "<b>$1</b>");
 
-        // ✅ Bold the exam name (SSC MTS, Railway Group D, etc.)
-        if (examName) {
-            let examRegex = new RegExp("(" + examName.split(" ")[0] + "\\s*" + examName.split(" ")[1] + "?)", "gi");
-            line = line.replace(examRegex, "<b>$1</b>");
-        }
+                // ✅ Bold the exam name (SSC MTS, Railway Group D, etc.)
+                if (examName) {
+                    let examRegex = new RegExp("(" + examName.split(" ")[0] + "\\s*" + examName.split(" ")[1] + "?)", "gi");
+                    line = line.replace(examRegex, "<b>$1</b>");
+                }
 
-        // ✅ Bold important keywords
-        line = line.replace(/(Latest Edition|पिछले वर्ष|हिन्दी|Exam-Oriented Notes|PDF Format|Instant Access|डिजिटल डिलीवरी)/g, "<b>$1</b>");
+                // ✅ Bold important keywords
+                line = line.replace(/(Latest Edition|पिछले वर्ष|हिन्दी|Exam-Oriented Notes|PDF Format|Instant Access|डिजिटल डिलीवरी)/g, "<b>$1</b>");
 
-        // ✅ If starts with ✔️ → bullet list
-        if (line.trim().startsWith("✔️")) {
-            return `<li>${line}</li>`;
+                // ✅ If starts with ✔️ → bullet list
+                if (line.trim().startsWith("✔️")) {
+                    return `<li>${line}</li>`;
+                }
+                // ✅ If starts with 🔍 or 📌 → heading style
+                if (line.trim().startsWith("🔍") || line.trim().startsWith("📌")) {
+                    return `<h4>${line}</h4>`;
+                }
+                // ✅ If starts with 📞 or 📥 → highlight line
+                if (line.trim().startsWith("📞") || line.trim().startsWith("📥")) {
+                    return `<p style="font-weight:bold;color:#007BFF">${line}</p>`;
+                }
+                // ✅ Otherwise → simple paragraph
+                return `<p>${line}</p>`;
+            }).join("");
         }
-        // ✅ If starts with 🔍 or 📌 → heading style
-        if (line.trim().startsWith("🔍") || line.trim().startsWith("📌")) {
-            return `<h4>${line}</h4>`;
-        }
-        // ✅ If starts with 📞 or 📥 → highlight line
-        if (line.trim().startsWith("📞") || line.trim().startsWith("📥")) {
-            return `<p style="font-weight:bold;color:#007BFF">${line}</p>`;
-        }
-        // ✅ Otherwise → simple paragraph
-        return `<p>${line}</p>`;
-    }).join("");
-}
 
         const params = new URLSearchParams(window.location.search);
         const bookId = params.get("id");
@@ -189,7 +209,7 @@
             fetch("ebooks.json").then(r => r.json())
         ])
         .then(([offerData, ebooks]) => {
-            const book = ebooks.find(b => b.id === bookId);
+            const book = ebooks.find(b => b.ebookId === bookId);
             if (!book) return;
 
             // Fill details
@@ -246,10 +266,9 @@
             document.getElementById("price").innerHTML = 
                 `<del>₹${originalPrice}</del> <span>₹${finalPrice}</span> <small>(${discountPercent}% OFF)</small>`;
             document.getElementById("save").innerText = `You save ₹${youSave}`;
-            document.getElementById("buyBtn").href = `checkout.html?id=${book.id}`;
+            document.getElementById("buyBtn").href = `checkout.html?id=${book.ebookId}`;
             document.getElementById("discountPercent").innerText = `(${discountPercent}% OFF)`;
         });
     </script>
 </body>
 </html>
-
