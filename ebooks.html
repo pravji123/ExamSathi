@@ -1,230 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Exam Notes | Testara</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3KJB0Y4C6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-J3KJB0Y4C6');
-</script>
-<style>
-body { font-family: Arial, sans-serif; margin:0; background:#f5f7fa; }
-.page-container { display: flex; min-height: 100vh; flex-direction: column; }
-.sale-banner { display: none; background: #ff3333; color: #fff; text-align: center; font-weight: bold; padding: 12px; font-size: 16px; }
-.main-wrapper { display: flex; flex: 1; }
-.sidebar { width: 250px; background: #fff; border-right: 1px solid #ddd; padding: 20px; }
-.sidebar h2 { font-size: 20px; font-weight: bold; margin-bottom: 15px; color: #0074cc; border-bottom: 2px solid #0074cc; padding-bottom: 8px; }
-.sidebar ul { list-style: none; padding: 0; margin: 0; }
-.sidebar ul li { border-bottom: 1px solid #eee; cursor: pointer; padding: 10px 8px; transition: 0.3s; }
-.sidebar ul li:hover, .sidebar ul li.active { background: #f0f8ff; color: #0074cc; font-weight: bold; }
-.sidebar ul li:last-child { border-bottom: none; }
-#categoryList{ font-weight:lighter; font-size: 18px; }
-.content { flex: 1; padding: 30px; }
-.content h1 { margin-bottom: 20px; color: #0074cc; }
-.search-box { margin-bottom: 20px; }
-.search-box input { width: 100%; padding: 10px; font-size: 15px; border: 1px solid #ccc; border-radius: 6px; }
-.ebook-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-.ebook-card { position: relative; background: #fff; border-radius: 10px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
-.ebook-card:hover { transform: translateY(-4px); box-shadow: 0 6px 14px rgba(0,0,0,0.15); }
-.ebook-card img { max-width: 100%; border-radius: 8px; margin-bottom: 12px; }
-.ebook-card h3 { font-size: 16px; margin: 10px 0; color: #333; min-height: 40px; }
-.price { font-size: 15px; margin-bottom: 10px; }
-.price del { color: #888; margin-right: 6px; }
-.price span { color: #e60000; font-weight: bold; }
-.btn { display: inline-block; padding: 10px 18px; background: #0074cc; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold; cursor:pointer; }
-.btn:hover { background: #005fa3; }
-.sale-badge { position: absolute; top: 10px; left: 10px; background: #ff3333; color: #fff; font-size: 13px; font-weight: bold; padding: 4px 8px; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-#notesSection { display:none; margin-top:30px; padding:15px; background:#fff; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-#notesSection h2 { color:#0074cc; margin-bottom:10px; }
-#notesSection h3 { margin-top:15px; color:#222; }
-#notesSection ul { list-style:none; padding-left:0; }
-#notesSection ul li { margin-bottom:8px; }
-@media (max-width: 768px) {
-  .main-wrapper { flex-direction: column; }
-  .sidebar { width: 100%; height: auto; border-right: none; border-bottom: 1px solid #ddd; }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <<title>Exam Notes | Testara</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3KJB0Y4C6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J3KJB0Y4C6');
+  </script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fa; }
+    .page-container { display: flex; min-height: 100vh; flex-direction: column; }
+
+    .sale-banner { display: none; background: #ff3333; color: #fff; text-align: center; font-weight: bold; padding: 12px; font-size: 16px; }
+
+    .main-wrapper { display: flex; flex: 1; }
+    .sidebar { width: 250px; background: #fff; border-right: 1px solid #ddd; padding: 20px; }
+    .sidebar h2 { font-size: 20px; font-weight: bold; margin-bottom: 15px; color: #0074cc; border-bottom: 2px solid #0074cc; padding-bottom: 8px; }
+    .sidebar ul { list-style: none; padding: 0; margin: 0; }
+    .sidebar ul li { border-bottom: 1px solid #eee; cursor: pointer; padding: 10px 8px; transition: 0.3s; }
+    .sidebar ul li:hover, .sidebar ul li.active { background: #f0f8ff; color: #0074cc; font-weight: bold; }
+    .sidebar ul li:last-child { border-bottom: none; }
+    #categoryList{
+      font-weight:lighter;
+      font-size: 18px;
+    }
+
+    .content { flex: 1; padding: 30px; }
+    .content h1 { margin-bottom: 20px; color: #0074cc; }
+
+    .search-box { margin-bottom: 20px; }
+    .search-box input { width: 100%; padding: 10px; font-size: 15px; border: 1px solid #ccc; border-radius: 6px; }
+
+    .ebook-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+
+    .ebook-card { position: relative; background: #fff; border-radius: 10px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+    .ebook-card:hover { transform: translateY(-4px); box-shadow: 0 6px 14px rgba(0,0,0,0.15); }
+    .ebook-card img { max-width: 100%; border-radius: 8px; margin-bottom: 12px; }
+    .ebook-card h3 { font-size: 16px; margin: 10px 0; color: #333; min-height: 40px; }
+    .price { font-size: 15px; margin-bottom: 10px; }
+    .price del { color: #888; margin-right: 6px; }
+    .price span { color: #e60000; font-weight: bold; }
+    .btn { display: inline-block; padding: 10px 18px; background: #0074cc; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold; }
+    .btn:hover { background: #005fa3; }
+    .sale-badge { position: absolute; top: 10px; left: 10px; background: #ff3333; color: #fff; font-size: 13px; font-weight: bold; padding: 4px 8px; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+
+    @media (max-width: 768px) {
+      .main-wrapper { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; border-right: none; border-bottom: 1px solid #ddd; }
+    }
+  </style>
 </head>
 <body>
   <div id="header"></div>
 
-  <div class="page-container">
-    <div class="sale-banner" id="saleBanner"></div>
+<div class="page-container">
+  <div class="sale-banner" id="saleBanner"></div>
 
-    <div class="main-wrapper">
-      <div class="sidebar">
-        <h2>Explore Categories</h2>
-        <ul id="categoryList">
-          <li class="active" onclick="filterCategory('All')">All E-books</li>
-        </ul>
+  <div class="main-wrapper">
+    <div class="sidebar">
+      <h2>Explore Categories</h2>
+      <ul id="categoryList">
+        <li class="active" onclick="filterCategory('All')">All E-books</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>All Exam E-Books</h1>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search E-Books...">
       </div>
-
-      <div class="content">
-        <h1>All Exam E-Books</h1>
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Search E-Books...">
-        </div>
-        <div class="ebook-grid" id="ebookGrid"></div>
-
-        <!-- Notes Section -->
-        <div id="notesSection">
-          <h2>Exam Notes</h2>
-          <div id="freeNotes">
-            <h3>Free Notes</h3>
-            <ul id="freeNotesList"></ul>
-          </div>
-          <div id="paidNotes">
-            <h3>Paid Notes</h3>
-            <ul id="paidNotesList"></ul>
-          </div>
-          <button onclick="closeNotes()" class="btn" style="margin-top:15px;">Close</button>
-        </div>
-      </div>
+      <div class="ebook-grid" id="ebookGrid"></div>
     </div>
   </div>
-  <div id="footer"></div><script src="load-header-footer.js"></script>
+</div>
 
-  <script>
-    const ebookGrid = document.getElementById('ebookGrid');
-    const searchInput = document.getElementById('searchInput');
-    const saleBanner = document.getElementById('saleBanner');
-    const categoryList = document.getElementById('categoryList');
+<div id="footer"></div><script src="load-header-footer.js"></script>
 
-    let allEbooks = [];
-    let globalOffer = 0;
-    let offerValid = false;
-    let notesData = [];
+<script>
+  const ebookGrid = document.getElementById('ebookGrid');
+  const searchInput = document.getElementById('searchInput');
+  const saleBanner = document.getElementById('saleBanner');
+  const categoryList = document.getElementById('categoryList');
 
-    // Format price
-    function formatPrice(num) { return "₹" + num.toLocaleString("en-IN"); }
+  let allEbooks = [];
+  let globalOffer = 0;
+  let offerValid = false;
 
-    // Load Global Offer
-    fetch('global_offer.json')
+  // Format price
+  function formatPrice(num) { return "₹" + num.toLocaleString("en-IN"); }
+
+  // 1️⃣ Load Global Offer
+  fetch('global_offer.json')
+    .then(res => res.json())
+    .then(offerData => {
+      globalOffer = offerData.globalOffer || 0;
+      const validTill = new Date(offerData.validTill);
+      const now = new Date();
+      if (globalOffer > 0 && now < validTill) {
+        offerValid = true;
+        const options = { year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" };
+        saleBanner.style.display = "block";
+        saleBanner.innerText = `🔥 Special Offer: Flat ${globalOffer}% OFF (Valid till ${validTill.toLocaleDateString("en-US", options)})`;
+      }
+    })
+    .finally(loadEbooks);
+
+  // 2️⃣ Load Ebooks
+  function loadEbooks() {
+    fetch('ebooks.json')
       .then(res => res.json())
-      .then(offerData => {
-        globalOffer = offerData.globalOffer || 0;
-        const validTill = new Date(offerData.validTill);
-        const now = new Date();
-        if(globalOffer > 0 && now < validTill){
-          offerValid = true;
-          const options = { year: "numeric", month: "short", day: "numeric", hour:"2-digit", minute:"2-digit"};
-          saleBanner.style.display = "block";
-          saleBanner.innerText = `🔥 Special Offer: Flat ${globalOffer}% OFF (Valid till ${validTill.toLocaleDateString("en-US", options)})`;
-        }
-      })
-      .finally(loadEbooks);
-
-    // Load Ebooks
-    function loadEbooks(){
-      Promise.all([
-        fetch('ebooks.json').then(res => res.json()),
-        fetch('exam_notes.json').then(res => res.json())
-      ]).then(([data, notes])=>{
+      .then(data => {
         allEbooks = data;
-        notesData = notes;
 
         // Dynamic categories
-        const categories = Array.from(new Set(data.map(b=>b.category))).sort();
-        categories.forEach(cat=>{
+        const categories = Array.from(new Set(data.map(b => b.category))).sort();
+        categories.forEach(cat => {
           const li = document.createElement('li');
           li.innerText = cat;
-          li.onclick = ()=>filterCategory(cat);
+          li.onclick = () => filterCategory(cat);
           categoryList.appendChild(li);
         });
 
         displayEbooks(allEbooks);
-      }).catch(err => console.error('Failed to load ebooks or notes:', err));
-    }
+      })
+      .catch(err => console.error('Failed to load ebooks:', err));
+  }
 
-    // Display Ebooks
-    function displayEbooks(ebooks){
-      ebookGrid.innerHTML = '';
-      ebooks.forEach(book=>{
-        const originalPrice = parseFloat(book.originalPrice) || 0;
-        let finalPrice, discountPercent, youSave;
+  // Display Ebooks
+  function displayEbooks(ebooks) {
+    ebookGrid.innerHTML = '';
+    ebooks.forEach(book => {
+      const originalPrice = parseFloat(book.originalPrice) || 0;
+      let finalPrice, discountPercent, youSave;
 
-        if(offerValid && globalOffer>0){
-          finalPrice = Math.round(originalPrice*(1-globalOffer/100));
-          discountPercent = globalOffer;
-        } else {
-          finalPrice = parseFloat(book.discountPrice)||originalPrice;
-          discountPercent = Math.round(((originalPrice-finalPrice)/originalPrice)*100);
+      if (offerValid && globalOffer > 0) {
+        finalPrice = Math.round(originalPrice * (1 - globalOffer / 100));
+        discountPercent = globalOffer;
+      } else {
+        finalPrice = parseFloat(book.discountPrice) || originalPrice;
+        discountPercent = Math.round(((originalPrice - finalPrice)/originalPrice)*100);
+      }
+
+      youSave = originalPrice - finalPrice;
+
+      const card = document.createElement('div');
+      card.className = 'ebook-card';
+      card.setAttribute('data-category', book.category);
+
+      card.innerHTML = `
+        ${discountPercent > 0 ? `<div class="sale-badge">🔥 -${discountPercent}%</div>` : ''}
+        <img src="${book.image}" alt="${book.title}">
+        <h3>${book.title}</h3>
+        <div class="price"><del>${formatPrice(originalPrice)}</del> <span>${formatPrice(finalPrice)}</span></div>
+        <div style="color:green;font-size:14px;margin-bottom:8px;">You save ${formatPrice(youSave)}</div>
+        <a href="checkout.html?id=${book.ebookId}" class="btn">Buy Now</a>
+      `;
+
+      card.addEventListener('click', e => {
+        if (!e.target.classList.contains('btn')) {
+          window.location.href = `ebook_details1.html?id=${book.ebookId}`;
         }
-        youSave = originalPrice-finalPrice;
-
-        const card = document.createElement('div');
-        card.className='ebook-card';
-        card.setAttribute('data-category', book.category);
-
-        card.innerHTML = `
-          ${discountPercent>0?`<div class="sale-badge">🔥 -${discountPercent}%</div>`:''}
-          <img src="${book.image}" alt="${book.title}">
-          <h3>${book.title}</h3>
-          <div class="price"><del>${formatPrice(originalPrice)}</del> <span>${formatPrice(finalPrice)}</span></div>
-          <div style="color:green;font-size:14px;margin-bottom:8px;">You save ${formatPrice(youSave)}</div>
-          <a href="#" class="btn" onclick="showNotes('${book.id}'); event.stopPropagation();">View Notes</a>
-        `;
-        card.addEventListener('click', e=>{
-          if(!e.target.classList.contains('btn')){
-            window.location.href=`ebook_details.html?id=${book.id}`;
-          }
-        });
-        ebookGrid.appendChild(card);
       });
-    }
 
-    // Filter by category
-    function filterCategory(cat){
-      Array.from(categoryList.children).forEach(li=>li.classList.remove('active'));
-      Array.from(categoryList.children).find(li=>li.innerText===cat)?.classList.add('active');
-      if(cat==='All') displayEbooks(allEbooks);
-      else displayEbooks(allEbooks.filter(b=>b.category===cat));
-    }
-
-    // Search
-    searchInput.addEventListener('input', e=>{
-      const q = e.target.value.toLowerCase();
-      displayEbooks(allEbooks.filter(b=>b.title.toLowerCase().includes(q)));
+      ebookGrid.appendChild(card);
     });
+  }
 
-    // Show Notes
-    function showNotes(ebookId){
-      const section = document.getElementById('notesSection');
-      const freeList = document.getElementById('freeNotesList');
-      const paidList = document.getElementById('paidNotesList');
+  // Filter by category
+  function filterCategory(cat) {
+    // Highlight active
+    Array.from(categoryList.children).forEach(li => li.classList.remove('active'));
+    Array.from(categoryList.children).find(li => li.innerText === cat)?.classList.add('active');
 
-      freeList.innerHTML=''; paidList.innerHTML='';
+    if (cat === 'All') displayEbooks(allEbooks);
+    else displayEbooks(allEbooks.filter(b => b.category === cat));
+  }
 
-      const notes = notesData.find(n=>n.ebookId==ebookId);
-      if(!notes) return alert('No notes available for this ebook.');
+  // Search filter
+  searchInput.addEventListener('input', e => {
+    const q = e.target.value.toLowerCase();
+    displayEbooks(allEbooks.filter(b => b.title.toLowerCase().includes(q)));
+  });
+</script>
 
-      if(notes.free.length>0){
-        notes.free.forEach(f=>{
-          const li = document.createElement('li');
-          li.innerHTML=`<a href="${f.link}" target="_blank">${f.title}</a>`;
-          freeList.appendChild(li);
-        });
-      } else freeList.innerHTML='<li>No free notes available.</li>';
-
-      if(notes.paid.length>0){
-        notes.paid.forEach(p=>{
-          const li = document.createElement('li');
-          li.innerHTML=`<a href="${p.link}" class="btn">Buy / View - ${p.title}</a>`;
-          paidList.appendChild(li);
-        });
-      } else paidList.innerHTML='<li>No paid notes available.</li>';
-
-      section.style.display='block';
-      section.scrollIntoView({behavior:'smooth'});
-    }
-
-    // Close Notes
-    function closeNotes(){ document.getElementById('notesSection').style.display='none'; }
-  </script>
 </body>
 </html>
