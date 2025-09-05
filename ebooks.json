@@ -16,11 +16,11 @@
     "ebookId": "Railway Group D Bharti 2025",
     "title": "Railway Group D Bharti 2025 – E-Book Notes PDF",
     "category": "Railway",
-    "image": "image/cs_cover.jpeg",
+    "image": "image/cs_cover.jpg",
     "originalPrice": "299.00",
     "discountPrice": "179.00",
     "link": "payment.html?name=${encodeURIComponent(name)}&price=${price}",
-    "description1": "Comprehensive SSC CGL preparation guebookIde with solved papers, mock tests, and detailed analysis.",
+    "description1": "Comprehensive SSC CGL preparation guide with solved papers, mock tests, and detailed analysis.",
     "destitle": "BPSC TRE 3.0 | Science | 17 Sets | Test Series with solutions",
     "description": "📖 Syllabus / Features:\n⭐ NCERT + SCERT Based\n⭐ Total 17 Sets\n⭐ Language: 30 Qs\n⭐ GS: 40 Qs\n⭐ Science: 80 Qs\n⭐ Duration: 2.5 hrs | Total: 150 Marks"
   
@@ -29,16 +29,16 @@
     "ebookId": "Bihar Police Driver Bharti 2025",
     "title": "Bihar Police Driver Bharti 2025 – E-Book Notes PDF",
     "category": "Bihar-Police",
-    "image": "image/cs_cover.jpeg",
+    "image": "image/cs_cover.jpg",
     "originalPrice": "599.00",
     "discountPrice": "299.00",
     "link": "checkout.html"
   },
   {
-    "ebookId": "ssc-mts-2025",
-    "title": "SSC MTS Exam 2025 – E-Book Notes PDF",
+    "ebookId": "SSC_CGL",
+    "title": "SSC CGL Exam 2025 – E-Book Notes PDF",
     "category": "SSC",
-    "image": "image/cs_cover.jpeg",
+    "image": "image/cs_cover.jpg",
     "originalPrice": "499.00",
     "discountPrice": "249.00",
     "link": "checkout.html"
@@ -47,7 +47,7 @@
     "ebookId": "ssc-mts-2025",
     "title": "SSC MTS 2025 E-Book PDF Notes",
     "category": "SSC",
-    "image": "image/cs_cover.jpeg",
+    "image": "image/cs_cover.jpg",
     "originalPrice": "499",
     "discountPrice": "249",
     "link": "checkout.html",
@@ -76,7 +76,7 @@
     "ebookId": "Bihar D.EL.ED Exam",
     "title": "Bihar D.EL.ED Exam – E-Book Notes PDF",
     "category": "BSEB",
-    "image": "image/cs_cover.jpeg",
+    "image": "image/cs_cover.jpg",
     "originalPrice": "399.00",
     "discountPrice": "199.00",
     "link": "checkout.html"
@@ -85,17 +85,9 @@
     "ebookId": "Bihar TRE Exam",
     "title": "Bihar TRE Exam – E-Book Notes PDF",
     "category": "BPSC",
-    "image": "image/cs_cover.jpeg",
+    "image": "image/cs_cover.jpg",
     "originalPrice": "399.00",
     "discountPrice": "199.00",
     "link": "checkout.html"
   }
 ]
-
-
-
-
-
-
-
-
