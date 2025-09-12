@@ -618,8 +618,8 @@
     {
       "section": "Part-III (Computer Science)",
       "question": "Which tag in HTML is used to insert an image? / HTML में छवि जोड़ने के लिए कौन सा टैग उपयोग होता है?",
-      "options": ["<image>", "<img>", "<picture>", "<src>"],
-      "answer": "<img>",
+      "options": ["&lt;image&gt;", "&lt;img&gt;", "&lt;picture&gt;", "&lt;src&gt;"],
+      "answer": "&lt;img&gt;",
       "explanation": "The <img> tag is used for inserting images in HTML."
     },
     {
@@ -744,8 +744,8 @@
     {
       "section": "Part-III (Computer Science)",
       "question": "Which tag in HTML is used to create a hyperlink? / HTML में हाइपरलिंक बनाने के लिए कौन सा टैग उपयोग होता है?",
-      "options": ["<link>", "<a>", "<href>", "<url>"],
-      "answer": "<a>",
+      "options": ["&lt;link&gt;", "&lt;a&gt;", "&lt;href&gt;", "&lt;url&gt;"],
+      "answer": "&lt;a&gt;",
       "explanation": "The <a> tag is used for hyperlinks in HTML."
     },
     {
