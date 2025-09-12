@@ -410,7 +410,7 @@ function loadQuestion(index) {
   visited[currentIndex] = true;
   const q = questions[currentIndex];
   document.getElementById("sectionName").innerHTML = `Exam Section: <strong>${questions[index].section}</strong>`;
-  document.getElementById("question-number").innerHTML = `Question No: <strong>5</strong>`;
+  document.getElementById("question-number").innerHTML = `Question No: <strong>${q.globalIndex}</strong>`;
   document.getElementById("questionType").textContent = q.type;
   document.getElementById("questionMarks").innerHTML = `<span style="color:green">+${q.marks}</span>`;
   document.getElementById("questionNegative").innerHTML = '<span style="color:red">' + q.negative + '</span>';
@@ -712,5 +712,6 @@ window.onload = () => {
 </script>
 </body>
 </html>
+
 
 
