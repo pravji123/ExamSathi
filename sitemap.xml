@@ -1,34 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>https://testara.in/</loc>
-    <lastmod>2025-08-03</lastmod>
+    <lastmod>2025-09-14</lastmod>
     <priority>1.00</priority>
   </url>
 
-  <url>
-    <loc>https://testara.in/about.html</loc>
-    <lastmod>2025-08-03</lastmod>
-    <priority>0.85</priority>
-  </url>
-
+  <!-- Main Pages -->
   <url>
     <loc>https://testara.in/courses.html</loc>
-    <lastmod>2025-08-03</lastmod>
+    <lastmod>2025-09-14</lastmod>
     <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://testara.in/contact.html</loc>
-    <lastmod>2025-08-03</lastmod>
-    <priority>0.70</priority>
+    <loc>https://testara.in/about.html</loc>
+    <lastmod>2025-09-14</lastmod>
+    <priority>0.80</priority>
   </url>
 
   <url>
+    <loc>https://testara.in/contact.html</loc>
+    <lastmod>2025-09-14</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Legal/Other Pages -->
+  <url>
     <loc>https://testara.in/privacy.html</loc>
-    <lastmod>2025-08-03</lastmod>
-    <priority>0.60</priority>
+    <lastmod>2025-09-14</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- Optional: Future important pages -->
+  <url>
+    <loc>https://testara.in/mock-tests.html</loc>
+    <lastmod>2025-09-14</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://testara.in/notes.html</loc>
+    <lastmod>2025-09-14</lastmod>
+    <priority>0.85</priority>
   </url>
 
 </urlset>
