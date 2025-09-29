@@ -42,6 +42,17 @@
         "file": "Aot_Basics.json",
         "liveDate": "2025-09-05"
       },
+        {
+        "title": "Art of Teaching Part - 2",
+        "category": "FREE",
+        "filter": "All",
+        "questions": 30,
+        "marks": 30,
+        "time": 30,
+        "file": "art-of-teaching.json",
+        "liveDate": "2025-09-30"
+      },
+        
       {
         "title": "Data Structures – Stack & Queue",
         "category": "SUBJECT",
@@ -59,33 +70,6 @@
         "marks": 20,
         "time": 20,
         "file": "DBMS_SQL.json"
-      },
-      {
-        "title": "Operating System – Process Management",
-        "category": "SUBJECT",
-        "filter": "Computer Science",
-        "questions": 20,
-        "marks": 20,
-        "time": 20,
-        "file": "OS_Process.json"
-      },
-      {
-        "title": "Computer Networks – Basics",
-        "category": "SUBJECT",
-        "filter": "Computer Science",
-        "questions": 25,
-        "marks": 25,
-        "time": 25,
-        "file": "CN_Basics.json"
-      },
-      {
-        "title": "Theory of Computation Test",
-        "category": "SUBJECT",
-        "filter": "Computer Science",
-        "questions": 20,
-        "marks": 20,
-        "time": 20,
-        "file": "TOC.json"
       },
       {
         "title": "Math & Reasoning",
