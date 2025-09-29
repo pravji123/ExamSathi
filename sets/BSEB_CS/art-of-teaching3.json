@@ -1,0 +1,372 @@
+{
+  "examName": "BSEB STET Mock Test Series 2025",
+  "testTitle": "STET Art of Teaching Mock Test Set 4 (Advanced)",
+  "time": 30,
+  "sections": ["Part-II (Art of Teaching)"],
+  "languages": ["English", "Hindi"],
+  "questionType": "MCQ",
+  "marks": 1,
+  "negative": 0,
+  "questions": [
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A teacher notices a student is excellent at mathematical problem-solving but struggles to write essays. According to Howard Gardner's theory, which two intelligences are most prominently displayed and underdeveloped, respectively? / एक शिक्षक देखता है कि एक छात्र गणितीय समस्या-समाधान में उत्कृष्ट है लेकिन निबंध लिखने में संघर्ष करता है। हॉवर्ड गार्डनर के सिद्धांत के अनुसार, क्रमशः कौन सी दो बुद्धिमत्ताएँ सबसे प्रमुख रूप से प्रदर्शित और अविकसित हैं?",
+      "options": [
+        "Logical-Mathematical and Linguistic / तार्किक-गणितीय और भाषाई",
+        "Spatial and Kinesthetic / स्थानिक और गतिसंवेदी",
+        "Interpersonal and Intrapersonal / अंतर्वैयक्तिक और अंतरावैयक्तिक",
+        "Musical and Naturalistic / संगीतिक और प्रकृतिवादी"
+      ],
+      "answer": "Logical-Mathematical and Linguistic / तार्किक-गणितीय और भाषाई",
+      "explanation": "This option correctly identifies the student's strength in logic and numbers (Logical-Mathematical) and their difficulty with words and language (Linguistic)."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following scenarios best exemplifies Vygotsky's concept of the Zone of Proximal Development (ZPD)? / निम्नलिखित में से कौन सा परिदृश्य वायगोत्स्की की 'समीपस्थ विकास के क्षेत्र' (ZPD) की अवधारणा का सबसे अच्छा उदाहरण है?",
+      "options": [
+        "A student completes a worksheet of 20 math problems they already know how to solve. / एक छात्र 20 गणित की समस्याओं की एक वर्कशीट पूरी करता है जिसे वह पहले से ही हल करना जानता है।",
+        "A student struggles with a complex physics problem and gives up without asking for help. / एक छात्र एक जटिल भौतिकी की समस्या से जूझता है और मदद मांगे बिना हार मान लेता है।",
+        "A student, with a teacher's guidance and hints, successfully learns to solve a new type of algebraic equation. / एक छात्र, शिक्षक के मार्गदर्शन और संकेतों के साथ, सफलतापूर्वक एक नए प्रकार के बीजगणितीय समीकरण को हल करना सीखता है।",
+        "A teacher lectures for an hour on a historical event. / एक शिक्षक एक ऐतिहासिक घटना पर एक घंटे का व्याख्यान देता है।"
+      ],
+      "answer": "A student, with a teacher's guidance and hints, successfully learns to solve a new type of algebraic equation. / एक छात्र, शिक्षक के मार्गदर्शन और संकेतों के साथ, सफलतापूर्वक एक नए प्रकार के बीजगणितीय समीकरण को हल करना सीखता है।",
+      "explanation": "This scenario perfectly illustrates the ZPD: the student achieves a new skill with the help of a 'More Knowledgeable Other' that they couldn't have done alone."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A teacher wants to use a constructivist approach to teach about ecosystems. Which activity would be most aligned with this philosophy? / एक शिक्षक पारिस्थितिक तंत्र के बारे में पढ़ाने के लिए एक रचनावादी दृष्टिकोण का उपयोग करना चाहता है। कौन सी गतिविधि इस दर्शन के साथ सबसे अधिक संरेखित होगी?",
+      "options": [
+        "Asking students to memorize the definitions of all key terms related to ecosystems. / छात्रों को पारिस्थितिक तंत्र से संबंधित सभी प्रमुख शब्दों की परिभाषाएँ याद करने के लिए कहना।",
+        "Showing a documentary about different ecosystems and giving a quiz afterward. / विभिन्न पारिस्थितिक तंत्रों के बारे में एक वृत्तचित्र दिखाना और बाद में एक प्रश्नोत्तरी देना।",
+        "Providing students with materials to build their own mini-terrariums and observe the interactions over time. / छात्रों को अपने स्वयं के मिनी-टेरारियम बनाने और समय के साथ अंतःक्रियाओं का निरीक्षण करने के लिए सामग्री प्रदान करना।",
+        "Giving a detailed lecture on the food web and trophic levels. / खाद्य वेब और ट्राफिक स्तरों पर एक विस्तृत व्याख्यान देना।"
+      ],
+      "answer": "Providing students with materials to build their own mini-terrariums and observe the interactions over time. / छात्रों को अपने स्वयं के मिनी-टेरारियम बनाने और समय के साथ अंतःक्रियाओं का निरीक्षण करने के लिए सामग्री प्रदान करना।",
+      "explanation": "This hands-on, inquiry-based activity allows students to actively construct their understanding of an ecosystem by creating and observing one themselves."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the primary difference between formative and summative assessment? / रचनात्मक और योगात्मक मूल्यांकन के बीच प्राथमिक अंतर क्या है?",
+      "options": [
+        "Formative is for grading, while summative is for feedback. / रचनात्मक ग्रेडिंग के लिए है, जबकि योगात्मक प्रतिक्रिया के लिए है।",
+        "Formative assessment occurs during the learning process to guide instruction, while summative assessment occurs at the end to measure outcomes. / रचनात्मक मूल्यांकन सीखने की प्रक्रिया के दौरान निर्देश का मार्गदर्शन करने के लिए होता है, जबकि योगात्मक मूल्यांकन परिणामों को मापने के लिए अंत में होता है।",
+        "Formative assessments are always formal tests, while summative assessments are informal observations. / रचनात्मक मूल्यांकन हमेशा औपचारिक परीक्षण होते हैं, जबकि योगात्मक मूल्यांकन अनौपचारिक अवलोकन होते हैं।",
+        "There is no significant difference; the terms are interchangeable. / कोई महत्वपूर्ण अंतर नहीं है; शब्द विनिमेय हैं।"
+      ],
+      "answer": "Formative assessment occurs during the learning process to guide instruction, while summative assessment occurs at the end to measure outcomes. / रचनात्मक मूल्यांकन सीखने की प्रक्रिया के दौरान निर्देश का मार्गदर्शन करने के लिए होता है, जबकि योगात्मक मूल्यांकन परिणामों को मापने के लिए अंत में होता है।",
+      "explanation": "This accurately defines the core distinction: formative assessment is 'assessment for learning' (ongoing), and summative assessment is 'assessment of learning' (final)."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A high school history teacher wants to develop students' higher-order thinking skills regarding the causes of World War I. According to Bloom's Taxonomy, which question would be most effective? / एक हाई स्कूल का इतिहास शिक्षक प्रथम विश्व युद्ध के कारणों के संबंध में छात्रों के उच्च-स्तरीय सोच कौशल को विकसित करना चाहता है। ब्लूम के वर्गीकरण के अनुसार, कौन सा प्रश्न सबसे प्रभावी होगा?",
+      "options": [
+        "List the countries that were part of the Allied Powers. / मित्र शक्तियों का हिस्सा रहे देशों की सूची बनाएँ।",
+        "Explain the sequence of events that led to the declaration of war. / उन घटनाओं के क्रम की व्याख्या करें जिनके कारण युद्ध की घोषणा हुई।",
+        "Compare and contrast the long-term and short-term causes of the war. / युद्ध के दीर्घकालिक और अल्पकालिक कारणों की तुलना और विषमता करें।",
+        "Evaluate which of the four main causes (Militarism, Alliances, Imperialism, Nationalism) was the most significant factor in starting the war, and justify your answer with evidence. / मूल्यांकन करें कि चार मुख्य कारणों (सैन्यवाद, गठबंधन, साम्राज्यवाद, राष्ट्रवाद) में से कौन सा युद्ध शुरू करने में सबसे महत्वपूर्ण कारक था, और अपने उत्तर को सबूतों के साथ सही ठहराएं।"
+      ],
+      "answer": "Evaluate which of the four main causes (Militarism, Alliances, Imperialism, Nationalism) was the most significant factor in starting the war, and justify your answer with evidence. / मूल्यांकन करें कि चार मुख्य कारणों (सैन्यवाद, गठबंधन, साम्राज्यवाद, राष्ट्रवाद) में से कौन सा युद्ध शुरू करने में सबसे महत्वपूर्ण कारक था, और अपने उत्तर को सबूतों के साथ सही ठहराएं।",
+      "explanation": "This is an 'Evaluating' level question, which requires students to make a judgment and support it, representing the highest levels of cognitive demand."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "An educational philosophy that emphasizes learning through problem-solving, experience, and practical application is known as: / एक शैक्षिक दर्शन जो समस्या-समाधान, अनुभव और व्यावहारिक अनुप्रयोग के माध्यम से सीखने पर जोर देता है, उसे कहा जाता है:",
+      "options": [
+        "Idealism / आदर्शवाद",
+        "Realism / यथार्थवाद",
+        "Pragmatism / व्यवहारवाद",
+        "Existentialism / अस्तित्ववाद"
+      ],
+      "answer": "Pragmatism / व्यवहारवाद",
+      "explanation": "Pragmatism, heavily influenced by John Dewey, posits that learning should be active and experiential, centered around problem-solving and its real-world applications."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the primary goal of inclusive education? / समावेशी शिक्षा का प्राथमिक लक्ष्य क्या है?",
+      "options": [
+        "To provide separate, specialized schools for students with disabilities. / विकलांग छात्रों के लिए अलग, विशेष स्कूल प्रदान करना।",
+        "To ensure that all students, regardless of ability or background, can learn together in a supportive environment. / यह सुनिश्चित करना कि सभी छात्र, क्षमता या पृष्ठभूमि की परवाह किए बिना, एक सहायक वातावरण में एक साथ सीख सकें।",
+        "To lower academic standards to accommodate all students. / सभी छात्रों को समायोजित करने के लिए शैक्षणिक मानकों को कम करना।",
+        "To focus resources only on gifted and talented students. / संसाधनों को केवल प्रतिभाशाली और प्रतिभावान छात्रों पर केंद्रित करना।"
+      ],
+      "answer": "To ensure that all students, regardless of ability or background, can learn together in a supportive environment. / यह सुनिश्चित करना कि सभी छात्र, क्षमता या पृष्ठभूमि की परवाह किए बिना, एक सहायक वातावरण में एक साथ सीख सकें।",
+      "explanation": "This is the core principle of inclusion: creating a single, welcoming educational environment that adapts to meet the needs of all learners."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A teacher uses a system where students get a sticker for good behavior, and after collecting 10 stickers, they can choose a prize. This is an application of which psychological theory? / एक शिक्षक एक ऐसी प्रणाली का उपयोग करता है जहाँ छात्रों को अच्छे व्यवहार के लिए एक स्टिकर मिलता है, और 10 स्टिकर इकट्ठा करने के बाद, वे एक पुरस्कार चुन सकते हैं। यह किस मनोवैज्ञानिक सिद्धांत का अनुप्रयोग है?",
+      "options": [
+        "Cognitive Dissonance Theory / संज्ञानात्मक असंगति सिद्धांत",
+        "Social Learning Theory / सामाजिक शिक्षण सिद्धांत",
+        "Humanistic Psychology / मानवतावादी मनोविज्ञान",
+        "Operant Conditioning (Behaviorism) / क्रियाप्रसूत अनुबंधन (व्यवहारवाद)"
+      ],
+      "answer": "Operant Conditioning (Behaviorism) / क्रियाप्रसूत अनुबंधन (व्यवहारवाद)",
+      "explanation": "This is a classic example of operant conditioning, where a desired behavior (good behavior) is reinforced with a positive stimulus (stickers and prizes) to increase its frequency."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is the best example of an authentic assessment? / निम्नलिखित में से कौन सा एक प्रामाणिक मूल्यांकन का सबसे अच्छा उदाहरण है?",
+      "options": [
+        "A multiple-choice test on the dates of historical battles. / ऐतिहासिक लड़ाइयों की तारीखों पर एक बहुविकल्पीय परीक्षण।",
+        "Students in a civics class writing a persuasive letter to their local government representative about a community issue. / नागरिक शास्त्र की कक्षा में छात्र अपने स्थानीय सरकारी प्रतिनिधि को एक सामुदायिक मुद्दे के बारे में एक प्रेरक पत्र लिख रहे हैं।",
+        "A fill-in-the-blank worksheet on the parts of a plant. / एक पौधे के भागों पर एक रिक्त-स्थान-भरें वर्कशीट।",
+        "A pop quiz on vocabulary words from a short story. / एक लघु कहानी से शब्दावली शब्दों पर एक पॉप क्विज़।"
+      ],
+      "answer": "Students in a civics class writing a persuasive letter to their local government representative about a community issue. / नागरिक शास्त्र की कक्षा में छात्र अपने स्थानीय सरकारी प्रतिनिधि को एक सामुदायिक मुद्दे के बारे में एक प्रेरक पत्र लिख रहे हैं।",
+      "explanation": "This task requires students to apply their knowledge and skills (persuasive writing, understanding of government) to a real-world problem and context."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The National Curriculum Framework (NCF) 2005 of India emphasizes: / भारत का राष्ट्रीय पाठ्यचर्या की रूपरेखा (NCF) 2005 किस पर जोर देता है:",
+      "options": [
+        "Rote memorization and teacher-centric instruction. / रटने और शिक्षक-केंद्रित निर्देश पर।",
+        "Connecting knowledge to life outside the school and promoting a child-centered approach. / ज्ञान को स्कूल के बाहर के जीवन से जोड़ना और बाल-केंद्रित दृष्टिकोण को बढ़ावा देना।",
+        "Making board examinations more difficult and competitive. / बोर्ड परीक्षाओं को अधिक कठिन और प्रतिस्पर्धी बनाना।",
+        "Focusing solely on science and mathematics education. / केवल विज्ञान और गणित की शिक्षा पर ध्यान केंद्रित करना।"
+      ],
+      "answer": "Connecting knowledge to life outside the school and promoting a child-centered approach. / ज्ञान को स्कूल के बाहर के जीवन से जोड़ना और बाल-केंद्रित दृष्टिकोण को बढ़ावा देना।",
+      "explanation": "These are the core guiding principles of NCF 2005, aiming to make learning more meaningful, holistic, and less burdensome."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A teacher who modifies their lesson's content, process, and product to meet the needs of diverse learners is practicing: / एक शिक्षक जो विविध शिक्षार्थियों की जरूरतों को पूरा करने के लिए अपने पाठ की सामग्री, प्रक्रिया और उत्पाद को संशोधित करता है, वह अभ्यास कर रहा है:",
+      "options": [
+        "Standardized Instruction / मानकीकृत निर्देश",
+        "Differentiated Instruction / विभेदित निर्देश",
+        "Direct Instruction / प्रत्यक्ष निर्देश",
+        "Remedial Teaching / उपचारात्मक शिक्षण"
+      ],
+      "answer": "Differentiated Instruction / विभेदित निर्देश",
+      "explanation": "This is the precise definition of differentiated instruction: proactively planning and tailoring instruction to accommodate student differences in readiness, interest, and learning profile."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "According to Kohlberg's stages of moral development, an individual who follows rules to avoid punishment is operating at the: / कोहलबर्ग के नैतिक विकास के चरणों के अनुसार, एक व्यक्ति जो दंड से बचने के लिए नियमों का पालन करता है, वह किस स्तर पर काम कर रहा है?",
+      "options": [
+        "Postconventional level / उत्तर-पारंपरिक स्तर",
+        "Conventional level / पारंपरिक स्तर",
+        "Preconventional level / पूर्व-पारंपरिक स्तर",
+        "Autonomous morality stage / स्वायत्त नैतिकता चरण"
+      ],
+      "answer": "Preconventional level / पूर्व-पारंपरिक स्तर",
+      "explanation": "This level, particularly Stage 1 (Obedience and Punishment Orientation), is defined by a focus on the direct consequences of actions, where right and wrong are determined by what is punished."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The 'hidden curriculum' refers to: / 'प्रच्छन्न पाठ्यचर्या' का संदर्भ है:",
+      "options": [
+        "The topics in the syllabus that are optional for students to learn. / पाठ्यक्रम में वे विषय जो छात्रों के लिए सीखना वैकल्पिक है।",
+        "The unstated lessons, values, and norms that students learn in school. / वे अनकहे पाठ, मूल्य और मानदंड जो छात्र स्कूल में सीखते हैं।",
+        "A secret set of advanced topics taught only to gifted students. / प्रतिभाशाली छात्रों को ही पढ़ाए जाने वाले उन्नत विषयों का एक गुप्त सेट।",
+        "The official curriculum mandated by the government education board. / सरकारी शिक्षा बोर्ड द्वारा अनिवार्य आधिकारिक पाठ्यक्रम।"
+      ],
+      "answer": "The unstated lessons, values, and norms that students learn in school. / वे अनकहे पाठ, मूल्य और मानदंड जो छात्र स्कूल में सीखते हैं।",
+      "explanation": "The hidden curriculum consists of the implicit messages conveyed by school structures, classroom routines, and teacher attitudes (e.g., learning to be punctual, respecting authority)."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following classroom management styles is characterized by high expectations and high levels of support for students? / निम्नलिखित में से कौन सी कक्षा प्रबंधन शैली उच्च अपेक्षाओं और छात्रों के लिए उच्च स्तर के समर्थन की विशेषता है?",
+      "options": [
+        "Authoritarian / सत्तावादी",
+        "Permissive / अनुज्ञात्मक",
+        "Neglectful / उपेक्षापूर्ण",
+        "Authoritative / आधिकारिक"
+      ],
+      "answer": "Authoritative / आधिकारिक",
+      "explanation": "The authoritative style combines high, clear expectations for behavior and academics with a warm, supportive, and responsive teacher-student relationship. It is considered the most effective style."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A teacher wants to integrate technology into a lesson on the solar system in a way that promotes creativity and higher-order thinking (SAMR model's 'Modification' or 'Redefinition' level). Which activity would be most appropriate? / एक शिक्षक सौर मंडल पर एक पाठ में प्रौद्योगिकी को इस तरह से एकीकृत करना चाहता है जो रचनात्मकता और उच्च-स्तरीय सोच को बढ़ावा दे (SAMR मॉडल का 'संशोधन' या 'पुनर्परिभाषा' स्तर)। कौन सी गतिविधि सबसे उपयुक्त होगी?",
+      "options": [
+        "Having students read a Wikipedia article about the planets instead of a textbook. / छात्रों से पाठ्यपुस्तक के बजाय ग्रहों के बारे में एक विकिपीडिया लेख पढ़वाना।",
+        "Asking students to create a digital presentation (e.g., PowerPoint) with facts about each planet. / छात्रों से प्रत्येक ग्रह के बारे में तथ्यों के साथ एक डिजिटल प्रस्तुति (जैसे, पावरपॉइंट) बनाने के लिए कहना।",
+        "Having students use a simulation software to design a mission to Mars, calculating fuel needs and trajectory. / छात्रों से मंगल ग्रह के लिए एक मिशन डिजाइन करने, ईंधन की जरूरतों और प्रक्षेपवक्र की गणना करने के लिए एक सिमुलेशन सॉफ्टवेयर का उपयोग करवाना।",
+        "Showing a pre-recorded video of a space launch. / अंतरिक्ष प्रक्षेपण का एक पूर्व-रिकॉर्डेड वीडियो दिखाना।"
+      ],
+      "answer": "Having students use a simulation software to design a mission to Mars, calculating fuel needs and trajectory. / छात्रों से मंगल ग्रह के लिए एक मिशन डिजाइन करने, ईंधन की जरूरतों और प्रक्षेपवक्र की गणना करने के लिए एक सिमुलेशन सॉफ्टवेयर का उपयोग करवाना।",
+      "explanation": "This task is significantly redesigned ('Modification') or a new task altogether ('Redefinition') by the use of technology, requiring complex problem-solving and creation that would be impossible without it."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which statement best describes the concept of 'scaffolding' in education? / कौन सा कथन शिक्षा में 'स्कैफोल्डिंग' की अवधारणा का सबसे अच्छा वर्णन करता है?",
+      "options": [
+        "Providing permanent, structured support to ensure students never fail. / स्थायी, संरचित समर्थन प्रदान करना ताकि यह सुनिश्चित हो सके कि छात्र कभी असफल न हों।",
+        "Breaking down a complex task into smaller, manageable parts and providing temporary support that is gradually withdrawn as the learner becomes more competent. / एक जटिल कार्य को छोटे, प्रबंधनीय भागों में तोड़ना और अस्थायी समर्थन प्रदान करना जो शिक्षार्थी के अधिक सक्षम होने पर धीरे-धीरे वापस ले लिया जाता है।",
+        "Giving students the answers to difficult problems to build their confidence. / छात्रों को उनका आत्मविश्वास बढ़ाने के लिए कठिन समस्याओं के उत्तर देना।",
+        "A teaching method where students work entirely on their own without any teacher guidance. / एक शिक्षण पद्धति जहाँ छात्र बिना किसी शिक्षक के मार्गदर्शन के पूरी तरह से अपने दम पर काम करते हैं।"
+      ],
+      "answer": "Breaking down a complex task into smaller, manageable parts and providing temporary support that is gradually withdrawn as the learner becomes more competent. / एक जटिल कार्य को छोटे, प्रबंधनीय भागों में तोड़ना और अस्थायी समर्थन प्रदान करना जो शिक्षार्थी के अधिक सक्षम होने पर धीरे-धीरे वापस ले लिया जाता है।",
+      "explanation": "This accurately describes the process: breaking down the task and providing support that fades over time as the student's independence grows."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "According to Piaget's theory of cognitive development, a child who can think logically about abstract concepts and hypothetical situations is in the: / पियाजे के संज्ञानात्मक विकास के सिद्धांत के अनुसार, एक बच्चा जो अमूर्त अवधारणाओं और काल्पनिक स्थितियों के बारे में तार्किक रूप से सोच सकता है, वह किस अवस्था में है?",
+      "options": [
+        "Sensorimotor stage / संवेदी-पेशीय अवस्था",
+        "Preoperational stage / पूर्व-संक्रियात्मक अवस्था",
+        "Concrete operational stage / मूर्त-संक्रियात्मक अवस्था",
+        "Formal operational stage / औपचारिक-संक्रियात्मक अवस्था"
+      ],
+      "answer": "Formal operational stage / औपचारिक-संक्रियात्मक अवस्था",
+      "explanation": "This stage (adolescence to adulthood) is defined by the ability to engage in abstract reasoning, systematic thinking, and hypothetical-deductive thought."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A test that consistently produces the same results when administered to the same group under the same conditions is said to have high: / एक परीक्षण जो समान परिस्थितियों में समान समूह को प्रशासित किए जाने पर लगातार समान परिणाम देता है, उसे उच्च ______ वाला कहा जाता है:",
+      "options": [
+        "Validity / वैधता",
+        "Reliability / विश्वसनीयता",
+        "Objectivity / वस्तुनिष्ठता",
+        "Usability / प्रयोज्यता"
+      ],
+      "answer": "Reliability / विश्वसनीयता",
+      "explanation": "Reliability is the degree to which an assessment tool produces stable and consistent results. It is about precision and consistency."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "In the context of motivation, Self-Determination Theory suggests that humans have three innate psychological needs. What are they? / प्रेरणा के संदर्भ में, आत्म-निर्णय सिद्धांत बताता है कि मनुष्यों की तीन जन्मजात मनोवैज्ञानिक आवश्यकताएं होती हैं। वे क्या हैं?",
+      "options": [
+        "Power, Affiliation, and Achievement / शक्ति, संबद्धता और उपलब्धि",
+        "Autonomy, Competence, and Relatedness / स्वायत्तता, सक्षमता और संबद्धता",
+        "Safety, Belonging, and Esteem / सुरक्षा, अपनेपन और सम्मान",
+        "Reward, Punishment, and Reinforcement / पुरस्कार, दंड और सुदृढीकरण"
+      ],
+      "answer": "Autonomy, Competence, and Relatedness / स्वायत्तता, सक्षमता और संबद्धता",
+      "explanation": "Self-Determination Theory posits that intrinsic motivation flourishes when individuals feel a sense of control (autonomy), feel effective in their actions (competence), and feel connected to others (relatedness)."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Action research in education is primarily conducted by: / शिक्षा में क्रियात्मक अनुसंधान मुख्य रूप से किसके द्वारा किया जाता है:",
+      "options": [
+        "University researchers to develop grand theories of learning. / विश्वविद्यालय के शोधकर्ताओं द्वारा सीखने के भव्य सिद्धांत विकसित करने के लिए।",
+        "Government agencies to evaluate national education policies. / सरकारी एजेंसियों द्वारा राष्ट्रीय शिक्षा नीतियों का मूल्यांकन करने के लिए।",
+        "Teachers and principals to solve specific, immediate problems within their own classrooms or schools. / शिक्षकों और प्रधानाचार्यों द्वारा अपनी कक्षाओं या स्कूलों के भीतर विशिष्ट, तत्काल समस्याओं को हल करने के लिए।",
+        "Independent consultants to rank schools based on performance. / स्वतंत्र सलाहकारों द्वारा प्रदर्शन के आधार पर स्कूलों को रैंक करने के लिए।"
+      ],
+      "answer": "Teachers and principals to solve specific, immediate problems within their own classrooms or schools. / शिक्षकों और प्रधानाचार्यों द्वारा अपनी कक्षाओं या स्कूलों के भीतर विशिष्ट, तत्काल समस्याओं को हल करने के लिए।",
+      "explanation": "Action research is a reflective process of progressive problem solving led by practitioners themselves to improve their own practices. It is localized, practical, and cyclical."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is NOT a characteristic of a reflective teacher? / निम्नलिखित में से कौन सी एक चिंतनशील शिक्षक की विशेषता नहीं है?",
+      "options": [
+        "Systematically collecting evidence from their classroom to analyze their teaching. / अपने शिक्षण का विश्लेषण करने के लिए अपनी कक्षा से व्यवस्थित रूप से सबूत इकट्ठा करना।",
+        "Considering the social and ethical implications of their teaching practices. / अपने शिक्षण प्रथाओं के सामाजिक और नैतिक प्रभावों पर विचार करना।",
+        "Strictly following the same lesson plans and methods every year without modification. / हर साल बिना किसी संशोधन के समान पाठ योजनाओं और विधियों का सख्ती से पालन करना।",
+        "Engaging in professional dialogue with colleagues to get different perspectives. / विभिन्न दृष्टिकोण प्राप्त करने के लिए सहकर्मियों के साथ व्यावसायिक संवाद में संलग्न होना।"
+      ],
+      "answer": "Strictly following the same lesson plans and methods every year without modification. / हर साल बिना किसी संशोधन के समान पाठ योजनाओं और विधियों का सख्ती से पालन करना।",
+      "explanation": "A reflective teacher continuously evaluates and adapts their methods based on student needs and outcomes; refusing to modify practices is the antithesis of reflection."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "In problem-based learning (PBL), the learning process typically begins with: / समस्या-आधारित शिक्षा (PBL) में, सीखने की प्रक्रिया आम तौर पर किससे शुरू होती है:",
+      "options": [
+        "The teacher presenting a lecture on all the relevant background information. / शिक्षक द्वारा सभी प्रासंगिक पृष्ठभूमि की जानकारी पर एक व्याख्यान प्रस्तुत करने से।",
+        "Students being presented with a complex, ill-structured, real-world problem. / छात्रों को एक जटिल, schlecht strukturiert, वास्तविक दुनिया की समस्या के साथ प्रस्तुत किए जाने से।",
+        "A multiple-choice pre-test to assess prior knowledge. / पूर्व ज्ञान का आकलन करने के लिए एक बहुविकल्पीय पूर्व-परीक्षण से।",
+        "Students choosing their own individual research topics. / छात्रों द्वारा अपने स्वयं के व्यक्तिगत शोध विषयों को चुनने से।"
+      ],
+      "answer": "Students being presented with a complex, ill-structured, real-world problem. / छात्रों को एक जटिल, schlecht strukturiert, वास्तविक दुनिया की समस्या के साथ प्रस्तुत किए जाने से।",
+      "explanation": "The central feature of PBL is that an authentic, challenging problem serves as the starting point and the stimulus for learning."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A student attributes their failure on a test to 'the teacher not liking them'. According to attribution theory, this is an example of what kind of attribution? / एक छात्र एक परीक्षा में अपनी असफलता का श्रेय 'शिक्षक द्वारा उन्हें पसंद नहीं किए जाने' को देता है। आरोपण सिद्धांत के अनुसार, यह किस प्रकार का आरोपण है?",
+      "options": [
+        "Internal, stable, and controllable / आंतरिक, स्थिर और नियंत्रणीय",
+        "Internal, unstable, and uncontrollable / आंतरिक, अस्थिर और अनियंत्रणीय",
+        "External, stable, and uncontrollable / बाहरी, स्थिर और अनियंत्रणीय",
+        "External, unstable, and controllable / बाहरी, अस्थिर और नियंत्रणीय"
+      ],
+      "answer": "External, stable, and uncontrollable / बाहरी, स्थिर और अनियंत्रणीय",
+      "explanation": "The cause is external (the teacher), perceived as stable (the teacher's dislike won't change), and uncontrollable (the student feels they can't do anything about it). This pattern is often linked to learned helplessness."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the primary function of a rubric in assessment? / मूल्यांकन में एक रूब्रिक का प्राथमिक कार्य क्या है?",
+      "options": [
+        "To rank students from highest to lowest score. / छात्रों को उच्चतम से निम्नतम स्कोर तक रैंक करना।",
+        "To provide clear, specific criteria for performance on a task and to ensure consistent scoring. / किसी कार्य पर प्रदर्शन के लिए स्पष्ट, विशिष्ट मानदंड प्रदान करना और सुसंगत स्कोरिंग सुनिश्चित करना।",
+        "To make grading faster by allowing teachers to assign a single, holistic score. / शिक्षकों को एक एकल, समग्र स्कोर प्रदान करने की अनुमति देकर ग्रेडिंग को तेज बनाना।",
+        "To identify students who need remedial help. / उन छात्रों की पहचान करना जिन्हें उपचारात्मक सहायता की आवश्यकता है।"
+      ],
+      "answer": "To provide clear, specific criteria for performance on a task and to ensure consistent scoring. / किसी कार्य पर प्रदर्शन के लिए स्पष्ट, विशिष्ट मानदंड प्रदान करना और सुसंगत स्कोरिंग सुनिश्चित करना।",
+      "explanation": "A rubric serves two main purposes: it communicates expectations to students beforehand and it guides the evaluator to make reliable and objective judgments."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following describes a key difference between Piaget's and Vygotsky's theories of cognitive development? / निम्नलिखित में से कौन सा पियाजे और वायगोत्स्की के संज्ञानात्मक विकास के सिद्धांतों के बीच एक महत्वपूर्ण अंतर का वर्णन करता है?",
+      "options": [
+        "Piaget believed in distinct stages of development, while Vygotsky did not. / पियाजे विकास के अलग-अलग चरणों में विश्वास करते थे, जबकि वायगोत्स्की नहीं।",
+        "Vygotsky emphasized the role of social interaction and culture much more than Piaget did. / वायगोत्स्की ने पियाजे की तुलना में सामाजिक संपर्क और संस्कृति की भूमिका पर बहुत अधिक जोर दिया।",
+        "Piaget's theory applies to children, while Vygotsky's only applies to adults. / पियाजे का सिद्धांत बच्चों पर लागू होता है, जबकि वायगोत्स्की का केवल वयस्कों पर लागू होता है।",
+        "Vygotsky was a behaviorist, while Piaget was a cognitivist. / वायगोत्स्की एक व्यवहारवादी थे, जबकि पियाजे एक संज्ञानात्मकवादी थे।"
+      ],
+      "answer": "Vygotsky emphasized the role of social interaction and culture much more than Piaget did. / वायगोत्स्की ने पियाजे की तुलना में सामाजिक संपर्क और संस्कृति की भूमिका पर बहुत अधिक जोर दिया।",
+      "explanation": "This is the central distinction: Piaget saw development as a largely individual process of discovery, while Vygotsky's sociocultural theory posits that learning is fundamentally social and culturally mediated."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The 'affective domain' of learning, as described in Bloom's Taxonomy, deals with: / ब्लूम के वर्गीकरण में वर्णित सीखने का 'भावात्मक क्षेत्र', किससे संबंधित है:",
+      "options": [
+        "Physical skills and motor coordination. / शारीरिक कौशल और मोटर समन्वय।",
+        "Intellectual skills like analysis and synthesis. / विश्लेषण और संश्लेषण जैसे बौद्धिक कौशल।",
+        "Attitudes, values, feelings, and emotions. / दृष्टिकोण, मूल्य, भावनाएं और संवेग।",
+        "Memorization of facts and figures. / तथ्यों और आंकड़ों का स्मरण।"
+      ],
+      "answer": "Attitudes, values, feelings, and emotions. / दृष्टिकोण, मूल्य, भावनाएं और संवेग।",
+      "explanation": "The affective domain encompasses the emotional and value-based aspects of learning, from simple awareness to internalizing a value system."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A flipped classroom model is one where: / एक फ़्लिप्ड क्लासरूम मॉडल वह है जहाँ:",
+      "options": [
+        "Students teach the lessons to each other while the teacher observes. / छात्र एक-दूसरे को पाठ पढ़ाते हैं जबकि शिक्षक अवलोकन करता है।",
+        "The teacher delivers direct instruction in the classroom, and students work on projects at home. / शिक्षक कक्षा में प्रत्यक्ष निर्देश देता है, और छात्र घर पर परियोजनाओं पर काम करते हैं।",
+        "Students first gain exposure to new content outside of class (e.g., via videos), and then use class time for active learning and problem-solving. / छात्र पहले कक्षा के बाहर नई सामग्री से अवगत होते हैं (जैसे, वीडियो के माध्यम से), और फिर कक्षा के समय का उपयोग सक्रिय सीखने और समस्या-समाधान के लिए करते हैं।",
+        "There are no assigned roles, and both teachers and students are considered equal learners. / कोई निर्धारित भूमिका नहीं होती है, और शिक्षकों और छात्रों दोनों को समान शिक्षार्थी माना जाता है।"
+      ],
+      "answer": "Students first gain exposure to new content outside of class (e.g., via videos), and then use class time for active learning and problem-solving. / छात्र पहले कक्षा के बाहर नई सामग्री से अवगत होते हैं (जैसे, वीडियो के माध्यम से), और फिर कक्षा के समय का उपयोग सक्रिय सीखने और समस्या-समाधान के लिए करते हैं।",
+      "explanation": "This is the core concept of the flipped classroom: the traditional lecture and homework elements are reversed."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the main purpose of a 'portfolio' as an assessment tool? / एक मूल्यांकन उपकरण के रूप में 'पोर्टफोलियो' का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "To provide a single, high-stakes grade at the end of a course. / एक पाठ्यक्रम के अंत में एक एकल, उच्च-दांव वाला ग्रेड प्रदान करना।",
+        "To compare a student's performance with a national average. / एक छात्र के प्रदर्शन की तुलना एक राष्ट्रीय औसत से करना।",
+        "To showcase a student's growth, progress, and best work over a period of time. / समय की अवधि में एक छात्र की वृद्धि, प्रगति और सर्वोत्तम कार्य को प्रदर्शित करना।",
+        "To quickly test students' recall of factual information. / छात्रों की तथ्यात्मक जानकारी के स्मरण का शीघ्रता से परीक्षण करना।"
+      ],
+      "answer": "To showcase a student's growth, progress, and best work over a period of time. / समय की अवधि में एक छात्र की वृद्धि, प्रगति और सर्वोत्तम कार्य को प्रदर्शित करना।",
+      "explanation": "A portfolio is a purposeful collection of student work that demonstrates achievement and development over time, often involving student reflection."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which educational philosophy would most likely advocate for a curriculum based on the 'Great Books' of Western civilization to cultivate intellect? / कौन सा शैक्षिक दर्शन बौद्धिकता को विकसित करने के लिए पश्चिमी सभ्यता की 'महान पुस्तकों' पर आधारित पाठ्यक्रम की सबसे अधिक वकालत करेगा?",
+      "options": [
+        "Progressivism / प्रगतिवाद",
+        "Perennialism / शाश्वतवाद",
+        "Social Reconstructionism / सामाजिक पुनर्निर्माणवाद",
+        "Postmodernism / उत्तर आधुनिकतावाद"
+      ],
+      "answer": "Perennialism / शाश्वतवाद",
+      "explanation": "Perennialism argues that the goal of education is to teach the enduring, universal truths found in classical works. The 'Great Books' curriculum is its most famous application."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The right of children to free and compulsory education in India (RTE Act, 2009) applies to children in which age group? / भारत में बच्चों को मुफ्त और अनिवार्य शिक्षा का अधिकार (RTE अधिनियम, 2009) किस आयु वर्ग के बच्चों पर लागू होता है?",
+      "options": [
+        "3 to 8 years / 3 से 8 वर्ष",
+        "6 to 14 years / 6 से 14 वर्ष",
+        "5 to 15 years / 5 से 15 वर्ष",
+        "6 to 18 years / 6 से 18 वर्ष"
+      ],
+      "answer": "6 to 14 years / 6 से 14 वर्ष",
+      "explanation": "The RTE Act mandates free and compulsory education for all children between the ages of 6 and 14, corresponding to elementary education."
+    }
+  ]
+}
