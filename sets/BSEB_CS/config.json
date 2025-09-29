@@ -5,7 +5,7 @@
     "languages": ["English", "Hindi"],
     "users": "100+",
     
-    "tabs": ["Free Tests", "Paid Tests", "PYQs"],
+    "tabs": ["Free Tests", "PYQs"],
     "paidSubTabs": {
       "Full Test": [],
       "SUBJECT": ["Computer Science", "Math", "GK/GS", "Art of Teaching"]
