@@ -4,7 +4,7 @@
     "category": "Teaching",
     "examKey": "BSEB_CS",
     "rating": 3.9,
-    "tests": 10+,
+    "tests": 10,
     "time": "150 min",
     "lang": "Hindi & English",
     "img": "image/bseb-logo.jpg"
@@ -140,6 +140,7 @@
     "img": "image/upsc-logo.png"
   }
 ]
+
 
 
 
