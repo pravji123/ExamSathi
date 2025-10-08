@@ -1,0 +1,1801 @@
+{
+  "examName": "BSEB STET Mock Test Series 2025",
+  "testTitle": "STET CS Mock Test Set 2",
+  "time": 150,
+  "sections": [
+    "Part-I (Math & General Studies)",
+    "Part-II (Art of Teaching)",
+    "Part-III (Computer Science)"
+  ],
+  "languages": ["English", "Hindi"],
+  "questionType": "MCQ",
+  "marks": 1,
+  "negative": 0,
+  "questions": [
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "If the cost price of 15 articles is equal to the selling price of 12 articles, find the gain percent. / यदि 15 वस्तुओं का क्रय मूल्य 12 वस्तुओं के विक्रय मूल्य के बराबर है, तो लाभ प्रतिशत ज्ञात करें।",
+        "options": [
+        "20%",
+        "25%",
+        "15%",
+        "30%"
+        ],
+        "answer": "25%",
+        "explanation": "Let CP of 1 article be ₹1. CP of 12 articles = ₹12. SP of 12 articles = CP of 15 articles = ₹15. Gain = ₹3. Gain % = (3/12) * 100 = 25%."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "What is the area of a circle with a radius of 7 cm? (Use π = 22/7) / 7 सेमी त्रिज्या वाले वृत्त का क्षेत्रफल क्या है? (π = 22/7 का प्रयोग करें)",
+        "options": [
+        "144 sq. cm / 144 वर्ग सेमी",
+        "154 sq. cm / 154 वर्ग सेमी",
+        "164 sq. cm / 164 वर्ग सेमी",
+        "174 sq. cm / 174 वर्ग सेमी"
+        ],
+        "answer": "154 sq. cm / 154 वर्ग सेमी",
+        "explanation": "Area of circle = πr² = (22/7) * 7 * 7 = 154 sq. cm."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "Who is known as the 'Iron Man of India'? / 'भारत के लौह पुरुष' के रूप में किसे जाना जाता है?",
+        "options": [
+        "Jawaharlal Nehru / जवाहरलाल नेहरू",
+        "Sardar Vallabhbhai Patel / सरदार वल्लभभाई पटेल",
+        "Mahatma Gandhi / महात्मा गांधी",
+        "Subhas Chandra Bose / सुभाष चंद्र बोस"
+        ],
+        "answer": "Sardar Vallabhbhai Patel / सरदार वल्लभभाई पटेल",
+        "explanation": "Sardar Vallabhbhai Patel is known as the Iron Man of India for his role in unifying the princely states."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "The deficiency of which vitamin causes Scurvy? / किस विटामिन की कमी से स्कर्वी रोग होता है?",
+        "options": [
+        "Vitamin A / विटामिन ए",
+        "Vitamin B / विटामिन बी",
+        "Vitamin C / विटामिन सी",
+        "Vitamin D / विटामिन डी"
+        ],
+        "answer": "Vitamin C / विटामिन सी",
+        "explanation": "Scurvy is caused by a deficiency of Vitamin C, which is found in citrus fruits."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "Find the average of the first five prime numbers. / पहली पाँच अभाज्य संख्याओं का औसत ज्ञात करें।",
+        "options": [
+        "5.6 / 5.6",
+        "5.2 / 5.2",
+        "6.0 / 6.0",
+        "5.8 / 5.8"
+        ],
+        "answer": "5.6 / 5.6",
+        "explanation": "First five prime numbers are 2, 3, 5, 7, 11. Sum = 28. Average = 28 / 5 = 5.6."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "The Ganga river originates from which glacier? / गंगा नदी किस हिमनद से निकलती है?",
+        "options": [
+        "Siachen Glacier / सियाचिन ग्लेशियर",
+        "Yamunotri Glacier / यमुनोत्री ग्लेशियर",
+        "Gangotri Glacier / गंगोत्री ग्लेशियर",
+        "Pindari Glacier / पिंडारी ग्लेशियर"
+        ],
+        "answer": "Gangotri Glacier / गंगोत्री ग्लेशियर",
+        "explanation": "The Ganga originates from the Gangotri Glacier in the Himalayas as the Bhagirathi river."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "A can do a piece of work in 10 days and B can do it in 15 days. In how many days will they finish the work together? / A एक काम को 10 दिनों में और B उसे 15 दिनों में कर सकता है। वे दोनों मिलकर उस काम को कितने दिनों में पूरा करेंगे?",
+        "options": [
+        "5 days / 5 दिन",
+        "6 days / 6 दिन",
+        "8 days / 8 दिन",
+        "9 days / 9 दिन"
+        ],
+        "answer": "6 days / 6 दिन",
+        "explanation": "A's 1 day work = 1/10. B's 1 day work = 1/15. (A+B)'s 1 day work = 1/10 + 1/15 = 5/30 = 1/6. So, they will finish in 6 days."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "Who was the first President of India? / भारत के पहले राष्ट्रपति कौन थे?",
+        "options": [
+        "Dr. S. Radhakrishnan / डॉ. एस. राधाकृष्णन",
+        "Dr. Rajendra Prasad / डॉ. राजेंद्र प्रसाद",
+        "Jawaharlal Nehru / जवाहरलाल नेहरू",
+        "Dr. B.R. Ambedkar / डॉ. बी.आर. अंबेडकर"
+        ],
+        "answer": "Dr. Rajendra Prasad / डॉ. राजेंद्र प्रसाद",
+        "explanation": "Dr. Rajendra Prasad was the first President of the Republic of India."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "What is the chemical formula for common salt? / साधारण नमक का रासायनिक सूत्र क्या है?",
+        "options": [
+        "H₂O",
+        "CO₂",
+        "NaCl",
+        "HCl"
+        ],
+        "answer": "NaCl",
+        "explanation": "The chemical formula for common salt (sodium chloride) is NaCl."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "If x:y = 3:4, find the value of (4x + 5y) : (5x - 2y). / यदि x:y = 3:4 है, तो (4x + 5y) : (5x - 2y) का मान ज्ञात करें।",
+        "options": [
+        "32:7",
+        "7:32",
+        "16:7",
+        "7:16"
+        ],
+        "answer": "32:7",
+        "explanation": "Let x=3k, y=4k. Then (4*3k + 5*4k) / (5*3k - 2*4k) = (12k + 20k) / (15k - 8k) = 32k / 7k = 32:7."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "Which gas is most abundant in the Earth's atmosphere? / पृथ्वी के वायुमंडल में कौन सी गैस सबसे प्रचुर मात्रा में है?",
+        "options": [
+        "Oxygen / ऑक्सीजन",
+        "Argon / आर्गन",
+        "Carbon Dioxide / कार्बन डाइऑक्साइड",
+        "Nitrogen / नाइट्रोजन"
+        ],
+        "answer": "Nitrogen / नाइट्रोजन",
+        "explanation": "Nitrogen makes up about 78% of the Earth's atmosphere."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "The famous Ajanta caves are located in which state? / प्रसिद्ध अजंता की गुफाएँ किस राज्य में स्थित हैं?",
+        "options": [
+        "Karnataka / कर्नाटक",
+        "Maharashtra / महाराष्ट्र",
+        "Madhya Pradesh / मध्य प्रदेश",
+        "Rajasthan / राजस्थान"
+        ],
+        "answer": "Maharashtra / महाराष्ट्र",
+        "explanation": "The Ajanta caves are located in the Aurangabad district of Maharashtra."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "Solve for x: 5x - 7 = 3x + 3. / x के लिए हल करें: 5x - 7 = 3x + 3.",
+        "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+        ],
+        "answer": "5",
+        "explanation": "5x - 3x = 3 + 7 => 2x = 10 => x = 5."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "Who wrote the Indian National Anthem, 'Jana Gana Mana'? / भारतीय राष्ट्रगान 'जन गण मन' किसने लिखा?",
+        "options": [
+        "Bankim Chandra Chatterjee / बंकिम चंद्र चटर्जी",
+        "Rabindranath Tagore / रवींद्रनाथ टैगोर",
+        "Sarojini Naidu / सरोजिनी नायडू",
+        "Muhammad Iqbal / मुहम्मद इकबाल"
+        ],
+        "answer": "Rabindranath Tagore / रवींद्रनाथ टैगोर",
+        "explanation": "The Indian National Anthem was composed by Rabindranath Tagore."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "What is the SI unit of electric current? / विद्युत धारा की SI इकाई क्या है?",
+        "options": [
+        "Volt / वोल्ट",
+        "Watt / वाट",
+        "Ohm / ओम",
+        "Ampere / एम्पीयर"
+        ],
+        "answer": "Ampere / एम्पीयर",
+        "explanation": "The SI unit of electric current is the Ampere (A)."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "If a car travels 300 km in 5 hours, what is its speed? / यदि एक कार 5 घंटे में 300 किमी की यात्रा करती है, तो उसकी गति क्या है?",
+        "options": [
+        "50 km/h / 50 किमी/घंटा",
+        "60 km/h / 60 किमी/घंटा",
+        "70 km/h / 70 किमी/घंटा",
+        "80 km/h / 80 किमी/घंटा"
+        ],
+        "answer": "60 km/h / 60 किमी/घंटा",
+        "explanation": "Speed = Distance / Time = 300 km / 5 hours = 60 km/h."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "Who founded the Mauryan Empire? / मौर्य साम्राज्य की स्थापना किसने की?",
+        "options": [
+        "Ashoka / अशोक",
+        "Chandragupta Maurya / चंद्रगुप्त मौर्य",
+        "Bindusara / बिन्दुसार",
+        "Samudragupta / समुद्रगुप्त"
+        ],
+        "answer": "Chandragupta Maurya / चंद्रगुप्त मौर्य",
+        "explanation": "Chandragupta Maurya founded the Mauryan Empire around 322 BCE with the help of Chanakya."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "What is the minimum age to be a member of the Lok Sabha? / लोकसभा का सदस्य बनने के लिए न्यूनतम आयु क्या है?",
+        "options": [
+        "21 years / 21 वर्ष",
+        "25 years / 25 वर्ष",
+        "30 years / 30 वर्ष",
+        "35 years / 35 वर्ष"
+        ],
+        "answer": "25 years / 25 वर्ष",
+        "explanation": "According to the Indian Constitution, the minimum age to be a member of the Lok Sabha is 25 years."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "Find the simple interest on ₹5000 for 2 years at 10% per annum. / ₹5000 पर 2 वर्ष के लिए 10% प्रति वर्ष की दर से साधारण ब्याज ज्ञात करें।",
+        "options": [
+        "₹500",
+        "₹1000",
+        "₹1500",
+        "₹2000"
+        ],
+        "answer": "₹1000",
+        "explanation": "Simple Interest (SI) = (P * R * T) / 100 = (5000 * 10 * 2) / 100 = ₹1000."
+    },
+    {
+        "section": "Part-I (Math & General Studies)",
+        "question": "Which of the following is not a primary color? / निम्नलिखित में से कौन सा प्राथमिक रंग नहीं है?",
+        "options": [
+        "Red / लाल",
+        "Green / हरा",
+        "Blue / नीला",
+        "Yellow / पीला"
+        ],
+        "answer": "Yellow / पीला",
+        "explanation": "The primary colors of light are Red, Green, and Blue (RGB). Yellow is a secondary color."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is considered a teacher-centered method of teaching? / निम्नलिखित में से किसे शिक्षण की शिक्षक-केंद्रित विधि माना जाता है?",
+      "options": [
+        "Project Method / परियोजना विधि",
+        "Discussion Method / चर्चा विधि",
+        "Lecture Method / व्याख्यान विधि",
+        "Heuristic Method / अन्वेषण विधि"
+      ],
+      "answer": "Lecture Method / व्याख्यान विधि",
+      "explanation": "In the lecture method, the teacher is the active presenter of information, and students are passive listeners, making it teacher-centered."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Summative evaluation is typically conducted at what point in the instructional process? / योगात्मक मूल्यांकन आमतौर पर निर्देशात्मक प्रक्रिया में किस बिंदु पर आयोजित किया जाता है?",
+      "options": [
+        "During the instruction / निर्देश के दौरान",
+        "At the beginning of instruction / निर्देश की शुरुआत में",
+        "At the end of a course or unit / पाठ्यक्रम या इकाई के अंत में",
+        "Whenever a student requests it / जब भी कोई छात्र अनुरोध करता है"
+      ],
+      "answer": "At the end of a course or unit / पाठ्यक्रम या इकाई के अंत में",
+      "explanation": "Summative evaluation is used to assess student learning at the end of an instructional period, such as a unit, semester, or year."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Jean Piaget's theory of cognitive development primarily focuses on: / जीन पियाजे का संज्ञानात्मक विकास का सिद्धांत मुख्य रूप से किस पर केंद्रित है?",
+      "options": [
+        "How children learn through social interaction / बच्चे सामाजिक संपर्क के माध्यम से कैसे सीखते हैं",
+        "How children construct knowledge through stages / बच्चे चरणों के माध्यम से ज्ञान का निर्माण कैसे करते हैं",
+        "The role of reinforcement in learning / सीखने में सुदृढीकरण की भूमिका",
+        "Emotional development in children / बच्चों में भावनात्मक विकास"
+      ],
+      "answer": "How children construct knowledge through stages / बच्चे चरणों के माध्यम से ज्ञान का निर्माण कैसे करते हैं",
+      "explanation": "Piaget's theory describes how children's minds go through distinct stages of cognitive development, actively constructing their understanding of the world."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the main purpose of micro-teaching? / सूक्ष्म-शिक्षण का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "To teach a large number of students at once / एक साथ बड़ी संख्या में छात्रों को पढ़ाने के लिए",
+        "To evaluate the final performance of teachers / शिक्षकों के अंतिम प्रदर्शन का मूल्यांकन करने के लिए",
+        "To develop specific teaching skills in a controlled environment / एक नियंत्रित वातावरण में विशिष्ट शिक्षण कौशल विकसित करने के लिए",
+        "To cover the syllabus quickly / पाठ्यक्रम को जल्दी से कवर करने के लिए"
+      ],
+      "answer": "To develop specific teaching skills in a controlled environment / एक नियंत्रित वातावरण में विशिष्ट शिक्षण कौशल विकसित करने के लिए",
+      "explanation": "Micro-teaching is a teacher training technique that allows teachers to practice and refine specific skills by teaching short lessons to a small group of peers."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is an example of an audio-visual aid? / निम्नलिखित में से कौन सा एक दृश्य-श्रव्य सहायक सामग्री का उदाहरण है?",
+      "options": [
+        "Radio / रेडियो",
+        "Chart / चार्ट",
+        "Film Projector / फिल्म प्रोजेक्टर",
+        "Voice Recorder / वॉयस रिकॉर्डर"
+      ],
+      "answer": "Film Projector / फिल्म प्रोजेक्टर",
+      "explanation": "A film projector presents both sound (audio) and pictures (visual), making it an audio-visual aid."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The 'learning by doing' principle is best exemplified by which teaching method? / 'करके सीखने' का सिद्धांत किस शिक्षण पद्धति से सबसे अच्छी तरह से प्रमाणित होता है?",
+      "options": [
+        "Lecture method / व्याख्यान विधि",
+        "Activity-based method / गतिविधि-आधारित विधि",
+        "Rote memorization / रटना",
+        "Dictation method / श्रुतलेख विधि"
+      ],
+      "answer": "Activity-based method / गतिविधि-आधारित विधि",
+      "explanation": "Activity-based methods involve students actively participating and performing tasks, which is the essence of 'learning by doing'."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "In Bloom's Taxonomy, which level is considered the highest in the cognitive domain? / ब्लूम की वर्गीकरण में, संज्ञानात्मक क्षेत्र में किस स्तर को उच्चतम माना जाता है?",
+      "options": [
+        "Knowledge / ज्ञान",
+        "Application / अनुप्रयोग",
+        "Analysis / विश्लेषण",
+        "Evaluation / मूल्यांकन"
+      ],
+      "answer": "Evaluation / मूल्यांकन",
+      "explanation": "In the original Bloom's Taxonomy, Evaluation (making judgments about the value of ideas or materials) is the highest level of the cognitive domain."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the primary goal of inclusive education? / समावेशी शिक्षा का प्राथमिक लक्ष्य क्या है?",
+      "options": [
+        "To create separate schools for students with disabilities / विकलांग छात्रों के लिए अलग स्कूल बनाना",
+        "To ensure all students, regardless of ability, learn together in the same classroom / यह सुनिश्चित करना कि सभी छात्र, क्षमता की परवाह किए बिना, एक ही कक्षा में एक साथ सीखें",
+        "To provide education only to gifted students / केवल प्रतिभाशाली छात्रों को शिक्षा प्रदान करना",
+        "To focus solely on academic achievement / केवल अकादमिक उपलब्धि पर ध्यान केंद्रित करना"
+      ],
+      "answer": "To ensure all students, regardless of ability, learn together in the same classroom / यह सुनिश्चित करना कि सभी छात्र, क्षमता की परवाह किए बिना, एक ही कक्षा में एक साथ सीखें",
+      "explanation": "Inclusive education aims to provide equal opportunities for all students, including those with disabilities and diverse backgrounds, within the regular education system."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The theory of 'Trial and Error' in learning was proposed by: / सीखने में 'प्रयत्न और त्रुटि' का सिद्धांत किसके द्वारा प्रस्तावित किया गया था?",
+      "options": [
+        "Ivan Pavlov / इवान पावलोव",
+        "B.F. Skinner / बी.एफ. स्किनर",
+        "Edward Thorndike / एडवर्ड थार्नडाइक",
+        "Jean Piaget / जीन पियाजे"
+      ],
+      "answer": "Edward Thorndike / एडवर्ड थार्नडाइक",
+      "explanation": "Edward Thorndike proposed the theory of learning by trial and error based on his experiments with cats in a puzzle box."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A student who studies hard to get good grades is motivated by: / जो छात्र अच्छे ग्रेड पाने के लिए कड़ी मेहनत करता है, वह किससे प्रेरित होता है?",
+      "options": [
+        "Intrinsic Motivation / आंतरिक प्रेरणा",
+        "Extrinsic Motivation / बाह्य प्रेरणा",
+        "Personal satisfaction / व्यक्तिगत संतुष्टि",
+        "Curiosity / जिज्ञासा"
+      ],
+      "answer": "Extrinsic Motivation / बाह्य प्रेरणा",
+      "explanation": "Extrinsic motivation involves engaging in a behavior to earn external rewards (like good grades) or avoid punishment."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is a key component of a good lesson plan? / निम्नलिखित में से कौन एक अच्छी पाठ योजना का एक प्रमुख घटक है?",
+      "options": [
+        "A long list of difficult questions / कठिन प्रश्नों की एक लंबी सूची",
+        "Specific learning objectives / विशिष्ट शिक्षण उद्देश्य",
+        "A rigid, unchangeable schedule / एक कठोर, अपरिवर्तनीय अनुसूची",
+        "Activities that only the teacher performs / ऐसी गतिविधियाँ जो केवल शिक्षक करता है"
+      ],
+      "answer": "Specific learning objectives / विशिष्ट शिक्षण उद्देश्य",
+      "explanation": "A good lesson plan must have clear and specific learning objectives that state what students are expected to know or be able to do after the lesson."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The 'Affective Domain' of learning is concerned with: / सीखने का 'भावात्मक क्षेत्र' किससे संबंधित है?",
+      "options": [
+        "Intellectual skills / बौद्धिक कौशल",
+        "Physical skills / शारीरिक कौशल",
+        "Attitudes, values, and emotions / दृष्टिकोण, मूल्य और भावनाएँ",
+        "Memorization of facts / तथ्यों को याद करना"
+      ],
+      "answer": "Attitudes, values, and emotions / दृष्टिकोण, मूल्य और भावनाएँ",
+      "explanation": "The Affective Domain, as described in Bloom's Taxonomy, deals with how we handle things emotionally, such as feelings, values, appreciation, and attitudes."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which teaching principle suggests moving from specific examples to a general rule? / कौन सा शिक्षण सिद्धांत विशिष्ट उदाहरणों से एक सामान्य नियम की ओर बढ़ने का सुझाव देता है?",
+      "options": [
+        "Deductive method / निगमनात्मक विधि",
+        "Inductive method / आगमनात्मक विधि",
+        "From simple to complex / सरल से जटिल की ओर",
+        "From known to unknown / ज्ञात से अज्ञात की ओर"
+      ],
+      "answer": "Inductive method / आगमनात्मक विधि",
+      "explanation": "The inductive method involves presenting students with specific examples and helping them arrive at a general conclusion or rule."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What does reliability of a test refer to? / एक परीक्षण की विश्वसनीयता का क्या अर्थ है?",
+      "options": [
+        "The test measures what it claims to measure / परीक्षण वही मापता है जो वह मापने का दावा करता है",
+        "The test is easy to score / परीक्षण को स्कोर करना आसान है",
+        "The test produces consistent results over time / परीक्षण समय के साथ सुसंगत परिणाम देता है",
+        "The test covers the entire syllabus / परीक्षण पूरे पाठ्यक्रम को कवर करता है"
+      ],
+      "answer": "The test produces consistent results over time / परीक्षण समय के साथ सुसंगत परिणाम देता है",
+      "explanation": "Reliability is the degree to which an assessment tool produces stable and consistent results."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The Heuristic method of teaching was developed by: / शिक्षण की अन्वेषण विधि किसके द्वारा विकसित की गई थी?",
+      "options": [
+        "John Dewey / जॉन डेवी",
+        "H.E. Armstrong / एच.ई. आर्मस्ट्रांग",
+        "Friedrich Froebel / फ्रेडरिक फ्रोबेल",
+        "Maria Montessori / मारिया मोंटेसरी"
+      ],
+      "answer": "H.E. Armstrong / एच.ई. आर्मस्ट्रांग",
+      "explanation": "The Heuristic method, which emphasizes self-discovery by the learner, was developed by Professor H.E. Armstrong."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "In classroom communication, a teacher should: / कक्षा संचार में, एक शिक्षक को चाहिए:",
+      "options": [
+        "Use a high-pitched voice / ऊँची आवाज़ का प्रयोग करें",
+        "Speak in a monotonous tone / एक नीरस स्वर में बोलें",
+        "Be empathetic and clear / सहानुभूतिपूर्ण और स्पष्ट रहें",
+        "Ignore student feedback / छात्र प्रतिक्रिया को अनदेखा करें"
+      ],
+      "answer": "Be empathetic and clear / सहानुभूतिपूर्ण और स्पष्ट रहें",
+      "explanation": "Effective classroom communication requires the teacher to be clear in their message and empathetic to the students' needs and understanding."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The 'Psychomotor Domain' of learning is related to: / सीखने का 'मनोगत्यात्मक क्षेत्र' किससे संबंधित है?",
+      "options": [
+        "Problem-solving skills / समस्या-समाधान कौशल",
+        "Emotional responses / भावनात्मक प्रतिक्रियाएँ",
+        "Acquisition of physical skills / शारीरिक कौशल का अधिग्रहण",
+        "Ethical values / नैतिक मूल्य"
+      ],
+      "answer": "Acquisition of physical skills / शारीरिक कौशल का अधिग्रहण",
+      "explanation": "The Psychomotor Domain involves physical movement, coordination, and use of motor-skill areas. It includes skills like typing, driving, or playing an instrument."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is NOT a characteristic of good classroom management? / निम्नलिखित में से कौन सा अच्छे कक्षा प्रबंधन की विशेषता नहीं है?",
+      "options": [
+        "Clear rules and procedures / स्पष्ट नियम और प्रक्रियाएं",
+        "Student engagement / छात्र जुड़ाव",
+        "Inconsistent discipline / असंगत अनुशासन",
+        "Positive teacher-student relationship / सकारात्मक शिक्षक-छात्र संबंध"
+      ],
+      "answer": "Inconsistent discipline / असंगत अनुशासन",
+      "explanation": "Good classroom management relies on consistent application of rules and discipline, not inconsistency."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The concept of 'Zone of Proximal Development' (ZPD) was introduced by: / 'समीपस्थ विकास का क्षेत्र' (ZPD) की अवधारणा किसके द्वारा प्रस्तुत की गई थी?",
+      "options": [
+        "Jean Piaget / जीन पियाजे",
+        "Lawrence Kohlberg / लॉरेंस कोहलबर्ग",
+        "Lev Vygotsky / लेव वायगोत्स्की",
+        "B.F. Skinner / बी.एफ. स्किनर"
+      ],
+      "answer": "Lev Vygotsky / लेव वायगोत्स्की",
+      "explanation": "Lev Vygotsky introduced the ZPD concept, which is the difference between what a learner can do without help and what they can achieve with guidance."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which teaching aid is most effective for demonstrating the internal structure of a human heart? / मानव हृदय की आंतरिक संरचना को प्रदर्शित करने के लिए कौन सी शिक्षण सहायक सामग्री सबसे प्रभावी है?",
+      "options": [
+        "A photograph / एक तस्वीर",
+        "A chart / एक चार्ट",
+        "A 3D model / एक 3डी मॉडल",
+        "A blackboard drawing / एक ब्लैकबोर्ड चित्र"
+      ],
+      "answer": "A 3D model / एक 3डी मॉडल",
+      "explanation": "A 3D model provides a realistic, three-dimensional representation that is ideal for understanding complex structures like a heart."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Diagnostic tests in education are designed to: / शिक्षा में नैदानिक परीक्षणों को डिज़ाइन किया गया है:",
+      "options": [
+        "Rank students based on performance / प्रदर्शन के आधार पर छात्रों को रैंक करने के लिए",
+        "Certify students' mastery of a subject / छात्रों की विषय में निपुणता को प्रमाणित करने के लिए",
+        "Identify the specific learning difficulties of a student / एक छात्र की विशिष्ट सीखने की कठिनाइयों की पहचान करने के लिए",
+        "Provide an overall grade for the course / पाठ्यक्रम के लिए एक समग्र ग्रेड प्रदान करने के लिए"
+      ],
+      "answer": "Identify the specific learning difficulties of a student / एक छात्र की विशिष्ट सीखने की कठिनाइयों की पहचान करने के लिए",
+      "explanation": "The purpose of a diagnostic test is to pinpoint the specific causes of a student's learning problems."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The first step in the problem-solving method is: / समस्या-समाधान विधि में पहला कदम है:",
+      "options": [
+        "Collecting data / डेटा एकत्र करना",
+        "Formulating a hypothesis / एक परिकल्पना तैयार करना",
+        "Identifying and defining the problem / समस्या को पहचानना और परिभाषित करना",
+        "Evaluating the results / परिणामों का मूल्यांकन करना"
+      ],
+      "answer": "Identifying and defining the problem / समस्या को पहचानना और परिभाषित करना",
+      "explanation": "Before a problem can be solved, it must first be clearly identified and defined."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of these is a quality of a good teacher? / इनमें से कौन एक अच्छे शिक्षक का गुण है?",
+      "options": [
+        "Being autocratic in the classroom / कक्षा में निरंकुश होना",
+        "Having good subject knowledge and communication skills / अच्छा विषय ज्ञान और संचार कौशल होना",
+        "Focusing only on bright students / केवल मेधावी छात्रों पर ध्यान केंद्रित करना",
+        "Strict adherence to the textbook / पाठ्यपुस्तक का सख्ती से पालन"
+      ],
+      "answer": "Having good subject knowledge and communication skills / अच्छा विषय ज्ञान और संचार कौशल होना",
+      "explanation": "A good teacher must have a strong command of their subject matter and the ability to communicate it effectively to students."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Remedial teaching is intended for: / उपचारात्मक शिक्षण का उद्देश्य है:",
+      "options": [
+        "Gifted students / प्रतिभाशाली छात्र",
+        "All students in the class / कक्षा के सभी छात्र",
+        "Students who are facing learning difficulties / जो छात्र सीखने में कठिनाइयों का सामना कर रहे हैं",
+        "Students who are absent frequently / जो छात्र अक्सर अनुपस्थित रहते हैं"
+      ],
+      "answer": "Students who are facing learning difficulties / जो छात्र सीखने में कठिनाइयों का सामना कर रहे हैं",
+      "explanation": "Remedial teaching is designed to help students overcome their specific learning gaps and difficulties."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The question 'Why is the sky blue?' belongs to which level of Bloom's Taxonomy? / 'आसमान नीला क्यों है?' यह प्रश्न ब्लूम की वर्गीकरण के किस स्तर से संबंधित है?",
+      "options": [
+        "Knowledge / ज्ञान",
+        "Comprehension / समझ",
+        "Application / अनुप्रयोग",
+        "Synthesis / संश्लेषण"
+      ],
+      "answer": "Comprehension / समझ",
+      "explanation": "This question requires explaining a concept, which demonstrates comprehension or understanding, a level beyond simple knowledge recall."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which philosophy of education emphasizes learning through experience? / शिक्षा का कौन सा दर्शन अनुभव के माध्यम से सीखने पर जोर देता है?",
+      "options": [
+        "Idealism / आदर्शवाद",
+        "Realism / यथार्थवाद",
+        "Pragmatism / प्रयोजनवाद",
+        "Existentialism / अस्तित्ववाद"
+      ],
+      "answer": "Pragmatism / प्रयोजनवाद",
+      "explanation": "Pragmatism, advocated by thinkers like John Dewey, holds that education should be about life and growth, with a focus on learning through practical experience."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the primary role of a teacher in a student-centered classroom? / छात्र-केंद्रित कक्षा में शिक्षक की प्राथमिक भूमिका क्या है?",
+      "options": [
+        "To be a strict disciplinarian / एक सख्त अनुशासक होना",
+        "To be a facilitator of learning / सीखने का एक सूत्रधार होना",
+        "To be the primary source of all knowledge / सभी ज्ञान का प्राथमिक स्रोत होना",
+        "To focus on completing the curriculum / पाठ्यक्रम पूरा करने पर ध्यान केंद्रित करना"
+      ],
+      "answer": "To be a facilitator of learning / सीखने का एक सूत्रधार होना",
+      "explanation": "In a student-centered approach, the teacher acts as a guide or facilitator, helping students construct their own knowledge, rather than just delivering information."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Ivan Pavlov's classical conditioning theory was based on experiments with: / इवान पावलोव का शास्त्रीय अनुबंधन सिद्धांत किसके प्रयोगों पर आधारित था?",
+      "options": [
+        "Cats / बिल्लियाँ",
+        "Dogs / कुत्ते",
+        "Pigeons / कबूतर",
+        "Monkeys / बंदर"
+      ],
+      "answer": "Dogs / कुत्ते",
+      "explanation": "Pavlov's famous experiments involved studying the salivation of dogs in response to a bell, demonstrating classical conditioning."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The term 'validity' in a test means that: / एक परीक्षण में 'वैधता' शब्द का अर्थ है कि:",
+      "options": [
+        "The test is free from bias / परीक्षण पूर्वाग्रह से मुक्त है",
+        "The test accurately measures what it is intended to measure / परीक्षण सटीक रूप से वही मापता है जिसे मापने का इरादा है",
+        "The test scores are consistent / परीक्षण स्कोर सुसंगत हैं",
+        "The test is easy to administer and score / परीक्षण को प्रशासित करना और स्कोर करना आसान है"
+      ],
+      "answer": "The test accurately measures what it is intended to measure / परीक्षण सटीक रूप से वही मापता है जिसे मापने का इरादा है",
+      "explanation": "Validity is the most important characteristic of a good test, ensuring that it is measuring the specific concept or skill it was designed to assess."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is a disadvantage of the lecture method? / निम्नलिखित में से कौन व्याख्यान विधि का एक नुकसान है?",
+      "options": [
+        "It can cover a large amount of content quickly / यह बड़ी मात्रा में सामग्री को जल्दी से कवर कर सकता है",
+        "It promotes passive learning among students / यह छात्रों के बीच निष्क्रिय सीखने को बढ़ावा देता है",
+        "It is cost-effective / यह लागत प्रभावी है",
+        "It is useful for large groups / यह बड़े समूहों के लिए उपयोगी है"
+      ],
+      "answer": "It promotes passive learning among students / यह छात्रों के बीच निष्क्रिय सीखने को बढ़ावा देता",
+      "explanation": "A major criticism of the lecture method is that it often leads to passive learning, where students are not actively engaged in the learning process."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the full form of CPU? / सीपीयू का पूरा नाम क्या है?",
+      "options": [
+        "Central Processing Unit / सेंट्रल प्रोसेसिंग यूनिट",
+        "Central Program Unit / सेंट्रल प्रोग्राम यूनिट",
+        "Computer Processing Unit / कंप्यूटर प्रोसेसिंग यूनिट",
+        "Centralized Process Unit / सेंट्रलाइज्ड प्रोसेस यूनिट"
+      ],
+      "answer": "Central Processing Unit / सेंट्रल प्रोसेसिंग यूनिट",
+      "explanation": "CPU stands for Central Processing Unit and is often called the brain of the computer."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following is an example of an Operating System? / निम्नलिखित में से कौन सा एक ऑपरेटिंग सिस्टम का उदाहरण है?",
+      "options": [
+        "Microsoft Office / माइक्रोसॉफ्ट ऑफिस",
+        "Google Chrome / गूगल क्रोम",
+        "Ubuntu / उबंटू",
+        "Adobe Photoshop / एडोब फोटोशॉप"
+      ],
+      "answer": "Ubuntu / उबंटू",
+      "explanation": "Ubuntu is a popular open-source operating system based on the Linux kernel. Others are application software."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In a relational database, what does a 'Primary Key' do? / एक रिलेशनल डेटाबेस में, 'प्राइमरी की' क्या करती है?",
+      "options": [
+        "Links two tables together / दो तालिकाओं को एक साथ जोड़ती है",
+        "Uniquely identifies each record in a table / एक तालिका में प्रत्येक रिकॉर्ड को विशिष्ट रूप से पहचानती है",
+        "Is always a text field / हमेशा एक टेक्स्ट फ़ील्ड होती है",
+        "Can contain duplicate values / इसमें डुप्लिकेट मान हो सकते हैं"
+      ],
+      "answer": "Uniquely identifies each record in a table / एक तालिका में प्रत्येक रिकॉर्ड को विशिष्ट रूप से पहचानती है",
+      "explanation": "A Primary Key must contain unique values and cannot have NULL values, ensuring each row is uniquely identifiable."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which data structure uses the LIFO (Last-In, First-Out) principle? / कौन सी डेटा संरचना LIFO (लास्ट-इन, फर्स्ट-आउट) सिद्धांत का उपयोग करती है?",
+      "options": [
+        "Queue / क्यू",
+        "Stack / स्टैक",
+        "Array / ऐरे",
+        "Tree / ट्री"
+      ],
+      "answer": "Stack / स्टैक",
+      "explanation": "A stack operates like a stack of plates. The last item placed on top is the first one to be removed."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What does HTML stand for? / HTML का पूरा नाम क्या है?",
+      "options": [
+        "Hyper Text Markup Language / हाइपर टेक्स्ट मार्कअप लैंग्वेज",
+        "High Tech Modern Language / हाई टेक मॉडर्न लैंग्वेज",
+        "Hyperlink and Text Management Language / हाइपरलिंक एंड टेक्स्ट मैनेजमेंट लैंग्वेज",
+        "Home Tool Markup Language / होम टूल मार्कअप लैंग्वेज"
+      ],
+      "answer": "Hyper Text Markup Language / हाइपर टेक्स्ट मार्कअप लैंग्वेज",
+      "explanation": "HTML is the standard markup language for creating web pages and web applications."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following programming languages is NOT object-oriented? / निम्नलिखित में से कौन सी प्रोग्रामिंग भाषा ऑब्जेक्ट-ओरिएंटेड नहीं है?",
+      "options": [
+        "Java / जावा",
+        "C++ / सी++",
+        "Python / पाइथन",
+        "C / सी"
+      ],
+      "answer": "C / सी",
+      "explanation": "C is a procedural programming language. Java, C++, and Python all support object-oriented programming principles."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which layer of the OSI model is responsible for packet forwarding and routing? / OSI मॉडल की कौन सी परत पैकेट अग्रेषण और रूटिंग के लिए जिम्मेदार है?",
+      "options": [
+        "Data Link Layer / डाटा लिंक लेयर",
+        "Transport Layer / ट्रांसपोर्ट लेयर",
+        "Network Layer / नेटवर्क लेयर",
+        "Physical Layer / फिजिकल लेयर"
+      ],
+      "answer": "Network Layer / नेटवर्क लेयर",
+      "explanation": "The Network Layer (Layer 3) handles logical addressing (like IP addresses) and determines the best path for data to travel."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which command is used in SQL to retrieve data from a database? / डेटाबेस से डेटा प्राप्त करने के लिए SQL में किस कमांड का उपयोग किया जाता है?",
+      "options": [
+        "GET / गेट",
+        "FETCH / फेच",
+        "RETRIEVE / रिट्रीव",
+        "SELECT / सेलेक्ट"
+      ],
+      "answer": "SELECT / सेलेक्ट",
+      "explanation": "The SELECT statement is used to query the database and retrieve data that matches criteria that you specify."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the binary equivalent of the decimal number 10? / दशमलव संख्या 10 का बाइनरी समतुल्य क्या है?",
+      "options": [
+        "1010",
+        "1100",
+        "1001",
+        "0110"
+      ],
+      "answer": "1010",
+      "explanation": "In binary, 10 is represented as (1 * 2³) + (0 * 2²) + (1 * 2¹) + (0 * 2⁰) = 8 + 0 + 2 + 0 = 10."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following is a volatile memory? / निम्नलिखित में से कौन सी एक वोलेटाइल मेमोरी है?",
+      "options": [
+        "ROM (Read-Only Memory) / रोम",
+        "SSD (Solid State Drive) / एसएसडी",
+        "Hard Disk / हार्ड डिस्क",
+        "RAM (Random Access Memory) / रैम"
+      ],
+      "answer": "RAM (Random Access Memory) / रैम",
+      "explanation": "RAM is volatile, meaning its contents are lost when the computer's power is turned off."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What does IP stand for in the context of computer networks? / कंप्यूटर नेटवर्क के संदर्भ में IP का क्या अर्थ है?",
+      "options": [
+        "Internet Provider / इंटरनेट प्रोवाइडर",
+        "Internal Protocol / इंटरनल प्रोटोकॉल",
+        "Internet Protocol / इंटरनेट प्रोटोकॉल",
+        "Information Process / इनफार्मेशन प्रोसेस"
+      ],
+      "answer": "Internet Protocol / इंटरनेट प्रोटोकॉल",
+      "explanation": "IP stands for Internet Protocol, which is the principal communications protocol for relaying datagrams across network boundaries."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which logic gate produces a high output (1) only when all of its inputs are high (1)? / कौन सा लॉजिक गेट केवल तभी उच्च आउटपुट (1) उत्पन्न करता है जब उसके सभी इनपुट उच्च (1) होते हैं?",
+      "options": [
+        "OR Gate / OR गेट",
+        "NOT Gate / NOT गेट",
+        "AND Gate / AND गेट",
+        "XOR Gate / XOR गेट"
+      ],
+      "answer": "AND Gate / AND गेट",
+      "explanation": "The AND gate is a basic digital logic gate that implements logical conjunction; its output is true only if all inputs are true."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The concept of 'Inheritance' is a key feature of which programming paradigm? / 'इनहेरिटेंस' की अवधारणा किस प्रोग्रामिंग प्रतिमान की एक प्रमुख विशेषता है?",
+      "options": [
+        "Procedural Programming / प्रोसीजरल प्रोग्रामिंग",
+        "Functional Programming / फंक्शनल प्रोग्रामिंग",
+        "Object-Oriented Programming / ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग",
+        "Logical Programming / लॉजिकल प्रोग्रामिंग"
+      ],
+      "answer": "Object-Oriented Programming / ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग",
+      "explanation": "Inheritance is one of the core principles of OOP, allowing a new class to derive properties and methods from an existing class."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these is a popular version control system? / इनमें से कौन एक लोकप्रिय संस्करण नियंत्रण प्रणाली है?",
+      "options": [
+        "Jenkins / जेनकिंस",
+        "Docker / डॉकर",
+        "Git / गिट",
+        "Maven / मेवेन"
+      ],
+      "answer": "Git / गिट",
+      "explanation": "Git is a widely-used distributed version control system for tracking changes in source code during software development."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the file extension for a Python source file? / पाइथन सोर्स फ़ाइल के लिए फ़ाइल एक्सटेंशन क्या है?",
+      "options": [
+        ".pyt",
+        ".ptn",
+        ".py",
+        ".pth"
+      ],
+      "answer": ".py",
+      "explanation": "Python source code files are typically saved with the '.py' extension."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which type of network topology connects all devices in a circular fashion? / किस प्रकार की नेटवर्क टोपोलॉजी सभी उपकरणों को एक गोलाकार तरीके से जोड़ती है?",
+      "options": [
+        "Star Topology / स्टार टोपोलॉजी",
+        "Bus Topology / बस टोपोलॉजी",
+        "Ring Topology / रिंग टोपोलॉजी",
+        "Mesh Topology / मेश टोपोलॉजी"
+      ],
+      "answer": "Ring Topology / रिंग टोपोलॉजी",
+      "explanation": "In a ring topology, each device is connected to exactly two other devices, forming a single continuous pathway for signals."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following is NOT a web browser? / निम्नलिखित में से कौन एक वेब ब्राउज़र नहीं है?",
+      "options": [
+        "Mozilla Firefox / मोज़िला फ़ायरफ़ॉक्स",
+        "MySQL / माईएसक्यूएल",
+        "Google Chrome / गूगल क्रोम",
+        "Microsoft Edge / माइक्रोसॉफ्ट एज"
+      ],
+      "answer": "MySQL / माईएसक्यूएल",
+      "explanation": "MySQL is a relational database management system (RDBMS). The others are all web browsers."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The process of finding and fixing errors in a program is called? / एक प्रोग्राम में त्रुटियों को खोजने और ठीक करने की प्रक्रिया को क्या कहा जाता है?",
+      "options": [
+        "Compiling / कंपाइलिंग",
+        "Executing / एक्सिक्यूटिंग",
+        "Debugging / डीबगिंग",
+        "Interpreting / इंटरप्रेटिंग"
+      ],
+      "answer": "Debugging / डीबगिंग",
+      "explanation": "Debugging is the systematic process of finding and resolving bugs (defects or problems that prevent correct operation) in computer programs."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In C++, which keyword is used to create a new object instance? / C++ में, एक नया ऑब्जेक्ट इंस्टेंस बनाने के लिए किस कीवर्ड का उपयोग किया जाता है?",
+      "options": [
+        "create / क्रिएट",
+        "new / न्यू",
+        "instance / इंस्टेंस",
+        "object / ऑब्जेक्ट"
+      ],
+      "answer": "new / न्यू",
+      "explanation": "The 'new' operator is used in C++ to dynamically allocate memory for an object and return a pointer to it."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which protocol is used for securely browsing websites? / वेबसाइटों को सुरक्षित रूप से ब्राउज़ करने के लिए किस प्रोटोकॉल का उपयोग किया जाता है?",
+      "options": [
+        "HTTP / एचटीटीपी",
+        "FTP / एफटीपी",
+        "SMTP / एसएमटीपी",
+        "HTTPS / एचटीटीपीएस"
+      ],
+      "answer": "HTTPS / एचटीटीपीएस",
+      "explanation": "HTTPS (Hyper Text Transfer Protocol Secure) encrypts the data between the browser and the website, ensuring a secure connection."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the time complexity of a successful Binary Search in a sorted array? / एक सॉर्ट किए गए ऐरे में एक सफल बाइनरी सर्च की समय जटिलता क्या है?",
+      "options": [
+        "O(n) / ओ(एन)",
+        "O(n log n) / ओ(एन लॉग एन)",
+        "O(log n) / ओ(लॉग एन)",
+        "O(n²) / ओ(एन²)"
+      ],
+      "answer": "O(log n) / ओ(लॉग एन)",
+      "explanation": "Binary search works by repeatedly dividing the search interval in half. Its time complexity is logarithmic, O(log n)."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these is a NoSQL database? / इनमें से कौन सा एक NoSQL डेटाबेस है?",
+      "options": [
+        "PostgreSQL / पोस्टग्रेएसक्यूएल",
+        "Oracle / ओरेकल",
+        "MongoDB / मोंगोडीबी",
+        "Microsoft SQL Server / माइक्रोसॉफ्ट एसक्यूएल सर्वर"
+      ],
+      "answer": "MongoDB / मोंगोडीबी",
+      "explanation": "MongoDB is a document-oriented NoSQL database, while the others are relational database management systems (RDBMS)."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The term 'Gigabyte' (GB) refers to approximately how many bytes? / 'गीगाबाइट' (GB) शब्द का अर्थ लगभग कितने बाइट्स है?",
+      "options": [
+        "1024 bytes / 1024 बाइट्स",
+        "1024 kilobytes / 1024 किलोबाइट्स",
+        "1024 megabytes / 1024 मेगाबाइट्स",
+        "1024 terabytes / 1024 टेराबाइट्स"
+      ],
+      "answer": "1024 megabytes / 1024 मेगाबाइट्स",
+      "explanation": "In computing, storage is measured in powers of 2. 1 Gigabyte (GB) = 1024 Megabytes (MB)."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which component of the CPU is responsible for performing arithmetic and logical operations? / सीपीयू का कौन सा घटक अंकगणितीय और तार्किक संचालन करने के लिए जिम्मेदार है?",
+      "options": [
+        "Control Unit (CU) / कंट्रोल यूनिट (सीयू)",
+        "Arithmetic Logic Unit (ALU) / अरिथमैटिक लॉजिक यूनिट (एएलयू)",
+        "Memory Registers / मेमोरी रजिस्टर्स",
+        "Cache / कैश"
+      ],
+      "answer": "Arithmetic Logic Unit (ALU) / अरिथमैटिक लॉजिक यूनिट (एएलयू)",
+      "explanation": "The ALU performs all arithmetic operations (like addition, subtraction) and logical operations (like AND, OR)."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What does CSS stand for in web development? / वेब डेवलपमेंट में CSS का क्या अर्थ है?",
+      "options": [
+        "Creative Style Sheets / क्रिएटिव स्टाइल शीट्स",
+        "Cascading Style Sheets / कैस्केडिंग स्टाइल शीट्स",
+        "Computer Style Sheets / कंप्यूटर स्टाइल शीट्स",
+        "Colorful Style Sheets / कलरफुल स्टाइल शीट्स"
+      ],
+      "answer": "Cascading Style Sheets / कैस्केडिंग स्टाइल शीट्स",
+      "explanation": "CSS is a style sheet language used for describing the presentation of a document written in a markup language like HTML."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which scheduling algorithm in an OS executes jobs in the order they arrive? / ओएस में कौन सा शेड्यूलिंग एल्गोरिथ्म नौकरियों को उनके आने के क्रम में निष्पादित करता है?",
+      "options": [
+        "Shortest Job First / शॉर्टेस्ट जॉब फर्स्ट",
+        "Round Robin / राउंड रॉबिन",
+        "First-Come, First-Served / फर्स्ट-कम, फर्स्ट-सर्व्ड",
+        "Priority Scheduling / प्रायोरिटी शेड्यूलिंग"
+      ],
+      "answer": "First-Come, First-Served / फर्स्ट-कम, फर्स्ट-सर्व्ड",
+      "explanation": "First-Come, First-Served (FCFS) is the simplest scheduling algorithm where processes are executed in the order of their arrival."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In Java, which keyword makes a variable belong to the class, rather than a specific instance? / जावा में, कौन सा कीवर्ड एक चर को किसी विशिष्ट इंस्टेंस के बजाय क्लास से संबंधित बनाता है?",
+      "options": [
+        "final / फाइनल",
+        "static / स्टैटिक",
+        "volatile / वोलेटाइल",
+        "instance / इंस्टेंस"
+      ],
+      "answer": "static / स्टैटिक",
+      "explanation": "A 'static' variable is common to all instances (or objects) of the class because it is a class-level variable."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following is an input device? / निम्नलिखित में से कौन एक इनपुट डिवाइस है?",
+      "options": [
+        "Monitor / मॉनिटर",
+        "Printer / प्रिंटर",
+        "Scanner / स्कैनर",
+        "Speaker / स्पीकर"
+      ],
+      "answer": "Scanner / स्कैनर",
+      "explanation": "A scanner is an input device that captures images from photographic prints, posters, and similar sources for computer editing and display."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "An IPv4 address consists of how many bits? / एक IPv4 पते में कितने बिट होते हैं?",
+      "options": [
+        "16 bits / 16 बिट्स",
+        "32 bits / 32 बिट्स",
+        "64 bits / 64 बिट्स",
+        "128 bits / 128 बिट्स"
+      ],
+      "answer": "32 bits / 32 बिट्स",
+      "explanation": "An IPv4 address is a 32-bit number, typically represented in dot-decimal notation (e.g., 192.168.1.1)."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these sorting algorithms is considered the fastest on average? / इनमें से कौन सा सॉर्टिंग एल्गोरिथ्म औसतन सबसे तेज माना जाता है?",
+      "options": [
+        "Bubble Sort / बबल सॉर्ट",
+        "Insertion Sort / इंसर्शन सॉर्ट",
+        "Quick Sort / क्विक सॉर्ट",
+        "Selection Sort / सिलेक्शन सॉर्ट"
+      ],
+      "answer": "Quick Sort / क्विक सॉर्ट",
+      "explanation": "Quick Sort has an average time complexity of O(n log n), which is generally faster than O(n²) algorithms like Bubble Sort and Selection Sort."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The software that manages and controls the computer hardware is called? / कंप्यूटर हार्डवेयर का प्रबंधन और नियंत्रण करने वाले सॉफ्टवेयर को क्या कहा जाता है?",
+      "options": [
+        "Application Software / एप्लीकेशन सॉफ्टवेयर",
+        "System Software / सिस्टम सॉफ्टवेयर",
+        "Utility Software / यूटिलिटी सॉफ्टवेयर",
+        "Firmware / फर्मवेयर"
+      ],
+      "answer": "System Software / सिस्टम सॉफ्टवेयर",
+      "explanation": "System software, like an Operating System, acts as an interface between the hardware and the user applications."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which HTML tag is used to create a numbered list? / एक क्रमांकित सूची बनाने के लिए किस HTML टैग का उपयोग किया जाता है?",
+      "options": [
+        "<ul> / <ul>",
+        "<ol> / <ol>",
+        "<li> / <li>",
+        "<dl> / <dl>"
+      ],
+      "answer": "<ol> / <ol>",
+      "explanation": "The <ol> tag stands for 'ordered list' and is used to create lists with numbers or letters."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The process of converting source code into machine code is done by a? / सोर्स कोड को मशीन कोड में बदलने की प्रक्रिया किसके द्वारा की जाती है?",
+      "options": [
+        "Linker / लिंकर",
+        "Loader / लोडर",
+        "Compiler / कंपाइलर",
+        "Debugger / डीबगर"
+      ],
+      "answer": "Compiler / कंपाइलर",
+      "explanation": "A compiler translates the entire source code written in a high-level language into machine code at once."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In OOP, what is the bundling of data and the methods that operate on that data into a single unit called? / OOP में, डेटा और उस डेटा पर काम करने वाले तरीकों को एक ही इकाई में बंडल करने को क्या कहा जाता है?",
+      "options": [
+        "Inheritance / इनहेरिटेंस",
+        "Polymorphism / पॉलीमॉरफिज्म",
+        "Abstraction / एब्स्ट्रैक्शन",
+        "Encapsulation / एनकैप्सुलेशन"
+      ],
+      "answer": "Encapsulation / एनकैप्सुलेशन",
+      "explanation": "Encapsulation is the mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these is a command-line interface operating system? / इनमें से कौन सा एक कमांड-लाइन इंटरफ़ेस ऑपरेटिंग सिस्टम है?",
+      "options": [
+        "Windows 10 / विंडोज 10",
+        "macOS / मैकओएस",
+        "MS-DOS / एमएस-डॉस",
+        "Android / एंड्राइड"
+      ],
+      "answer": "MS-DOS / एमएस-डॉस",
+      "explanation": "MS-DOS (Microsoft Disk Operating System) primarily used a command-line interface, where users typed commands instead of using a mouse."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "A firewall is used in a network for? / एक नेटवर्क में फ़ायरवॉल का उपयोग किस लिए किया जाता है?",
+      "options": [
+        "Increasing speed / गति बढ़ाने के लिए",
+        "Backing up data / डेटा का बैकअप लेने के लिए",
+        "Security purposes / सुरक्षा उद्देश्यों के लिए",
+        "Connecting to the internet / इंटरनेट से कनेक्ट करने के लिए"
+      ],
+      "answer": "Security purposes / सुरक्षा उद्देश्यों के लिए",
+      "explanation": "A firewall acts as a barrier between a trusted network and an untrusted network, filtering incoming and outgoing traffic to prevent unauthorized access."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which SQL clause is used to filter results? / परिणामों को फ़िल्टर करने के लिए किस SQL क्लॉज का उपयोग किया जाता है?",
+      "options": [
+        "GROUP BY / ग्रुप बाय",
+        "ORDER BY / आर्डर बाय",
+        "HAVING / हैविंग",
+        "WHERE / व्हेयर"
+      ],
+      "answer": "WHERE / व्हेयर",
+      "explanation": "The WHERE clause is used to extract only those records that fulfill a specified condition."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The smallest unit of data in a computer is a? / कंप्यूटर में डेटा की सबसे छोटी इकाई क्या है?",
+      "options": [
+        "Byte / बाइट",
+        "Nibble / निबल",
+        "Bit / बिट",
+        "Word / वर्ड"
+      ],
+      "answer": "Bit / बिट",
+      "explanation": "A bit (binary digit) is the most basic unit of data and can have a value of either 0 or 1."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What kind of language is JavaScript? / जावास्क्रिप्ट किस तरह की भाषा है?",
+      "options": [
+        "Markup Language / मार्कअप भाषा",
+        "Scripting Language / स्क्रिप्टिंग भाषा",
+        "Styling Language / स्टाइलिंग भाषा",
+        "Compiled Language / कंपाइल्ड भाषा"
+      ],
+      "answer": "Scripting Language / स्क्रिप्टिंग भाषा",
+      "explanation": "JavaScript is a high-level, interpreted scripting language used to make web pages interactive."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which device connects multiple computers together in a Local Area Network (LAN)? / कौन सा उपकरण एक लोकल एरिया नेटवर्क (LAN) में कई कंप्यूटरों को एक साथ जोड़ता है?",
+      "options": [
+        "Modem / मॉडेम",
+        "Router / राउटर",
+        "Switch / स्विच",
+        "Repeater / रिपीटर"
+      ],
+      "answer": "Switch / स्विच",
+      "explanation": "A network switch is a networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In C, what does the '&' operator do? / C में, '&' ऑपरेटर क्या करता है?",
+      "options": [
+        "Performs a logical AND operation / एक लॉजिकल AND ऑपरेशन करता है",
+        "Dereferences a pointer / एक पॉइंटर को डीरेफरेंस करता है",
+        "Returns the memory address of a variable / एक चर का मेमोरी पता लौटाता है",
+        "Creates a new variable / एक नया चर बनाता है"
+      ],
+      "answer": "Returns the memory address of a variable / एक चर का मेमोरी पता लौटाता है",
+      "explanation": "The ampersand (&) is the address-of operator in C. It returns the memory address of its operand."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following is a type of system software? / निम्नलिखित में से कौन सा एक प्रकार का सिस्टम सॉफ्टवेयर है?",
+      "options": [
+        "Web Browser / वेब ब्राउज़र",
+        "Device Driver / डिवाइस ड्राइवर",
+        "Video Game / वीडियो गेम",
+        "Word Processor / वर्ड प्रोसेसर"
+      ],
+      "answer": "Device Driver / डिवाइस ड्राइवर",
+      "explanation": "A device driver is a system software that operates or controls a particular type of device that is attached to a computer."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is 'Polymorphism' in OOP? / OOP में 'पॉलीमॉरफिज्म' क्या है?",
+      "options": [
+        "The ability of a message to be displayed in more than one form / एक संदेश की एक से अधिक रूपों में प्रदर्शित होने की क्षमता",
+        "The ability to create a new class from an existing class / एक मौजूदा क्लास से एक नई क्लास बनाने की क्षमता",
+        "The process of hiding implementation details / कार्यान्वयन विवरण छिपाने की प्रक्रिया",
+        "The bundling of data and methods together / डेटा और तरीकों को एक साथ बंडल करना"
+      ],
+      "answer": "The ability of a message to be displayed in more than one form / एक संदेश की एक से अधिक रूपों में प्रदर्शित होने की क्षमता",
+      "explanation": "Polymorphism, meaning 'many forms', allows objects of different classes to be treated as objects of a common superclass, often through method overriding or overloading."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these is a cloud computing service model? / इनमें से कौन एक क्लाउड कंप्यूटिंग सेवा मॉडल है?",
+      "options": [
+        "TCP (Transmission Control Protocol) / टीसीपी",
+        "SaaS (Software as a Service) / सास",
+        "HTML (HyperText Markup Language) / एचटीएमएल",
+        "SSD (Solid State Drive) / एसएसडी"
+      ],
+      "answer": "SaaS (Software as a Service) / सास",
+      "explanation": "SaaS is a cloud model where software is licensed on a subscription basis and is centrally hosted. IaaS and PaaS are other models."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "A collection of related web pages is called a? / संबंधित वेब पेजों के संग्रह को क्या कहा जाता है?",
+      "options": [
+        "Web Browser / वेब ब्राउज़र",
+        "Web Server / वेब सर्वर",
+        "Website / वेबसाइट",
+        "Search Engine / सर्च इंजन"
+      ],
+      "answer": "Website / वेबसाइट",
+      "explanation": "A website is a collection of publicly accessible, interlinked web pages that share a single domain name."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The first generation of computers used what for circuitry? / पहली पीढ़ी के कंप्यूटरों ने सर्किटरी के लिए क्या इस्तेमाल किया?",
+      "options": [
+        "Transistors / ट्रांजिस्टर",
+        "Integrated Circuits / इंटीग्रेटेड सर्किट",
+        "Vacuum Tubes / वैक्यूम ट्यूब",
+        "Microprocessors / माइक्रोप्रोसेसर"
+      ],
+      "answer": "Vacuum Tubes / वैक्यूम ट्यूब",
+      "explanation": "First-generation computers (1940s-1950s) relied on vacuum tubes as their primary electronic component."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which type of database model stores data in tables? / किस प्रकार का डेटाबेस मॉडल डेटा को तालिकाओं में संग्रहीत करता है?",
+      "options": [
+        "Hierarchical / हायरेरिकल",
+        "Network / नेटवर्क",
+        "Relational / रिलेशनल",
+        "Object-Oriented / ऑब्जेक्ट-ओरिएंटेड"
+      ],
+      "answer": "Relational / रिलेशनल",
+      "explanation": "The relational model, the most common type, organizes data into one or more tables of columns and rows."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In the context of an Operating System, what is a 'kernel'? / एक ऑपरेटिंग सिस्टम के संदर्भ में, 'कर्नेल' क्या है?",
+      "options": [
+        "A user interface / एक यूजर इंटरफ़ेस",
+        "The core component of the OS / ओएस का मुख्य घटक",
+        "A utility program / एक यूटिलिटी प्रोग्राम",
+        "A shell script / एक शेल स्क्रिप्ट"
+      ],
+      "answer": "The core component of the OS / ओएस का मुख्य घटक",
+      "explanation": "The kernel is the central part of an operating system that manages the system's resources and the communication between hardware and software."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the term for a malicious software that disguises itself as a legitimate program? / एक दुर्भावनापूर्ण सॉफ़्टवेयर के लिए क्या शब्द है जो खुद को एक वैध प्रोग्राम के रूप में प्रच्छन्न करता है?",
+      "options": [
+        "Virus / वायरस",
+        "Worm / वर्म",
+        "Trojan Horse / ट्रोजन हॉर्स",
+        "Spyware / स्पाइवेयर"
+      ],
+      "answer": "Trojan Horse / ट्रोजन हॉर्स",
+      "explanation": "A Trojan Horse is a type of malware that misleads users of its true intent, often disguised as legitimate software."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these provides a unique address to a computer on the internet? / इनमें से कौन इंटरनेट पर एक कंप्यूटर को एक अद्वितीय पता प्रदान करता है?",
+      "options": [
+        "MAC Address / मैक एड्रेस",
+        "IP Address / आईपी एड्रेस",
+        "URL / यूआरएल",
+        "Port Number / पोर्ट नंबर"
+      ],
+      "answer": "IP Address / आईपी एड्रेस",
+      "explanation": "An IP Address is a unique string of numbers that identifies each computer using the Internet Protocol to communicate over a network."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which data structure is best for implementing a priority queue? / प्राथमिकता क्यू को लागू करने के लिए कौन सी डेटा संरचना सबसे अच्छी है?",
+      "options": [
+        "Stack / स्टैक",
+        "Array / ऐरे",
+        "Linked List / लिंक्ड लिस्ट",
+        "Heap / हीप"
+      ],
+      "answer": "Heap / हीप",
+      "explanation": "A Heap is a tree-based data structure that satisfies the heap property, making it highly efficient for implementing priority queues."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the default port number for HTTP? / HTTP के लिए डिफ़ॉल्ट पोर्ट नंबर क्या है?",
+      "options": [
+        "21",
+        "25",
+        "80",
+        "443"
+      ],
+      "answer": "80",
+      "explanation": "The standard port for Hypertext Transfer Protocol (HTTP) is port 80. Port 443 is for HTTPS."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which language is used for styling web pages? / वेब पेजों को स्टाइल करने के लिए किस भाषा का उपयोग किया जाता है?",
+      "options": [
+        "HTML / एचटीएमएल",
+        "JavaScript / जावास्क्रिप्ट",
+        "CSS / सीएसएस",
+        "PHP / पीएचपी"
+      ],
+      "answer": "CSS / सीएसएस",
+      "explanation": "CSS (Cascading Style Sheets) is used to control the visual presentation, layout, and formatting of web pages."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What does GUI stand for? / GUI का पूरा नाम क्या है?",
+      "options": [
+        "Graphical User Interface / ग्राफिकल यूजर इंटरफ़ेस",
+        "General Utility Interface / जनरल यूटिलिटी इंटरफ़ेस",
+        "Graphical Utility Interaction / ग्राफिकल यूटिलिटी इंटरेक्शन",
+        "General User Input / जनरल यूजर इनपुट"
+      ],
+      "answer": "Graphical User Interface / ग्राफिकल यूजर इंटरफ़ेस",
+      "explanation": "A GUI allows users to interact with electronic devices through graphical icons and visual indicators."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In software development, what does SDLC stand for? / सॉफ्टवेयर विकास में, SDLC का क्या अर्थ है?",
+      "options": [
+        "Software Design Life Cycle / सॉफ्टवेयर डिजाइन लाइफ साइकिल",
+        "System Development Life Cycle / सिस्टम डेवलपमेंट लाइफ साइकिल",
+        "Software Development Language Control / सॉफ्टवेयर डेवलपमेंट लैंग्वेज कंट्रोल",
+        "System Design Language C / सिस्टम डिजाइन लैंग्वेज सी"
+      ],
+      "answer": "System Development Life Cycle / सिस्टम डेवलपमेंट लाइफ साइकिल",
+      "explanation": "SDLC is a process followed for a software project, within a software organization, consisting of a detailed plan describing how to develop, maintain, and replace software."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following is a dynamically-typed language? / निम्नलिखित में से कौन सी एक गतिशील रूप से टाइप की गई भाषा है?",
+      "options": [
+        "C++ / सी++",
+        "Java / जावा",
+        "C# / सी#",
+        "Python / पाइथन"
+      ],
+      "answer": "Python / पाइथन",
+      "explanation": "In dynamically-typed languages like Python, variable types are checked at runtime, not compile-time, offering more flexibility."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which part of a database schema defines the data types for columns? / डेटाबेस स्कीमा का कौन सा भाग कॉलम के लिए डेटा प्रकारों को परिभाषित करता है?",
+      "options": [
+        "Data Definition Language (DDL) / डेटा डेफिनिशन लैंग्वेज (डीडीएल)",
+        "Data Manipulation Language (DML) / डेटा मैनिपुलेशन लैंग्वेज (डीएमएल)",
+        "Data Control Language (DCL) / डेटा कंट्रोल लैंग्वेज (डीसीएल)",
+        "Transaction Control Language (TCL) / ट्रांजेक्शन कंट्रोल लैंग्वेज (टीसीएल)"
+      ],
+      "answer": "Data Definition Language (DDL) / डेटा डेफिनिशन लैंग्वेज (डीडीएल)",
+      "explanation": "DDL commands like CREATE TABLE and ALTER TABLE are used to define the database structure and schema, including column data types."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is 'recursion' in programming? / प्रोग्रामिंग में 'रिकर्सन' क्या है?",
+      "options": [
+        "A function that calls another function / एक फ़ंक्शन जो दूसरे फ़ंक्शन को कॉल करता है",
+        "A function that calls itself / एक फ़ंक्शन जो खुद को कॉल करता है",
+        "A loop that never ends / एक लूप जो कभी खत्म नहीं होता",
+        "A data structure that stores other data structures / एक डेटा संरचना जो अन्य डेटा संरचनाओं को संग्रहीत करती है"
+      ],
+      "answer": "A function that calls itself / एक फ़ंक्शन जो खुद को कॉल करता है",
+      "explanation": "Recursion is a method of solving a problem where the solution depends on solutions to smaller instances of the same problem, often implemented as a function calling itself."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following is a physical network topology? / निम्नलिखित में से कौन एक भौतिक नेटवर्क टोपोलॉजी है?",
+      "options": [
+        "Peer-to-Peer / पीयर-टू-पीयर",
+        "Client-Server / क्लाइंट-सर्वर",
+        "Bus / बस",
+        "Hybrid / हाइब्रिड (as a logical concept)"
+      ],
+      "answer": "Bus / बस",
+      "explanation": "Bus, Star, Ring, and Mesh are physical topologies that describe the actual layout of the wires. Peer-to-Peer is a network architecture."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The term for one millionth of a second is: / एक सेकंड के दस लाखवें हिस्से के लिए शब्द है:",
+      "options": [
+        "Nanosecond / नैनोसेकंड",
+        "Microsecond / माइक्रोसेकंड",
+        "Millisecond / मिलीसेकंड",
+        "Picosecond / पिकोसेकंड"
+      ],
+      "answer": "Microsecond / माइक्रोसेकंड",
+      "explanation": "A microsecond is one millionth (10⁻⁶) of a second."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which type of software is an antivirus program? / एंटीवायरस प्रोग्राम किस प्रकार का सॉफ्टवेयर है?",
+      "options": [
+        "Operating System / ऑपरेटिंग सिस्टम",
+        "Application Software / एप्लीकेशन सॉफ्टवेयर",
+        "Utility Software / यूटिलिटी सॉफ्टवेयर",
+        "Compiler / कंपाइलर"
+      ],
+      "answer": "Utility Software / यूटिलिटी सॉफ्टवेयर",
+      "explanation": "Utility software is designed to help analyze, configure, optimize or maintain a computer. Antivirus software falls into this category."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In Java, every class is a subclass of which class? / जावा में, प्रत्येक क्लास किस क्लास की सबक्लास है?",
+      "options": [
+        "Main / मेन",
+        "System / सिस्टम",
+        "Object / ऑब्जेक्ट",
+        "Class / क्लास"
+      ],
+      "answer": "Object / ऑब्जेक्ट",
+      "explanation": "The Object class, in the java.lang package, sits at the top of the class hierarchy tree. Every class is a descendant, direct or indirect, of the Object class."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these is used to define the structure of a relation in SQL? / इनमें से किसका उपयोग SQL में एक संबंध की संरचना को परिभाषित करने के लिए किया जाता है?",
+      "options": [
+        "INSERT INTO / इंसर्ट इनटू",
+        "UPDATE / अपडेट",
+        "CREATE TABLE / क्रिएट टेबल",
+        "SELECT / सेलेक्ट"
+      ],
+      "answer": "CREATE TABLE / क्रिएट टेबल",
+      "explanation": "The CREATE TABLE statement is used to create a new table in a database, defining its columns and data types."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "A pointer in C is a? / C में एक पॉइंटर क्या है?",
+      "options": [
+        "Variable that stores an integer / एक चर जो एक पूर्णांक संग्रहीत करता है",
+        "Variable that stores the memory address of another variable / एक चर जो दूसरे चर का मेमोरी पता संग्रहीत करता है",
+        "A constant value / एक स्थिर मान",
+        "A data type / एक डेटा प्रकार"
+      ],
+      "answer": "Variable that stores the memory address of another variable / एक चर जो दूसरे चर का मेमोरी पता संग्रहीत करता है",
+      "explanation": "A pointer is a special variable that holds the memory address of another variable as its value."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The process of a computer starting up and loading the operating system is called? / कंप्यूटर के शुरू होने और ऑपरेटिंग सिस्टम को लोड करने की प्रक्रिया को क्या कहा जाता है?",
+      "options": [
+        "Loading / लोडिंग",
+        "Starting / स्टार्टिंग",
+        "Booting / बूटिंग",
+        "Initializing / इनिशियलाइज़िंग"
+      ],
+      "answer": "Booting / बूटिंग",
+      "explanation": "Booting is the process that starts the operating system when the computer is turned on."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which protocol is used for sending email? / ईमेल भेजने के लिए किस प्रोटोकॉल का उपयोग किया जाता है?",
+      "options": [
+        "POP3 / पीओपी3",
+        "IMAP / आईएमएपी",
+        "SMTP / एसएमटीपी",
+        "HTTP / एचटीटीपी"
+      ],
+      "answer": "SMTP / एसएमटीपी",
+      "explanation": "SMTP (Simple Mail Transfer Protocol) is the standard protocol for sending emails across the Internet. POP3 and IMAP are for receiving emails."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these is a characteristic of RAM? / इनमें से कौन सी रैम की एक विशेषता है?",
+      "options": [
+        "Non-volatile / गैर-वाष्पशील",
+        "Read-only / केवल-पढ़ने के लिए",
+        "Volatile / वाष्पशील",
+        "Slow access / धीमी पहुँच"
+      ],
+      "answer": "Volatile / वाष्पशील",
+      "explanation": "RAM (Random Access Memory) is volatile, meaning it requires power to maintain the stored information. Its contents are lost when power is off."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "An algorithm is best described as? / एक एल्गोरिथ्म को सबसे अच्छी तरह से कैसे वर्णित किया जा सकता है?",
+      "options": [
+        "A piece of computer code / कंप्यूटर कोड का एक टुकड़ा",
+        "A flowchart / एक फ्लोचार्ट",
+        "A step-by-step procedure for solving a problem / किसी समस्या को हल करने के लिए एक चरण-दर-चरण प्रक्रिया",
+        "A computer language / एक कंप्यूटर भाषा"
+      ],
+      "answer": "A step-by-step procedure for solving a problem / किसी समस्या को हल करने के लिए एक चरण-दर-चरण प्रक्रिया",
+      "explanation": "An algorithm is a finite sequence of well-defined, computer-implementable instructions to solve a class of problems."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which network device operates at the Data Link Layer (Layer 2)? / कौन सा नेटवर्क डिवाइस डेटा लिंक लेयर (लेयर 2) पर काम करता है?",
+      "options": [
+        "Hub / हब",
+        "Router / राउटर",
+        "Bridge / ब्रिज",
+        "Repeater / रिपीटर"
+      ],
+      "answer": "Bridge / ब्रिज",
+      "explanation": "A bridge operates at the Data Link layer to filter traffic between network segments based on MAC addresses. Switches also operate at Layer 2."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the primary function of a compiler? / एक कंपाइलर का प्राथमिक कार्य क्या है?",
+      "options": [
+        "To convert assembly language into machine code / असेंबली भाषा को मशीन कोड में बदलना",
+        "To execute a program line by line / एक प्रोग्राम को लाइन दर लाइन निष्पादित करना",
+        "To convert a high-level language into machine code / एक उच्च-स्तरीय भाषा को मशीन कोड में बदलना",
+        "To link object files together / ऑब्जेक्ट फ़ाइलों को एक साथ जोड़ना"
+      ],
+      "answer": "To convert a high-level language into machine code / एक उच्च-स्तरीय भाषा को मशीन कोड में बदलना",
+      "explanation": "A compiler translates the entire source code of a program written in a high-level language into an executable file (machine code) at once."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following data structures is non-linear? / निम्नलिखित में से कौन सी डेटा संरचना गैर-रैखिक है?",
+      "options": [
+        "Array / ऐरे",
+        "Queue / क्यू",
+        "Stack / स्टैक",
+        "Tree / ट्री"
+      ],
+      "answer": "Tree / ट्री",
+      "explanation": "A tree is a non-linear data structure because its elements are organized in a hierarchical manner, not sequentially."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What does API stand for? / API का पूरा नाम क्या है?",
+      "options": [
+        "Application Programming Interface / एप्लीकेशन प्रोग्रामिंग इंटरफ़ेस",
+        "Advanced Programming Interface / एडवांस्ड प्रोग्रामिंग इंटरफ़ेस",
+        "Application Process Interaction / एप्लीकेशन प्रोसेस इंटरेक्शन",
+        "Advanced Process Integration / एडवांस्ड प्रोसेस इंटीग्रेशन"
+      ],
+      "answer": "Application Programming Interface / एप्लीकेशन प्रोग्रामिंग इंटरफ़ेस",
+      "explanation": "An API is a set of definitions and protocols for building and integrating application software."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which SQL aggregate function returns the number of rows? / कौन सा SQL एग्रीगेट फ़ंक्शन पंक्तियों की संख्या लौटाता है?",
+      "options": [
+        "SUM() / सम()",
+        "AVG() / एवरेज()",
+        "COUNT() / काउंट()",
+        "MAX() / मैक्स()"
+      ],
+      "answer": "COUNT() / काउंट()",
+      "explanation": "The COUNT() function returns the number of rows that matches a specified criterion."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which component is often referred to as the 'backbone' of the motherboard? / किस घटक को अक्सर मदरबोर्ड की 'रीढ़' कहा जाता है?",
+      "options": [
+        "CPU Socket / सीपीयू सॉकेट",
+        "RAM Slots / रैम स्लॉट",
+        "Bus / बस",
+        "BIOS Chip / बायोस चिप"
+      ],
+      "answer": "Bus / बस",
+      "explanation": "The bus is the communication system that transfers data between components inside a computer, or between computers, acting as the main data pathway."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The 'Normalization' process in databases is used to? / डेटाबेस में 'नॉर्मलाइजेशन' प्रक्रिया का उपयोग किस लिए किया जाता है?",
+      "options": [
+        "Speed up queries / प्रश्नों को तेज करने के लिए",
+        "Reduce data redundancy and improve data integrity / डेटा अतिरेक को कम करने और डेटा अखंडता में सुधार करने के लिए",
+        "Create backups / बैकअप बनाने के लिए",
+        "Encrypt data / डेटा को एन्क्रिप्ट करने के लिए"
+      ],
+      "answer": "Reduce data redundancy and improve data integrity / डेटा अतिरेक को कम करने और डेटा अखंडता में सुधार करने के लिए",
+      "explanation": "Normalization is the process of organizing columns and tables in a relational database to minimize data redundancy."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In Python, which keyword is used to define a function? / पाइथन में, एक फ़ंक्शन को परिभाषित करने के लिए किस कीवर्ड का उपयोग किया जाता है?",
+      "options": [
+        "function / फंक्शन",
+        "def / डेफ",
+        "func / फंक",
+        "define / डिफाइन"
+      ],
+      "answer": "def / डेफ",
+      "explanation": "The 'def' keyword is used to create, or define, a function in Python."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which operating system scheduling algorithm can lead to starvation? / कौन सा ऑपरेटिंग सिस्टम शेड्यूलिंग एल्गोरिथ्म स्टारवेशन का कारण बन सकता है?",
+      "options": [
+        "First-Come, First-Served / फर्स्ट-कम, फर्स्ट-सर्व्ड",
+        "Round Robin / राउंड रॉबिन",
+        "Shortest Job First / शॉर्टेस्ट जॉब फर्स्ट",
+        "Priority Scheduling / प्रायोरिटी शेड्यूलिंग"
+      ],
+      "answer": "Priority Scheduling / प्रायोरिटी शेड्यूलिंग",
+      "explanation": "In priority scheduling, a process can be starved if it has a low priority and higher-priority processes keep arriving, preventing it from ever running."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these is a valid IP address? / इनमें से कौन सा एक वैध IP पता है?",
+      "options": [
+        "192.168.300.1 / 192.168.300.1",
+        "192.168.1.256 / 192.168.1.256",
+        "192.168.0.1 / 192.168.0.1",
+        "192.168.1 / 192.168.1"
+      ],
+      "answer": "192.168.0.1 / 192.168.0.1",
+      "explanation": "A valid IPv4 address consists of four octets, where each octet is a number from 0 to 255."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The extension '.docx' is typically associated with which application? / '.docx' एक्सटेंशन आमतौर पर किस एप्लिकेशन से जुड़ा होता है?",
+      "options": [
+        "Microsoft Excel / माइक्रोसॉफ्ट एक्सेल",
+        "Microsoft Word / माइक्रोसॉफ्ट वर्ड",
+        "Microsoft PowerPoint / माइक्रोसॉफ्ट पावरपॉइंट",
+        "Adobe Acrobat / एडोब एक्रोबेट"
+      ],
+      "answer": "Microsoft Word / माइक्रोसॉफ्ट वर्ड",
+      "explanation": "'.docx' is the default file format for Microsoft Word documents starting from Word 2007."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is a 'cookie' in the context of the web? / वेब के संदर्भ में 'कुकी' क्या है?",
+      "options": [
+        "A type of malware / एक प्रकार का मैलवेयर",
+        "A small piece of data sent from a website and stored on the user's computer / एक वेबसाइट से भेजा गया और उपयोगकर्ता के कंप्यूटर पर संग्रहीत डेटा का एक छोटा टुकड़ा",
+        "An encrypted file / एक एन्क्रिप्टेड फ़ाइल",
+        "A browser plugin / एक ब्राउज़र प्लगइन"
+      ],
+      "answer": "A small piece of data sent from a website and stored on the user's computer / एक वेबसाइट से भेजा गया और उपयोगकर्ता के कंप्यूटर पर संग्रहीत डेटा का एक छोटा टुकड़ा",
+      "explanation": "Cookies are used by websites to remember stateful information (like items in a shopping cart) or to record the user's browsing activity."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following is not a database management system (DBMS)? / निम्नलिखित में से कौन एक डेटाबेस प्रबंधन प्रणाली (DBMS) नहीं है?",
+      "options": [
+        "Oracle / ओरेकल",
+        "MongoDB / मोंगोडीबी",
+        "COBOL / कोबोल",
+        "SQLite / एसक्यूलाइट"
+      ],
+      "answer": "COBOL / कोबोल",
+      "explanation": "COBOL is a high-level programming language, while the others are all database management systems."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The concept of breaking down a large problem into smaller, more manageable sub-problems is called? / एक बड़ी समस्या को छोटी, अधिक प्रबंधनीय उप-समस्याओं में तोड़ने की अवधारणा को क्या कहा जाता है?",
+      "options": [
+        "Recursion / रिकर्सन",
+        "Decomposition / डीकंपोजिशन",
+        "Abstraction / एब्स्ट्रैक्शन",
+        "Encapsulation / एनकैप्सुलेशन"
+      ],
+      "answer": "Decomposition / डीकंपोजिशन",
+      "explanation": "Decomposition is a fundamental problem-solving technique in computer science, also known as 'divide and conquer'."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which layer of the TCP/IP model corresponds to the top three layers of the OSI model? / TCP/IP मॉडल की कौन सी परत OSI मॉडल की शीर्ष तीन परतों से मेल खाती है?",
+      "options": [
+        "Application Layer / एप्लीकेशन लेयर",
+        "Transport Layer / ट्रांसपोर्ट लेयर",
+        "Internet Layer / इंटरनेट लेयर",
+        "Network Access Layer / नेटवर्क एक्सेस लेयर"
+      ],
+      "answer": "Application Layer / एप्लीकेशन लेयर",
+      "explanation": "The Application Layer in the TCP/IP model combines the functions of the OSI model's Application, Presentation, and Session layers."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which keyboard shortcut is used to 'undo' the last action? / अंतिम क्रिया को 'अनडू' करने के लिए किस कीबोर्ड शॉर्टकट का उपयोग किया जाता है?",
+      "options": [
+        "Ctrl + X / कंट्रोल + X",
+        "Ctrl + C / कंट्रोल + C",
+        "Ctrl + V / कंट्रोल + V",
+        "Ctrl + Z / कंट्रोल + Z"
+      ],
+      "answer": "Ctrl + Z / कंट्रोल + Z",
+      "explanation": "Ctrl + Z is the standard shortcut in most applications to reverse the last action performed."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In a URL, what does the 'domain name' represent? / एक URL में, 'डोमेन नाम' क्या दर्शाता है?",
+      "options": [
+        "The protocol used / उपयोग किया गया प्रोटोकॉल",
+        "The specific page on the server / सर्वर पर विशिष्ट पेज",
+        "The IP address of the server in a human-readable form / मानव-पठनीय रूप में सर्वर का IP पता",
+        "The port number / पोर्ट नंबर"
+      ],
+      "answer": "The IP address of the server in a human-readable form / मानव-पठनीय रूप में सर्वर का IP पता",
+      "explanation": "The Domain Name System (DNS) translates human-readable domain names (like www.google.com) into machine-readable IP addresses."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these is a binary tree where every node's left child is smaller and right child is larger? / इनमें से कौन सा एक बाइनरी ट्री है जिसमें प्रत्येक नोड का बायां बच्चा छोटा और दायां बच्चा बड़ा होता है?",
+      "options": [
+        "Heap / हीप",
+        "Binary Search Tree (BST) / बाइनरी सर्च ट्री (BST)",
+        "AVL Tree / AVL ट्री",
+        "Complete Binary Tree / कम्प्लीट बाइनरी ट्री"
+      ],
+      "answer": "Binary Search Tree (BST) / बाइनरी सर्च ट्री (BST)",
+      "explanation": "This property is the defining characteristic of a Binary Search Tree, which allows for fast searching, insertion, and deletion of items."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following is NOT a fundamental data type in C? / निम्नलिखित में से कौन C में एक मौलिक डेटा प्रकार नहीं है?",
+      "options": [
+        "int / इंट",
+        "float / फ्लोट",
+        "string / स्ट्रिंग",
+        "char / कैर"
+      ],
+      "answer": "string / स्ट्रिंग",
+      "explanation": "In C, a string is not a built-in data type; it is represented as an array of characters (char)."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the name of the program that loads the operating system into memory? / ऑपरेटिंग सिस्टम को मेमोरी में लोड करने वाले प्रोग्राम का नाम क्या है?",
+      "options": [
+        "Loader / लोडर",
+        "Linker / लिंकर",
+        "Bootstrap Loader / बूटस्ट्रैप लोडर",
+        "Compiler / कंपाइलर"
+      ],
+      "answer": "Bootstrap Loader / बूटस्ट्रैप लोडर",
+      "explanation": "The bootstrap loader is a small program located in ROM or EPROM that is run when the computer is powered on to load the OS."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The term 'Big Data' refers to? / 'बिग डेटा' शब्द का क्या अर्थ है?",
+      "options": [
+        "Large hard drives / बड़ी हार्ड ड्राइव",
+        "Data that is too large and complex to be processed by traditional data-processing application software / डेटा जो पारंपरिक डेटा-प्रोसेसिंग एप्लिकेशन सॉफ्टवेयर द्वारा संसाधित किए जाने के लिए बहुत बड़ा और जटिल है",
+        "The total data on the internet / इंटरनेट पर कुल डेटा",
+        "Data stored in a mainframe computer / एक मेनफ्रेम कंप्यूटर में संग्रहीत डेटा"
+      ],
+      "answer": "Data that is too large and complex to be processed by traditional data-processing application software / डेटा जो पारंपरिक डेटा-प्रोसेसिंग एप्लिकेशन सॉफ्टवेयर द्वारा संसाधित किए जाने के लिए बहुत बड़ा और जटिल है",
+      "explanation": "Big Data is characterized by the three Vs: high volume, high velocity, and high variety of data."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "In the context of computer memory, what does ROM stand for? / कंप्यूटर मेमोरी के संदर्भ में, ROM का क्या अर्थ है?",
+      "options": [
+        "Read-Only Memory / रीड-ओनली मेमोरी",
+        "Random-Only Memory / रैंडम-ओनली मेमोरी",
+        "Read-Once Memory / रीड-वन्स मेमोरी",
+        "Run-Only Memory / रन-ओनली मेमोरी"
+      ],
+      "answer": "Read-Only Memory / रीड-ओनली मेमोरी",
+      "explanation": "ROM is a type of non-volatile memory used in computers where the data stored can only be read, not easily modified or written to."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which SQL statement is used to delete a database? / एक डेटाबेस को हटाने के लिए किस SQL स्टेटमेंट का उपयोग किया जाता है?",
+      "options": [
+        "DELETE DATABASE / डिलीट डेटाबेस",
+        "DROP DATABASE / ड्रॉप डेटाबेस",
+        "REMOVE DATABASE / रिमूव डेटाबेस",
+        "ERASE DATABASE / इरेज़ डेटाबेस"
+      ],
+      "answer": "DROP DATABASE / ड्रॉप डेटाबेस",
+      "explanation": "The DROP DATABASE statement completely deletes an existing SQL database, including all its tables and data."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of these is a primary goal of cryptography? / इनमें से कौन क्रिप्टोग्राफी का एक प्राथमिक लक्ष्य है?",
+      "options": [
+        "Data Compression / डेटा कम्प्रेशन",
+        "Data Recovery / डेटा रिकवरी",
+        "Confidentiality / गोपनीयता",
+        "Data Duplication / डेटा डुप्लीकेशन"
+      ],
+      "answer": "Confidentiality / गोपनीयता",
+      "explanation": "Cryptography's primary goal is to ensure confidentiality, meaning that information is not made available or disclosed to unauthorized individuals, entities, or processes."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "A 'bug' in a computer program is a(n)? / एक कंप्यूटर प्रोग्राम में 'बग' क्या है?",
+      "options": [
+        "Feature / फीचर",
+        "Error or flaw / त्रुटि या दोष",
+        "Security measure / सुरक्षा उपाय",
+        "Comment / टिप्पणी"
+      ],
+      "answer": "Error or flaw / त्रुटि या दोष",
+      "explanation": "A bug is an error, flaw, or fault in a computer program or system that causes it to produce an incorrect or unexpected result."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which of the following is an example of a compiled language? / निम्नलिखित में से कौन एक संकलित भाषा का उदाहरण है?",
+      "options": [
+        "Python / पाइथन",
+        "JavaScript / जावास्क्रिप्ट",
+        "C++ / सी++",
+        "PHP / पीएचपी"
+      ],
+      "answer": "C++ / सी++",
+      "explanation": "C++ is a compiled language, meaning its source code is translated into machine code by a compiler before execution. Python and JavaScript are typically interpreted."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the hexadecimal representation of the decimal number 15? / दशमलव संख्या 15 का हेक्साडेसिमल प्रतिनिधित्व क्या है?",
+      "options": [
+        "F",
+        "E",
+        "D",
+        "C"
+      ],
+      "answer": "F",
+      "explanation": "In the hexadecimal system, numbers 10 through 15 are represented by the letters A through F. Therefore, 15 is represented as F."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "The main circuit board in a computer is called the? / एक कंप्यूटर में मुख्य सर्किट बोर्ड को क्या कहा जाता है?",
+      "options": [
+        "Processor / प्रोसेसर",
+        "Hard Drive / हार्ड ड्राइव",
+        "Motherboard / मदरबोर्ड",
+        "RAM / रैम"
+      ],
+      "answer": "Motherboard / मदरबोर्ड",
+      "explanation": "The motherboard is the main printed circuit board (PCB) that holds and allows communication between many of the crucial electronic components of a system."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the function of an interpreter? / एक इंटरप्रेटर का क्या कार्य है?",
+      "options": [
+        "To translate the entire program at once / पूरे प्रोग्राम का एक बार में अनुवाद करना",
+        "To execute a program line by line / एक प्रोग्राम को लाइन दर लाइन निष्पादित करना",
+        "To check for syntax errors only / केवल सिंटैक्स त्रुटियों की जाँच करना",
+        "To connect to the internet / इंटरनेट से कनेक्ट करना"
+      ],
+      "answer": "To execute a program line by line / एक प्रोग्राम को लाइन दर लाइन निष्पादित करना",
+      "explanation": "An interpreter directly executes instructions written in a programming or scripting language, translating and running them one line at a time."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "What is the purpose of the **`break`** statement inside a loop in C? / C में लूप के अंदर **`break`** स्टेटमेंट का उद्देश्य क्या है?",
+      "options": ["To skip the current iteration and proceed to the next", "To exit the loop immediately", "To restart the loop from the beginning", "To skip the entire loop structure"],
+      "answer": "To exit the loop immediately",
+      "explanation": "The **`break`** statement is used to terminate the execution of the nearest enclosing loop (`for`, `while`, or `do-while`) or `switch` statement immediately."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which data structure is best suited for implementing a compiler's symbol table? / कंपाइलर के सिंबल टेबल (symbol table) को लागू करने के लिए कौन सी डेटा संरचना सबसे उपयुक्त है?",
+      "options": ["Stack", "Queue", "Hash Table", "Binary Search Tree"],
+      "answer": "Hash Table",
+      "explanation": "A **Hash Table** is ideal for implementing a symbol table because it allows for very fast (average O(1)) insertion, deletion, and lookup operations for identifiers."
+    },
+    {
+      "section": "Part-III (Computer Science)",
+      "question": "Which type of computer network typically uses the term **'Intranet'**? / किस प्रकार का कंप्यूटर नेटवर्क आमतौर पर **'इंटरनेट'** (Intranet) शब्द का उपयोग करता है?",
+      "options": ["MAN (Metropolitan Area Network)", "Public WAN", "LAN (Local Area Network)", "PAN (Personal Area Network)"],
+      "answer": "LAN (Local Area Network)",
+      "explanation": "An **Intranet** is essentially a private network, often a large **LAN**, that uses Internet protocols and technology but is accessible only to the organization's members."
+    }
+  ]
+}
