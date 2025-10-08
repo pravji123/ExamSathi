@@ -1,0 +1,372 @@
+{
+  "examName": "BSEB STET Mock Test Series 2025",
+  "testTitle": "STET Art of Teaching Mock Test Set 4 (Advanced)",
+  "time": 30,
+  "sections": ["Part-II (Art of Teaching)"],
+  "languages": ["English", "Hindi"],
+  "questionType": "MCQ",
+  "marks": 1,
+  "negative": 0,
+  "questions": [
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Howard Gardner's theory of Multiple Intelligences suggests that: / हॉवर्ड गार्डनर का बहुबुद्धि का सिद्धांत बताता है कि:",
+      "options": [
+        "Intelligence is a single, general ability. / बुद्धि एक एकल, सामान्य क्षमता है।",
+        "Individuals possess different kinds of minds and therefore learn, remember, and understand in different ways. / व्यक्तियों के पास विभिन्न प्रकार के दिमाग होते हैं और इसलिए वे अलग-अलग तरीकों से सीखते, याद रखते और समझते हैं।",
+        "Intelligence is fixed at birth and cannot be changed. / बुद्धि जन्म से ही निश्चित होती है और इसे बदला नहीं जा सकता।",
+        "Emotional intelligence is more important than intellectual intelligence. / बौद्धिक बुद्धि से अधिक महत्वपूर्ण भावनात्मक बुद्धि है।"
+      ],
+      "answer": "Individuals possess different kinds of minds and therefore learn, remember, and understand in different ways. / व्यक्तियों के पास विभिन्न प्रकार के दिमाग होते हैं और इसलिए वे अलग-अलग तरीकों से सीखते, याद रखते और समझते हैं।",
+      "explanation": "Gardner's theory proposes that people have multiple different ways of thinking and learning, such as linguistic, logical-mathematical, spatial, bodily-kinesthetic, musical, interpersonal, and intrapersonal intelligences."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A norm-referenced test is designed to: / एक मानक-संदर्भित परीक्षण को डिज़ाइन किया गया है:",
+      "options": [
+        "Assess a student's mastery of a specific skill or content. / किसी विशिष्ट कौशल या सामग्री में छात्र की निपुणता का आकलन करने के लिए।",
+        "Compare a student's performance with the performance of a representative group. / एक छात्र के प्रदर्शन की तुलना एक प्रतिनिधि समूह के प्रदर्शन से करने के लिए।",
+        "Identify the causes of a student's learning difficulties. / एक छात्र की सीखने की कठिनाइयों के कारणों की पहचान करने के लिए।",
+        "Provide ongoing feedback during the learning process. / सीखने की प्रक्रिया के दौरान निरंतर प्रतिक्रिया प्रदान करने के लिए।"
+      ],
+      "answer": "Compare a student's performance with the performance of a representative group. / एक छात्र के प्रदर्शन की तुलना एक प्रतिनिधि समूह के प्रदर्शन से करने के लिए।",
+      "explanation": "Norm-referenced tests, like the SAT, rank test takers on a 'bell curve' to compare their scores to a pre-established 'norm' group."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the 'hidden curriculum' in a school? / एक स्कूल में 'प्रच्छन्न पाठ्यचर्या' क्या है?",
+      "options": [
+        "A secret syllabus known only to teachers. / केवल शिक्षकों को ज्ञात एक गुप्त पाठ्यक्रम।",
+        "The unstated lessons, values, and norms that students learn in school. / वे अकथनीय पाठ, मूल्य और मानदंड जो छात्र स्कूल में सीखते हैं।",
+        "The curriculum for extracurricular activities. / पाठ्येतर गतिविधियों के लिए पाठ्यचर्या।",
+        "An advanced curriculum for gifted students. / प्रतिभाशाली छात्रों के लिए एक उन्नत पाठ्यचर्या।"
+      ],
+      "answer": "The unstated lessons, values, and norms that students learn in school. / वे अकथनीय पाठ, मूल्य और मानदंड जो छात्र स्कूल में सीखते हैं।",
+      "explanation": "The hidden curriculum refers to the informal and unofficial lessons students learn through their school experiences, such as attitudes towards authority, social roles, and competition."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The 'Flipped Classroom' model involves: / 'फ्लिप्ड क्लासरूम' मॉडल में शामिल है:",
+      "options": [
+        "Students teaching the teacher. / छात्र शिक्षक को पढ़ाते हैं।",
+        "Students watching instructional content (like videos) at home and doing 'homework' (like practice or projects) in class. / छात्र घर पर निर्देशात्मक सामग्री (जैसे वीडियो) देखते हैं और कक्षा में 'होमवर्क' (जैसे अभ्यास या परियोजनाएं) करते हैं।",
+        "Teachers and students swapping roles for a day. / शिक्षक और छात्र एक दिन के लिए अपनी भूमिकाएँ बदलते हैं।",
+        "Having no formal instruction at all. / कोई औपचारिक निर्देश बिल्कुल नहीं होना।"
+      ],
+      "answer": "Students watching instructional content (like videos) at home and doing 'homework' (like practice or projects) in class. / छात्र घर पर निर्देशात्मक सामग्री (जैसे वीडियो) देखते हैं और कक्षा में 'होमवर्क' (जैसे अभ्यास या परियोजनाएं) करते हैं।",
+      "explanation": "This model inverts the traditional teaching method, delivering instruction online outside of class and moving 'homework' into the classroom where teachers can provide guidance and support."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following best describes 'dyscalculia'? / निम्नलिखित में से कौन 'डिस्कैल्कुलिया' का सबसे अच्छा वर्णन करता है?",
+      "options": [
+        "A learning disability related to reading. / पढ़ने से संबंधित एक सीखने की अक्षमता।",
+        "A learning disability that affects a person's ability to understand numbers and learn math facts. / एक सीखने की अक्षमता जो किसी व्यक्ति की संख्याओं को समझने और गणित के तथ्यों को सीखने की क्षमता को प्रभावित करती है।",
+        "A difficulty with fine motor skills affecting writing. / लिखने को प्रभावित करने वाले ठीक मोटर कौशल के साथ एक कठिनाई।",
+        "A disorder related to hyperactivity and attention. / अति सक्रियता और ध्यान से संबंधित एक विकार।"
+      ],
+      "answer": "A learning disability that affects a person's ability to understand numbers and learn math facts. / एक सीखने की अक्षमता जो किसी व्यक्ति की संख्याओं को समझने और गणित के तथ्यों को सीखने की क्षमता को प्रभावित करती है।",
+      "explanation": "Dyscalculia is a specific learning disability in mathematics. Individuals with this condition may have difficulty with number sense, memorizing math facts, and mathematical reasoning."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "In Maslow's hierarchy of needs, which needs must be met first? / मास्लो की आवश्यकताओं के पदानुक्रम में, कौन सी ज़रूरतें पहले पूरी होनी चाहिए?",
+      "options": [
+        "Esteem Needs / सम्मान की ज़रूरतें",
+        "Self-Actualization Needs / आत्म-सिद्धि की ज़रूरतें",
+        "Physiological Needs / शारीरिक ज़रूरतें",
+        "Love and Belonging Needs / प्यार और अपनेपन की ज़रूरतें"
+      ],
+      "answer": "Physiological Needs / शारीरिक ज़रूरतें",
+      "explanation": "Maslow's theory states that the most basic needs, such as air, water, food, and shelter (physiological needs), must be satisfied before individuals can attend to higher-level needs."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A 'rubric' is a tool used in assessment for: / 'रूब्रिक' मूल्यांकन में उपयोग किया जाने वाला एक उपकरण है:",
+      "options": [
+        "Calculating the final percentage of marks. / अंकों के अंतिम प्रतिशत की गणना करने के लिए।",
+        "Communicating expectations for an assignment and providing focused feedback. / एक असाइनमेंट के लिए अपेक्षाओं को संप्रेषित करने और केंद्रित प्रतिक्रिया प्रदान करने के लिए।",
+        "Recording daily attendance. / दैनिक उपस्थिति दर्ज करने के लिए।",
+        "Ranking students in order of merit. / छात्रों को योग्यता के क्रम में रैंक करने के लिए।"
+      ],
+      "answer": "Communicating expectations for an assignment and providing focused feedback. / एक असाइनमेंट के लिए अपेक्षाओं को संप्रेषित करने और केंद्रित प्रतिक्रिया प्रदान करने के लिए।",
+      "explanation": "A rubric is a scoring guide that explicitly describes the performance expectations for an assignment, breaking it down into different criteria and levels of quality."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The 'Role-Playing' strategy is most effective for teaching: / 'भूमिका-निर्वहन' रणनीति सिखाने के लिए सबसे प्रभावी है:",
+      "options": [
+        "Mathematical formulas. / गणितीय सूत्र।",
+        "Historical facts and dates. / ऐतिहासिक तथ्य और तिथियां।",
+        "Social skills and empathetic understanding. / सामाजिक कौशल और सहानुभूतिपूर्ण समझ।",
+        "Scientific theories. / वैज्ञानिक सिद्धांत।"
+      ],
+      "answer": "Social skills and empathetic understanding. / सामाजिक कौशल और सहानुभूतिपूर्ण समझ।",
+      "explanation": "Role-playing allows students to act out different scenarios, helping them to understand different perspectives, practice communication, and develop social skills in a safe environment."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Jerome Bruner's theory of instruction emphasizes: / जेरोम ब्रूनर का निर्देश का सिद्धांत जोर देता है:",
+      "options": [
+        "Rote memorization as the primary mode of learning. / सीखने के प्राथमिक तरीके के रूप में रटना।",
+        "The importance of discovery learning and structuring content appropriately. / खोजपूर्ण सीखने और सामग्री को उचित रूप से संरचित करने के महत्व पर।",
+        "A fixed, universal sequence of developmental stages. / विकासात्मक चरणों का एक निश्चित, सार्वभौमिक अनुक्रम।",
+        "Learning through reinforcement schedules. / सुदृढीकरण अनुसूचियों के माध्यम से सीखना।"
+      ],
+      "answer": "The importance of discovery learning and structuring content appropriately. / खोजपूर्ण सीखने और सामग्री को उचित रूप से संरचित करने के महत्व पर।",
+      "explanation": "Bruner advocated for discovery learning, where students construct knowledge themselves, and proposed the spiral curriculum, where topics are revisited at increasing levels of complexity."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is 'positive transfer of learning'? / 'सीखने का सकारात्मक हस्तांतरण' क्या है?",
+      "options": [
+        "When prior learning hinders new learning. / जब पिछला सीखना नए सीखने में बाधा डालता है।",
+        "When prior learning has no effect on new learning. / जब पिछले सीखने का नए सीखने पर कोई प्रभाव नहीं पड़ता है।",
+        "When prior learning helps or facilitates new learning. / जब पिछला सीखना नए सीखने में मदद या सुविधा प्रदान करता है।",
+        "When a student forgets what they have learned. / जब एक छात्र भूल जाता है कि उसने क्या सीखा है।"
+      ],
+      "answer": "When prior learning helps or facilitates new learning. / जब पिछला सीखना नए सीखने में मदद या सुविधा प्रदान करता है।",
+      "explanation": "Positive transfer occurs when learning in one context improves performance in another context. For example, learning to play the piano may help in learning to type."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is the final step in a standard lesson plan? / निम्नलिखित में से कौन एक मानक पाठ योजना में अंतिम चरण है?",
+      "options": [
+        "Presentation of material. / सामग्री की प्रस्तुति।",
+        "Stating the objectives. / उद्देश्यों का कथन।",
+        "Evaluation or assessment. / मूल्यांकन या आकलन।",
+        "Motivation. / प्रेरणा।"
+      ],
+      "answer": "Evaluation or assessment. / मूल्यांकन या आकलन।",
+      "explanation": "After presenting the material and providing practice, the final step is to evaluate whether the learning objectives have been achieved through some form of assessment."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The main purpose of using teaching aids in the classroom is to: / कक्षा में शिक्षण सहायक सामग्री का उपयोग करने का मुख्य उद्देश्य है:",
+      "options": [
+        "Make the lesson more interesting and learning more effective. / पाठ को अधिक रोचक और सीखने को अधिक प्रभावी बनाना।",
+        "Reduce the teacher's workload. / शिक्षक के कार्यभार को कम करना।",
+        "Keep the students disciplined. / छात्रों को अनुशासित रखना।",
+        "Entertain the students. / छात्रों का मनोरंजन करना।"
+      ],
+      "answer": "Make the lesson more interesting and learning more effective. / पाठ को अधिक रोचक और सीखने को अधिक प्रभावी बनाना।",
+      "explanation": "Teaching aids help to engage multiple senses, clarify complex concepts, and make learning more concrete and memorable for students."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Kohlberg's theory of moral development is primarily concerned with: / कोहलबर्ग का नैतिक विकास का सिद्धांत मुख्य रूप से संबंधित है:",
+      "options": [
+        "How individuals develop their intellectual abilities. / व्यक्ति अपनी बौद्धिक क्षमताओं का विकास कैसे करते हैं।",
+        "How individuals develop their sense of right and wrong. / व्यक्ति सही और गलत की अपनी भावना का विकास कैसे करते हैं।",
+        "How individuals form social relationships. / व्यक्ति सामाजिक संबंध कैसे बनाते हैं।",
+        "How individuals learn language. / व्यक्ति भाषा कैसे सीखते हैं।"
+      ],
+      "answer": "How individuals develop their sense of right and wrong. / व्यक्ति सही और गलत की अपनी भावना का विकास कैसे करते हैं।",
+      "explanation": "Lawrence Kohlberg's theory focuses on the thinking process that occurs when one decides whether a behavior is right or wrong, proposing six stages of moral reasoning."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A criterion-referenced test is used to: / एक मानदंड-संदर्भित परीक्षण का उपयोग किया जाता है:",
+      "options": [
+        "Compare a student's performance to that of other students. / एक छात्र के प्रदर्शन की तुलना अन्य छात्रों से करने के लिए।",
+        "Determine if a student has met a pre-established standard of performance. / यह निर्धारित करने के लिए कि क्या किसी छात्र ने प्रदर्शन का एक पूर्व-स्थापित मानक पूरा किया है।",
+        "Rank students from highest to lowest. / छात्रों को उच्चतम से निम्नतम तक रैंक करने के लिए।",
+        "Predict a student's future success. / एक छात्र की भविष्य की सफलता की भविष्यवाणी करने के लिए।"
+      ],
+      "answer": "Determine if a student has met a pre-established standard of performance. / यह निर्धारित करने के लिए कि क्या किसी छात्र ने प्रदर्शन का एक पूर्व-स्थापित मानक पूरा किया है।",
+      "explanation": "Criterion-referenced tests, like a driving test, measure a person's skills against a fixed set of criteria or learning standards, not against other people."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The most important quality of a good teacher is: / एक अच्छे शिक्षक का सबसे महत्वपूर्ण गुण है:",
+      "options": [
+        "Good subject matter knowledge. / अच्छा विषय वस्तु ज्ञान।",
+        "Good communication skills. / अच्छा संचार कौशल।",
+        "A caring attitude towards students. / छात्रों के प्रति एक देखभाल करने वाला रवैया।",
+        "All of the above. / उपरोक्त सभी।"
+      ],
+      "answer": "All of the above. / उपरोक्त सभी।",
+      "explanation": "An effective teacher requires a combination of strong subject knowledge, the ability to communicate it clearly, and a genuine concern for the well-being and progress of their students."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The 'Simulation' teaching strategy involves: / 'सिमुलेशन' शिक्षण रणनीति में शामिल है:",
+      "options": [
+        "Memorizing a list of facts. / तथ्यों की एक सूची को याद करना।",
+        "Creating an artificial environment that represents a real-world situation. / एक कृत्रिम वातावरण बनाना जो एक वास्तविक दुनिया की स्थिति का प्रतिनिधित्व करता है।",
+        "Listening to a lecture by an expert. / एक विशेषज्ञ द्वारा एक व्याख्यान सुनना।",
+        "Reading a chapter from a textbook. / एक पाठ्यपुस्तक से एक अध्याय पढ़ना।"
+      ],
+      "answer": "Creating an artificial environment that represents a real-world situation. / एक कृत्रिम वातावरण बनाना जो एक वास्तविक दुनिया की स्थिति का प्रतिनिधित्व करता है।",
+      "explanation": "Simulations (like flight simulators or business games) provide a safe and controlled environment for students to practice skills and experience situations that would be too complex or dangerous in real life."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is a characteristic of a 'gifted' learner? / निम्नलिखित में से कौन एक 'प्रतिभाशाली' शिक्षार्थी की एक विशेषता है?",
+      "options": [
+        "Difficulty with abstract concepts. / अमूर्त अवधारणाओं के साथ कठिनाई।",
+        "Slow learning pace. / धीमी सीखने की गति।",
+        "High level of curiosity and advanced vocabulary. / उच्च स्तर की जिज्ञासा और उन्नत शब्दावली।",
+        "Dependence on teacher for instructions. / निर्देशों के लिए शिक्षक पर निर्भरता।"
+      ],
+      "answer": "High level of curiosity and advanced vocabulary. / उच्च स्तर की जिज्ञासा और उन्नत शब्दावली।",
+      "explanation": "Gifted learners often exhibit traits like rapid learning, a strong sense of curiosity, a large vocabulary, and the ability to think abstractly at an early age."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The term 'pedagogy' refers to: / 'शिक्षाशास्त्र' शब्द का अर्थ है:",
+      "options": [
+        "The study of adult learning. / वयस्क सीखने का अध्ययन।",
+        "The method and practice of teaching, especially for children. / शिक्षण की विधि और अभ्यास, विशेष रूप से बच्चों के लिए।",
+        "The science of assessing students. / छात्रों के मूल्यांकन का विज्ञान।",
+        "The philosophy of curriculum design. / पाठ्यचर्या डिजाइन का दर्शन।"
+      ],
+      "answer": "The method and practice of teaching, especially for children. / शिक्षण की विधि और अभ्यास, विशेष रूप से बच्चों के लिए।",
+      "explanation": "Pedagogy encompasses the theory and practice of learning, and how this process influences, and is influenced by, the social, political, and psychological development of learners."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the primary benefit of peer assessment? / सहकर्मी मूल्यांकन का प्राथमिक लाभ क्या है?",
+      "options": [
+        "It reduces the teacher's grading workload. / यह शिक्षक के ग्रेडिंग कार्यभार को कम करता है।",
+        "It helps students develop critical thinking and evaluative skills. / यह छात्रों को महत्वपूर्ण सोच और मूल्यांकन कौशल विकसित करने में मदद करता है।",
+        "It is always more accurate than teacher assessment. / यह हमेशा शिक्षक मूल्यांकन से अधिक सटीक होता है।",
+        "It encourages competition among students. / यह छात्रों के बीच प्रतिस्पर्धा को प्रोत्साहित करता है।"
+      ],
+      "answer": "It helps students develop critical thinking and evaluative skills. / यह छात्रों को महत्वपूर्ण सोच और मूल्यांकन कौशल विकसित करने में मदद करता है।",
+      "explanation": "By evaluating a peer's work against set criteria, students deepen their own understanding, learn to give constructive feedback, and develop metacognitive skills."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The 'Heuristic Method' of teaching aims to develop: / शिक्षण की 'अन्वेषण विधि' का उद्देश्य विकसित करना है:",
+      "options": [
+        "Rote memory. / रटने की स्मृति।",
+        "The problem-solving attitude and spirit of inquiry in a student. / एक छात्र में समस्या-समाधान का दृष्टिकोण और जांच की भावना।",
+        "Good handwriting. / अच्छी लिखावट।",
+        "Verbal fluency. / मौखिक प्रवाह।"
+      ],
+      "answer": "The problem-solving attitude and spirit of inquiry in a student. / एक छात्र में समस्या-समाधान का दृष्टिकोण और जांच की भावना।",
+      "explanation": "Derived from the Greek word 'heuriskein' (to find out), this method places the student in the position of a discoverer, fostering self-learning and analytical skills."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of these is a form of non-verbal communication in the classroom? / इनमें से कौन कक्षा में गैर-मौखिक संचार का एक रूप है?",
+      "options": [
+        "Asking a question. / एक प्रश्न पूछना।",
+        "Giving a lecture. / एक व्याख्यान देना।",
+        "Using gestures and facial expressions. / हावभाव और चेहरे के भावों का उपयोग करना।",
+        "Writing on the blackboard. / ब्लैकबोर्ड पर लिखना।"
+      ],
+      "answer": "Using gestures and facial expressions. / हावभाव और चेहरे के भावों का उपयोग करना।",
+      "explanation": "Non-verbal communication includes all forms of communication that do not involve spoken or written words, such as body language, eye contact, and gestures."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "To cater to a 'kinesthetic' learner, a teacher should: / एक 'गतिसंवेदी' शिक्षार्थी को पूरा करने के लिए, एक शिक्षक को चाहिए:",
+      "options": [
+        "Use a lot of charts and diagrams. / बहुत सारे चार्ट और आरेखों का उपयोग करें।",
+        "Provide lectures and audio recordings. / व्याख्यान और ऑडियो रिकॉर्डिंग प्रदान करें।",
+        "Incorporate hands-on activities and movement. / व्यावहारिक गतिविधियों और गति को शामिल करें।",
+        "Encourage silent reading. / मौन पठन को प्रोत्साहित करें।"
+      ],
+      "answer": "Incorporate hands-on activities and movement. / व्यावहारिक गतिविधियों और गति को शामिल करें।",
+      "explanation": "Kinesthetic learners learn best by doing and moving. Activities that involve physical engagement, like experiments, building models, or role-playing, are most effective for them."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the first stage in Herbartian steps of lesson planning? / पाठ योजना के हरबर्टियन चरणों में पहला चरण क्या है?",
+      "options": [
+        "Presentation / प्रस्तुति",
+        "Association / साहचर्य",
+        "Preparation / तैयारी",
+        "Application / अनुप्रयोग"
+      ],
+      "answer": "Preparation / तैयारी",
+      "explanation": "The first step, Preparation, involves preparing the students to receive new knowledge by arousing their curiosity and linking the new topic to their previous knowledge."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The use of a globe in a geography class is an example of a(n): / एक भूगोल कक्षा में एक ग्लोब का उपयोग एक उदाहरण है:",
+      "options": [
+        "Audio aid / श्रव्य सहायक सामग्री",
+        "Visual aid / दृश्य सहायक सामग्री",
+        "Audio-visual aid / श्रव्य-दृश्य सहायक सामग्री",
+        "Activity aid / गतिविधि सहायक सामग्री"
+      ],
+      "answer": "Visual aid / दृश्य सहायक सामग्री",
+      "explanation": "A globe is a three-dimensional visual model of the Earth that students can see and touch, making it a powerful visual aid for teaching geography."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of these is an example of an intrinsic reward for a student? / इनमें से कौन एक छात्र के लिए एक आंतरिक पुरस्कार का एक उदाहरण है?",
+      "options": [
+        "Receiving a good grade. / एक अच्छा ग्रेड प्राप्त करना।",
+        "Getting praise from the teacher. / शिक्षक से प्रशंसा प्राप्त करना।",
+        "A feeling of accomplishment and satisfaction. / उपलब्धि और संतुष्टि की भावना।",
+        "Receiving a sticker or a prize. / एक स्टिकर या एक पुरस्कार प्राप्त करना।"
+      ],
+      "answer": "A feeling of accomplishment and satisfaction. / उपलब्धि और संतुष्टि की भावना।",
+      "explanation": "Intrinsic rewards come from within the individual. The personal satisfaction one gets from mastering a skill or understanding a concept is a powerful intrinsic motivator."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "A teacher who adapts their teaching style to accommodate the diverse needs of all students is practicing: / एक शिक्षक जो सभी छात्रों की विविध आवश्यकताओं को समायोजित करने के लिए अपनी शिक्षण शैली को अपनाता है, वह अभ्यास कर रहा है:",
+      "options": [
+        "Standardized instruction / मानकीकृत निर्देश",
+        "Differentiated instruction / विभेदित निर्देश",
+        "Direct instruction / प्रत्यक्ष निर्देश",
+        "Rote instruction / रटने का निर्देश"
+      ],
+      "answer": "Differentiated instruction / विभेदित निर्देश",
+      "explanation": "Differentiated instruction is a teaching philosophy based on the premise that teachers should adapt instruction to student differences in readiness, interest, and learning profile."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The 'Brainstorming' technique is used to: / 'विचार-मंथन' तकनीक का उपयोग किया जाता है:",
+      "options": [
+        "Evaluate student learning at the end of a unit. / एक इकाई के अंत में छात्र सीखने का मूल्यांकन करने के लिए।",
+        "Generate a large number of creative ideas in a short time. / कम समय में बड़ी संख्या में रचनात्मक विचार उत्पन्न करने के लिए।",
+        "Teach a specific skill through repetition. / पुनरावृत्ति के माध्यम से एक विशिष्ट कौशल सिखाने के लिए।",
+        "Assess a student's reading ability. / एक छात्र की पढ़ने की क्षमता का आकलन करने के लिए।"
+      ],
+      "answer": "Generate a large number of creative ideas in a short time. / कम समय में बड़ी संख्या में रचनात्मक विचार उत्पन्न करने के लिए।",
+      "explanation": "Brainstorming is a group activity where judgment is suspended to encourage the free flow of ideas, aiming to generate a wide range of potential solutions or thoughts on a topic."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which educational psychologist is known for his work on 'observational learning'? / कौन सा शैक्षिक मनोवैज्ञानिक 'अवलोकनात्मक सीखने' पर अपने काम के लिए जाना जाता है?",
+      "options": [
+        "Jean Piaget / जीन पियाजे",
+        "B.F. Skinner / बी.एफ. स्किनर",
+        "Albert Bandura / अल्बर्ट बंडुरा",
+        "Lev Vygotsky / लेव वायगोत्स्की"
+      ],
+      "answer": "Albert Bandura / अल्बर्ट बंडुरा",
+      "explanation": "Albert Bandura's Social Learning Theory, demonstrated through his famous Bobo doll experiment, posits that people learn from one another via observation, imitation, and modeling."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "To ensure objectivity in an essay-type test, a teacher should: / एक निबंध-प्रकार के परीक्षण में वस्तुनिष्ठता सुनिश्चित करने के लिए, एक शिक्षक को चाहिए:",
+      "options": [
+        "Grade the papers based on the student's handwriting. / छात्र की लिखावट के आधार पर पेपरों को ग्रेड दें।",
+        "Use a detailed scoring rubric or marking scheme. / एक विस्तृत स्कोरिंग रूब्रिक या अंकन योजना का उपयोग करें।",
+        "Give higher marks to longer answers. / लंबे उत्तरों को अधिक अंक दें।",
+        "Grade all the papers of one student before moving to the next. / अगले पर जाने से पहले एक छात्र के सभी पेपरों को ग्रेड दें।"
+      ],
+      "answer": "Use a detailed scoring rubric or marking scheme. / एक विस्तृत स्कोरिंग रूब्रिक या अंकन योजना का उपयोग करें।",
+      "explanation": "A scoring rubric provides clear, pre-defined criteria for grading, which helps to reduce personal bias and ensures that all students are evaluated on the same standards."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "The phrase 'learning by doing' is most closely associated with the educational philosophy of: / 'करके सीखना' वाक्यांश सबसे निकटता से किस शैक्षिक दर्शन से जुड़ा है?",
+      "options": [
+        "John Dewey / जॉन डेवी",
+        "Plato / प्लेटो",
+        "Immanuel Kant / इम्मैनुएल कांट",
+        "Aristotle / अरस्तू"
+      ],
+      "answer": "John Dewey / जॉन डेवी",
+      "explanation": "John Dewey, a key figure in pragmatism and progressive education, strongly advocated for experiential learning, believing that students learn best when they are actively engaged in real-world tasks."
+    }
+  ]
+}
