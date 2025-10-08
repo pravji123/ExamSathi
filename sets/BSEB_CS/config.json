@@ -33,13 +33,13 @@
       "liveDate": "2025-09-05"
     },
     {
-      "title": "BIHAR STET CS FULL Mock Test",
+      "title": "BIHAR STET CS FULL Mock Test English",
       "category": "FREE",
       "filter": "All",
       "questions": 150,
       "marks": 150,
       "time": 150,
-      "file": "cs_mock3.json",
+      "file": "cs_mock-eng.json",
       "liveDate": "2025-10-08"
     },
     {
@@ -59,7 +59,7 @@
       "questions": 150,
       "marks": 150,
       "time": 150,
-      "file": "cs_mock4.json",
+      "file": "cs_mock5.json",
       "liveDate": "2025-10-09"
     },
     {
@@ -69,7 +69,7 @@
       "questions": 150,
       "marks": 150,
       "time": 150,
-      "file": "cs_mock5.json",
+      "file": "cs_mock6.json",
       "liveDate": "2025-10-09"
     },
     {
