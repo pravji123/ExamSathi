@@ -1061,76 +1061,7 @@
       "options": ["Operating System Kernel", "Database Management System", "Message Queue", "Device Driver"],
       "answer": "Message Queue",
       "explanation": "A **Message Queue** is a form of middleware that facilitates asynchronous communication between distributed applications or processes."
-    },
-     {
-      "section": "Part-III (Computer Science)",
-      "question": "What is the purpose of the **`break`** statement inside a loop in C? / C में लूप के अंदर **`break`** स्टेटमेंट का उद्देश्य क्या है?",
-      "options": ["To skip the current iteration and proceed to the next", "To exit the loop immediately", "To restart the loop from the beginning", "To skip the entire loop structure"],
-      "answer": "To exit the loop immediately",
-      "explanation": "The **`break`** statement is used to terminate the execution of the nearest enclosing loop (`for`, `while`, or `do-while`) or `switch` statement immediately."
-    },
-    {
-      "section": "Part-III (Computer Science)",
-      "question": "Which cloud service model provides the consumer with the ability to deploy and run consumer-created or acquired applications? / कौन सा क्लाउड सेवा मॉडल उपभोक्ता को उपभोक्ता-निर्मित या अधिग्रहीत एप्लिकेशन को तैनात करने और चलाने की क्षमता प्रदान करता है?",
-      "options": ["IaaS (Infrastructure as a Service)", "PaaS (Platform as a Service)", "SaaS (Software as a Service)", "DaaS (Desktop as a Service)"],
-      "answer": "PaaS (Platform as a Service)",
-      "explanation": "**PaaS** gives the user control over deployed applications and possibly configuration settings of the application-hosting environment, but not the underlying infrastructure."
-    },
-    {
-      "section": "Part-III (Computer Science)",
-      "question": "In $\\text{C}++$, a class whose object cannot be created is called a: / $\\text{C}++$ में, एक क्लास जिसका ऑब्जेक्ट नहीं बनाया जा सकता है, कहलाती है:",
-      "options": ["Friend Class", "Abstract Class", "Container Class", "Derived Class"],
-      "answer": "Abstract Class",
-      "explanation": "An **Abstract Class** is a class containing at least one **pure virtual function** (using `= 0`) and cannot be directly instantiated."
-    },
-    {
-      "section": "Part-III (Computer Science)",
-      "question": "Which data structure is best suited for implementing a compiler's symbol table? / कंपाइलर के सिंबल टेबल (symbol table) को लागू करने के लिए कौन सी डेटा संरचना सबसे उपयुक्त है?",
-      "options": ["Stack", "Queue", "Hash Table", "Binary Search Tree"],
-      "answer": "Hash Table",
-      "explanation": "A **Hash Table** is ideal for implementing a symbol table because it allows for very fast (average O(1)) insertion, deletion, and lookup operations for identifiers."
-    },
-    {
-      "section": "Part-III (Computer Science)",
-      "question": "The time required for the desired sector of the disk to rotate under the read/write head is called: / डिस्क के वांछित सेक्टर को रीड/राइट हेड के नीचे घूमने में लगने वाला समय कहलाता है:",
-      "options": ["Seek Time", "Access Time", "Latency Time (Rotational Delay)", "Transfer Time"],
-      "answer": "Latency Time (Rotational Delay)",
-      "explanation": "**Latency Time** (or Rotational Delay) is the time spent waiting for the correct sector of the disk platter to rotate into position under the head."
-    },
-    {
-      "section": "Part-III (Computer Science)",
-      "question": "In $\\text{C}++$, the keyword used for exception handling is: / $\\text{C}++$ में, एक्सेप्शन हैंडलिंग के लिए उपयोग किया जाने वाला कीवर्ड है:",
-      "options": ["catch", "handle", "error", "except"],
-      "answer": "catch",
-      "explanation": "Exception handling in $\\text{C}++$ is done using the **`try`**, **`catch`**, and **`throw`** blocks."
-    },
-    {
-      "section": "Part-III (Computer Science)",
-      "question": "Which type of computer network typically uses the term **'Intranet'**? / किस प्रकार का कंप्यूटर नेटवर्क आमतौर पर **'इंटरनेट'** (Intranet) शब्द का उपयोग करता है?",
-      "options": ["MAN (Metropolitan Area Network)", "Public WAN", "LAN (Local Area Network)", "PAN (Personal Area Network)"],
-      "answer": "LAN (Local Area Network)",
-      "explanation": "An **Intranet** is essentially a private network, often a large **LAN**, that uses Internet protocols and technology but is accessible only to the organization's members."
-    },
-    {
-      "section": "Part-III (Computer Science)",
-      "question": "Which technology is primarily concerned with creating systems that can react to their environment and make decisions without human intervention? / कौन सी तकनीक मुख्य रूप से ऐसी प्रणालियाँ बनाने से संबंधित है जो अपने पर्यावरण पर प्रतिक्रिया कर सकें और मानव हस्तक्षेप के बिना निर्णय ले सकें?",
-      "options": ["Database Management", "Web Development", "Artificial Intelligence (AI)", "Cloud Storage"],
-      "answer": "Artificial Intelligence (AI)",
-      "explanation": "**Artificial Intelligence** is the field dedicated to building intelligent agents that perceive their environment and take actions that maximize their chance of successfully achieving their goals."
-    },
-    {
-      "section": "Part-III (Computer Science)",
-      "question": "The **Shannon-Fano** algorithm is used for which purpose? / **शैनन-फ़ानो** (Shannon-Fano) एल्गोरिथम का उपयोग किस उद्देश्य के लिए किया जाता है?",
-      "options": ["Network routing", "Data compression", "Error detection", "Digital logic synthesis"],
-      "answer": "Data compression",
-      "explanation": "The **Shannon-Fano** coding is an entropy encoding technique for lossless **data compression**."
-    },
-    {
-      "section": "Part-III (Computer Science)",
-      "question": "Which of the following is a characteristic of **lossy data compression**? / निम्नलिखित में से कौन-सी **लॉसी डेटा कम्प्रेशन** (lossy data compression) की एक विशेषता है?",
-      "options": ["Original data can be perfectly reconstructed", "It is used for text files and executable programs", "Some data is permanently discarded to achieve higher compression rates", "The compression ratio is always less than 2:1"],
-      "answer": "Some data is permanently discarded to achieve higher compression rates",
-      "explanation": "**Lossy compression** achieves high compression by discarding less critical data permanently, which is commonly used for media files like JPEG images and MP3 audio."
     }
+    
   ]
 }
