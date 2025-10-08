@@ -102,7 +102,16 @@
       "file": "art-of-teaching3.json",
       "liveDate": "2025-09-30"
     },
-
+    {
+      "title": "Art of Teaching Part - 4",
+      "category": "FREE",
+      "filter": "All",
+      "questions": 30,
+      "marks": 30,
+      "time": 30,
+      "file": "art-of-teaching4.json",
+      "liveDate": "2025-10-09"
+    },
 
     {
       "title": "Data Structures – Stack & Queue",
