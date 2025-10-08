@@ -138,7 +138,7 @@
       "questions": 150,
       "marks": 150,
       "time": 150,
-      "file": "pyq.json"
+      "file": "cspyq23.json"
     },
     {
       "title": "BSEB STET Computer Science PYQ 2023 (Shift 2)",
@@ -147,16 +147,25 @@
       "questions": 150,
       "marks": 150,
       "time": 150,
-      "file": "pyq1.json"
+      "file": "cspyq232.json"
     },
     {
-      "title": "BSEB STET Computer Science PYQ 2024",
+      "title": "BSEB STET Computer Science PYQ 2024 (Shift 1)",
       "category": "PYQ",
       "filter": "All",
       "questions": 150,
       "marks": 150,
       "time": 150,
-      "file": "pyq.json"
+      "file": "cspyq24.json"
+    },
+    {
+      "title": "BSEB STET Computer Science PYQ 2024 (Shift 2)",
+      "category": "PYQ",
+      "filter": "All",
+      "questions": 150,
+      "marks": 150,
+      "time": 150,
+      "file": "cspyq242.json"
     }
   ]
 }
