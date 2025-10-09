@@ -1,4 +1,3 @@
-
 {
   "examName": "BSEB STET Mock Test Series 2025",
   "testTitle": "STET CS Mock Test Set 1",
@@ -306,6 +305,103 @@
         "options": ["Objective questions", "Open-ended questions", "Yes/No questions", "Fill in the blanks"],
         "answer": "Open-ended questions",
         "explanation": "Open-ended questions promote analysis and creativity."
+    },
+
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which educational psychologist is known for the theory of 'Zone of Proximal Development' (ZPD)? / कौन-से शिक्षा मनोवैज्ञानिक 'समीपस्थ विकास का क्षेत्र' (ZPD) के सिद्धांत के लिए जाने जाते हैं?",
+      "options": [
+        "Jean Piaget / जीन पियाजे",
+        "Lev Vygotsky / लेव वायगोत्स्की",
+        "B.F. Skinner / बी.एफ. स्किनर",
+        "Howard Gardner / हावर्ड गार्डनर"
+      ],
+      "answer": "Lev Vygotsky / लेव वायगोत्स्की",
+      "explanation": "Lev Vygotsky introduced the concept of the Zone of Proximal Development."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the primary role of a teacher in a student-centered classroom? / छात्र-केंद्रित कक्षा में शिक्षक की प्राथमिक भूमिका क्या है?",
+      "options": [
+        "Dictator / तानाशाह",
+        "Facilitator / सूत्रधार",
+        "Evaluator / मूल्यांकनकर्ता",
+        "Instructor / प्रशिक्षक"
+      ],
+      "answer": "Facilitator / सूत्रधार",
+      "explanation": "In a student-centered classroom, the teacher acts as a facilitator of learning."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is an example of a summative evaluation? / निम्नलिखित में से कौन-सा योगात्मक मूल्यांकन का उदाहरण है?",
+      "options": [
+        "Class test / कक्षा परीक्षण",
+        "Final examination / अंतिम परीक्षा",
+        "Quiz / प्रश्नोत्तरी",
+        "Homework / गृहकार्य"
+      ],
+      "answer": "Final examination / अंतिम परीक्षा",
+      "explanation": "Summative evaluation is conducted at the end of a course to assess overall achievement."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the main purpose of classroom management? / कक्षा प्रबंधन का मुख्य उद्देश्य क्या है?",
+      "options": [
+        "To control students / छात्रों को नियंत्रित करना",
+        "To create a conducive learning environment / सीखने के लिए अनुकूल वातावरण बनाना",
+        "To complete the syllabus / पाठ्यक्रम पूरा करना",
+        "To maintain discipline / अनुशासन बनाए रखना"
+      ],
+      "answer": "To create a conducive learning environment / सीखने के लिए अनुकूल वातावरण बनाना",
+      "explanation": "Effective classroom management aims to create a positive and productive learning atmosphere."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which of the following is a benefit of using technology in education? / शिक्षा में प्रौद्योगिकी का उपयोग करने का क्या लाभ है?",
+      "options": [
+        "Increased student engagement / छात्रों की बढ़ी हुई व्यस्तता",
+        "Reduced teacher workload / शिक्षकों के काम का बोझ कम होना",
+        "Standardized testing / मानकीकृत परीक्षण",
+        "Limited access to information / सूचना तक सीमित पहुंच"
+      ],
+      "answer": "Increased student engagement / छात्रों की बढ़ी हुई व्यस्तता",
+      "explanation": "Technology can make learning more interactive and engaging for students."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is the first step in curriculum development? / पाठ्यक्रम विकास में पहला कदम क्या है?",
+      "options": [
+        "Evaluation / मूल्यांकन",
+        "Implementation / कार्यान्वयन",
+        "Needs assessment / आवश्यकता का आकलन",
+        "Design / डिज़ाइन"
+      ],
+      "answer": "Needs assessment / आवश्यकता का आकलन",
+      "explanation": "The curriculum development process begins with assessing the needs of the learners."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "What is inclusive education? / समावेशी शिक्षा क्या है?",
+      "options": [
+        "Educating students with special needs in separate schools / विशेष आवश्यकता वाले छात्रों को अलग स्कूलों में शिक्षित करना",
+        "Educating all students together in the same classroom / सभी छात्रों को एक ही कक्षा में एक साथ शिक्षित करना",
+        "Providing education only to gifted students / केवल प्रतिभाशाली छात्रों को शिक्षा प्रदान करना",
+        "Focusing on vocational education / व्यावसायिक शिक्षा पर ध्यान केंद्रित करना"
+      ],
+      "answer": "Educating all students together in the same classroom / सभी छात्रों को एक ही कक्षा में एक साथ शिक्षित करना",
+      "explanation": "Inclusive education means that all students, regardless of their abilities, are educated together."
+    },
+    {
+      "section": "Part-II (Art of Teaching)",
+      "question": "Which learning theory suggests that learning occurs through observation and imitation? / कौन-सा शिक्षण सिद्धांत बताता है कि सीखना अवलोकन और नकल के माध्यम से होता है?",
+      "options": [
+        "Behaviorism / व्यवहारवाद",
+        "Cognitivism / संज्ञानात्मकता",
+        "Constructivism / रचनावाद",
+        "Social Learning Theory / सामाजिक शिक्षण सिद्धांत"
+      ],
+      "answer": "Social Learning Theory / सामाजिक शिक्षण सिद्धांत",
+      "explanation": "Albert Bandura's Social Learning Theory emphasizes the importance of observing and modeling the behaviors, attitudes, and emotional reactions of others."
     },
     {
       "section": "Part-III (Computer Science)",
