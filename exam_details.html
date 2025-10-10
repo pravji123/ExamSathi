@@ -286,9 +286,15 @@
           }
         }
 
-        const card=document.createElement('div');
-        card.className='test-card';
-        card.innerHTML = `<strong>${t.title}</strong>📝 ${t.questions} Qs | ⭐ ${t.marks} Marks | ⏳ ${t.time} min${btnHTML}`;
+        //📥 For downloading PYQ
+        const card=document.createElement('div'); 
+        card.className='test-card';  
+        let pyqDownloadHTML = ''; 
+        if (t.category === 'PYQ') { 
+          pyqDownloadHTML = `<div class="pyq-download"> 
+            📥 For downloading PYQ, go to <a href="https://t.me/Testara_Exam_notes/103" target="_blank">this link</a>.</div>`; 
+          } 
+        card.innerHTML = `<strong>${t.title}</strong>📝 ${t.questions} Qs | ⭐ ${t.marks} Marks | ⏳ ${t.time} min${btnHTML} ${pyqDownloadHTML}`; 
         container.appendChild(card);
 
         // 🆕 Badge लगाना
