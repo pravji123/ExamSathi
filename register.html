@@ -23,24 +23,14 @@
       height:100vh;
       margin:0;
     }
-    .action-button{
-      padding:15px 30px;
-      font-size:1.1em;
-      font-weight:bold;
-      color:#fff;
-      background:var(--primary-gradient);
-      border:none;border-radius:30px;cursor:pointer;
-      box-shadow:0 4px 10px rgba(0,123,255,0.3);
-    }
 
     .modal{
-      display:none;
+      display:flex;
       position:fixed;left:0;top:0;width:100%;height:100%;
       z-index:1000;background:rgba(0,0,0,0.6);
       justify-content:center;align-items:center;animation:fadeIn .25s ease-out;
       padding:10px;
     }
-    .modal.active{display:flex;}
     @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
     .auth-container{
@@ -94,9 +84,8 @@
   </style>
 </head>
 <body>
-  <button id="openAuthModal" class="action-button">Login / Register</button>
 
-  <div id="authModal" class="modal" aria-hidden="true">
+  <div id="authModal" class="modal" aria-hidden="false">
     <div class="auth-container" role="dialog" aria-modal="true" aria-labelledby="authTitle">
       <div class="auth-left-panel">
         <h3>Join India's Smart Platform for Exam Preparation</h3>
@@ -134,7 +123,6 @@
         <!-- SIGN UP -->
         <form id="signup-form" class="auth-form" novalidate>
           <div id="signupProgress"></div>
-
           <div class="input-group">
             <i class="fas fa-user icon"></i>
             <input id="signupName" type="text" placeholder="Full Name" required>
@@ -157,7 +145,6 @@
             <input id="confirmPassword" type="password" placeholder="Confirm Password" oninput="checkConfirmPassword()">
             <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">👁️</span>
           </div>
-
           <p class="password-hint">Password must be at least 8 characters, including uppercase, lowercase, number & symbol.</p>
           <div id="password-rules" class="password-rules" aria-hidden="true">
             <p id="length" class="invalid">At least 8 characters</p>
@@ -166,13 +153,11 @@
             <p id="number" class="invalid">Contains number</p>
             <p id="special" class="invalid">Contains special character (!@#...)</p>
           </div>
-
           <div id="confirmMsg" class="password-rules invalid" aria-live="polite"></div>
           <div class="checkbox-group">
             <input id="terms" type="checkbox" required>
             <label for="terms">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</label>
           </div>
-
           <button type="button" class="btn-submit" onclick="validateSignup()">Sign Up</button>
         </form>
 
@@ -205,20 +190,12 @@
   <!-- Supabase -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    // ----- CONFIG (kept as you confirmed) -----
     const SUPABASE_URL = 'https://qzriaykqdrhbtcgbpxpg.supabase.co';
     const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6cmlheWtxZHJoYnRjZ2JweHBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwMTcwMTAsImV4cCI6MjA3NTU5MzAxMH0.qRAQumkwN-JtxDizWwLRfPa8t0N68YGWdYKhQrhx7e8';
     const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    // ----- DOM -----
-    const authModal = document.getElementById('authModal');
-    const openAuthModalBtn = document.getElementById('openAuthModal');
     const tabs = document.querySelectorAll('.tab-btn');
     const forms = document.querySelectorAll('.auth-form');
-
-    // open/close modal
-    openAuthModalBtn.onclick = () => { authModal.classList.add('active'); authModal.setAttribute('aria-hidden','false'); };
-    window.onclick = (e) => { if (e.target === authModal) { authModal.classList.remove('active'); authModal.setAttribute('aria-hidden','true'); } };
 
     // tab switching
     tabs.forEach(tab => tab.addEventListener('click', () => {
@@ -240,7 +217,6 @@
       }
     });
 
-    // ---- Toggle password visibility ----
     function togglePassword(id, el) {
       const input = document.getElementById(id);
       if (!input) return;
@@ -248,7 +224,6 @@
       else { input.type = 'password'; el.textContent = '👁️'; }
     }
 
-    // ---- Password rule checks ----
     function checkPasswordRules(){
       const pass = document.getElementById('password').value || '';
       const rules = {
@@ -275,7 +250,6 @@
       else { msg.textContent = 'Passwords do not match ❌'; msg.className = 'invalid'; }
     }
 
-    // ---- Switch helpers ----
     function switchToSignin(){
       forms.forEach(f=>f.classList.remove('active'));
       document.getElementById('signin-form').classList.add('active');
@@ -286,12 +260,10 @@
       forms.forEach(f=>f.classList.remove('active'));
       document.getElementById('forgot-form').classList.add('active');
       tabs.forEach(t=>t.classList.remove('active'));
-      // update friendly text
       document.getElementById('forgotText').textContent = "Enter your registered email. We'll send a secure reset link to that email.";
       document.getElementById('forgotResult').textContent = '';
     }
 
-    // ---- SIGN UP (supabase) ----
     async function validateSignup(){
       checkPasswordRules();
       checkConfirmPassword();
@@ -308,12 +280,10 @@
       const phone = document.getElementById('signupPhone').value.trim();
       const password = document.getElementById('password').value;
 
-      // show progress
       const slider = document.getElementById('signupProgress');
       slider.style.display = 'block';
       slider.style.width = '30%';
 
-      // call supabase signUp (sends email verification)
       try {
         const { data, error } = await sb.auth.signUp({
           email,
@@ -329,12 +299,9 @@
           return;
         }
 
-        // success: notify user, switch to sign-in and prefill email
         alert('✅ Signup successful! A verification email has been sent. Please verify your email before signing in.');
-        // auto-switch to sign-in and prefill email
         switchToSignin();
         document.getElementById('signinEmail').value = email;
-        // focus password input so user can sign in after verifying
         document.getElementById('signinPassword').focus();
 
       } catch (err) {
@@ -344,7 +311,6 @@
       }
     }
 
-    // ---- SIGN IN (supabase) ----
     document.getElementById('signin-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = document.getElementById('signinEmail').value.trim();
@@ -355,18 +321,14 @@
         const { data, error } = await sb.auth.signInWithPassword({ email, password });
 
         if (error) {
-          // common friendly messages
           alert('❌ Login failed: ' + error.message);
           return;
         }
 
-        // success: optionally save email
         if (rememberMe) localStorage.setItem('rememberEmail', email);
         else localStorage.removeItem('rememberEmail');
 
-        // Redirect to index page as requested
         alert('✅ Login successful! Redirecting...');
-        // small delay for UX, then redirect
         setTimeout(()=>{ window.location.href = 'index.html'; }, 600);
 
       } catch (err) {
@@ -374,23 +336,16 @@
       }
     });
 
-    // ---- FORGOT / RESET PASSWORD (supabase) ----
     async function sendPasswordReset(){
       const email = document.getElementById('forgotEmail').value.trim();
       const resultEl = document.getElementById('forgotResult');
       if (!email) { resultEl.style.color = 'red'; resultEl.textContent = 'Please enter your email.'; return; }
 
-      // show text while sending
       resultEl.style.color = 'var(--text-dark)';
       resultEl.textContent = 'Sending reset link...';
 
       try {
-        // supabase v2: resetPasswordForEmail
-        const { data, error } = await sb.auth.resetPasswordForEmail(email, {
-          // optional: redirect URL after user resets password
-          // redirectTo: 'https://yourdomain.com/reset-confirm'
-        });
-
+        const { data, error } = await sb.auth.resetPasswordForEmail(email);
         if (error) {
           resultEl.style.color = 'red';
           resultEl.textContent = 'Error sending reset link: ' + error.message;
@@ -399,7 +354,6 @@
 
         resultEl.style.color = 'green';
         resultEl.textContent = 'If that email exists, a reset link has been sent. Please check your inbox (and spam).';
-        // optionally auto-switch back to sign-in after a short delay
         setTimeout(()=>{ switchToSignin(); }, 2000);
 
       } catch (err) {
@@ -407,9 +361,6 @@
         resultEl.textContent = 'Error: ' + (err.message || err);
       }
     }
-
-    // ---- small helpers ----
-    function showPopup(){ alert('If this email exists, a password reset link will be sent.'); switchToSignin(); }
   </script>
 </body>
 </html>
