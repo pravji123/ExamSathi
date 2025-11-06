@@ -1,209 +1,181 @@
-
 <style>
-  /* ✅ Global Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
+        /* ✅ Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-  /* ✅ Navbar Container */
-  nav {
-    background-color: #0074cc;
-    color: #ffffff;
-    padding: 12px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
+        /* ✅ Navbar Container */
+        nav {
+            background-color: #0074cc;
+            color: #ffffff;
+            padding: 12px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
 
-  /* ✅ Logo + Brand block */
-  .brand-section {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+        /* ✅ Logo + Brand block */
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-  .logo-container {
-    height: 48px;
-    width: 48px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    flex-shrink: 0;
-  }
+        .logo-container {
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0;
+        }
 
-  .logo-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-  }
+        .logo-container img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
 
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-  }
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
 
-  .brand-text .title {
-    font-size: 20px;
-    font-weight: 700;
-  }
+        .brand-text .title {
+            font-size: 20px;
+            font-weight: 700;
+        }
 
-  .brand-text .subtitle {
-    font-size: 13px;
-    font-weight: 400;
-    opacity: 0.85;
-  }
+        .brand-text .subtitle {
+            font-size: 13px;
+            font-weight: 400;
+            opacity: 0.85;
+        }
 
-  /* ✅ Navigation Links */
-  .nav-links {
-    display: flex;
-    gap: 22px;
-    transition: max-height 0.4s ease-in-out;
-  }
+        /* ✅ Navigation Links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            transition: max-height 0.4s ease-in-out;
+        }
 
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s, transform 0.2s;
-    padding: 4px 0;
-  }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.2s;
+            padding: 4px 0;
+        }
 
-  .nav-links a:hover {
-    color: #ffcc00;
-    transform: translateY(-2px);
-  }
+        .nav-links a:hover {
+            color: #ffcc00;
+            transform: translateY(-2px);
+        }
 
-  .nav-links a.active {
-    color: #ffcc00;
-    border-bottom: 2px solid #ffcc00;
-  }
+        .nav-links a.active {
+            color: #ffcc00;
+            border-bottom: 2px solid #ffcc00;
+        }
 
-  /* ✅ Button Style */
-  .nav-links .button {
-      padding: 12px 22px;
-      font-size: 1em;
-      font-weight: bold;
-      color: #0074cc;
-      background-color: white;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-  }
+        /* ✅ Button Style */
+        .nav-links .button {
+            padding: 12px 22px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #0074cc;
+            background-color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
 
-  .nav-links .button:hover {
-      background-color: #ffcc00;
-      color: #333;
-  }
+        .nav-links .button:hover {
+            background-color: #ffcc00;
+            color: #333;
+        }
+        
+        /* ✅ Mobile Menu Button */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+        }
 
-  /* ✅ Mobile Menu Button */
-  .menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-  }
+        /* ✅ Mobile Responsive */
+        @media (max-width: 768px) {
+            nav { flex-wrap: wrap; }
 
-  /* ✅ Mobile Responsive */
-  @media (max-width: 768px) {
-    nav {
-      flex-wrap: wrap;
-    }
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                background-color: #0074cc;
+                position: absolute;
+                top: 73px;
+                right: 0;
+                width: 200px;
+                max-height: 0;
+                overflow: hidden;
+            }
 
-    .nav-links {
-      flex-direction: column;
-      align-items: center;
-      background-color: #0074cc;
-      position: absolute;
-      top: 73px;
-      right: 0;
-      width: 200px;
-      max-height: 0;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .nav-links.active {
-      max-height: 350px;
-      padding: 12px 0;
-    }
-
-    .nav-links a {
-      width: 100%;
-      text-align: center;
-    }
-
-    .menu-toggle {
-      display: block;
-    }
-  }
-</style>
+            .nav-links.active { max-height: 350px; padding: 12px 0; }
+            .nav-links a { width: 100%; text-align: center; }
+            .menu-toggle { display: block; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- ✅ Navbar Start -->
 <nav>
-  <!-- Left Section: Logo + Brand -->
-  <div class="brand-section">
-    <div class="logo-container">
-      <img src="image/testara.jpg" alt="Testara Logo">
+    <div class="brand-section">
+        <div class="logo-container">
+            <img src="image/testara.jpg" alt="Testara Logo">
+        </div>
+        <div class="brand-text">
+            <span class="title">Testara</span>
+            <span class="subtitle">India's Smart Testing Platform</span>
+        </div>
     </div>
-    <div class="brand-text">
-      <span class="title">Testara</span>
-      <span class="subtitle">India's Smart Testing Platform</span>
-    </div>
-  </div>
 
-  <!-- Right Section: Menu -->
-  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html" class="active">Home</a>
-    <!-- <a href="courses.html">Practice Sets</a> -->
-    <a href="ebooks.html">Practice Sets</a>
-    <a href="/mock.html">Mock Tests</a>
-    <a href="#sample">Free Sample</a>
-    <a href="/contact.html">Contact</a>
-    <button onclick="openPopup()" class="button">Login / Signup</button>
-    <!-- <a href="/register.html" class="action-button">Login / Register</a> -->
-  </div>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="courses.html">Practice Sets</a>
+        <a href="/mock.html">Mock Tests</a>
+        <a href="#sample">Free Sample</a>
+        <a href="/contact.html">Contact</a>
+        <button onclick="openPopup()" class="button">Login / Signup</button>
+    </div>
 </nav>
-<!-- ✅ Navbar End -->
 
 <script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    const href = link.getAttribute("href");
-
-    if (href.includes(currentPage)) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
+    // ✅ Toggle mobile menu
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
     }
-  });
+
+    // ✅ Highlight active page link
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href.includes(currentPage)) {
+            link.classList.add("active");
+        }
+    });
 </script>
-
-
-
-
-
-
-
-
-
