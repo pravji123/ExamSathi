@@ -90,16 +90,22 @@
     color: #ffcc00;
     border-bottom: 2px solid #ffcc00;
   }
-  .nav-links .action-button {
-    padding: 8px 16px;
-    font-size: 1em;
-    font-weight: bold;
-    color: #0074cc;
-    background-color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+
+  /* ✅ Button Style */
+  .nav-links .button {
+      padding: 12px 22px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #0074cc;
+      background-color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+  }
+
+  .nav-links .button:hover {
+      background-color: #ffcc00;
+      color: #333;
   }
 
   /* ✅ Mobile Menu Button */
@@ -171,7 +177,8 @@
     <a href="/mock.html">Mock Tests</a>
     <a href="#sample">Free Sample</a>
     <a href="/contact.html">Contact</a>
-    <a href="/register.html" class="action-button">Login / Register</a>
+    <button onclick="openPopup()" class="button">Login / Signup</button>
+    <!-- <a href="/register.html" class="action-button">Login / Register</a> -->
   </div>
 </nav>
 <!-- ✅ Navbar End -->
@@ -191,6 +198,7 @@
     }
   });
 </script>
+
 
 
 
