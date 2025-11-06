@@ -3,94 +3,236 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Login & Signup Modal - Testara</title>
+  <title>Login & Signup - Testara</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <style>
-    :root{
-      --primary-blue:#007bff;
-      --primary-gradient: linear-gradient(to right,#007bff,#00c6ff);
-      --form-bg:#fff;
-      --text-dark:#333;
-      --text-light:#777;
-      --border-color:#ddd;
-    }
-    body{
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background:#f0f2f5;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      margin:0;
+    :root {
+      --primary-blue: #007bff;
+      --primary-gradient: linear-gradient(to right, #007bff, #00c6ff);
+      --form-bg: #fff;
+      --text-dark: #333;
+      --text-light: #777;
+      --border-color: #ddd;
     }
 
-    .modal{
-      display:flex;
-      position:fixed;left:0;top:0;width:100%;height:100%;
-      z-index:1000;background:rgba(0,0,0,0.6);
-      justify-content:center;align-items:center;animation:fadeIn .25s ease-out;
-      padding:10px;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
     }
-    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
-    .auth-container{
-      width:90%;max-width:900px;height:600px;background:var(--form-bg);
-      border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,0.15);display:flex;overflow:hidden;
+    /* Full-page container */
+    #authModal {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
     }
-    .auth-left-panel{
-      flex:1;background:var(--primary-blue);color:#fff;padding:40px;display:flex;flex-direction:column;
-      justify-content:center;align-items:center;text-align:center;
+
+    .auth-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: hidden;
     }
-    .illustration{width:150px;height:150px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.3);margin-bottom:30px;}
-    .auth-right-panel{flex:1;padding:30px;display:flex;flex-direction:column;overflow-y:auto;max-height:600px;}
 
-    .auth-tabs{display:flex;margin-bottom:20px;border-bottom:1px solid var(--border-color);flex-shrink:0;}
-    .tab-btn{flex:1;padding:12px;border:none;background:none;cursor:pointer;font-size:1.05rem;font-weight:500;color:var(--text-light);border-bottom:3px solid transparent;transition:all .2s}
-    .tab-btn.active{color:var(--primary-blue);font-weight:700;border-bottom:3px solid var(--primary-blue);}
+    /* Left side (blue) */
+    .auth-left-panel {
+      flex: 1;
+      background: var(--primary-blue);
+      color: #fff;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
-    .auth-form{display:none;}
-    .auth-form.active{display:block;animation:slideUp .25s ease-out}
-    @keyframes slideUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+    .illustration {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255,255,255,0.3);
+      margin-bottom: 30px;
+    }
 
-    .input-group{position:relative;margin-bottom:18px}
-    .input-group input{width:100%;padding:12px 45px 12px 45px;border:none;border-bottom:1px solid var(--border-color);font-size:16px;background:transparent}
-    .input-group .icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--text-light)}
-    .toggle-password{position:absolute;right:12px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:16px;user-select:none}
+    /* Right side (white form) */
+    .auth-right-panel {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #fff;
+      overflow-y: auto;
+    }
 
-    .signin-options{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:.9rem;color:var(--text-dark)}
-    .signin-options a{color:var(--primary-blue);text-decoration:none}
-    .signin-options a:hover{text-decoration:underline}
+    .auth-tabs {
+      display: flex;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text-light);
+      border-bottom: 3px solid transparent;
+      transition: all .2s;
+    }
+
+    .tab-btn.active {
+      color: var(--primary-blue);
+      font-weight: 700;
+      border-bottom: 3px solid var(--primary-blue);
+    }
+
+    .auth-form {
+      display: none;
+    }
+
+    .auth-form.active {
+      display: block;
+      animation: slideUp .25s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 18px;
+    }
+
+    .input-group input {
+      width: 75%;
+      padding: 12px 45px 12px 45px;
+      border: none;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 16px;
+      background: transparent;
+    }
+
+    .input-group .icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-light);
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 16px;
+      user-select: none;
+    }
+
+    .signin-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    .signin-options a {
+      color: var(--primary-blue);
+      text-decoration: none;
+    }
+
+    .signin-options a:hover {
+      text-decoration: underline;
+    }
     .link{color:#0074cc;cursor:pointer;text-decoration:underline;font-size:14px}
 
-    .checkbox-group{display:flex;align-items:center;margin-bottom:15px;font-size:.9rem}
-    .checkbox-group input{margin-right:8px}
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+      cursor:pointer;
+    }
 
-    .password-hint{font-size:13px;color:var(--text-light);margin-top:-12px;margin-bottom:10px}
+    .checkbox-group input {
+      margin-right: 8px;
+    }
 
-    .btn-submit{width:100%;margin-top:10px;background:var(--primary-gradient);border-radius:30px;padding:14px;font-size:1.05rem;font-weight:700;color:#fff;border:none;cursor:pointer}
+    .btn-submit {
+      width: 100%;
+      margin-top: 10px;
+      background: var(--primary-gradient);
+      border-radius: 30px;
+      padding: 14px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
 
+    .password-hint, .password-rules {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-top: -12px;
+      margin-bottom: 10px;
+    }
     .password-rules{font-size:13px;margin-bottom:10px}
     .password-rules p{margin:2px 0}
-    .valid{color:green}
-    .invalid{color:red}
+    .valid { color: green; }
+    .invalid { color: red; }
 
-    #signupProgress{width:0%;height:6px;background:var(--primary-gradient);border-radius:4px;margin-bottom:12px;display:none;transition:width .2s ease}
+    #signupProgress {
+      width: 0%;
+      height: 6px;
+      background: var(--primary-gradient);
+      border-radius: 4px;
+      margin-bottom: 12px;
+      display: none;
+      transition: width .2s ease;
+    }
 
-    @media(max-width:800px){
-      .auth-container{flex-direction:column;max-width:450px;height:90vh}
-      .auth-left-panel{display:none}
-      .auth-right-panel{padding:18px;max-height:90vh}
+    @media(max-width: 800px) {
+      .auth-container {
+        flex-direction: column;
+        height: 100%;
+      }
+      .auth-left-panel {
+        display: none;
+      }
+      .auth-right-panel {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
-
-  <div id="authModal" class="modal" aria-hidden="false">
-    <div class="auth-container" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+  <div id="authModal">
+    <div class="auth-container">
       <div class="auth-left-panel">
         <h3>Join India's Smart Platform for Exam Preparation</h3>
         <img src="testara1.jpg" alt="Logo" class="illustration">
-        <h1 id="authTitle">Welcome to Testara</h1>
+        <h1>Welcome to Testara</h1>
         <p>Your smart platform for exam preparation. Sign in to continue or sign up to get started!</p>
       </div>
 
@@ -100,8 +242,8 @@
           <button class="tab-btn" data-form="signup">Sign Up</button>
         </div>
 
-        <!-- SIGN IN -->
-        <form id="signin-form" class="auth-form active" novalidate>
+        <!-- Sign In Form -->
+        <form id="signin-form" class="auth-form active">
           <div class="input-group">
             <i class="fas fa-envelope icon"></i>
             <input id="signinEmail" type="email" placeholder="Email Address" required>
@@ -111,41 +253,23 @@
             <input id="signinPassword" type="password" placeholder="Password" required>
             <span class="toggle-password" onclick="togglePassword('signinPassword', this)">👁️</span>
           </div>
-
           <div class="signin-options">
-            <label><input id="rememberMe" type="checkbox"> Remember me</label>
+            <label><input id="rememberMe" type="checkbox" style="cursor: pointer;"> Remember me</label>
             <div class="link" onclick="openForgotView()">Forgot Password?</div>
           </div>
-
           <button type="submit" class="btn-submit">Sign In</button>
+          <p>If you want to go Home <a href="index.html">Click Here</a></p>
         </form>
 
-        <!-- SIGN UP -->
-        <form id="signup-form" class="auth-form" novalidate>
+        <!-- Sign Up Form -->
+        <form id="signup-form" class="auth-form">
           <div id="signupProgress"></div>
-          <div class="input-group">
-            <i class="fas fa-user icon"></i>
-            <input id="signupName" type="text" placeholder="Full Name" required>
-          </div>
-          <div class="input-group">
-            <i class="fas fa-envelope icon"></i>
-            <input id="signupEmail" type="email" placeholder="Email Address" required>
-          </div>
-          <div class="input-group">
-            <i class="fas fa-phone icon"></i>
-            <input id="signupPhone" type="tel" placeholder="Mobile Number" pattern="[0-9]{10}" required>
-          </div>
-          <div class="input-group">
-            <i class="fas fa-lock icon"></i>
-            <input id="password" type="password" placeholder="Create Password" oninput="checkPasswordRules()">
-            <span class="toggle-password" onclick="togglePassword('password', this)">👁️</span>
-          </div>
-          <div class="input-group">
-            <i class="fas fa-lock icon"></i>
-            <input id="confirmPassword" type="password" placeholder="Confirm Password" oninput="checkConfirmPassword()">
-            <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">👁️</span>
-          </div>
-          <p class="password-hint">Password must be at least 8 characters, including uppercase, lowercase, number & symbol.</p>
+          <div class="input-group"><i class="fas fa-user icon"></i><input id="signupName" type="text" placeholder="Full Name" required></div>
+          <div class="input-group"><i class="fas fa-envelope icon"></i><input id="signupEmail" type="email" placeholder="Email Address" required></div>
+          <div class="input-group"><i class="fas fa-phone icon"></i><input id="signupPhone" type="tel" placeholder="Mobile Number" pattern="[0-9]{10}" required></div>
+          <div class="input-group"><i class="fas fa-lock icon"></i><input id="password" type="password" placeholder="Create Password" oninput="checkPasswordRules()"><span class="toggle-password" onclick="togglePassword('password', this)">👁️</span></div>
+          <div class="input-group"><i class="fas fa-lock icon"></i><input id="confirmPassword" type="password" placeholder="Confirm Password" oninput="checkConfirmPassword()"><span class="toggle-password" onclick="togglePassword('confirmPassword', this)">👁️</span></div>
+          <p id="password-rules" class="password-hint">Password must be at least 8 characters, including uppercase, lowercase, number & symbol.</p>
           <div id="password-rules" class="password-rules" aria-hidden="true">
             <p id="length" class="invalid">At least 8 characters</p>
             <p id="upper" class="invalid">Contains uppercase letter</p>
@@ -153,41 +277,27 @@
             <p id="number" class="invalid">Contains number</p>
             <p id="special" class="invalid">Contains special character (!@#...)</p>
           </div>
-          <div id="confirmMsg" class="password-rules invalid" aria-live="polite"></div>
-          <div class="checkbox-group">
-            <input id="terms" type="checkbox" required>
-            <label for="terms">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</label>
-          </div>
+          <div id="confirmMsg" class="password-rules invalid"></div>
+          <div class="checkbox-group"><input id="terms" type="checkbox" required><label for="terms">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</label></div>
           <button type="button" class="btn-submit" onclick="validateSignup()">Sign Up</button>
         </form>
 
-        <!-- FORGOT PASSWORD -->
-        <form id="forgot-form" class="auth-form" novalidate>
-          <div style="margin-bottom:12px;">
-            <strong>Forgot your password?</strong>
-            <p id="forgotText" style="margin:6px 0 0 0;color:var(--text-light);font-size:0.95rem">
-              Enter your email and we'll send a secure link to reset your password.
-            </p>
-          </div>
-
-          <div class="input-group">
-            <i class="fas fa-envelope icon"></i>
-            <input id="forgotEmail" type="email" placeholder="Enter your email" required>
-          </div>
-
+        <!-- Forgot Password Form -->
+        <form id="forgot-form" class="auth-form">
+          <strong>Forgot your password?</strong>
+          <p id="forgotText">Enter your email and we'll send a secure link to reset your password.</p>
+          <div class="input-group"><i class="fas fa-envelope icon"></i><input id="forgotEmail" type="email" placeholder="Enter your email" required></div>
           <div style="display:flex;gap:8px;margin-bottom:12px;align-items:center">
             <button type="button" class="btn-submit" onclick="sendPasswordReset()">Send Reset Link</button>
             <button type="button" class="btn-submit" style="background:#eee;color:#333" onclick="switchToSignin()">Back</button>
           </div>
-
           <div id="forgotResult" style="font-size:0.95rem;color:var(--text-dark);"></div>
         </form>
-
       </div>
     </div>
   </div>
 
-  <!-- Supabase -->
+  <!-- Your Supabase Script (same as before) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
     const SUPABASE_URL = 'https://qzriaykqdrhbtcgbpxpg.supabase.co';
