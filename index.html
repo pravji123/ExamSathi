@@ -342,10 +342,87 @@ if ('serviceWorker' in navigator) {
       </div>
   </div>
 
-  <div id="footer"></div><script src="load-header-footer.js"></script>
+  <div id="footer"></div>
+  <!-- 🔵 LOGIN / SIGNUP POPUP -->
+   <!-- ===== Popup Overlay ===== -->
+  <div id="popupOverlay" style="
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+    animation: fadeIn 0.3s ease;
+    ">
+
+    <!-- ===== Popup Container ===== -->
+    <div id="popupContainer" style="
+      width: 90%;
+      max-width: 900px;
+      height: 90vh;
+      max-height: 650px;
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      position: relative;
+      animation: slideUp 0.4s ease;
+      ">
+
+      <!-- ✖ Close Button -->
+      <button onclick='closePopup()' style="
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+      ">✖</button>
+
+      <!-- ===== Iframe (your register.html) ===== -->
+      <iframe src='register2.html' style="width: 100%; height: 100%; border: none; border-radius: 20px;"></iframe>
+    </div>
+  </div>
+  
+  <script src="load-header-footer.js"></script>
+  <!-- ===== Popup JS ===== -->
+  <script>
+    const overlay = document.getElementById("popupOverlay");
+
+    function openPopup() {
+      // overlay.style.display = "flex";
+      // overlay.style.animation = "fadeIn .4s ease";
+      document.getElementById("popupOverlay").style.display = "flex";
+      document.body.style.overflow = "hidden"; // Prevent background scroll
+    }
+
+    function closePopup() {
+      // overlay.style.animation = "fadeOut .4s ease";
+      setTimeout(() => { overlay.style.display = "none"; }, 400);
+      document.getElementById("popupOverlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    // Show automatically on first visit for 5 seconds
+    window.addEventListener("load", () => {
+      if (localStorage.getItem("popupShown")) return; // show only once
+      openPopup();
+      setTimeout(closePopup, 5000); // auto close after 5 sec
+      localStorage.setItem("popupShown", "true");
+    });
+  </script>
     
 </body>
 </html>
+
 
 
 
