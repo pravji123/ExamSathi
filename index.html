@@ -38,7 +38,65 @@
       color: #333;
 /*       line-height: 1.6; */
     }
+    /* Blinking Trust Line */
+    .trust {
+      text-align: center;
+      background: #e9f7fe;
+      color: #ff0303;
+      padding: 10px 0;
+      font-weight: bold;
+      font-size: 15px;
+      animation: blink 1s infinite;
+    }
 
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      /* background: linear-gradient(135deg, #0074cc, #00a8ff); */
+      color: #fff;
+      background-color: #e6f2ff;
+    }
+
+    .hero h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      font-weight: 700;
+      transition: opacity 0.5s ease;
+    }
+
+    .hero h2 {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 12px 28px;
+      background: #fff;
+      color: #0074cc;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .hero button:hover {
+      background: #f2f2f2;
+    }
+    
     header {
       text-align: center;
       padding: 30px 15px;
@@ -255,11 +313,18 @@ if ('serviceWorker' in navigator) {
 </head>
 <body>
   <div id="header"></div>
-    
-  <header>
+  <div class="trust">💪 5000+ Students ka Bharosa • Simple & Easy to Use • Learn Smarter with Testara</div>
+
+  <section class="hero">
+    <h1 id="quoteText">“Success doesn’t come to you — you go to it.”</h1>
+    <h2>All-In-One Practice Hub for SSC, Banking & Government Exams</h2>
+    <p>Practice Sets • PYQs • Current Affairs • Daily Tests</p>
+    <button onclick="window.location.href='mock.html'">Start Free Test</button>
+  </section>
+  <!-- <header>
       <h2>All-In-One Exams Practice Hub - Your Gateway to Success</h2>
       <p>Practice Sets | Online Tests | Free Samples</p>
-  </header>
+  </header> -->
 
   <div class="container">
       <!-- <div class="card" id="buy">
@@ -411,10 +476,32 @@ if ('serviceWorker' in navigator) {
       setTimeout(closePopup, 5000); // auto close after 5 sec
       localStorage.setItem("popupShown", "true");
     });
+
+    // 🔁 Rotating Motivational Quotes
+    const quotes = [
+      "“Success doesn’t come to you — you go to it.”",
+      "“Push yourself, because no one else is going to do it for you.”",
+      "“Don’t watch the clock; do what it does. Keep going.”",
+      "“Believe you can and you're halfway there.”",
+      "“Small steps every day lead to big results.”",
+      "“Your future is created by what you do today, not tomorrow.”",
+      "“Practice makes progress, not perfection.”"
+    ];
+    let index = 0;
+    const quoteEl = document.getElementById("quoteText");
+    setInterval(() => {
+      index = (index + 1) % quotes.length;
+      quoteEl.style.opacity = 0;
+      setTimeout(() => {
+        quoteEl.textContent = quotes[index];
+        quoteEl.style.opacity = 1;
+      }, 500);
+    }, 5000);
   </script>
     
 </body>
 </html>
+
 
 
 
