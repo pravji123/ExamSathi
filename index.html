@@ -222,6 +222,103 @@
       grid-row: 2;
     }
 
+    .testimonial-section {
+      padding: 70px 20px;
+      text-align: center;
+      background-color: #f8faff; /* हल्का बैकग्राउंड */
+    }
+
+    .testi-title {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 50px;
+      color: #002b5b;
+      letter-spacing: 1px;
+    }
+
+    /* स्लाइडर को बीच में और सीमित चौड़ाई में रखने के लिए */
+    .swiper {
+      width: 100%;
+      max-width: 1200px; /* बड़ी स्क्रीन पर बहुत चौड़ा नहीं होगा */
+      padding-bottom: 50px !important; /* डॉट्स के लिए जगह */
+      padding-top: 20px; /* ऊपर की शैडो कटने से बचाने के लिए */
+    }
+
+    .testimonial-card {
+      background: #ffffff;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08); /* सॉफ्ट शैडो */
+      transition: 0.3s ease;
+      border: 2px solid transparent;
+      text-align: center;
+      height: 100%; /* कार्ड्स की ऊंचाई बराबर रखने के लिए */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* होवर करने पर ग्लो इफेक्ट */
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      border-color: #0074ff;
+      box-shadow: 0px 15px 35px rgba(0, 116, 255, 0.15);
+    }
+
+    .testimonial-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #0074ff;
+      padding: 2px; /* इमेज और बॉर्डर के बीच गैप */
+      background: white;
+    }
+
+    .testimonial-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-style: italic;
+      min-height: 80px; /* ताकि छोटे टेक्स्ट वाले कार्ड भी बराबर दिखें */
+    }
+
+    /* नाम की स्टाइल */
+    .testimonial-card h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #002b5b;
+    }
+
+    /* पद/एग्जाम का नाम (span) */
+    .testimonial-card span {
+      display: block; /* इसे अगली लाइन में लाने के लिए */
+      font-size: 13px;
+      color: #0074ff;
+      font-weight: 500;
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* डॉट्स का रंग */
+    .swiper-pagination-bullet {
+      background: #0074ff !important;
+      opacity: 0.5;
+      width: 10px;
+      height: 10px;
+    }
+    
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      width: 25px; /* एक्टिव डॉट थोड़ा लंबा */
+      border-radius: 5px;
+      transition: width 0.3s;
+    }
+
     @media (max-width: 768px) {
       .features-container {
         grid-template-columns: 1fr;
@@ -404,6 +501,71 @@ if ('serviceWorker' in navigator) {
       <div class="feature-text">Here expert counsellor always ready to guide candidates.</div>
       </div>
   </div>
+  <section class="testimonial-section">
+  <h2 class="testi-title">What Our Students Say / सफलता की कहानियाँ</h2>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <img src="https://i.pravatar.cc/150?img=1" alt="">
+          <p>“Testara के mock tests बिलकुल real exam जैसे हैं। इससे मेरी accuracy और speed दोनों improve हुई।”</p>
+          <h3>- Rohan Sharma</h3><span>SSC Aspirant</span>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <img src="https://i.pravatar.cc/150?img=5" alt="">
+          <p>“Analysis report और detailed solutions ने मेरी preparation को next level पर पहुँचा दिया।”</p>
+          <h3>- Priya Verma</h3><span>Banking Student</span>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <img src="https://i.pravatar.cc/150?img=3" alt="">
+          <p>“Time tracking और section-wise performance मेरे लिए बहुत helpful रहा।”</p>
+          <h3>- Abhishek Kumar</h3> <span>Railway Aspirant</span>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <img src="https://i.pravatar.cc/150?img=10" alt="">
+          <p>“Best platform for government exam aspirants. Highly recommended!”</p>
+          <h3>- Anjali Singh</h3><span>CHSL Qualified</span>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <img src="https://i.pravatar.cc/150?img=20" alt="">
+          <p>“Updated questions, new pattern mocks, and clean UI make Testara the best.”</p>
+          <h3>- Sameer Khan</h3> <span>Railway Aspirant</span>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <img src="https://i.pravatar.cc/150?img=15" alt="">
+          <p>“Regular practice से confidence आया। Testara की वजह से selection possible लगा।”</p>
+          <h3>- Neha Patel</h3><span>Railway NTPC Qualified</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
   <div id="footer"></div>
   <!-- 🔵 LOGIN / SIGNUP POPUP -->
@@ -502,10 +664,44 @@ if ('serviceWorker' in navigator) {
         quoteEl.style.opacity = 1;
       }, 500);
     }, 5000);
+
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 25, // कार्ड्स के बीच का गैप थोड़ा बढ़ाया
+      loop: true,
+      grabCursor: true, // माउस ले जाने पर हाथ का निशान बनेगा
+      
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true, // माउस ले जाने पर स्लाइडर रुक जाएगा (ताकि पढ़ सकें)
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
   </script>
     
 </body>
 </html>
+
 
 
 
