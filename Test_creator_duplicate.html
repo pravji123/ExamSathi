@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Creator – Duplicate Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; }
+        header { background:#1a73e8; color:white; padding:15px; text-align:center; font-size:20px; }
+        .container { display:flex; flex-wrap:wrap; padding:10px; gap:10px; }
+        .left, .right { background:white; padding:15px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1); }
+        .left { flex:1 1 300px; min-width:280px; }
+        .right { flex:1 1 300px; min-width:280px; max-height:80vh; overflow-y:auto; }
+        input, textarea, select { width:100%; padding:8px; margin-bottom:8px; border-radius:4px; border:1px solid #ccc; }
+        button { padding:8px 12px; border:none; border-radius:4px; background:#1a73e8; color:white; cursor:pointer; margin-right:5px; }
+        button:disabled { background:#ccc; cursor:not-allowed; }
+        .count { font-weight:bold; margin-bottom:10px; }
+        .q-card { border:1px solid #ddd; border-radius:6px; padding:10px; margin-bottom:10px; background:#fafafa; }
+        .q-card b { color:#333; }
+        .q-card i { color:#555; font-size:13px; }
+    </style>
+</head>
+<body>
+
+<header>Test Creator – Duplicate Detection</header>
+
+<div class="container">
+    <div class="left">
+        <div class="count">
+            Questions Added: <span id="count">0</span> / <span id="maxCount">100</span>
+        </div>
+
+        <label>Choose Question Set Size:</label>
+        <select id="setSize" onchange="updateMax()">
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100" selected>100</option>
+        </select><br>
+
+        <input type="text" id="title" placeholder="Test Title">
+
+        <textarea id="question" rows="3" placeholder="Question"></textarea>
+
+        <input type="text" id="a" placeholder="Option A">
+        <input type="text" id="b" placeholder="Option B">
+        <input type="text" id="c" placeholder="Option C">
+        <input type="text" id="d" placeholder="Option D">
+
+        <select id="answer">
+            <option value="">Right Answer</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+        </select>
+
+        <textarea id="explanation" rows="2" placeholder="Explanation"></textarea>
+
+        <button onclick="addQuestion()">Add Question</button>
+        <hr>
+        <button onclick="downloadJSON()" id="jsonBtn" disabled>Download JSON</button>
+        <button onclick="downloadPDF()" id="pdfBtn" disabled>Download PDF</button>
+    </div>
+
+    <div class="right">
+        <h3>Added Questions Preview</h3>
+        <div id="preview"></div>
+    </div>
+</div>
+
+<script>
+let questions = [];
+let maxQuestions = parseInt(document.getElementById('setSize').value);
+
+function updateMax() {
+    maxQuestions = parseInt(document.getElementById('setSize').value);
+    document.getElementById("maxCount").innerText = maxQuestions;
+    checkDownloadEnable();
+}
+
+// Levenshtein distance for fuzzy duplicate detection
+function levenshtein(a, b) {
+    const dp = Array(a.length + 1).fill().map(() => Array(b.length + 1).fill(0));
+    for (let i=0;i<=a.length;i++) dp[i][0] = i;
+    for (let j=0;j<=b.length;j++) dp[0][j] = j;
+    for (let i=1;i<=a.length;i++){
+        for (let j=1;j<=b.length;j++){
+            dp[i][j] = a[i-1] === b[j-1] ? dp[i-1][j-1] :
+                1 + Math.min(dp[i-1][j-1], dp[i-1][j], dp[i][j-1]);
+        }
+    }
+    return dp[a.length][b.length];
+}
+
+// Check duplicate (exact + fuzzy)
+function isDuplicate(newQuestion) {
+    const text = newQuestion.trim().toLowerCase();
+    return questions.some(q => {
+        const existing = q.question.trim().toLowerCase();
+        if (existing === text) return true; // exact match
+        if (levenshtein(existing, text) <= 10) return true; // fuzzy match threshold
+        return false;
+    });
+}
+
+function addQuestion() {
+    const newQText = question.value;
+    if (!newQText || !answer.value || !explanation.value) {
+        alert("Fill all fields");
+        return;
+    }
+
+    if (questions.length >= maxQuestions) {
+        alert(`${maxQuestions} questions already added`);
+        return;
+    }
+
+    if (isDuplicate(newQText)) {
+        alert("Similar question already exists! Check preview.");
+        return;
+    }
+
+    const opts = { A: a.value, B: b.value, C: c.value, D: d.value };
+    const q = {
+        question: newQText,
+        options: opts,
+        correct_answer: answer.value,
+        correct_text: opts[answer.value],
+        explanation: explanation.value
+    };
+
+    questions.push(q);
+    updatePreview();
+    document.getElementById("count").innerText = questions.length;
+
+    question.value = a.value = b.value = c.value = d.value = explanation.value = "";
+    answer.value = "";
+
+    checkDownloadEnable();
+}
+
+function updatePreview() {
+    preview.innerHTML = "";
+    questions.forEach((q,i)=>{
+        preview.innerHTML += `
+            <div class="q-card">
+                <b>${i+1}. ${q.question}</b><br>
+                A. ${q.options.A}<br>
+                B. ${q.options.B}<br>
+                C. ${q.options.C}<br>
+                D. ${q.options.D}<br>
+                <b>Answer:</b> ${q.correct_answer} – ${q.correct_text}<br>
+                <i>Explanation:</i> ${q.explanation}
+            </div>
+        `;
+    });
+}
+
+function checkDownloadEnable() {
+    const ready = questions.length === maxQuestions;
+    jsonBtn.disabled = !ready;
+    pdfBtn.disabled = !ready;
+    if (ready) alert(`${maxQuestions} Questions completed. Download enabled.`);
+}
+
+function downloadJSON() {
+    const data = { test_title: title.value, total_questions: questions.length, questions: questions };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `test_${maxQuestions}_questions.json`;
+    link.click();
+}
+
+function downloadPDF() {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF();
+    let y = 10;
+
+    pdf.text(title.value || "Test Paper", 10, y); y += 10;
+
+    questions.forEach((q,i)=>{
+        if (y>270){ pdf.addPage(); y=10; }
+        pdf.text(`${i+1}. ${q.question}`, 10, y); y+=6;
+        for (let k in q.options){ pdf.text(`${k}. ${q.options[k]}`, 12, y); y+=5; }
+        pdf.text(`Answer: ${q.correct_answer} – ${q.correct_text}`, 12, y); y+=5;
+        pdf.text(`Explanation: ${q.explanation}`, 12, y); y+=8;
+    });
+
+    pdf.save(`test_${maxQuestions}_questions.pdf`);
+}
+</script>
+
+</body>
+</html>
