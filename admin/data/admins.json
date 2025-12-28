@@ -1,0 +1,39 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "name": "Super Admin",
+      "email": "super@testara.com",
+      "password": "Praveen",
+      "role": "super_admin"
+    },
+    {
+      "id": 2,
+      "name": "Utkarsh Verma",
+      "email": "director@testara.com",
+      "password": "123456",
+      "role": "director"
+    },
+    {
+      "id": 3,
+      "name": "Teacher Praveen",
+      "email": "teacher@testara.com",
+      "password": "123456",
+      "role": "teacher"
+    },
+    {
+      "id": 4,
+      "name": "Manager One",
+      "email": "manager@testara.com",
+      "password": "123456",
+      "role": "manager"
+    },
+    {
+      "id": 5,
+      "name": "Supervisor",
+      "email": "supervisor@testara.com",
+      "password": "123456",
+      "role": "supervisor"
+    }
+  ]
+}
