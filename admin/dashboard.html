@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
+body{background:#f1f5f9}
+
+/* Layout */
+.app{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{
+  width:240px;
+  background:#0f172a;
+  color:#fff;
+  padding:20px;
+}
+.sidebar h2{
+  margin-bottom:20px;
+  font-size:22px;
+  text-align:center;
+}
+.sidebar a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  margin-bottom:6px;
+  color:#cbd5f5;
+  text-decoration:none;
+  border-radius:6px;
+  transition:.3s;
+}
+.sidebar a:hover,
+.sidebar a.active{
+  background:#2563eb;
+  color:#fff;
+}
+.sidebar i{width:18px}
+
+/* Content */
+.content{flex:1;padding:20px}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+.user{
+  font-weight:600;
+  color:#0f172a;
+}
+
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  margin-bottom:25px;
+}
+.card{
+  background:#fff;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+}
+.card h3{font-size:14px;color:#64748b}
+.card p{font-size:26px;font-weight:700;color:#0f172a}
+
+/* Section */
+.section{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+}
+.section h3{
+  margin-bottom:15px;
+  font-size:18px;
+}
+.activity li{
+  padding:10px 0;
+  border-bottom:1px solid #e2e8f0;
+  color:#334155;
+}
+
+/* Logout */
+.logout{
+  margin-top:20px;
+  background:#ef4444;
+  border:none;
+  width:100%;
+  padding:10px;
+  color:#fff;
+  border-radius:6px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<script src="js/guard.js"></script>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Testara</h2>
+    <nav id="sidebar"></nav>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <h2>Dashboard</h2>
+      <div class="user" id="adminName"></div>
+    </div>
+
+    <!-- STATS -->
+    <div class="cards">
+      <div class="card">
+        <h3>Total Students</h3>
+        <p>1,245</p>
+      </div>
+      <div class="card">
+        <h3>Active Tests</h3>
+        <p>32</p>
+      </div>
+      <div class="card">
+        <h3>Today's Attempts</h3>
+        <p>486</p>
+      </div>
+      <div class="card">
+        <h3>Monthly Revenue</h3>
+        <p>₹1.8L</p>
+      </div>
+    </div>
+
+    <!-- ACTIVITY -->
+    <div class="section">
+      <h3>Recent Activity</h3>
+      <ul class="activity">
+        <li>👨‍🎓 New student registered</li>
+        <li>📝 SSC Mock Test submitted</li>
+        <li>💳 Payment received ₹499</li>
+        <li>📊 Result generated</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<script>
+/* Show admin name + role */
+document.getElementById("adminName").innerText =
+  user.name + " (" + user.role.replace("_"," ") + ")";
+
+/* Active menu highlight */
+document.querySelectorAll("#sidebar a").forEach(a=>{
+  if(a.href.includes("dashboard.html")){
+    a.classList.add("active");
+  }
+});
+
+/* Logout */
+function logout(){
+  localStorage.removeItem("adminUser");
+  location.href="login.html";
+}
+</script>
+
+</body>
+</html>

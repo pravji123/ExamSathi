@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{display:flex;min-height:100vh;background:#f4f6f8}
+
+/* SIDEBAR */
+.sidebar{
+  width:250px;
+  background:#2c3e50;
+  color:#fff;
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  transition:.3s;
+}
+.sidebar h2{
+  text-align:center;
+  padding:20px 0;
+  background:#1a252f;
+}
+.sidebar a{
+  padding:15px 20px;
+  color:#fff;
+  text-decoration:none;
+  display:block;
+}
+.sidebar a:hover{background:#34495e}
+
+/* CONTENT */
+.content{flex:1;display:flex;flex-direction:column}
+.topbar{
+  background:#fff;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #ddd;
+}
+.logout-btn{
+  padding:8px 15px;
+  background:#e74c3c;
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .sidebar{width:60px}
+  .sidebar h2{display:none}
+  .sidebar a span{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>Admin</h2>
+  <nav id="sidebarMenu"></nav>
+  <a href="#" id="logout">🚪 <span>Logout</span></a>
+</div>
+
+<div class="content">
+  <div class="topbar">
+    <div class="user-info" id="user-info"></div>
+    <button class="logout-btn" id="logoutBtn">Logout</button>
+  </div>
+
+  <div style="padding:20px">
+    <h1>Welcome to Dashboard</h1>
+    <p>Select an option from the sidebar.</p>
+  </div>
+</div>
+
+<script>
+/* AUTH GUARD */
+const user = JSON.parse(localStorage.getItem("adminUser"));
+if(!user){
+  location.href="login.html";
+}
+
+/* USER INFO */
+document.getElementById("user-info").innerText =
+  user.name + " (" + user.role.replace("_"," ") + ")";
+
+/* ROLE BASED SIDEBAR */
+const MENUS = {
+  super_admin:[
+    ["🏠 Dashboard","index.html"],
+    ["👥 Admins","admins.html"],
+    ["📚 Courses","courses.html"],
+    ["📝 Tests","tests.html"],
+    ["💳 Payments","payments.html"]
+  ],
+  admin:[
+    ["🏠 Dashboard","index.html"],
+    ["📚 Courses","courses.html"],
+    ["📝 Tests","tests.html"]
+  ],
+  teacher:[
+    ["🏠 Dashboard","index.html"],
+    ["📝 My Tests","tests.html"],
+    ["📝 Notes","notes.html"]
+  ]
+};
+
+const menu = document.getElementById("sidebarMenu");
+MENUS[user.role].forEach(item=>{
+  const a = document.createElement("a");
+  a.href = item[1];
+  a.innerHTML = item[0];
+  menu.appendChild(a);
+});
+
+/* LOGOUT */
+function logout(){
+  localStorage.removeItem("adminUser");
+  location.href="login.html";
+}
+document.getElementById("logout").onclick = logout;
+document.getElementById("logoutBtn").onclick = logout;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Questions | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:Arial;background:#f1f5f9}
+.app{display:flex;min-height:100vh}
+.sidebar{width:240px;background:#0f172a;color:#fff;padding:20px}
+.content{flex:1;padding:20px}
+
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+
+.table{
+  width:100%;
+  background:#fff;
+  border-collapse:collapse;
+  box-shadow:0 5px 12px rgba(0,0,0,.05)
+}
+th,td{padding:12px;border-bottom:1px solid #e2e8f0;vertical-align:top}
+th{background:#f8fafc}
+
+.badge{padding:4px 8px;border-radius:6px;font-size:12px}
+.pending{background:#fde68a}
+.approved{background:#86efac}
+.rejected{background:#fecaca}
+
+.btn{
+  padding:6px 10px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:13px;
+}
+.approve{background:#16a34a;color:#fff}
+.reject{background:#ef4444;color:#fff}
+.gray{background:#64748b;color:#fff}
+
+.comment{
+  font-size:12px;
+  color:#b91c1c;
+  margin-top:4px;
+}
+</style>
+</head>
+
+<body>
+
+<script src="js/guard.js"></script>
+
+<div class="app">
+
+  <div class="sidebar">
+    <h3>Testara</h3>
+    <nav id="sidebar"></nav>
+  </div>
+
+  <div class="content">
+    <div class="top">
+      <h2>Questions Approval</h2>
+      <div id="adminName"></div>
+    </div>
+
+    <table class="table" id="qTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Question</th>
+          <th>Subject</th>
+          <th>Difficulty</th>
+          <th>Created By</th>
+          <th>Status</th>
+          <th>Action / Comment</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<script>
+/* Allowed roles */
+if(!["teacher","director","super_admin"].includes(user.role)){
+  alert("Access denied");
+  location.href="dashboard.html";
+}
+
+document.getElementById("adminName").innerText =
+  user.name+" ("+user.role+")";
+
+/* Load questions */
+fetch("data/questions.json")
+.then(res=>res.json())
+.then(data=>{
+  const tbody=document.querySelector("#qTable tbody");
+
+  data.questions.forEach(q=>{
+    // Teacher sirf apne questions dekhe
+    if(user.role==="teacher" && q.created_by !== user.id) return;
+
+    let action = `<span class="comment">${q.review_comment || ""}</span>`;
+
+    // Admin actions
+    if(["admin","super_admin"].includes(user.role) && q.status==="pending"){
+      action = `
+        <button class="btn approve">Approve</button>
+        <button class="btn reject">Reject</button>
+      `;
+    }
+
+    tbody.innerHTML += `
+      <tr>
+        <td>${q.id}</td>
+        <td>
+          <b>EN:</b> ${q.question.en}<br>
+          <b>HI:</b> ${q.question.hi}
+        </td>
+        <td>${q.subject}</td>
+        <td>${q.difficulty}</td>
+        <td>${q.created_by_name}</td>
+        <td><span class="badge ${q.status}">${q.status}</span></td>
+        <td>${action}</td>
+      </tr>
+    `;
+  });
+});
+</script>
+
+</body>
+</html>

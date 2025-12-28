@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admins & Employees | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
+body{background:#f1f5f9}
+.app{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{
+  width:240px;
+  background:#0f172a;
+  color:#fff;
+  padding:20px;
+}
+.sidebar h2{text-align:center;margin-bottom:20px}
+.sidebar a{
+  display:flex;
+  gap:10px;
+  padding:10px;
+  color:#cbd5f5;
+  text-decoration:none;
+  border-radius:6px;
+}
+.sidebar a:hover,
+.sidebar a.active{background:#2563eb;color:#fff}
+
+/* Content */
+.content{flex:1;padding:20px}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+.user{font-weight:600}
+
+/* Buttons */
+.btn{
+  padding:8px 14px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:13px;
+}
+.primary{background:#2563eb;color:#fff}
+.success{background:#16a34a;color:#fff}
+.danger{background:#ef4444;color:#fff}
+.gray{background:#64748b;color:#fff}
+
+/* Table */
+.table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+}
+.table th,.table td{
+  padding:12px;
+  border-bottom:1px solid #e2e8f0;
+}
+.table th{background:#f8fafc}
+
+/* Badges */
+.badge{
+  padding:4px 8px;
+  font-size:12px;
+  border-radius:6px;
+}
+.active{background:#86efac}
+.inactive{background:#fecaca}
+
+/* Modal */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+.modal-content{
+  background:#fff;
+  padding:20px;
+  width:420px;
+  border-radius:10px;
+}
+.modal-content h3{margin-bottom:15px}
+.modal-content input,select{
+  width:100%;
+  padding:8px;
+  margin-bottom:10px;
+}
+.permissions{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-bottom:10px;
+}
+.permissions label{
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<script src="js/guard.js"></script>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Testara</h2>
+    <nav id="sidebar"></nav>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- TOP -->
+    <div class="topbar">
+      <h2>Admins / Employees</h2>
+      <div class="user" id="adminName"></div>
+    </div>
+
+    <!-- CREATE ADMIN -->
+    <button class="btn primary" onclick="openModal()">
+      <i class="fa fa-user-plus"></i> Create Admin
+    </button>
+
+    <br><br>
+
+    <!-- ADMIN LIST -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Last Login</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Super Admin</td>
+          <td>Super Admin</td>
+          <td>Today, 10:45 AM</td>
+          <td><span class="badge active">Active</span></td>
+          <td>
+            <button class="btn gray">View</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Admin User</td>
+          <td>Admin</td>
+          <td>Yesterday</td>
+          <td><span class="badge active">Active</span></td>
+          <td>
+            <button class="btn gray">View</button>
+            <button class="btn danger">Deactivate</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Teacher One</td>
+          <td>Teacher</td>
+          <td>2 days ago</td>
+          <td><span class="badge inactive">Inactive</span></td>
+          <td>
+            <button class="btn gray">View</button>
+            <button class="btn success">Activate</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <!-- ROLE PERMISSION MATRIX -->
+    <div class="modal-content" style="max-width:100%">
+      <h3>Role Permissions Matrix</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Tests</th>
+            <th>Students</th>
+            <th>Payments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Super Admin</td>
+            <td>Full</td>
+            <td>Full</td>
+            <td>Full</td>
+          </tr>
+          <tr>
+            <td>Admin</td>
+            <td>Create / Edit</td>
+            <td>View / Manage</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Teacher</td>
+            <td>Create / Edit</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Manager</td>
+            <td>No</td>
+            <td>No</td>
+            <td>View</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- CREATE ADMIN MODAL -->
+<div class="modal" id="adminModal">
+  <div class="modal-content">
+    <h3>Create Admin</h3>
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <select>
+      <option>Admin</option>
+      <option>Teacher</option>
+      <option>Manager</option>
+    </select>
+
+    <div class="permissions">
+      <label><input type="checkbox"> Tests</label>
+      <label><input type="checkbox"> Students</label>
+      <label><input type="checkbox"> Payments</label>
+    </div>
+
+    <button class="btn success">Create</button>
+    <button class="btn danger" onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<script>
+/* Super Admin only */
+if(user.role !== "super_admin" && user.role !== "director"){
+  alert("Access Denied");
+  location.href="dashboard.html";
+}
+
+/* Admin info */
+document.getElementById("adminName").innerText =
+  user.name + " (" + user.role.replace("_"," ") + ")";
+
+/* Active menu */
+document.querySelectorAll("#sidebar a").forEach(a=>{
+  if(a.href.includes("admins.html")) a.classList.add("active");
+});
+
+/* Modal */
+function openModal(){
+  document.getElementById("adminModal").style.display="flex";
+}
+function closeModal(){
+  document.getElementById("adminModal").style.display="none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payments | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
+body{background:#f1f5f9}
+.app{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{
+  width:240px;
+  background:#0f172a;
+  color:#fff;
+  padding:20px;
+}
+.sidebar h2{text-align:center;margin-bottom:20px}
+.sidebar a{
+  display:flex;
+  gap:10px;
+  padding:10px;
+  color:#cbd5f5;
+  text-decoration:none;
+  border-radius:6px;
+}
+.sidebar a:hover,
+.sidebar a.active{background:#2563eb;color:#fff}
+
+/* Content */
+.content{flex:1;padding:20px}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+.user{font-weight:600}
+
+/* Summary Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+  margin-bottom:20px;
+}
+.card{
+  background:#fff;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+}
+.card h3{font-size:14px;color:#64748b}
+.card p{font-size:26px;font-weight:700}
+
+/* Filters */
+.filters{
+  display:flex;
+  gap:10px;
+  margin-bottom:15px;
+}
+.filters input,
+.filters select{
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #cbd5f5;
+}
+
+/* Table */
+.table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+}
+.table th,.table td{
+  padding:12px;
+  border-bottom:1px solid #e2e8f0;
+  text-align:left;
+}
+.table th{background:#f8fafc}
+
+/* Status */
+.badge{
+  padding:4px 8px;
+  font-size:12px;
+  border-radius:6px;
+}
+.success{background:#86efac}
+.failed{background:#fecaca}
+.pending{background:#fde68a}
+
+/* Buttons */
+.btn{
+  padding:7px 12px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:13px;
+}
+.export{background:#2563eb;color:#fff}
+</style>
+</head>
+
+<body>
+
+<script src="js/guard.js"></script>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Testara</h2>
+    <nav id="sidebar"></nav>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- TOP -->
+    <div class="topbar">
+      <h2>Payments</h2>
+      <div class="user" id="adminName"></div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="cards">
+      <div class="card">
+        <h3>Today Revenue</h3>
+        <p>₹450</p>
+      </div>
+      <div class="card">
+        <h3>Monthly Revenue</h3>
+        <p>₹5,300</p>
+      </div>
+      <div class="card">
+        <h3>Total Revenue</h3>
+        <p>₹40,900</p>
+      </div>
+      <div class="card">
+        <h3>Failed Transactions</h3>
+        <p>23</p>
+      </div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="filters">
+      <input type="date">
+      <input type="date">
+      <select>
+        <option>All Modes</option>
+        <option>UPI</option>
+        <option>Card</option>
+        <option>Net Banking</option>
+      </select>
+      <button class="btn export">Export CSV</button>
+      <button class="btn export">Export Excel</button>
+    </div>
+
+    <!-- PAYMENT TABLE -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Amount</th>
+          <th>Plan</th>
+          <th>Mode</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rahul Sharma</td>
+          <td>₹499</td>
+          <td>SSC Premium</td>
+          <td>UPI</td>
+          <td><span class="badge success">Success</span></td>
+          <td>28 Aug 2025</td>
+        </tr>
+        <tr>
+          <td>Anjali Verma</td>
+          <td>₹299</td>
+          <td>Banking Basic</td>
+          <td>Card</td>
+          <td><span class="badge failed">Failed</span></td>
+          <td>27 Aug 2025</td>
+        </tr>
+        <tr>
+          <td>Amit Kumar</td>
+          <td>₹799</td>
+          <td>Railways Pro</td>
+          <td>Net Banking</td>
+          <td><span class="badge pending">Pending</span></td>
+          <td>27 Aug 2025</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<script>
+/* Role restriction */
+if(user.role !== "super_admin" && user.role !== "manager" && user.role !== "director"){
+  alert("Access Denied");
+  location.href="dashboard.html";
+}
+
+/* Admin info */
+document.getElementById("adminName").innerText =
+  user.name + " (" + user.role.replace("_"," ") + ")";
+
+/* Active menu */
+document.querySelectorAll("#sidebar a").forEach(a=>{
+  if(a.href.includes("payments.html")) a.classList.add("active");
+});
+</script>
+
+</body>
+</html>

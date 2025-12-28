@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Work Submissions | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:Arial;background:#f1f5f9}
+.app{display:flex;min-height:100vh}
+.sidebar{width:240px;background:#0f172a;color:#fff;padding:20px}
+.content{flex:1;padding:20px}
+
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+
+.table{
+  width:100%;
+  background:#fff;
+  border-collapse:collapse;
+  box-shadow:0 5px 12px rgba(0,0,0,.05)
+}
+th,td{padding:12px;border-bottom:1px solid #e2e8f0}
+th{background:#f8fafc}
+
+.badge{padding:4px 8px;border-radius:6px;font-size:12px}
+.pending{background:#fde68a}
+.approved{background:#86efac}
+.rejected{background:#fecaca}
+
+.btn{
+  padding:6px 10px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:13px;
+}
+.view{background:#2563eb;color:#fff}
+.approve{background:#16a34a;color:#fff}
+.reject{background:#ef4444;color:#fff}
+</style>
+</head>
+
+<body>
+
+<script src="js/guard.js"></script>
+
+<div class="app">
+  <div class="sidebar">
+    <h3>Testara</h3>
+    <nav id="sidebar"></nav>
+  </div>
+
+  <div class="content">
+    <div class="top">
+      <h2>Work Submissions</h2>
+      <div id="adminName"></div>
+    </div>
+
+    <table class="table" id="subTable">
+      <thead>
+        <tr>
+          <th>Submission ID</th>
+          <th>Contributor</th>
+          <th>Type</th>
+          <th>Title</th>
+          <th>Files</th>
+          <th>Status</th>
+          <th>Submitted On</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<script>
+/* Access control */
+if(!["super_admin","director"].includes(user.role)){
+  alert("Access Denied");
+  location.href="dashboard.html";
+}
+
+document.getElementById("adminName").innerText =
+  user.name+" ("+user.role+")";
+
+/* Load submissions */
+fetch("data/work_submissions.json")
+.then(res=>res.json())
+.then(data=>{
+  const tbody=document.querySelector("#subTable tbody");
+
+  data.submissions.forEach(s=>{
+    const files = Object.entries(s.files)
+      .map(([k,v])=>`<a href="uploads/${v}" target="_blank">${k.toUpperCase()}</a>`)
+      .join(" | ");
+
+    let actions = `<button class="btn view">View</button>`;
+    if(s.status==="pending"){
+      actions += `
+        <button class="btn approve">Approve</button>
+        <button class="btn reject">Reject</button>
+      `;
+    }
+
+    tbody.innerHTML += `
+      <tr>
+        <td>${s.submission_id}</td>
+        <td>${s.contributor_name}<br><small>${s.contributor_id}</small></td>
+        <td>${s.type}</td>
+        <td>${s.title}</td>
+        <td>${files}</td>
+        <td><span class="badge ${s.status}">${s.status}</span></td>
+        <td>${s.submitted_on}</td>
+        <td>${actions}</td>
+      </tr>
+    `;
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reports | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
+body{background:#f1f5f9}
+.app{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{
+  width:240px;
+  background:#0f172a;
+  color:#fff;
+  padding:20px;
+}
+.sidebar h2{text-align:center;margin-bottom:20px}
+.sidebar a{
+  display:flex;
+  gap:10px;
+  padding:10px;
+  color:#cbd5f5;
+  text-decoration:none;
+  border-radius:6px;
+}
+.sidebar a:hover,
+.sidebar a.active{background:#2563eb;color:#fff}
+
+/* Content */
+.content{flex:1;padding:20px}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+.user{font-weight:600}
+
+/* Filters */
+.filters{
+  background:#fff;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:12px;
+  margin-bottom:20px;
+}
+.filters select,
+.filters input{
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #cbd5f5;
+}
+
+/* Report Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+  margin-bottom:20px;
+}
+.card{
+  background:#fff;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+}
+.card h3{font-size:16px;margin-bottom:10px}
+.card p{font-size:14px;color:#475569}
+
+/* Table */
+.table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+}
+.table th,.table td{
+  padding:12px;
+  border-bottom:1px solid #e2e8f0;
+  text-align:left;
+}
+.table th{background:#f8fafc}
+
+/* Buttons */
+.btn{
+  padding:8px 14px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:13px;
+}
+.generate{background:#2563eb;color:#fff}
+.export{background:#16a34a;color:#fff}
+</style>
+</head>
+
+<body>
+
+<script src="js/guard.js"></script>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Testara</h2>
+    <nav id="sidebar"></nav>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- TOP -->
+    <div class="topbar">
+      <h2>Reports & Insights</h2>
+      <div class="user" id="adminName"></div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="filters">
+      <select>
+        <option>Report Type</option>
+        <option>Student Performance</option>
+        <option>Test Popularity</option>
+        <option>Revenue</option>
+        <option>Teacher Productivity</option>
+      </select>
+
+      <select>
+        <option>Exam Type</option>
+        <option>SSC</option>
+        <option>Banking</option>
+        <option>Railways</option>
+      </select>
+
+      <select>
+        <option>Batch</option>
+        <option>Batch A</option>
+        <option>Batch B</option>
+        <option>Batch C</option>
+      </select>
+
+      <input type="date">
+      <input type="date">
+
+      <button class="btn generate">Generate Report</button>
+      <button class="btn export">Export Excel</button>
+    </div>
+
+    <!-- REPORT SUMMARY -->
+    <div class="cards">
+      <div class="card">
+        <h3>Top Performing Students</h3>
+        <p>Avg Score: 78%</p>
+        <p>Consistency: High</p>
+      </div>
+
+      <div class="card">
+        <h3>Most Popular Test</h3>
+        <p>SSC Tier-1 Mock 12</p>
+        <p>Attempts: 1,840</p>
+      </div>
+
+      <div class="card">
+        <h3>Revenue Insight</h3>
+        <p>Growth: +18%</p>
+        <p>Top Plan: SSC Premium</p>
+      </div>
+
+      <div class="card">
+        <h3>Teacher Productivity</h3>
+        <p>Tests Created: 124</p>
+        <p>Approval Rate: 96%</p>
+      </div>
+    </div>
+
+    <!-- DATA TABLE -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Value</th>
+          <th>Insight</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Avg Student Accuracy</td>
+          <td>72%</td>
+          <td>Needs improvement in GA section</td>
+        </tr>
+        <tr>
+          <td>Test Completion Rate</td>
+          <td>64%</td>
+          <td>Time pressure in Quant</td>
+        </tr>
+        <tr>
+          <td>Revenue Conversion</td>
+          <td>9.4%</td>
+          <td>Free → Paid funnel strong</td>
+        </tr>
+        <tr>
+          <td>Teacher Efficiency</td>
+          <td>88%</td>
+          <td>High quality question banks</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<script>
+/* Role based access */
+if(!["super_admin","director","manager"].includes(user.role)){
+  alert("Access Denied");
+  location.href="dashboard.html";
+}
+
+/* Admin info */
+document.getElementById("adminName").innerText =
+  user.name + " (" + user.role.replace("_"," ") + ")";
+
+/* Active menu */
+document.querySelectorAll("#sidebar a").forEach(a=>{
+  if(a.href.includes("reports.html")) a.classList.add("active");
+});
+</script>
+
+</body>
+</html>

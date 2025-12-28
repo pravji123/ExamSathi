@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Issue Certificate | Testara</title>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{margin:0;font-family:Arial;background:#f1f5f9}
+.app{display:flex;min-height:100vh}
+.sidebar{width:240px;background:#0f172a;color:#fff;padding:20px}
+.content{flex:1;padding:20px}
+
+.card{
+  background:#fff;
+  padding:20px;
+  max-width:500px;
+  border-radius:10px;
+  box-shadow:0 5px 12px rgba(0,0,0,.08)
+}
+label{display:block;margin:10px 0 5px}
+input,select{width:100%;padding:8px}
+button{
+  margin-top:15px;
+  padding:10px;
+  width:100%;
+  border:none;
+  background:#16a34a;
+  color:#fff;
+  border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+<script src="js/guard.js"></script>
+
+<div class="app">
+  <div class="sidebar">
+    <h3>Testara</h3>
+    <nav id="sidebar"></nav>
+  </div>
+
+  <div class="content">
+    <h2>Issue Experience Certificate</h2><br>
+
+    <div class="card">
+      <label>Contributor ID</label>
+      <input id="cid" placeholder="INT-2025-001">
+
+      <label>Certificate ID</label>
+      <input id="certId" placeholder="TESTARA-INT-001">
+
+      <label>Role</label>
+      <input id="role" placeholder="Question Creator Intern">
+
+      <label>Duration</label>
+      <input id="duration" placeholder="Jan 2025 – Apr 2025">
+
+      <button onclick="issue()">Issue Certificate</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+<script>
+if(user.role!=="super_admin" && user.role !== "director"){
+  alert("Access denied");
+  location.href="dashboard.html";
+}
+
+function issue(){
+  alert("Certificate issued (JSON update in backend)");
+}
+</script>
+</body>
+</html>

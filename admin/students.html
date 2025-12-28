@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Students | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
+body{background:#f1f5f9}
+.app{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{
+  width:240px;
+  background:#0f172a;
+  color:#fff;
+  padding:20px;
+}
+.sidebar h2{text-align:center;margin-bottom:20px}
+.sidebar a{
+  display:flex;
+  gap:10px;
+  padding:10px;
+  color:#cbd5f5;
+  text-decoration:none;
+  border-radius:6px;
+}
+.sidebar a:hover,
+.sidebar a.active{background:#2563eb;color:#fff}
+
+/* Content */
+.content{flex:1;padding:20px}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+.user{font-weight:600}
+
+/* Filters */
+.filters{
+  display:flex;
+  gap:10px;
+  margin-bottom:15px;
+}
+.filters select{
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #cbd5f5;
+}
+
+/* Table */
+.table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+}
+.table th,.table td{
+  padding:12px;
+  border-bottom:1px solid #e2e8f0;
+  text-align:left;
+}
+.table th{background:#f8fafc}
+
+/* Badges */
+.badge{
+  padding:4px 8px;
+  font-size:12px;
+  border-radius:6px;
+}
+.active{background:#86efac}
+.blocked{background:#fecaca}
+.paid{background:#bfdbfe}
+.free{background:#fde68a}
+
+/* Buttons */
+.btn{
+  padding:6px 10px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:13px;
+}
+.view{background:#2563eb;color:#fff}
+.block{background:#ef4444;color:#fff}
+.reset{background:#64748b;color:#fff}
+</style>
+</head>
+
+<body>
+
+<script src="js/guard.js"></script>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Testara</h2>
+    <nav id="sidebar"></nav>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- TOP -->
+    <div class="topbar">
+      <h2>Students</h2>
+      <div class="user" id="adminName"></div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="filters">
+      <select>
+        <option>All Status</option>
+        <option>Active</option>
+        <option>Inactive</option>
+      </select>
+      <select>
+        <option>All Plans</option>
+        <option>Paid</option>
+        <option>Free</option>
+      </select>
+      <select>
+        <option>All Exams</option>
+        <option>SSC</option>
+        <option>Banking</option>
+        <option>Railways</option>
+      </select>
+    </div>
+
+    <!-- TABLE -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email / Mobile</th>
+          <th>Joined</th>
+          <th>Tests</th>
+          <th>Last Active</th>
+          <th>Status</th>
+          <th>Plan</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rahul Sharma</td>
+          <td>rahul@gmail.com<br>9876543210</td>
+          <td>12 Aug 2025</td>
+          <td>18</td>
+          <td>Today</td>
+          <td><span class="badge active">Active</span></td>
+          <td><span class="badge paid">Paid</span></td>
+          <td>
+            <button class="btn view">View</button>
+            <button class="btn block">Block</button>
+            <button class="btn reset">Reset</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Anjali Verma</td>
+          <td>anjali@gmail.com<br>9123456780</td>
+          <td>05 Jul 2025</td>
+          <td>6</td>
+          <td>3 days ago</td>
+          <td><span class="badge blocked">Blocked</span></td>
+          <td><span class="badge free">Free</span></td>
+          <td>
+            <button class="btn view">View</button>
+            <button class="btn block">Unblock</button>
+            <button class="btn reset">Reset</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<script>
+/* Role check */
+if(user.role !== "super_admin" && user.role !== "admin" && user.role !== "director"){
+  alert("Access Denied");
+  location.href="dashboard.html";
+}
+
+/* Admin info */
+document.getElementById("adminName").innerText =
+  user.name + " (" + user.role.replace("_"," ") + ")";
+
+/* Active menu */
+document.querySelectorAll("#sidebar a").forEach(a=>{
+  if(a.href.includes("students.html")) a.classList.add("active");
+});
+</script>
+
+</body>
+</html>

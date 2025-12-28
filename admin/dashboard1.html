@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel = "stylesheet" href="css/sidebar.css">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f1f5f9;
+}
+.app{
+  display:flex;
+  min-height:100vh;
+}
+.content{
+  flex:1;
+  padding:20px;
+}
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+button{
+  background:#ef4444;
+  border:none;
+  padding:8px 12px;
+  color:#fff;
+  border-radius:5px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- FIRST guard.js -->
+<script src="js/guard.js"></script>
+
+<div class="app">
+
+  <div class="sidebar">
+    <h3>Testara</h3>
+    <nav id="sidebar"></nav>
+    <br>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div class="content">
+    <div class="top">
+      <h2>Dashboard</h2>
+      <span id="adminName"></span>
+    </div>
+
+    <p>Welcome to Testara Admin Panel</p>
+  </div>
+
+</div>
+
+<!-- THEN sidebar.js -->
+<script src="js/sidebar.js"></script>
+
+<script>
+function logout(){
+  localStorage.removeItem("adminUser");
+  location.href="login.html";
+}
+</script>
+
+</body>
+</html>

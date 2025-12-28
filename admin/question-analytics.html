@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Question Analytics | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:Arial;background:#f1f5f9}
+.app{display:flex;min-height:100vh}
+.sidebar{width:240px;background:#0f172a;color:#fff;padding:20px}
+.content{flex:1;padding:20px}
+
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+
+.table{
+  width:100%;
+  background:#fff;
+  border-collapse:collapse;
+  box-shadow:0 5px 12px rgba(0,0,0,.05)
+}
+th,td{
+  padding:12px;
+  border-bottom:1px solid #e2e8f0;
+  text-align:center;
+}
+th{background:#f8fafc}
+
+.green{background:#bbf7d0}
+.yellow{background:#fef08a}
+.red{background:#fecaca}
+
+.badge{
+  padding:4px 8px;
+  border-radius:6px;
+  font-size:12px;
+}
+.easy{background:#86efac}
+.medium{background:#fde68a}
+.hard{background:#fecaca}
+
+.legend{
+  margin-top:15px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<script src="js/guard.js"></script>
+
+<div class="app">
+
+  <div class="sidebar">
+    <h3>Testara</h3>
+    <nav id="sidebar"></nav>
+  </div>
+
+  <div class="content">
+    <div class="top">
+      <h2>Question Analytics & Heatmap</h2>
+      <div id="adminName"></div>
+    </div>
+
+    <table class="table" id="statsTable">
+      <thead>
+        <tr>
+          <th>Question ID</th>
+          <th>Subject</th>
+          <th>Attempted</th>
+          <th>Accuracy %</th>
+          <th>Avg Time (sec)</th>
+          <th>Heat</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="legend">
+      🟢 Easy / Good &nbsp;&nbsp;
+      🟡 Medium &nbsp;&nbsp;
+      🔴 Hard / Confusing
+    </div>
+
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<script>
+/* Access control */
+if(!["super_admin","director","teacher"].includes(user.role)){
+  alert("Access Denied");
+  location.href="dashboard.html";
+}
+
+document.getElementById("adminName").innerText =
+  user.name + " (" + user.role + ")";
+
+/* Load analytics */
+fetch("data/question_stats.json")
+.then(res=>res.json())
+.then(data=>{
+  const tbody = document.querySelector("#statsTable tbody");
+
+  data.stats.forEach(q=>{
+    const accuracy = Math.round((q.correct / q.attempted) * 100);
+
+    let heatClass = "green";
+    let heatText = "Easy";
+    let badgeClass = "easy";
+
+    if(accuracy < 70 && accuracy >= 40){
+      heatClass = "yellow";
+      heatText = "Medium";
+      badgeClass = "medium";
+    }
+    if(accuracy < 40){
+      heatClass = "red";
+      heatText = "Hard";
+      badgeClass = "hard";
+    }
+
+    tbody.innerHTML += `
+      <tr class="${heatClass}">
+        <td>${q.question_id}</td>
+        <td>${q.subject}</td>
+        <td>${q.attempted}</td>
+        <td>${accuracy}%</td>
+        <td>${q.avg_time_sec}</td>
+        <td><span class="badge ${badgeClass}">${heatText}</span></td>
+      </tr>
+    `;
+  });
+});
+</script>
+
+</body>
+</html>

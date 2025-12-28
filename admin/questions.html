@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Question Bank | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
+body{background:#f1f5f9}
+.app{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{
+  width:240px;
+  background:#0f172a;
+  color:#fff;
+  padding:20px;
+}
+.sidebar h2{text-align:center;margin-bottom:20px}
+.sidebar a{
+  display:flex;
+  gap:10px;
+  padding:10px;
+  color:#cbd5f5;
+  text-decoration:none;
+  border-radius:6px;
+}
+.sidebar a:hover,
+.sidebar a.active{background:#2563eb;color:#fff}
+
+/* Content */
+.content{flex:1;padding:20px}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+.user{font-weight:600}
+
+/* Filters */
+.filters{
+  display:flex;
+  gap:10px;
+  margin-bottom:15px;
+}
+.filters select{
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #cbd5f5;
+}
+
+/* Buttons */
+.btn{
+  padding:8px 14px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:13px;
+}
+.primary{background:#2563eb;color:#fff}
+.success{background:#16a34a;color:#fff}
+.gray{background:#64748b;color:#fff}
+
+/* Table */
+.table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+}
+.table th,.table td{
+  padding:12px;
+  border-bottom:1px solid #e2e8f0;
+}
+.table th{background:#f8fafc}
+
+/* Difficulty */
+.easy{color:#16a34a;font-weight:600}
+.medium{color:#f59e0b;font-weight:600}
+.hard{color:#dc2626;font-weight:600}
+
+/* Modal */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+.modal-content{
+  background:#fff;
+  padding:20px;
+  width:520px;
+  max-height:90vh;
+  overflow:auto;
+  border-radius:10px;
+}
+.modal-content h3{margin-bottom:15px}
+.modal-content textarea,
+.modal-content input,
+.modal-content select{
+  width:100%;
+  padding:8px;
+  margin-bottom:10px;
+}
+.options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+</style>
+</head>
+
+<body>
+
+<script src="js/guard.js"></script>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Testara</h2>
+    <nav id="sidebar"></nav>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- TOP -->
+    <div class="topbar">
+      <h2>Question Bank</h2>
+      <div class="user" id="adminName"></div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="filters">
+      <select>
+        <option>All Subjects</option>
+        <option>Quantitative Aptitude</option>
+        <option>Reasoning</option>
+        <option>English</option>
+        <option>General Awareness</option>
+      </select>
+
+      <select>
+        <option>All Difficulty</option>
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
+      </select>
+
+      <button class="btn primary" onclick="openModal()">
+        <i class="fa fa-plus"></i> Add Question
+      </button>
+    </div>
+
+    <!-- QUESTION LIST -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Subject</th>
+          <th>Difficulty</th>
+          <th>Used In Tests</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>What is the square root of 144?</td>
+          <td>Quantitative Aptitude</td>
+          <td class="easy">Easy</td>
+          <td>12</td>
+          <td>
+            <button class="btn gray">View</button>
+            <button class="btn success">Edit</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Find the synonym of “Abundant”.</td>
+          <td>English</td>
+          <td class="medium">Medium</td>
+          <td>7</td>
+          <td>
+            <button class="btn gray">View</button>
+            <button class="btn success">Edit</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Who was the first President of India?</td>
+          <td>General Awareness</td>
+          <td class="hard">Hard</td>
+          <td>3</td>
+          <td>
+            <button class="btn gray">View</button>
+            <button class="btn success">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<!-- ADD QUESTION MODAL -->
+<div class="modal" id="questionModal">
+  <div class="modal-content">
+    <h3>Add Question</h3>
+
+    <!-- Language -->
+    <select>
+      <option>English</option>
+      <option>Hindi</option>
+    </select>
+
+    <!-- Question -->
+    <textarea rows="3" placeholder="Enter question text"></textarea>
+
+    <!-- Options -->
+    <div class="options">
+      <input placeholder="Option A">
+      <input placeholder="Option B">
+      <input placeholder="Option C">
+      <input placeholder="Option D">
+    </div>
+
+    <!-- Correct Answer -->
+    <select>
+      <option>Correct Answer</option>
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+      <option>D</option>
+    </select>
+
+    <!-- Explanation -->
+    <textarea rows="2" placeholder="Explanation (shown after test)"></textarea>
+
+    <button class="btn success">Save Question</button>
+    <button class="btn gray" onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<script>
+/* Role check */
+if(!["teacher","admin","director","super_admin"].includes(user.role)){
+  alert("Access Denied");
+  location.href="dashboard.html";
+}
+
+/* Admin info */
+document.getElementById("adminName").innerText =
+  user.name + " (" + user.role.replace("_"," ") + ")";
+
+/* Active menu */
+document.querySelectorAll("#sidebar a").forEach(a=>{
+  if(a.href.includes("questions.html")) a.classList.add("active");
+});
+
+/* Modal */
+function openModal(){
+  document.getElementById("questionModal").style.display="flex";
+}
+function closeModal(){
+  document.getElementById("questionModal").style.display="none";
+}
+</script>
+
+</body>
+</html>

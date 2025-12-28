@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contributor Profile | Testara</title>
+<meta charset="UTF-8">
+<style>
+body{font-family:Arial;background:#f1f5f9;padding:20px}
+.card{
+  background:#fff;
+  max-width:500px;
+  margin:auto;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08)
+}
+h2{text-align:center}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="profile">
+  Loading profile...
+</div>
+
+<script>
+const id = new URLSearchParams(location.search).get("id");
+
+fetch("data/contributors.json")
+.then(r=>r.json())
+.then(d=>{
+  const c = d.contributors.find(x=>x.id===id);
+  if(!c){
+    document.getElementById("profile").innerHTML="Profile not found";
+    return;
+  }
+
+  document.getElementById("profile").innerHTML=`
+    <h2>${c.name}</h2>
+    <p><b>Role:</b> ${c.role}</p>
+    <p><b>Domain:</b> ${c.work_domain.join(", ")}</p>
+    <p><b>Work:</b> ${c.work_summary.questions_created} Questions,
+       ${c.work_summary.tests_created} Tests</p>
+    <p><b>Status:</b> ${c.status}</p>
+    <p>
+      <a href="/verify.html?cert=${c.certificate.certificate_id}" target="_blank">
+        Verify Certificate
+      </a>
+    </p>
+  `;
+});
+</script>
+
+</body>
+</html>

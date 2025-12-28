@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Manage Tests | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
+body{background:#f1f5f9}
+.app{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{
+  width:240px;
+  background:#0f172a;
+  color:#fff;
+  padding:20px;
+}
+.sidebar h2{text-align:center;margin-bottom:20px}
+.sidebar a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px;
+  margin-bottom:6px;
+  color:#cbd5f5;
+  text-decoration:none;
+  border-radius:6px;
+}
+.sidebar a.active,
+.sidebar a:hover{background:#2563eb;color:#fff}
+
+/* Content */
+.content{flex:1;padding:20px}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+.user{font-weight:600}
+
+/* Button */
+.btn{
+  padding:8px 12px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:14px;
+}
+.btn.primary{background:#2563eb;color:#fff}
+.btn.success{background:#16a34a;color:#fff}
+.btn.danger{background:#ef4444;color:#fff}
+.btn.gray{background:#64748b;color:#fff}
+
+/* Table */
+.table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 12px rgba(0,0,0,.05);
+}
+.table th,.table td{
+  padding:12px;
+  border-bottom:1px solid #e2e8f0;
+  text-align:left;
+}
+.table th{background:#f8fafc;font-size:14px}
+.badge{
+  padding:4px 8px;
+  border-radius:6px;
+  font-size:12px;
+}
+.draft{background:#fde68a}
+.live{background:#86efac}
+.expired{background:#fecaca}
+
+/* Modal */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+.modal-content{
+  background:#fff;
+  padding:20px;
+  width:400px;
+  border-radius:10px;
+}
+.modal-content h3{margin-bottom:15px}
+.modal-content input,select{
+  width:100%;
+  padding:8px;
+  margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+
+<script src="js/guard.js"></script>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Testara</h2>
+    <nav id="sidebar"></nav>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- TOP -->
+    <div class="topbar">
+      <h2>Manage Tests</h2>
+      <div class="user" id="adminName"></div>
+    </div>
+
+    <!-- CREATE TEST (Teacher / Admin / Super Admin) -->
+    <button class="btn primary" id="createBtn" onclick="openModal()">
+      <i class="fa fa-plus"></i> Create Test
+    </button>
+
+    <br><br>
+
+    <!-- TEST TABLE -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Test Name</th>
+          <th>Exam</th>
+          <th>Status</th>
+          <th>Duration</th>
+          <th>Questions</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="testTable">
+        <tr>
+          <td>SSC CGL Mock 1</td>
+          <td>SSC</td>
+          <td><span class="badge live">Live</span></td>
+          <td>60 Min</td>
+          <td>100</td>
+          <td>
+            <button class="btn gray">View</button>
+            <button class="btn success">Edit</button>
+            <button class="btn danger deleteBtn">Delete</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Banking Mock 2</td>
+          <td>Banking</td>
+          <td><span class="badge draft">Draft</span></td>
+          <td>45 Min</td>
+          <td>80</td>
+          <td>
+            <button class="btn gray">View</button>
+            <button class="btn success">Edit</button>
+            <button class="btn primary approveBtn">Publish</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<!-- CREATE TEST MODAL -->
+<div class="modal" id="testModal">
+  <div class="modal-content">
+    <h3>Create Test</h3>
+    <input placeholder="Test Title">
+    <select>
+      <option>SSC</option>
+      <option>Banking</option>
+      <option>Railways</option>
+    </select>
+    <input placeholder="Duration (minutes)">
+    <input placeholder="Total Questions">
+    <select>
+      <option>English</option>
+      <option>Hindi</option>
+    </select>
+    <button class="btn success">Save</button>
+    <button class="btn danger" onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<script>
+/* Admin name */
+document.getElementById("adminName").innerText =
+  user.name + " (" + user.role.replace("_"," ") + ")";
+
+/* Active menu */
+document.querySelectorAll("#sidebar a").forEach(a=>{
+  if(a.href.includes("tests.html")) a.classList.add("active");
+});
+
+/* Permissions */
+if(user.role === "teacher"){
+  document.querySelectorAll(".deleteBtn").forEach(b=>b.remove());
+  document.querySelectorAll(".approveBtn").forEach(b=>b.remove());
+}
+if(user.role === "admin"){
+  document.querySelectorAll(".deleteBtn").forEach(b=>b.remove());
+}
+
+/* Modal */
+function openModal(){document.getElementById("testModal").style.display="flex"}
+function closeModal(){document.getElementById("testModal").style.display="none"}
+</script>
+
+</body>
+</html>
