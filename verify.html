@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Certificate Verification | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f1f5f9;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+.card{
+  background:#fff;
+  padding:25px;
+  width:420px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+h2{text-align:center;margin-bottom:10px}
+
+input{
+  width:100%;
+  padding:10px;
+  margin:12px 0;
+  border-radius:6px;
+  border:1px solid #cbd5f5;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  background:#2563eb;
+  color:#fff;
+  cursor:pointer;
+}
+
+.field{margin-bottom:8px;font-size:14px}
+.label{color:#64748b}
+.value{font-weight:600}
+
+.status{
+  margin-top:15px;
+  padding:10px;
+  border-radius:8px;
+  font-weight:bold;
+  text-align:center;
+}
+.verified{background:#bbf7d0;color:#065f46}
+.invalid{background:#fecaca;color:#7f1d1d}
+
+.footer{
+  text-align:center;
+  margin-top:15px;
+  font-size:13px;
+  color:#64748b;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>Testara Certificate Verification</h2>
+
+  <input id="certInput" placeholder="Enter Certificate ID (e.g. TESTARA-INT-001)">
+
+  <button onclick="verify()">Verify Certificate</button>
+
+  <div id="result"></div>
+
+  <div class="footer">Official Verification • Testara</div>
+</div>
+
+<script>
+function verify(){
+  const certId = document.getElementById("certInput").value.trim();
+  const box = document.getElementById("result");
+
+  if(!certId){
+    box.innerHTML = `<div class="status invalid">Enter Certificate ID</div>`;
+    return;
+  }
+
+  fetch("./admin/data/certificates.json")
+  .then(res=>res.json())
+  .then(data=>{
+    const cert = data.certificates.find(
+      c => c.certificate_id === certId
+    );
+
+    if(!cert){
+      box.innerHTML = `<div class="status invalid">❌ Certificate Not Found</div>`;
+      return;
+    }
+
+    box.innerHTML = `
+      <div class="status verified">✅ VERIFIED & AUTHENTIC</div>
+
+      <div class="field"><span class="label">Name:</span>
+      <span class="value">${cert.name}</span></div>
+
+      <div class="field"><span class="label">Role:</span>
+      <span class="value">${cert.role}</span></div>
+
+      <div class="field"><span class="label">Duration:</span>
+      <span class="value">${cert.duration}</span></div>
+
+      <div class="field"><span class="label">Work Summary:</span>
+      <span class="value">
+        ${cert.work_summary.questions_created} Questions,
+        ${cert.work_summary.tests_created} Tests,
+        ${cert.work_summary.notes_created} Notes
+      </span></div>
+
+      <div class="field"><span class="label">Issued On:</span>
+      <span class="value">${cert.issued_on}</span></div>
+    `;
+  })
+  .catch(()=>{
+    box.innerHTML = `<div class="status invalid">System error</div>`;
+  });
+}
+</script>
+
+</body>
+</html>
