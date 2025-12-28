@@ -1,0 +1,24 @@
+{
+  "certificates": [
+    {
+      "certificate_id": "TESTARA-INT-001",
+      "name": "Rahul Sharma",
+      "role": "Question Creator Intern",
+      "contributor_id": "INT-2025-001",
+
+      "issued_by": "Testara EdTech",
+      "issued_on": "2025-04-20",
+      "valid_till": "lifetime",
+
+      "duration": "15 Jan 2025 – 15 Apr 2025",
+
+      "work_summary": {
+        "tests_created": 12,
+        "questions_created": 480,
+        "notes_created": 18
+      },
+
+      "status": "verified"
+    }
+  ]
+}

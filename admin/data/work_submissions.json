@@ -1,0 +1,37 @@
+{
+  "submissions": [
+    {
+      "submission_id": "SET-SSC-001",
+      "contributor_id": "INT-2025-001",
+
+      "type": "test", 
+      "title": "SSC CGL Quant Mock 01",
+
+      "files": {
+        "json": "ssc_quant_mock01.json",
+        "pdf": "ssc_quant_mock01.pdf"
+      },
+
+      "submitted_on": "2025-02-10",
+
+      "status": "approved", 
+      "reviewed_by": "admin_01",
+      "reviewed_on": "2025-02-12",
+      "review_comment": "Good quality questions"
+    },
+
+    {
+      "submission_id": "SET-SSC-002",
+      "contributor_id": "INT-2025-001",
+      "type": "notes",
+      "title": "Percentage Short Tricks",
+
+      "files": {
+        "pdf": "percentage_tricks.pdf"
+      },
+
+      "submitted_on": "2025-02-18",
+      "status": "pending"
+    }
+  ]
+}

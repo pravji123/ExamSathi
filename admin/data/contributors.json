@@ -1,0 +1,40 @@
+{
+  "contributors": [
+    {
+      "id": "INT-2025-001",
+      "name": "Rahul Sharma",
+      "role": "Question Creator",
+      "type": "Intern", 
+      "email": "rahul@gmail.com",
+      "phone": "9876543210",
+
+      "joined_on": "2025-01-15",
+      "left_on": "2025-04-15",
+
+      "work_domain": [
+        "SSC Quant",
+        "Reasoning"
+      ],
+
+      "work_summary": {
+        "tests_created": 12,
+        "questions_created": 480,
+        "notes_created": 18
+      },
+
+      "approval_summary": {
+        "approved": 420,
+        "rejected": 40,
+        "pending": 20
+      },
+
+      "certificate": {
+        "certificate_id": "TESTARA-INT-001",
+        "issued_on": "2025-04-20",
+        "verified_url": "https://testara.in/verify/TESTARA-INT-001"
+      },
+
+      "status": "completed"
+    }
+  ]
+}

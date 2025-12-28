@@ -1,0 +1,28 @@
+{
+  "stats": [
+    {
+      "question_id": "Q-101",
+      "subject": "Quantitative Aptitude",
+      "attempted": 200,
+      "correct": 160,
+      "wrong": 40,
+      "avg_time_sec": 32
+    },
+    {
+      "question_id": "Q-102",
+      "subject": "General Awareness",
+      "attempted": 180,
+      "correct": 92,
+      "wrong": 88,
+      "avg_time_sec": 58
+    },
+    {
+      "question_id": "Q-103",
+      "subject": "General Awareness",
+      "attempted": 150,
+      "correct": 30,
+      "wrong": 120,
+      "avg_time_sec": 95
+    }
+  ]
+}

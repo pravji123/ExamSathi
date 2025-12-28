@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "id": "Q-101",
+      "question": {
+        "en": "What is 2 + 2?",
+        "hi": "2 + 2 कितना होता है?"
+      },
+      "subject": "Quantitative Aptitude",
+      "difficulty": "Easy",
+      "created_by": "INT-2025-001",
+      "created_by_name": "Rahul Sharma",
+      "created_on": "2025-02-20",
+      "status": "pending",
+      "review_comment": ""
+    },
+    {
+      "id": "Q-102",
+      "question": {
+        "en": "Who was the first President of India?",
+        "hi": "भारत के पहले राष्ट्रपति कौन थे?"
+      },
+      "subject": "General Awareness",
+      "difficulty": "Medium",
+      "created_by": "INT-2025-001",
+      "created_by_name": "Rahul Sharma",
+      "created_on": "2025-02-18",
+      "status": "approved",
+      "review_comment": "Good question, correct framing"
+    },
+    {
+      "id": "Q-103",
+      "question": {
+        "en": "America was discovered by?",
+        "hi": "अमेरिका की खोज किसने की थी?"
+      },
+      "subject": "General Awareness",
+      "difficulty": "Hard",
+      "created_by": "INT-2025-002",
+      "created_by_name": "Amit Kumar",
+      "created_on": "2025-02-15",
+      "status": "rejected",
+      "review_comment": "Question is ambiguous, please reframe"
+    }
+  ]
+}
