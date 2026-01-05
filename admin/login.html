@@ -2,80 +2,228 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Testara Admin Login</title>
+<title>Testara Employee Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+*{
+  box-sizing:border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
 body{
-  background:#0f172a;
-  color:#fff;
-  font-family:system-ui, sans-serif;
+  margin:0;
+  min-height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100vh;
-  margin:0;
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
 }
-
-.box{
-  background:#1e293b;
-  padding:30px;
-  border-radius:12px;
-  width:320px;
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
-}
-
-h2{
+.logo{
   text-align:center;
-  margin-bottom:20px;
-}
-
-input,button{
-  width:100%;
-  padding:12px;
-  margin-top:12px;
-  border:none;
-  border-radius:6px;
-  font-size:15px;
-}
-
-input{
-  background:#020617;
-  color:#fff;
-  border:1px solid #334155;
-}
-
-button{
-  background:#38bdf8;
-  color:#000;
+  font-size:26px;
   font-weight:700;
+  color:#1e3a8a;
+}
+.sub{
+  text-align:center;
+  font-size:13px;
+  color:#64748b;
+  margin-bottom:22px;
+}
+
+.alert{
+  display:none;
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:12px;
+  font-size:14px;
+}
+.error{
+  background:#fee2e2;
+  color:#991b1b;
+}
+/* Card */
+.login-card{
+  background:#fff;
+  width:100%;
+  max-width:420px;
+  padding:35px 30px;
+  border-radius:16px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  animation:fadeIn .6s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
+.login-card h1{
+  margin:0;
+  text-align:center;
+  color:#004aad;
+  font-size:26px;
+  font-weight:700;
+}
+
+.login-card p{
+  text-align:center;
+  margin:10px 0 25px;
+  color:#555;
+  font-size:14px;
+}
+
+/* Inputs */
+.field{
+  margin-bottom:16px;
+}
+
+.field label{
+  display:block;
+  font-size:14px;
+  margin-bottom:6px;
+  color:#333;
+}
+
+.field input{
+  width:100%;
+  padding:12px 14px;
+  font-size:14px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  outline:none;
+  transition:.3s;
+}
+
+.field input:focus{
+  border-color:#004aad;
+  box-shadow:0 0 0 2px rgba(0,74,173,.15);
+}
+
+/* Button */
+button{
+  width:100%;
+  padding:14px;
+  font-size:15px;
+  font-weight:600;
+  border:none;
+  border-radius:10px;
+  background:#004aad;
+  color:#fff;
   cursor:pointer;
+  transition:.3s;
 }
 
 button:hover{
-  opacity:.9;
+  background:#003a8c;
 }
 
-#msg{
-  margin-top:12px;
-  font-size:14px;
+/* Footer */
+.footer{
+  margin-top:22px;
   text-align:center;
+  font-size:13px;
+  color:#777;
 }
 </style>
 </head>
 
 <body>
 
-<div class="box">
-  <h2>Testara Admin Login</h2>
+<div class="login-card">
+  <!-- <p>Welcome back! Please login to continue</p> -->
+  <div class="logo">Testara Employee Login</div>
+  <div class="sub">Welcome back! Secure Company Login</div>
 
-  <input id="email" type="email" placeholder="Email" autocomplete="off">
-  <input id="password" type="password" placeholder="Password">
+  <div id="alert" class="alert error"></div>
 
-  <button onclick="login()">Login</button>
+  <form id="loginForm">
+    <div class="field">
+      <label>Email</label>
+      <input type="email" id="email" placeholder="employee@company.in" required>
+    </div>
 
-  <p id="msg"></p>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Password" required>
+    </div>
+
+    <!-- <button type="submit">Login</button> -->
+     <button id="btn" type="submit">Login</button>
+
+  </form>
+
+  <div class="footer">© 2025 Testara | Testara Admin Panel | Authorized users only</div>
 </div>
 
-<script src="js/auth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const supabaseClient = supabase.createClient(
+    "https://qzriaykqdrhbtcgbpxpg.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6cmlheWtxZHJoYnRjZ2JweHBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwMTcwMTAsImV4cCI6MjA3NTU5MzAxMH0.qRAQumkwN-JtxDizWwLRfPa8t0N68YGWdYKhQrhx7e8"
+
+  );
+  const alertBox = document.getElementById("alert");
+  const btn = document.getElementById("btn");
+
+  function showError(msg){
+    alertBox.innerText = msg;
+    alertBox.style.display = "block";
+  }
+  document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!email || !password) {
+    alert("Email and password required");
+    return;
+  }
+
+  const { data, error } = await supabaseClient.rpc("login_user", {
+    p_email: email,
+    p_password: password
+  });
+
+  if (error || !data || data.length === 0) {
+    alert("Invalid login credentials");
+    return;
+  }
+
+  const employee = data[0];
+
+  // update last login
+  await supabaseClient
+    .from("employees")
+    .update({ last_login: new Date().toISOString() })
+    .eq("id", employee.id);
+
+  // save session
+  localStorage.setItem("employee", JSON.stringify(employee));
+
+  // redirect by role (optional)
+  if (employee.role === "admin") {
+    window.location.replace("admin-dashboard.html");
+  } else {
+    window.location.replace("employee-dashboard.html");
+  }
+
+  // // role based redirect
+  // if(employee.role === "admin"){
+  //   location.href = "/admin/dashboard.html";
+  // }else if(employee.role === "teacher"){
+  //   location.href = "/admin/dashboard.html";
+  // }else if(employee.role === "accountant"){
+  //   location.href = "/accounts/dashboard.html";
+  // }else{
+  //   location.href = "/dashboard.html";
+  // }
+
+
+});
+
+</script>
+
 </body>
 </html>
