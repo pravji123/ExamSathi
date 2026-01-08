@@ -111,12 +111,54 @@ button{
   background:#004aad;
   color:#fff;
   cursor:pointer;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
   transition:.3s;
 }
 
-button:hover{
-  background:#003a8c;
+button:disabled{
+  opacity:.7;
+  cursor:not-allowed;
 }
+
+/* Loader */
+.loader{
+  width:18px;
+  height:18px;
+  border:3px solid rgba(255,255,255,.4);
+  border-top:3px solid #fff;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  display:none;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+/* Success Tick */
+.success{
+  display:none;
+  font-size:18px;
+  background:#22c55e;
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  animation:pop .4s ease;
+}
+
+@keyframes pop{
+  0%{transform:scale(0)}
+  80%{transform:scale(1.2)}
+  100%{transform:scale(1)}
+}
+
+
 
 /* Footer */
 .footer{
@@ -149,81 +191,229 @@ button:hover{
     </div>
 
     <!-- <button type="submit">Login</button> -->
-     <button id="btn" type="submit">Login</button>
+      <!-- <button id="btn" type="submit">Login</button> -->
+      <button id="btn" type="submit">
+        <span id="btnText">Login</span>
+        <span id="loader" class="loader"></span>
+        <span id="success" class="success">✔</span>
+      </button>
 
   </form>
 
   <div class="footer">© 2025 Testara | Testara Admin Panel | Authorized users only</div>
 </div>
 
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-  const supabaseClient = supabase.createClient(
-    "https://qzriaykqdrhbtcgbpxpg.supabase.co",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6cmlheWtxZHJoYnRjZ2JweHBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwMTcwMTAsImV4cCI6MjA3NTU5MzAxMH0.qRAQumkwN-JtxDizWwLRfPa8t0N68YGWdYKhQrhx7e8"
+/* ================= CONFIG ================= */
+const SUPABASE_URL = "https://qzriaykqdrhbtcgbpxpg.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6cmlheWtxZHJoYnRjZ2JweHBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwMTcwMTAsImV4cCI6MjA3NTU5MzAxMH0.qRAQumkwN-JtxDizWwLRfPa8t0N68YGWdYKhQrhx7e8";
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-  );
-  const alertBox = document.getElementById("alert");
-  const btn = document.getElementById("btn");
+/* ================= HELPERS ================= */
+const alertBox = document.getElementById("alert");
+const btn = document.getElementById("btn");
+const btnText = document.getElementById("btnText");
+const loader = document.getElementById("loader");
+const success = document.getElementById("success");
 
-  function showError(msg){
-    alertBox.innerText = msg;
-    alertBox.style.display = "block";
-  }
-  document.getElementById("loginForm").addEventListener("submit", async (e) => {
+let failCount = Number(localStorage.getItem("login_fail")) || 0;
+let timeoutRef;
+
+/* ================= HELPERS ================= */
+function startTimeout(){
+  timeoutRef = setTimeout(()=>{
+    showError("Request timeout. Please try again.");
+  },10000);
+}
+function clearTimeoutSafe(){
+  if(timeoutRef) clearTimeout(timeoutRef);
+}
+
+// function showLoading(){
+//   alertBox.style.display = "none";
+//   btn.disabled = true;          // ✅ REALLY disables
+//   btnText.innerText = "Verifying...";
+//   loader.style.display = "inline-block";
+// }
+
+function showLoading(){
+  alertBox.style.display="none";
+  btn.disabled=true;
+  btnText.innerText="Verifying...";
+  loader.style.display="inline-block";
+  success.style.display="none";
+  startTimeout();
+}
+
+function hideLoading(){
+  btn.disabled = false;
+  btnText.innerText = "Login";
+  loader.style.display = "none";
+}
+
+// function showError(msg){
+//   alertBox.innerText = msg;
+//   alertBox.style.display = "block";
+//   hideLoading();
+// }
+
+function showError(msg){
+  clearTimeoutSafe();
+  failCount++;
+  localStorage.setItem("login_fail",failCount);
+  alertBox.innerText=msg;
+  alertBox.style.display="block";
+  loader.style.display="none";
+  btnText.innerText="Login";
+  btn.disabled=false;
+  if(failCount>=3) lockButton();
+}
+
+function showSuccess(){
+  clearTimeoutSafe();
+  loader.style.display="none";
+  btnText.innerText="Success";
+  success.style.display="flex";
+  localStorage.removeItem("login_fail");
+}
+
+/* 🔐 LOCK AFTER 3 FAILS */
+function lockButton(){
+  btn.disabled=true;
+  let sec=30;
+  btnText.innerText=`Locked (${sec}s)`;
+
+  const timer=setInterval(()=>{
+    sec--;
+    btnText.innerText=`Locked (${sec}s)`;
+    if(sec<=0){
+      clearInterval(timer);
+      btn.disabled=false;
+      btnText.innerText="Login";
+      localStorage.removeItem("login_fail");
+    }
+  },1000);
+}
+
+// /* ================= LOGIN ================= */
+// document.getElementById("loginForm").addEventListener("submit", async (e)=>{
+//   e.preventDefault();
+
+//   const email = document.getElementById("email").value
+//     .trim()
+//     .toLowerCase();
+
+//   const password = document.getElementById("password").value.trim();
+
+//   if(!email || !password){
+//     showError("Email and password are required");
+//     return;
+//   }
+
+//   showLoading();
+
+//   try{
+//     /* 🔐 RPC LOGIN (with lock logic in DB) */
+//     const { data, error } = await sb.rpc("login_user", {
+//       p_email: email,
+//       p_password: password
+//     });
+
+//     /* ❌ LOGIN FAILED */
+//     if(error){
+//       // account lock message from DB
+//       if(error.message.toLowerCase().includes("locked")){
+//         showError(error.message);
+//       }else{
+//         showError("Invalid email or password");
+//       }
+//       return;
+//     }
+
+//     if(!data || data.length === 0){
+//       showError("Invalid email or password");
+//       return;
+//     }
+
+//     /* ✅ LOGIN SUCCESS */
+//     const emp = data[0];
+
+//     /* 🔐 SESSION (8 HOURS) */
+//     const SESSION_TTL = 1 * 60 * 60 * 1000;
+
+//     const session = {
+//       id: emp.id,
+//       employee_id: emp.employee_id,
+//       name: emp.name,
+//       role: emp.role,
+//       expires_at: Date.now() + SESSION_TTL
+//     };
+
+//     localStorage.setItem("employee", JSON.stringify(session));
+
+//     /* 🔁 UPDATE LAST LOGIN (SAFE) */
+//     await sb.from("employees").update({ last_login: new Date().toISOString() }).eq("id", emp.id);
+
+//     /* 🚦 ROLE BASED REDIRECT */
+//     if(emp.role === "admin"){
+//       location.href = "/admin/admin-dashboard.html";
+//     }else if(emp.role === "teacher"){
+//       location.href = "/admin/teacher/dashboard.html";
+//     }else if(emp.role === "accountant"){
+//       location.href = "/admin/accounts/dashboard.html";
+//     }else{
+//       location.href = "/dashboard.html";
+//     }
+
+//   }catch(err){
+//     console.error("Login error:", err);
+//     showError("Something went wrong. Please try again.");
+//   }
+// });
+
+/* ================= LOGIN ================= */
+document.getElementById("loginForm").addEventListener("submit",async(e)=>{
   e.preventDefault();
 
-  const email = document.getElementById("email").value.trim();
+  const email = document.getElementById("email").value.trim().toLowerCase();
   const password = document.getElementById("password").value.trim();
 
-  if (!email || !password) {
-    alert("Email and password required");
+  if(!email || !password){
+    showError("Email and password are required");
     return;
   }
+  showLoading();
 
-  const { data, error } = await supabaseClient.rpc("login_user", {
-    p_email: email,
-    p_password: password
-  });
+  try{
+    const {data,error}=await sb.rpc("login_user",{p_email:email,p_password:password});
+    if(error||!data||!data.length) return showError("Invalid email or password");
 
-  if (error || !data || data.length === 0) {
-    alert("Invalid login credentials");
-    return;
+    showSuccess();
+
+    const emp=data[0];
+    const session={
+      id:emp.id,
+      employee_id:emp.employee_id,
+      name:emp.name,
+      role:emp.role,
+      expires_at:Date.now()+1*60*60*1000
+    };
+    localStorage.setItem("employee",JSON.stringify(session));
+
+    /* 🔁 UPDATE LAST LOGIN (SAFE) */
+    await sb.from("employees").update({ last_login: new Date().toISOString() }).eq("id", emp.id);
+
+    setTimeout(()=>location.href="/admin/admin-dashboard.html",700);
+
+  }catch(err){
+    console.error("Login error:", err);
+    showError("Something went wrong. Please try again.");
   }
-
-  const employee = data[0];
-
-  // update last login
-  await supabaseClient
-    .from("employees")
-    .update({ last_login: new Date().toISOString() })
-    .eq("id", employee.id);
-
-  // save session
-  localStorage.setItem("employee", JSON.stringify(employee));
-
-  // redirect by role (optional)
-  if (employee.role === "admin") {
-    window.location.replace("admin-dashboard.html");
-  } else {
-    window.location.replace("employee-dashboard.html");
-  }
-
-  // // role based redirect
-  // if(employee.role === "admin"){
-  //   location.href = "/admin/dashboard.html";
-  // }else if(employee.role === "teacher"){
-  //   location.href = "/admin/dashboard.html";
-  // }else if(employee.role === "accountant"){
-  //   location.href = "/accounts/dashboard.html";
-  // }else{
-  //   location.href = "/dashboard.html";
-  // }
-
-
 });
-
 </script>
+
 
 </body>
 </html>
