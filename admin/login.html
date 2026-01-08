@@ -405,7 +405,7 @@ document.getElementById("loginForm").addEventListener("submit",async(e)=>{
     /* 🔁 UPDATE LAST LOGIN (SAFE) */
     await sb.from("employees").update({ last_login: new Date().toISOString() }).eq("id", emp.id);
 
-    setTimeout(()=>location.href="/admin/admin-dashboard.html",700);
+    setTimeout(()=>location.href="/admin/dashboard.html",700);
 
   }catch(err){
     console.error("Login error:", err);
@@ -417,3 +417,4 @@ document.getElementById("loginForm").addEventListener("submit",async(e)=>{
 
 </body>
 </html>
+
