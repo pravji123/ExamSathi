@@ -2,185 +2,260 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Admin Dashboard | Testara</title>
+<title>Employee Dashboard | Testara</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
-body{background:#f1f5f9}
+*{box-sizing:border-box;font-family:"Segoe UI",Arial}
+body{margin:0;background:#f4f6f8}
 
-/* Layout */
-.app{display:flex;min-height:100vh}
-
-/* Sidebar */
-.sidebar{
-  width:240px;
-  background:#0f172a;
-  color:#fff;
-  padding:20px;
-}
-.sidebar h2{
-  margin-bottom:20px;
-  font-size:22px;
-  text-align:center;
-}
-.sidebar a{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 12px;
-  margin-bottom:6px;
-  color:#cbd5f5;
-  text-decoration:none;
-  border-radius:6px;
-  transition:.3s;
-}
-.sidebar a:hover,
-.sidebar a.active{
-  background:#2563eb;
-  color:#fff;
-}
-.sidebar i{width:18px}
-
-/* Content */
-.content{flex:1;padding:20px}
-
-/* Topbar */
-.topbar{
+/* Header */
+header{
+  background:#004aad;color:#fff;
+  padding:16px 24px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:20px;
 }
-.user{
+header h1{margin:0;font-size:20px}
+.logout{
+  cursor:pointer;
+  background:#fff;
+  color:#004aad;
+  padding:8px 14px;
+  border-radius:8px;
   font-weight:600;
-  color:#0f172a;
+  transition:0.3s;
+}
+.logout:hover{background:#fe8282;}
+
+.user-info{display:flex; align-items:center; gap:15px;}
+.user-name{font-weight:600; color:#333;}
+.user-role{font-size:12px; color:#b71919; background:#64748b; padding:2px 8px; border-radius:4px;}
+.logout-btn{
+  background:#fee2e2; color:#991b1b; border:none; padding:8px 16px;
+  border-radius:6px; cursor:pointer; font-weight:600; font-size:13px;
+  transition:0.3s;
+}
+.logout-btn:hover{background:#fecaca;}
+
+/* Layout */
+.container{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  min-height:calc(100vh - 64px);
 }
 
-/* Cards */
+/* Sidebar */
+aside{
+  background:#fff;
+  padding:20px;
+  border-right:1px solid #ddd;
+}
+.user{
+  font-weight:700;
+  margin-bottom:6px;
+}
+.role{
+  font-size:13px;
+  color:#666;
+  margin-bottom:20px;
+}
+.menu a{
+  display:block;
+  padding:12px;
+  border-radius:8px;
+  color:#333;
+  text-decoration:none;
+  margin-bottom:8px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:15px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px;
+  border-radius:10px;
+  background:linear-gradient(145deg,#ffffff,#e6ecff);
+  box-shadow:
+    4px 4px 10px rgba(0,0,0,0.12),
+    -4px -4px 10px rgba(255,255,255,0.9);
+}
+.menu a:hover{
+  transform:translateY(-2px) scale(1.1);
+  box-shadow:
+    inset 4px 4px 10px rgba(0,0,0,0.12),
+    inset -4px -4px 10px rgba(255,255,255,0.9);
+}
+.menu a::first-letter{
+  font-size:18px;
+}
+
+/* Main */
+main{
+  padding:24px;
+}
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
-  margin-bottom:25px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 .card{
   background:#fff;
-  padding:18px;
-  border-radius:10px;
-  box-shadow:0 5px 12px rgba(0,0,0,.05);
-}
-.card h3{font-size:14px;color:#64748b}
-.card p{font-size:26px;font-weight:700;color:#0f172a}
-
-/* Section */
-.section{
-  background:#fff;
   padding:20px;
-  border-radius:10px;
-  box-shadow:0 5px 12px rgba(0,0,0,.05);
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
-.section h3{
-  margin-bottom:15px;
-  font-size:18px;
-}
-.activity li{
-  padding:10px 0;
-  border-bottom:1px solid #e2e8f0;
-  color:#334155;
-}
-
-/* Logout */
-.logout{
-  margin-top:20px;
-  background:#ef4444;
-  border:none;
-  width:100%;
-  padding:10px;
-  color:#fff;
-  border-radius:6px;
-  cursor:pointer;
-}
+.card h3{margin:0 0 10px}
+.hidden{display:none}
 </style>
 </head>
 
 <body>
 
-<script src="js/guard.js"></script>
-
-<div class="app">
-
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <h2>Testara</h2>
-    <nav id="sidebar"></nav>
-    <button class="logout" onclick="logout()">Logout</button>
+<header>
+  <h1>Testara Dashboard</h1>
+  <div class="user-info">
+    <div id="dispName" class="user-name">Employee Name</div>
+    <span id="dispRole" class="user-role">Role</span>
+    <button onclick="handleLogout()" class="logout-btn"><i class="fa-solid fa-power-off"></i> Logout</button>
   </div>
+  <div class="logout" onclick="logout()"><i class="fa-solid fa-power-off"></i> Logout</div>
+</header>
 
-  <!-- CONTENT -->
-  <div class="content">
+<div class="container">
+  <aside>
+    <div class="user" id="empName"></div>
+    <div class="role" id="empRole"></div>
+    <div class="menu" id="menu"></div>
+  </aside>
 
-    <!-- TOP BAR -->
-    <div class="topbar">
-      <h2>Dashboard</h2>
-      <div class="user" id="adminName"></div>
-    </div>
+  <main>
+    <h2 id="welcome"></h2>
 
-    <!-- STATS -->
     <div class="cards">
-      <div class="card">
-        <h3>Total Students</h3>
-        <p>1,245</p>
+      <div class="card" id="card-tests">
+        <h3>Tests</h3>
+        <p>Create & manage exams</p>
       </div>
-      <div class="card">
-        <h3>Active Tests</h3>
-        <p>32</p>
+
+      <div class="card" id="card-questions">
+        <h3>Questions</h3>
+        <p>Question bank</p>
       </div>
-      <div class="card">
-        <h3>Today's Attempts</h3>
-        <p>486</p>
+
+      <div class="card" id="card-users">
+        <h3>Employees</h3>
+        <p>Manage staff</p>
       </div>
-      <div class="card">
-        <h3>Monthly Revenue</h3>
-        <p>₹1.8L</p>
+
+      <div class="card" id="card-payments">
+        <h3>Payments</h3>
+        <p>Finance & invoices</p>
       </div>
     </div>
-
-    <!-- ACTIVITY -->
-    <div class="section">
-      <h3>Recent Activity</h3>
-      <ul class="activity">
-        <li>👨‍🎓 New student registered</li>
-        <li>📝 SSC Mock Test submitted</li>
-        <li>💳 Payment received ₹499</li>
-        <li>📊 Result generated</li>
-      </ul>
-    </div>
-
-  </div>
+  </main>
 </div>
 
-<script src="js/sidebar.js"></script>
-
 <script>
-/* Show admin name + role */
-document.getElementById("adminName").innerText =
-  user.name + " (" + user.role.replace("_"," ") + ")";
+/* 🔐 AUTH CHECK */
+const emp = JSON.parse(localStorage.getItem("employee"));
+if(!emp || Date.now() > emp.expires_at){
+  localStorage.removeItem("employee");
+  location.href="/admin/login.html";
+}
 
-/* Active menu highlight */
-document.querySelectorAll("#sidebar a").forEach(a=>{
-  if(a.href.includes("dashboard.html")){
-    a.classList.add("active");
-  }
-});
+/* UI INFO */
+document.getElementById("dispName").innerText = emp.name;
+document.getElementById("dispRole").innerText = emp.role.toUpperCase();
+document.getElementById("empName").innerText = emp.name;
+document.getElementById("empRole").innerText = emp.role.toUpperCase();
+document.getElementById("welcome").innerText = `Welcome, ${emp.name}`;
 
-/* Logout */
+/* MENU + PERMISSIONS */
+const menu = document.getElementById("menu");
+
+
+// function addMenu(icon, text, link){
+//   const a = document.createElement("a");
+//   a.href = link;
+//   a.innerHTML = `<i class="${icon}"></i> ${text}`;
+//   menu.appendChild(a);
+// }
+// if(emp.role==="admin"){
+//   addMenu("fa-solid fa-gauge-high", "Dashboard", "#");
+//   addMenu("fa-solid fa-users", "Employees", "/admin/employees.html");
+//   addMenu("fa-solid fa-file-lines", "Tests", "/admin/tests.html");
+//   addMenu("fa-solid fa-circle-question", "Questions", "/admin/questions.html");
+//   addMenu("fa-solid fa-credit-card", "Payments", "/admin/payments.html");
+// }
+
+function addMenu(text, link){
+  const a=document.createElement("a");
+  a.href=link;
+  a.innerText=text;
+  menu.appendChild(a);
+}
+
+// if(emp.role === "admin"){
+//   addMenu("🏠 Dashboard", "#");
+//   addMenu("👥 Employees", "/admin/employees.html");
+//   addMenu("📝 Tests", "/admin/tests.html");
+//   addMenu("👨‍💼🧾 Create Task", "/admin/create-task.html");
+//   addMenu("❓ Questions", "/admin/questions.html");
+//   addMenu("💳 Payments", "/admin/payments.html");
+// }
+if(emp.role === "admin"){
+  addMenu("🏠 Dashboard", "/admin/dashboard.html");
+  addMenu("👨‍🏫 My Task","/admin/teacher/my-task.html");
+  addMenu("🧾 Create Task", "/admin/create-task.html");
+  addMenu("📝 Manage Tests", "/admin/tests.html");
+  addMenu("❓ Question Bank", "/admin/questions.html");
+  addMenu("✅ Question Approve", "/admin/questions-approval.html");
+  addMenu("📊 Question Analytics", "/admin/question-analytics.html");
+  addMenu("🎓 Students", "/admin/students.html");
+  addMenu("📈 Results", "/admin/results.html");
+  addMenu("🔔 Notifications", "/admin/notifications.html");
+  addMenu("💳 Payments", "/admin/payments.html");
+  addMenu("📑 Reports", "/admin/reports.html");
+  addMenu("👨‍💼 Employees", "/admin/contributors.html");
+  addMenu("🧾 Employee Work", "/admin/work_submissions.html");
+  addMenu("🎓 Certificates", "/admin/certificates.html");
+}
+
+
+else if(emp.role==="teacher"){
+  addMenu("🏠 Dashboard","#");
+  addMenu("👨‍🏫 My Task","/admin/teacher/my-task.html");
+  addMenu("📝 My Tests","/admin/tests.html");
+  addMenu("❓ Question Bank","/admin/questions.html");
+
+  document.getElementById("card-users").classList.add("hidden");
+  document.getElementById("card-payments").classList.add("hidden");
+
+}
+else if(emp.role==="accountant"){
+  addMenu("🏠 Dashboard","#");
+  addMenu("💳 Payments","/admin/payments.html");
+  addMenu("📊 Reports","/admin/reports.html");
+
+  document.getElementById("card-tests").classList.add("hidden");
+  document.getElementById("card-questions").classList.add("hidden");
+  document.getElementById("card-users").classList.add("hidden");
+
+}else{
+  addMenu("Dashboard","#");
+
+  document.querySelectorAll(".card").forEach(c=>c.classList.add("hidden"));
+}
+
+/* LOGOUT */
 function logout(){
-  localStorage.removeItem("adminUser");
-  location.href="login.html";
+  localStorage.removeItem("employee");
+  location.href="/admin/login.html";
 }
 </script>
 
