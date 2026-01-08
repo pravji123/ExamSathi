@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Tasks | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box;font-family:"Segoe UI",Arial}
+body{margin:0;background:#f4f6f8}
+
+/* Header */
+header{
+  background:#004aad;color:#fff;
+  padding:16px 24px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+header h1{margin:0;font-size:20px}
+.logout{
+  cursor:pointer;background:#fff;color:#004aad;
+  padding:8px 14px;border-radius:8px;font-weight:600;
+}
+
+/* Layout */
+.container{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  min-height:calc(100vh - 64px);
+}
+
+/* Sidebar */
+aside{
+  background:#fff;padding:20px;border-right:1px solid #ddd;
+}
+.menu a{
+  display:block;padding:12px;border-radius:8px;
+  text-decoration:none;color:#333;margin-bottom:8px;
+}
+.menu a.active,.menu a:hover{background:#e0e7ff}
+
+/* Main */
+main{padding:24px}
+.card{
+  background:#fff;padding:20px;border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* Table */
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px;font-size:14px;border-bottom:1px solid #eee}
+th{background:#f1f5ff;text-align:left}
+
+/* Status */
+.status{
+  padding:4px 10px;border-radius:20px;
+  font-size:12px;font-weight:600;
+}
+.pending{background:#fff3cd;color:#856404}
+.in_progress{background:#cce5ff;color:#004085}
+.completed{background:#d4edda;color:#155724}
+
+/* Progress */
+.progress{
+  background:#e5e7eb;border-radius:8px;overflow:hidden;height:14px;
+}
+.progress span{
+  display:block;height:100%;
+  background:#004aad;color:#fff;
+  font-size:10px;text-align:center;
+}
+
+/* Buttons */
+.btn{
+  padding:6px 12px;border:none;border-radius:6px;
+  font-size:13px;cursor:pointer;
+}
+.start{background:#0d6efd;color:#fff}
+.complete{background:#198754;color:#fff}
+.disabled{background:#ccc;color:#666}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>My Tasks</h1>
+  <div class="logout" onclick="logout()">Logout</div>
+</header>
+
+<div class="container">
+  <aside>
+    <div class="menu">
+      <a href="employee-dashboard.html">Dashboard</a>
+      <a class="active" href="my-tasks.html">Tasks</a>
+    </div>
+  </aside>
+
+  <main>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Exam</th>
+            <th>Subject</th>
+            <th>Total Q</th>
+            <th>Progress</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const emp = JSON.parse(localStorage.getItem("employee"));
+if(!emp) location.href="/login.html";
+
+const sb = supabase.createClient(
+  "https://qzriaykqdrhbtcgbpxpg.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6cmlheWtxZHJoYnRjZ2JweHBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwMTcwMTAsImV4cCI6MjA3NTU5MzAxMH0.qRAQumkwN-JtxDizWwLRfPa8t0N68YGWdYKhQrhx7e8"
+);
+
+async function loadTasks(){
+  const { data, error } = await sb
+    .from("tasks")
+    .select("*")
+    .eq("employee_id", emp.employee_id)
+    .order("created_at",{ascending:false});
+
+  tbody.innerHTML = "";
+
+  if(error){
+    tbody.innerHTML = `<tr><td colspan="6">${error.message}</td></tr>`;
+    return;
+  }
+
+  if(!data || data.length===0){
+    tbody.innerHTML = `<tr><td colspan="6">No tasks assigned</td></tr>`;
+    return;
+  }
+
+  for(const t of data){
+    const progress = t.progress || 0;
+
+    /* ✅ AUTO COMPLETE (SAFE PLACE) */
+    if(t.status === "in_progress" && progress >= 100){
+      await sb.from("tasks").update({
+        status:"completed",
+        progress:100,
+        completed_at:new Date().toISOString()
+      }).eq("id", t.id);
+
+      t.status = "completed"; // UI sync
+    }
+
+    tbody.innerHTML += `
+      <tr>
+        <td>${t.exam}</td>
+        <td>${t.subject}</td>
+        <td>${t.total_questions}</td>
+
+        <td>
+          <div class="progress">
+            <span style="width:${progress}%">${progress}%</span>
+          </div>
+        </td>
+
+        <td>
+          <span class="status ${t.status}">
+            ${t.status.replace("_"," ").toUpperCase()}
+          </span>
+        </td>
+
+        <td>
+          ${
+            t.status === "pending"
+              ? `<button class="btn start" onclick="openTask('${t.id}','start')">Start</button>`
+              : t.status === "in_progress"
+                ? `<button class="btn start" onclick="openTask('${t.id}','resume')">Resume</button>`
+                : `<button class="btn disabled" disabled>Completed</button>`
+          }
+        </td>
+      </tr>`;
+  }
+}
+
+async function openTask(taskId, mode){
+  if(mode === "start"){
+    await sb.from("tasks")
+      .update({
+        status:"in_progress",
+        started_at:new Date().toISOString()
+      })
+      .eq("id", taskId);
+  }
+
+  window.location.href = `question-create.html?task_id=${taskId}`;
+}
+
+function logout(){
+  localStorage.removeItem("employee");
+  location.href="/login.html";
+}
+
+loadTasks();
+</script>
+
+
+</body>
+</html>
