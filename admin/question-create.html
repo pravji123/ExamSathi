@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Question Create | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    /* ================= RESET & BASE ================= */
+*{
+  box-sizing:border-box;
+  font-family:"Inter","Segoe UI",Arial,sans-serif;
+}
+body{
+  margin:0;
+  background:#f4f6f8;
+  color:#1f2937;
+}
+h3,h4{
+  margin:0 0 10px;
+  font-weight:600;
+}
+label{
+  font-size:13px;
+  font-weight:600;
+  color:#374151;
+}
+
+/* ================= HEADER ================= */
+header{
+  background:linear-gradient(135deg,#004aad,#2563eb);
+  color:#fff;
+  padding:14px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+header h3{
+  font-size:18px;
+}
+header div{
+  font-size:14px;
+  opacity:.9;
+}
+header div:hover{
+  opacity:1;
+}
+
+/* ================= LAYOUT ================= */
+.container{
+  display:flex;
+  min-height:calc(100vh - 60px);
+}
+
+/* Sidebar */
+.sidebar{
+  width:220px;
+  background:#ffffff;
+  border-right:1px solid #e5e7eb;
+  padding:16px;
+}
+.sidebar a{
+  display:block;
+  padding:10px 12px;
+  border-radius:8px;
+  font-weight:600;
+  color:#2563eb;
+  background:#eef2ff;
+}
+
+/* Main */
+main{
+  flex:1;
+  padding:18px;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:18px;
+}
+
+/* Panels */
+.panel{
+  background:#fff;
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ================= FORM ================= */
+.field{
+  margin-bottom:14px;
+}
+textarea,
+input,
+select{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #d1d5db;
+  font-size:14px;
+}
+textarea:focus,
+input:focus,
+select:focus{
+  outline:none;
+  border-color:#2563eb;
+  box-shadow:0 0 0 2px rgba(37,99,235,.15);
+}
+
+/* ================= TOOLBAR ================= */
+.toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:12px;
+  background:#f1f5f9;
+  padding:10px;
+  border-radius:10px;
+}
+.toolbar button{
+  border:none;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:13px;
+  cursor:pointer;
+  transition:.2s;
+}
+.toolbar button:hover{
+  transform:translateY(-1px);
+}
+.toolbar .orange{background:#f97316;color:#fff}
+.toolbar .gray{background:#64748b;color:#fff}
+.toolbar .green{background:#16a34a;color:#fff}
+
+/* ================= OPTIONS ================= */
+.option{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:8px;
+}
+.option span{
+  width:22px;
+  height:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  background:#2563eb;
+  color:#fff;
+  font-size:12px;
+  font-weight:700;
+}
+.option input{
+  flex:1;
+}
+
+/* ================= MATCH PREVIEW ================= */
+.match-preview{
+  display:flex;
+  gap:24px;
+}
+.match-preview .col{
+  flex:1;
+}
+.match-preview ul{
+  margin:6px 0 0;
+  padding-left:18px;
+}
+
+/* ================= BUTTONS ================= */
+button.save{
+  background:#2563eb;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:600;
+}
+button.del{
+  background:#dc2626;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:10px;
+  margin-left:8px;
+}
+button.save:hover,
+button.del:hover{
+  opacity:.9;
+}
+
+/* ================= QUESTION LIST ================= */
+.q-item{
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:6px;
+  cursor:pointer;
+  font-size:14px;
+  background:#f8fafc;
+}
+.q-item:hover{
+  background:#eef2ff;
+}
+
+/* ================= PREVIEW ================= */
+.preview{
+  background:#f8fafc;
+  border:1px dashed #c7d2fe;
+  border-radius:10px;
+  padding:14px;
+  font-size:14px;
+  line-height:1.6;
+}
+.preview b{
+  color:#111827;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1100px){
+  main{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+  .container{
+    flex-direction:column;
+  }
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:1px solid #e5e7eb;
+  }
+  header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h3>Question Create</h3>
+  <div onclick="logout()" style="cursor:pointer">Logout</div>
+</header>
+
+<div class="container">
+    <div class="sidebar">
+        <a class="active">Question Create</a>
+    </div>
+    <main>
+        <div class="panel">
+            <!-- RIGHT -->
+            <h3>Question Typing Tool</h3>
+            <!-- TOOLBAR -->
+            <div class="toolbar">
+                <!-- Text formatting -->
+                <button class="orange" onmousedown="wrapText('*','*')"><b>B</b></button>
+                <button class="orange" onmousedown="wrapText('_','_')"><i>I</i></button>
+                <button class="orange" onmousedown="newParagraph()">¶</button>
+
+                <!-- Maths -->
+                <button onmousedown="insert('√')">√</button>
+                <button onmousedown="insert('π')">π</button>
+                <button onmousedown="insert('∑')">∑</button>
+                <button onmousedown="insert('×')">×</button>
+                <button onmousedown="insert('÷')">÷</button>
+                <button onmousedown="insert('²')">x²</button>
+                <button onmousedown="insert('³')">x³</button>
+
+                <!-- Reasoning -->
+                <button class="gray" onmousedown="insert('→')">→</button>
+                <button class="gray" onmousedown="insert('↔')">↔</button>
+                <button class="gray" onmousedown="insert('≠')">≠</button>
+                <button class="gray" onmousedown="insert('≤')">≤</button>
+                <button class="gray" onmousedown="insert('≥')">≥</button>
+                <button class="gray" onmousedown="insert('∴')">∴</button>
+                <button class="gray" onmousedown="insert('∵')">∵</button>
+
+                <!-- Brackets -->
+                <button class="green" onmousedown="wrapText('(',')')">( )</button>
+                <button class="green" onmousedown="wrapText('[',']')">[ ]</button>
+                <button class="green" onmousedown="wrapText('{','}')">{ }</button>
+            </div>
+
+            <div class="field">
+                <label>Question Type</label>
+                <select id="qType" onchange="toggleType()">
+                    <option value="mcq">MCQ</option>
+                    <option value="numerical">Numerical</option>
+                    <option value="match">Match the Following</option>
+                    <option value="assertion_reason">Assertion – Reason</option>
+                </select>
+            </div>
+            <!-- TEXTAREA -->
+            <div class="field">
+                <label>Question</label>
+                <textarea id="question" rows="3" placeholder="Type question here…
+                Select text and click B / I to apply formatting"></textarea>
+            </div>
+
+            <div id="assertionBox" style="display:none">
+                <textarea id="assertion" placeholder="Assertion"></textarea>
+                <textarea id="reason" placeholder="Reason"></textarea>
+            </div>
+
+            <div id="matchBox" style="display:none">
+                <h4>Column A</h4>
+                <div id="colA"></div>
+                <button onclick="addMatch(colA)">➕ Add</button>
+
+                <h4>Column B</h4>
+                <div id="colB"></div>
+                <button onclick="addMatch(colB)">➕ Add</button>
+            </div><hr>
+            <h4>Options</h4>
+            <div id="optionsBox"></div>
+            <button onclick="addExtraOption()">➕ Add Option</button>
+
+            <div class="field">
+                <label>Correct Option (A / B / C / ...)</label>
+                <input id="correct">
+            </div>
+
+            <div class="field">
+                <label>Explanation</label>
+                <textarea id="explanation"></textarea>
+            </div>
+
+            <button class="save" onclick="saveQuestion()">Save</button>
+            <button class="del" onclick="deleteQuestion()" id="delBtn" style="display:none">Delete</button>
+        </div>
+        <!-- QUESTION LIST -->
+        <div class="panel">
+            <h4>Questions</h4>
+            <div id="qList"></div>
+            <p id="progress"></p><hr>
+            <h4>Live Preview</h4>
+            <div class="preview" id="preview"></div>
+        </div>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const supabaseClient = supabase.createClient(
+  "https://qzriaykqdrhbtcgbpxpg.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6cmlheWtxZHJoYnRjZ2JweHBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwMTcwMTAsImV4cCI6MjA3NTU5MzAxMH0.qRAQumkwN-JtxDizWwLRfPa8t0N68YGWdYKhQrhx7e8"
+
+);
+
+const sb = supabaseClient; // ✅ REQUIRED
+const taskId = new URLSearchParams(location.search).get("task_id");
+if (!taskId) {
+  alert("Invalid task. Please open task from My Tasks.");
+  location.href = "my-tasks.html";
+}
+let currentId=null;
+
+/* TOOLS */
+/* ================= INSERT AT CURSOR ================= */
+function insert(x){
+  const t = document.activeElement;
+  if(!t || t.tagName !== "TEXTAREA") return;
+  const s = t.selectionStart;
+  const e = t.selectionEnd;
+  t.value = t.value.slice(0,s) + x + t.value.slice(e);
+  t.selectionStart = t.selectionEnd = s + x.length;
+  t.focus();
+  renderPreview();
+}
+
+/* ================= WRAP SELECTED TEXT ================= */
+function wrapText(l,r){
+  const t = document.activeElement;
+  if(!t || t.tagName !== "TEXTAREA") return;
+  const s = t.selectionStart;
+  const e = t.selectionEnd;
+  if(s === e) return; // no selection
+  const sel = t.value.slice(s,e);
+  t.value =t.value.slice(0,s) +l + sel + r +t.value.slice(e);
+  t.selectionStart = s + l.length;t.selectionEnd = e + l.length;
+  t.focus();
+  renderPreview();
+}
+
+function newParagraph(){
+  insert("\n\n");
+}
+
+
+function formatText(str){
+  if(!str) return "";
+  let text = str;
+  // Bold *text*
+  text = text.replace(/\*(.*?)\*/g, "<b>$1</b>");
+  // Italic _text_
+  text = text.replace(/_(.*?)_/g, "<i>$1</i>");
+  // Line breaks
+  text = text.replace(/\n/g, "<br>");
+  return text;
+}
+
+/* OPTIONS */
+function initOptions(){
+  optionsBox.innerHTML="";
+  ["A","B","C","D"].forEach(l=>addOption(l));
+}
+function addOption(label,text=""){
+  const d=document.createElement("div");
+  d.className="option";
+  d.innerHTML=`<span>${label}</span><input value="${text}">`;
+  optionsBox.appendChild(d);
+}
+function addExtraOption(){
+  const label=String.fromCharCode(65+optionsBox.children.length);
+  addOption(label);
+}
+
+/* MATCH */
+function addMatch(box, value=""){
+  const i=document.createElement("input");
+  i.value = value;
+  i.placeholder = "Enter text";
+  i.oninput = renderPreview;   // 🔥 THIS IS THE KEY
+  box.appendChild(i);
+}
+
+
+/* TOGGLE */
+function toggleType(){
+  assertionBox.style.display=qType.value==="assertion_reason"?"block":"none";
+  matchBox.style.display=qType.value==="match"?"block":"none";
+  renderPreview();
+}
+
+/* SAVE */
+async function saveQuestion(){
+  // 🔐 PREVENT OVER-CREATION
+  const { data: totalQ, error: eTask } = await sb.from("tasks").select("total_questions").eq("id", taskId).single();
+
+  if(eTask || !totalQ){
+    alert("Task not found");
+    return;
+  }
+  
+  const { count } = await sb
+    .from("questions")
+    .select("*", { count:"exact", head:true })
+    .eq("task_id", taskId);
+
+  if (count >= totalQ.total_questions && !currentId) {
+    alert("Task already completed. You cannot add more questions.");
+    return;
+  }
+
+  const options=[...optionsBox.children].map(o=>({
+    label:o.children[0].innerText,
+    text:o.children[1].value
+  }));
+
+  const payload={
+    task_id:taskId,
+    question_type:qType.value,
+    question_json:{
+      question:question.value,
+      assertion:assertion.value,
+      reason:reason.value,
+      column_a:[...colA.children].map(i=>i.value),
+      column_b:[...colB.children].map(i=>i.value),
+      options,
+      correct:correct.value
+    },
+    explanation:{text:explanation.value}
+  };
+
+  let res=currentId
+    ? await supabaseClient.from("questions").update(payload).eq("id",currentId)
+    : await supabaseClient.from("questions").insert(payload);
+
+
+  if(res.error){alert(res.error.message);return;}
+  reset();
+  await loadQuestions();   // 👈 ensure async complete
+  await updateTaskProgress(taskId);
+}
+
+/* LOAD */
+async function loadQuestions(){
+  const {data}=await supabaseClient.from("questions")
+    .select("*").eq("task_id",taskId).order("created_at");
+  qList.innerHTML="";
+  data.forEach((q,i)=>{
+    const d=document.createElement("div");
+    d.className="q-item";
+    d.innerText=`Q${i+1}. ${q.question_json.question}`;
+    d.onclick=()=>editQuestion(q);
+    qList.appendChild(d);
+  });
+//   progress.innerText=`Total: ${data.length}`;
+  progress.innerText = `Total Questions: ${data.length}`;
+
+}
+loadQuestions();
+
+/* EDIT */
+function editQuestion(q){
+  currentId=q.id;
+  qType.value=q.question_type;toggleType();
+  question.value=q.question_json.question;
+  assertion.value=q.question_json.assertion||"";
+  reason.value=q.question_json.reason||"";
+  correct.value=q.question_json.correct||"";
+  explanation.value=q.explanation?.text||"";
+
+  colA.innerHTML="";(q.question_json.column_a||[]).forEach(v=>{addMatch(colA, v);});
+  colB.innerHTML="";(q.question_json.column_b||[]).forEach(v=>{addMatch(colB, v);});
+
+
+  optionsBox.innerHTML="";
+  q.question_json.options.forEach(o=>addOption(o.label,o.text));
+
+  delBtn.style.display="inline";
+  renderPreview();
+}
+
+/* DELETE */
+async function deleteQuestion(){
+  if(confirm("Delete?")){
+    await supabaseClient.from("questions").delete().eq("id",currentId);
+    reset();loadQuestions();
+  }
+  await updateTaskProgress(taskId);
+}
+
+/* PREVIEW */
+function renderPreview(){
+  let html = "";
+  /* QUESTION */
+  html += `<b>Q.</b> ${formatText(question.value)}<br><br>`;
+  /* ASSERTION – REASON */
+  if(qType.value === "assertion_reason"){
+    html += `<b>Assertion:</b> ${formatText(assertion.value)}<br>`;
+    html += `<b>Reason:</b> ${formatText(reason.value)}<br><br>`;
+  }
+  /* MATCH THE FOLLOWING */
+  if(qType.value === "match"){
+    html += `
+      <div class="match-preview">
+        <div class="col">
+          <b>Column A</b>
+          <ul>
+            ${[...colA.querySelectorAll("input")]
+              .map(i => i.value.trim() ? `<li>${formatText(i.value)}</li>` : "")
+              .join("")}
+          </ul>
+        </div>
+        <div class="col">
+          <b>Column B</b>
+          <ul>
+            ${[...colB.querySelectorAll("input")]
+              .map(i => i.value.trim() ? `<li>${formatText(i.value)}</li>` : "")
+              .join("")}
+          </ul>
+        </div>
+      </div>
+      <br>
+    `;
+  }
+  /* OPTIONS */
+  html += `<b>Options:</b><ol type="A">`;
+  [...optionsBox.children].forEach(o=>{
+    html += `<li>${formatText(o.children[1].value)}</li>`;
+  });
+  html += `</ol><br>`;
+  /* CORRECT ANSWER */
+  html += `<b>Correct Answer:</b> ${correct.value || "-"}<br><br>`;
+  /* EXPLANATION */
+  if(explanation.value.trim()){
+    html += `<b>Explanation:</b><br>${formatText(explanation.value)}`;
+  }
+  preview.innerHTML = html;
+}
+
+/* RESET */
+function reset(){
+  currentId=null;
+  question.value=assertion.value=reason.value=correct.value=explanation.value="";
+  colA.innerHTML=colB.innerHTML="";
+  initOptions();
+  delBtn.style.display="none";
+  preview.innerHTML="";
+}
+
+async function updateTaskProgress(taskId){
+
+  // 1️⃣ Total questions count
+  const { data: totalQ, error:e1 } = await sb
+    .from("tasks")
+    .select("total_questions")
+    .eq("id", taskId)
+    .single();
+
+  if(e1) return console.error(e1);
+
+  // 2️⃣ Created questions count
+  const { count, error:e2 } = await sb
+    .from("questions")
+    .select("*", { count:"exact", head:true })
+    .eq("task_id", taskId);
+
+  if(e2) return console.error(e2);
+
+  // 3️⃣ Calculate progress
+  let progress = Math.round((count / totalQ.total_questions) * 100);
+  if(progress > 100) progress = 100;
+
+  // 4️⃣ Update task
+  const updatePayload = {
+    progress,
+    status: progress >= 100 ? "completed" : "in_progress",
+    completed_at: progress >= 100 ? new Date().toISOString() : null
+  };
+
+  const { error:e3 } = await sb
+    .from("tasks")
+    .update(updatePayload)
+    .eq("id", taskId);
+
+  if(e3) console.error("UPDATE ERROR:", e3);
+}
+
+function logout(){location.href="/login.html";}
+initOptions();
+</script>
+
+</body>
+</html>
