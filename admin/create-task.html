@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Task | Testara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box;font-family:"Segoe UI",Arial}
+body{margin:0;background:#f4f6f8}
+/* Header */
+header{
+  background:#004aad;color:#fff;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1{margin:0;font-size:20px}
+.logout{
+  cursor:pointer;
+  background:#fff;
+  color:#004aad;
+  padding:8px 14px;
+  border-radius:8px;
+  font-weight:600;
+}
+.container{display:grid;grid-template-columns:260px 1fr;
+min-height:calc(100vh - 64px)}
+aside{background:#fff;padding:20px;border-right:1px solid #ddd}
+.menu a{display:block;padding:12px;border-radius:8px;
+text-decoration:none;color:#333;margin-bottom:8px}
+.menu a.active,.menu a:hover{background:#e0e7ff}
+
+/* Main */
+main{padding:24px}
+.card{
+  background:#fff;
+  padding:24px;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  max-width:760px;
+}
+
+/* Form */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.full{grid-column:1/-1}
+
+.field label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+  font-size:14px;
+}
+.field input,.field select,.field textarea{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+.readonly{
+  background:#f1f5f9;
+}
+textarea{resize:vertical;min-height:80px}
+
+button{
+  margin-top:10px;
+  padding:14px 22px;
+  border:none;
+  border-radius:10px;
+  background:#004aad;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+button:disabled{opacity:.6}
+
+.msg{margin-top:12px;font-size:14px}
+.success{color:#15803d}
+.error{color:#b91c1c}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🧾 Create Task</h1>
+  <div class="logout" onclick="logout()">Logout</div>
+</header>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="menu">
+      <a href="dashboard.html">🏠 Dashboard</a>
+      <a class="active" href="create-task.html">🧾 Create Task</a>
+      <a href="tests.html">📝 Tests</a>
+      <a href="questions.html">❓ Questions</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+    <div class="card">
+      <h2>Assign Task to Employee</h2>
+
+      <form id="taskForm">
+
+        <div class="grid">
+
+          <!-- Employee -->
+          <div class="field full">
+            <label>Employee *</label>
+            <select id="employee_id" required>
+              <option value="">Loading employees...</option>
+            </select>
+          </div>
+
+          <!-- Role (auto) -->
+          <div class="field">
+            <label>Role</label>
+            <input id="role" class="readonly" readonly>
+          </div>
+
+          <!-- Subject (auto if teacher) -->
+          <div class="field">
+            <label>Subject</label>
+            <input id="subject" class="readonly" readonly>
+          </div>
+
+          <!-- Exam -->
+          <div class="field">
+            <label>Exam *</label>
+            <input id="exam" placeholder="SSC / UPSC / Banking" required>
+          </div>
+
+          <!-- Total Questions -->
+          <div class="field">
+            <label>Total Questions *</label>
+            <input type="number" id="total_questions" min="1" required>
+          </div>
+
+          <!-- Topics -->
+          <div class="field full">
+            <label>Topics</label>
+            <textarea id="topics"></textarea>
+          </div>
+
+          <!-- Due Date -->
+          <div class="field">
+            <label>Due Date *</label>
+            <input type="date" id="due_date" required>
+          </div>
+
+          <!-- Status -->
+          <div class="field">
+            <label>Status</label>
+            <select id="status">
+              <option value="pending">Pending</option>
+              <option value="in_progress">In Progress</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+
+        </div>
+
+        <button id="submitBtn" type="submit">➕ Create Task</button>
+        <div class="msg" id="msg"></div>
+
+      </form>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* AUTH */
+const admin = JSON.parse(localStorage.getItem("employee"));
+if(!admin) location.href="employee-login.html";
+
+/* SUPABASE */
+const sb = supabase.createClient(
+  "https://qzriaykqdrhbtcgbpxpg.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6cmlheWtxZHJoYnRjZ2JweHBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwMTcwMTAsImV4cCI6MjA3NTU5MzAxMH0.qRAQumkwN-JtxDizWwLRfPa8t0N68YGWdYKhQrhx7e8"
+);
+
+let EMP_MAP = {};
+
+/* LOAD EMPLOYEES WITH ROLE & SUBJECT */
+async function loadEmployees(){
+  const { data, error } = await sb
+    .from("employees")
+    .select("employee_id, name, role, designation")
+    .order("name");
+
+  const sel = document.getElementById("employee_id");
+  sel.innerHTML = `<option value="">Select Employee</option>`;
+
+  if(error){
+    sel.innerHTML = `<option>Error loading</option>`;
+    return;
+  }
+
+  data.forEach(e=>{
+    EMP_MAP[e.employee_id] = e;
+
+    const opt = document.createElement("option");
+    opt.value = e.employee_id;
+    opt.textContent = `${e.name} (${e.employee_id})`;
+    sel.appendChild(opt);
+  });
+}
+loadEmployees();
+
+/* ON EMPLOYEE CHANGE → AUTO FILL ROLE & SUBJECT */
+employee_id.addEventListener("change", ()=>{
+  const emp = EMP_MAP[employee_id.value];
+  if(!emp){
+    role.value = "";
+    subject.value = "";
+    return;
+  }
+
+  role.value = emp.role;
+  subject.value = emp.role === "teacher" ? (emp.designation || "") : "N/A";
+});
+
+/* CREATE TASK */
+taskForm.addEventListener("submit", async e=>{
+  e.preventDefault();
+
+  submitBtn.disabled = true;
+  msg.innerText = "Saving...";
+  msg.className = "msg";
+
+  const payload = {
+    employee_id: employee_id.value,
+    role: role.value,
+    subject: subject.value,
+    exam: exam.value.trim(),
+    topics: topics.value.trim(),
+    total_questions: Number(total_questions.value),
+    due_date: due_date.value,
+    status: status.value,
+    created_by: admin.employee_id
+  };
+
+  const { error } = await sb.from("tasks").insert(payload);
+
+  submitBtn.disabled = false;
+
+  if(error){
+    msg.innerText = error.message;
+    msg.classList.add("error");
+    return;
+  }
+
+  msg.innerText = "✅ Task created successfully";
+  msg.classList.add("success");
+  taskForm.reset();
+  role.value = subject.value = "";
+});
+
+/* LOGOUT */
+function logout(){
+  localStorage.removeItem("employee");
+  location.href="/admin/login.html";
+}
+</script>
+
+</body>
+</html>
