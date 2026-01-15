@@ -246,6 +246,14 @@ else if(emp.role==="accountant"){
   document.getElementById("card-questions").classList.add("hidden");
   document.getElementById("card-users").classList.add("hidden");
 
+}else if(emp.role==="employee"){
+  addMenu("🏠 Dashboard", "/admin/dashboard.html");
+  addMenu("👨‍💼 Employees", "/admin/contributors.html");
+  addMenu("🔔 Notifications", "/admin/notifications.html");
+  addMenu("💳 Payments", "/admin/payments.html");
+  addMenu("📑 Reports", "/admin/reports.html");
+  addMenu("🧾 Employee Work", "/admin/work_submissions.html");
+  addMenu("🎓 Certificates", "/admin/certificates.html");
 }else{
   addMenu("Dashboard","#");
 
@@ -261,5 +269,6 @@ function logout(){
 
 </body>
 </html>
+
 
 
