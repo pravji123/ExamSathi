@@ -301,12 +301,12 @@ button.del:hover{
             <div class="field">
                 <label>Question</label>
                 <textarea id="question" rows="3" placeholder="Type question here…
-                Select text and click B / I to apply formatting"></textarea>
+                Select text and click B / I to apply formatting" ></textarea>
             </div>
 
             <div id="assertionBox" style="display:none">
-                <textarea id="assertion" placeholder="Assertion"></textarea>
-                <textarea id="reason" placeholder="Reason"></textarea>
+                <textarea id="assertion" placeholder="Assertion" ></textarea>
+                <textarea id="reason" placeholder="Reason" ></textarea>
             </div>
 
             <div id="matchBox" style="display:none">
@@ -324,12 +324,12 @@ button.del:hover{
 
             <div class="field">
                 <label>Correct Option (A / B / C / ...)</label>
-                <input id="correct">
+                <input id="correct" required>
             </div>
 
             <div class="field">
                 <label>Explanation</label>
-                <textarea id="explanation"></textarea>
+                <textarea id="explanation" required></textarea>
             </div>
 
             <button class="save" onclick="saveQuestion()">Save</button>
@@ -355,10 +355,12 @@ const supabaseClient = supabase.createClient(
 );
 
 const sb = supabaseClient; // ✅ REQUIRED
+const employee = JSON.parse(localStorage.getItem("employee"));
+
 const taskId = new URLSearchParams(location.search).get("task_id");
 if (!taskId) {
   alert("Invalid task. Please open task from My Tasks.");
-  location.href = "my-tasks.html";
+  location.href = "my-task.html";
 }
 let currentId=null;
 
@@ -484,8 +486,14 @@ async function saveQuestion(){
     ? await supabaseClient.from("questions").update(payload).eq("id",currentId)
     : await supabaseClient.from("questions").insert(payload);
 
+  if (res.error) {
+    console.error("QUESTION INSERT ERROR:", res.error);
+    alert(res.error.message);
+    return;
+  }
 
-  if(res.error){alert(res.error.message);return;}
+
+  // if(res.error){alert(res.error.message);return;}
   reset();
   await loadQuestions();   // 👈 ensure async complete
   await updateTaskProgress(taskId);
@@ -635,6 +643,8 @@ async function updateTaskProgress(taskId){
 
   if(e3) console.error("UPDATE ERROR:", e3);
 }
+
+
 
 function logout(){location.href="/login.html";}
 initOptions();
