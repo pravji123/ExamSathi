@@ -466,6 +466,7 @@ async function saveQuestion(){
 
   const payload={
     task_id:taskId,
+    created_by: employee.employee_id,   // ✅ FIXED
     question_type:qType.value,
     question_json:{
       question:question.value,
