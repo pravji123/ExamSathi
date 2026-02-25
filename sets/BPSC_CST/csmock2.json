@@ -1,0 +1,1578 @@
+{
+  "examName": "BPSC COMPUTER Mock Test Series 2026",
+  "testTitle": "COMPUTER SCIENCE TEST",
+  "time": 120,
+  "sections": [
+    "General Science",
+    "Computer Science"
+  ],
+  "languages": [
+    "English",
+    "Hindi"
+  ],
+  "questionType": "MCQ",
+  "marks": 1,
+  "negative": 0,
+  "questions": [
+    {
+      "section": "General Science",
+      "question": "How many 3-digit numbers are divisible by 5? / तीन अंकों की कितनी संख्याएँ 5 से विभाज्य हैं?",
+      "options": [
+        "180",
+        "200",
+        "120",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "180",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "The value of $(1+\\frac{1}{2})(1+\\frac{1}{3})(1+\\frac{1}{4})\\cdot\\cdot\\cdot(1+\\frac{1}{120})$ is / $(1+\\frac{1}{2})(1+\\frac{1}{3})(1+\\frac{1}{4})\\cdot\\cdot\\cdot(1+\\frac{1}{120})$ का मान है",
+      "options": [
+        "60.5",
+        "30.0",
+        "40.5",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "60.5",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "The distance between Delhi and Agra is 200 km. Suppose you are travelling from Delhi to Agra by car. If you maintain an average speed of 90 km/h for 120 km and an average speed of 40 km/h for the rest of the distance, what will be the average time taken to reach Agra? / दिल्ली और आगरा के बीच की दूरी 200 कि० मी० है। मान लीजिए आप दिल्ली से आगरा एक कार द्वारा जा रहे हैं। यदि आप 120 कि० मी० के लिए औसत गति 90 कि० मी०/घं० और बाकी दूरी के लिए औसत गति 40 कि० मी०/घं० बनाए रखते हैं, तो आपको आगरा पहुँचने में औसतन कितना समय लगेगा?",
+      "options": [
+        "3 hours 20 minutes / 3 घंटा 20 मिनट",
+        "3 hours 30 minutes / 3 घंटा 30 मिनट",
+        "4 hours 45 minutes / 4 घंटा 45 मिनट",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "3 hours 20 minutes / 3 घंटा 20 मिनट",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "A 10% loss on selling price is what percentage loss on the cost price? / विक्रय मूल्य पर 10% की हानि, लागत मूल्य पर कितने प्रतिशत की हानि है?",
+      "options": [
+        "$9\\frac{1}{11}\\%$",
+        "$9\\frac{2}{11}\\%$",
+        "10%",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "$9\\frac{1}{11}\\%$",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "A pizza delivery person distributes two-fifths of pizzas on the first day, three-fourths on the second day, and 9/16 on the third day. If he started with the same number of pizzas at the beginning of each day, on which day did he distribute the most? / एक पिज्जा वाला पहले दिन दो-पाँचवें पिज्जा, दूसरे दिन तीन-चौथाई पिज्जा और तीसरे दिन 9/16 पिज्जाओं का वितरण करता है। यदि प्रत्येक दिन की शुरुआत में उसके पास समान संख्या में पिज्जा थे, तो उसने किस दिन सबसे अधिक पिज्जा वितरित किए?",
+      "options": [
+        "First day / पहले दिन",
+        "Second day / दूसरे दिन",
+        "Third day / तीसरे दिन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Second day / दूसरे दिन",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "In an 18 m long room, the cost of laying a 75 cm wide carpet at the rate of ₹4.50 per meter is ₹810. The width of the room is / 18 मीटर लम्बे एक कमरे में, 75 से० मी० चौड़े गलीचे का उपयोग करके, गलीचा बिछाने की लागत ₹4.50 प्रति मीटर की दर से ₹810 है। कमरे की चौड़ाई है",
+      "options": [
+        "7 m / 7 मीटर",
+        "7.5 m / 7.5 मीटर",
+        "8 m / 8 मीटर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "7.5 m / 7.5 मीटर",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Two persons A and B complete a work in 15 days if they work together. Person A alone completes the same work in 20 days. In how many days will B alone be able to complete this work? / दो व्यक्ति A और B एक काम को 15 दिनों में पूरा कर देते हैं, यदि वे एक साथ काम करते हैं। व्यक्ति A अकेला उसी काम को 20 दिनों में पूरा कर देता है। यह काम अकेला B कितने दिनों में पूरा कर पाएगा?",
+      "options": [
+        "35 days / 35 दिनों में",
+        "25 days / 25 दिनों में",
+        "60 days / 60 दिनों में",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "60 days / 60 दिनों में",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "The sum of the numerator and denominator of a fraction is 11. If 1 is added to the numerator and 2 is subtracted from the denominator, it becomes 2/3. The fraction is / एक भिन्न के अंश और हर का योग 11 है। यदि अंश में 1 जोड़ दिया जाय और हर में से 2 घटा दिया जाय, तो यह 2/3 हो जाता है। भिन्न है",
+      "options": [
+        "5/6",
+        "6/5",
+        "3/8",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "3/8",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "The luminous flux produced by a 2 candela isotropic source is / 2 कैन्डेला का एक समदिक् स्रोत जितना प्रकाश फ्लक्स पैदा करता है, वह है",
+      "options": [
+        "27 lumen / 27 ल्यूमेन",
+        "4 lumen / 4 ल्यूमेन",
+        "8 lumen / 8 ल्यूमेन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "8 lumen / 8 ल्यूमेन",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Spray bottles used as window or household cleaners or perfume sprayers work on which of the following? / विंडो या घरेलू क्लीनर या पर्फ्यूम स्प्रेयर के रूप में इस्तेमाल की जाने वाली स्प्रे बोतलें निम्नलिखित में से किस पर काम करती हैं?",
+      "options": [
+        "Capillary action / केशिका क्रिया",
+        "Bernoulli's principle / बरनौली का सिद्धांत",
+        "Pascal's law / पास्कल का नियम",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Bernoulli's principle / बरनौली का सिद्धांत",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "The commercial name of basic lead carbonate is / क्षारीय (बेसिक) लेड कार्बोनेट का व्यापारिक नाम है",
+      "options": [
+        "White lead / सफेदा (ह्वाइट लेड)",
+        "Red lead / सिंदूर (रेड लेड)",
+        "Litharge / लिथार्ज",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "White lead / सफेदा (ह्वाइट लेड)",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Which of the following elements has the largest atomic radius? / निम्नलिखित में से किस तत्त्व की परमाणु त्रिज्या सबसे बड़ी है?",
+      "options": [
+        "Lithium / लिथियम",
+        "Beryllium / बेरिलियम",
+        "Boron / बोरॉन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Lithium / लिथियम",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Who discovered photoperiodism in plants? / पौधों में प्रदीप्तिकालिता की खोज करने वाले हैं",
+      "options": [
+        "Garner and Allard / गार्नर और एलार्ड",
+        "Steward and Salisbury / स्टीवर्ड और सैलिसबरी",
+        "Thimann and Skoog / थीमैन और स्कूग",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Garner and Allard / गार्नर और एलार्ड",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Silent Valley of Kerala is protected because / केरल की शांत घाटी (साइलेंट वैली) संरक्षित है, क्योंकि",
+      "options": [
+        "It contains very rare species of plants and animals / इसमें पौधों और जानवरों की बहुत ही दुर्लभ प्रजातियाँ पाई जाती हैं",
+        "Soil is rich in minerals / मिट्टी खनिजों से भरपूर है",
+        "Land areas were widely used for agricultural purposes / कृषि प्रयोजनों के लिए भूमि के क्षेत्रों का बड़े पैमाने पर उपयोग किया जाता था",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "It contains very rare species of plants and animals / इसमें पौधों और जानवरों की बहुत ही दुर्लभ प्रजातियाँ पाई जाती हैं",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "The diaphragm during normal respiration in mammals is / स्तनधारी में सामान्य श्वसन के दौरान डायाफ्राम होता है",
+      "options": [
+        "Bow-shaped / धनुषाकार",
+        "Flattened / चपटा",
+        "Sunken / नीचे धँसा हुआ",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "The most important cell type associated with the body's immunity is / शरीर की प्रतिरोधक क्षमता से जुड़ी सबसे महत्त्वपूर्ण कोशिका प्रकार है",
+      "options": [
+        "Platelet / प्लेटलेट",
+        "Lymphocyte / लिम्फोसाइट",
+        "RBC / आर० बी० सी०",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Lymphocyte / लिम्फोसाइट",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "The book titled Gyan Deepak was composed by which great saint? / ज्ञान दीपक नामक पुस्तक की रचना किस महान संत ने की थी?",
+      "options": [
+        "Salar Masud Ghazi / सालार मसूद ग़ाज़ी",
+        "Dariya Saheb / दरिया साहेब",
+        "Imam Shah Faqih / इमाम शाह फक़ीह",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Dariya Saheb / दरिया साहेब",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Which agency in India has launched the UTSAH portal? / भारत में किस एजेंसी ने UTSAH पोर्टल का शुभारंभ किया है?",
+      "options": [
+        "UGC / यू० जी० सी०",
+        "AICTE / ए० आइ० सी० टी० ई०",
+        "MCI / एम० सी० आइ०",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "UGC / यू० जी० सी०",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "APJ Abdul Kalam Satellite Launch Vehicle Mission was launched on / ए० पी० जे० अब्दुल कलाम सैटेलाइट लॉन्च वीहिकल मिशन को लॉन्च किया गया था",
+      "options": [
+        "13 February, 2023 / 13 फरवरी, 2023 को",
+        "20 February, 2023 / 20 फरवरी, 2023 को",
+        "19 February, 2023 / 19 फरवरी, 2023 को",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "19 February, 2023 / 19 फरवरी, 2023 को",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "In which city was the first pure green hydrogen plant commissioned? / किस शहर में प्रथम शुद्ध हरित हाइड्रोजन संयंत्र चालू किया गया था?",
+      "options": [
+        "Hyderabad / हैदराबाद",
+        "Mumbai / मुंबई",
+        "Pune / पुणे",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "None of the above / उपर्युक्त में से कोई नहीं",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Which year has been declared as 'International Year of Millets' by the United Nations? / संयुक्त राष्ट्र संघ द्वारा किस वर्ष को 'अंतर्राष्ट्रीय मिलेट वर्ष' घोषित किया गया है?",
+      "options": [
+        "2023",
+        "2022",
+        "2024",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "2023",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Who among the following won the 2022 Nobel Peace Prize? / निम्नलिखित में से किसने 2022 का नोबेल शांति पुरस्कार जीता?",
+      "options": [
+        "Ales Bialiatski / एलेस बियालियात्स्की",
+        "Nadia Murad / नादिया मुराद",
+        "Maria Ressa / मारिया रेसा",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Ales Bialiatski / एलेस बियालियात्स्की",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Who is the Chairman of the State Backward Classes Commission appointed by the Bihar Government on January 2, 2022? / 2 जनवरी, 2022 को बिहार सरकार द्वारा नियुक्त राज्य पिछड़ा वर्ग आयोग के अध्यक्ष कौन हैं?",
+      "options": [
+        "Justice Sanjay Kumar / न्यायमूर्ति संजय कुमार",
+        "Justice Balmiki Prasad Sinha / न्यायमूर्ति बाल्मीकि प्रसाद सिन्हा",
+        "Justice Iqbal A. Ansari / न्यायमूर्ति इकबाल ए० अन्सारी",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Justice Sanjay Kumar / न्यायमूर्ति संजय कुमार",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Which was the first Bhojpuri film? / भोजपुरी की पहली फिल्म कौन-सी थी?",
+      "options": [
+        "Ganga Maiyya Tohe Piyari Chadhaibo / गंगा मैया तोहे पियरी चढ़इबो",
+        "Kanyadaan / कन्यादान",
+        "Nadiya Ke Paar / नदिया के पार",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Ganga Maiyya Tohe Piyari Chadhaibo / गंगा मैया तोहे पियरी चढ़इबो",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Arrange the following thermal power projects of India from East to West direction: 1. Kota 2. Namrup 3. Obra 4. Parichha / भारत के निम्नलिखित थर्मल पावर प्रोजेक्टों को पूर्व से पश्चिम दिशा में व्यवस्थित कीजिए : 1. कोटा 2. नामरूप 3. ओबरा 4. पारीछा",
+      "options": [
+        "1, 2, 3, 4",
+        "2, 4, 1, 3",
+        "2, 3, 4, 1",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "2, 3, 4, 1",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "According to Trewartha, what type of climate does India have? / ट्रिवार्था के अनुसार भारत की जलवायु किस प्रकार की है?",
+      "options": [
+        "Savanna type / सवाना प्रकार",
+        "Subtropical Monsoon climate / उपोष्ण मानसूनी जलवायु",
+        "Mediterranean type / भूमध्यसागरीय प्रकार",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Subtropical Monsoon climate / उपोष्ण मानसूनी जलवायु",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "What is the normal date of withdrawal of South-West monsoon in Hyderabad? / हैदराबाद में दक्षिण-पश्चिम मानसून की वापिसी की सामान्य तिथि क्या है?",
+      "options": [
+        "1 October / 1 अक्तूबर",
+        "15 October / 15 अक्तूबर",
+        "1 November / 1 नवम्बर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "15 October / 15 अक्तूबर",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Which of the following states has the highest urbanization? / निम्नलिखित में से किस राज्य में नगरीकरण सर्वाधिक है?",
+      "options": [
+        "Goa / गोवा",
+        "Maharashtra / महाराष्ट्र",
+        "Karnataka / कर्नाटक",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Goa / गोवा",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "The 'Malnad' region is associated with which of the following plateaus in India? / 'मालनाड' क्षेत्र का सम्बन्ध निम्नलिखित में से भारत के किस पठार से है?",
+      "options": [
+        "Telangana Plateau / तेलंगाना का पठार",
+        "Maharashtra Plateau / महाराष्ट्र का पठार",
+        "Karnataka Plateau / कर्नाटक का पठार",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Karnataka Plateau / कर्नाटक का पठार",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "The Southern peninsular highlands are a part of / दक्षिणी प्रायद्वीपीय उच्चभूमि ... का भाग है।",
+      "options": [
+        "Gondwana Land / गोण्डवाना लैन्ड",
+        "Laurasia Land / लॉरेंशिया लैन्ड",
+        "Antarctica Continent / अन्टार्कटिका महाद्वीप",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Gondwana Land / गोण्डवाना लैन्ड",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "What is the percentage of Bihar's population relative to the total population of India? / भारत की कुल जनसंख्या के सापेक्ष बिहार की जनसंख्या का प्रतिशत क्या है?",
+      "options": [
+        "8.58%",
+        "10.10%",
+        "12.25%",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "8.58%",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Which of the following pairs does not match the South Ganga region of Bihar? / निम्नलिखित में से कौन-सा जोड़ा बिहार के दक्षिण गंगा क्षेत्र से मेल नहीं खाता है?",
+      "options": [
+        "Patna-Munger / पटना-मुंगेर",
+        "Gaya-Arwal / गया-अरवल",
+        "Patna-Vaishali / पटना-वैशाली",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Patna-Vaishali / पटना-वैशाली",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Who is called the 'Prophet of New India'? / 'नवभारत का पैगम्बर' कौन कहलाता है?",
+      "options": [
+        "Raja Rammohan Roy / राजा राममोहन राय",
+        "Dayanand Saraswati / दयानन्द सरस्वती",
+        "Dadabhai Naoroji / दादाभाई नौरोजी",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Raja Rammohan Roy / राजा राममोहन राय",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Which rebellion is mentioned in Bankim Chandra Chattopadhyay's Anandamath? / बंकिम चन्द्र चट्टोपाध्याय के आनन्दमठ में किस विद्रोह का उल्लेख है?",
+      "options": [
+        "Sanyasi / सन्न्यासी",
+        "Santhal / सन्थाल",
+        "Indigo / नील",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Sanyasi / सन्न्यासी",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Who was the founder of 'Abhinav Bharat' in London? / लंदन में 'अभिनव भारत' का संस्थापक कौन था?",
+      "options": [
+        "Vinayak Damodar Savarkar / विनायक दामोदर सावरकर",
+        "P. M. Bapat / पी० एम० बापट",
+        "Shyamji Krishna Varma / श्यामजी कृष्ण वर्मा",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Vinayak Damodar Savarkar / विनायक दामोदर सावरकर",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Where was the Ghadar Party founded? / ग़दर पार्टी की स्थापना कहाँ पर हुई थी?",
+      "options": [
+        "France / फ्रांस",
+        "Germany / जर्मनी",
+        "USA / संयुक्त राज्य अमेरिका",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "USA / संयुक्त राज्य अमेरिका",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Who was appointed 'Commander in Chief' by Birsa Munda? / बिरसा मुण्डा द्वारा किसको 'कमान्डर इन् चीफ' नियुक्त किया गया था?",
+      "options": [
+        "Donka Munda / देमका मुण्डा",
+        "Gaya Munda / गया मुण्डा",
+        "Sundar Munda / सुन्दर मुण्डा",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "None of the above / उपर्युक्त में से कोई नहीं",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Who formed the Bihar Socialist Party? / बिहार समाजवादी पार्टी का गठन किन्होंने किया था?",
+      "options": [
+        "Phulanchand Tiwari and Rajendra Prasad / फूलनचंद तिवारी और राजेन्द्र प्रसाद",
+        "Phulan Prasad Varma and Jayaprakash Narayan / फूलन प्रसाद वर्मा और जयप्रकाश नारायण",
+        "Rajkumar Shukla and Swami Agnivesh / राजकुमार शुक्ल और स्वामी अग्निवेश",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Phulan Prasad Varma and Jayaprakash Narayan / फूलन प्रसाद वर्मा और जयप्रकाश नारायण",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "In which year was the 'Bihar Provincial Congress Committee', with its headquarters in Patna, formed? / 'बिहार प्रॉविन्सियल काँग्रेस कमेटी' जिसका मुख्यालय पटना में है, का गठन किस वर्ष हुआ?",
+      "options": [
+        "1908",
+        "1910",
+        "1906",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "1908",
+      "explanation": ""
+    },
+    {
+      "section": "General Science",
+      "question": "Who established a branch of the Anushilan Samiti in Patna in 1913? / 1913 में पटना में अनुशीलन समिति की एक शाखा की स्थापना किसने की थी?",
+      "options": [
+        "Ramanand Sinha / रामानन्द सिन्हा",
+        "Satish Jha / सतीश झा",
+        "Sachindra Nath Sanyal / शचीन्द्रनाथ सान्याल",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Sachindra Nath Sanyal / शचीन्द्रनाथ सान्याल",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is a technique that marks the beginning of computer communications? / निम्नलिखित में से कौन-सी तकनीक कंप्यूटर संचार की शुरुआत को चिह्नित करती है?",
+      "options": [
+        "User Environment",
+        "Batch Environment",
+        "Time Sharing",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Time Sharing",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which language is better for writing structured code? / संरचित कोड लिखने के लिए कौन-सी भाषा बेहतर है?",
+      "options": [
+        "PASCAL",
+        "FORTRAN",
+        "BASIC",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "PASCAL",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which language does a browser use to display information from the World Wide Web? / वर्ल्ड वाइड वेब से जानकारी प्रदर्शित करने के लिए ब्राउज़र किस भाषा का उपयोग करता है?",
+      "options": [
+        "Machine code",
+        "Assembly language",
+        "C++",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "None of the above / उपर्युक्त में से कोई नहीं",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Select the true statement for compiler. / कंपाइलर के लिए सत्य कथन का चयन करें।",
+      "options": [
+        "The input of the compiler is source program.",
+        "It translates the source code into object code as a whole.",
+        "The output of the compiler is object code.",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "___ is used to shift processes so they are contiguous, and all free memory is in one block. / प्रक्रियाओं को स्थानांतरित करने के लिए ___ का उपयोग किया जाता है ताकि वे सन्निहित हों, और सभी खाली मेमोरी एक ब्लॉक में हो।",
+      "options": [
+        "Fragmentation",
+        "Compaction",
+        "External Fragmentation",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Compaction",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is not a valid variable name in most programming languages? / अधिकांश प्रोग्रामिंग भाषाओं में निम्नलिखित में से कौन सा एक मान्य चर नाम नहीं है?",
+      "options": [
+        "myVariable",
+        "123Variable",
+        "_myVariable",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "123Variable",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Secondary memory is the long-term store for programs and data while main memory holds program and data currently in use. What kind of an organization is this? / सेकेंडरी मेमोरी प्रोग्राम और डेटा के लिए दीर्घकालिक स्टोर है जबकि मुख्य मेमोरी वर्तमान में उपयोग में आने वाले प्रोग्राम और डेटा को रखती है। यह किस प्रकार का संगठन है?",
+      "options": [
+        "Physical",
+        "Logical",
+        "Structural",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Physical",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "If a semicolon is not used at the end of the statement, what message will be displayed by C++? / यदि कथन के अंत में अर्धविराम का उपयोग नहीं किया जाता है, तो C++ द्वारा कौन सा संदेश प्रदर्शित किया जाएगा?",
+      "options": [
+        "Semicolon missing",
+        "Statement missing",
+        "Error in statements",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "None of the above / उपर्युक्त में से कोई नहीं",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "A set of libraries that provides programmatically access to some kind of graphics 2D functions is / लाइब्रेरी का एक सेट जो प्रोग्रामेटिक रूप से किसी प्रकार के ग्राफिक्स 2D कार्यों तक पहुंच प्रदान करता है",
+      "options": [
+        "Graphics package",
+        "Formatting package",
+        "Animation package",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Graphics package",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which shortcut key is used to compile and run the program in C++? / C++ में प्रोग्राम को कंपाइल और रन करने के लिए किस शॉर्टकट कुंजी का उपयोग किया जाता है?",
+      "options": [
+        "Alt+F9",
+        "Alt+F5",
+        "Ctrl+F9",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Ctrl+F9",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What does the control unit generate to control other units? / अन्य इकाइयों को नियंत्रित करने के लिए कंट्रोल यूनिट क्या उत्पन्न करती है?",
+      "options": [
+        "Timing signals",
+        "Command signals",
+        "Control signals",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Control signals",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is user-defined header file extension used in C++? / C++ में उपयोग किया जाने वाला उपयोगकर्ता-परिभाषित हेडर फ़ाइल एक्सटेंशन निम्नलिखित में से कौन सा है?",
+      "options": [
+        "hg",
+        "cpp",
+        "h",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "h",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "The most common addressing technique employed by a CPU is / CPU द्वारा नियोजित सबसे आम एड्रेसिंग तकनीक है",
+      "options": [
+        "direct",
+        "indirect",
+        "immediate",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What will happen if the following C++ statement is compiled and executed? int *ptr = NULL; delete ptr; / यदि निम्नलिखित C++ कथन संकलित और निष्पादित किया जाता है तो क्या होगा? int *ptr = NULL; delete ptr;",
+      "options": [
+        "The program is not semantically correct",
+        "The program is compiled and executed successfully",
+        "The program gives a compile-time error",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "The program is compiled and executed successfully",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "In various devices, ___ are used to overcome the difference in data transfer speed. / विभिन्न उपकरणों में, डेटा ट्रांसफर गति में अंतर को दूर करने के लिए ___ का उपयोग किया जाता है।",
+      "options": [
+        "multiple buses",
+        "buffer registers",
+        "speed-enhancing circuitries",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "buffer registers",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What do we use to extend the connectivity of the processor bus? / प्रोसेसर बस की कनेक्टिविटी बढ़ाने के लिए हम क्या उपयोग करते हैं?",
+      "options": [
+        "PCI bus",
+        "Multiple bus",
+        "SCSI bus",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "PCI bus",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "In memory mapped I/O / मेमोरी मैप्ड I/O में",
+      "options": [
+        "the I/O devices and the memory share the same address space",
+        "the I/O devices have separate address space",
+        "the memory and I/O devices have an associated address space",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "the I/O devices and the memory share the same address space",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What is the addressing called that is used in an instruction of the form ADD X Y? / ADD X Y रूप के एक निर्देश में उपयोग की जाने वाली एड्रेसिंग क्या कहलाती है?",
+      "options": [
+        "Indirect",
+        "Index",
+        "Absolute",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Absolute",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following correctly declares an array in C++? / निम्नलिखित में से कौन C++ में एक ऐरे को सही ढंग से घोषित करता है?",
+      "options": [
+        "array{10};",
+        "int array;",
+        "int array[10];",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "int array[10];",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "SQL views are also known as / SQL विचारों को इस रूप में भी जाना जाता है",
+      "options": [
+        "simple tables",
+        "virtual tables",
+        "complex tables",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "virtual tables",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "How many primary keys can be there in a table? / किसी तालिका में कितनी प्राथमिक कुंजियाँ हो सकती हैं?",
+      "options": [
+        "Only 1",
+        "Only 2",
+        "Depends on number of columns",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Only 1",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What will be the output of the following C++ code? #include<iostream> #include<string> using namespace std; int main(int argc, char const *argv[]) { char s1[6]=\"Hello\"; char s2[6]=\"World\"; char s3[12]=s1+\" \"+s2; cout<<s3; return 0; } / निम्नलिखित C++ कोड का आउटपुट क्या होगा?",
+      "options": [
+        "Hello",
+        "World",
+        "Error",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Error",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is not a constraint in SQL? / निम्नलिखित में से कौन SQL में कोई बाधा (constraint) नहीं है?",
+      "options": [
+        "Primary key",
+        "Not null",
+        "Union",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Union",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is not a valid aggregate function? / निम्नलिखित में से कौन सा एक वैध एग्रीगेट फ़ंक्शन नहीं है?",
+      "options": [
+        "COUNT",
+        "COMPUTE",
+        "SUM",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "COMPUTE",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Who is the father of computer? / कंप्यूटर का जनक कौन है?",
+      "options": [
+        "James Gosling",
+        "Charles Babbage",
+        "Dennis Ritchie",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Charles Babbage",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "If we have not specified ASC or DESC after an SQL ORDER BY clause, which of the following is used by default? / यदि हमने SQL ORDER BY क्लॉज के बाद ASC या DESC निर्दिष्ट नहीं किया है, तो डिफ़ॉल्ट रूप से निम्न में से किसका उपयोग किया जाता है?",
+      "options": [
+        "DESC",
+        "ASC",
+        "There is no default value",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "ASC",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "In IA-32 architecture along with the general flags, which of the following conditional flags is provided? / IA-32 वास्तुकला में सामान्य फ्लैग के साथ, निम्नलिखित में से कौन सा सशर्त फ्लैग प्रदान किया गया है?",
+      "options": [
+        "TF",
+        "IOPL",
+        "IF",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is true about the HAVING clause? / HAVING क्लॉज के बारे में निम्नलिखित में से कौन सा सत्य है?",
+      "options": [
+        "Similar to the WHERE clause but is used for columns rather than groups",
+        "Similar to WHERE clause but is used for rows rather than columns",
+        "Similar to WHERE clause but is used for groups rather than rows",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Similar to WHERE clause but is used for groups rather than rows",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "The method of accessing the I/O devices by repeatedly checking the status flags is / स्टेटस फ्लैग्स की बार-बार जाँच करके I/O उपकरणों तक पहुँचने की विधि है",
+      "options": [
+        "program-controlled I/O",
+        "memory-mapped I/O",
+        "I/O-mapped I/O",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "program-controlled I/O",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "___ clause creates temporary relation for the query on which it is defined. / ___ क्लॉज उस क्वेरी के लिए अस्थायी संबंध बनाता है जिस पर इसे परिभाषित किया गया है।",
+      "options": [
+        "WITH",
+        "FROM",
+        "WHERE",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "WITH",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "The SQL statement SELECT ROUND(65.726, -1) FROM DUAL; prints / SQL कथन SELECT ROUND(65.726, -1) FROM DUAL; प्रिंट करता है",
+      "options": [
+        "70",
+        "garbage",
+        "726",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "70",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "The matrix contains m rows and n columns. The matrix is called Sparse Matrix if / मैट्रिक्स में m पंक्तियाँ और n कॉलम हैं। मैट्रिक्स को स्पार्स मैट्रिक्स कहा जाता है यदि",
+      "options": [
+        "total number of zero elements > (m*n)/2",
+        "total number of zero elements = m+n",
+        "total number of zero elements = m/n",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "total number of zero elements > (m*n)/2",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "___ command makes the updates performed by the transaction permanent in the database. / ___ कमांड डेटाबेस में लेनदेन द्वारा किए गए अपडेट को स्थायी बनाता है।",
+      "options": [
+        "ROLLBACK",
+        "COMMIT",
+        "TRUNCATE",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "COMMIT",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is the approach for joining basic tables? / बेसिक तालिकाओं को जोड़ने के लिए निम्नलिखित में से कौन सा दृष्टिकोण है?",
+      "options": [
+        "Union JOIN",
+        "Natural JOIN",
+        "Subqueries",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What is the time complexity of an infix to postfix conversion algorithm? / एक इनफिक्स से पोस्टफिक्स रूपांतरण एल्गोरिथ्म की समय जटिलता क्या है?",
+      "options": [
+        "O(N log N)",
+        "O(N)",
+        "O(N^2)",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "O(N)",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is the advantage of the array data structure? / ऐरे डेटा स्ट्रक्चर का निम्नलिखित में से कौन सा लाभ है?",
+      "options": [
+        "Elements of mixed data types can be stored",
+        "Easier to access the elements in an array",
+        "Index of the first element starts from 1",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Easier to access the elements in an array",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which data structure is mainly used for implementing the recursive algorithm? / पुनरावर्ती एल्गोरिथ्म को लागू करने के लिए मुख्य रूप से किस डेटा संरचना का उपयोग किया जाता है?",
+      "options": [
+        "Queue",
+        "Stack",
+        "Binary tree",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Stack",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What is the postfix expression for the corresponding infix expression? a+b*c+(d*e) / संबंधित इनफिक्स अभिव्यक्ति के लिए पोस्टफिक्स अभिव्यक्ति क्या है? a+b*c+(d*e)",
+      "options": [
+        "abc*+de*+",
+        "abc+*de*+",
+        "a+bc*de+*",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "abc*+de*+",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which one of the following is not the type of queue? / निम्नलिखित में से कौन सा कतार (queue) का प्रकार नहीं है?",
+      "options": [
+        "Linear queue",
+        "Circular queue",
+        "Double-ended queue",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "None of the above / उपर्युक्त में से कोई नहीं",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "The necessary condition to be checked before deletion from the queue is / कतार से हटाने (deletion) से पहले जाँची जाने वाली आवश्यक शर्त है",
+      "options": [
+        "overflow",
+        "underflow",
+        "rear value",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "underflow",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "After performing following set of operations, what does the final list look contain? InsertFront(10); InsertFront(20); InsertRear(30); DeleteFront(); InsertRear(40); InsertRear(10); DeleteRear(); InsertRear(15); display(); / ऑपरेशंस के निम्नलिखित सेट को निष्पादित करने के बाद, अंतिम सूची कैसी दिखेगी?",
+      "options": [
+        "10 30 10 15",
+        "20 30 40 15",
+        "10 30 40 15",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "10 30 40 15",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "A linear data structure in which insertion and deletion operations can be performed from both the ends is / एक रैखिक डेटा संरचना जिसमें सम्मिलन और विलोपन दोनों सिरों से किया जा सकता है",
+      "options": [
+        "queue",
+        "circular queue",
+        "deque",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "deque",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "If circular queue is implemented using array having size MAX_SIZE in which array index starts with 0, front points to the first element in the queue, and rear points to the last element in the queue. Which one of the following conditions is used to specify that the circular queue is empty? / यदि परिपत्र कतार को MAX_SIZE वाले सरणी का उपयोग करके कार्यान्वित किया जाता है... परिपत्र कतार के खाली होने को निर्दिष्ट करने के लिए किस शर्त का उपयोग किया जाता है?",
+      "options": [
+        "Front == rear == -1",
+        "Front == rear == 0",
+        "Front == rear + 1",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Front == rear == -1",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What is the functionality of the following piece of code? public void fun(int x) { ql.offer(x); } / निम्नलिखित कोड की कार्यक्षमता क्या है?",
+      "options": [
+        "Perform push() with push as the costlier operation",
+        "Perform push() with pop as the costlier operation",
+        "Perform pop() with push as the costlier operation",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Deleted",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which one of the following techniques is not used in the binary tree? / बाइनरी ट्री में निम्नलिखित में से किस तकनीक का उपयोग नहीं किया जाता है?",
+      "options": [
+        "Randomized traversal",
+        "Preorder traversal",
+        "Postorder traversal",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Randomized traversal",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is not a feature of DBMS? / निम्नलिखित में से कौन DBMS की विशेषता नहीं है?",
+      "options": [
+        "Minimum duplication and redundancy of data",
+        "High-level of security",
+        "Single-user access only",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Single-user access only",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following statements is not true about the doubly linked list? / दोहरे लिंक की गई सूची (doubly linked list) के बारे में निम्नलिखित में से कौन सा कथन सत्य नहीं है?",
+      "options": [
+        "We can traverse in both the directions.",
+        "It requires extra space.",
+        "Implementation of doubly linked list is easier than the singly linked list.",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Implementation of doubly linked list is easier than the singly linked list.",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "The values appearing in given attributes of any tuple in the referencing relation must likewise occur in specified attributes of at least one tuple in the referenced relation, according to ___ integrity constraint. / एक संदर्भ संबंध के किसी भी टपल के दिए गए विशेषताओं में दिखाई देने वाले मानों को... किस अखंडता बाधा के अनुसार?",
+      "options": [
+        "referential",
+        "primary",
+        "referencing",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "referential",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following options is not true about the binary search tree? / बाइनरी सर्च ट्री के बारे में निम्नलिखित में से कौन सा विकल्प सत्य नहीं है?",
+      "options": [
+        "The value of the left child should be less than the root node.",
+        "The value of the right child should be greater than the root node.",
+        "The left and right subtrees should also be a binary search tree.",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "None of the above / उपर्युक्त में से कोई नहीं",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "The expression Y = AB + BC + AC shows the / अभिव्यक्ति Y = AB + BC + AC दर्शाती है",
+      "options": [
+        "EX-OR operation",
+        "SOP",
+        "POS",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "SOP",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What are the canonical forms of Boolean expressions? / बूलियन अभिव्यक्तियों के कैननिकल रूप क्या हैं?",
+      "options": [
+        "OR and XOR",
+        "NOR and XNOR",
+        "SOM and POM",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "SOM and POM",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Derive the Boolean expression for the logic circuit shown below: (Inputs A, B into OR, then AND with C, then AND with D, then AND with E) / नीचे दिखाए गए तर्क सर्किट के लिए बूलियन अभिव्यक्ति प्राप्त करें:",
+      "options": [
+        "C(A+B)DE",
+        "[C(A+B)D+E']",
+        "[[C(A+B)D]E']",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "C(A+B)DE",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Boolean algebra can be used / बूलियन बीजगणित का उपयोग किया जा सकता है",
+      "options": [
+        "for designing the digital computers",
+        "in building logic symbols",
+        "in circuit theory",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What does the control unit generate to control other units? / अन्य इकाइयों को नियंत्रित करने के लिए कंट्रोल यूनिट क्या उत्पन्न करती है?",
+      "options": [
+        "Transfer signals",
+        "Command signals",
+        "Control signals",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Control signals",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "To display time in railway stations which digital circuit is used? / रेलवे स्टेशनों में समय प्रदर्शित करने के लिए किस डिजिटल सर्किट का उपयोग किया जाता है?",
+      "options": [
+        "Seven-segment decoder",
+        "Eight-segment encoder",
+        "83 multiplexer",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई পণ্ডিত"
+      ],
+      "answer": "Seven-segment decoder",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What kind of transmission medium is most appropriate to carry data in a computer network that is exposed to electrical interference? / एक कंप्यूटर नेटवर्क में डेटा ले जाने के लिए किस प्रकार का ट्रांसमिशन माध्यम सबसे उपयुक्त है जो विद्युत हस्तक्षेप के संपर्क में है?",
+      "options": [
+        "Unshielded twisted pair",
+        "Optical fiber",
+        "Coaxial cable",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Optical fiber",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which network topology requires a central controller or hub? / किस नेटवर्क टोपोलॉजी के लिए केंद्रीय नियंत्रक या हब की आवश्यकता होती है?",
+      "options": [
+        "Star",
+        "Mesh",
+        "Ring",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Star",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "A collection of hyperlinked documents on the Internet forms the / इंटरनेट पर हाइपरलिंक्ड दस्तावेज़ों का एक संग्रह बनाता है",
+      "options": [
+        "World Wide Web (WWW)",
+        "e-mail system",
+        "mailing list",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "World Wide Web (WWW)",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is not a step in the Header translation procedure? / निम्नलिखित में से कौन हेडर अनुवाद प्रक्रिया में एक कदम नहीं है?",
+      "options": [
+        "The IPv6 mapped address is changed to an IPv4 address by extracting the rightmost 32 bits",
+        "The value of the IPv6 priority field is discarded",
+        "The IPv6 flow label is considered",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "The IPv6 flow label is considered",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which one of the following would breach the integrity of a system? / निम्नलिखित में से कौन सा सिस्टम की अखंडता का उल्लंघन करेगा?",
+      "options": [
+        "Locking the room to prevent theft",
+        "Full access rights for all users",
+        "Fitting the system with an anti-theft device",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Full access rights for all users",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which sublayer of the data link layer performs data link functions that depend upon the type of medium? / डेटा लिंक परत की कौन सी उप-परत डेटा लिंक कार्य करती है जो माध्यम के प्रकार पर निर्भर करती है?",
+      "options": [
+        "Logical link control sublayer",
+        "Media access control sublayer",
+        "Network interface control sublayer",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Media access control sublayer",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which one of the following is not a network topology? / निम्नलिखित में से कौन एक नेटवर्क टोपोलॉजी नहीं है?",
+      "options": [
+        "Peer-to-peer",
+        "Ring",
+        "Bus",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Peer-to-peer",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "How do structures and classes in C++ differ? / C++ में संरचनाएं (structures) और वर्ग (classes) कैसे भिन्न होते हैं?",
+      "options": [
+        "Structures by default hide every member whereas classes do not",
+        "In structures, members are public by default, whereas, in classes, they are private by default",
+        "Structures cannot have private members, whereas classes can have",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "In structures, members are public by default, whereas, in classes, they are private by default",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "When the mail server sends mail to other mail servers it becomes / जब मेल सर्वर अन्य मेल सर्वर को मेल भेजता है तो यह बन जाता है",
+      "options": [
+        "SMTP client",
+        "SMTP server",
+        "peer",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Deleted",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "The length of an IPv6 address is / IPv6 पते की लंबाई है",
+      "options": [
+        "32 bits",
+        "64 bits",
+        "256 bits",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "None of the above / उपर्युक्त में से कोई नहीं",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What is the use of ios::trunc mode? / ios::trunc मोड का क्या उपयोग है?",
+      "options": [
+        "To open a file in input mode",
+        "To open a file in output mode",
+        "To truncate an existing file to zero",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "To truncate an existing file to zero",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which layer of the TCP/IP stack corresponds to the OSI model transport layer? / TCP/IP स्टैक की कौन सी परत OSI मॉडल के ट्रांसपोर्ट लेयर से मेल खाती है?",
+      "options": [
+        "Host-to-host",
+        "Application",
+        "Internet",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Host-to-host",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following statements is/are correct? 1. It is not possible to combine two or more files opening mode in open() method. 2. It is possible to combine two or more files opening mode in open() method. 3. ios::in and ios::out are input and output file opening modes respectively. / निम्नलिखित में से कौन सा कथन सही है/हैं?",
+      "options": [
+        "1, 3",
+        "2, 3",
+        "3 only",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is true with regard to the ping command? / ping कमांड के संबंध में निम्नलिखित में से कौन सा सत्य है?",
+      "options": [
+        "Ping stands for Packet Internet Generator.",
+        "The ping command checks the port level connectivity between source destinations endpoints.",
+        "Ping summarizes the packet loss and round-trip delay between two IP endpoints.",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Ping summarizes the packet loss and round-trip delay between two IP endpoints.",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "The correct statement for a function that takes pointer to a float, a pointer to a pointer to a char and returns a pointer to a pointer to an integer is / फ़्लोट के पॉइंटर और वर्ण के पॉइंटर के पॉइंटर को लेने वाले और पूर्णांक के पॉइंटर के पॉइंटर को वापस करने वाले फ़ंक्शन के लिए सही कथन है",
+      "options": [
+        "int**fun(float**, char**)",
+        "int*fun(float*, char*)",
+        "int**fun(float*, char**)",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "int**fun(float*, char**)",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "The private key in asymmetric key cryptography is kept by / असममित कुंजी क्रिप्टोग्राफी में निजी कुंजी किसके द्वारा रखी जाती है?",
+      "options": [
+        "sender",
+        "receiver",
+        "sender and receiver",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "receiver",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "What will be the output of the following C++ code? #include<iostream> using namespace std; long factorial (long a) { if (a>1) return (a*factorial(a+1)); else return(1); } int main() { long num=3; cout <<num<<\"!=\"<<factorial(num); return 0; } / निम्नलिखित C++ कोड का आउटपुट क्या होगा?",
+      "options": [
+        "6",
+        "24",
+        "Segmentation fault",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Segmentation fault",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following features must be supported by any programming language to become a pure object-oriented programming language? / किसी भी प्रोग्रामिंग भाषा को शुद्ध ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग भाषा बनने के लिए निम्नलिखित में से किस विशेषता का समर्थन किया जाना चाहिए?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which is correct syntax of inheritance? / वंशानुक्रम (inheritance) का सही सिंटैक्स कौन सा है?",
+      "options": [
+        "class access base_classname : derived classname {/*define class body*/};",
+        "class derived_classname: access base_classname {/*define class body*/};",
+        "class derived_classname: base_classname {/*define class body*/};",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which one of the following is the correct definition of \"is_array();\" function in C++? / C++ में \"is_array();\" फ़ंक्शन की सही परिभाषा निम्नलिखित में से कौन सी है?",
+      "options": [
+        "It checks that the specified variable is of the array or not",
+        "It checks that the specified array is of single dimension or not",
+        "It checks that the specified array is of multi-dimension or not",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "It checks that the specified variable is of the array or not",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following statements is correct about the class? / क्लास के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": [
+        "An object is an instance of its class.",
+        "A class is an instance of its object.",
+        "An object is the instance of the data type of that class.",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "An object is an instance of its class.",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following can be used to create an abstract class in the C++ programming language? / C++ प्रोग्रामिंग भाषा में एब्सट्रैक्ट क्लास बनाने के लिए निम्नलिखित में से किसका उपयोग किया जा सकता है?",
+      "options": [
+        "By using the pure virtual function in the class",
+        "By declaring a virtual function in the base class",
+        "By declaring the virtual keyword afterward the class declaration",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "By using the pure virtual function in the class",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following statements is correct about the C++ programming language? / C++ प्रोग्रामिंग भाषा के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "options": [
+        "In C++, both the static and dynamic types checking are allowed.",
+        "In C++, member function are allowed to be of the type const.",
+        "In C++, dynamic checking is allowed.",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which feature of OOP is indicated by the following code? class student{int marks;}; class topper: public student{int age; topper(int age) {this.age=age;}}; / निम्नलिखित कोड द्वारा OOP की कौन सी विशेषता का संकेत दिया गया है?",
+      "options": [
+        "Encapsulation and inheritance",
+        "Inheritance and polymorphism",
+        "Polymorphism",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Encapsulation and inheritance",
+      "explanation": ""
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following natural elements is the primary element in computer chips? / कंप्यूटर चिप्स में निम्नलिखित में से कौन सा प्राकृतिक तत्व प्राथमिक तत्व है?",
+      "options": [
+        "Carbon",
+        "Silicon",
+        "Iron",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Silicon",
+      "explanation": ""
+    }
+  ]
+}
