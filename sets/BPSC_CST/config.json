@@ -1,6 +1,6 @@
 {
-    "examName": "BPSC Computer Science Teacher Mock Test Series 2025",
-    "updatedDate": "Aug 18, 2025",
+    "examName": "BPSC Computer Science Teacher Mock Test Series 2026",
+    "updatedDate": "Feb 25, 2025",
     "totalTests": 20,
     "languages": ["English", "Hindi"],
     "users": "1k",
@@ -15,6 +15,56 @@
     },
   
     "tests": [
+    {
+        "title": "BPSC CS Teacher PYQ(TRE 1.0)",
+        "category": "FREE",
+        "filter": "All",
+        "questions": 120,
+        "marks": 120,
+        "time": 120,
+        "file": "cs_pyq1.json",
+        "liveDate": "2026-02-25"
+      },
+      {
+        "title": "BPSC CS Teacher PYQ(TRE 2.0)",
+        "category": "FREE",
+        "filter": "All",
+        "questions": 120,
+        "marks": 120,
+        "time": 120,
+        "file": "cs_pyq2.json",
+        "liveDate": "2026-02-26"
+      },
+      {
+        "title": "BPSC CS Teacher PYQ(TRE 3.0)",
+        "category": "FREE",
+        "filter": "All",
+        "questions": 120,
+        "marks": 120,
+        "time": 120,
+        "file": "cs_pyq3.json",
+        "liveDate": "2026-02-27"
+      },
+        {
+        "title": "BPSC CS Teacher PYQ (9 to 10)(TRE 2.0)",
+        "category": "FREE",
+        "filter": "All",
+        "questions": 120,
+        "marks": 120,
+        "time": 120,
+        "file": "cs_pyq4.json",
+        "liveDate": "2026-02-28"
+      },
+        {
+        "title": "BPSC CS Teacher PYQ (6 to 10)(TRE 3.0)",
+        "category": "FREE",
+        "filter": "All",
+        "questions": 120,
+        "marks": 120,
+        "time": 120,
+        "file": "cs_pyq5.json",
+        "liveDate": "2026-03-01"
+      },
       {
         "title": "BPSC CS Teacher Mock Test Set 1",
         "category": "FREE",
