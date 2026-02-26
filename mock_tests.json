@@ -1,5 +1,15 @@
 [
   {
+    "title": "BPSC TRE 4.0 Computer Science 2026 ",
+    "category": "Teaching",
+    "examKey": "BPSC_CST",
+    "rating": 4.6,
+    "tests": 20+,
+    "time": "150 min",
+    "lang": "Hindi & English",
+    "img": "image/bpsc-logo.png"
+  },
+  {
     "title": "BSEB STET Computer Science",
     "category": "Teaching",
     "examKey": "BSEB_CS",
@@ -8,16 +18,6 @@
     "time": "150 min",
     "lang": "Hindi & English",
     "img": "image/bseb-logo.jpg"
-  },
-  {
-    "title": "BPSC TRE Computer Science",
-    "category": "Teaching",
-    "examKey": "BPSC_CST",
-    "rating": 4.6,
-    "tests": 3,
-    "time": "120 min",
-    "lang": "Hindi & English",
-    "img": "image/bpsc-logo.png"
   },
   {
     "title": "CTET Paper I",
@@ -140,6 +140,7 @@
     "img": "image/upsc-logo.png"
   }
 ]
+
 
 
 
