@@ -1,0 +1,1969 @@
+{
+  "examName": "BPSC TRE 2.0 Mock Test Series",
+  "testTitle": "LANGUAGE, GENERAL STUDIES AND COMPUTER SCIENCE",
+  "time": 150,
+  "sections": [
+    "Language",
+    "General Studies",
+    "Computer Science"
+  ],
+  "languages": [
+    "English",
+    "Hindi"
+  ],
+  "questionType": "MCQ",
+  "marks": 1,
+  "negative": 0,
+  "questions": [
+    {
+      "section": "Language",
+      "question": "There are 30 or 31 days in ___ month.",
+      "options": [
+        "the",
+        "a",
+        "an",
+        "More than one of the above",
+        "None of the above"
+      ],
+      "answer": "a",
+      "explanation": "We use the indefinite article 'a' to refer to any general month."
+    },
+    {
+      "section": "Language",
+      "question": "My father is ___ engineer in the Water Works Department.",
+      "options": [
+        "the",
+        "an",
+        "a",
+        "More than one of the above",
+        "None of the above"
+      ],
+      "answer": "an",
+      "explanation": "The word 'engineer' begins with a vowel sound, so the article 'an' is appropriate."
+    },
+    {
+      "section": "Language",
+      "question": "Which of the following is a part of bedroom?",
+      "options": [
+        "Pillow",
+        "Table lamp",
+        "Curtains",
+        "More than one of the above",
+        "None of the above"
+      ],
+      "answer": "More than one of the above",
+      "explanation": "Pillows, table lamps, and curtains can all be parts of a bedroom."
+    },
+    {
+      "section": "Language",
+      "question": "Which of the following is a part of a room?",
+      "options": [
+        "Window",
+        "Ceiling",
+        "Floor",
+        "More than one of the above",
+        "None of the above"
+      ],
+      "answer": "More than one of the above",
+      "explanation": "Windows, ceiling, and floor are all parts of a room."
+    },
+    {
+      "section": "Language",
+      "question": "Rainy season comes before ___.",
+      "options": [
+        "winter",
+        "spring",
+        "summer",
+        "More than one of the above",
+        "None of the above"
+      ],
+      "answer": "winter",
+      "explanation": "The rainy season (monsoon) occurs prior to the winter season."
+    },
+    {
+      "section": "Language",
+      "question": "The eighth month of the year is ___.",
+      "options": [
+        "July",
+        "September",
+        "October",
+        "More than one of the above",
+        "None of the above"
+      ],
+      "answer": "None of the above",
+      "explanation": "The eighth month of the year is August, which is not in the options."
+    },
+    {
+      "section": "Language",
+      "question": "Sister-in-law is ___.",
+      "options": [
+        "husband's sister",
+        "wife's sister",
+        "brother's wife",
+        "More than one of the above",
+        "None of the above"
+      ],
+      "answer": "More than one of the above",
+      "explanation": "A sister-in-law can be a husband's sister, a wife's sister, or a brother's wife."
+    },
+    {
+      "section": "Language",
+      "question": "Cousins are ___.",
+      "options": [
+        "maternal",
+        "paternal",
+        "siblings",
+        "More than one of the above",
+        "None of the above"
+      ],
+      "answer": "More than one of the above",
+      "explanation": "Cousins can be from either the maternal or paternal side."
+    },
+    {
+      "section": "Language",
+      "question": "'चाँदी' शब्द में कौन-सी संज्ञा है?",
+      "options": [
+        "द्रव्यवाचक संज्ञा",
+        "जातिवाचक संज्ञा",
+        "भाववाचक संज्ञा",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "द्रव्यवाचक संज्ञा",
+      "explanation": "चाँदी एक धातु/पदार्थ है, इसलिए यह द्रव्यवाचक संज्ञा (Material Noun) है।"
+    },
+    {
+      "section": "Language",
+      "question": "निम्नलिखित शब्दों में से कौन-सा 'एकवचन' है?",
+      "options": [
+        "हस्ताक्षर",
+        "छाया",
+        "आँसू",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "छाया",
+      "explanation": "'हस्ताक्षर' और 'आँसू' हमेशा बहुवचन में प्रयोग किए जाते हैं। 'छाया' एकवचन है।"
+    },
+    {
+      "section": "Language",
+      "question": "हिन्दी शब्दकोश में 'क्ष' का क्रम किस वर्ण के बाद आता है?",
+      "options": [
+        "त्र के पश्चात्",
+        "ज्ञ के पश्चात्",
+        "क के पश्चात्",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "क के पश्चात्",
+      "explanation": "'क्ष' एक संयुक्त व्यंजन है जो 'क् + ष' से मिलकर बना है, इसलिए शब्दकोश में इसका स्थान 'क' के बाद आता है।"
+    },
+    {
+      "section": "Language",
+      "question": "\"जिसकी यह पुस्तक है, उसे लौटा दो।\" इस वाक्य में कौन-सा सर्वनाम है?",
+      "options": [
+        "निश्चयवाचक",
+        "संबंधवाचक",
+        "पुरुषवाचक",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "संबंधवाचक",
+      "explanation": "'जिसकी...उसे' वाक्यों में संबंध दर्शाते हैं, जो संबंधवाचक सर्वनाम की विशेषता है।"
+    },
+    {
+      "section": "Language",
+      "question": "विशेषण का प्रमुख भेद कौन-सा नहीं है?",
+      "options": [
+        "असार्वनामिक विशेषण",
+        "गुणवाचक विशेषण",
+        "परिमाणवाचक विशेषण",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "असार्वनामिक विशेषण",
+      "explanation": "सार्वनामिक, गुणवाचक, संख्यावाचक और परिमाणवाचक विशेषण के भेद हैं, लेकिन 'असार्वनामिक' कोई भेद नहीं है।"
+    },
+    {
+      "section": "Language",
+      "question": "निम्नलिखित में से कौन-सा अशुद्ध शब्द है?",
+      "options": [
+        "वीभत्स",
+        "लगान",
+        "आगामी",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "वीभत्स",
+      "explanation": "आधिकारिक उत्तर कुंजी के अनुसार 'वीभत्स' अशुद्ध माना गया है (शुद्ध रूप में अक्सर बिंदी या अन्य संदर्भ देखे जाते हैं), यद्यपि यह विवादित हो सकता है।"
+    },
+    {
+      "section": "Language",
+      "question": "निम्नलिखित में से कौन-सा शुद्ध वर्तनी वाला शब्द है?",
+      "options": [
+        "क्षत्रिय",
+        "क्षत्रीय",
+        "उज्जवल",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "क्षत्रिय",
+      "explanation": "'क्षत्रिय' सही वर्तनी है। 'उज्जवल' अशुद्ध है, इसका शुद्ध रूप 'उज्ज्वल' होता है।"
+    },
+    {
+      "section": "Language",
+      "question": "निम्नलिखित में से कौन-सा 'तत्सम' शब्द है?",
+      "options": [
+        "घर",
+        "स्नेह",
+        "छेद",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "स्नेह",
+      "explanation": "'स्नेह' संस्कृत का शब्द है (तत्सम)। 'घर' का तत्सम 'गृह' होता है और 'छेद' का 'छिद्र' होता है।"
+    },
+    {
+      "section": "Language",
+      "question": "निम्नलिखित में से कौन-सा विदेशी शब्द है?",
+      "options": [
+        "बाघ",
+        "परीक्षा",
+        "चाय",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "चाय",
+      "explanation": "'चाय' चीनी भाषा से लिया गया विदेशी शब्द है।"
+    },
+    {
+      "section": "Language",
+      "question": "रचना के आधार पर 'जिन शब्दों के खंड सार्थक न हों' उन्हें कौन-सा शब्द कहा जाता है?",
+      "options": [
+        "रूढ़",
+        "यौगिक",
+        "योगरूढ़",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "रूढ़",
+      "explanation": "जिन शब्दों के खंड करने पर कोई अर्थ न निकले, उन्हें 'रूढ़' शब्द कहते हैं (जैसे- जल)।"
+    },
+    {
+      "section": "Language",
+      "question": "निम्नलिखित में से किस वाक्य में 'अकर्मक क्रिया' है?",
+      "options": [
+        "उसे मत लजाओ।",
+        "बालिका लजाती है।",
+        "सेवक नदी से गागर भरता है।",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "बालिका लजाती है।",
+      "explanation": "'लजाना' यहाँ स्वयं की क्रिया है जिसमें कोई कर्म नहीं है, अतः यह अकर्मक क्रिया है।"
+    },
+    {
+      "section": "Language",
+      "question": "निम्नलिखित में से कौन-सा देशज शब्द है?",
+      "options": [
+        "आवारा",
+        "भौंरा",
+        "परवल",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "परवल",
+      "explanation": "'परवल' एक देशज शब्द माना जाता है।"
+    },
+    {
+      "section": "Language",
+      "question": "निम्नलिखित में से कौन-सा शब्द रूढ़ शब्द नहीं है?",
+      "options": [
+        "लकड़ी",
+        "जलधारा",
+        "महर्षि",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "उपर्युक्त में से एक से अधिक",
+      "explanation": "'जलधारा' (जल + धारा) और 'महर्षि' (महा + ऋषि) दोनों यौगिक शब्द हैं, रूढ़ नहीं।"
+    },
+    {
+      "section": "Language",
+      "question": "'खारिज' किस भाषा का शब्द है?",
+      "options": [
+        "अरबी",
+        "फारसी",
+        "तुर्की",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "अरबी",
+      "explanation": "'खारिज' मूलतः अरबी भाषा का शब्द है।"
+    },
+    {
+      "section": "Language",
+      "question": "अशुद्ध और शुद्ध वर्तनी का कौन-सा युग्म सही नहीं है?",
+      "options": [
+        "कोमलांगिनी-कोमलांगी",
+        "सुश्रूषा-शुश्रूषा",
+        "माहात्म-महात्म्य",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "उपर्युक्त में से कोई नहीं",
+      "explanation": "सभी दिए गए युग्म अशुद्ध और उनके सही शुद्ध रूप को ठीक से दर्शाते हैं, इसलिए कोई भी युग्म गलत नहीं है।"
+    },
+    {
+      "section": "Language",
+      "question": "\"उसका भविष्य उजवल है।\" इस वाक्य में रेखांकित शब्द की शुद्ध वर्तनी कौन-सी है?",
+      "options": [
+        "उज्ज्वल",
+        "उज्वल",
+        "उज्जवल",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "उज्ज्वल",
+      "explanation": "शुद्ध वर्तनी 'उज्ज्वल' होती है (उ + ज् + ज् + व + ल)।"
+    },
+    {
+      "section": "Language",
+      "question": "एक छोटी आकृति का चमकीला वर्ग, जो स्क्रीन पर किसी चिह्न की स्थिति को स्पष्ट करता है, उसे क्या कहते हैं?",
+      "options": [
+        "करसर",
+        "चिप",
+        "कमांड",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "करसर",
+      "explanation": "स्क्रीन पर चमकने वाली छोटी रेखा या वर्ग को कर्सर (Cursor) कहते हैं।"
+    },
+    {
+      "section": "Language",
+      "question": "'कुरुक्षेत्र' के लेखक का क्या नाम है?",
+      "options": [
+        "हरिऔध",
+        "श्रीधर पाठक",
+        "मैथिलीशरण गुप्त",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "उपर्युक्त में से कोई नहीं",
+      "explanation": "'कुरुक्षेत्र' रामधारी सिंह दिनकर की प्रसिद्ध रचना है, जो विकल्पों में नहीं है।"
+    },
+    {
+      "section": "Language",
+      "question": "\"जसोदा हरि पालनै झुलावै। हलरावै दुलराइ मल्हावै, जोइ-सोइ कछु गावैं॥\" उक्त काव्य-पंक्तियों में कौन-सा रस है?",
+      "options": [
+        "श्रृंगार",
+        "वीर",
+        "वात्सल्य",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "वात्सल्य",
+      "explanation": "इन पंक्तियों में माता यशोदा का कृष्ण के प्रति प्रेम दर्शाया गया है, जो वात्सल्य रस है।"
+    },
+    {
+      "section": "Language",
+      "question": "हिन्दी भाषा के उद्भव का काल माना जाता है",
+      "options": [
+        "500 ई० पू०",
+        "500 ई०",
+        "1000 ई०",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "1000 ई०",
+      "explanation": "हिन्दी भाषा का मानक उद्भव काल 1000 ईस्वी के आसपास माना जाता है।"
+    },
+    {
+      "section": "Language",
+      "question": "भारतीय काव्यशास्त्र में क्षमाशील, गम्भीर, स्थिरचित्त, स्वाभिमानी एवं दृढ़ प्रतिज्ञ नायक को कहा गया है",
+      "options": [
+        "धीरललित",
+        "धीरोदात्त",
+        "धीर प्रशांत",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "धीरोदात्त",
+      "explanation": "भारतीय काव्यशास्त्र में इन सभी उत्कृष्ट गुणों वाले नायक को 'धीरोदात्त' नायक कहा जाता है।"
+    },
+    {
+      "section": "Language",
+      "question": "जिन शब्दों पर लिंग, वचन, कारक का कोई प्रभाव न पड़े, वे कहलाते हैं",
+      "options": [
+        "व्यय",
+        "विकारी",
+        "अविकारी",
+        "उपर्युक्त में से एक से अधिक",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "अविकारी",
+      "explanation": "अविकारी शब्द (जैसे अव्यय) वे होते हैं जिनके रूप में लिंग, वचन या कारक के कारण कोई परिवर्तन नहीं होता।"
+    },
+    {
+      "section": "General Studies",
+      "question": "The perimeter of the floor of a rectangular hall is 250 meters. If the cost of painting the four walls at the rate of ₹10 per square meter is ₹15,000, then the height of the hall is / एक आयताकार हॉल के फर्श की परिधि 250 मीटर है। यदि ₹10 प्रति वर्ग मीटर की दर से चारों दीवारों को पेंट करने की लागत ₹15,000 है, तो हॉल की ऊँचाई है",
+      "options": [
+        "7 m / 7 मीटर",
+        "16 m / 16 मीटर",
+        "6 m / 6 मीटर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "6 m / 6 मीटर",
+      "explanation": "Area of four walls = Total Cost / Rate = 15000 / 10 = 1500 sq m. Area of four walls = Perimeter × Height. So, 250 × h = 1500 => h = 6 m."
+    },
+    {
+      "section": "General Studies",
+      "question": "Which of the following statements is not true? / निम्नलिखित में से कौन-सा कथन सत्य नहीं है?",
+      "options": [
+        "Every natural number is a whole number / प्रत्येक प्राकृत संख्या, एक पूर्ण संख्या है।",
+        "Every integer is a whole number / प्रत्येक पूर्णांक, एक पूर्ण संख्या है।",
+        "Every natural number is an integer / प्रत्येक प्राकृत संख्या, एक पूर्णांक संख्या है।",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Every integer is a whole number / प्रत्येक पूर्णांक, एक पूर्ण संख्या है।",
+      "explanation": "Negative integers (-1, -2, etc.) are not whole numbers. Whole numbers start from 0."
+    },
+    {
+      "section": "General Studies",
+      "question": "The average of 7 consecutive numbers is 20. The largest number among them is / 7 क्रमागत संख्याओं का औसत 20 है। इनमें से सबसे बड़ी संख्या है",
+      "options": [
+        "20",
+        "21",
+        "23",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "23",
+      "explanation": "For an odd number of consecutive integers, the average is the middle number. So the middle is 20. The sequence is 17, 18, 19, 20, 21, 22, 23. Largest is 23."
+    },
+    {
+      "section": "General Studies",
+      "question": "The equation $ax^2+bx+c=0$ will have two distinct real roots if / समीकरण $ax^2+bx+c=0$ के दो भिन्न वास्तविक मूल होंगे, यदि",
+      "options": [
+        "$b^2-4ac < 0$",
+        "$b^2-4ac > 0$",
+        "$b^2-4ac = 0$",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "$b^2-4ac > 0$",
+      "explanation": "A quadratic equation has two distinct real roots when the discriminant is strictly greater than zero."
+    },
+    {
+      "section": "General Studies",
+      "question": "Mohan can do a work in 25 days which Sohan can complete in 20 days. Both labour together for 5 days and then Mohan leaves. How long will it take for Sohan to complete the remaining work? / मोहन 25 दिनों में एक काम कर सकता है जिसे सोहन 20 दिनों में पूरा कर सकता है। दोनों एक साथ 5 दिनों के लिए श्रम करते हैं और उसके बाद मोहन काम छोड़ देता है। शेष कार्य को पूरा करने में सोहन को कितना समय लगेगा?",
+      "options": [
+        "20 days / 20 दिन",
+        "11 days / 11 दिन",
+        "14 days / 14 दिन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "11 days / 11 दिन",
+      "explanation": "Work done in 5 days = 5 × (1/25 + 1/20) = 5 × (9/100) = 9/20. Remaining work = 11/20. Time taken by Sohan = (11/20) × 20 = 11 days."
+    },
+    {
+      "section": "General Studies",
+      "question": "If $X = a^2 - b^2$, $Y = 30$, and $a+b = 15$, then / यदि $X = a^2 - b^2$, $Y = 30$ तथा $a+b = 15$ हो, तो",
+      "options": [
+        "X is smaller than Y if a=b / X छोटा है Y से यदि a=b",
+        "X is greater than Y if a>b / X बड़ा है Y से यदि a>b",
+        "Y is greater than X if a=b / Y बड़ा है X से यदि a=b",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": "Since X = (a+b)(a-b) = 15(a-b). If a=b, X=0, so X<Y is true. Also Y>X is true. Thus multiple statements are correct."
+    },
+    {
+      "section": "General Studies",
+      "question": "The probability that a non-leap year selected at random will contain 53 Sundays is / यादृच्छिक रूप से चुने गए एक गैर-लीप वर्ष में 53 रविवार होने की प्रायिकता है",
+      "options": [
+        "1/7",
+        "2/53",
+        "1/53",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "1/7",
+      "explanation": "A non-leap year has 365 days, which is 52 weeks and 1 extra day. That extra day can be any of the 7 days of the week, so the probability of it being a Sunday is 1/7."
+    },
+    {
+      "section": "General Studies",
+      "question": "If $7^{12x+6} = 49^{3x+12}$, then the value of x is / यदि $7^{12x+6} = 49^{3x+12}$ हो, तो x का मान है",
+      "options": [
+        "3",
+        "4",
+        "7",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "3",
+      "explanation": "49 = 7^2. So, $7^{12x+6} = 7^{2(3x+12)} = 7^{6x+24}$. Equating exponents: 12x + 6 = 6x + 24 => 6x = 18 => x = 3."
+    },
+    {
+      "section": "General Studies",
+      "question": "Myopia is a disease in which a person cannot see / मायोपिया वह बीमारी है, जिसमें व्यक्ति देख नहीं पाता है",
+      "options": [
+        "distant objects clearly / दूर की वस्तुएँ स्पष्ट रूप से",
+        "near objects clearly / पास की वस्तुएँ स्पष्ट रूप से",
+        "near and distant objects clearly / पास की तथा दूर की वस्तुएँ स्पष्ट रूप से",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "distant objects clearly / दूर की वस्तुएँ स्पष्ट रूप से",
+      "explanation": "Myopia is nearsightedness, which means distant objects appear blurry."
+    },
+    {
+      "section": "General Studies",
+      "question": "The word 'Heredity' mainly refers to / 'आनुवंशिकता' शब्द मुख्य रूप से किसे संदर्भित करता है?",
+      "options": [
+        "Anatomy / शरीर-रचना",
+        "Meiosis / अर्धसूत्री विभाजन",
+        "Genetics / आनुवंशिकी",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Genetics / आनुवंशिकी",
+      "explanation": "Heredity represents the passing of genetic traits from parents to offspring, which is the core study of Genetics."
+    },
+    {
+      "section": "General Studies",
+      "question": "Food cans are coated with tin and not with zinc because / जिन डिब्बों में खाना पैक किया जाता है, उन पर टिन की परत चढ़ी होती है न कि जिंक की, क्योंकि",
+      "options": [
+        "tin is more reactive than zinc / टिन, जिंक की तुलना में अधिक प्रतिक्रियाशील है",
+        "zinc is more reactive than tin / जिंक, टिन की तुलना में अधिक प्रतिक्रियाशील है",
+        "zinc is costlier than tin / जिंक, टिन से महँगा है",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "zinc is more reactive than tin / जिंक, टिन की तुलना में अधिक प्रतिक्रियाशील है",
+      "explanation": "Zinc is more reactive than tin, so it could react with acidic foods, making it unsafe for coating food cans."
+    },
+    {
+      "section": "General Studies",
+      "question": "The process by which atmospheric carbon dioxide is converted into carbohydrates during photosynthesis is / वह प्रक्रिया, जिसमें प्रकाश संश्लेषण के दौरान वायुमण्डलीय कार्बन डाइऑक्साइड को कार्बोहाइड्रेट में परिवर्तित किया जाता है, है",
+      "options": [
+        "Oxidation / ऑक्सीकरण",
+        "Reduction / अपचयन",
+        "Hydrolysis / जलीय-विश्लेषण",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Reduction / अपचयन",
+      "explanation": "During the Calvin cycle of photosynthesis, CO2 undergoes reduction to form carbohydrates (glucose)."
+    },
+    {
+      "section": "General Studies",
+      "question": "The quality of a printer is determined by / एक प्रिन्टर की गुणवत्ता किससे निर्धारित की जाती है?",
+      "options": [
+        "Words per inch / शब्द प्रति इंच",
+        "Strikes per inch / प्रहार प्रति इंच",
+        "Dots per inch / बिन्दु प्रति इंच",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Dots per inch / बिन्दु प्रति इंच",
+      "explanation": "Printer resolution and quality are measured in DPI (Dots Per Inch)."
+    },
+    {
+      "section": "General Studies",
+      "question": "Trachoma disease is related to / ट्रैकोमा रोग का सम्बन्ध है",
+      "options": [
+        "Lungs / फेफड़ों से",
+        "Ears / कान से",
+        "Eyes / आँखों से",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Eyes / आँखों से",
+      "explanation": "Trachoma is a bacterial infection that affects the eyes and can lead to blindness."
+    },
+    {
+      "section": "General Studies",
+      "question": "Which of the following uses Newton's third law of motion? / निम्नलिखित में से कौन-सा न्यूटन के गति के तीसरे नियम का उपयोग करता है?",
+      "options": [
+        "Archery / तीरंदाजी",
+        "Space rocket / अंतरिक्ष रॉकेट",
+        "Venturimeter / वेन्चूरीमीटर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": "Both archery (releasing the arrow) and space rockets (exhaust pushing down, rocket pushing up) rely on action and reaction (Newton's third law). Note: Official key designated (A) Archery, but logically multiple apply."
+    },
+    {
+      "section": "General Studies",
+      "question": "The particles added to the nucleus of an atom keeping the chemical properties unaltered are / रासायनिक गुणों को अपरिवर्तित रखते हुए एक परमाणु के नाभिक में जोड़े जाने वाले कण हैं",
+      "options": [
+        "Neutrons / न्यूट्रॉन",
+        "Electrons / इलेक्ट्रॉन",
+        "Protons / प्रोटॉन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Neutrons / न्यूट्रॉन",
+      "explanation": "Adding neutrons changes the isotope (mass) but does not change the atomic number, thereby keeping chemical properties unaltered."
+    },
+    {
+      "section": "General Studies",
+      "question": "Before Elon Musk replaced the signature blue bird logo with an 'X', who is considered the creator of Twitter's iconic bird in its final 2012 version? / एलन मस्क द्वारा सिग्नेचर ब्लू बर्ड लोगो को बदलकर 'X' लोगो की घोषणा करने से पहले, 2012 में अपने अन्तिम संस्करण में ट्विटर के प्रतिष्ठित बर्ड के निर्माता के रूप में किसे माना जाता है?",
+      "options": [
+        "Jack Dorsey / जैक डोर्सी",
+        "Martin Grasser / मार्टिन ग्रासर",
+        "Noah Glass / नोआह ग्लास",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Martin Grasser / मार्टिन ग्रासर",
+      "explanation": "Martin Grasser designed the 2012 version of the Twitter bird logo composed of 15 overlapping circles."
+    },
+    {
+      "section": "General Studies",
+      "question": "Who is the director of the famous high-concept science film 'Oppenheimer' released this year? / इस वर्ष रिलीज़ हुई उच्च-अवधारणा विज्ञान के बारे में प्रसिद्ध फिल्म 'ओपेनहाइमर' के निर्देशक कौन हैं?",
+      "options": [
+        "Christopher Nolan / क्रिस्टोफर नोलन",
+        "Guy Ritchie / गाइ रिची",
+        "Laura McGann / लौरा मैकगैन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Christopher Nolan / क्रिस्टोफर नोलन",
+      "explanation": "Christopher Nolan is the director of the 2023 movie Oppenheimer."
+    },
+    {
+      "section": "General Studies",
+      "question": "Who among the following withdrew from hosting the 2026 edition of the Commonwealth Games due to heavily projected expenditure? / निम्नलिखित में से किसने राष्ट्रमण्डल खेलों के 2026 संस्करण की मेजबानी से इसके आयोजन पर भारी अनुमानित व्यय के कारण अपना नाम वापस ले लिया है?",
+      "options": [
+        "London, UK / लंदन, यू० के०",
+        "Kuala Lumpur, Malaysia / कुआलालंपुर, मलेशिया",
+        "Victoria, Australia / विक्टोरिया, ऑस्ट्रेलिया",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Victoria, Australia / विक्टोरिया, ऑस्ट्रेलिया",
+      "explanation": "The Australian state of Victoria cancelled its plans to host the 2026 Commonwealth Games due to soaring costs."
+    },
+    {
+      "section": "General Studies",
+      "question": "What is the full form of INDIA, the recently formed alliance of opposition political parties? / हाल ही में बने विपक्षी राजनीतिक दलों के गठबंधन INDIA का पूर्णरूप क्या है?",
+      "options": [
+        "Indian National Developmental Inclusive Alliance / इंडियन नेशनल डेवलपमेंटल इंक्लूसिव अलायन्स",
+        "Indian National Development for Improvement Alliance / इंडियन नेशनल डेवलपमेंट फॉर इम्प्रूवमेंट अलायन्स",
+        "Indian National Developmental Inclusive Association / इंडियन नेशनल डेवलपमेंटल इंक्लूसिव ऐसोसिएशन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Indian National Developmental Inclusive Alliance / इंडियन नेशनल डेवलपमेंटल इंक्लूसिव अलायन्स",
+      "explanation": "INDIA stands for Indian National Developmental Inclusive Alliance."
+    },
+    {
+      "section": "General Studies",
+      "question": "What message did the Chandrayaan-2 lunar orbiter send to the Chandrayaan-3 lander module when establishing contact in August 2023? / अगस्त 2023 में जब चन्द्रयान-2 चंद्र ऑर्बिटर ने चन्द्रयान-3 के लैंडर मॉड्यूल से सम्पर्क स्थापित किया, तो उसने उसे क्या संदेश भेजा था?",
+      "options": [
+        "\"Welcome home\" / \"वेलकम होम\"",
+        "\"Chalo Chand Ke Paar Chalein\" / \"चलो चाँद के पार चलें\"",
+        "\"Welcome, buddy\" / \"वेलकम, बडी\"",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "\"Welcome, buddy\" / \"वेलकम, बडी\"",
+      "explanation": "The Chandrayaan-2 orbiter formally welcomed the Chandrayaan-3 lander module with the message 'Welcome, buddy!'."
+    },
+    {
+      "section": "General Studies",
+      "question": "Name the former President of China who crushed the pro-democracy movement in 1989. / 1989 में लोकतन्त्र समर्थक आन्दोलन को कुचलने वाले चीन के पूर्व राष्ट्रपति का नाम लिखिए।",
+      "options": [
+        "Mao Zedong / माओ त्से तुंग",
+        "Yang Shangkun / यांग शांगकुन",
+        "Jiang Zemin / जियांग जेमिन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Jiang Zemin / जियांग जेमिन",
+      "explanation": "According to the official BPSC answer key, Jiang Zemin was designated. (Yang Shangkun was officially president in 1989, but Jiang Zemin ascended to power post-crackdown)."
+    },
+    {
+      "section": "General Studies",
+      "question": "Who has been elected for a second term as Prime Minister of Ireland? / आयरलैंड के प्रधानमंत्री के रूप में दूसरे कार्यकाल के लिए किसे चुना गया है?",
+      "options": [
+        "Sanna Marin / सन्ना मरीन",
+        "Robert Abela / रॉबर्ट अबेला",
+        "Leo Varadkar / लियो वराडकर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Leo Varadkar / लियो वराडकर",
+      "explanation": "Leo Varadkar returned for a second term as Ireland’s prime minister in December 2022."
+    },
+    {
+      "section": "General Studies",
+      "question": "The African Union was made a permanent member at the G-20 summit held in India. Who is the chairperson of the African Union? / भारत में आयोजित जी-20 शिखर सम्मेलन में अफ्रीकी संघ को स्थायी सदस्य बनाया गया। अफ्रीकी संघ के अध्यक्ष कौन हैं?",
+      "options": [
+        "Azali Assoumani / अजाली असौमनी",
+        "Justin Trudeau / जस्टिन ट्रूडो",
+        "Ursula von der Leyen / उर्सुला वॉन डेर लेन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Azali Assoumani / अजाली असौमनी",
+      "explanation": "Azali Assoumani, President of the Comoros, was the Chairperson of the African Union during the 2023 G20 summit."
+    },
+    {
+      "section": "General Studies",
+      "question": "According to geographical area, arrange the following physiographic units of India in ascending order: 1. Central Highlands 2. Great Plains 3. Coastal Plains 4. Northern Mountains / भौगोलिक क्षेत्रफल के अनुसार, भारत की निम्नलिखित भौतिक (फिजियोग्राफिक) इकाइयों को आरोही क्रम में व्यवस्थित कीजिए: 1. केन्द्रीय उच्चभाग 2. महान मैदान 3. तटीय मैदान 4. उत्तरी पर्वत",
+      "options": [
+        "3, 1, 2, 4",
+        "1, 2, 3, 4",
+        "2, 4, 1, 3",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "3, 1, 2, 4",
+      "explanation": "According to the official answer key, the order is 3, 1, 2, 4."
+    },
+    {
+      "section": "General Studies",
+      "question": "Arrange the following ranges in sequence from North to South: 1. Ladakh 2. Karakoram 3. Pir Panjal 4. Zanskar / निम्नलिखित श्रेणियों को उत्तर से दक्षिण की ओर क्रम में व्यवस्थित कीजिए : 1. लद्दाख 2. कराकोरम 3. पीर पन्जाल 4. जांस्कर",
+      "options": [
+        "1, 3, 2, 4",
+        "2, 1, 4, 3",
+        "3, 4, 1, 2",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "2, 1, 4, 3",
+      "explanation": "From North to South: Karakoram, Ladakh, Zanskar, and Pir Panjal."
+    },
+    {
+      "section": "General Studies",
+      "question": "In India, most of the cyclones during the monsoon season originate / भारत में मॉनसून सीजन में अधिकांश चक्रवातों की उत्पत्ति होती है",
+      "options": [
+        "Between 8° N and 13° N latitude / 8° उ० और 13° उ० अक्षांश के मध्य",
+        "Between 10° N and 15° N latitude / 10° उ० और 15° उ० अक्षांश के मध्य",
+        "Between 16° N and 21° N latitude / 16° उ० और 21° उ० अक्षांश के मध्य",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Between 10° N and 15° N latitude / 10° उ० और 15° उ० अक्षांश के मध्य",
+      "explanation": "Cyclones typically originate over the Bay of Bengal between these latitudes during the active monsoon and post-monsoon phases."
+    },
+    {
+      "section": "General Studies",
+      "question": "Which of the following areas is not landslide-prone? / निम्नलिखित क्षेत्रों में से कौन-सा भूस्खलन-प्रवृत्त (प्रोन) नहीं है?",
+      "options": [
+        "Western Ghats / पश्चिमी घाट",
+        "Eastern Ghats / पूर्वी घाट",
+        "Himalayan region / हिमालयी क्षेत्र",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Eastern Ghats / पूर्वी घाट",
+      "explanation": "The Eastern Ghats are older, more stable, and less prone to major landslides compared to the ecologically fragile Western Ghats and the seismically active Himalayas."
+    },
+    {
+      "section": "General Studies",
+      "question": "Which of the following coasts of India is most affected by fierce tropical cyclones? / निम्नलिखित में से भारत का कौन-सा तट उग्र उष्णकटिबंधीय चक्रवातों से सबसे अधिक प्रभावित है?",
+      "options": [
+        "Malabar / मालाबार",
+        "Coromandel / कोरोमंडल",
+        "Konkan / कोंकण",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Coromandel / कोरोमंडल",
+      "explanation": "The Coromandel coast (east coast) faces the Bay of Bengal and is frequently battered by fierce tropical cyclones."
+    },
+    {
+      "section": "General Studies",
+      "question": "When flowing water cuts clay and makes deep channels, what happens? / जब बहता पानी चिकनी मिट्टी को काटता है और गहरे चैनल बनाता है, तो क्या होता है?",
+      "options": [
+        "Gully erosion / गली कटाव",
+        "Sheet erosion / शीट क्षरण",
+        "Deforestation / वनों की कटाई",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Gully erosion / गली कटाव",
+      "explanation": "Gully erosion occurs when runoff water accumulates and rapidly flows in narrow channels during or immediately after heavy rains, removing soil."
+    },
+    {
+      "section": "General Studies",
+      "question": "Which of the following receives heavy rainfall during the months of October and November? / निम्नलिखित में से कहाँ अक्तूबर और नवम्बर के महीने में भारी वर्षा होती है?",
+      "options": [
+        "Garo, Khasi and Jaintia hills / गारो, खासी और जैतिया की पहाड़ियाँ",
+        "Coromandel Coast / कोरोमंडल तट",
+        "Chota Nagpur Plateau / छोटानागपुर का पठार",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Coromandel Coast / कोरोमंडल तट",
+      "explanation": "The Coromandel coast receives the bulk of its rainfall during October and November from the retreating (Northeast) monsoon."
+    },
+    {
+      "section": "General Studies",
+      "question": "Cultivation of fruits and vegetables is called / फलों एवं सब्जियों की खेती कहलाती है",
+      "options": [
+        "Floriculture / फूलों की खेती",
+        "Agriculture / कृषि",
+        "Horticulture / बागवानी",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Horticulture / बागवानी",
+      "explanation": "Horticulture encompasses the cultivation of plants for food, specifically fruits, vegetables, nuts, seeds, and ornamental plants."
+    },
+    {
+      "section": "General Studies",
+      "question": "Who provided leadership in Patna, Arrah, and Shahabad districts during the Revolt of 1857 in Bihar? / बिहार में 1857 की क्रान्ति के दौरान पटना, आरा और शाहाबाद जिलों में किसने नेतृत्व प्रदान किया?",
+      "options": [
+        "Rajkumar Shukla / राजकुमार शुक्ला",
+        "Namdar Khan / नामदार खाँ",
+        "Kunwar Singh / कुँवर सिंह",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Kunwar Singh / कुँवर सिंह",
+      "explanation": "Babu Kunwar Singh was the notable leader of the Indian Rebellion of 1857 in Bihar, hailing from Jagdispur (Shahabad)."
+    },
+    {
+      "section": "General Studies",
+      "question": "The partition of Bengal came into effect on / बंगाल का विभाजन प्रभावी हुआ",
+      "options": [
+        "14 October 1905 / 14 अक्तूबर, 1905 को",
+        "15 October 1905 / 15 अक्तूबर, 1905 को",
+        "16 October 1905 / 16 अक्तूबर, 1905 को",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "16 October 1905 / 16 अक्तूबर, 1905 को",
+      "explanation": "The partition of Bengal, announced by Lord Curzon, formally came into effect on 16th October 1905."
+    },
+    {
+      "section": "General Studies",
+      "question": "The Quit India resolution was passed by the Congress in Bombay on / बम्बई में काँग्रेस द्वारा भारत छोड़ो प्रस्ताव पास किया गया",
+      "options": [
+        "7 August 1942 / 7 अगस्त, 1942 को",
+        "8 August 1942 / 8 अगस्त, 1942 को",
+        "9 August 1942 / 9 अगस्त, 1942 को",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "8 August 1942 / 8 अगस्त, 1942 को",
+      "explanation": "The Quit India resolution was ratified at the Bombay session of the All India Congress Committee on August 8, 1942."
+    },
+    {
+      "section": "General Studies",
+      "question": "How did the British rule India for a long time? / अंग्रेजों ने भारत पर लम्बे समय तक राज्य कैसे किया?",
+      "options": [
+        "Due to the liberal policies of Congress / काँग्रेस की उदारवादी नीतियों के कारण",
+        "Due to the arrest of Indian leaders / भारतीय नेताओं की गिरफ्तारी के कारण",
+        "Due to the policy of 'Divide and Rule' / 'बाँटो और राज करो' की नीति के कारण",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Due to the policy of 'Divide and Rule' / 'बाँटो और राज करो' की नीति के कारण",
+      "explanation": "The British predominantly maintained control over India by creating administrative, social, and religious divisions through their Divide and Rule strategy."
+    },
+    {
+      "section": "General Studies",
+      "question": "On which of the following dates was Queen Victoria's proclamation issued? / निम्नलिखित में से किस तिथि को रानी विक्टोरिया की उद्घोषणा जारी हुई?",
+      "options": [
+        "1 November 1857 / 1 नवम्बर, 1857",
+        "27 March 1858 / 27 मार्च, 1858",
+        "1 November 1858 / 1 नवम्बर, 1858",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "1 November 1858 / 1 नवम्बर, 1858",
+      "explanation": "Queen Victoria's proclamation, which transferred the power of governing India from the East India Company to the British Crown, was read by Lord Canning on November 1, 1858."
+    },
+    {
+      "section": "General Studies",
+      "question": "Which of the following statements is correct? / निम्नलिखित में से कौन-सा कथन सही है?",
+      "options": [
+        "Raja Rammohan Roy was a pioneer of modern education / राजा राममोहन राय नवीन शिक्षा के अग्रणी थे।",
+        "Swami Dayanand gave the slogan 'India for Indians' / स्वामी दयानन्द ने 'भारत भारतीयों के लिए' का नारा दिया।",
+        "Vivekananda participated in the World Parliament of Religions / विवेकानन्द ने विश्व धर्म संसद में भाग लिया।",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "More than one of the above / उपर्युक्त में से एक से अधिक",
+      "explanation": "All three statements are historically accurate."
+    },
+    {
+      "section": "General Studies",
+      "question": "Who among these became the unofficial envoy of India in England? / इनमें से कौन इंग्लैंड में भारत के अनाधिकारिक दूत बने ?",
+      "options": [
+        "Surendranath Banerjee / सुरेन्द्रनाथ बनर्जी",
+        "Dadabhai Naoroji / दादाभाई नौरोजी",
+        "Swami Vivekananda / स्वामी विवेकानन्द",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Dadabhai Naoroji / दादाभाई नौरोजी",
+      "explanation": "Dadabhai Naoroji served as an unofficial ambassador of India in England and was the first Asian to become a British MP."
+    },
+    {
+      "section": "General Studies",
+      "question": "Who called the Government of India Act, 1935 a 'Charter of Slavery'? / भारत सरकार अधिनियम, 1935 को किसने 'गुलामी का चार्टर' बताया?",
+      "options": [
+        "Mahatma Gandhi / महात्मा गाँधी",
+        "Netaji Subhas Chandra Bose / नेताजी सुभाष चन्द्र बोस",
+        "Maulana Hasrat Mohani / मौलाना हसरत मोहानी",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Netaji Subhas Chandra Bose / नेताजी सुभाष चन्द्र बोस",
+      "explanation": "According to the official BPSC key, Netaji Subhas Chandra Bose is accepted as the answer (though Jawaharlal Nehru famously dubbed it a 'Charter of Slavery' as well)."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The brain of computer is / कंप्यूटर का मस्तिष्क है",
+      "options": [
+        "CPU / सीपीयू (CPU)",
+        "memory / मेमोरी",
+        "I/O device / I/O डिवाइस",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "CPU / सीपीयू (CPU)",
+      "explanation": "The Central Processing Unit (CPU) is often referred to as the brain of the computer because it performs most of the processing inside the computer."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Intel 8085 microprocessor is of ___ generation. / इंटेल 8085 माइक्रोप्रोसेसर ___ पीढ़ी का है।",
+      "options": [
+        "first / पहली",
+        "second / दूसरी",
+        "third / तीसरी",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "second / दूसरी",
+      "explanation": "The Intel 8085 is an 8-bit microprocessor introduced by Intel in 1976, commonly categorized as a second-generation microprocessor (following earlier 4-bit and simple 8-bit models like 4004/8008). Official BPSC Key Answer: A (First) is often cited in older texts incorrectly, but B (second) is accurate technically. (Mock Test reflects official Answer Key designation: A)."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The maximum memory size of third generation microprocessor is / तीसरी पीढ़ी के माइक्रोप्रोसेसर की अधिकतम मेमोरी क्षमता है",
+      "options": [
+        "4 GB / 4 जीबी",
+        "16 MB / 16 एमबी",
+        "16 GB / 16 जीबी",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "4 GB / 4 जीबी",
+      "explanation": "Third-generation microprocessors (like the Intel 80386) introduced 32-bit architecture, which allows addressing up to 2^32 bytes, equivalent to 4 GB of memory."
+    },
+    {
+      "section": "Computer Science",
+      "question": "CPU on a single chip is called / सिंगल चिप पर मौजूद CPU को क्या कहा जाता है",
+      "options": [
+        "microprocessor / माइक्रोप्रोसेसर",
+        "microcontroller / माइक्रोकंट्रोलर",
+        "solid-state device / सॉलिड-स्टेट डिवाइस",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "microprocessor / माइक्रोप्रोसेसर",
+      "explanation": "A microprocessor is an integrated circuit that contains all the functions of a central processing unit (CPU) of a computer on a single chip."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Computer on a single chip is called / सिंगल चिप पर मौजूद कंप्यूटर को क्या कहा जाता है",
+      "options": [
+        "microcontroller / माइक्रोकंट्रोलर",
+        "microprocessor / माइक्रोप्रोसेसर",
+        "assembler / असेंबलर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "microcontroller / माइक्रोकंट्रोलर",
+      "explanation": "A microcontroller includes a CPU along with memory and I/O peripherals on a single chip, essentially acting as a 'computer on a chip'."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which one of the following is used for playing video games? / निम्नलिखित में से किसका उपयोग वीडियो गेम खेलने के लिए किया जाता है?",
+      "options": [
+        "Mouse / माउस",
+        "Trackball / ट्रैकबॉल",
+        "Joystick / जॉयस्टिक",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Joystick / जॉयस्टिक",
+      "explanation": "A joystick is a popular input device frequently used for controlling video games."
+    },
+    {
+      "section": "Computer Science",
+      "question": "___ is used to store softwares that does not update. / ___ का उपयोग उन सॉफ़्टवेयर को स्टोर करने के लिए किया जाता है जो अपडेट नहीं होते हैं।",
+      "options": [
+        "SRAM",
+        "DRAM",
+        "ROM",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "ROM",
+      "explanation": "Read-Only Memory (ROM) is primarily used to store firmware or software that is rarely or never updated."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following contains a laser? / निम्नलिखित में से किसमें लेज़र होता है?",
+      "options": [
+        "CD Drive / सीडी ड्राइव",
+        "RAM / रैम (RAM)",
+        "Hard Disk Drive / हार्ड डिस्क ड्राइव",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "CD Drive / सीडी ड्राइव",
+      "explanation": "A CD Drive (optical drive) uses a laser beam to read data from or write data to optical discs."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A computer program that converts an assembly language program into equivalent machine language program is called / एक कंप्यूटर प्रोग्राम जो असेंबली भाषा प्रोग्राम को समतुल्य मशीन भाषा प्रोग्राम में परिवर्तित करता है, कहलाता है",
+      "options": [
+        "compiler / कंपाइलर",
+        "assembler / असेंबलर",
+        "linker / लिंकर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "assembler / असेंबलर",
+      "explanation": "An assembler is a specific utility program that translates low-level assembly code directly into executable machine language code."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A computer program that converts a high-level language program into an equivalent machine language program is called / एक कंप्यूटर प्रोग्राम जो उच्च-स्तरीय भाषा प्रोग्राम को समतुल्य मशीन भाषा प्रोग्राम में परिवर्तित करता है, कहलाता है",
+      "options": [
+        "assembler / असेंबलर",
+        "compiler / कंपाइलर",
+        "loader / लोडर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "compiler / कंपाइलर",
+      "explanation": "A compiler translates the entire high-level programming code into machine-level code before execution."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A computer program that translates high-level language program into machine language program statement-by-statement is called / एक कंप्यूटर प्रोग्राम जो उच्च-स्तरीय भाषा प्रोग्राम को कथन-दर-कथन (statement-by-statement) मशीन भाषा में अनुवादित करता है, कहलाता है",
+      "options": [
+        "compiler / कंपाइलर",
+        "loader / लोडर",
+        "interpreter / इंटरप्रेटर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "interpreter / इंटरप्रेटर",
+      "explanation": "An interpreter translates high-level instructions into machine language line-by-line (statement-by-statement) at runtime."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is not an operating system? / निम्नलिखित में से कौन एक ऑपरेटिंग सिस्टम नहीं है?",
+      "options": [
+        "Linux / लिनक्स",
+        "Windows / विंडोज़",
+        "Oracle / ओरेकल",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Oracle / ओरेकल",
+      "explanation": "Oracle is primarily known as a Relational Database Management System (RDBMS), not an operating system like Linux or Windows."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A software that runs on a computer hardware and serves as a platform for other softwares to run is called / कंप्यूटर हार्डवेयर पर चलने वाला सॉफ़्टवेयर जो अन्य सॉफ़्टवेयर को चलाने के लिए प्लेटफ़ॉर्म के रूप में कार्य करता है, कहलाता है",
+      "options": [
+        "system software / सिस्टम सॉफ़्टवेयर",
+        "operating system / ऑपरेटिंग सिस्टम",
+        "application software / एप्लीकेशन सॉफ़्टवेयर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "operating system / ऑपरेटिंग सिस्टम",
+      "explanation": "The Operating System acts as the primary interface between computer hardware and user applications."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is not a system tool? / निम्नलिखित में से कौन एक सिस्टम टूल नहीं है?",
+      "options": [
+        "Scandisk",
+        "Format",
+        "Folder",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Folder",
+      "explanation": "Scandisk and Format are system utilities (tools). A folder is a structural element of the file system to organize files, not a tool."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The key/keys used to delete a file without allowing it to store in recycle bin is/are / किसी फ़ाइल को रीसायकल बिन में स्टोर किए बिना उसे हटाने के लिए उपयोग की जाने वाली कुंजी/कुंजियाँ है/हैं",
+      "options": [
+        "Delete",
+        "Shift + Delete",
+        "Ctrl + Delete",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Shift + Delete",
+      "explanation": "Using Shift + Delete permanently deletes a file, bypassing the Recycle Bin in Windows."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The three main components of a digital computer system are / एक डिजिटल कंप्यूटर सिस्टम के तीन मुख्य घटक हैं",
+      "options": [
+        "memory, I/O, DMA / मेमोरी, I/O, DMA",
+        "ALU, CPU, memory / ALU, CPU, मेमोरी",
+        "memory, CPU, I/O / मेमोरी, CPU, I/O",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "memory, CPU, I/O / मेमोरी, CPU, I/O",
+      "explanation": "The basic von Neumann architecture consists of a CPU, memory, and Input/Output (I/O) interfaces."
+    },
+    {
+      "section": "Computer Science",
+      "question": "FFFF will be the last memory location in a memory of size / FFFF किस आकार की मेमोरी में अंतिम मेमोरी स्थान होगा",
+      "options": [
+        "16K",
+        "32K",
+        "64K",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "64K",
+      "explanation": "FFFF in hexadecimal equals 65535 in decimal. Addressing 0 to 65535 represents 65,536 locations, which is exactly 64K (where 1K = 1024)."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The cost of storing a bit is minimum in / एक बिट को स्टोर करने की लागत किसमें न्यूनतम होती है",
+      "options": [
+        "cache / कैश",
+        "register / रजिस्टर",
+        "magnetic tape / मैग्नेटिक टेप",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "magnetic tape / मैग्नेटिक टेप",
+      "explanation": "Magnetic tape offers high-capacity secondary storage at the lowest cost per bit, suitable for archival purposes."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Tera means / टेरा (Tera) का अर्थ है",
+      "options": [
+        "$2^{20}$",
+        "$2^{40}$",
+        "$2^{30}$",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "$2^{40}$",
+      "explanation": "In binary prefixes, Kilo is $2^{10}$, Mega is $2^{20}$, Giga is $2^{30}$, and Tera is $2^{40}$."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following system softwares resides always in main memory? / निम्नलिखित में से कौन सा सिस्टम सॉफ़्टवेयर हमेशा मुख्य मेमोरी में रहता है?",
+      "options": [
+        "Loader / लोडर",
+        "Linker / लिंकर",
+        "Assembler / असेंबलर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Loader / लोडर",
+      "explanation": "The loader is a core component of the OS that remains resident in the main memory to place programs into memory for execution."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The postfix equivalent of the prefix expression * + ab - cd is / प्रीफ़िक्स व्यंजक * + ab - cd का समतुल्य पोस्टफ़िक्स है",
+      "options": [
+        "ab+cd-*",
+        "abcd+-*",
+        "ab+cd*-",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "ab+cd-*",
+      "explanation": "Prefix: * + ab - cd -> Infix: (a+b) * (c-d) -> Postfix: ab+ cd- *"
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which data structure is used to convert infix notation to postfix notation? / इनफ़िक्स नोटेशन को पोस्टफ़िक्स नोटेशन में बदलने के लिए किस डेटा संरचना का उपयोग किया जाता है?",
+      "options": [
+        "Stack / स्टैक",
+        "Queue / कतार",
+        "Tree / ट्री",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Stack / स्टैक",
+      "explanation": "A stack is traditionally used to temporarily hold operators and parentheses during infix-to-postfix conversion."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The data structure in which data are added at the rear and deleted from front is called / वह डेटा संरचना जिसमें डेटा को पीछे से जोड़ा जाता है और आगे से हटाया जाता है, कहलाती है",
+      "options": [
+        "stack / स्टैक",
+        "queue / कतार",
+        "linked list / लिंक्ड लिस्ट",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "queue / कतार",
+      "explanation": "A queue is a linear structure following the First In First Out (FIFO) principle; elements are added at the rear and removed from the front."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Queue data structure uses / कतार (Queue) डेटा संरचना उपयोग करती है",
+      "options": [
+        "FIFO",
+        "LIFO",
+        "LILO",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "FIFO",
+      "explanation": "FIFO stands for First-In, First-Out, indicating that the first element added is the first to be removed."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Stack data structure uses / स्टैक (Stack) डेटा संरचना उपयोग करती है",
+      "options": [
+        "FIFO",
+        "LIFO",
+        "LILO",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "LIFO",
+      "explanation": "LIFO stands for Last-In, First-Out, meaning the last element added to the stack is the first one removed."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A constructor is called whenever / एक कंस्ट्रक्टर को तब कॉल किया जाता है जब",
+      "options": [
+        "an object is created / एक ऑब्जेक्ट बनाया जाता है",
+        "a class is created / एक क्लास बनाई जाती है",
+        "a class is declared / एक क्लास घोषित की जाती है",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "an object is created / एक ऑब्जेक्ट बनाया जाता है",
+      "explanation": "In object-oriented programming, a constructor is automatically invoked when an instance (object) of a class is instantiated."
+    },
+    {
+      "section": "Computer Science",
+      "question": "All members of a structure in C++ are ___ by default. / C++ में एक संरचना (structure) के सभी सदस्य डिफ़ॉल्ट रूप से ___ होते हैं।",
+      "options": [
+        "public",
+        "private",
+        "protected",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "public",
+      "explanation": "By default, unlike classes, all members of a struct in C++ are public."
+    },
+    {
+      "section": "Computer Science",
+      "question": "In C++, all members of a class are ___ by default. / C++ में, एक क्लास के सभी सदस्य डिफ़ॉल्ट रूप से ___ होते हैं।",
+      "options": [
+        "public",
+        "private",
+        "protected",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "private",
+      "explanation": "By default, members of a class in C++ are private, which enforces data hiding/encapsulation."
+    },
+    {
+      "section": "Computer Science",
+      "question": "In C++, what does a class hold? / C++ में, एक क्लास में क्या होता है?",
+      "options": [
+        "Array / ऐरे",
+        "Data / डेटा",
+        "Data and functions / डेटा और फ़ंक्शन्स",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Data and functions / डेटा और फ़ंक्शन्स",
+      "explanation": "A class wraps both data fields (variables/attributes) and the functions (methods) that operate on that data."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The number of access specifiers in class of C++ is / C++ की क्लास में एक्सेस स्पेसिफ़ायर्स की संख्या है",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "3",
+      "explanation": "C++ features 3 access specifiers: public, private, and protected."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following is used to define the members of a class externally in C++? / C++ में क्लास के सदस्यों को बाहरी रूप से परिभाषित करने के लिए निम्नलिखित में से किसका उपयोग किया जाता है?",
+      "options": [
+        ":",
+        "::",
+        "#",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "::",
+      "explanation": "The Scope Resolution Operator (::) is used to define class member functions outside the class scope."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which concept of C++ is used to reuse the written code? / लिखे गए कोड का पुन: उपयोग करने के लिए C++ की किस अवधारणा का उपयोग किया जाता है?",
+      "options": [
+        "Polymorphism / बहुरूपता (Polymorphism)",
+        "Inheritance / वंशानुक्रम (Inheritance)",
+        "Encapsulation / एनकैप्सुलेशन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Inheritance / वंशानुक्रम (Inheritance)",
+      "explanation": "Inheritance allows a new class to inherit properties and behaviors from an existing class, promoting code reuse."
+    },
+    {
+      "section": "Computer Science",
+      "question": "What will be the output of the following program fragment?\nint a=5;\ncout <<\"FIRST\" <<(a<<2) <<\"SECOND\"; / निम्नलिखित प्रोग्राम अंश का आउटपुट क्या होगा?",
+      "options": [
+        "FIRST 52 SECOND",
+        "FIRST 20 SECOND",
+        "SECOND 25 FIRST",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "FIRST 20 SECOND",
+      "explanation": "The expression (a<<2) bit-shifts 'a' (5) left by 2 bits. $5 \\times 2^2 = 20$. So the output is FIRST 20 SECOND."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Choose the correct statement about inline function in C++. / C++ में इनलाइन फ़ंक्शन के बारे में सही कथन चुनें।",
+      "options": [
+        "It speeds up the execution. / यह निष्पादन को गति देता है।",
+        "It slows down the execution. / यह निष्पादन को धीमा करता है।",
+        "It decreases the code size. / यह कोड आकार को कम करता है।",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "It speeds up the execution. / यह निष्पादन को गति देता है।",
+      "explanation": "Inline functions expand inline at the point of call, eliminating the overhead of standard function calls and speeding up execution (though increasing binary code size)."
+    },
+    {
+      "section": "Computer Science",
+      "question": "What will be the output of the following?\nint i=10;\nvoid main()\n{ int i=20;\n  {\n    int i=30;\n    printf(\"%d %d\", i, ::i);\n  }\n} / निम्नलिखित का आउटपुट क्या होगा?",
+      "options": [
+        "30, 10",
+        "30, 20",
+        "20, 30",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "30, 10",
+      "explanation": "The local variable `i` inside the innermost scope is 30. The scope resolution operator `::i` refers to the global variable, which is 10."
+    },
+    {
+      "section": "Computer Science",
+      "question": "cout in C++ stands for / C++ में cout का अर्थ है",
+      "options": [
+        "class output / क्लास आउटपुट",
+        "character output / कैरेक्टर आउटपुट",
+        "common output / कॉमन आउटपुट",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "character output / कैरेक्टर आउटपुट",
+      "explanation": "In C++, 'cout' stands for 'character output'. It outputs a stream of characters."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Group of instructions that directs a computer is called / निर्देशों का समूह जो कंप्यूटर को निर्देशित करता है, कहलाता है",
+      "options": [
+        "memory / मेमोरी",
+        "storage / स्टोरेज",
+        "program / प्रोग्राम",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "program / प्रोग्राम",
+      "explanation": "A computer program is a set/group of instructions that can be executed by a computer to perform a specific task."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A computer program consists of / एक कंप्यूटर प्रोग्राम में शामिल होते हैं",
+      "options": [
+        "system flowchart / सिस्टम फ्लोचार्ट",
+        "program flowchart / प्रोग्राम फ्लोचार्ट",
+        "algorithms written in computer language / कंप्यूटर भाषा में लिखे गए एल्गोरिदम",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "algorithms written in computer language / कंप्यूटर भाषा में लिखे गए एल्गोरिदम",
+      "explanation": "A program fundamentally implements algorithms written in an understandable computer language."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The topology with highest reliability is / उच्चतम विश्वसनीयता वाली टोपोलॉजी है",
+      "options": [
+        "star / स्टार",
+        "ring / रिंग",
+        "mesh / मेश",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "mesh / मेश",
+      "explanation": "A full mesh topology provides the highest reliability because each node is connected to every other node, preventing single points of failure."
+    },
+    {
+      "section": "Computer Science",
+      "question": "End-to-end connectivity is provided from host-to-host in / होस्ट-टू-होस्ट एंड-टू-एंड कनेक्टिविटी किसमें प्रदान की जाती है",
+      "options": [
+        "network layer / नेटवर्क लेयर",
+        "transport layer / ट्रांसपोर्ट लेयर",
+        "session layer / सेशन लेयर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "transport layer / ट्रांसपोर्ट लेयर",
+      "explanation": "The Transport layer (Layer 4 in OSI) ensures reliable, end-to-end host-to-host message delivery and error recovery."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The ___ measures the number of lost or garbled messages as a fraction of the total sent in the sampling period. / ___ सैंपलिंग अवधि में भेजे गए कुल संदेशों के अंश के रूप में खोए हुए या विकृत संदेशों की संख्या को मापता है।",
+      "options": [
+        "residual error rate / रेजिडुअल एरर रेट",
+        "transfer failure probability / ट्रांसफर फेल्योर प्रोबेबिलिटी",
+        "connection release failure probability / कनेक्शन रिलीज फेल्योर प्रोबेबिलिटी",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "residual error rate / रेजिडुअल एरर रेट",
+      "explanation": "Residual Error Rate refers to the probability of messages being lost or garbled after error detection/correction mechanisms have failed."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A high-speed communication equipment typically would not be needed for / एक उच्च गति संचार उपकरण की आमतौर पर किसके लिए आवश्यकता नहीं होगी",
+      "options": [
+        "e-mail / ई-मेल",
+        "transferring large volume of data / बड़ी मात्रा में डेटा स्थानांतरित करने",
+        "supporting communication between nodes in a LAN / लैन में नोड्स के बीच संचार का समर्थन करने",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "e-mail / ई-मेल",
+      "explanation": "Email is typically asynchronous and requires relatively small packet sizes, rarely necessitating ultra-high-speed data lines compared to heavy data transfers."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A ___ topology uses a single connection to connect all devices together. / एक ___ टोपोलॉजी सभी उपकरणों को एक साथ जोड़ने के लिए एकल कनेक्शन का उपयोग करती है।",
+      "options": [
+        "bus / बस",
+        "star / स्टार",
+        "ring / रिंग",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "bus / बस",
+      "explanation": "In a bus topology, all devices are connected sequentially to a single, central cable (the backbone or bus)."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A ___ is used to connect networking devices that are in a very close geographic area such as a floor of a building. / एक ___ का उपयोग उन नेटवर्किंग उपकरणों को जोड़ने के लिए किया जाता है जो एक बहुत ही करीबी भौगोलिक क्षेत्र जैसे कि किसी इमारत के तल (floor) में होते हैं।",
+      "options": [
+        "WAN",
+        "LAN",
+        "MAN",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "LAN",
+      "explanation": "Local Area Network (LAN) covers a restricted area like a home, office, or building floor."
+    },
+    {
+      "section": "Computer Science",
+      "question": "In computer network, what is the size of IP address in IPv4? / कंप्यूटर नेटवर्क में, IPv4 में IP पते का आकार क्या है?",
+      "options": [
+        "8 bits",
+        "16 bits",
+        "32 bits",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "32 bits",
+      "explanation": "IPv4 uses 32-bit addresses, whereas IPv6 uses 128-bit addresses."
+    },
+    {
+      "section": "Computer Science",
+      "question": "What is the size of MAC address in computer network? / कंप्यूटर नेटवर्क में MAC पते का आकार क्या है?",
+      "options": [
+        "32 bits",
+        "16 bits",
+        "48 bits",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "48 bits",
+      "explanation": "A MAC (Media Access Control) address is a 48-bit identifier assigned to network interfaces for communications."
+    },
+    {
+      "section": "Computer Science",
+      "question": "What is the name given to the act of gaining illegal entry to computer files through remote terminals or microcomputers? / रिमोट टर्मिनलों या माइक्रो कंप्यूटरों के माध्यम से कंप्यूटर फ़ाइलों में अवैध प्रवेश प्राप्त करने के कार्य को क्या नाम दिया गया है?",
+      "options": [
+        "Hacking / हैकिंग",
+        "Decoding / डिकोडिंग",
+        "Beating the system / सिस्टम को हराना (Beating the system)",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Hacking / हैकिंग",
+      "explanation": "Hacking refers to gaining unauthorized or illegal access to computer systems, networks, or files."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A computer virus is a software program which has the essential ability to / कंप्यूटर वायरस एक सॉफ़्टवेयर प्रोग्राम है जिसमें यह आवश्यक क्षमता होती है",
+      "options": [
+        "damage data / डेटा नष्ट करने की",
+        "damage program / प्रोग्राम नष्ट करने की",
+        "clone itself / स्वयं का क्लोन बनाने (self-replicate) की",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "clone itself / स्वयं का क्लोन बनाने (self-replicate) की",
+      "explanation": "The defining characteristic of a computer virus is its capacity to duplicate or clone itself, infecting other files or systems."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Copying computer program/software without the permission of its authors is called / कंप्यूटर प्रोग्राम/सॉफ़्टवेयर को उसके लेखकों की अनुमति के बिना कॉपी करना कहलाता है",
+      "options": [
+        "larceny / चोरी (Larceny)",
+        "software piracy / सॉफ्टवेयर पायरेसी",
+        "highway robbery / हाईवे डकैती",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "software piracy / सॉफ्टवेयर पायरेसी",
+      "explanation": "Unauthorized copying, distribution, or use of software is termed Software Piracy."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A hard disk becomes totally inaccessible when a computer virus corrupts / एक हार्ड डिस्क पूरी तरह से अगम्य (inaccessible) हो जाती है जब एक कंप्यूटर वायरस किसे दूषित कर देता है",
+      "options": [
+        "partition table / पार्टीशन टेबल",
+        "file allocation table / फाइल एलोकेशन टेबल (FAT)",
+        "root directory / रूट डायरेक्टरी",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "partition table / पार्टीशन टेबल",
+      "explanation": "If a virus corrupts the partition table (MBR), the OS loses all data boundaries and the hard disk geometry, making the disk entirely inaccessible."
+    },
+    {
+      "section": "Computer Science",
+      "question": "An attribute of one table matching the primary key of another table is called as / एक तालिका का वह एट्रिब्यूट जो दूसरी तालिका की प्राथमिक कुंजी (primary key) से मेल खाता है, कहलाता है",
+      "options": [
+        "foreign key / फॉरेन की",
+        "secondary key / सेकेंडरी की",
+        "candidate key / कैंडिडेट की",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "foreign key / फॉरेन की",
+      "explanation": "A foreign key establishes a link or relation between data in two tables by referencing the primary key of another table."
+    },
+    {
+      "section": "Computer Science",
+      "question": "If every non-key attribute is fully dependent on the primary key, then the relation will be in / यदि प्रत्येक गैर-कुंजी एट्रिब्यूट प्राथमिक कुंजी पर पूरी तरह से निर्भर है, तो संबंध (relation) किस रूप में होगा",
+      "options": [
+        "First Normal Form (1NF) / प्रथम नॉर्मल फॉर्म (1NF)",
+        "Second Normal Form (2NF) / द्वितीय नॉर्मल फॉर्म (2NF)",
+        "Third Normal Form (3NF) / तृतीय नॉर्मल फॉर्म (3NF)",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Second Normal Form (2NF) / द्वितीय नॉर्मल फॉर्म (2NF)",
+      "explanation": "A table is in 2NF if it is in 1NF and every non-key attribute is fully functionally dependent on the entire primary key."
+    },
+    {
+      "section": "Computer Science",
+      "question": "In relational database, the data type of values in each column of a table is called / रिलेशनल डेटाबेस में, तालिका के प्रत्येक कॉलम में मानों के डेटा प्रकार को कहा जाता है",
+      "options": [
+        "attribute / एट्रिब्यूट",
+        "domain / डोमेन",
+        "relation / रिलेशन",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "domain / डोमेन",
+      "explanation": "A domain represents a set of permissible, valid values (data types and limits) for an attribute/column."
+    },
+    {
+      "section": "Computer Science",
+      "question": "In relational database, the number of attributes of a relation is called the ___ of relation. / रिलेशनल डेटाबेस में, किसी संबंध (relation) के एट्रिब्यूट्स की संख्या को संबंध का ___ कहा जाता है।",
+      "options": [
+        "domain / डोमेन",
+        "degree / डिग्री",
+        "cardinality / कार्डिनैलिटी",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "degree / डिग्री",
+      "explanation": "The number of attributes (columns) in a table defines the 'degree', whereas the number of tuples (rows) is called 'cardinality'."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following SQL commands is used to change the attribute values of one or more rows in a table? / तालिका में एक या अधिक पंक्तियों के एट्रिब्यूट मानों को बदलने के लिए निम्नलिखित में से किस SQL कमांड का उपयोग किया जाता है?",
+      "options": [
+        "Update",
+        "Insert",
+        "Alter",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Update",
+      "explanation": "UPDATE is a DML command used to modify the existing data (values) within one or multiple rows."
+    },
+    {
+      "section": "Computer Science",
+      "question": "To retrieve information from a database, which of the following SQL commands is used? / डेटाबेस से जानकारी प्राप्त करने के लिए, निम्नलिखित में से किस SQL कमांड का उपयोग किया जाता है?",
+      "options": [
+        "Display",
+        "Show",
+        "Select",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Select",
+      "explanation": "The SELECT statement is the standard command used to query or retrieve data from SQL databases."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following SQL commands is used to modify the structure of a table? / तालिका की संरचना को संशोधित करने के लिए निम्नलिखित में से किस SQL कमांड का उपयोग किया जाता है?",
+      "options": [
+        "Alter",
+        "Modify",
+        "Update",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Alter",
+      "explanation": "ALTER TABLE is a DDL command used to add, delete, or modify columns (structure) in an existing table."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following SQL keywords is used to display data from a table based on certain pattern? / किसी निश्चित पैटर्न के आधार पर तालिका से डेटा प्रदर्शित करने के लिए निम्नलिखित में से किस SQL कीवर्ड का उपयोग किया जाता है?",
+      "options": [
+        "IN",
+        "LIKE",
+        "BETWEEN",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "LIKE",
+      "explanation": "The LIKE operator is used in a WHERE clause to search for a specified pattern (using wildcards like % and _) in a column."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Degree and cardinality of a relation in relational database are 4 and 3 respectively. If 3 attributes and 4 tuples are added to the relation, what will be its new cardinality and degree? / रिलेशनल डेटाबेस में एक संबंध की डिग्री और कार्डिनैलिटी क्रमशः 4 और 3 है। यदि संबंध में 3 एट्रिब्यूट्स और 4 टपल्स जोड़े जाते हैं, तो इसकी नई कार्डिनैलिटी और डिग्री क्या होगी?",
+      "options": [
+        "7, 6",
+        "7, 7",
+        "8, 6",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "7, 7",
+      "explanation": "New degree (attributes/columns) = 4 + 3 = 7. New cardinality (tuples/rows) = 3 + 4 = 7. The question asks for cardinality then degree: 7, 7."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which SQL command is used to remove a table from a database? / डेटाबेस से तालिका को हटाने के लिए किस SQL कमांड का उपयोग किया जाता है?",
+      "options": [
+        "DELETE",
+        "DROP",
+        "ERASE",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "DROP",
+      "explanation": "The DROP TABLE command completely deletes the table structure and its data from the database."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The register that contains the address of the next instruction to be executed is called / वह रजिस्टर जिसमें निष्पादित किए जाने वाले अगले निर्देश का पता (address) होता है, कहलाता है",
+      "options": [
+        "program counter / प्रोग्राम काउंटर",
+        "instruction register / इंस्ट्रक्शन रजिस्टर",
+        "accumulator / एक्यूमुलेटर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "program counter / प्रोग्राम काउंटर",
+      "explanation": "The Program Counter (PC) keeps track of the memory address of the next instruction to be fetched and executed."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The register that contains the instruction that is being executed is called / वह रजिस्टर जिसमें निष्पादित किया जा रहा निर्देश होता है, कहलाता है",
+      "options": [
+        "accumulator / एक्यूमुलेटर",
+        "program counter / प्रोग्राम काउंटर",
+        "instruction register / इंस्ट्रक्शन रजिस्टर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "instruction register / इंस्ट्रक्शन रजिस्टर",
+      "explanation": "The Instruction Register (IR) holds the actual instruction that is currently being decoded and executed."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The register which holds the address of location of memory to and from which data are to be transferred is known as / वह रजिस्टर जो मेमोरी के उस स्थान का पता रखता है जहाँ से डेटा स्थानांतरित किया जाना है, कहलाता है",
+      "options": [
+        "index register / इंडेक्स रजिस्टर",
+        "memory address register / मेमोरी एड्रेस रजिस्टर",
+        "memory buffer register / मेमोरी बफर रजिस्टर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "memory address register / मेमोरी एड्रेस रजिस्टर",
+      "explanation": "The Memory Address Register (MAR) stores the memory address from which data will be fetched to the CPU, or the address to which data will be sent."
+    },
+    {
+      "section": "Computer Science",
+      "question": "A storage device used to compensate the difference in flow of data is known as / डेटा के प्रवाह में अंतर की भरपाई के लिए उपयोग किए जाने वाले स्टोरेज डिवाइस को कहा जाता है",
+      "options": [
+        "main memory / मेन मेमोरी",
+        "auxiliary memory / ऑक्ज़ीलरी मेमोरी",
+        "buffer / बफर",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "buffer / बफर",
+      "explanation": "A buffer acts as a temporary holding area that absorbs speed mismatches or data flow variations between two interacting devices."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Memory in which any location can be reached in a fixed amount of time after specifying its address is called / वह मेमोरी जिसमें उसका पता निर्दिष्ट करने के बाद एक निश्चित समय में किसी भी स्थान तक पहुँचा जा सकता है, कहलाती है",
+      "options": [
+        "Sequential Access Memory",
+        "Random Access Memory",
+        "Secondary Memory",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "Random Access Memory",
+      "explanation": "RAM (Random Access Memory) allows read/write access to any memory location in roughly the same constant amount of time, irrespective of its physical location."
+    },
+    {
+      "section": "Computer Science",
+      "question": "If $(X567)_8 + (2YX5)_8 = (71YX)_8$, then the values of X and Y are / यदि $(X567)_8 + (2YX5)_8 = (71YX)_8$ है, तो X और Y के मान हैं",
+      "options": [
+        "4, 3",
+        "3, 3",
+        "4, 4",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "4, 3",
+      "explanation": "Adding in base 8 from right: 7+5=12 decimal = 14 octal -> write 4, carry 1. X=4. Next, 1+6+X=1+6+4=11 decimal = 13 octal -> write 3, carry 1. Y=3. Checking further confirms X=4, Y=3."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The range of the numbers that can be represented in 8-bit using 2's complement representation is / 2's कॉम्प्लिमेंट प्रतिनिधित्व का उपयोग करके 8-बिट में दर्शायी जा सकने वाली संख्याओं की सीमा है",
+      "options": [
+        "-128 to +128",
+        "-127 to +127",
+        "-128 to +127",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "-128 to +127",
+      "explanation": "For an n-bit two's complement integer, the representable range is from $-2^{n-1}$ to $2^{n-1} - 1$. For n=8, range is -128 to +127."
+    },
+    {
+      "section": "Computer Science",
+      "question": "If $(11X1Y)_8 = (12C9)_{16}$ then the values of X and Y are / यदि $(11X1Y)_8 = (12C9)_{16}$ है तो X और Y के मान हैं",
+      "options": [
+        "5, 1",
+        "5, 7",
+        "3, 1",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "3, 1",
+      "explanation": "Hex $(12C9)_{16}$ in binary: 0001 0010 1100 1001. Grouping by 3 bits to convert to octal from right: 001(1), 001(1), 011(3), 001(1), 001(1) = $(11311)_8$. Therefore, X=3, Y=1."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following 4-bit numbers equals its 2's complement? / निम्नलिखित में से कौन सी 4-बिट संख्या अपने 2's कॉम्प्लिमेंट के बराबर है?",
+      "options": [
+        "1010",
+        "0101",
+        "1000",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "1000",
+      "explanation": "The 2's complement is derived by inverting bits and adding 1. For 1000: invert -> 0111; add 1 -> 1000. It is the minimum negative value (-8)."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The number of 1's in the binary representation of the value of the decimal expression of $16^3 \\times 9 + 16^2 \\times 7 + 16 \\times 5 + 3$ is / दशमलव व्यंजक $16^3 \\times 9 + 16^2 \\times 7 + 16 \\times 5 + 3$ के मान के बाइनरी प्रतिनिधित्व में 1 की संख्या है",
+      "options": [
+        "15",
+        "9",
+        "12",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "9",
+      "explanation": "The polynomial represents the hexadecimal number $(9753)_{16}$. Converting to binary: 9=1001 (2 ones), 7=0111 (3 ones), 5=0101 (2 ones), 3=0011 (2 ones). Total ones = 2+3+2+2 = 9."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The Boolean expression $x+x'y$ equals / बूलियन व्यंजक $x+x'y$ किसके बराबर है",
+      "options": [
+        "$x+y$",
+        "$x+xy$",
+        "$y+yx$",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "$x+y$",
+      "explanation": "According to the Absorption Law in Boolean algebra, $x + x'y = (x+x')(x+y) = 1 \\times (x+y) = x+y$."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The Boolean expression $AB+AB'+A'C+AC$ is independent of Boolean variable / बूलियन व्यंजक $AB+AB'+A'C+AC$ किस बूलियन चर (variable) से स्वतंत्र है",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "B",
+      "explanation": "$AB+AB'+A'C+AC = A(B+B') + C(A'+A) = A(1) + C(1) = A+C$. This result is entirely independent of B."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The Boolean expression $A+BC$ equals / बूलियन व्यंजक $A+BC$ किसके बराबर है",
+      "options": [
+        "$(A'+B)(A'+C)$",
+        "$(A+B)(A'+C)$",
+        "$(A+B)(A+C)$",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "$(A+B)(A+C)$",
+      "explanation": "According to the distributive law of Boolean algebra: $A+BC = (A+B)(A+C)$."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The Boolean expression $x+xy$ will be equal to / बूलियन व्यंजक $x+xy$ किसके बराबर होगा",
+      "options": [
+        "x",
+        "y",
+        "$x+y$",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "x",
+      "explanation": "By factoring out x, $x + xy = x(1 + y)$. Since $1 + y = 1$, this simplifies to $x \\times 1 = x$."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The Boolean expression $x(x+y)$ is equal to / बूलियन व्यंजक $x(x+y)$ किसके बराबर है",
+      "options": [
+        "x",
+        "y",
+        "xy",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "x",
+      "explanation": "Expanding $x(x+y)$ gives $xx + xy$. Since $xx = x$, it becomes $x + xy$, which simplifies to $x(1+y) = x$."
+    },
+    {
+      "section": "Computer Science",
+      "question": "If x is a Boolean variable, then $(((x')')')$ will be / यदि x एक बूलियन चर है, तो $(((x')')')$ होगा",
+      "options": [
+        "$x'$",
+        "x",
+        "$x+x'$",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "$x'$",
+      "explanation": "Applying the involution law: $(x')' = x$. Inverting one more time yields $x'$."
+    },
+    {
+      "section": "Computer Science",
+      "question": "In two-valued Boolean algebra, the maximum number of Boolean functions for two variables will be / दो-मूल्य वाले बूलियन बीजगणित में, दो चरों के लिए बूलियन कार्यों (functions) की अधिकतम संख्या होगी",
+      "options": [
+        "8",
+        "12",
+        "16",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "16",
+      "explanation": "For $n$ variables, there are $2^n$ possible truth table combinations. The number of distinct functions is $2^{(2^n)}$. For $n=2$, this is $2^4 = 16$."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Simplified Boolean function of Boolean function $F=A'C+A'B+AB'C+BC$ is / बूलियन फ़ंक्शन $F=A'C+A'B+AB'C+BC$ का सरलीकृत बूलियन फ़ंक्शन है",
+      "options": [
+        "$F=C+A'B$",
+        "$F=A'B+B'C$",
+        "$F=BC+A'B$",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "$F=C+A'B$",
+      "explanation": "F = A'C + AB'C + A'B + BC = C(A'+AB') + A'B + BC = C(A'+B') + A'B + BC = A'C + B'C + BC + A'B = A'C + C(B'+B) + A'B = A'C + C + A'B = C + A'B."
+    },
+    {
+      "section": "Computer Science",
+      "question": "Which of the following logic gates is called universal gate? / निम्नलिखित में से किस लॉजिक गेट को यूनिवर्सल गेट कहा जाता है?",
+      "options": [
+        "AND",
+        "OR",
+        "NAND",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "NAND",
+      "explanation": "NAND and NOR gates are considered universal gates because any logic gate (AND, OR, NOT, XOR, etc.) can be constructed entirely using only NAND (or entirely using NOR) gates."
+    },
+    {
+      "section": "Computer Science",
+      "question": "The minimum number of NAND gates required to implement Boolean function $f=x'y+xy'$ is / बूलियन फ़ंक्शन $f=x'y+xy'$ को लागू करने के लिए आवश्यक NAND गेट्स की न्यूनतम संख्या है",
+      "options": [
+        "3",
+        "4",
+        "6",
+        "More than one of the above / उपर्युक्त में से एक से अधिक",
+        "None of the above / उपर्युक्त में से कोई नहीं"
+      ],
+      "answer": "4",
+      "explanation": "The expression $x'y+xy'$ is the standard XOR operation. It requires a minimum of 4 NAND gates to properly implement an XOR gate."
+    }
+  ]
+}
