@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mock Test - Testara</title>
 
 <style>
@@ -71,7 +71,6 @@ input[type="radio"]{
 .green{background:#28a745;color:#fff}
 .orange{background:#fd7e14;color:#fff}
 .grey{background:#eee}
-.purple{background:#6f42c1;color:#fff}
 
 .question-navigator{
   display:grid;
@@ -116,6 +115,17 @@ footer button{
 #nextBtn{background:#28a745}
 #submitBtn{background:#17a2b8;font-weight:bold}
 
+#loader{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(255,255,255,0.95);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
 @media(max-width:768px){
   .container{flex-direction:column-reverse}
   .meta-bar{flex-direction:column;gap:6px;font-size:14px}
@@ -127,7 +137,14 @@ footer button{
 
 <body>
 
-<header id="examTitle">Loading Test...</header>
+<div id="loader">
+<div>
+<div style="width:60px;height:60px;border:6px solid #ccc;border-top:6px solid #007bff;border-radius:50%;animation:spin 1s linear infinite;margin:auto"></div>
+<p style="margin-top:15px;text-align:center">Loading Test...</p>
+</div>
+</div>
+
+<header id="examName">Loading...</header>
 
 <div class="container">
 
@@ -141,8 +158,6 @@ footer button{
 <div class="meta-bar">
 <div class="meta-left">
 <div id="question-number"></div>
-<div>Marks: <strong id="questionMarks"></strong></div>
-<div>Negative: <strong id="questionNegative"></strong></div>
 </div>
 </div>
 
@@ -164,7 +179,6 @@ footer button{
 <div class="question-navigator" id="navigator"></div>
 
 </div>
-
 </div>
 
 <footer>
@@ -186,23 +200,48 @@ let visited={}
 let remainingSeconds=0
 let timerInterval
 
-async function loadTest(){
+function getQueryParam(key){
+return new URLSearchParams(window.location.search).get(key)
+}
+
+async function loadQuestions(){
+
+const loader=document.getElementById("loader")
+loader.style.display="flex"
+
+const exam=getQueryParam("exam")||localStorage.getItem("lastExamKey")
+const file=getQueryParam("file")||localStorage.getItem("lastFile")
+
+if(!exam||!file){
+loader.innerHTML="❌ Missing exam or file!"
+return
+}
+
+localStorage.setItem("lastExamKey",exam)
+localStorage.setItem("lastFile",file)
+
+const path=`sets/${exam}/${file}`
+
 try{
-const res=await fetch("questions.json")
-if(!res.ok) throw new Error("JSON not found")
+const res=await fetch(path)
+if(!res.ok) throw new Error("File not found")
+
 const data=await res.json()
 
-document.getElementById("examTitle").textContent=data.examName
+document.getElementById("examName").textContent=data.examName||"Mock Test"
 questions=data.questions
-remainingSeconds=data.duration*60
+remainingSeconds=(data.time||30)*60
 
 startTimer()
 loadQuestion(0)
 
 }catch(err){
-alert("Failed to load questions.json")
+loader.innerHTML="❌ Failed to load test!"
 console.error(err)
+return
 }
+
+loader.style.display="none"
 }
 
 function startTimer(){
@@ -226,9 +265,6 @@ const q=questions[index]
 document.getElementById("question-number").innerHTML=
 `Question No: <strong>${index+1}</strong>`
 
-document.getElementById("questionMarks").textContent="+"+q.marks
-document.getElementById("questionNegative").textContent=q.negative
-
 let html=`<p style="font-weight:bold;margin-bottom:12px">${q.question}</p>`
 
 q.options.forEach((opt,i)=>{
@@ -236,7 +272,7 @@ const letter=`(${String.fromCharCode(65+i)})`
 const checked=answers[index]===opt?"checked":""
 html+=`
 <label style="display:block;margin-bottom:8px;cursor:pointer">
-<input type="radio" name="q${index}" value="${opt.replace(/"/g,'&quot;')}"
+<input type="radio" name="q${index}" value="${opt}"
 ${checked}
 onchange="saveAnswer(${index},'${opt.replace(/'/g,"\\'")}')">
 ${letter} ${opt}
@@ -292,7 +328,7 @@ document.getElementById("nextBtn").onclick=()=>{
 if(currentIndex<questions.length-1)loadQuestion(currentIndex+1)
 }
 
-window.onload=loadTest
+window.onload=loadQuestions
 </script>
 
 </body>
