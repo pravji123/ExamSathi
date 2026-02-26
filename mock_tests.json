@@ -4,7 +4,7 @@
     "category": "Teaching",
     "examKey": "BPSC_CST",
     "rating": 4.6,
-    "tests": 20+,
+    "tests": 20,
     "time": "150 min",
     "lang": "Hindi & English",
     "img": "image/bpsc-logo.png"
@@ -140,6 +140,7 @@
     "img": "image/upsc-logo.png"
   }
 ]
+
 
 
 
