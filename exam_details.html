@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exam Details | Testara - India's Smart Testing Platform</title>
+<title>Exam Details | Testara - India's Smart Testing Platform </title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3KJB0Y4C6"></script>
@@ -15,350 +15,350 @@
 </script>
 
 <style>
-  body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-  header { margin-top: 5px; background: #00adcc; color: white; padding: 15px; text-align: center; }
-  header h1 { margin: 0; font-size: 20px; }
-  header small { display: block; margin-top: 5px; font-size: 13px; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
 
-  .tabs, .sub-tabs, .filter-tabs {
-    display: flex; gap: 10px; padding: 10px; overflow-x: auto;
-    background: #fff; border-bottom: 1px solid #ddd;
-  }
-  .tabs button, .sub-tabs button, .filter-tabs button {
-    flex: none; padding: 8px 14px; border: 1px solid #0077cc;
-    background: white; color: #0077cc; font-size: 14px; border-radius: 20px; cursor: pointer;
-  }
-  .tabs button.active, .sub-tabs button.active, .filter-tabs button.active {
-    background: #0077cc; color: white;
-  }
+header {
+  margin-top: 5px;
+  background: #00adcc;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
 
-  .breadcrumb {
-    padding: 8px 12px; font-size: 14px; color: #333;
-    background: #fff; border-bottom: 1px solid #ddd;
-  }
+header h1 { margin: 0; font-size: 20px; }
+header small { display: block; margin-top: 5px; font-size: 13px; }
 
-  .search-bar { text-align: center; padding: 10px; background: #fff; border-bottom: 1px solid #ddd; }
-  .search-bar input {
-    width: 100%; max-width: 350px; padding: 8px;
-    border: 1px solid #ccc; border-radius: 6px;
-  }
+.tabs, .sub-tabs, .filter-tabs {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  overflow-x: auto;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
 
-  .test-list {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(250px,1fr));
-    gap: 15px; padding: 15px;
-  }
-  .test-card {
-    background: #fff; padding: 15px; border: 1px solid #ddd; border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    display: flex; flex-direction: column; position: relative;
-    transform: scale(1); transition: transform 0.3s ease;
-  }
-  .test-card:hover { transform: scale(1.03); }
-  .test-card strong { font-size: 16px; color: #0077cc; display: block; margin-bottom: 5px; }
-  .test-card small { color: #666; display: block; margin-top: 4px; }
+.tabs button, .sub-tabs button, .filter-tabs button {
+  padding: 8px 14px;
+  border: 1px solid #0077cc;
+  background: white;
+  color: #0077cc;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
-  .start-btn {
-    width: 100%; padding: 8px; margin-top: 10px; border: none;
-    border-radius: 6px; font-weight: bold; cursor: pointer;
-  }
-  .enabled { background: #28a745; color: #fff; }
-  .disabled { background: #ccc; color: #666; cursor: not-allowed; }
-  .buy-btn { background: #ff6600; color: #fff; }
+.tabs button.active,
+.sub-tabs button.active,
+.filter-tabs button.active {
+  background: #0077cc;
+  color: white;
+}
 
-  .countdown { font-size: 13px; color: #888; margin-top: 5px; }
+.breadcrumb {
+  padding: 8px 12px;
+  font-size: 14px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
 
-  /* 🆕 Badge Styling */
-  .new-badge {
-    position: absolute; top: 8px; right: 10px;
-    background: red; color: white; font-size: 12px; font-weight: bold;
-    padding: 3px 8px; border-radius: 12px; animation: pulse 1.5s infinite;
-  }
-  .upcoming-badge {
-    position: absolute; top: 8px; right: 10px;
-    background: orange; color: white; font-size: 12px; font-weight: bold;
-    padding: 3px 8px; border-radius: 12px;
-  }
-  @keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.15); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 1; }
-  }
+.search-bar {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
 
-  @media (max-width: 1200px) and (min-width: 600px) {
-    .test-list { grid-template-columns: repeat(2, 1fr);}
-  }
-  @media(max-width: 599px){
-    .test-list { grid-template-columns: 1fr; }
-    .tabs, .sub-tabs, .filter-tabs { gap: 5px; padding: 5px; }
-    .tabs button, .sub-tabs button, .filter-tabs button { padding: 6px 10px; font-size: 12px; }
-  }
+.search-bar input {
+  width: 100%;
+  max-width: 350px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.test-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px,1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.test-card {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.test-card:hover { transform: scale(1.03); }
+
+.test-card strong {
+  font-size: 16px;
+  color: #0077cc;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.start-btn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.enabled { background: #28a745; color: #fff; }
+.disabled { background: #ccc; color: #666; cursor: not-allowed; }
+.buy-btn { background: #ff6600; color: #fff; }
+
+.countdown { font-size: 13px; color: #888; margin-top: 5px; }
+
+.new-badge, .upcoming-badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.new-badge { background: red; animation: pulse 1.5s infinite; }
+.upcoming-badge { background: orange; }
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width:1200px){
+  .test-list { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width:600px){
+  .test-list { grid-template-columns: 1fr; }
+}
 </style>
 </head>
+
 <body>
-  <div id="header"></div>
 
-  <header>
-    <h1 id="examName">Loading...</h1>
-    <small id="examMeta"></small>
-  </header>
+<header>
+  <h1 id="examName">Loading...</h1>
+  <small id="examMeta"></small>
+</header>
 
-  <div class="breadcrumb" id="breadcrumb">Currently Viewing: --</div>
-  <div class="tabs" id="mainTabs"></div>
-  <div class="sub-tabs" id="subTabs" style="display:none;"></div>
-  <div class="filter-tabs" id="filterTabs" style="display:none;"></div>
+<div class="breadcrumb" id="breadcrumb">Currently Viewing: --</div>
+<div class="tabs" id="mainTabs"></div>
+<div class="sub-tabs" id="subTabs" style="display:none;"></div>
+<div class="filter-tabs" id="filterTabs" style="display:none;"></div>
 
-  <div class="search-bar">
-    <input type="text" id="searchBox" placeholder="🔍 Search tests...">
-  </div>
+<div class="search-bar">
+  <input type="text" id="searchBox" placeholder="Search tests...">
+</div>
 
-  <div class="test-list" id="testContainer"></div>
+<div class="test-list" id="testContainer"></div>
 
-  <div id="footer"></div>
-  <script src="load-header-footer.js"></script>
+<script>
 
-  <script>
-    let config = {}, allTests = [], currentFilteredList = [], countdowns=[];
-    let activeMainTab='', activeSubTab='', activeFilter='';
+let config={}, allTests=[], currentFilteredList=[], countdowns=[];
+let activeMainTab='', activeSubTab='', activeFilter='';
 
-    const params = new URLSearchParams(window.location.search);
-    const examKey = params.get('exam') || 'default';
-    const fullPaid = localStorage.getItem("userFullPaid")==="true";
-    const paidTestsUnlocked = JSON.parse(localStorage.getItem("userPaidTests")||"[]");
+const params=new URLSearchParams(window.location.search);
+const examKey=params.get('exam')||'default';
 
-    async function loadConfig(){
-      try {
-        const res = await fetch(`sets/${examKey}/config.json`);
-        if(!res.ok) throw new Error('Config not found');
-        config = await res.json();
+const fullPaid=localStorage.getItem("userFullPaid")==="true";
+const paidTestsUnlocked=JSON.parse(localStorage.getItem("userPaidTests")||"[]");
 
-        document.getElementById('examName').textContent = config.examName;
-        document.getElementById('examMeta').textContent =
-          `${config.totalTests} Tests | Updated: ${config.updatedDate} | Languages: ${config.languages.join(', ')} | ${config.users} Users`;
+async function loadConfig(){
+  const res=await fetch(`sets/${examKey}/config.json`);
+  config=await res.json();
 
-        allTests = config.tests || [];
-        buildMainTabs();
-      } catch(e) {
-        document.getElementById('examName').textContent = '❌ Failed to load config';
-        console.error(e);
-      }
-    }
+  document.getElementById('examName').textContent=config.examName;
+  document.getElementById('examMeta').textContent=
+    `${config.totalTests} Tests | Updated: ${config.updatedDate}`;
 
-    // 🆕 Status निकालने का function
-    function getTestStatus(liveDateStr) {
-      if (!liveDateStr) return 'none';
-      const today = new Date(); today.setHours(0,0,0,0);
-      const liveDate = new Date(liveDateStr); liveDate.setHours(0,0,0,0);
-      const diffDays = Math.floor((liveDate - today) / (1000*60*60*24));
-      if (diffDays >= -5 && diffDays < 1) return 'new';
-      if (diffDays > 0) return 'upcoming';
-      return 'none';
-    }
+  allTests=config.tests||[];
+  buildMainTabs();
+}
 
-    function buildMainTabs(){
-      const mainTabsDiv = document.getElementById('mainTabs');
-      mainTabsDiv.innerHTML='';
-      (config.tabs||[]).forEach(tab=>{
-        const btn = document.createElement('button');
-        btn.textContent = tab;
-        btn.onclick = () => selectMainTab(tab);
-        mainTabsDiv.appendChild(btn);
-      });
-      if(config.tabs?.length) selectMainTab(config.tabs[0]);
-    }
+function getTestStatus(dateStr){
+  if(!dateStr) return 'none';
+  const today=new Date(); today.setHours(0,0,0,0);
+  const live=new Date(dateStr); live.setHours(0,0,0,0);
+  const diff=(live-today)/86400000;
 
-    function selectMainTab(tab){
-      activeMainTab=tab; activeSubTab=''; activeFilter='';
-      document.querySelectorAll('#mainTabs button').forEach(b=>b.classList.remove('active'));
-      [...document.querySelectorAll('#mainTabs button')].find(b=>b.textContent===tab)?.classList.add('active');
+  if(diff>=-5 && diff<1) return 'new';
+  if(diff>0) return 'upcoming';
+  return 'none';
+}
 
-      if(tab==='Paid Tests'){ 
-        document.getElementById('subTabs').style.display='flex'; 
-        buildSubTabs();
+function buildMainTabs(){
+  const div=document.getElementById('mainTabs');
+  div.innerHTML='';
+  config.tabs.forEach(tab=>{
+    const btn=document.createElement('button');
+    btn.textContent=tab;
+    btn.onclick=()=>selectMainTab(tab);
+    div.appendChild(btn);
+  });
+  selectMainTab(config.tabs[0]);
+}
+
+function selectMainTab(tab){
+  activeMainTab=tab;
+  document.querySelectorAll('#mainTabs button').forEach(b=>b.classList.remove('active'));
+  [...document.querySelectorAll('#mainTabs button')]
+    .find(b=>b.textContent===tab).classList.add('active');
+
+  filterAndRenderTests();
+}
+
+function filterAndRenderTests(){
+  let filtered=[];
+
+  if(activeMainTab==='Free Tests')
+    filtered=allTests.filter(t=>t.category==='FREE');
+  else if(activeMainTab==='PYQs')
+    filtered=allTests.filter(t=>t.category==='PYQ');
+  else
+    filtered=allTests.filter(t=>t.category==='PAID');
+
+  const priority={new:1,upcoming:2,none:3};
+  filtered.sort((a,b)=>
+    priority[getTestStatus(a.liveDate)]-
+    priority[getTestStatus(b.liveDate)]
+  );
+
+  currentFilteredList=filtered;
+  renderTests(filtered);
+}
+
+function renderTests(list){
+  const container=document.getElementById('testContainer');
+  container.innerHTML='';
+  countdowns.forEach(c=>clearInterval(c));
+
+  list.forEach((t,i)=>{
+    const card=document.createElement('div');
+    card.className='test-card';
+
+    let btnHTML='';
+    if(t.category==='FREE'||t.category==='PYQ'){
+      if(t.liveDate){
+        btnHTML=`<button class="start-btn disabled" id="btn_${i}">
+        Live on ${formatDate(t.liveDate)}</button>
+        <div class="countdown" id="cd_${i}"></div>`;
       } else {
-        document.getElementById('subTabs').style.display='none';
-        document.getElementById('filterTabs').style.display='none';
-        filterAndRenderTests();
+        btnHTML=`<button class="start-btn enabled"
+        onclick="startTest('${t.file}')">Start Test</button>`;
       }
-      updateBreadcrumb();
-    }
-
-    function buildSubTabs(){
-      const subTabsDiv = document.getElementById('subTabs');
-      subTabsDiv.innerHTML='';
-      const paidKeys = Object.keys(config.paidSubTabs||{});
-      paidKeys.forEach(sub=>{
-        const btn = document.createElement('button');
-        btn.textContent = sub;
-        btn.onclick = () => selectSubTab(sub);
-        subTabsDiv.appendChild(btn);
-      });
-      if(paidKeys.length) selectSubTab(paidKeys[0]);
-    }
-
-    function selectSubTab(sub){
-      activeSubTab=sub; activeFilter='';
-      document.querySelectorAll('#subTabs button').forEach(b=>b.classList.remove('active'));
-      [...document.querySelectorAll('#subTabs button')].find(b=>b.textContent===sub)?.classList.add('active');
-
-      const filters = config.paidSubTabs[sub]||[];
-      const filterDiv = document.getElementById('filterTabs');
-      filterDiv.innerHTML='';
-
-      if(filters.length){
-        filterDiv.style.display='flex';
-        const allBtn = document.createElement('button');
-        allBtn.textContent='All';
-        allBtn.onclick = ()=>selectFilter('All');
-        filterDiv.appendChild(allBtn);
-
-        filters.forEach(f=>{
-          const btn = document.createElement('button');
-          btn.textContent=f;
-          btn.onclick = ()=>selectFilter(f);
-          filterDiv.appendChild(btn);
-        });
-        selectFilter('All');
+    } else {
+      const unlocked=fullPaid||paidTestsUnlocked.includes(t.file);
+      if(unlocked){
+        btnHTML=`<button class="start-btn enabled"
+        onclick="startTest('${t.file}')">Start Test</button>`;
       } else {
-        filterDiv.style.display='none';
-        filterAndRenderTests(true);
-      }
-      updateBreadcrumb();
-    }
-
-    function selectFilter(f){
-      activeFilter=f;
-      document.querySelectorAll('#filterTabs button').forEach(b=>b.classList.remove('active'));
-      [...document.querySelectorAll('#filterTabs button')].find(b=>b.textContent===f)?.classList.add('active');
-
-      if(f==='All') filterAndRenderTests(true); else filterAndRenderTests(false);
-      updateBreadcrumb();
-    }
-
-    function updateBreadcrumb(){
-      let parts=[activeMainTab];
-      if(activeSubTab) parts.push(activeSubTab);
-      if(activeFilter && activeFilter!=='All') parts.push(activeFilter);
-      document.getElementById('breadcrumb').textContent='📌 Currently Viewing: '+(parts.join(' > ')||'--');
-    }
-
-    // 🆕 Sorting: NEW → UPCOMING → बाकी
-    function filterAndRenderTests(showAllInSubTab=false){
-      let filtered=[];
-      if(activeMainTab==='Free Tests'){ filtered = allTests.filter(t=>t.category==='FREE'); }
-      else if(activeMainTab==='PYQs'){ filtered = allTests.filter(t=>t.category==='PYQ'); }
-      else if(activeMainTab==='Paid Tests'){
-        let subTabTests = allTests.filter(t=>t.category===activeSubTab.replace(/\s/g,''));
-        filtered = showAllInSubTab ? subTabTests : subTabTests.filter(t=>t.filter===activeFilter);
-      }
-
-      const priority = { 'new': 1, 'upcoming': 2, 'none': 3 };
-      filtered.sort((a,b)=> priority[getTestStatus(a.liveDate)] - priority[getTestStatus(b.liveDate)] );
-
-      currentFilteredList = filtered;
-      renderTests(filtered);
-    }
-
-    function renderTests(list){
-      const container=document.getElementById('testContainer');
-      container.innerHTML='';
-      countdowns.forEach(c=>clearInterval(c));
-      countdowns=[];
-
-      if(!list.length){ container.innerHTML='<p style="text-align:center;color:#666;">No tests found</p>'; return; }
-
-      const today = new Date();
-
-      list.forEach((t,i)=>{
-        let btnHTML='';
-        if(t.category==='FREE'||t.category==='PYQ'){
-          if(t.liveDate){
-            btnHTML=`<button class="start-btn disabled" id="btn_${i}">⏳ Live on ${formatDate(t.liveDate)}</button><div class="countdown" id="cd_${i}"></div>`;
-          } else {
-            btnHTML=`<button class="start-btn enabled" onclick="startTest('${t.file}')">Start Test</button>`;
-          }
-        } else {
-          const unlocked = fullPaid || paidTestsUnlocked.includes(t.file);
-          if(unlocked){
-            btnHTML=`<button class="start-btn enabled" onclick="startTest('${t.file}')">Start Test ✅</button>`;
-          } else {
-            btnHTML=`<button class="start-btn buy-btn" onclick="unlockPaid('${t.file}')">🔒 Locked – Unlock Now</button>`;
-          }
-        }
-
-        //📥 For downloading PYQ
-        const card=document.createElement('div'); 
-        card.className='test-card';  
-        let pyqDownloadHTML = ''; 
-        if (t.category === 'PYQ') { 
-          pyqDownloadHTML = `<div class="pyq-download"> 
-            📥 For downloading PYQ, go to <a href="https://t.me/Testara_Exam_notes/103" target="_blank">this link</a>.</div>`; 
-          } 
-        card.innerHTML = `<strong>${t.title}</strong>📝 ${t.questions} Qs | ⭐ ${t.marks} Marks | ⏳ ${t.time} min${btnHTML} ${pyqDownloadHTML}`; 
-        container.appendChild(card);
-
-        // 🆕 Badge लगाना
-        const status = getTestStatus(t.liveDate);
-        if (status === 'new') {
-          const badge = document.createElement("span");
-          badge.className = "new-badge";
-          badge.textContent = "NEW";
-          card.appendChild(badge);
-        } else if (status === 'upcoming') {
-          const badge = document.createElement("span");
-          badge.className = "upcoming-badge";
-          badge.textContent = "UPCOMING";
-          card.appendChild(badge);
-        }
-
-        if (t.liveDate) setupCountdown(i,t.liveDate,t.file);
-      });
-    }
-
-    function setupCountdown(i,dateStr,file){
-      const btn=document.getElementById(`btn_${i}`);
-      const cd=document.getElementById(`cd_${i}`);
-      function tick(){
-        const now=new Date();
-        const target=new Date(dateStr+'T00:00:00');
-        const diff=target-now;
-        if(diff<=0){
-          btn.textContent='Start Test'; btn.classList.remove('disabled'); btn.classList.add('enabled');
-          btn.onclick=()=>startTest(file);
-          cd.textContent=''; return true;
-        } else {
-          const d=Math.floor(diff/86400000);
-          const h=Math.floor(diff/3600000)%24;
-          const m=Math.floor(diff/60000)%60;
-          cd.textContent=`Starts in ${d>0?d+'d ':''}${h}h ${m}m`; return false;
-        }
-      }
-      if(!tick()){
-        const intv=setInterval(()=>{if(tick()) clearInterval(intv)},60000);
-        countdowns.push(intv);
+        btnHTML=`<button class="start-btn buy-btn"
+        onclick="unlockPaid('${t.file}')">Unlock Now</button>`;
       }
     }
 
-    document.getElementById('searchBox').addEventListener('input',()=>{
-      const term=document.getElementById('searchBox').value.toLowerCase();
-      if(!term) renderTests(currentFilteredList);
-      else renderTests(currentFilteredList.filter(t=>(t.title||'').toLowerCase().includes(term)));
-    });
+    card.innerHTML=`
+      <strong>${t.title}</strong>
+      📝 ${t.questions} Qs | ⭐ ${t.marks} | ⏳ ${t.time} min
+      ${btnHTML}
+    `;
 
-    function startTest(file){
-      const targetPage=examKey.toLowerCase().includes('ssc')?'ssc_test.html':'test.html';
-      window.location.href=`${targetPage}?exam=${encodeURIComponent(examKey)}&file=${encodeURIComponent(file)}`;
+    const status=getTestStatus(t.liveDate);
+    if(status==='new'){
+      const badge=document.createElement('span');
+      badge.className='new-badge';
+      badge.textContent='NEW';
+      card.appendChild(badge);
+    }
+    if(status==='upcoming'){
+      const badge=document.createElement('span');
+      badge.className='upcoming-badge';
+      badge.textContent='UPCOMING';
+      card.appendChild(badge);
     }
 
-    function unlockPaid(file){
-      window.location.href=`pricing.html?test=${encodeURIComponent(file)}`;
-    }
+    container.appendChild(card);
 
-    function formatDate(str){
-      return new Date(str).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
-    }
+    if(t.liveDate) setupCountdown(i,t.liveDate,t.file);
+  });
+}
 
-    loadConfig();
-  </script>
+function setupCountdown(i,dateStr,file){
+  const btn=document.getElementById(`btn_${i}`);
+  const cd=document.getElementById(`cd_${i}`);
+
+  function tick(){
+    const diff=new Date(dateStr)-new Date();
+    if(diff<=0){
+      btn.textContent='Start Test';
+      btn.classList.remove('disabled');
+      btn.classList.add('enabled');
+      btn.onclick=()=>startTest(file);
+      cd.textContent='';
+      return true;
+    } else {
+      const d=Math.floor(diff/86400000);
+      const h=Math.floor(diff/3600000)%24;
+      cd.textContent=`Starts in ${d}d ${h}h`;
+      return false;
+    }
+  }
+
+  if(!tick()){
+    const intv=setInterval(()=>{if(tick())clearInterval(intv)},60000);
+    countdowns.push(intv);
+  }
+}
+
+/* ✅ FIXED START TEST LOGIC (SSC + TRE + Default) */
+function startTest(file){
+  let targetPage='test.html';
+  const key=examKey.toLowerCase();
+
+  if(key.includes('ssc')){
+    targetPage='ssc_test.html';
+  }
+  else if(key.includes('tre')){
+    targetPage='tre_test.html';
+  }
+
+  window.location.href=
+    `${targetPage}?exam=${encodeURIComponent(examKey)}&file=${encodeURIComponent(file)}`;
+}
+
+function unlockPaid(file){
+  window.location.href=`pricing.html?test=${file}`;
+}
+
+function formatDate(str){
+  return new Date(str)
+    .toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
+}
+
+document.getElementById('searchBox').addEventListener('input',()=>{
+  const term=document.getElementById('searchBox').value.toLowerCase();
+  if(!term) renderTests(currentFilteredList);
+  else renderTests(
+    currentFilteredList.filter(t=>
+      t.title.toLowerCase().includes(term))
+  );
+});
+
+loadConfig();
+
+</script>
+
 </body>
 </html>
