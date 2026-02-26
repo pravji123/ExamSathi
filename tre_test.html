@@ -9,22 +9,19 @@
 *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
 body{background:#f4f6f9}
 
-/* HEADER */
 header{
   background:#007bff;
   color:#fff;
   padding:14px;
   text-align:center;
-  font-size:1.3rem;
+  font-size:1.2rem;
   font-weight:600;
 }
 
-/* MAIN LAYOUT */
 .container{display:flex;min-height:82vh}
 .left-panel{flex:4;background:#fff;border-right:2px solid #ddd}
 .right-panel{flex:1;background:#f8f9fa;display:flex;flex-direction:column}
 
-/* META BAR */
 .meta-bar{
   display:flex;
   justify-content:space-between;
@@ -34,29 +31,6 @@ header{
 }
 .meta-left{display:flex;gap:18px;flex-wrap:wrap}
 
-/* SECTION TABS */
-.section-tabs{
-  display:flex;
-  gap:10px;
-  padding:10px;
-  border-bottom:1px solid #ccc;
-  overflow-x:auto;
-}
-.section-tab{
-  padding:6px 16px;
-  border:2px solid #007bff;
-  border-radius:25px;
-  background:transparent;
-  color:#007bff;
-  cursor:pointer;
-  font-size:14px;
-}
-.section-tab.active{
-  background:#007bff;
-  color:#fff;
-}
-
-/* QUESTION CARD */
 .question-box{
   padding:20px;
   background:#fff;
@@ -65,14 +39,12 @@ header{
   box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* RADIO */
 input[type="radio"]{
   transform:scale(1.2);
   margin-right:8px;
   accent-color:#007bff;
 }
 
-/* STATUS BOX */
 .status-box{
   background:#fff;
   border:1px solid #ccc;
@@ -100,12 +72,7 @@ input[type="radio"]{
 .orange{background:#fd7e14;color:#fff}
 .grey{background:#eee}
 .purple{background:#6f42c1;color:#fff}
-.gradient-green-purple{
-  background:radial-gradient(circle,#28a745 60%,#6f42c1 40%);
-  color:#fff;
-}
 
-/* NAVIGATOR */
 .question-navigator{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(38px,1fr));
@@ -127,13 +94,7 @@ input[type="radio"]{
 .current-question{border-radius:50%}
 .answered{background:#28a745;color:#fff}
 .not-answered{background:#fd7e14;color:#fff}
-.review{background:#6f42c1;color:#fff}
-.review-answered{
-  background:radial-gradient(circle,#28a745 50%,#6f42c1 50%);
-  color:#fff;
-}
 
-/* FOOTER */
 footer{
   position:sticky;
   bottom:0;
@@ -152,15 +113,9 @@ footer button{
 }
 #clearBtn{background:#dc3545}
 #backBtn{background:#6c757d}
-#reviewBtn{background:#007bff}
 #nextBtn{background:#28a745}
-#submitBtn{
-  background:#17a2b8;
-  font-weight:bold;
-  padding:10px 18px;
-}
+#submitBtn{background:#17a2b8;font-weight:bold}
 
-/* MOBILE */
 @media(max-width:768px){
   .container{flex-direction:column-reverse}
   .meta-bar{flex-direction:column;gap:6px;font-size:14px}
@@ -172,23 +127,20 @@ footer button{
 
 <body>
 
-<header id="examName">Mock Test</header>
+<header id="examTitle">Loading Test...</header>
 
 <div class="container">
 
 <div class="left-panel">
 
 <div class="meta-bar">
-<div>👤 <strong id="username-display">Guest</strong></div>
+<div>👤 Guest</div>
 <div>⏱ <span id="timer">00:00</span></div>
 </div>
-
-<div class="section-tabs" id="sectionTabs"></div>
 
 <div class="meta-bar">
 <div class="meta-left">
 <div id="question-number"></div>
-<div>Type: <strong id="questionType"></strong></div>
 <div>Marks: <strong id="questionMarks"></strong></div>
 <div>Negative: <strong id="questionNegative"></strong></div>
 </div>
@@ -201,16 +153,11 @@ footer button{
 <div class="right-panel">
 
 <div class="status-box">
-<h3>Question Status</h3>
+<h3>Status</h3>
 <div class="status-grid">
 <div><div id="answeredCount" class="count-box green">0</div> Answered</div>
 <div><div id="notAnsweredCount" class="count-box orange">0</div> Not Answered</div>
 <div><div id="notVisitedCount" class="count-box grey">0</div> Not Visited</div>
-<div><div id="markedCount" class="count-box purple">0</div> Review</div>
-</div>
-<div style="padding:10px">
-<div id="markedAndAnsweredCount" class="count-box gradient-green-purple">0</div>
-Answered & Review
 </div>
 </div>
 
@@ -224,7 +171,6 @@ Answered & Review
 <div style="flex:4;display:flex;gap:8px;flex-wrap:wrap">
 <button id="clearBtn">Clear</button>
 <button id="backBtn">Back</button>
-<button id="reviewBtn">Review</button>
 <button id="nextBtn">Save & Next</button>
 </div>
 <div style="flex:1;text-align:center">
@@ -237,18 +183,37 @@ let questions=[]
 let currentIndex=0
 let answers={}
 let visited={}
-let reviewMarked={}
-let remainingSeconds=1800
+let remainingSeconds=0
 let timerInterval
 
-const letters=["(A)","(B)","(C)","(D)","(E)"]
+async function loadTest(){
+try{
+const res=await fetch("questions.json")
+if(!res.ok) throw new Error("JSON not found")
+const data=await res.json()
+
+document.getElementById("examTitle").textContent=data.examName
+questions=data.questions
+remainingSeconds=data.duration*60
+
+startTimer()
+loadQuestion(0)
+
+}catch(err){
+alert("Failed to load questions.json")
+console.error(err)
+}
+}
 
 function startTimer(){
 timerInterval=setInterval(()=>{
 const mins=String(Math.floor(remainingSeconds/60)).padStart(2,'0')
 const secs=String(remainingSeconds%60).padStart(2,'0')
 document.getElementById("timer").textContent=`${mins}:${secs}`
-if(remainingSeconds<=0){clearInterval(timerInterval);alert("Time Up");}
+if(remainingSeconds<=0){
+clearInterval(timerInterval)
+alert("Time Up")
+}
 remainingSeconds--
 },1000)
 }
@@ -258,31 +223,35 @@ currentIndex=index
 visited[index]=true
 const q=questions[index]
 
-document.getElementById("question-number").innerHTML=`Question No: <strong>${index+1}</strong>`
-document.getElementById("questionType").textContent=q.type
-document.getElementById("questionMarks").innerHTML=`+${q.marks}`
-document.getElementById("questionNegative").innerHTML=q.negative
+document.getElementById("question-number").innerHTML=
+`Question No: <strong>${index+1}</strong>`
+
+document.getElementById("questionMarks").textContent="+"+q.marks
+document.getElementById("questionNegative").textContent=q.negative
 
 let html=`<p style="font-weight:bold;margin-bottom:12px">${q.question}</p>`
+
 q.options.forEach((opt,i)=>{
-const letter=letters[i]||`(${String.fromCharCode(65+i)})`
+const letter=`(${String.fromCharCode(65+i)})`
 const checked=answers[index]===opt?"checked":""
 html+=`
 <label style="display:block;margin-bottom:8px;cursor:pointer">
-<input type="radio" name="q${index}" value="${opt}" ${checked}
-onchange="saveAnswer(${index},'${opt}')">
+<input type="radio" name="q${index}" value="${opt.replace(/"/g,'&quot;')}"
+${checked}
+onchange="saveAnswer(${index},'${opt.replace(/'/g,"\\'")}')">
 ${letter} ${opt}
 </label>`
 })
+
 document.getElementById("question-box").innerHTML=html
 renderNavigator()
-updateStatusCounts()
+updateStatus()
 }
 
 function saveAnswer(i,val){
 answers[i]=val
 renderNavigator()
-updateStatusCounts()
+updateStatus()
 }
 
 function renderNavigator(){
@@ -292,44 +261,38 @@ questions.forEach((q,i)=>{
 const btn=document.createElement("div")
 btn.classList.add("navigator-btn")
 btn.innerText=i+1
-const v=visited[i],a=answers[i]!==undefined,r=reviewMarked[i]
-if(r&&a)btn.classList.add("review-answered")
-else if(r)btn.classList.add("review")
-else if(a)btn.classList.add("answered")
-else if(v)btn.classList.add("not-answered")
+if(answers[i])btn.classList.add("answered")
+else if(visited[i])btn.classList.add("not-answered")
 if(i===currentIndex)btn.classList.add("current-question")
 btn.onclick=()=>loadQuestion(i)
 nav.appendChild(btn)
 })
 }
 
-function updateStatusCounts(){
-let answered=0,notVisited=0,notAnswered=0,marked=0,markedAndAnswered=0
+function updateStatus(){
+let answered=0,notVisited=0,notAnswered=0
 questions.forEach((q,i)=>{
-const v=visited[i],a=answers[i]!==undefined,r=reviewMarked[i]
-if(!v)notVisited++
-else if(r&&a)markedAndAnswered++
-else if(r)marked++
-else if(a)answered++
+if(!visited[i])notVisited++
+else if(answers[i])answered++
 else notAnswered++
 })
 document.getElementById("answeredCount").innerText=answered
 document.getElementById("notAnsweredCount").innerText=notAnswered
 document.getElementById("notVisitedCount").innerText=notVisited
-document.getElementById("markedCount").innerText=marked
-document.getElementById("markedAndAnsweredCount").innerText=markedAndAnswered
 }
 
-/* SAMPLE DATA */
-questions=[
-{question:"Capital of India?",options:["Delhi","Mumbai","Kolkata","Chennai","Bhopal"],answer:"Delhi",marks:1,negative:-0.25,type:"MCQ"},
-{question:"2 + 2 = ?",options:["2","3","4","5","6"],answer:"4",marks:1,negative:-0.25,type:"MCQ"}
-]
-
-window.onload=()=>{
-startTimer()
-loadQuestion(0)
+document.getElementById("clearBtn").onclick=()=>{
+delete answers[currentIndex]
+loadQuestion(currentIndex)
 }
+document.getElementById("backBtn").onclick=()=>{
+if(currentIndex>0)loadQuestion(currentIndex-1)
+}
+document.getElementById("nextBtn").onclick=()=>{
+if(currentIndex<questions.length-1)loadQuestion(currentIndex+1)
+}
+
+window.onload=loadTest
 </script>
 
 </body>
