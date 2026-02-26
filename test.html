@@ -420,14 +420,29 @@ function loadQuestion(index) {
   let html = `<p style="font-weight:bold;font-size:18px;margin-bottom:15px;">Q${q.globalIndex}: ${q.question}</p>`;
   const letters = ["(A)", "(B)", "(C)", "(D)"];
   html += `<div style="display:flex;flex-direction:column;gap:10px;">`;
-  q.options.forEach((opt, i) => {
-    const checked = answers[currentIndex] === opt ? "checked" : "";
-    html += `<label style="cursor:pointer;font-size:16px;">
-        <input type="radio" name="q${currentIndex}" value="${opt}" ${checked}
-               onchange="saveAnswer(${currentIndex}, '${opt}')">
-        ${letters[i]} ${opt}
-      </label>`;
-  });
+
+    q.options.forEach((opt, i) => {
+
+  const letter = letters[i] || `(${String.fromCharCode(65 + i)})`;
+  const checked = answers[currentIndex] === opt ? "checked" : "";
+
+  html += `<label style="cursor:pointer;font-size:16px;">
+      <input type="radio" 
+             name="q${currentIndex}" 
+             value="${opt.replace(/"/g,'&quot;')}" 
+             ${checked}
+             onchange="saveAnswer(${currentIndex}, '${opt.replace(/'/g,"\\'")}')">
+      ${letter} ${opt}
+    </label>`;
+});
+  // q.options.forEach((opt, i) => {
+  //   const checked = answers[currentIndex] === opt ? "checked" : "";
+  //   html += `<label style="cursor:pointer;font-size:16px;">
+  //       <input type="radio" name="q${currentIndex}" value="${opt}" ${checked}
+  //              onchange="saveAnswer(${currentIndex}, '${opt}')">
+  //       ${letters[i]} ${opt}
+  //     </label>`;
+  // });
   html += `</div>`;
   document.getElementById("question-box").innerHTML = html;
   renderNavigator();
