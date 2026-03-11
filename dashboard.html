@@ -3,112 +3,344 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Dashboard - Testara</title>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <title>Student Dashboard - Testara</title>
+
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-    }
+    body { margin: 0; background: #f5f7fa; animation: fadeIn 0.6s ease-in-out; font-family: Arial, sans-serif; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    header {
-      background: linear-gradient(to right, #007bff, #00c6ff);
-      color: white;
-      padding: 15px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    /* Header */
+    header { background: #004aad; color: white; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 22px; font-weight: 700; letter-spacing: 1px; }
+    .user-info { display: flex; align-items: center; gap: 12px; }
+    .avatar { width: 40px; height: 40px; background: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 18px; color: #007bff; font-weight: 600; }
+    button { background: white; color: #007bff; border: none; border-radius: 20px; padding: 8px 16px; cursor: pointer; font-size: 0.95rem; transition: 0.2s; font-weight: 600; }
+    button:hover { background: #e3f1ff; }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
+    /* Main Card */
+    .wcard { background: white; border-radius: 14px; padding: 30px; max-width: 600px; margin: 20px auto; text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,0.1); animation: slideUp 0.5s ease-in-out; }
 
-    .user-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1rem;
-    }
+    /* Layout Wrapper */
+    .wrapper { display: flex; width: 100%; height: 100vh; overflow: hidden; }
 
-    main {
-      padding: 40px;
-      text-align: center;
-    }
+    /* Sidebar */
+    .sidebar { width: 250px; background: #004aad; color: white; padding-top: 20px; position: fixed; left: 0; top: 0; height: 100vh; transition: 0.3s ease; z-index: 100; }
+    .sidebar.hide { left: -250px; }
+    .sidebar h2 { text-align: center; font-size: 22px; margin-bottom: 20px; font-weight: 600; }
+    .menu { list-style: none; padding: 10px; }
+    .menu li { padding: 14px 20px; margin: 10px 0; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+    .menu li:hover { background: rgba(255,255,255,0.2); }
 
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      max-width: 400px;
-      margin: 40px auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+    /* Top Header Mobile Trigger */
+    .menu-btn { font-size: 22px; cursor: pointer; color: white; margin-right: 15px; display: none; } 
 
-    button {
-      background: linear-gradient(to right, #007bff, #00c6ff);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: 600;
-      transition: opacity 0.2s;
-    }
+    /* Main Content */
+    .content { margin-left: 250px; padding: 25px; width: 100%; transition: 0.3s; overflow-y: auto; height: 90vh; }
+    .content.full { margin-left: 0; }
 
-    button:hover {
-      opacity: 0.9;
+    /* Dashboard Cards */
+    .dashboard-title { font-size: 22px; margin-bottom: 15px; color: #004aad; font-weight: 600; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-top: 30px;}
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: .3s; }
+    .card:hover { transform: translateY(-3px); }
+    .card h3 { font-size: 16px; color: #333; margin-bottom: 8px; font-weight: 600; }
+    .card p { font-size: 14px; color: #555; }
+    
+    /* Utility */
+    .status-pass { color: green; font-weight: bold; }
+    .status-fail { color: red; font-weight: bold; }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; background: #eee; margin-top: 5px; }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+        .sidebar { left: -250px; }
+        .sidebar.show { left: 0; }
+        .content { margin-left: 0; }
+        .menu-btn { display: block; }
     }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
   </style>
 </head>
+
 <body>
 
   <header>
-    <div class="logo">Testara Dashboard</div>
+    <div style="display:flex; align-items:center;">
+        <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+        <div class="logo">Testara Dashboard</div>
+    </div>
     <div class="user-info">
+      <div class="avatar" id="avatar">U</div>
       <span id="userName">Loading...</span>
       <button id="logoutBtn">Logout</button>
     </div>
   </header>
 
   <main>
-    <div class="card">
-      <h2>Welcome, <span id="welcomeName">User</span> 👋</h2>
-      <p>You're successfully logged in to your Testara dashboard.</p>
-      <p>Explore mock tests , results, and your progress!</p>
-      <h1>🚀 Your Smart Dashboard is Coming Soon <br>⚡ Powerful, faster, and upgraded features are loading…<br>Get ready for an amazing experience!</h1>
+    <div class="wrapper">
+
+    <div class="sidebar" id="sidebar">
+        <h2>Testara</h2>
+        <ul class="menu">
+            <li onclick="showPage('dashboard')">🏠 Dashboard</li>
+            <li onclick="showPage('courses')">📘 My Courses</li>
+            <li onclick="showPage('tests')">📝 My Tests</li>
+            <li onclick="showPage('results')">📊 Results</li>
+            <li onclick="showPage('profile')">👤 Profile</li>
+        </ul>
+    </div>
+
+    <div class="content" id="content">
+
+        <div id="page-dashboard">
+          <div class="wcard">
+            <h2>Welcome, <span id="welcomeName">User</span> 👋</h2>
+            <p>You’re successfully logged in to your Testara account.</p>
+          </div>
+          
+          <div class="dashboard-title">Dashboard Overview</div>  
+          <div class="grid" id="overview-grid">
+              <p>Loading stats...</p>
+          </div>
+        </div>
+
+        <div id="page-courses" style="display:none;">
+            <div class="dashboard-title">My Courses</div>
+            <div class="grid" id="courses-grid">
+                </div>
+        </div>
+
+        <div id="page-tests" style="display:none;">
+            <div class="dashboard-title">My Tests</div>
+            <div class="grid" id="tests-grid">
+                </div>
+        </div>
+
+        <div id="page-results" style="display:none;">
+            <div class="dashboard-title">Detailed Results</div>
+            <div class="grid" id="results-grid">
+                </div>
+        </div>
+
+        <div id="page-profile" style="display:none;">
+            <div class="dashboard-title">Profile Details</div>
+            <div class="wcard" style="text-align: left;" id="profile-card">
+               </div>
+        </div>
+
     </div>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
+    // --- 1. CONFIGURATION ---
     const SUPABASE_URL = 'https://qzriaykqdrhbtcgbpxpg.supabase.co';
     const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6cmlheWtxZHJoYnRjZ2JweHBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwMTcwMTAsImV4cCI6MjA3NTU5MzAxMH0.qRAQumkwN-JtxDizWwLRfPa8t0N68YGWdYKhQrhx7e8';
     const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    async function loadUser() {
+    // --- 2. MOCK DATA (Simulating Database) ---
+    // In the future, you will replace these arrays with "await sb.from('table').select()"
+    
+    const dbData = {
+        courses: [
+            { id: 1, name: "SSC CGL Tier 1", validity: "Lifetime Access", active: true },
+            { id: 2, name: "RRB Group D", validity: "12 Months", active: true },
+            { id: 3, name: "BSEB STET 2025", validity: "6 Months", active: true },
+            { id: 4, name: "Web Development 101", validity: "Lifetime", active: false }
+        ],
+        tests: [
+            { id: 101, name: "SSC CGL Mock Test 01", score: 152, total: 200, status: "Passed", date: "2025-10-01" },
+            { id: 102, name: "RRB Mock Test 04", score: 78, total: 100, status: "Passed", date: "2025-10-05" },
+            { id: 103, name: "SSC CGL Mock Test 02", score: 54, total: 200, status: "Failed", date: "2025-10-08" },
+            { id: 104, name: "BSEB STET Mock 01", score: 90, total: 150, status: "Passed", date: "2025-10-09" }
+        ]
+    };
+
+    // --- 3. AUTH LOGIC ---
+    let currentUser = null;
+
+    async function checkAuth() {
       const { data: { user }, error } = await sb.auth.getUser();
 
       if (error || !user) {
-        console.log("User not logged in, redirecting...");
-        window.location.href = "index.html"; // change to your login page name
+        // Redirect if not logged in
+        window.location.href = "register.html"; 
         return;
       }
+      
+      currentUser = user;
+      updateHeader(user);
+      renderAllDynamicContent(); // Load the dashboard data
+    }
 
-      const name = user.user_metadata?.full_name || "User";
+    function updateHeader(user) {
+      const name = user.user_metadata?.full_name || user.email.split("@")[0];
+      const firstLetter = name.charAt(0).toUpperCase();
+
       document.getElementById("userName").textContent = name;
       document.getElementById("welcomeName").textContent = name;
+      document.getElementById("avatar").textContent = firstLetter;
     }
 
     async function logout() {
       await sb.auth.signOut();
-      window.location.href = "index.html";
+      window.location.href = "register.html";
     }
 
+    // --- 4. DYNAMIC RENDERING LOGIC ---
+
+    function renderAllDynamicContent() {
+        renderOverview();
+        renderCourses();
+        renderTests();
+        renderResults();
+        renderProfile();
+    }
+
+    function renderOverview() {
+        const container = document.getElementById('overview-grid');
+        
+        // Calculate dynamic stats
+        const courseCount = dbData.courses.filter(c => c.active).length;
+        const testCount = dbData.tests.length;
+        
+        // Calculate Average %
+        let totalPerc = 0;
+        dbData.tests.forEach(t => {
+            totalPerc += (t.score / t.total) * 100;
+        });
+        const avgScore = Math.round(totalPerc / testCount) || 0;
+
+        // Get last result
+        const lastTest = dbData.tests[dbData.tests.length - 1];
+
+        container.innerHTML = `
+            <div class="card">
+                <h3>Active Courses</h3>
+                <p style="font-size:24px; font-weight:bold; color:#004aad">${courseCount}</p>
+            </div>
+            <div class="card">
+                <h3>Tests Attempted</h3>
+                <p style="font-size:24px; font-weight:bold; color:#004aad">${testCount}</p>
+            </div>
+            <div class="card">
+                <h3>Average Score</h3>
+                <p style="font-size:24px; font-weight:bold; color:#007bff">${avgScore}%</p>
+            </div>
+            <div class="card">
+                <h3>Last Result</h3>
+                <p><strong>${lastTest.name}</strong></p>
+                <p class="${lastTest.status === 'Passed' ? 'status-pass' : 'status-fail'}">
+                    ${lastTest.status} (${Math.round((lastTest.score/lastTest.total)*100)}%)
+                </p>
+            </div>
+        `;
+    }
+
+    function renderCourses() {
+        const container = document.getElementById('courses-grid');
+        container.innerHTML = dbData.courses.map(course => `
+            <div class="card">
+                <h3>${course.name}</h3>
+                <p>${course.validity}</p>
+                <span class="badge" style="background:${course.active ? '#e3f1ff; color:#007bff' : '#eee; color:#666'}">
+                    ${course.active ? 'Active' : 'Expired'}
+                </span>
+                <br><br>
+                <button onclick="alert('Opening ${course.name}...')">Start Learning</button>
+            </div>
+        `).join('');
+    }
+
+    function renderTests() {
+        const container = document.getElementById('tests-grid');
+        container.innerHTML = dbData.tests.map(test => `
+            <div class="card">
+                <h3>${test.name}</h3>
+                <p>Date: ${test.date}</p>
+                <p>Score: <strong>${test.score}/${test.total}</strong></p>
+                <p class="${test.status === 'Passed' ? 'status-pass' : 'status-fail'}">
+                    ● ${test.status}
+                </p>
+            </div>
+        `).join('');
+    }
+
+    function renderResults() {
+        // Reuse Test Data but format differently for Results view
+        const container = document.getElementById('results-grid');
+        container.innerHTML = dbData.tests.map(test => {
+            const percentage = Math.round((test.score / test.total) * 100);
+            return `
+            <div class="card" style="border-left: 5px solid ${test.status === 'Passed' ? 'green' : 'red'}">
+                <h3>${test.name}</h3>
+                <div style="display:flex; justify-content:space-between; margin-top:10px;">
+                    <span>Percentage:</span>
+                    <strong>${percentage}%</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between;">
+                    <span>Result:</span>
+                    <span class="${test.status === 'Passed' ? 'status-pass' : 'status-fail'}">${test.status}</span>
+                </div>
+            </div>
+            `;
+        }).join('');
+    }
+
+    function renderProfile() {
+        if(!currentUser) return;
+        const container = document.getElementById('profile-card');
+        container.innerHTML = `
+            <div style="display:flex; flex-direction:column; align-items:center; margin-bottom:20px;">
+                <div class="avatar" style="width:80px; height:80px; font-size:30px; margin-bottom:10px;">
+                    ${currentUser.email.charAt(0).toUpperCase()}
+                </div>
+                <h3>${currentUser.user_metadata?.full_name || "Testara Student"}</h3>
+            </div>
+            <hr style="border:0; border-top:1px solid #eee; margin:20px 0;">
+            <p><strong>Email:</strong> ${currentUser.email}</p>
+            <p><strong>User ID:</strong> ${currentUser.id}</p>
+            <p><strong>Account Created:</strong> ${new Date(currentUser.created_at).toLocaleDateString()}</p>
+            <p><strong>Last Login:</strong> ${new Date(currentUser.last_sign_in_at).toLocaleDateString()}</p>
+            <br>
+            <button onclick="logout()" style="background:#ffdddd; color:red; width:100%;">Logout</button>
+        `;
+    }
+
+    // --- 5. UI INTERACTION ---
+
     document.getElementById("logoutBtn").addEventListener("click", logout);
-    loadUser();
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const content = document.getElementById("content");
+      
+      if(window.innerWidth <= 768) {
+          sidebar.classList.toggle("show"); // Mobile toggle
+      } else {
+          sidebar.classList.toggle("hide"); // Desktop toggle
+          content.classList.toggle("full");
+      }
+    }
+
+    function showPage(page) {
+      if(page === 'logout') { logout(); return; }
+
+      const pages = ["dashboard", "courses", "tests", "results", "profile"];
+      pages.forEach(p => {
+          document.getElementById("page-" + p).style.display = "none";
+      });
+      document.getElementById("page-" + page).style.display = "block";
+      
+      // Close mobile sidebar on selection
+      if(window.innerWidth <= 768) {
+          document.getElementById("sidebar").classList.remove("show");
+      }
+    }
+
+    // Start
+    checkAuth();
+
   </script>
 
 </body>
