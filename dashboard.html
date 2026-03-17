@@ -265,9 +265,8 @@ function renderProfile() {
   container.innerHTML = `
       <p><strong>Email:</strong> ${currentUser.email}</p>
       <p><strong>User ID:</strong> ${currentUser.id}</p>
-      
-      <p><strong>Account Created:</strong> ${formatDateTime(currentUser.created_at)}${new Date(currentUser.created_at).toLocaleString()}</p>
-      <p><strong>Last Login:</strong> ${formatDateTime(studentData.last_login)} ${new Date().toLocaleString()}</p>
+      <p><strong>Account Created:</strong> ${formatDateTime(currentUser.created_at)} </p>
+      <p><strong>Last Login:</strong> ${formatDateTime(studentData.last_login)} </p>
   `;
 }
 
