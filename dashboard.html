@@ -190,7 +190,7 @@
     // ⭐ LAST LOGIN UPDATE FUNCTION
 async function updateLastLogin(userId){
   const { error } = await sb
-    .from("profiles")
+    .from("students")
     .update({
       last_login: new Date().toISOString()
     })
