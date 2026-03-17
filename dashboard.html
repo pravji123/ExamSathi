@@ -159,33 +159,104 @@
     // --- 3. AUTH LOGIC ---
     let currentUser = null;
 
-    async function checkAuth() {
-      const { data: { user }, error } = await sb.auth.getUser();
+    // async function checkAuth() {
+    //   const { data: { user }, error } = await sb.auth.getUser();
 
-      if (error || !user) {
-        // Redirect if not logged in
-        window.location.href = "register.html"; 
-        return;
-      }
+    //   if (error || !user) {
+    //     // Redirect if not logged in
+    //     window.location.href = "register.html"; 
+    //     return;
+    //   }
       
-      currentUser = user;
-      updateHeader(user);
-      renderAllDynamicContent(); // Load the dashboard data
-    }
+    //   currentUser = user;
+    //   updateHeader(user);
+    //   renderAllDynamicContent(); // Load the dashboard data
+    // }
 
-    function updateHeader(user) {
-      const name = user.user_metadata?.full_name || user.email.split("@")[0];
-      const firstLetter = name.charAt(0).toUpperCase();
+    // function updateHeader(user) {
+    //   const name = user.user_metadata?.full_name || user.email.split("@")[0];
+    //   const firstLetter = name.charAt(0).toUpperCase();
 
-      document.getElementById("userName").textContent = name;
-      document.getElementById("welcomeName").textContent = name;
-      document.getElementById("avatar").textContent = firstLetter;
-    }
+    //   document.getElementById("userName").textContent = name;
+    //   document.getElementById("welcomeName").textContent = name;
+    //   document.getElementById("avatar").textContent = firstLetter;
+    // }
 
-    async function logout() {
-      await sb.auth.signOut();
-      window.location.href = "register.html";
-    }
+    // async function logout() {
+    //   await sb.auth.signOut();
+    //   window.location.href = "register.html";
+    // }
+
+    // ⭐ LAST LOGIN UPDATE FUNCTION
+async function updateLastLogin(userId){
+  const { error } = await sb
+    .from("profiles")
+    .update({
+      last_login: new Date().toISOString()
+    })
+    .eq("id", userId);
+
+  if(error){
+    console.log("Last login update error:", error.message);
+  }else{
+    console.log("Last login updated");
+  }
+}
+
+
+// ⭐ AUTH CHECK FUNCTION
+async function checkAuth() {
+
+  const { data: { user }, error } = await sb.auth.getUser();
+
+  if (error || !user) {
+    window.location.href = "register.html";
+    return;
+  }
+
+  currentUser = user;
+
+  // ⭐⭐⭐ IMPORTANT ⭐⭐⭐
+  await updateLastLogin(user.id);
+
+  updateHeader(user);
+  renderAllDynamicContent();
+}
+
+
+// ⭐ HEADER UPDATE
+function updateHeader(user) {
+  const name = user.user_metadata?.full_name || user.email.split("@")[0];
+  const firstLetter = name.charAt(0).toUpperCase();
+
+  document.getElementById("userName").textContent = name;
+  document.getElementById("welcomeName").textContent = name;
+  document.getElementById("avatar").textContent = firstLetter;
+}
+
+
+// ⭐ LOGOUT
+async function logout() {
+  await sb.auth.signOut();
+  window.location.href = "register.html";
+}
+
+
+// ⭐ PROFILE PAGE RENDER
+function renderProfile() {
+  if(!currentUser) return;
+
+  const container = document.getElementById('profile-card');
+
+  container.innerHTML = `
+      <p><strong>Email:</strong> ${currentUser.email}</p>
+      <p><strong>User ID:</strong> ${currentUser.id}</p>
+      <p><strong>Account Created:</strong> ${new Date(currentUser.created_at).toLocaleString()}</p>
+      <p><strong>Last Login:</strong> ${new Date().toLocaleString()}</p>
+  `;
+}
+
+
 
     // --- 4. DYNAMIC RENDERING LOGIC ---
 
