@@ -385,8 +385,8 @@ function renderProfile() {
             <hr style="border:0; border-top:1px solid #eee; margin:20px 0;">
             <p><strong>Email:</strong> ${currentUser.email}</p>
             <p><strong>User ID:</strong> ${currentUser.id}</p>
-            <p><strong>Account Created:</strong> ${new Date(currentUser.created_at).toLocaleDateString()}</p>
-            <p><strong>Last Login:</strong> ${new Date(currentUser.last_sign_in_at).toLocaleDateString()}</p>
+            <p><strong>Account Created:</strong> ${formatDateTime(currentUser.created_at)} ${new Date(currentUser.created_at).toLocaleDateString()}</p>
+            <p><strong>Last Login:</strong> ${formatDateTime(studentData.last_login)} ${new Date(currentUser.last_sign_in_at).toLocaleDateString()}</p>
             <br>
             <button onclick="logout()" style="background:#ffdddd; color:red; width:100%;">Logout</button>
         `;
