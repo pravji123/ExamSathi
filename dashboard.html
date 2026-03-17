@@ -156,6 +156,20 @@
         ]
     };
 
+    function formatDateTime(dateString){
+
+  const d = new Date(dateString);
+
+  const day = String(d.getDate()).padStart(2,'0');
+  const month = String(d.getMonth()+1).padStart(2,'0');
+  const year = d.getFullYear();
+
+  const hours = String(d.getHours()).padStart(2,'0');
+  const minutes = String(d.getMinutes()).padStart(2,'0');
+  const seconds = String(d.getSeconds()).padStart(2,'0');
+
+  return `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
+}
     // --- 3. AUTH LOGIC ---
     let currentUser = null;
 
@@ -251,8 +265,9 @@ function renderProfile() {
   container.innerHTML = `
       <p><strong>Email:</strong> ${currentUser.email}</p>
       <p><strong>User ID:</strong> ${currentUser.id}</p>
-      <p><strong>Account Created:</strong> ${new Date(currentUser.created_at).toLocaleString()}</p>
-      <p><strong>Last Login:</strong> ${new Date().toLocaleString()}</p>
+      
+      <p><strong>Account Created:</strong> ${formatDateTime(currentUser.created_at)}${new Date(currentUser.created_at).toLocaleString()}</p>
+      <p><strong>Last Login:</strong> ${formatDateTime(studentData.last_login)} ${new Date().toLocaleString()}</p>
   `;
 }
 
